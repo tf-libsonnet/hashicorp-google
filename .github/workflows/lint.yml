@@ -1,0 +1,40 @@
+name: lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # v3.2.0
+
+      - uses: actions/setup-go@d0a58c1c4d2b25278816e339b944508c875f3613 # v3.4.0
+        with:
+          go-version: 1.19
+
+      - name: install jsonnet-bundler, jsonnetfmt, and jsonnet-lint
+        run: |
+          go install github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb@latest
+          go install github.com/google/go-jsonnet/cmd/jsonnetfmt@latest
+          go install github.com/google/go-jsonnet/cmd/jsonnet-lint@latest
+
+      - name: check for fmt
+        run: |
+          find . -name "*.jsonnet" -or -name "*.libsonnet" | xargs -L1 jsonnetfmt --test
+
+      - name: install dependencies
+        run: |
+          jb install
+
+      - name: check for lint
+        run: |
+          export JSONNET_PATH="$(pwd)/vendor:$(pwd)"
+          find . -not -path "./vendor/*" \( -name "*.jsonnet" -or -name "*.libsonnet" \) \
+            | xargs -L1 -t jsonnet-lint
