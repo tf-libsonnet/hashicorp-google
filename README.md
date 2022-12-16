@@ -1,20 +1,20 @@
-<h1 align="center">tf-libsonnet/PROVIDER_NAME</h1>
+<h1 align="center">tf-libsonnet/hashicorp-google</h1>
 
 <p align="center">
   <em>Generate Terraform with Jsonnet</em>
 </p>
 
 <p align="center">
-  <a href="https://github.com/tf-libsonnet/PROVIDER_NAME/blob/main/LICENSE">
-    <img alt="LICENSE" src="https://img.shields.io/github/license/tf-libsonnet/PROVIDER_NAME?style=for-the-badge">
+  <a href="https://github.com/tf-libsonnet/hashicorp-google/blob/main/LICENSE">
+    <img alt="LICENSE" src="https://img.shields.io/github/license/tf-libsonnet/hashicorp-google?style=for-the-badge">
   </a>
-  <a href="https://github.com/tf-libsonnet/PROVIDER_NAME/releases/latest">
-    <img alt="latest release" src="https://img.shields.io/github/v/release/tf-libsonnet/PROVIDER_NAME?style=for-the-badge">
+  <a href="https://github.com/tf-libsonnet/hashicorp-google/releases/latest">
+    <img alt="latest release" src="https://img.shields.io/github/v/release/tf-libsonnet/hashicorp-google?style=for-the-badge">
   </a>
 </p>
 
 This repository contains [Jsonnet](https://jsonnet.org/) functions for generating resources and data sources for the
-[PROVIDER_NAME_SLASH](https://registry.terraform.io/providers/PROVIDER_NAME_SLASH) Terraform provider.
+[hashicorp/google](https://registry.terraform.io/providers/hashicorp/google) Terraform provider.
 
 > **IMPORTANT**
 >
