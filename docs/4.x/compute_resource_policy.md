@@ -91,12 +91,12 @@ match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])&#39;? which means th
 first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where resource policy resides. When `null`, the `region` field will be omitted from the resulting object.
   - `group_placement_policy` (`list[obj]`): Resource policy for instances used for placement configuration. When `null`, the `group_placement_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.group_placement_policy.new](#fn-group_placement_policynew) constructor.
   - `instance_schedule_policy` (`list[obj]`): Resource policy for scheduling instance operations. When `null`, the `instance_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.instance_schedule_policy.new](#fn-instance_schedule_policynew) constructor.
   - `snapshot_schedule_policy` (`list[obj]`): Policy for creating snapshots of persistent disks. When `null`, the `snapshot_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.new](#fn-snapshot_schedule_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -128,12 +128,12 @@ match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])&#39;? which means th
 first character must be a lowercase letter, and all following characters
 must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where resource policy resides. When `null`, the `region` field will be omitted from the resulting object.
   - `group_placement_policy` (`list[obj]`): Resource policy for instances used for placement configuration. When `null`, the `group_placement_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.group_placement_policy.new](#fn-group_placement_policynew) constructor.
   - `instance_schedule_policy` (`list[obj]`): Resource policy for scheduling instance operations. When `null`, the `instance_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.instance_schedule_policy.new](#fn-instance_schedule_policynew) constructor.
   - `snapshot_schedule_policy` (`list[obj]`): Policy for creating snapshots of persistent disks. When `null`, the `snapshot_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.new](#fn-snapshot_schedule_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_resource_policy` resource into the root Terraform configuration.
@@ -677,8 +677,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -51,7 +51,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): The location for the KeyRing.
 A full list of valid locations can be found by running &#39;gcloud kms locations list&#39;.
   - `name` (`string`): The resource name for the KeyRing.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -78,7 +78,7 @@ injecting into a complete block.
   - `location` (`string`): The location for the KeyRing.
 A full list of valid locations can be found by running &#39;gcloud kms locations list&#39;.
   - `name` (`string`): The resource name for the KeyRing.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `kms_key_ring` data source into the root Terraform configuration.

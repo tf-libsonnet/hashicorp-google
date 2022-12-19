@@ -100,7 +100,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `database_version` (`string`): The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6, POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, POSTGRES_14, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions.
   - `deletion_protection` (`bool`): Used to block Terraform from deleting a SQL Instance. Defaults to true. When `null`, the `deletion_protection` field will be omitted from the resulting object.
-  - `encryption_key_name` (`string`):  When `null`, the `encryption_key_name` field will be omitted from the resulting object.
+  - `encryption_key_name` (`string`): Set the `encryption_key_name` field on the resulting resource block. When `null`, the `encryption_key_name` field will be omitted from the resulting object.
   - `maintenance_version` (`string`): Maintenance version. When `null`, the `maintenance_version` field will be omitted from the resulting object.
   - `master_instance_name` (`string`): The name of the instance that will act as the master in the replication setup. Note, this requires the master to have binary_log_enabled set, as well as existing backups. When `null`, the `master_instance_name` field will be omitted from the resulting object.
   - `name` (`string`): The name of the instance. If the name is left blank, Terraform will randomly generate one when the instance is first created. This is done because after a name is used, it cannot be reused for up to one week. When `null`, the `name` field will be omitted from the resulting object.
@@ -109,9 +109,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `root_password` (`string`): Initial root password. Required for MS SQL Server. When `null`, the `root_password` field will be omitted from the resulting object.
   - `clone` (`list[obj]`): Configuration for creating a new instance as a clone of another instance. When `null`, the `clone` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.clone.new](#fn-clonenew) constructor.
   - `replica_configuration` (`list[obj]`): The configuration for replication. When `null`, the `replica_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.replica_configuration.new](#fn-replica_configurationnew) constructor.
-  - `restore_backup_context` (`list[obj]`):  When `null`, the `restore_backup_context` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.restore_backup_context.new](#fn-restore_backup_contextnew) constructor.
+  - `restore_backup_context` (`list[obj]`): Set the `restore_backup_context` field on the resulting resource block. When `null`, the `restore_backup_context` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.restore_backup_context.new](#fn-restore_backup_contextnew) constructor.
   - `settings` (`list[obj]`): The settings to use for the database. The configuration is detailed below. When `null`, the `settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.new](#fn-settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -137,7 +137,7 @@ injecting into a complete block.
 **Args**:
   - `database_version` (`string`): The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6, POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, POSTGRES_14, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions.
   - `deletion_protection` (`bool`): Used to block Terraform from deleting a SQL Instance. Defaults to true. When `null`, the `deletion_protection` field will be omitted from the resulting object.
-  - `encryption_key_name` (`string`):  When `null`, the `encryption_key_name` field will be omitted from the resulting object.
+  - `encryption_key_name` (`string`): Set the `encryption_key_name` field on the resulting object. When `null`, the `encryption_key_name` field will be omitted from the resulting object.
   - `maintenance_version` (`string`): Maintenance version. When `null`, the `maintenance_version` field will be omitted from the resulting object.
   - `master_instance_name` (`string`): The name of the instance that will act as the master in the replication setup. Note, this requires the master to have binary_log_enabled set, as well as existing backups. When `null`, the `master_instance_name` field will be omitted from the resulting object.
   - `name` (`string`): The name of the instance. If the name is left blank, Terraform will randomly generate one when the instance is first created. This is done because after a name is used, it cannot be reused for up to one week. When `null`, the `name` field will be omitted from the resulting object.
@@ -146,9 +146,9 @@ injecting into a complete block.
   - `root_password` (`string`): Initial root password. Required for MS SQL Server. When `null`, the `root_password` field will be omitted from the resulting object.
   - `clone` (`list[obj]`): Configuration for creating a new instance as a clone of another instance. When `null`, the `clone` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.clone.new](#fn-clonenew) constructor.
   - `replica_configuration` (`list[obj]`): The configuration for replication. When `null`, the `replica_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.replica_configuration.new](#fn-replica_configurationnew) constructor.
-  - `restore_backup_context` (`list[obj]`):  When `null`, the `restore_backup_context` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.restore_backup_context.new](#fn-restore_backup_contextnew) constructor.
+  - `restore_backup_context` (`list[obj]`): Set the `restore_backup_context` field on the resulting object. When `null`, the `restore_backup_context` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.restore_backup_context.new](#fn-restore_backup_contextnew) constructor.
   - `settings` (`list[obj]`): The settings to use for the database. The configuration is detailed below. When `null`, the `settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.new](#fn-settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sql_database_instance` resource into the root Terraform configuration.
@@ -599,16 +599,16 @@ is set to true. Defaults to ZONAL. When `null`, the `availability_type` field wi
   - `tier` (`string`): The machine type to use. See tiers for more details and supported versions. Postgres supports only shared-core machine types, and custom machine types such as db-custom-2-13312. See the Custom Machine Type Documentation to learn about specifying custom machine types.
   - `time_zone` (`string`): The time_zone to be used by the database engine (supported only for SQL Server), in SQL Server timezone format. When `null`, the `time_zone` field will be omitted from the resulting object.
   - `user_labels` (`obj`): A set of key/value user label pairs to assign to the instance. When `null`, the `user_labels` field will be omitted from the resulting object.
-  - `active_directory_config` (`list[obj]`):  When `null`, the `active_directory_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.active_directory_config.new](#fn-settingsactive_directory_confignew) constructor.
-  - `backup_configuration` (`list[obj]`):  When `null`, the `backup_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.backup_configuration.new](#fn-settingsbackup_configurationnew) constructor.
-  - `database_flags` (`list[obj]`):  When `null`, the `database_flags` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.database_flags.new](#fn-settingsdatabase_flagsnew) constructor.
-  - `deny_maintenance_period` (`list[obj]`):  When `null`, the `deny_maintenance_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.deny_maintenance_period.new](#fn-settingsdeny_maintenance_periodnew) constructor.
+  - `active_directory_config` (`list[obj]`): Set the `active_directory_config` field on the resulting object. When `null`, the `active_directory_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.active_directory_config.new](#fn-settingsactive_directory_confignew) constructor.
+  - `backup_configuration` (`list[obj]`): Set the `backup_configuration` field on the resulting object. When `null`, the `backup_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.backup_configuration.new](#fn-settingsbackup_configurationnew) constructor.
+  - `database_flags` (`list[obj]`): Set the `database_flags` field on the resulting object. When `null`, the `database_flags` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.database_flags.new](#fn-settingsdatabase_flagsnew) constructor.
+  - `deny_maintenance_period` (`list[obj]`): Set the `deny_maintenance_period` field on the resulting object. When `null`, the `deny_maintenance_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.deny_maintenance_period.new](#fn-settingsdeny_maintenance_periodnew) constructor.
   - `insights_config` (`list[obj]`): Configuration of Query Insights. When `null`, the `insights_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.insights_config.new](#fn-settingsinsights_confignew) constructor.
-  - `ip_configuration` (`list[obj]`):  When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.ip_configuration.new](#fn-settingsip_configurationnew) constructor.
-  - `location_preference` (`list[obj]`):  When `null`, the `location_preference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.location_preference.new](#fn-settingslocation_preferencenew) constructor.
+  - `ip_configuration` (`list[obj]`): Set the `ip_configuration` field on the resulting object. When `null`, the `ip_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.ip_configuration.new](#fn-settingsip_configurationnew) constructor.
+  - `location_preference` (`list[obj]`): Set the `location_preference` field on the resulting object. When `null`, the `location_preference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.location_preference.new](#fn-settingslocation_preferencenew) constructor.
   - `maintenance_window` (`list[obj]`): Declares a one-hour maintenance window when an Instance can automatically restart to apply updates. The maintenance window is specified in UTC time. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.maintenance_window.new](#fn-settingsmaintenance_windownew) constructor.
-  - `password_validation_policy` (`list[obj]`):  When `null`, the `password_validation_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.password_validation_policy.new](#fn-settingspassword_validation_policynew) constructor.
-  - `sql_server_audit_config` (`list[obj]`):  When `null`, the `sql_server_audit_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.sql_server_audit_config.new](#fn-settingssql_server_audit_confignew) constructor.
+  - `password_validation_policy` (`list[obj]`): Set the `password_validation_policy` field on the resulting object. When `null`, the `password_validation_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.password_validation_policy.new](#fn-settingspassword_validation_policynew) constructor.
+  - `sql_server_audit_config` (`list[obj]`): Set the `sql_server_audit_config` field on the resulting object. When `null`, the `sql_server_audit_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.sql_server_audit_config.new](#fn-settingssql_server_audit_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `settings` sub block.
@@ -660,7 +660,7 @@ Terraform sub block.
   - `point_in_time_recovery_enabled` (`bool`): True if Point-in-time recovery is enabled. When `null`, the `point_in_time_recovery_enabled` field will be omitted from the resulting object.
   - `start_time` (`string`): HH:MM format time indicating when backup configuration starts. When `null`, the `start_time` field will be omitted from the resulting object.
   - `transaction_log_retention_days` (`number`): The number of days of transaction logs we retain for point in time restore, from 1-7. When `null`, the `transaction_log_retention_days` field will be omitted from the resulting object.
-  - `backup_retention_settings` (`list[obj]`):  When `null`, the `backup_retention_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.backup_configuration.backup_retention_settings.new](#fn-settingssettingsbackup_retention_settingsnew) constructor.
+  - `backup_retention_settings` (`list[obj]`): Set the `backup_retention_settings` field on the resulting object. When `null`, the `backup_retention_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.backup_configuration.backup_retention_settings.new](#fn-settingssettingsbackup_retention_settingsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `backup_configuration` sub block.
@@ -786,8 +786,8 @@ Terraform sub block.
   - `allocated_ip_range` (`string`): The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the instance ip will be created in the allocated range. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?. When `null`, the `allocated_ip_range` field will be omitted from the resulting object.
   - `ipv4_enabled` (`bool`): Whether this Cloud SQL instance should be assigned a public IPV4 address. At least ipv4_enabled must be enabled or a private_network must be configured. When `null`, the `ipv4_enabled` field will be omitted from the resulting object.
   - `private_network` (`string`): The VPC network from which the Cloud SQL instance is accessible for private IP. For example, projects/myProject/global/networks/default. Specifying a network enables private IP. At least ipv4_enabled must be enabled or a private_network must be configured. This setting can be updated, but it cannot be removed after it is set. When `null`, the `private_network` field will be omitted from the resulting object.
-  - `require_ssl` (`bool`):  When `null`, the `require_ssl` field will be omitted from the resulting object.
-  - `authorized_networks` (`list[obj]`):  When `null`, the `authorized_networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.ip_configuration.authorized_networks.new](#fn-settingssettingsauthorized_networksnew) constructor.
+  - `require_ssl` (`bool`): Set the `require_ssl` field on the resulting object. When `null`, the `require_ssl` field will be omitted from the resulting object.
+  - `authorized_networks` (`list[obj]`): Set the `authorized_networks` field on the resulting object. When `null`, the `authorized_networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.ip_configuration.authorized_networks.new](#fn-settingssettingsauthorized_networksnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ip_configuration` sub block.
@@ -810,9 +810,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `expiration_time` (`string`):  When `null`, the `expiration_time` field will be omitted from the resulting object.
-  - `name` (`string`):  When `null`, the `name` field will be omitted from the resulting object.
-  - `value` (`string`): 
+  - `expiration_time` (`string`): Set the `expiration_time` field on the resulting object. When `null`, the `expiration_time` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object. When `null`, the `name` field will be omitted from the resulting object.
+  - `value` (`string`): Set the `value` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `authorized_networks` sub block.
@@ -938,9 +938,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

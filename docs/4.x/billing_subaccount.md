@@ -48,9 +48,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `deletion_policy` (`string`):  When `null`, the `deletion_policy` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `master_billing_account` (`string`): 
+  - `deletion_policy` (`string`): Set the `deletion_policy` field on the resulting resource block. When `null`, the `deletion_policy` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting resource block.
+  - `master_billing_account` (`string`): Set the `master_billing_account` field on the resulting resource block.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -74,9 +74,9 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `deletion_policy` (`string`):  When `null`, the `deletion_policy` field will be omitted from the resulting object.
-  - `display_name` (`string`): 
-  - `master_billing_account` (`string`): 
+  - `deletion_policy` (`string`): Set the `deletion_policy` field on the resulting object. When `null`, the `deletion_policy` field will be omitted from the resulting object.
+  - `display_name` (`string`): Set the `display_name` field on the resulting object.
+  - `master_billing_account` (`string`): Set the `master_billing_account` field on the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `billing_subaccount` resource into the root Terraform configuration.

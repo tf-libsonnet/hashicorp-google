@@ -82,7 +82,7 @@ If not specified, a Google-Managed encryption key will be used.
 Valid only when &#39;RuntimeType&#39; is CLOUD. For example: &#39;projects/foo/locations/us/keyRings/bar/cryptoKeys/baz&#39;. When `null`, the `runtime_database_encryption_key_name` field will be omitted from the resulting object.
   - `runtime_type` (`string`): Runtime type of the Apigee organization based on the Apigee subscription purchased. Default value: &#34;CLOUD&#34; Possible values: [&#34;CLOUD&#34;, &#34;HYBRID&#34;] When `null`, the `runtime_type` field will be omitted from the resulting object.
   - `properties` (`list[obj]`): Properties defined in the Apigee organization profile. When `null`, the `properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_organization.properties.new](#fn-propertiesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_organization.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_organization.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -124,7 +124,7 @@ If not specified, a Google-Managed encryption key will be used.
 Valid only when &#39;RuntimeType&#39; is CLOUD. For example: &#39;projects/foo/locations/us/keyRings/bar/cryptoKeys/baz&#39;. When `null`, the `runtime_database_encryption_key_name` field will be omitted from the resulting object.
   - `runtime_type` (`string`): Runtime type of the Apigee organization based on the Apigee subscription purchased. Default value: &#34;CLOUD&#34; Possible values: [&#34;CLOUD&#34;, &#34;HYBRID&#34;] When `null`, the `runtime_type` field will be omitted from the resulting object.
   - `properties` (`list[obj]`): Properties defined in the Apigee organization profile. When `null`, the `properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_organization.properties.new](#fn-propertiesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_organization.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_organization.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `apigee_organization` resource into the root Terraform configuration.
@@ -411,9 +411,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

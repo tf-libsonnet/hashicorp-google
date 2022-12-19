@@ -49,7 +49,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
   - `name` (`string`): The name of the resource (Max 25 characters).
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the VPC Access connector resides. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
 
 **Returns**:
@@ -75,7 +75,7 @@ injecting into a complete block.
 
 **Args**:
   - `name` (`string`): The name of the resource (Max 25 characters).
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the VPC Access connector resides. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
 
 **Returns**:

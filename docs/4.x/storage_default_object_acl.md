@@ -47,8 +47,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `bucket` (`string`): 
-  - `role_entity` (`list`):  When `null`, the `role_entity` field will be omitted from the resulting object.
+  - `bucket` (`string`): Set the `bucket` field on the resulting resource block.
+  - `role_entity` (`list`): Set the `role_entity` field on the resulting resource block. When `null`, the `role_entity` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -72,8 +72,8 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `bucket` (`string`): 
-  - `role_entity` (`list`):  When `null`, the `role_entity` field will be omitted from the resulting object.
+  - `bucket` (`string`): Set the `bucket` field on the resulting object.
+  - `role_entity` (`list`): Set the `role_entity` field on the resulting object. When `null`, the `role_entity` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_default_object_acl` resource into the root Terraform configuration.

@@ -50,11 +50,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `app_id` (`string`): 
-  - `policy_data` (`string`): 
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `service` (`string`): 
-  - `version_id` (`string`): 
+  - `app_id` (`string`): Set the `app_id` field on the resulting resource block.
+  - `policy_data` (`string`): Set the `policy_data` field on the resulting resource block.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `service` (`string`): Set the `service` field on the resulting resource block.
+  - `version_id` (`string`): Set the `version_id` field on the resulting resource block.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -78,11 +78,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `app_id` (`string`): 
-  - `policy_data` (`string`): 
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `service` (`string`): 
-  - `version_id` (`string`): 
+  - `app_id` (`string`): Set the `app_id` field on the resulting object.
+  - `policy_data` (`string`): Set the `policy_data` field on the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `service` (`string`): Set the `service` field on the resulting object.
+  - `version_id` (`string`): Set the `version_id` field on the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iap_app_engine_version_iam_policy` resource into the root Terraform configuration.

@@ -118,7 +118,7 @@ Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agen
   - `entry_fulfillment` (`list[obj]`): The fulfillment to call when the session is entering the page. When `null`, the `entry_fulfillment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_page.entry_fulfillment.new](#fn-entry_fulfillmentnew) constructor.
   - `event_handlers` (`list[obj]`): Handlers associated with the page to handle events such as webhook errors, no match or no input. When `null`, the `event_handlers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_page.event_handlers.new](#fn-event_handlersnew) constructor.
   - `form` (`list[obj]`): The form associated with the page, used for collecting parameters relevant to the page. When `null`, the `form` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_page.form.new](#fn-formnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_page.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_page.timeouts.new](#fn-timeoutsnew) constructor.
   - `transition_routes` (`list[obj]`): A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow.
 When we are in a certain page, the TransitionRoutes are evalauted in the following order:
 TransitionRoutes defined in the page with intent specified.
@@ -173,7 +173,7 @@ Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agen
   - `entry_fulfillment` (`list[obj]`): The fulfillment to call when the session is entering the page. When `null`, the `entry_fulfillment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_page.entry_fulfillment.new](#fn-entry_fulfillmentnew) constructor.
   - `event_handlers` (`list[obj]`): Handlers associated with the page to handle events such as webhook errors, no match or no input. When `null`, the `event_handlers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_page.event_handlers.new](#fn-event_handlersnew) constructor.
   - `form` (`list[obj]`): The form associated with the page, used for collecting parameters relevant to the page. When `null`, the `form` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_page.form.new](#fn-formnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_page.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_page.timeouts.new](#fn-timeoutsnew) constructor.
   - `transition_routes` (`list[obj]`): A list of transitions for the transition rules of this page. They route the conversation to another page in the same flow, or another flow.
 When we are in a certain page, the TransitionRoutes are evalauted in the following order:
 TransitionRoutes defined in the page with intent specified.
@@ -773,9 +773,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

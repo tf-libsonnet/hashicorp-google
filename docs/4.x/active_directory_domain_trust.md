@@ -59,14 +59,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `domain` (`string`): The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions, 
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `selective_authentication` (`bool`): Whether the trusted side has forest/domain wide access or selective access to an approved set of resources. When `null`, the `selective_authentication` field will be omitted from the resulting object.
   - `target_dns_ip_addresses` (`list`): The target DNS server IP addresses which can resolve the remote domain involved in the trust.
   - `target_domain_name` (`string`): The fully qualified target domain name which will be in trust with the current domain.
   - `trust_direction` (`string`): The trust direction, which decides if the current domain is trusted, trusting, or both. Possible values: [&#34;INBOUND&#34;, &#34;OUTBOUND&#34;, &#34;BIDIRECTIONAL&#34;]
   - `trust_handshake_secret` (`string`): The trust secret used for the handshake with the target domain. This will not be stored.
   - `trust_type` (`string`): The type of trust represented by the trust resource. Possible values: [&#34;FOREST&#34;, &#34;EXTERNAL&#34;]
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.active_directory_domain_trust.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.active_directory_domain_trust.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,14 +92,14 @@ injecting into a complete block.
 **Args**:
   - `domain` (`string`): The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions, 
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `selective_authentication` (`bool`): Whether the trusted side has forest/domain wide access or selective access to an approved set of resources. When `null`, the `selective_authentication` field will be omitted from the resulting object.
   - `target_dns_ip_addresses` (`list`): The target DNS server IP addresses which can resolve the remote domain involved in the trust.
   - `target_domain_name` (`string`): The fully qualified target domain name which will be in trust with the current domain.
   - `trust_direction` (`string`): The trust direction, which decides if the current domain is trusted, trusting, or both. Possible values: [&#34;INBOUND&#34;, &#34;OUTBOUND&#34;, &#34;BIDIRECTIONAL&#34;]
   - `trust_handshake_secret` (`string`): The trust secret used for the handshake with the target domain. This will not be stored.
   - `trust_type` (`string`): The type of trust represented by the trust resource. Possible values: [&#34;FOREST&#34;, &#34;EXTERNAL&#34;]
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.active_directory_domain_trust.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.active_directory_domain_trust.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `active_directory_domain_trust` resource into the root Terraform configuration.
@@ -286,9 +286,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

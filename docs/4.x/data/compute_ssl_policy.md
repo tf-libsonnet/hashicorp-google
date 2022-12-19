@@ -54,7 +54,7 @@ the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -85,7 +85,7 @@ the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `compute_ssl_policy` data source into the root Terraform configuration.

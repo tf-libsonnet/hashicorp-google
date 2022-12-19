@@ -53,7 +53,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): Location of the CertificateAuthority. A full list of valid locations can be found by
 running &#39;gcloud privateca locations list&#39;. When `null`, the `location` field will be omitted from the resulting object.
   - `pool` (`string`): The name of the CaPool this Certificate Authority belongs to. When `null`, the `pool` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -81,7 +81,7 @@ injecting into a complete block.
   - `location` (`string`): Location of the CertificateAuthority. A full list of valid locations can be found by
 running &#39;gcloud privateca locations list&#39;. When `null`, the `location` field will be omitted from the resulting object.
   - `pool` (`string`): The name of the CaPool this Certificate Authority belongs to. When `null`, the `pool` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `privateca_certificate_authority` data source into the root Terraform configuration.

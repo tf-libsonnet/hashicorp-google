@@ -68,7 +68,7 @@ projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
   - `fields` (`list[obj]`): This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag&#39;s template. A tag must have at least 1 field and at most 500 fields. When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag.fields.new](#fn-fieldsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -104,7 +104,7 @@ projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}
 This field cannot be modified after creation.
   - `fields` (`list[obj]`): This maps the ID of a tag field to the value of and additional information about that field.
 Valid field IDs are defined by the tag&#39;s template. A tag must have at least 1 field and at most 500 fields. When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag.fields.new](#fn-fieldsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_catalog_tag` resource into the root Terraform configuration.
@@ -251,7 +251,7 @@ Terraform sub block.
   - `bool_value` (`bool`): Holds the value for a tag field with boolean type. When `null`, the `bool_value` field will be omitted from the resulting object.
   - `double_value` (`number`): Holds the value for a tag field with double type. When `null`, the `double_value` field will be omitted from the resulting object.
   - `enum_value` (`string`): The display name of the enum value. When `null`, the `enum_value` field will be omitted from the resulting object.
-  - `field_name` (`string`): 
+  - `field_name` (`string`): Set the `field_name` field on the resulting object.
   - `string_value` (`string`): Holds the value for a tag field with string type. When `null`, the `string_value` field will be omitted from the resulting object.
   - `timestamp_value` (`string`): Holds the value for a tag field with timestamp type. When `null`, the `timestamp_value` field will be omitted from the resulting object.
 
@@ -276,9 +276,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

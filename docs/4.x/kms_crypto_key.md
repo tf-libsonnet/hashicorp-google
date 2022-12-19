@@ -77,7 +77,7 @@ the format of a decimal number with up to 9 fractional digits, followed by the
 letter &#39;s&#39; (seconds). It must be greater than a day (ie, 86400). When `null`, the `rotation_period` field will be omitted from the resulting object.
   - `skip_initial_version_creation` (`bool`): If set to true, the request will create a CryptoKey without any CryptoKeyVersions. 
 You must use the &#39;google_kms_key_ring_import_job&#39; resource to import the CryptoKeyVersion. When `null`, the `skip_initial_version_creation` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.timeouts.new](#fn-timeoutsnew) constructor.
   - `version_template` (`list[obj]`): A template describing settings for new crypto key versions. When `null`, the `version_template` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.version_template.new](#fn-version_templatenew) constructor.
 
 **Returns**:
@@ -118,7 +118,7 @@ the format of a decimal number with up to 9 fractional digits, followed by the
 letter &#39;s&#39; (seconds). It must be greater than a day (ie, 86400). When `null`, the `rotation_period` field will be omitted from the resulting object.
   - `skip_initial_version_creation` (`bool`): If set to true, the request will create a CryptoKey without any CryptoKeyVersions. 
 You must use the &#39;google_kms_key_ring_import_job&#39; resource to import the CryptoKeyVersion. When `null`, the `skip_initial_version_creation` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.timeouts.new](#fn-timeoutsnew) constructor.
   - `version_template` (`list[obj]`): A template describing settings for new crypto key versions. When `null`, the `version_template` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.version_template.new](#fn-version_templatenew) constructor.
 
 **Returns**:
@@ -343,9 +343,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

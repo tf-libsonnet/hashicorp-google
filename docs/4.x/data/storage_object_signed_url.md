@@ -53,14 +53,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `bucket` (`string`): 
-  - `content_md5` (`string`):  When `null`, the `content_md5` field will be omitted from the resulting object.
-  - `content_type` (`string`):  When `null`, the `content_type` field will be omitted from the resulting object.
-  - `credentials` (`string`):  When `null`, the `credentials` field will be omitted from the resulting object.
-  - `duration` (`string`):  When `null`, the `duration` field will be omitted from the resulting object.
-  - `extension_headers` (`obj`):  When `null`, the `extension_headers` field will be omitted from the resulting object.
-  - `http_method` (`string`):  When `null`, the `http_method` field will be omitted from the resulting object.
-  - `path` (`string`): 
+  - `bucket` (`string`): Set the `bucket` field on the resulting data source block.
+  - `content_md5` (`string`): Set the `content_md5` field on the resulting data source block. When `null`, the `content_md5` field will be omitted from the resulting object.
+  - `content_type` (`string`): Set the `content_type` field on the resulting data source block. When `null`, the `content_type` field will be omitted from the resulting object.
+  - `credentials` (`string`): Set the `credentials` field on the resulting data source block. When `null`, the `credentials` field will be omitted from the resulting object.
+  - `duration` (`string`): Set the `duration` field on the resulting data source block. When `null`, the `duration` field will be omitted from the resulting object.
+  - `extension_headers` (`obj`): Set the `extension_headers` field on the resulting data source block. When `null`, the `extension_headers` field will be omitted from the resulting object.
+  - `http_method` (`string`): Set the `http_method` field on the resulting data source block. When `null`, the `http_method` field will be omitted from the resulting object.
+  - `path` (`string`): Set the `path` field on the resulting data source block.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -84,14 +84,14 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `bucket` (`string`): 
-  - `content_md5` (`string`):  When `null`, the `content_md5` field will be omitted from the resulting object.
-  - `content_type` (`string`):  When `null`, the `content_type` field will be omitted from the resulting object.
-  - `credentials` (`string`):  When `null`, the `credentials` field will be omitted from the resulting object.
-  - `duration` (`string`):  When `null`, the `duration` field will be omitted from the resulting object.
-  - `extension_headers` (`obj`):  When `null`, the `extension_headers` field will be omitted from the resulting object.
-  - `http_method` (`string`):  When `null`, the `http_method` field will be omitted from the resulting object.
-  - `path` (`string`): 
+  - `bucket` (`string`): Set the `bucket` field on the resulting object.
+  - `content_md5` (`string`): Set the `content_md5` field on the resulting object. When `null`, the `content_md5` field will be omitted from the resulting object.
+  - `content_type` (`string`): Set the `content_type` field on the resulting object. When `null`, the `content_type` field will be omitted from the resulting object.
+  - `credentials` (`string`): Set the `credentials` field on the resulting object. When `null`, the `credentials` field will be omitted from the resulting object.
+  - `duration` (`string`): Set the `duration` field on the resulting object. When `null`, the `duration` field will be omitted from the resulting object.
+  - `extension_headers` (`obj`): Set the `extension_headers` field on the resulting object. When `null`, the `extension_headers` field will be omitted from the resulting object.
+  - `http_method` (`string`): Set the `http_method` field on the resulting object. When `null`, the `http_method` field will be omitted from the resulting object.
+  - `path` (`string`): Set the `path` field on the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `storage_object_signed_url` data source into the root Terraform configuration.

@@ -85,7 +85,7 @@ for a list of the currently supported language codes. This field cannot be updat
 syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities. Possible values: [&#34;MATCH_MODE_HYBRID&#34;, &#34;MATCH_MODE_ML_ONLY&#34;] When `null`, the `match_mode` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `supported_language_codes` (`list`): The list of all languages supported by this agent (except for the defaultLanguageCode). When `null`, the `supported_language_codes` field will be omitted from the resulting object.
   - `tier` (`string`): The agent tier. If not specified, TIER_STANDARD is assumed.
 * TIER_STANDARD: Standard tier.
@@ -95,7 +95,7 @@ NOTE: Due to consistency issues, the provider will not read this field from the 
 the Terraform state and Dialogflow if the agent tier is changed outside of Terraform. Possible values: [&#34;TIER_STANDARD&#34;, &#34;TIER_ENTERPRISE&#34;, &#34;TIER_ENTERPRISE_PLUS&#34;] When `null`, the `tier` field will be omitted from the resulting object.
   - `time_zone` (`string`): The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
 Europe/Paris.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_agent.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_agent.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -143,7 +143,7 @@ for a list of the currently supported language codes. This field cannot be updat
 syntax and composite entities.
 * MATCH_MODE_ML_ONLY: Can be used for agents with a large number of examples in intents, especially the ones
 using @sys.any or very large developer entities. Possible values: [&#34;MATCH_MODE_HYBRID&#34;, &#34;MATCH_MODE_ML_ONLY&#34;] When `null`, the `match_mode` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `supported_language_codes` (`list`): The list of all languages supported by this agent (except for the defaultLanguageCode). When `null`, the `supported_language_codes` field will be omitted from the resulting object.
   - `tier` (`string`): The agent tier. If not specified, TIER_STANDARD is assumed.
 * TIER_STANDARD: Standard tier.
@@ -153,7 +153,7 @@ NOTE: Due to consistency issues, the provider will not read this field from the 
 the Terraform state and Dialogflow if the agent tier is changed outside of Terraform. Possible values: [&#34;TIER_STANDARD&#34;, &#34;TIER_ENTERPRISE&#34;, &#34;TIER_ENTERPRISE_PLUS&#34;] When `null`, the `tier` field will be omitted from the resulting object.
   - `time_zone` (`string`): The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
 Europe/Paris.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_agent.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_agent.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dialogflow_agent` resource into the root Terraform configuration.
@@ -404,9 +404,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

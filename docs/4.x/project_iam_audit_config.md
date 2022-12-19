@@ -51,7 +51,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `project` (`string`): 
+  - `project` (`string`): Set the `project` field on the resulting resource block.
   - `service` (`string`): Service which will be enabled for audit logging. The special value allServices covers all services.
   - `audit_log_config` (`list[obj]`): The configuration for logging of each type of permission. This can be specified multiple times. When `null`, the `audit_log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.project_iam_audit_config.audit_log_config.new](#fn-audit_log_confignew) constructor.
 
@@ -77,7 +77,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `project` (`string`): 
+  - `project` (`string`): Set the `project` field on the resulting object.
   - `service` (`string`): Service which will be enabled for audit logging. The special value allServices covers all services.
   - `audit_log_config` (`list[obj]`): The configuration for logging of each type of permission. This can be specified multiple times. When `null`, the `audit_log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.project_iam_audit_config.audit_log_config.new](#fn-audit_log_confignew) constructor.
 

@@ -86,14 +86,14 @@ No more than 64 labels can be assigned to a given resource.
 
 An object containing a list of &#34;key&#34;: value pairs. Example:
 { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `secret_id` (`string`): This must be unique within the project.
   - `ttl` (`string`): The TTL for the Secret.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `ttl` field will be omitted from the resulting object.
   - `replication` (`list[obj]`): The replication policy of the secret data attached to the Secret. It cannot be changed
 after the Secret has been created. When `null`, the `replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.new](#fn-replicationnew) constructor.
   - `rotation` (`list[obj]`): The rotation time and period for a Secret. At &#39;next_rotation_time&#39;, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. &#39;topics&#39; must be set to configure rotation. When `null`, the `rotation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.rotation.new](#fn-rotationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.timeouts.new](#fn-timeoutsnew) constructor.
   - `topics` (`list[obj]`): A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions. When `null`, the `topics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.topics.new](#fn-topicsnew) constructor.
 
 **Returns**:
@@ -132,14 +132,14 @@ No more than 64 labels can be assigned to a given resource.
 
 An object containing a list of &#34;key&#34;: value pairs. Example:
 { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `secret_id` (`string`): This must be unique within the project.
   - `ttl` (`string`): The TTL for the Secret.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `ttl` field will be omitted from the resulting object.
   - `replication` (`list[obj]`): The replication policy of the secret data attached to the Secret. It cannot be changed
 after the Secret has been created. When `null`, the `replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.new](#fn-replicationnew) constructor.
   - `rotation` (`list[obj]`): The rotation time and period for a Secret. At &#39;next_rotation_time&#39;, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. &#39;topics&#39; must be set to configure rotation. When `null`, the `rotation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.rotation.new](#fn-rotationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.timeouts.new](#fn-timeoutsnew) constructor.
   - `topics` (`list[obj]`): A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions. When `null`, the `topics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.topics.new](#fn-topicsnew) constructor.
 
 **Returns**:
@@ -510,9 +510,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

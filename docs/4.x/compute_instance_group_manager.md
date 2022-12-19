@@ -94,7 +94,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `auto_healing_policies` (`list[obj]`): The autohealing policies for this managed instance group. You can specify only one value. When `null`, the `auto_healing_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.auto_healing_policies.new](#fn-auto_healing_policiesnew) constructor.
   - `named_port` (`list[obj]`): The named port configuration. When `null`, the `named_port` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.named_port.new](#fn-named_portnew) constructor.
   - `stateful_disk` (`list[obj]`): Disks created on the instances that will be preserved on instance delete, update, etc. When `null`, the `stateful_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.stateful_disk.new](#fn-stateful_disknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.timeouts.new](#fn-timeoutsnew) constructor.
   - `update_policy` (`list[obj]`): The update policy for this managed instance group. When `null`, the `update_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.update_policy.new](#fn-update_policynew) constructor.
   - `version` (`list[obj]`): Application versions managed by this instance group. Each version deals with a specific instance template, allowing canary release scenarios. When `null`, the `version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.version.new](#fn-versionnew) constructor.
 
@@ -133,7 +133,7 @@ injecting into a complete block.
   - `auto_healing_policies` (`list[obj]`): The autohealing policies for this managed instance group. You can specify only one value. When `null`, the `auto_healing_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.auto_healing_policies.new](#fn-auto_healing_policiesnew) constructor.
   - `named_port` (`list[obj]`): The named port configuration. When `null`, the `named_port` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.named_port.new](#fn-named_portnew) constructor.
   - `stateful_disk` (`list[obj]`): Disks created on the instances that will be preserved on instance delete, update, etc. When `null`, the `stateful_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.stateful_disk.new](#fn-stateful_disknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.timeouts.new](#fn-timeoutsnew) constructor.
   - `update_policy` (`list[obj]`): The update policy for this managed instance group. When `null`, the `update_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.update_policy.new](#fn-update_policynew) constructor.
   - `version` (`list[obj]`): Application versions managed by this instance group. Each version deals with a specific instance template, allowing canary release scenarios. When `null`, the `version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.version.new](#fn-versionnew) constructor.
 
@@ -611,9 +611,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -67,9 +67,9 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   - `network` (`string`): The network this VPN gateway is accepting traffic for.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region this gateway should sit in. When `null`, the `region` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_ha_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_ha_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
   - `vpn_interfaces` (`list[obj]`): A list of interfaces on this VPN gateway. When `null`, the `vpn_interfaces` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_ha_vpn_gateway.vpn_interfaces.new](#fn-vpn_interfacesnew) constructor.
 
 **Returns**:
@@ -103,9 +103,9 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   - `network` (`string`): The network this VPN gateway is accepting traffic for.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region this gateway should sit in. When `null`, the `region` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_ha_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_ha_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
   - `vpn_interfaces` (`list[obj]`): A list of interfaces on this VPN gateway. When `null`, the `vpn_interfaces` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_ha_vpn_gateway.vpn_interfaces.new](#fn-vpn_interfacesnew) constructor.
 
 **Returns**:
@@ -282,8 +282,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

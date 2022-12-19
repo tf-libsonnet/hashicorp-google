@@ -101,7 +101,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `advanced_options_config` (`list[obj]`): Advanced Options Config of this security policy. When `null`, the `advanced_options_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_security_policy.advanced_options_config.new](#fn-advanced_options_confignew) constructor.
   - `recaptcha_options_config` (`list[obj]`): reCAPTCHA configuration options to be applied for the security policy. When `null`, the `recaptcha_options_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_security_policy.recaptcha_options_config.new](#fn-recaptcha_options_confignew) constructor.
   - `rule` (`list[obj]`): The set of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a security policy, a default rule with action &#34;allow&#34; will be added. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_security_policy.rule.new](#fn-rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_security_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_security_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -133,7 +133,7 @@ injecting into a complete block.
   - `advanced_options_config` (`list[obj]`): Advanced Options Config of this security policy. When `null`, the `advanced_options_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_security_policy.advanced_options_config.new](#fn-advanced_options_confignew) constructor.
   - `recaptcha_options_config` (`list[obj]`): reCAPTCHA configuration options to be applied for the security policy. When `null`, the `recaptcha_options_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_security_policy.recaptcha_options_config.new](#fn-recaptcha_options_confignew) constructor.
   - `rule` (`list[obj]`): The set of rules that belong to this policy. There must always be a default rule (rule with priority 2147483647 and match &#34;*&#34;). If no rules are provided when creating a security policy, a default rule with action &#34;allow&#34; will be added. When `null`, the `rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_security_policy.rule.new](#fn-rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_security_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_security_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_security_policy` resource into the root Terraform configuration.
@@ -796,9 +796,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

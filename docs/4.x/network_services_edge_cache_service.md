@@ -120,7 +120,7 @@ Note that only &#34;global&#34; certificates with a &#34;scope&#34; of &#34;EDGE
   - `name` (`string`): Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `require_tls` (`bool`): Require TLS (HTTPS) for all clients connecting to this service.
 
 Clients who connect over HTTP (port 80) will receive a HTTP 301 to the same URL over HTTPS (port 443).
@@ -130,7 +130,7 @@ You must have at least one (1) edgeSslCertificate specified to enable this. When
 If not set, the EdgeCacheService has no SSL policy configured, and will default to the &#34;COMPATIBLE&#34; policy. When `null`, the `ssl_policy` field will be omitted from the resulting object.
   - `log_config` (`list[obj]`): Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_service.log_config.new](#fn-log_confignew) constructor.
   - `routing` (`list[obj]`): Defines how requests are routed, modified, cached and/or which origin content is filled from. When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_service.routing.new](#fn-routingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -169,7 +169,7 @@ Note that only &#34;global&#34; certificates with a &#34;scope&#34; of &#34;EDGE
   - `name` (`string`): Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `require_tls` (`bool`): Require TLS (HTTPS) for all clients connecting to this service.
 
 Clients who connect over HTTP (port 80) will receive a HTTP 301 to the same URL over HTTPS (port 443).
@@ -179,7 +179,7 @@ You must have at least one (1) edgeSslCertificate specified to enable this. When
 If not set, the EdgeCacheService has no SSL policy configured, and will default to the &#34;COMPATIBLE&#34; policy. When `null`, the `ssl_policy` field will be omitted from the resulting object.
   - `log_config` (`list[obj]`): Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_service.log_config.new](#fn-log_confignew) constructor.
   - `routing` (`list[obj]`): Defines how requests are routed, modified, cached and/or which origin content is filled from. When `null`, the `routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_service.routing.new](#fn-routingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_services_edge_cache_service` resource into the root Terraform configuration.
@@ -1242,9 +1242,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

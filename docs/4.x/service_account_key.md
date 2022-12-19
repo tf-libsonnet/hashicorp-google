@@ -53,9 +53,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `keepers` (`obj`): Arbitrary map of values that, when changed, will trigger recreation of resource. When `null`, the `keepers` field will be omitted from the resulting object.
   - `key_algorithm` (`string`): The algorithm used to generate the key, used only on create. KEY_ALG_RSA_2048 is the default algorithm. Valid values are: &#34;KEY_ALG_RSA_1024&#34;, &#34;KEY_ALG_RSA_2048&#34;. When `null`, the `key_algorithm` field will be omitted from the resulting object.
-  - `private_key_type` (`string`):  When `null`, the `private_key_type` field will be omitted from the resulting object.
+  - `private_key_type` (`string`): Set the `private_key_type` field on the resulting resource block. When `null`, the `private_key_type` field will be omitted from the resulting object.
   - `public_key_data` (`string`): A field that allows clients to upload their own public key. If set, use this public key data to create a service account key for given service account. Please note, the expected format for this field is a base64 encoded X509_PEM. When `null`, the `public_key_data` field will be omitted from the resulting object.
-  - `public_key_type` (`string`):  When `null`, the `public_key_type` field will be omitted from the resulting object.
+  - `public_key_type` (`string`): Set the `public_key_type` field on the resulting resource block. When `null`, the `public_key_type` field will be omitted from the resulting object.
   - `service_account_id` (`string`): The ID of the parent service account of the key. This can be a string in the format {ACCOUNT} or projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}, where {ACCOUNT} is the email address or unique id of the service account. If the {ACCOUNT} syntax is used, the project will be inferred from the provider&#39;s configuration.
 
 **Returns**:
@@ -82,9 +82,9 @@ injecting into a complete block.
 **Args**:
   - `keepers` (`obj`): Arbitrary map of values that, when changed, will trigger recreation of resource. When `null`, the `keepers` field will be omitted from the resulting object.
   - `key_algorithm` (`string`): The algorithm used to generate the key, used only on create. KEY_ALG_RSA_2048 is the default algorithm. Valid values are: &#34;KEY_ALG_RSA_1024&#34;, &#34;KEY_ALG_RSA_2048&#34;. When `null`, the `key_algorithm` field will be omitted from the resulting object.
-  - `private_key_type` (`string`):  When `null`, the `private_key_type` field will be omitted from the resulting object.
+  - `private_key_type` (`string`): Set the `private_key_type` field on the resulting object. When `null`, the `private_key_type` field will be omitted from the resulting object.
   - `public_key_data` (`string`): A field that allows clients to upload their own public key. If set, use this public key data to create a service account key for given service account. Please note, the expected format for this field is a base64 encoded X509_PEM. When `null`, the `public_key_data` field will be omitted from the resulting object.
-  - `public_key_type` (`string`):  When `null`, the `public_key_type` field will be omitted from the resulting object.
+  - `public_key_type` (`string`): Set the `public_key_type` field on the resulting object. When `null`, the `public_key_type` field will be omitted from the resulting object.
   - `service_account_id` (`string`): The ID of the parent service account of the key. This can be a string in the format {ACCOUNT} or projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}, where {ACCOUNT} is the email address or unique id of the service account. If the {ACCOUNT} syntax is used, the project will be inferred from the provider&#39;s configuration.
 
 **Returns**:

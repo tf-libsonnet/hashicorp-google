@@ -85,13 +85,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): The location of this cloud function. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): A user-defined name of the function. Function names must
 be unique globally and match pattern &#39;projects/*/locations/*/functions/*&#39;.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `build_config` (`list[obj]`): Describes the Build step of the function that builds a container
 from the given source. When `null`, the `build_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.build_config.new](#fn-build_confignew) constructor.
   - `event_trigger` (`list[obj]`): An Eventarc trigger managed by Google Cloud Functions that fires events in
 response to a condition in another service. When `null`, the `event_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.event_trigger.new](#fn-event_triggernew) constructor.
   - `service_config` (`list[obj]`): Describes the Service being deployed. When `null`, the `service_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.service_config.new](#fn-service_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -120,13 +120,13 @@ injecting into a complete block.
   - `location` (`string`): The location of this cloud function. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): A user-defined name of the function. Function names must
 be unique globally and match pattern &#39;projects/*/locations/*/functions/*&#39;.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `build_config` (`list[obj]`): Describes the Build step of the function that builds a container
 from the given source. When `null`, the `build_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.build_config.new](#fn-build_confignew) constructor.
   - `event_trigger` (`list[obj]`): An Eventarc trigger managed by Google Cloud Functions that fires events in
 response to a condition in another service. When `null`, the `event_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.event_trigger.new](#fn-event_triggernew) constructor.
   - `service_config` (`list[obj]`): Describes the Service being deployed. When `null`, the `service_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.service_config.new](#fn-service_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloudfunctions2_function` resource into the root Terraform configuration.
@@ -672,9 +672,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

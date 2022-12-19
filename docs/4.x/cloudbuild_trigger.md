@@ -154,7 +154,7 @@ a build. When `null`, the `included_files` field will be omitted from the result
   - `location` (`string`): The [Cloud Build location](https://cloud.google.com/build/docs/locations) for the trigger.
 If not specified, &#34;global&#34; is used. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): Name of the trigger. Must be unique within the project. When `null`, the `name` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `service_account` (`string`): The service account used for all user-controlled operations including
 triggers.patch, triggers.run, builds.create, and builds.cancel.
 
@@ -182,7 +182,7 @@ Triggers that respond to such events build source at whatever commit caused the 
 This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; &#39;webhook_config&#39; or &#39;source_to_build&#39; must be provided. When `null`, the `source_to_build` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.source_to_build.new](#fn-source_to_buildnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.timeouts.new](#fn-timeoutsnew) constructor.
   - `trigger_template` (`list[obj]`): Template describing the types of source changes to trigger a build.
 
 Branch and tag names in trigger templates are interpreted as regular
@@ -249,7 +249,7 @@ a build. When `null`, the `included_files` field will be omitted from the result
   - `location` (`string`): The [Cloud Build location](https://cloud.google.com/build/docs/locations) for the trigger.
 If not specified, &#34;global&#34; is used. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): Name of the trigger. Must be unique within the project. When `null`, the `name` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `service_account` (`string`): The service account used for all user-controlled operations including
 triggers.patch, triggers.run, builds.create, and builds.cancel.
 
@@ -277,7 +277,7 @@ Triggers that respond to such events build source at whatever commit caused the 
 This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; &#39;webhook_config&#39; or &#39;source_to_build&#39; must be provided. When `null`, the `source_to_build` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.source_to_build.new](#fn-source_to_buildnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.timeouts.new](#fn-timeoutsnew) constructor.
   - `trigger_template` (`list[obj]`): Template describing the types of source changes to trigger a build.
 
 Branch and tag names in trigger templates are interpreted as regular
@@ -1515,9 +1515,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

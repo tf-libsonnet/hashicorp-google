@@ -71,10 +71,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `min_throughput` (`number`): Minimum throughput of the connector in Mbps. Default and min is 200. When `null`, the `min_throughput` field will be omitted from the resulting object.
   - `name` (`string`): The name of the resource (Max 25 characters).
   - `network` (`string`): Name or self_link of the VPC network. Required if &#39;ip_cidr_range&#39; is set. When `null`, the `network` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the VPC Access connector resides. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
   - `subnet` (`list[obj]`): The subnet in which to house the connector When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.subnet.new](#fn-subnetnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -106,10 +106,10 @@ injecting into a complete block.
   - `min_throughput` (`number`): Minimum throughput of the connector in Mbps. Default and min is 200. When `null`, the `min_throughput` field will be omitted from the resulting object.
   - `name` (`string`): The name of the resource (Max 25 characters).
   - `network` (`string`): Name or self_link of the VPC network. Required if &#39;ip_cidr_range&#39; is set. When `null`, the `network` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the VPC Access connector resides. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
   - `subnet` (`list[obj]`): The subnet in which to house the connector When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.subnet.new](#fn-subnetnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vpc_access_connector` resource into the root Terraform configuration.
@@ -390,8 +390,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

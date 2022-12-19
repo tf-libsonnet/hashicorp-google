@@ -48,7 +48,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `org_id` (`string`): The numeric ID of the organization in which you want to manage the audit logging config.
-  - `policy_data` (`string`): 
+  - `policy_data` (`string`): Set the `policy_data` field on the resulting resource block.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -73,7 +73,7 @@ injecting into a complete block.
 
 **Args**:
   - `org_id` (`string`): The numeric ID of the organization in which you want to manage the audit logging config.
-  - `policy_data` (`string`): 
+  - `policy_data` (`string`): Set the `policy_data` field on the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `organization_iam_policy` resource into the root Terraform configuration.

@@ -50,7 +50,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `billing_account` (`string`): 
+  - `billing_account` (`string`): Set the `billing_account` field on the resulting resource block.
   - `description` (`string`): A human-readable description. When `null`, the `description` field will be omitted from the resulting object.
   - `disabled` (`bool`): Whether this exclusion rule should be disabled or not. This defaults to false. When `null`, the `disabled` field will be omitted from the resulting object.
   - `filter` (`string`): The filter to apply when excluding logs. Only log entries that match the filter are excluded.
@@ -78,7 +78,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `billing_account` (`string`): 
+  - `billing_account` (`string`): Set the `billing_account` field on the resulting object.
   - `description` (`string`): A human-readable description. When `null`, the `description` field will be omitted from the resulting object.
   - `disabled` (`bool`): Whether this exclusion rule should be disabled or not. This defaults to false. When `null`, the `disabled` field will be omitted from the resulting object.
   - `filter` (`string`): The filter to apply when excluding logs. Only log entries that match the filter are excluded.

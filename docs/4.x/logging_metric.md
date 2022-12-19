@@ -84,7 +84,7 @@ Metric identifiers are limited to 100 characters and can include only the follow
 characters A-Z, a-z, 0-9, and the special characters _-.,&#43;!*&#39;,()%/. The forward-slash
 character (/) denotes a hierarchy of name pieces, and it cannot be the first character
 of the name.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `value_extractor` (`string`): A valueExtractor is required when using a distribution logs-based metric to extract the values to
 record from a log entry. Two functions are supported for value extraction - EXTRACT(field) or
 REGEXP_EXTRACT(field, regex). The argument are 1. field - The name of the log entry field from which
@@ -95,7 +95,7 @@ error to specify a regex that does not include exactly one capture group. When `
   - `bucket_options` (`list[obj]`): The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values. When `null`, the `bucket_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.new](#fn-bucket_optionsnew) constructor.
   - `metric_descriptor` (`list[obj]`): The metric descriptor associated with the logs-based metric. When `null`, the `metric_descriptor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.new](#fn-metric_descriptornew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -132,7 +132,7 @@ Metric identifiers are limited to 100 characters and can include only the follow
 characters A-Z, a-z, 0-9, and the special characters _-.,&#43;!*&#39;,()%/. The forward-slash
 character (/) denotes a hierarchy of name pieces, and it cannot be the first character
 of the name.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `value_extractor` (`string`): A valueExtractor is required when using a distribution logs-based metric to extract the values to
 record from a log entry. Two functions are supported for value extraction - EXTRACT(field) or
 REGEXP_EXTRACT(field, regex). The argument are 1. field - The name of the log entry field from which
@@ -143,7 +143,7 @@ error to specify a regex that does not include exactly one capture group. When `
   - `bucket_options` (`list[obj]`): The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values. When `null`, the `bucket_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.new](#fn-bucket_optionsnew) constructor.
   - `metric_descriptor` (`list[obj]`): The metric descriptor associated with the logs-based metric. When `null`, the `metric_descriptor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.new](#fn-metric_descriptornew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logging_metric` resource into the root Terraform configuration.
@@ -535,9 +535,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

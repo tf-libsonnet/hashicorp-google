@@ -80,14 +80,14 @@ enablement check, quota, and billing. If not specified, the resource&#39;s
 project will be used. When `null`, the `billing_project` field will be omitted from the resulting object.
   - `content_type` (`string`): Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: [&#34;CONTENT_TYPE_UNSPECIFIED&#34;, &#34;RESOURCE&#34;, &#34;IAM_POLICY&#34;, &#34;ORG_POLICY&#34;, &#34;ACCESS_POLICY&#34;] When `null`, the `content_type` field will be omitted from the resulting object.
   - `feed_id` (`string`): This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `condition` (`list[obj]`): A condition which determines whether an asset update should be published. If specified, an asset
 will be returned only when the expression evaluates to true. When set, expression field
 must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
 expression &#34;temporal_asset.deleted == true&#34; will only publish Asset deletions. Other fields of
 condition are optional. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_project_feed.condition.new](#fn-conditionnew) constructor.
   - `feed_output_config` (`list[obj]`): Output configuration for asset feed destination. When `null`, the `feed_output_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_project_feed.feed_output_config.new](#fn-feed_output_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_project_feed.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_project_feed.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -126,14 +126,14 @@ enablement check, quota, and billing. If not specified, the resource&#39;s
 project will be used. When `null`, the `billing_project` field will be omitted from the resulting object.
   - `content_type` (`string`): Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: [&#34;CONTENT_TYPE_UNSPECIFIED&#34;, &#34;RESOURCE&#34;, &#34;IAM_POLICY&#34;, &#34;ORG_POLICY&#34;, &#34;ACCESS_POLICY&#34;] When `null`, the `content_type` field will be omitted from the resulting object.
   - `feed_id` (`string`): This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `condition` (`list[obj]`): A condition which determines whether an asset update should be published. If specified, an asset
 will be returned only when the expression evaluates to true. When set, expression field
 must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
 expression &#34;temporal_asset.deleted == true&#34; will only publish Asset deletions. Other fields of
 condition are optional. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_project_feed.condition.new](#fn-conditionnew) constructor.
   - `feed_output_config` (`list[obj]`): Output configuration for asset feed destination. When `null`, the `feed_output_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_project_feed.feed_output_config.new](#fn-feed_output_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_project_feed.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_project_feed.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloud_asset_project_feed` resource into the root Terraform configuration.
@@ -437,9 +437,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

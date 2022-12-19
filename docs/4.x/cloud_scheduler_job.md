@@ -91,7 +91,7 @@ A duration in seconds with up to nine fractional digits, terminated by &#39;s&#3
 This string must not contain more than 500 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): The name of the job.
   - `paused` (`bool`): Sets the job to a paused state. Jobs default to being enabled when this property is not set. When `null`, the `paused` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the scheduler job resides. If it is not provided, Terraform will use the provider default. When `null`, the `region` field will be omitted from the resulting object.
   - `schedule` (`string`): Describes the schedule on which the job will be executed. When `null`, the `schedule` field will be omitted from the resulting object.
   - `time_zone` (`string`): Specifies the time zone to be used in interpreting schedule.
@@ -108,7 +108,7 @@ a message to the provided topic When `null`, the `pubsub_target` sub block will 
   - `retry_config` (`list[obj]`): By default, if a job does not complete successfully, 
 meaning that an acknowledgement is not received from the handler, 
 then it will be retried with exponential backoff according to the settings When `null`, the `retry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.retry_config.new](#fn-retry_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -144,7 +144,7 @@ A duration in seconds with up to nine fractional digits, terminated by &#39;s&#3
 This string must not contain more than 500 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): The name of the job.
   - `paused` (`bool`): Sets the job to a paused state. Jobs default to being enabled when this property is not set. When `null`, the `paused` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the scheduler job resides. If it is not provided, Terraform will use the provider default. When `null`, the `region` field will be omitted from the resulting object.
   - `schedule` (`string`): Describes the schedule on which the job will be executed. When `null`, the `schedule` field will be omitted from the resulting object.
   - `time_zone` (`string`): Specifies the time zone to be used in interpreting schedule.
@@ -161,7 +161,7 @@ a message to the provided topic When `null`, the `pubsub_target` sub block will 
   - `retry_config` (`list[obj]`): By default, if a job does not complete successfully, 
 meaning that an acknowledgement is not received from the handler, 
 then it will be retried with exponential backoff according to the settings When `null`, the `retry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.retry_config.new](#fn-retry_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloud_scheduler_job` resource into the root Terraform configuration.
@@ -716,9 +716,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

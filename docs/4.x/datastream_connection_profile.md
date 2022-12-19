@@ -88,7 +88,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `display_name` (`string`): Display name.
   - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location this repository is located in.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `bigquery_profile` (`list[obj]`): BigQuery warehouse profile. When `null`, the `bigquery_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.bigquery_profile.new](#fn-bigquery_profilenew) constructor.
   - `forward_ssh_connectivity` (`list[obj]`): Forward SSH tunnel connectivity. When `null`, the `forward_ssh_connectivity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.forward_ssh_connectivity.new](#fn-forward_ssh_connectivitynew) constructor.
   - `gcs_profile` (`list[obj]`): Cloud Storage bucket profile. When `null`, the `gcs_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.gcs_profile.new](#fn-gcs_profilenew) constructor.
@@ -96,7 +96,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `oracle_profile` (`list[obj]`): Oracle database profile. When `null`, the `oracle_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.oracle_profile.new](#fn-oracle_profilenew) constructor.
   - `postgresql_profile` (`list[obj]`): PostgreSQL database profile. When `null`, the `postgresql_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.postgresql_profile.new](#fn-postgresql_profilenew) constructor.
   - `private_connectivity` (`list[obj]`): Private connectivity. When `null`, the `private_connectivity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.private_connectivity.new](#fn-private_connectivitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -124,7 +124,7 @@ injecting into a complete block.
   - `display_name` (`string`): Display name.
   - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location this repository is located in.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `bigquery_profile` (`list[obj]`): BigQuery warehouse profile. When `null`, the `bigquery_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.bigquery_profile.new](#fn-bigquery_profilenew) constructor.
   - `forward_ssh_connectivity` (`list[obj]`): Forward SSH tunnel connectivity. When `null`, the `forward_ssh_connectivity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.forward_ssh_connectivity.new](#fn-forward_ssh_connectivitynew) constructor.
   - `gcs_profile` (`list[obj]`): Cloud Storage bucket profile. When `null`, the `gcs_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.gcs_profile.new](#fn-gcs_profilenew) constructor.
@@ -132,7 +132,7 @@ injecting into a complete block.
   - `oracle_profile` (`list[obj]`): Oracle database profile. When `null`, the `oracle_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.oracle_profile.new](#fn-oracle_profilenew) constructor.
   - `postgresql_profile` (`list[obj]`): PostgreSQL database profile. When `null`, the `postgresql_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.postgresql_profile.new](#fn-postgresql_profilenew) constructor.
   - `private_connectivity` (`list[obj]`): Private connectivity. When `null`, the `private_connectivity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.private_connectivity.new](#fn-private_connectivitynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `datastream_connection_profile` resource into the root Terraform configuration.
@@ -737,9 +737,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

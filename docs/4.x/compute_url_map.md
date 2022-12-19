@@ -242,7 +242,7 @@ name must be 1-63 characters long and match the regular expression
 &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a lowercase
 letter, and all following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `default_route_action` (`list[obj]`): defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions
 like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend.
 If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService
@@ -260,7 +260,7 @@ headerAction specified under pathMatcher. When `null`, the `header_action` sub b
   - `test` (`list[obj]`): The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
 tests per UrlMap. When `null`, the `test` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.test.new](#fn-testnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -293,7 +293,7 @@ name must be 1-63 characters long and match the regular expression
 &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a lowercase
 letter, and all following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `default_route_action` (`list[obj]`): defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions
 like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend.
 If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService
@@ -311,7 +311,7 @@ headerAction specified under pathMatcher. When `null`, the `header_action` sub b
   - `test` (`list[obj]`): The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
 tests per UrlMap. When `null`, the `test` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.test.new](#fn-testnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_url_map` resource into the root Terraform configuration.
@@ -3360,9 +3360,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

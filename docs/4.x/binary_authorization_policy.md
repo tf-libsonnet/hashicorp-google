@@ -68,7 +68,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `global_policy_evaluation_mode` (`string`): Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy. Possible values: [&#34;ENABLE&#34;, &#34;DISABLE&#34;] When `null`, the `global_policy_evaluation_mode` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `admission_whitelist_patterns` (`list[obj]`): A whitelist of image patterns to exclude from admission rules. If an
 image&#39;s name matches a whitelist pattern, the image&#39;s admission
 requests will always be permitted regardless of your admission rules. When `null`, the `admission_whitelist_patterns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.admission_whitelist_patterns.new](#fn-admission_whitelist_patternsnew) constructor.
@@ -84,7 +84,7 @@ A location is either a compute zone (e.g. &#39;us-central1-a&#39;) or a region
 (e.g. &#39;us-central1&#39;). When `null`, the `cluster_admission_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.cluster_admission_rules.new](#fn-cluster_admission_rulesnew) constructor.
   - `default_admission_rule` (`list[obj]`): Default admission rule for a cluster without a per-cluster admission
 rule. When `null`, the `default_admission_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.default_admission_rule.new](#fn-default_admission_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -112,7 +112,7 @@ injecting into a complete block.
   - `global_policy_evaluation_mode` (`string`): Controls the evaluation of a Google-maintained global admission policy
 for common system-level images. Images not covered by the global
 policy will be subject to the project admission policy. Possible values: [&#34;ENABLE&#34;, &#34;DISABLE&#34;] When `null`, the `global_policy_evaluation_mode` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `admission_whitelist_patterns` (`list[obj]`): A whitelist of image patterns to exclude from admission rules. If an
 image&#39;s name matches a whitelist pattern, the image&#39;s admission
 requests will always be permitted regardless of your admission rules. When `null`, the `admission_whitelist_patterns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.admission_whitelist_patterns.new](#fn-admission_whitelist_patternsnew) constructor.
@@ -128,7 +128,7 @@ A location is either a compute zone (e.g. &#39;us-central1-a&#39;) or a region
 (e.g. &#39;us-central1&#39;). When `null`, the `cluster_admission_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.cluster_admission_rules.new](#fn-cluster_admission_rulesnew) constructor.
   - `default_admission_rule` (`list[obj]`): Default admission rule for a cluster without a per-cluster admission
 rule. When `null`, the `default_admission_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.default_admission_rule.new](#fn-default_admission_rulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `binary_authorization_policy` resource into the root Terraform configuration.
@@ -372,7 +372,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `cluster` (`string`): 
+  - `cluster` (`string`): Set the `cluster` field on the resulting object.
   - `enforcement_mode` (`string`): The action when a pod creation is denied by the admission rule. Possible values: [&#34;ENFORCED_BLOCK_AND_AUDIT_LOG&#34;, &#34;DRYRUN_AUDIT_LOG_ONLY&#34;]
   - `evaluation_mode` (`string`): How this admission rule will be evaluated. Possible values: [&#34;ALWAYS_ALLOW&#34;, &#34;REQUIRE_ATTESTATION&#34;, &#34;ALWAYS_DENY&#34;]
   - `require_attestations_by` (`list`): The resource names of the attestors that must attest to a
@@ -439,9 +439,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

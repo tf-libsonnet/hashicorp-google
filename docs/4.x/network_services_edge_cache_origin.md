@@ -111,7 +111,7 @@ When providing an FQDN (hostname), it must be publicly resolvable (e.g. via Goog
 If a Cloud Storage bucket is provided, it must be in the canonical &#34;gs://bucketname&#34; format. Other forms, such as &#34;storage.googleapis.com&#34;, will be rejected.
   - `port` (`number`): The port to connect to the origin on.
 Defaults to port 443 for HTTP2 and HTTPS protocols, and port 80 for HTTP. When `null`, the `port` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `protocol` (`string`): The protocol to use to connect to the configured origin. Defaults to HTTP2, and it is strongly recommended that users use HTTP2 for both security &amp; performance.
 
 When using HTTP2 or HTTPS as the protocol, a valid, publicly-signed, unexpired TLS (SSL) certificate must be presented by the origin server. Possible values: [&#34;HTTP2&#34;, &#34;HTTPS&#34;, &#34;HTTP&#34;] When `null`, the `protocol` field will be omitted from the resulting object.
@@ -138,7 +138,7 @@ Valid values are:
 additions, for requests that use this origin. When `null`, the `origin_override_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.new](#fn-origin_override_actionnew) constructor.
   - `origin_redirect` (`list[obj]`): Follow redirects from this origin. When `null`, the `origin_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_redirect.new](#fn-origin_redirectnew) constructor.
   - `timeout` (`list[obj]`): The connection and HTTP timeout configuration for this origin. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeout.new](#fn-timeoutnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -192,7 +192,7 @@ When providing an FQDN (hostname), it must be publicly resolvable (e.g. via Goog
 If a Cloud Storage bucket is provided, it must be in the canonical &#34;gs://bucketname&#34; format. Other forms, such as &#34;storage.googleapis.com&#34;, will be rejected.
   - `port` (`number`): The port to connect to the origin on.
 Defaults to port 443 for HTTP2 and HTTPS protocols, and port 80 for HTTP. When `null`, the `port` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `protocol` (`string`): The protocol to use to connect to the configured origin. Defaults to HTTP2, and it is strongly recommended that users use HTTP2 for both security &amp; performance.
 
 When using HTTP2 or HTTPS as the protocol, a valid, publicly-signed, unexpired TLS (SSL) certificate must be presented by the origin server. Possible values: [&#34;HTTP2&#34;, &#34;HTTPS&#34;, &#34;HTTP&#34;] When `null`, the `protocol` field will be omitted from the resulting object.
@@ -219,7 +219,7 @@ Valid values are:
 additions, for requests that use this origin. When `null`, the `origin_override_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.new](#fn-origin_override_actionnew) constructor.
   - `origin_redirect` (`list[obj]`): Follow redirects from this origin. When `null`, the `origin_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_redirect.new](#fn-origin_redirectnew) constructor.
   - `timeout` (`list[obj]`): The connection and HTTP timeout configuration for this origin. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeout.new](#fn-timeoutnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_services_edge_cache_origin` resource into the root Terraform configuration.
@@ -797,9 +797,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

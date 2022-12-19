@@ -53,7 +53,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 				To enable CMEK for the bucket, set this field to a valid kmsKeyName for which the associated service account has the required cloudkms.cryptoKeyEncrypterDecrypter roles assigned for the key.
 				The Cloud KMS key used by the bucket can be updated by changing the kmsKeyName to a new valid key name. Encryption operations that are in progress will be completed with the key that was in use when they started. Decryption operations will be completed using the key that was used at the time of encryption unless access to that key has been revoked.
 				See [Enabling CMEK for Logging Buckets](https://cloud.google.com/logging/docs/routing/managed-encryption-storage) for more information. When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `project` (`string`): 
+  - `project` (`string`): Set the `project` field on the resulting data source block.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -83,7 +83,7 @@ injecting into a complete block.
 				To enable CMEK for the bucket, set this field to a valid kmsKeyName for which the associated service account has the required cloudkms.cryptoKeyEncrypterDecrypter roles assigned for the key.
 				The Cloud KMS key used by the bucket can be updated by changing the kmsKeyName to a new valid key name. Encryption operations that are in progress will be completed with the key that was in use when they started. Decryption operations will be completed using the key that was used at the time of encryption unless access to that key has been revoked.
 				See [Enabling CMEK for Logging Buckets](https://cloud.google.com/logging/docs/routing/managed-encryption-storage) for more information. When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `project` (`string`): 
+  - `project` (`string`): Set the `project` field on the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `logging_project_cmek_settings` data source into the root Terraform configuration.

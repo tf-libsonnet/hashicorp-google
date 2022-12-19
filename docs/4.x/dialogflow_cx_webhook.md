@@ -76,7 +76,7 @@ Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Age
   - `timeout` (`string`): Webhook execution timeout. When `null`, the `timeout` field will be omitted from the resulting object.
   - `generic_web_service` (`list[obj]`): Configuration for a generic web service. When `null`, the `generic_web_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.generic_web_service.new](#fn-generic_web_servicenew) constructor.
   - `service_directory` (`list[obj]`): Configuration for a Service Directory service. When `null`, the `service_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.service_directory.new](#fn-service_directorynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -110,7 +110,7 @@ Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Age
   - `timeout` (`string`): Webhook execution timeout. When `null`, the `timeout` field will be omitted from the resulting object.
   - `generic_web_service` (`list[obj]`): Configuration for a generic web service. When `null`, the `generic_web_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.generic_web_service.new](#fn-generic_web_servicenew) constructor.
   - `service_directory` (`list[obj]`): Configuration for a Service Directory service. When `null`, the `service_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.service_directory.new](#fn-service_directorynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dialogflow_cx_webhook` resource into the root Terraform configuration.
@@ -429,9 +429,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

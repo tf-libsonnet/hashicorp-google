@@ -88,7 +88,7 @@ Only networks that are in the distributed mode can have subnetworks.
   - `private_ip_google_access` (`bool`): When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access. When `null`, the `private_ip_google_access` field will be omitted from the resulting object.
   - `private_ipv6_google_access` (`string`): The private IPv6 google access type for the VMs in this subnet. When `null`, the `private_ipv6_google_access` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `purpose` (`string`): The purpose of the resource. A subnetwork with purpose set to
 INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing.
@@ -115,7 +115,7 @@ If not specified IPV4_ONLY will be used. Possible values: [&#34;IPV4_ONLY&#34;, 
   - `log_config` (`list[obj]`): Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the &#39;purpose&#39; of this
 subnetwork is &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.log_config.new](#fn-log_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -161,7 +161,7 @@ Only networks that are in the distributed mode can have subnetworks.
   - `private_ip_google_access` (`bool`): When enabled, VMs in this subnetwork without external IP addresses can
 access Google APIs and services by using Private Google Access. When `null`, the `private_ip_google_access` field will be omitted from the resulting object.
   - `private_ipv6_google_access` (`string`): The private IPv6 google access type for the VMs in this subnet. When `null`, the `private_ipv6_google_access` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `purpose` (`string`): The purpose of the resource. A subnetwork with purpose set to
 INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is
 reserved for Internal HTTP(S) Load Balancing.
@@ -188,7 +188,7 @@ If not specified IPV4_ONLY will be used. Possible values: [&#34;IPV4_ONLY&#34;, 
   - `log_config` (`list[obj]`): Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the &#39;purpose&#39; of this
 subnetwork is &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.log_config.new](#fn-log_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_subnetwork` resource into the root Terraform configuration.
@@ -531,9 +531,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
