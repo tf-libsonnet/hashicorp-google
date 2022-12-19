@@ -76,12 +76,12 @@ that is up to messageRetentionDuration in the past. If this field is not
 set, message retention is controlled by settings on individual subscriptions.
 Cannot be more than 31 days or less than 10 minutes. When `null`, the `message_retention_duration` field will be omitted from the resulting object.
   - `name` (`string`): Name of the topic.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `message_storage_policy` (`list[obj]`): Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
 constraints are in effect. When `null`, the `message_storage_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.message_storage_policy.new](#fn-message_storage_policynew) constructor.
   - `schema_settings` (`list[obj]`): Settings for validating messages published against a schema. When `null`, the `schema_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.schema_settings.new](#fn-schema_settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -119,12 +119,12 @@ that is up to messageRetentionDuration in the past. If this field is not
 set, message retention is controlled by settings on individual subscriptions.
 Cannot be more than 31 days or less than 10 minutes. When `null`, the `message_retention_duration` field will be omitted from the resulting object.
   - `name` (`string`): Name of the topic.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `message_storage_policy` (`list[obj]`): Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
 constraints are in effect. When `null`, the `message_storage_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.message_storage_policy.new](#fn-message_storage_policynew) constructor.
   - `schema_settings` (`list[obj]`): Settings for validating messages published against a schema. When `null`, the `schema_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.schema_settings.new](#fn-schema_settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `pubsub_topic` resource into the root Terraform configuration.
@@ -392,9 +392,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

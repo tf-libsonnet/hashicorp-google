@@ -99,11 +99,11 @@ An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&
   - `location` (`string`): Location of the CaPool. A full list of valid locations can be found by
 running &#39;gcloud privateca locations list&#39;.
   - `name` (`string`): The name for this CaPool.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `tier` (`string`): The Tier of this CaPool. Possible values: [&#34;ENTERPRISE&#34;, &#34;DEVOPS&#34;]
   - `issuance_policy` (`list[obj]`): The IssuancePolicy to control how Certificates will be issued from this CaPool. When `null`, the `issuance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.new](#fn-issuance_policynew) constructor.
   - `publishing_options` (`list[obj]`): The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool. When `null`, the `publishing_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.publishing_options.new](#fn-publishing_optionsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -134,11 +134,11 @@ An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&
   - `location` (`string`): Location of the CaPool. A full list of valid locations can be found by
 running &#39;gcloud privateca locations list&#39;.
   - `name` (`string`): The name for this CaPool.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `tier` (`string`): The Tier of this CaPool. Possible values: [&#34;ENTERPRISE&#34;, &#34;DEVOPS&#34;]
   - `issuance_policy` (`list[obj]`): The IssuancePolicy to control how Certificates will be issued from this CaPool. When `null`, the `issuance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.new](#fn-issuance_policynew) constructor.
   - `publishing_options` (`list[obj]`): The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool. When `null`, the `publishing_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.publishing_options.new](#fn-publishing_optionsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `privateca_ca_pool` resource into the root Terraform configuration.
@@ -802,9 +802,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

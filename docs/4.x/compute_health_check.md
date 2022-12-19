@@ -97,7 +97,7 @@ match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `timeout_sec` (`number`): How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec. When `null`, the `timeout_sec` field will be omitted from the resulting object.
@@ -110,7 +110,7 @@ consecutive failures. The default value is 2. When `null`, the `unhealthy_thresh
   - `log_config` (`list[obj]`): Configure logging on this health check. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_health_check.log_config.new](#fn-log_confignew) constructor.
   - `ssl_health_check` (`list[obj]`): A nested object resource When `null`, the `ssl_health_check` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_health_check.ssl_health_check.new](#fn-ssl_health_checknew) constructor.
   - `tcp_health_check` (`list[obj]`): A nested object resource When `null`, the `tcp_health_check` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_health_check.tcp_health_check.new](#fn-tcp_health_checknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_health_check.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_health_check.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -147,7 +147,7 @@ match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `timeout_sec` (`number`): How long (in seconds) to wait before claiming failure.
 The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec. When `null`, the `timeout_sec` field will be omitted from the resulting object.
@@ -160,7 +160,7 @@ consecutive failures. The default value is 2. When `null`, the `unhealthy_thresh
   - `log_config` (`list[obj]`): Configure logging on this health check. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_health_check.log_config.new](#fn-log_confignew) constructor.
   - `ssl_health_check` (`list[obj]`): A nested object resource When `null`, the `ssl_health_check` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_health_check.ssl_health_check.new](#fn-ssl_health_checknew) constructor.
   - `tcp_health_check` (`list[obj]`): A nested object resource When `null`, the `tcp_health_check` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_health_check.tcp_health_check.new](#fn-tcp_health_checknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_health_check.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_health_check.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_health_check` resource into the root Terraform configuration.
@@ -908,9 +908,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

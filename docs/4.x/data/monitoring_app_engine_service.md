@@ -50,7 +50,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `module_id` (`string`): The ID of the App Engine module underlying this service. 
 Corresponds to the &#39;moduleId&#39; resource label for a &#39;gae_app&#39;
 monitored resource(see https://cloud.google.com/monitoring/api/resources#tag_gae_app)
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -77,7 +77,7 @@ injecting into a complete block.
   - `module_id` (`string`): The ID of the App Engine module underlying this service. 
 Corresponds to the &#39;moduleId&#39; resource label for a &#39;gae_app&#39;
 monitored resource(see https://cloud.google.com/monitoring/api/resources#tag_gae_app)
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `monitoring_app_engine_service` data source into the root Terraform configuration.

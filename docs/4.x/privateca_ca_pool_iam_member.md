@@ -54,12 +54,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `ca_pool` (`string`): 
-  - `location` (`string`):  When `null`, the `location` field will be omitted from the resulting object.
-  - `member` (`string`): 
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `role` (`string`): 
-  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool_iam_member.condition.new](#fn-conditionnew) constructor.
+  - `ca_pool` (`string`): Set the `ca_pool` field on the resulting resource block.
+  - `location` (`string`): Set the `location` field on the resulting resource block. When `null`, the `location` field will be omitted from the resulting object.
+  - `member` (`string`): Set the `member` field on the resulting resource block.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `role` (`string`): Set the `role` field on the resulting resource block.
+  - `condition` (`list[obj]`): Set the `condition` field on the resulting resource block. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool_iam_member.condition.new](#fn-conditionnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,12 +83,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `ca_pool` (`string`): 
-  - `location` (`string`):  When `null`, the `location` field will be omitted from the resulting object.
-  - `member` (`string`): 
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `role` (`string`): 
-  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool_iam_member.condition.new](#fn-conditionnew) constructor.
+  - `ca_pool` (`string`): Set the `ca_pool` field on the resulting object.
+  - `location` (`string`): Set the `location` field on the resulting object. When `null`, the `location` field will be omitted from the resulting object.
+  - `member` (`string`): Set the `member` field on the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `role` (`string`): Set the `role` field on the resulting object.
+  - `condition` (`list[obj]`): Set the `condition` field on the resulting object. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool_iam_member.condition.new](#fn-conditionnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `privateca_ca_pool_iam_member` resource into the root Terraform configuration.
@@ -228,9 +228,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `expression` (`string`): 
-  - `title` (`string`): 
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `expression` (`string`): Set the `expression` field on the resulting object.
+  - `title` (`string`): Set the `title` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `condition` sub block.

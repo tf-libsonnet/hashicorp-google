@@ -62,7 +62,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `note_name` (`string`): The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `remediation` (`string`): A description of actions that can be taken to remedy the note. When `null`, the `remediation` field will be omitted from the resulting object.
   - `resource_uri` (`string`): Required. Immutable. A URI that represents the resource for which
 the occurrence applies. For example,
@@ -75,7 +75,7 @@ the authority to which this attestation is attached is primarily
 useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
 which authority this attestation was intended to sign. When `null`, the `attestation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_occurrence.attestation.new](#fn-attestationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_occurrence.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_occurrence.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,7 +102,7 @@ injecting into a complete block.
   - `note_name` (`string`): The analysis note associated with this occurrence, in the form of
 projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a
 filter in list requests.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `remediation` (`string`): A description of actions that can be taken to remedy the note. When `null`, the `remediation` field will be omitted from the resulting object.
   - `resource_uri` (`string`): Required. Immutable. A URI that represents the resource for which
 the occurrence applies. For example,
@@ -115,7 +115,7 @@ the authority to which this attestation is attached is primarily
 useful for lookup (how to find this attestation if you already
 know the authority and artifact to be verified) and intent (for
 which authority this attestation was intended to sign. When `null`, the `attestation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_occurrence.attestation.new](#fn-attestationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_occurrence.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_occurrence.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_analysis_occurrence` resource into the root Terraform configuration.
@@ -344,9 +344,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

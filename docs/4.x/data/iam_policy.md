@@ -57,8 +57,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `audit_config` (`list[obj]`):  When `null`, the `audit_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data.iam_policy.audit_config.new](#fn-audit_confignew) constructor.
-  - `binding` (`list[obj]`):  When `null`, the `binding` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data.iam_policy.binding.new](#fn-bindingnew) constructor.
+  - `audit_config` (`list[obj]`): Set the `audit_config` field on the resulting data source block. When `null`, the `audit_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data.iam_policy.audit_config.new](#fn-audit_confignew) constructor.
+  - `binding` (`list[obj]`): Set the `binding` field on the resulting data source block. When `null`, the `binding` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data.iam_policy.binding.new](#fn-bindingnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -82,8 +82,8 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `audit_config` (`list[obj]`):  When `null`, the `audit_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data.iam_policy.audit_config.new](#fn-audit_confignew) constructor.
-  - `binding` (`list[obj]`):  When `null`, the `binding` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data.iam_policy.binding.new](#fn-bindingnew) constructor.
+  - `audit_config` (`list[obj]`): Set the `audit_config` field on the resulting object. When `null`, the `audit_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data.iam_policy.audit_config.new](#fn-audit_confignew) constructor.
+  - `binding` (`list[obj]`): Set the `binding` field on the resulting object. When `null`, the `binding` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data.iam_policy.binding.new](#fn-bindingnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `iam_policy` data source into the root Terraform configuration.
@@ -180,8 +180,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `service` (`string`): 
-  - `audit_log_configs` (`list[obj]`):  When `null`, the `audit_log_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_policy.audit_config.audit_log_configs.new](#fn-audit_configaudit_log_configsnew) constructor.
+  - `service` (`string`): Set the `service` field on the resulting object.
+  - `audit_log_configs` (`list[obj]`): Set the `audit_log_configs` field on the resulting object. When `null`, the `audit_log_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_policy.audit_config.audit_log_configs.new](#fn-audit_configaudit_log_configsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `audit_config` sub block.
@@ -204,8 +204,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `exempted_members` (`list`):  When `null`, the `exempted_members` field will be omitted from the resulting object.
-  - `log_type` (`string`): 
+  - `exempted_members` (`list`): Set the `exempted_members` field on the resulting object. When `null`, the `exempted_members` field will be omitted from the resulting object.
+  - `log_type` (`string`): Set the `log_type` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `audit_log_configs` sub block.
@@ -228,9 +228,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `members` (`list`): 
-  - `role` (`string`): 
-  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_policy.binding.condition.new](#fn-bindingconditionnew) constructor.
+  - `members` (`list`): Set the `members` field on the resulting object.
+  - `role` (`string`): Set the `role` field on the resulting object.
+  - `condition` (`list[obj]`): Set the `condition` field on the resulting object. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_policy.binding.condition.new](#fn-bindingconditionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `binding` sub block.
@@ -253,9 +253,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
-  - `expression` (`string`): 
-  - `title` (`string`): 
+  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
+  - `expression` (`string`): Set the `expression` field on the resulting object.
+  - `title` (`string`): Set the `title` field on the resulting object.
 
 **Returns**:
   - An attribute object that represents the `condition` sub block.

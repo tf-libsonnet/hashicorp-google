@@ -188,7 +188,7 @@ character, which cannot be a dash.
   - `port_name` (`string`): Name of backend port. The same name should appear in the instance
 groups referenced by this service. Required when the load balancing
 scheme is EXTERNAL. When `null`, the `port_name` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `protocol` (`string`): The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API. Possible values: [&#34;HTTP&#34;, &#34;HTTPS&#34;, &#34;HTTP2&#34;, &#34;TCP&#34;, &#34;SSL&#34;, &#34;GRPC&#34;] When `null`, the `protocol` field will be omitted from the resulting object.
@@ -219,7 +219,7 @@ to INTERNAL_SELF_MANAGED. When `null`, the `outlier_detection` sub block will be
 a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
 load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
 load_balancing_scheme set to INTERNAL_SELF_MANAGED. When `null`, the `security_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.security_settings.new](#fn-security_settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -321,7 +321,7 @@ character, which cannot be a dash.
   - `port_name` (`string`): Name of backend port. The same name should appear in the instance
 groups referenced by this service. Required when the load balancing
 scheme is EXTERNAL. When `null`, the `port_name` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `protocol` (`string`): The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API. Possible values: [&#34;HTTP&#34;, &#34;HTTPS&#34;, &#34;HTTP2&#34;, &#34;TCP&#34;, &#34;SSL&#34;, &#34;GRPC&#34;] When `null`, the `protocol` field will be omitted from the resulting object.
@@ -352,7 +352,7 @@ to INTERNAL_SELF_MANAGED. When `null`, the `outlier_detection` sub block will be
 a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
 load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
 load_balancing_scheme set to INTERNAL_SELF_MANAGED. When `null`, the `security_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.security_settings.new](#fn-security_settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_backend_service` resource into the root Terraform configuration.
@@ -1499,9 +1499,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -103,7 +103,7 @@ except the last character, which cannot be a dash.
 Each BGP interface may use a different value.
   - `peer_ip_address` (`string`): IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
   - `router` (`string`): The name of the Cloud Router in which this BgpPeer will be configured.
@@ -113,7 +113,7 @@ is &#39;CUSTOM&#39; and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
 Leave this field blank to advertise no custom IP ranges. When `null`, the `advertised_ip_ranges` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.advertised_ip_ranges.new](#fn-advertised_ip_rangesnew) constructor.
   - `bfd` (`list[obj]`): BFD configuration for the BGP peering. When `null`, the `bfd` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.bfd.new](#fn-bfdnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -171,7 +171,7 @@ except the last character, which cannot be a dash.
 Each BGP interface may use a different value.
   - `peer_ip_address` (`string`): IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
   - `router` (`string`): The name of the Cloud Router in which this BgpPeer will be configured.
@@ -181,7 +181,7 @@ is &#39;CUSTOM&#39; and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
 Leave this field blank to advertise no custom IP ranges. When `null`, the `advertised_ip_ranges` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.advertised_ip_ranges.new](#fn-advertised_ip_rangesnew) constructor.
   - `bfd` (`list[obj]`): BFD configuration for the BGP peering. When `null`, the `bfd` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.bfd.new](#fn-bfdnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_router_peer` resource into the root Terraform configuration.
@@ -571,9 +571,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

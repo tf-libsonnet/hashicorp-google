@@ -49,7 +49,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
   - `location` (`string`): The name of the location this repository is located in.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
   - `repository_id` (`string`): The last part of the repository name, for example:
 &#34;repo1&#34;
 
@@ -76,7 +76,7 @@ injecting into a complete block.
 
 **Args**:
   - `location` (`string`): The name of the location this repository is located in.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `repository_id` (`string`): The last part of the repository name, for example:
 &#34;repo1&#34;
 

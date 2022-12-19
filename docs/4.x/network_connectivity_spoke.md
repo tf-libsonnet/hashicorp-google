@@ -78,7 +78,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `linked_interconnect_attachments` (`list[obj]`): A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes. When `null`, the `linked_interconnect_attachments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_interconnect_attachments.new](#fn-linked_interconnect_attachmentsnew) constructor.
   - `linked_router_appliance_instances` (`list[obj]`): The URIs of linked Router appliance resources When `null`, the `linked_router_appliance_instances` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_router_appliance_instances.new](#fn-linked_router_appliance_instancesnew) constructor.
   - `linked_vpn_tunnels` (`list[obj]`): The URIs of linked VPN tunnel resources When `null`, the `linked_vpn_tunnels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_vpn_tunnels.new](#fn-linked_vpn_tunnelsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -111,7 +111,7 @@ injecting into a complete block.
   - `linked_interconnect_attachments` (`list[obj]`): A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes. When `null`, the `linked_interconnect_attachments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_interconnect_attachments.new](#fn-linked_interconnect_attachmentsnew) constructor.
   - `linked_router_appliance_instances` (`list[obj]`): The URIs of linked Router appliance resources When `null`, the `linked_router_appliance_instances` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_router_appliance_instances.new](#fn-linked_router_appliance_instancesnew) constructor.
   - `linked_vpn_tunnels` (`list[obj]`): The URIs of linked VPN tunnel resources When `null`, the `linked_vpn_tunnels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_vpn_tunnels.new](#fn-linked_vpn_tunnelsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_connectivity_spoke` resource into the root Terraform configuration.
@@ -473,9 +473,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

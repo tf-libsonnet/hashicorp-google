@@ -58,7 +58,7 @@ character, which cannot be a dash.
 
 
 These are in the same namespace as the managed SSL certificates.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The Region in which the created regional ssl certificate should reside.
 If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
 
@@ -94,7 +94,7 @@ character, which cannot be a dash.
 
 
 These are in the same namespace as the managed SSL certificates.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The Region in which the created regional ssl certificate should reside.
 If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
 

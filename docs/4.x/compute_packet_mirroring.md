@@ -79,7 +79,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `priority` (`number`): Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances. When `null`, the `priority` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The Region in which the created address should reside.
 If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
   - `collector_ilb` (`list[obj]`): The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
@@ -91,7 +91,7 @@ set to true. When `null`, the `collector_ilb` sub block will be omitted from the
   - `network` (`list[obj]`): Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
 network. All mirrored subnetworks should belong to the given network. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.network.new](#fn-networknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -120,7 +120,7 @@ injecting into a complete block.
   - `priority` (`number`): Since only one rule can be active at a time, priority is
 used to break ties in the case of two rules that apply to
 the same instances. When `null`, the `priority` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The Region in which the created address should reside.
 If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
   - `collector_ilb` (`list[obj]`): The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
@@ -132,7 +132,7 @@ set to true. When `null`, the `collector_ilb` sub block will be omitted from the
   - `network` (`list[obj]`): Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
 network. All mirrored subnetworks should belong to the given network. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.network.new](#fn-networknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_packet_mirroring` resource into the root Terraform configuration.
@@ -562,9 +562,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

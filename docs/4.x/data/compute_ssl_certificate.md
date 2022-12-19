@@ -57,7 +57,7 @@ character, which cannot be a dash.
 
 
 These are in the same namespace as the managed SSL certificates.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -91,7 +91,7 @@ character, which cannot be a dash.
 
 
 These are in the same namespace as the managed SSL certificates.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `compute_ssl_certificate` data source into the root Terraform configuration.

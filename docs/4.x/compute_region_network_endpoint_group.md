@@ -82,7 +82,7 @@ character, which cannot be a dash.
 The URL of the network to which all network endpoints in the NEG belong. Uses
 &#34;default&#34; project network if unspecified. When `null`, the `network` field will be omitted from the resulting object.
   - `network_endpoint_type` (`string`): Type of network endpoints in this network endpoint group. Defaults to SERVERLESS Default value: &#34;SERVERLESS&#34; Possible values: [&#34;SERVERLESS&#34;, &#34;PRIVATE_SERVICE_CONNECT&#34;] When `null`, the `network_endpoint_type` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `psc_target_service` (`string`): The target service url used to set up private service connection to
 a Google API or a PSC Producer Service Attachment. When `null`, the `psc_target_service` field will be omitted from the resulting object.
   - `region` (`string`): A reference to the region where the Serverless NEGs Reside.
@@ -94,7 +94,7 @@ Only one of cloud_run, app_engine, cloud_function or serverless_deployment may b
 Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_function` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_function.new](#fn-cloud_functionnew) constructor.
   - `cloud_run` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
 Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_run` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_run.new](#fn-cloud_runnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -131,7 +131,7 @@ character, which cannot be a dash.
 The URL of the network to which all network endpoints in the NEG belong. Uses
 &#34;default&#34; project network if unspecified. When `null`, the `network` field will be omitted from the resulting object.
   - `network_endpoint_type` (`string`): Type of network endpoints in this network endpoint group. Defaults to SERVERLESS Default value: &#34;SERVERLESS&#34; Possible values: [&#34;SERVERLESS&#34;, &#34;PRIVATE_SERVICE_CONNECT&#34;] When `null`, the `network_endpoint_type` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `psc_target_service` (`string`): The target service url used to set up private service connection to
 a Google API or a PSC Producer Service Attachment. When `null`, the `psc_target_service` field will be omitted from the resulting object.
   - `region` (`string`): A reference to the region where the Serverless NEGs Reside.
@@ -143,7 +143,7 @@ Only one of cloud_run, app_engine, cloud_function or serverless_deployment may b
 Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_function` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_function.new](#fn-cloud_functionnew) constructor.
   - `cloud_run` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
 Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_run` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_run.new](#fn-cloud_runnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_region_network_endpoint_group` resource into the root Terraform configuration.
@@ -546,8 +546,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

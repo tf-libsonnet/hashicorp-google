@@ -116,7 +116,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `lifecycle_rule` (`list[obj]`): The bucket&#39;s Lifecycle Rules configuration. When `null`, the `lifecycle_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.lifecycle_rule.new](#fn-lifecycle_rulenew) constructor.
   - `logging` (`list[obj]`): The bucket&#39;s Access &amp; Storage Logs configuration. When `null`, the `logging` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.logging.new](#fn-loggingnew) constructor.
   - `retention_policy` (`list[obj]`): Configuration of the bucket&#39;s data retention policy for how long objects in the bucket should be retained. When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.retention_policy.new](#fn-retention_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.timeouts.new](#fn-timeoutsnew) constructor.
   - `versioning` (`list[obj]`): The bucket&#39;s Versioning configuration. When `null`, the `versioning` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.versioning.new](#fn-versioningnew) constructor.
   - `website` (`list[obj]`): Configuration if the bucket acts as a website. When `null`, the `website` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.website.new](#fn-websitenew) constructor.
 
@@ -159,7 +159,7 @@ injecting into a complete block.
   - `lifecycle_rule` (`list[obj]`): The bucket&#39;s Lifecycle Rules configuration. When `null`, the `lifecycle_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.lifecycle_rule.new](#fn-lifecycle_rulenew) constructor.
   - `logging` (`list[obj]`): The bucket&#39;s Access &amp; Storage Logs configuration. When `null`, the `logging` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.logging.new](#fn-loggingnew) constructor.
   - `retention_policy` (`list[obj]`): Configuration of the bucket&#39;s data retention policy for how long objects in the bucket should be retained. When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.retention_policy.new](#fn-retention_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.timeouts.new](#fn-timeoutsnew) constructor.
   - `versioning` (`list[obj]`): The bucket&#39;s Versioning configuration. When `null`, the `versioning` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.versioning.new](#fn-versioningnew) constructor.
   - `website` (`list[obj]`): Configuration if the bucket acts as a website. When `null`, the `website` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.website.new](#fn-websitenew) constructor.
 
@@ -938,9 +938,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -135,7 +135,7 @@ Format: projects/{project_id}/global/networks/{network_id} When `null`, the `net
   - `post_startup_script` (`string`): Path to a Bash script that automatically runs after a
 notebook instance fully boots up. The path must be a URL
 or Cloud Storage path (gs://path-to-file/file-name). When `null`, the `post_startup_script` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `service_account` (`string`): The service account on this instance, giving access to other
 Google Cloud services. You can use any service account within
 the same project, but you must have the service account user
@@ -156,7 +156,7 @@ machineType you have selected. When `null`, the `accelerator_config` sub block w
   - `reservation_affinity` (`list[obj]`): Reservation Affinity for consuming Zonal reservation. When `null`, the `reservation_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_instance.reservation_affinity.new](#fn-reservation_affinitynew) constructor.
   - `shielded_instance_config` (`list[obj]`): A set of Shielded Instance options. Check [Images using supported Shielded VM features]
 Not all combinations are valid When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_instance.shielded_instance_config.new](#fn-shielded_instance_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_instance.timeouts.new](#fn-timeoutsnew) constructor.
   - `vm_image` (`list[obj]`): Use a Compute Engine VM image to start the notebook instance. When `null`, the `vm_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_instance.vm_image.new](#fn-vm_imagenew) constructor.
 
 **Returns**:
@@ -220,7 +220,7 @@ Format: projects/{project_id}/global/networks/{network_id} When `null`, the `net
   - `post_startup_script` (`string`): Path to a Bash script that automatically runs after a
 notebook instance fully boots up. The path must be a URL
 or Cloud Storage path (gs://path-to-file/file-name). When `null`, the `post_startup_script` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `service_account` (`string`): The service account on this instance, giving access to other
 Google Cloud services. You can use any service account within
 the same project, but you must have the service account user
@@ -241,7 +241,7 @@ machineType you have selected. When `null`, the `accelerator_config` sub block w
   - `reservation_affinity` (`list[obj]`): Reservation Affinity for consuming Zonal reservation. When `null`, the `reservation_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_instance.reservation_affinity.new](#fn-reservation_affinitynew) constructor.
   - `shielded_instance_config` (`list[obj]`): A set of Shielded Instance options. Check [Images using supported Shielded VM features]
 Not all combinations are valid When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_instance.shielded_instance_config.new](#fn-shielded_instance_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_instance.timeouts.new](#fn-timeoutsnew) constructor.
   - `vm_image` (`list[obj]`): Use a Compute Engine VM image to start the notebook instance. When `null`, the `vm_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_instance.vm_image.new](#fn-vm_imagenew) constructor.
 
 **Returns**:
@@ -1024,9 +1024,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

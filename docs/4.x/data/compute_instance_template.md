@@ -49,8 +49,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `filter` (`string`):  When `null`, the `filter` field will be omitted from the resulting object.
-  - `most_recent` (`bool`):  When `null`, the `most_recent` field will be omitted from the resulting object.
+  - `filter` (`string`): Set the `filter` field on the resulting data source block. When `null`, the `filter` field will be omitted from the resulting object.
+  - `most_recent` (`bool`): Set the `most_recent` field on the resulting data source block. When `null`, the `most_recent` field will be omitted from the resulting object.
   - `name` (`string`): The name of the instance template. If you leave this blank, Terraform will auto-generate a unique name. When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
 
@@ -76,8 +76,8 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `filter` (`string`):  When `null`, the `filter` field will be omitted from the resulting object.
-  - `most_recent` (`bool`):  When `null`, the `most_recent` field will be omitted from the resulting object.
+  - `filter` (`string`): Set the `filter` field on the resulting object. When `null`, the `filter` field will be omitted from the resulting object.
+  - `most_recent` (`bool`): Set the `most_recent` field on the resulting object. When `null`, the `most_recent` field will be omitted from the resulting object.
   - `name` (`string`): The name of the instance template. If you leave this blank, Terraform will auto-generate a unique name. When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
 

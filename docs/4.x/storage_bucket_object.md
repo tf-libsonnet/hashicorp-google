@@ -75,7 +75,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `content_encoding` (`string`): Content-Encoding of the object data. When `null`, the `content_encoding` field will be omitted from the resulting object.
   - `content_language` (`string`): Content-Language of the object data. When `null`, the `content_language` field will be omitted from the resulting object.
   - `content_type` (`string`): Content-Type of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;. When `null`, the `content_type` field will be omitted from the resulting object.
-  - `detect_md5hash` (`string`):  When `null`, the `detect_md5hash` field will be omitted from the resulting object.
+  - `detect_md5hash` (`string`): Set the `detect_md5hash` field on the resulting resource block. When `null`, the `detect_md5hash` field will be omitted from the resulting object.
   - `event_based_hold` (`bool`): Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). When `null`, the `event_based_hold` field will be omitted from the resulting object.
   - `kms_key_name` (`string`): Resource name of the Cloud KMS key that will be used to encrypt the object. Overrides the object metadata&#39;s kmsKeyName value, if any. When `null`, the `kms_key_name` field will be omitted from the resulting object.
   - `metadata` (`obj`): User-provided metadata, in key/value pairs. When `null`, the `metadata` field will be omitted from the resulting object.
@@ -84,7 +84,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `storage_class` (`string`): The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket&#39;s default storage class or to a standard class. When `null`, the `storage_class` field will be omitted from the resulting object.
   - `temporary_hold` (`bool`): Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. When `null`, the `temporary_hold` field will be omitted from the resulting object.
   - `customer_encryption` (`list[obj]`): Encryption key; encoded using base64. When `null`, the `customer_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.customer_encryption.new](#fn-customer_encryptionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -115,7 +115,7 @@ injecting into a complete block.
   - `content_encoding` (`string`): Content-Encoding of the object data. When `null`, the `content_encoding` field will be omitted from the resulting object.
   - `content_language` (`string`): Content-Language of the object data. When `null`, the `content_language` field will be omitted from the resulting object.
   - `content_type` (`string`): Content-Type of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;. When `null`, the `content_type` field will be omitted from the resulting object.
-  - `detect_md5hash` (`string`):  When `null`, the `detect_md5hash` field will be omitted from the resulting object.
+  - `detect_md5hash` (`string`): Set the `detect_md5hash` field on the resulting object. When `null`, the `detect_md5hash` field will be omitted from the resulting object.
   - `event_based_hold` (`bool`): Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). When `null`, the `event_based_hold` field will be omitted from the resulting object.
   - `kms_key_name` (`string`): Resource name of the Cloud KMS key that will be used to encrypt the object. Overrides the object metadata&#39;s kmsKeyName value, if any. When `null`, the `kms_key_name` field will be omitted from the resulting object.
   - `metadata` (`obj`): User-provided metadata, in key/value pairs. When `null`, the `metadata` field will be omitted from the resulting object.
@@ -124,7 +124,7 @@ injecting into a complete block.
   - `storage_class` (`string`): The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket&#39;s default storage class or to a standard class. When `null`, the `storage_class` field will be omitted from the resulting object.
   - `temporary_hold` (`bool`): Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. When `null`, the `temporary_hold` field will be omitted from the resulting object.
   - `customer_encryption` (`list[obj]`): Encryption key; encoded using base64. When `null`, the `customer_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.customer_encryption.new](#fn-customer_encryptionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_bucket_object` resource into the root Terraform configuration.
@@ -484,9 +484,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

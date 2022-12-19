@@ -57,13 +57,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `export_custom_routes` (`bool`): Whether to export the custom routes to the peer network. Defaults to false. When `null`, the `export_custom_routes` field will be omitted from the resulting object.
-  - `export_subnet_routes_with_public_ip` (`bool`):  When `null`, the `export_subnet_routes_with_public_ip` field will be omitted from the resulting object.
+  - `export_subnet_routes_with_public_ip` (`bool`): Set the `export_subnet_routes_with_public_ip` field on the resulting resource block. When `null`, the `export_subnet_routes_with_public_ip` field will be omitted from the resulting object.
   - `import_custom_routes` (`bool`): Whether to export the custom routes from the peer network. Defaults to false. When `null`, the `import_custom_routes` field will be omitted from the resulting object.
-  - `import_subnet_routes_with_public_ip` (`bool`):  When `null`, the `import_subnet_routes_with_public_ip` field will be omitted from the resulting object.
+  - `import_subnet_routes_with_public_ip` (`bool`): Set the `import_subnet_routes_with_public_ip` field on the resulting resource block. When `null`, the `import_subnet_routes_with_public_ip` field will be omitted from the resulting object.
   - `name` (`string`): Name of the peering.
   - `network` (`string`): The primary network of the peering.
   - `peer_network` (`string`): The peer network in the peering. The peer network may belong to a different project.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,13 +88,13 @@ injecting into a complete block.
 
 **Args**:
   - `export_custom_routes` (`bool`): Whether to export the custom routes to the peer network. Defaults to false. When `null`, the `export_custom_routes` field will be omitted from the resulting object.
-  - `export_subnet_routes_with_public_ip` (`bool`):  When `null`, the `export_subnet_routes_with_public_ip` field will be omitted from the resulting object.
+  - `export_subnet_routes_with_public_ip` (`bool`): Set the `export_subnet_routes_with_public_ip` field on the resulting object. When `null`, the `export_subnet_routes_with_public_ip` field will be omitted from the resulting object.
   - `import_custom_routes` (`bool`): Whether to export the custom routes from the peer network. Defaults to false. When `null`, the `import_custom_routes` field will be omitted from the resulting object.
-  - `import_subnet_routes_with_public_ip` (`bool`):  When `null`, the `import_subnet_routes_with_public_ip` field will be omitted from the resulting object.
+  - `import_subnet_routes_with_public_ip` (`bool`): Set the `import_subnet_routes_with_public_ip` field on the resulting object. When `null`, the `import_subnet_routes_with_public_ip` field will be omitted from the resulting object.
   - `name` (`string`): Name of the peering.
   - `network` (`string`): The primary network of the peering.
   - `peer_network` (`string`): The peer network in the peering. The peer network may belong to a different project.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_network_peering` resource into the root Terraform configuration.
@@ -265,9 +265,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

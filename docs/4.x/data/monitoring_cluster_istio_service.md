@@ -54,7 +54,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
                         Corresponds to the clusterName resource label in k8s_cluster resources.
   - `location` (`string`): The location of the Kubernetes cluster in which this Istio service is defined. 
                         Corresponds to the location resource label in k8s_cluster resources.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
   - `service_name` (`string`): The name of the Istio service underlying this service. 
                         Corresponds to the destination_service_name metric label in Istio metrics.
   - `service_namespace` (`string`): The namespace of the Istio service underlying this service. 
@@ -86,7 +86,7 @@ injecting into a complete block.
                         Corresponds to the clusterName resource label in k8s_cluster resources.
   - `location` (`string`): The location of the Kubernetes cluster in which this Istio service is defined. 
                         Corresponds to the location resource label in k8s_cluster resources.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `service_name` (`string`): The name of the Istio service underlying this service. 
                         Corresponds to the destination_service_name metric label in Istio metrics.
   - `service_namespace` (`string`): The namespace of the Istio service underlying this service. 

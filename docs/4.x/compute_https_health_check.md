@@ -77,7 +77,7 @@ characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
   - `port` (`number`): The TCP port number for the HTTPS health check request.
 The default value is 443. When `null`, the `port` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `request_path` (`string`): The request path of the HTTPS health check request.
 The default value is /. When `null`, the `request_path` field will be omitted from the resulting object.
   - `timeout_sec` (`number`): How long (in seconds) to wait before claiming failure.
@@ -85,7 +85,7 @@ The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec. When `null`, the `timeout_sec` field will be omitted from the resulting object.
   - `unhealthy_threshold` (`number`): A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2. When `null`, the `unhealthy_threshold` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_https_health_check.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_https_health_check.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -127,7 +127,7 @@ characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
   - `port` (`number`): The TCP port number for the HTTPS health check request.
 The default value is 443. When `null`, the `port` field will be omitted from the resulting object.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `request_path` (`string`): The request path of the HTTPS health check request.
 The default value is /. When `null`, the `request_path` field will be omitted from the resulting object.
   - `timeout_sec` (`number`): How long (in seconds) to wait before claiming failure.
@@ -135,7 +135,7 @@ The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec. When `null`, the `timeout_sec` field will be omitted from the resulting object.
   - `unhealthy_threshold` (`number`): A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2. When `null`, the `unhealthy_threshold` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_https_health_check.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_https_health_check.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_https_health_check` resource into the root Terraform configuration.
@@ -354,9 +354,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

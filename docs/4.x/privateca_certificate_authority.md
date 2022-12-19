@@ -122,7 +122,7 @@ fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `nul
 running &#39;gcloud privateca locations list&#39;.
   - `pem_ca_certificate` (`string`): The signed CA certificate issued from the subordinated CA&#39;s CSR. This is needed when activating the subordiante CA with a third party issuer. When `null`, the `pem_ca_certificate` field will be omitted from the resulting object.
   - `pool` (`string`): The name of the CaPool this Certificate Authority belongs to.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `skip_grace_period` (`bool`): If this flag is set, the Certificate Authority will be deleted as soon as
 possible without a 30-day grace period where undeletion would have been
 allowed. If you proceed, there will be no way to recover this CA.
@@ -137,7 +137,7 @@ is a self-signed CertificateAuthority, this key is also used to sign the self-si
 certificate. Otherwise, it is used to sign a CSR. When `null`, the `key_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.key_spec.new](#fn-key_specnew) constructor.
   - `subordinate_config` (`list[obj]`): If this is a subordinate CertificateAuthority, this field will be set
 with the subordinate configuration, which describes its issuers. When `null`, the `subordinate_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.subordinate_config.new](#fn-subordinate_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -183,7 +183,7 @@ fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `nul
 running &#39;gcloud privateca locations list&#39;.
   - `pem_ca_certificate` (`string`): The signed CA certificate issued from the subordinated CA&#39;s CSR. This is needed when activating the subordiante CA with a third party issuer. When `null`, the `pem_ca_certificate` field will be omitted from the resulting object.
   - `pool` (`string`): The name of the CaPool this Certificate Authority belongs to.
-  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `skip_grace_period` (`bool`): If this flag is set, the Certificate Authority will be deleted as soon as
 possible without a 30-day grace period where undeletion would have been
 allowed. If you proceed, there will be no way to recover this CA.
@@ -198,7 +198,7 @@ is a self-signed CertificateAuthority, this key is also used to sign the self-si
 certificate. Otherwise, it is used to sign a CSR. When `null`, the `key_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.key_spec.new](#fn-key_specnew) constructor.
   - `subordinate_config` (`list[obj]`): If this is a subordinate CertificateAuthority, this field will be set
 with the subordinate configuration, which describes its issuers. When `null`, the `subordinate_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.subordinate_config.new](#fn-subordinate_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `privateca_certificate_authority` resource into the root Terraform configuration.
@@ -994,9 +994,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

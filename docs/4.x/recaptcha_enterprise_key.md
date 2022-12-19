@@ -74,7 +74,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `android_settings` (`list[obj]`): Settings for keys that can be used by Android apps. When `null`, the `android_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.android_settings.new](#fn-android_settingsnew) constructor.
   - `ios_settings` (`list[obj]`): Settings for keys that can be used by iOS apps. When `null`, the `ios_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.ios_settings.new](#fn-ios_settingsnew) constructor.
   - `testing_options` (`list[obj]`): Options for user acceptance testing. When `null`, the `testing_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.testing_options.new](#fn-testing_optionsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.timeouts.new](#fn-timeoutsnew) constructor.
   - `web_settings` (`list[obj]`): Settings for keys that can be used by websites. When `null`, the `web_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.web_settings.new](#fn-web_settingsnew) constructor.
 
 **Returns**:
@@ -105,7 +105,7 @@ injecting into a complete block.
   - `android_settings` (`list[obj]`): Settings for keys that can be used by Android apps. When `null`, the `android_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.android_settings.new](#fn-android_settingsnew) constructor.
   - `ios_settings` (`list[obj]`): Settings for keys that can be used by iOS apps. When `null`, the `ios_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.ios_settings.new](#fn-ios_settingsnew) constructor.
   - `testing_options` (`list[obj]`): Options for user acceptance testing. When `null`, the `testing_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.testing_options.new](#fn-testing_optionsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.timeouts.new](#fn-timeoutsnew) constructor.
   - `web_settings` (`list[obj]`): Settings for keys that can be used by websites. When `null`, the `web_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.web_settings.new](#fn-web_settingsnew) constructor.
 
 **Returns**:
@@ -433,9 +433,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
