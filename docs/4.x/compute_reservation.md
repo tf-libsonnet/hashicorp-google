@@ -338,7 +338,7 @@ Terraform sub block.
 
 **Args**:
   - `share_type` (`string`): Type of sharing for this shared-reservation Possible values: [&#34;LOCAL&#34;, &#34;SPECIFIC_PROJECTS&#34;] When `null`, the `share_type` field will be omitted from the resulting object.
-  - `project_map` (`list[obj]`): A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS. When `null`, the `project_map` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.share_settings.project_map.new](#fn-compute_reservationproject_mapnew) constructor.
+  - `project_map` (`list[obj]`): A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS. When `null`, the `project_map` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.share_settings.project_map.new](#fn-share_settingsproject_mapnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `share_settings` sub block.
@@ -385,7 +385,7 @@ Terraform sub block.
 
 **Args**:
   - `count` (`number`): The number of resources that are allocated.
-  - `instance_properties` (`list[obj]`): The instance properties for the reservation. When `null`, the `instance_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.instance_properties.new](#fn-compute_reservationinstance_propertiesnew) constructor.
+  - `instance_properties` (`list[obj]`): The instance properties for the reservation. When `null`, the `instance_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.instance_properties.new](#fn-specific_reservationinstance_propertiesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `specific_reservation` sub block.
@@ -413,9 +413,9 @@ Terraform sub block.
 &#39;&#34;Intel Skylake&#34;&#39;. See
 the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
 for information on available CPU platforms. When `null`, the `min_cpu_platform` field will be omitted from the resulting object.
-  - `guest_accelerators` (`list[obj]`): Guest accelerator type and count. When `null`, the `guest_accelerators` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.instance_properties.guest_accelerators.new](#fn-compute_reservationspecific_reservationguest_acceleratorsnew) constructor.
+  - `guest_accelerators` (`list[obj]`): Guest accelerator type and count. When `null`, the `guest_accelerators` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.instance_properties.guest_accelerators.new](#fn-specific_reservationspecific_reservationguest_acceleratorsnew) constructor.
   - `local_ssds` (`list[obj]`): The amount of local ssd to reserve with each instance. This
-reserves disks of type &#39;local-ssd&#39;. When `null`, the `local_ssds` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.instance_properties.local_ssds.new](#fn-compute_reservationspecific_reservationlocal_ssdsnew) constructor.
+reserves disks of type &#39;local-ssd&#39;. When `null`, the `local_ssds` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.instance_properties.local_ssds.new](#fn-specific_reservationspecific_reservationlocal_ssdsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `instance_properties` sub block.

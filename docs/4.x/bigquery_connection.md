@@ -458,7 +458,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `access_role` (`list[obj]`): Authentication using Google owned service account to assume into customer&#39;s AWS IAM Role. When `null`, the `access_role` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.aws.access_role.new](#fn-bigquery_connectionaccess_rolenew) constructor.
+  - `access_role` (`list[obj]`): Authentication using Google owned service account to assume into customer&#39;s AWS IAM Role. When `null`, the `access_role` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.aws.access_role.new](#fn-awsaccess_rolenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `aws` sub block.
@@ -574,7 +574,7 @@ Terraform sub block.
   - `database` (`string`): Database name.
   - `instance_id` (`string`): Cloud SQL instance ID in the form project:location:instance.
   - `type` (`string`): Type of the Cloud SQL database. Possible values: [&#34;DATABASE_TYPE_UNSPECIFIED&#34;, &#34;POSTGRES&#34;, &#34;MYSQL&#34;]
-  - `credential` (`list[obj]`): Cloud SQL properties. When `null`, the `credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.credential.new](#fn-bigquery_connectioncredentialnew) constructor.
+  - `credential` (`list[obj]`): Cloud SQL properties. When `null`, the `credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.credential.new](#fn-cloud_sqlcredentialnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `cloud_sql` sub block.

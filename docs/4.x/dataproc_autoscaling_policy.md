@@ -330,7 +330,7 @@ Terraform sub block.
 update operation from the previous event has completed.
 
 Bounds: [2m, 1d]. Default: 2m. When `null`, the `cooldown_period` field will be omitted from the resulting object.
-  - `yarn_config` (`list[obj]`): YARN autoscaling configuration. When `null`, the `yarn_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.basic_algorithm.yarn_config.new](#fn-dataproc_autoscaling_policyyarn_confignew) constructor.
+  - `yarn_config` (`list[obj]`): YARN autoscaling configuration. When `null`, the `yarn_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.basic_algorithm.yarn_config.new](#fn-basic_algorithmyarn_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `basic_algorithm` sub block.

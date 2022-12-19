@@ -342,8 +342,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `cloud_storage_path` (`list[obj]`): Newline-delimited file of words in Cloud Storage. Only a single file is accepted. When `null`, the `cloud_storage_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.dictionary.cloud_storage_path.new](#fn-data_loss_prevention_stored_info_typecloud_storage_pathnew) constructor.
-  - `word_list` (`list[obj]`): List of words or phrases to search for. When `null`, the `word_list` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.dictionary.word_list.new](#fn-data_loss_prevention_stored_info_typeword_listnew) constructor.
+  - `cloud_storage_path` (`list[obj]`): Newline-delimited file of words in Cloud Storage. Only a single file is accepted. When `null`, the `cloud_storage_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.dictionary.cloud_storage_path.new](#fn-dictionarycloud_storage_pathnew) constructor.
+  - `word_list` (`list[obj]`): List of words or phrases to search for. When `null`, the `word_list` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.dictionary.word_list.new](#fn-dictionaryword_listnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `dictionary` sub block.
@@ -413,10 +413,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `big_query_field` (`list[obj]`): Field in a BigQuery table where each cell represents a dictionary phrase. When `null`, the `big_query_field` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.large_custom_dictionary.big_query_field.new](#fn-data_loss_prevention_stored_info_typebig_query_fieldnew) constructor.
-  - `cloud_storage_file_set` (`list[obj]`): Set of files containing newline-delimited lists of dictionary phrases. When `null`, the `cloud_storage_file_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.large_custom_dictionary.cloud_storage_file_set.new](#fn-data_loss_prevention_stored_info_typecloud_storage_file_setnew) constructor.
+  - `big_query_field` (`list[obj]`): Field in a BigQuery table where each cell represents a dictionary phrase. When `null`, the `big_query_field` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.large_custom_dictionary.big_query_field.new](#fn-large_custom_dictionarybig_query_fieldnew) constructor.
+  - `cloud_storage_file_set` (`list[obj]`): Set of files containing newline-delimited lists of dictionary phrases. When `null`, the `cloud_storage_file_set` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.large_custom_dictionary.cloud_storage_file_set.new](#fn-large_custom_dictionarycloud_storage_file_setnew) constructor.
   - `output_path` (`list[obj]`): Location to store dictionary artifacts in Google Cloud Storage. These files will only be accessible by project owners and the DLP API.
-If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used. When `null`, the `output_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.large_custom_dictionary.output_path.new](#fn-data_loss_prevention_stored_info_typeoutput_pathnew) constructor.
+If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used. When `null`, the `output_path` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.large_custom_dictionary.output_path.new](#fn-large_custom_dictionaryoutput_pathnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `large_custom_dictionary` sub block.
@@ -439,8 +439,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `field` (`list[obj]`): Designated field in the BigQuery table. When `null`, the `field` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.large_custom_dictionary.big_query_field.field.new](#fn-data_loss_prevention_stored_info_typelarge_custom_dictionaryfieldnew) constructor.
-  - `table` (`list[obj]`): Field in a BigQuery table where each cell represents a dictionary phrase. When `null`, the `table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.large_custom_dictionary.big_query_field.table.new](#fn-data_loss_prevention_stored_info_typelarge_custom_dictionarytablenew) constructor.
+  - `field` (`list[obj]`): Designated field in the BigQuery table. When `null`, the `field` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.large_custom_dictionary.big_query_field.field.new](#fn-large_custom_dictionarylarge_custom_dictionaryfieldnew) constructor.
+  - `table` (`list[obj]`): Field in a BigQuery table where each cell represents a dictionary phrase. When `null`, the `table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.large_custom_dictionary.big_query_field.table.new](#fn-large_custom_dictionarylarge_custom_dictionarytablenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `big_query_field` sub block.

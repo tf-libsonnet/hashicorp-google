@@ -527,17 +527,17 @@ are swapped by the API to their basic counterparts. See
 * &#39;allAuthenticatedUsers&#39;: All authenticated BigQuery users. When `null`, the `special_group` field will be omitted from the resulting object.
   - `user_by_email` (`string`): An email address of a user to grant access to. For example:
 fred@example.com When `null`, the `user_by_email` field will be omitted from the resulting object.
-  - `dataset` (`list[obj]`): Grants all resources of particular types in a particular dataset read access to the current dataset. When `null`, the `dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.access.dataset.new](#fn-bigquery_datasetdatasetnew) constructor.
+  - `dataset` (`list[obj]`): Grants all resources of particular types in a particular dataset read access to the current dataset. When `null`, the `dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.access.dataset.new](#fn-accessdatasetnew) constructor.
   - `routine` (`list[obj]`): A routine from a different dataset to grant access to. Queries
 executed against that routine will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that routine is updated by any user, access to the routine
-needs to be granted again via an update operation. When `null`, the `routine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.access.routine.new](#fn-bigquery_datasetroutinenew) constructor.
+needs to be granted again via an update operation. When `null`, the `routine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.access.routine.new](#fn-accessroutinenew) constructor.
   - `view` (`list[obj]`): A view from a different dataset to grant access to. Queries
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that view is updated by any user, access to the view
-needs to be granted again via an update operation. When `null`, the `view` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.access.view.new](#fn-bigquery_datasetviewnew) constructor.
+needs to be granted again via an update operation. When `null`, the `view` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.access.view.new](#fn-accessviewnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `access` sub block.
@@ -562,7 +562,7 @@ Terraform sub block.
 **Args**:
   - `target_types` (`list`): Which resources in the dataset this entry applies to. Currently, only views are supported,
 but additional target types may be added in the future. Possible values: VIEWS
-  - `dataset` (`list[obj]`): The dataset this entry applies to When `null`, the `dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.access.dataset.dataset.new](#fn-bigquery_datasetaccessdatasetnew) constructor.
+  - `dataset` (`list[obj]`): The dataset this entry applies to When `null`, the `dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.access.dataset.dataset.new](#fn-accessaccessdatasetnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `dataset` sub block.

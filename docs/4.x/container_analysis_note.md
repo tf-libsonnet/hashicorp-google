@@ -357,7 +357,7 @@ name of the Note (which might be a UUID for security purposes)
 from &#34;readable&#34; names more suitable for debug output. Note that
 these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
-Attestations to verify. When `null`, the `hint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.attestation_authority.hint.new](#fn-container_analysis_notehintnew) constructor.
+Attestations to verify. When `null`, the `hint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.attestation_authority.hint.new](#fn-attestation_authorityhintnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `attestation_authority` sub block.

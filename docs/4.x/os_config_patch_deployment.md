@@ -486,7 +486,7 @@ VMs when targeting configs, for example prefix=&#34;prod-&#34;. When `null`, the
 &#39;projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}&#39;, or
 &#39;https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}&#39; When `null`, the `instances` field will be omitted from the resulting object.
   - `zones` (`list`): Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone. When `null`, the `zones` field will be omitted from the resulting object.
-  - `group_labels` (`list[obj]`): Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances. When `null`, the `group_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.instance_filter.group_labels.new](#fn-os_config_patch_deploymentgroup_labelsnew) constructor.
+  - `group_labels` (`list[obj]`): Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances. When `null`, the `group_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.instance_filter.group_labels.new](#fn-instance_filtergroup_labelsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `instance_filter` sub block.
@@ -558,13 +558,13 @@ Terraform sub block.
 **Args**:
   - `mig_instances_allowed` (`bool`): Allows the patch job to run on Managed instance groups (MIGs). When `null`, the `mig_instances_allowed` field will be omitted from the resulting object.
   - `reboot_config` (`string`): Post-patch reboot settings. Possible values: [&#34;DEFAULT&#34;, &#34;ALWAYS&#34;, &#34;NEVER&#34;] When `null`, the `reboot_config` field will be omitted from the resulting object.
-  - `apt` (`list[obj]`): Apt update settings. Use this setting to override the default apt patch rules. When `null`, the `apt` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.apt.new](#fn-os_config_patch_deploymentaptnew) constructor.
-  - `goo` (`list[obj]`): goo update settings. Use this setting to override the default goo patch rules. When `null`, the `goo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.goo.new](#fn-os_config_patch_deploymentgoonew) constructor.
-  - `post_step` (`list[obj]`): The ExecStep to run after the patch update. When `null`, the `post_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.post_step.new](#fn-os_config_patch_deploymentpost_stepnew) constructor.
-  - `pre_step` (`list[obj]`): The ExecStep to run before the patch update. When `null`, the `pre_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.pre_step.new](#fn-os_config_patch_deploymentpre_stepnew) constructor.
-  - `windows_update` (`list[obj]`): Windows update settings. Use this setting to override the default Windows patch rules. When `null`, the `windows_update` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.windows_update.new](#fn-os_config_patch_deploymentwindows_updatenew) constructor.
-  - `yum` (`list[obj]`): Yum update settings. Use this setting to override the default yum patch rules. When `null`, the `yum` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.yum.new](#fn-os_config_patch_deploymentyumnew) constructor.
-  - `zypper` (`list[obj]`): zypper update settings. Use this setting to override the default zypper patch rules. When `null`, the `zypper` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.zypper.new](#fn-os_config_patch_deploymentzyppernew) constructor.
+  - `apt` (`list[obj]`): Apt update settings. Use this setting to override the default apt patch rules. When `null`, the `apt` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.apt.new](#fn-patch_configaptnew) constructor.
+  - `goo` (`list[obj]`): goo update settings. Use this setting to override the default goo patch rules. When `null`, the `goo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.goo.new](#fn-patch_configgoonew) constructor.
+  - `post_step` (`list[obj]`): The ExecStep to run after the patch update. When `null`, the `post_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.post_step.new](#fn-patch_configpost_stepnew) constructor.
+  - `pre_step` (`list[obj]`): The ExecStep to run before the patch update. When `null`, the `pre_step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.pre_step.new](#fn-patch_configpre_stepnew) constructor.
+  - `windows_update` (`list[obj]`): Windows update settings. Use this setting to override the default Windows patch rules. When `null`, the `windows_update` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.windows_update.new](#fn-patch_configwindows_updatenew) constructor.
+  - `yum` (`list[obj]`): Yum update settings. Use this setting to override the default yum patch rules. When `null`, the `yum` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.yum.new](#fn-patch_configyumnew) constructor.
+  - `zypper` (`list[obj]`): zypper update settings. Use this setting to override the default zypper patch rules. When `null`, the `zypper` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.zypper.new](#fn-patch_configzyppernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `patch_config` sub block.
@@ -637,8 +637,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `linux_exec_step_config` (`list[obj]`): The ExecStepConfig for all Linux VMs targeted by the PatchJob. When `null`, the `linux_exec_step_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.post_step.linux_exec_step_config.new](#fn-os_config_patch_deploymentpatch_configlinux_exec_step_confignew) constructor.
-  - `windows_exec_step_config` (`list[obj]`): The ExecStepConfig for all Windows VMs targeted by the PatchJob. When `null`, the `windows_exec_step_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.post_step.windows_exec_step_config.new](#fn-os_config_patch_deploymentpatch_configwindows_exec_step_confignew) constructor.
+  - `linux_exec_step_config` (`list[obj]`): The ExecStepConfig for all Linux VMs targeted by the PatchJob. When `null`, the `linux_exec_step_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.post_step.linux_exec_step_config.new](#fn-patch_configpatch_configlinux_exec_step_confignew) constructor.
+  - `windows_exec_step_config` (`list[obj]`): The ExecStepConfig for all Windows VMs targeted by the PatchJob. When `null`, the `windows_exec_step_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.post_step.windows_exec_step_config.new](#fn-patch_configpatch_configwindows_exec_step_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `post_step` sub block.
@@ -665,7 +665,7 @@ Terraform sub block.
   - `interpreter` (`string`): The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: [&#34;SHELL&#34;, &#34;POWERSHELL&#34;] When `null`, the `interpreter` field will be omitted from the resulting object.
   - `local_path` (`string`): An absolute path to the executable on the VM. When `null`, the `local_path` field will be omitted from the resulting object.
-  - `gcs_object` (`list[obj]`): A Cloud Storage object containing the executable. When `null`, the `gcs_object` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.post_step.linux_exec_step_config.gcs_object.new](#fn-os_config_patch_deploymentpatch_configpost_stepgcs_objectnew) constructor.
+  - `gcs_object` (`list[obj]`): A Cloud Storage object containing the executable. When `null`, the `gcs_object` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.post_step.linux_exec_step_config.gcs_object.new](#fn-patch_configpatch_configpost_stepgcs_objectnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `linux_exec_step_config` sub block.
@@ -717,7 +717,7 @@ Terraform sub block.
   - `interpreter` (`string`): The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: [&#34;SHELL&#34;, &#34;POWERSHELL&#34;] When `null`, the `interpreter` field will be omitted from the resulting object.
   - `local_path` (`string`): An absolute path to the executable on the VM. When `null`, the `local_path` field will be omitted from the resulting object.
-  - `gcs_object` (`list[obj]`): A Cloud Storage object containing the executable. When `null`, the `gcs_object` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.post_step.windows_exec_step_config.gcs_object.new](#fn-os_config_patch_deploymentpatch_configpost_stepgcs_objectnew) constructor.
+  - `gcs_object` (`list[obj]`): A Cloud Storage object containing the executable. When `null`, the `gcs_object` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.post_step.windows_exec_step_config.gcs_object.new](#fn-patch_configpatch_configpost_stepgcs_objectnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `windows_exec_step_config` sub block.
@@ -765,8 +765,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `linux_exec_step_config` (`list[obj]`): The ExecStepConfig for all Linux VMs targeted by the PatchJob. When `null`, the `linux_exec_step_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.pre_step.linux_exec_step_config.new](#fn-os_config_patch_deploymentpatch_configlinux_exec_step_confignew) constructor.
-  - `windows_exec_step_config` (`list[obj]`): The ExecStepConfig for all Windows VMs targeted by the PatchJob. When `null`, the `windows_exec_step_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.pre_step.windows_exec_step_config.new](#fn-os_config_patch_deploymentpatch_configwindows_exec_step_confignew) constructor.
+  - `linux_exec_step_config` (`list[obj]`): The ExecStepConfig for all Linux VMs targeted by the PatchJob. When `null`, the `linux_exec_step_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.pre_step.linux_exec_step_config.new](#fn-patch_configpatch_configlinux_exec_step_confignew) constructor.
+  - `windows_exec_step_config` (`list[obj]`): The ExecStepConfig for all Windows VMs targeted by the PatchJob. When `null`, the `windows_exec_step_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.pre_step.windows_exec_step_config.new](#fn-patch_configpatch_configwindows_exec_step_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `pre_step` sub block.
@@ -793,7 +793,7 @@ Terraform sub block.
   - `interpreter` (`string`): The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: [&#34;SHELL&#34;, &#34;POWERSHELL&#34;] When `null`, the `interpreter` field will be omitted from the resulting object.
   - `local_path` (`string`): An absolute path to the executable on the VM. When `null`, the `local_path` field will be omitted from the resulting object.
-  - `gcs_object` (`list[obj]`): A Cloud Storage object containing the executable. When `null`, the `gcs_object` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.pre_step.linux_exec_step_config.gcs_object.new](#fn-os_config_patch_deploymentpatch_configpre_stepgcs_objectnew) constructor.
+  - `gcs_object` (`list[obj]`): A Cloud Storage object containing the executable. When `null`, the `gcs_object` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.pre_step.linux_exec_step_config.gcs_object.new](#fn-patch_configpatch_configpre_stepgcs_objectnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `linux_exec_step_config` sub block.
@@ -845,7 +845,7 @@ Terraform sub block.
   - `interpreter` (`string`): The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines. Possible values: [&#34;SHELL&#34;, &#34;POWERSHELL&#34;] When `null`, the `interpreter` field will be omitted from the resulting object.
   - `local_path` (`string`): An absolute path to the executable on the VM. When `null`, the `local_path` field will be omitted from the resulting object.
-  - `gcs_object` (`list[obj]`): A Cloud Storage object containing the executable. When `null`, the `gcs_object` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.pre_step.windows_exec_step_config.gcs_object.new](#fn-os_config_patch_deploymentpatch_configpre_stepgcs_objectnew) constructor.
+  - `gcs_object` (`list[obj]`): A Cloud Storage object containing the executable. When `null`, the `gcs_object` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.pre_step.windows_exec_step_config.gcs_object.new](#fn-patch_configpatch_configpre_stepgcs_objectnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `windows_exec_step_config` sub block.
@@ -980,11 +980,11 @@ Terraform sub block.
 A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `end_time` field will be omitted from the resulting object.
   - `start_time` (`string`): The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
 A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `start_time` field will be omitted from the resulting object.
-  - `monthly` (`list[obj]`): Schedule with monthly executions. When `null`, the `monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.recurring_schedule.monthly.new](#fn-os_config_patch_deploymentmonthlynew) constructor.
-  - `time_of_day` (`list[obj]`): Time of the day to run a recurring deployment. When `null`, the `time_of_day` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.recurring_schedule.time_of_day.new](#fn-os_config_patch_deploymenttime_of_daynew) constructor.
+  - `monthly` (`list[obj]`): Schedule with monthly executions. When `null`, the `monthly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.recurring_schedule.monthly.new](#fn-recurring_schedulemonthlynew) constructor.
+  - `time_of_day` (`list[obj]`): Time of the day to run a recurring deployment. When `null`, the `time_of_day` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.recurring_schedule.time_of_day.new](#fn-recurring_scheduletime_of_daynew) constructor.
   - `time_zone` (`list[obj]`): Defines the time zone that timeOfDay is relative to. The rules for daylight saving time are
-determined by the chosen time zone. When `null`, the `time_zone` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.recurring_schedule.time_zone.new](#fn-os_config_patch_deploymenttime_zonenew) constructor.
-  - `weekly` (`list[obj]`): Schedule with weekly executions. When `null`, the `weekly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.recurring_schedule.weekly.new](#fn-os_config_patch_deploymentweeklynew) constructor.
+determined by the chosen time zone. When `null`, the `time_zone` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.recurring_schedule.time_zone.new](#fn-recurring_scheduletime_zonenew) constructor.
+  - `weekly` (`list[obj]`): Schedule with weekly executions. When `null`, the `weekly` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.recurring_schedule.weekly.new](#fn-recurring_scheduleweeklynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `recurring_schedule` sub block.
@@ -1010,7 +1010,7 @@ Terraform sub block.
   - `month_day` (`number`): One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run &#34;every month on the 31st&#34;
 will not run in February, April, June, etc. When `null`, the `month_day` field will be omitted from the resulting object.
-  - `week_day_of_month` (`list[obj]`): Week day in a month. When `null`, the `week_day_of_month` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.recurring_schedule.monthly.week_day_of_month.new](#fn-os_config_patch_deploymentrecurring_scheduleweek_day_of_monthnew) constructor.
+  - `week_day_of_month` (`list[obj]`): Week day in a month. When `null`, the `week_day_of_month` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.recurring_schedule.monthly.week_day_of_month.new](#fn-recurring_schedulerecurring_scheduleweek_day_of_monthnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `monthly` sub block.
@@ -1135,7 +1135,7 @@ Terraform sub block.
 During patching, a VM is considered disrupted from the time the agent is notified to begin until patching has completed. This disruption time includes the time to complete reboot and any post-patch steps.
 A VM contributes to the disruption budget if its patching operation fails either when applying the patches, running pre or post patch steps, or if it fails to respond with a success notification before timing out. VMs that are not running or do not have an active agent do not count toward this disruption budget.
 For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the patch job stops, because continuing to the next zone requires completion of the patch process in the previous zone.
-For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops. When `null`, the `disruption_budget` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.rollout.disruption_budget.new](#fn-os_config_patch_deploymentdisruption_budgetnew) constructor.
+For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops. When `null`, the `disruption_budget` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.rollout.disruption_budget.new](#fn-rolloutdisruption_budgetnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rollout` sub block.

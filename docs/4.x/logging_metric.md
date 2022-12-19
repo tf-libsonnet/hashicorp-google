@@ -372,11 +372,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `explicit_buckets` (`list[obj]`): Specifies a set of buckets with arbitrary widths. When `null`, the `explicit_buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.explicit_buckets.new](#fn-logging_metricexplicit_bucketsnew) constructor.
+  - `explicit_buckets` (`list[obj]`): Specifies a set of buckets with arbitrary widths. When `null`, the `explicit_buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.explicit_buckets.new](#fn-bucket_optionsexplicit_bucketsnew) constructor.
   - `exponential_buckets` (`list[obj]`): Specifies an exponential sequence of buckets that have a width that is proportional to the value of
-the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket. When `null`, the `exponential_buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.exponential_buckets.new](#fn-logging_metricexponential_bucketsnew) constructor.
+the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket. When `null`, the `exponential_buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.exponential_buckets.new](#fn-bucket_optionsexponential_bucketsnew) constructor.
   - `linear_buckets` (`list[obj]`): Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
-Each bucket represents a constant absolute uncertainty on the specific value in the bucket. When `null`, the `linear_buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.linear_buckets.new](#fn-logging_metriclinear_bucketsnew) constructor.
+Each bucket represents a constant absolute uncertainty on the specific value in the bucket. When `null`, the `linear_buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.linear_buckets.new](#fn-bucket_optionslinear_bucketsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `bucket_options` sub block.
@@ -487,7 +487,7 @@ For counter metrics, set this to INT64. Possible values: [&#34;BOOL&#34;, &#34;I
   - `labels` (`list[obj]`): The set of labels that can be used to describe a specific instance of this metric type. For
 example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
 for the HTTP response code, response_code, so you can look at latencies for successful responses
-or just for responses that failed. When `null`, the `labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.labels.new](#fn-logging_metriclabelsnew) constructor.
+or just for responses that failed. When `null`, the `labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.labels.new](#fn-metric_descriptorlabelsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metric_descriptor` sub block.

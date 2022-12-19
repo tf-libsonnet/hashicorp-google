@@ -329,7 +329,7 @@ Terraform sub block.
 **Args**:
   - `target_name_servers` (`list[obj]`): Sets an alternative name server for the associated networks. When specified,
 all DNS queries are forwarded to a name server that you choose. Names such as .internal
-are not available when an alternative name server is specified. When `null`, the `target_name_servers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.alternative_name_server_config.target_name_servers.new](#fn-dns_policytarget_name_serversnew) constructor.
+are not available when an alternative name server is specified. When `null`, the `target_name_servers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.alternative_name_server_config.target_name_servers.new](#fn-alternative_name_server_configtarget_name_serversnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `alternative_name_server_config` sub block.

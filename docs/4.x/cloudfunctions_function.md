@@ -804,7 +804,7 @@ Terraform sub block.
 **Args**:
   - `event_type` (`string`): The type of event to observe. For example: &#34;google.storage.object.finalize&#34;. See the documentation on calling Cloud Functions for a full reference of accepted triggers.
   - `resource` (`string`): The name or partial URI of the resource from which to observe events. For example, &#34;myBucket&#34; or &#34;projects/my-project/topics/my-topic&#34;
-  - `failure_policy` (`list[obj]`): Specifies policy for failed executions When `null`, the `failure_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions_function.event_trigger.failure_policy.new](#fn-cloudfunctions_functionfailure_policynew) constructor.
+  - `failure_policy` (`list[obj]`): Specifies policy for failed executions When `null`, the `failure_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions_function.event_trigger.failure_policy.new](#fn-event_triggerfailure_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `event_trigger` sub block.
@@ -879,7 +879,7 @@ Terraform sub block.
   - `mount_path` (`string`): The path within the container to mount the secret volume. For example, setting the mount_path as &#34;/etc/secrets&#34; would mount the secret value files under the &#34;/etc/secrets&#34; directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount paths: &#34;/etc/secrets&#34; Restricted mount paths: &#34;/cloudsql&#34;, &#34;/dev/log&#34;, &#34;/pod&#34;, &#34;/proc&#34;, &#34;/var/log&#34;.
   - `project_id` (`string`): Project identifier (due to a known limitation, only project number is supported by this field) of the project that contains the secret. If not set, it will be populated with the function&#39;s project, assuming that the secret exists in the same project as of the function. When `null`, the `project_id` field will be omitted from the resulting object.
   - `secret` (`string`): ID of the secret in secret manager (not the full resource name).
-  - `versions` (`list[obj]`): List of secret versions to mount for this secret. If empty, the &#34;latest&#34; version of the secret will be made available in a file named after the secret under the mount point. When `null`, the `versions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions_function.secret_volumes.versions.new](#fn-cloudfunctions_functionversionsnew) constructor.
+  - `versions` (`list[obj]`): List of secret versions to mount for this secret. If empty, the &#34;latest&#34; version of the secret will be made available in a file named after the secret under the mount point. When `null`, the `versions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions_function.secret_volumes.versions.new](#fn-secret_volumesversionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `secret_volumes` sub block.

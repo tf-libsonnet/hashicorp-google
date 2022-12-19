@@ -251,7 +251,7 @@ If this field is non-empty, one of the specified public keys must
 verify that an attestation was signed by this attestor for the
 image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
-attestations exist. When `null`, the `public_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.attestation_authority_note.public_keys.new](#fn-binary_authorization_attestorpublic_keysnew) constructor.
+attestations exist. When `null`, the `public_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.attestation_authority_note.public_keys.new](#fn-attestation_authority_notepublic_keysnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `attestation_authority_note` sub block.
@@ -289,7 +289,7 @@ be overwritten by the API-calculated ID. When `null`, the `ascii_armored_pgp_pub
 NOTE: id may be explicitly provided by the caller when using this
 type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
-encoding of the public key. When `null`, the `pkix_public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.attestation_authority_note.public_keys.pkix_public_key.new](#fn-binary_authorization_attestorattestation_authority_notepkix_public_keynew) constructor.
+encoding of the public key. When `null`, the `pkix_public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.attestation_authority_note.public_keys.pkix_public_key.new](#fn-attestation_authority_noteattestation_authority_notepkix_public_keynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `public_keys` sub block.

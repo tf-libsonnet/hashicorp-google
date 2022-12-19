@@ -657,7 +657,7 @@ Terraform sub block.
   - `main_class` (`string`): The class containing the main method of the driver. Must be in a provided jar or jar that is already on the classpath. Conflicts with main_jar_file_uri When `null`, the `main_class` field will be omitted from the resulting object.
   - `main_jar_file_uri` (`string`): The HCFS URI of jar file containing the driver jar. Conflicts with main_class When `null`, the `main_jar_file_uri` field will be omitted from the resulting object.
   - `properties` (`obj`): A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code. When `null`, the `properties` field will be omitted from the resulting object.
-  - `logging_config` (`list[obj]`): The runtime logging config of the job When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.hadoop_config.logging_config.new](#fn-dataproc_joblogging_confignew) constructor.
+  - `logging_config` (`list[obj]`): The runtime logging config of the job When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.hadoop_config.logging_config.new](#fn-hadoop_configlogging_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `hadoop_config` sub block.
@@ -737,7 +737,7 @@ Terraform sub block.
   - `query_file_uri` (`string`): HCFS URI of file containing Hive script to execute as the job. Conflicts with query_list When `null`, the `query_file_uri` field will be omitted from the resulting object.
   - `query_list` (`list`): The list of Hive queries or statements to execute as part of the job. Conflicts with query_file_uri When `null`, the `query_list` field will be omitted from the resulting object.
   - `script_variables` (`obj`): Mapping of query variable names to values (equivalent to the Pig command: name=[value]). When `null`, the `script_variables` field will be omitted from the resulting object.
-  - `logging_config` (`list[obj]`): The runtime logging config of the job When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.pig_config.logging_config.new](#fn-dataproc_joblogging_confignew) constructor.
+  - `logging_config` (`list[obj]`): The runtime logging config of the job When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.pig_config.logging_config.new](#fn-pig_configlogging_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `pig_config` sub block.
@@ -812,7 +812,7 @@ Terraform sub block.
   - `properties` (`obj`): A mapping of property names to values. Used to set Presto session properties Equivalent to using the --session flag in the Presto CLI. When `null`, the `properties` field will be omitted from the resulting object.
   - `query_file_uri` (`string`): The HCFS URI of the script that contains SQL queries. Conflicts with query_list When `null`, the `query_file_uri` field will be omitted from the resulting object.
   - `query_list` (`list`): The list of SQL queries or statements to execute as part of the job. Conflicts with query_file_uri When `null`, the `query_list` field will be omitted from the resulting object.
-  - `logging_config` (`list[obj]`): The runtime logging config of the job When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.presto_config.logging_config.new](#fn-dataproc_joblogging_confignew) constructor.
+  - `logging_config` (`list[obj]`): The runtime logging config of the job When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.presto_config.logging_config.new](#fn-presto_configlogging_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `presto_config` sub block.
@@ -865,7 +865,7 @@ Terraform sub block.
   - `main_python_file_uri` (`string`): Required. The HCFS URI of the main Python file to use as the driver. Must be a .py file
   - `properties` (`obj`): Optional. A mapping of property names to values, used to configure PySpark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code When `null`, the `properties` field will be omitted from the resulting object.
   - `python_file_uris` (`list`): Optional. HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip When `null`, the `python_file_uris` field will be omitted from the resulting object.
-  - `logging_config` (`list[obj]`): The runtime logging config of the job When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.pyspark_config.logging_config.new](#fn-dataproc_joblogging_confignew) constructor.
+  - `logging_config` (`list[obj]`): The runtime logging config of the job When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.pyspark_config.logging_config.new](#fn-pyspark_configlogging_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `pyspark_config` sub block.
@@ -965,7 +965,7 @@ Terraform sub block.
   - `main_class` (`string`): The class containing the main method of the driver. Must be in a provided jar or jar that is already on the classpath. Conflicts with main_jar_file_uri When `null`, the `main_class` field will be omitted from the resulting object.
   - `main_jar_file_uri` (`string`): The HCFS URI of jar file containing the driver jar. Conflicts with main_class When `null`, the `main_jar_file_uri` field will be omitted from the resulting object.
   - `properties` (`obj`): A mapping of property names to values, used to configure Spark. Properties that conflict with values set by the Cloud Dataproc API may be overwritten. Can include properties set in /etc/spark/conf/spark-defaults.conf and classes in user code. When `null`, the `properties` field will be omitted from the resulting object.
-  - `logging_config` (`list[obj]`): The runtime logging config of the job When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.spark_config.logging_config.new](#fn-dataproc_joblogging_confignew) constructor.
+  - `logging_config` (`list[obj]`): The runtime logging config of the job When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.spark_config.logging_config.new](#fn-spark_configlogging_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `spark_config` sub block.
@@ -1016,7 +1016,7 @@ Terraform sub block.
   - `query_file_uri` (`string`): The HCFS URI of the script that contains SQL queries. Conflicts with query_list When `null`, the `query_file_uri` field will be omitted from the resulting object.
   - `query_list` (`list`): The list of SQL queries or statements to execute as part of the job. Conflicts with query_file_uri When `null`, the `query_list` field will be omitted from the resulting object.
   - `script_variables` (`obj`): Mapping of query variable names to values (equivalent to the Spark SQL command: SET name=&#34;value&#34;;). When `null`, the `script_variables` field will be omitted from the resulting object.
-  - `logging_config` (`list[obj]`): The runtime logging config of the job When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.sparksql_config.logging_config.new](#fn-dataproc_joblogging_confignew) constructor.
+  - `logging_config` (`list[obj]`): The runtime logging config of the job When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.sparksql_config.logging_config.new](#fn-sparksql_configlogging_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `sparksql_config` sub block.

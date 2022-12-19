@@ -808,8 +808,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `action` (`list[obj]`): The Lifecycle Rule&#39;s action configuration. A single block of this type is supported. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.lifecycle_rule.action.new](#fn-storage_bucketactionnew) constructor.
-  - `condition` (`list[obj]`): The Lifecycle Rule&#39;s condition configuration. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.lifecycle_rule.condition.new](#fn-storage_bucketconditionnew) constructor.
+  - `action` (`list[obj]`): The Lifecycle Rule&#39;s action configuration. A single block of this type is supported. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.lifecycle_rule.action.new](#fn-lifecycle_ruleactionnew) constructor.
+  - `condition` (`list[obj]`): The Lifecycle Rule&#39;s condition configuration. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.lifecycle_rule.condition.new](#fn-lifecycle_ruleconditionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `lifecycle_rule` sub block.

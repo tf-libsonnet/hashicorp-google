@@ -281,7 +281,7 @@ more signatures. A base64-encoded string.
 Verifier implementations should consider this attestation
 message verified if at least one signature verifies
 serializedPayload. See Signature in common.proto for more
-details on signature structure and verification. When `null`, the `signatures` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_occurrence.attestation.signatures.new](#fn-container_analysis_occurrencesignaturesnew) constructor.
+details on signature structure and verification. When `null`, the `signatures` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_occurrence.attestation.signatures.new](#fn-attestationsignaturesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `attestation` sub block.

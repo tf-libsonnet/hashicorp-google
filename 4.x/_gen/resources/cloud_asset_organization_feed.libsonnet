@@ -17,7 +17,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   feed_output_config:: {
-    '#new':: d.fn(help='\n`google.cloud_asset_organization_feed.feed_output_config.new` constructs a new object with attributes and blocks configured for the `feed_output_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `pubsub_destination` (`list[obj]`): Destination on Cloud Pubsub. When `null`, the `pubsub_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.feed_output_config.pubsub_destination.new](#fn-cloud_asset_organization_feedpubsub_destinationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `feed_output_config` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.cloud_asset_organization_feed.feed_output_config.new` constructs a new object with attributes and blocks configured for the `feed_output_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `pubsub_destination` (`list[obj]`): Destination on Cloud Pubsub. When `null`, the `pubsub_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.feed_output_config.pubsub_destination.new](#fn-feed_output_configpubsub_destinationnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `feed_output_config` sub block.\n', args=[]),
     new(
       pubsub_destination=null
     ):: std.prune(a={

@@ -46,7 +46,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts: timeouts,
   }),
   principal_info:: {
-    '#new':: d.fn(help='\n`google.beyondcorp_app_connector.principal_info.new` constructs a new object with attributes and blocks configured for the `principal_info`\nTerraform sub block.\n\n\n\n**Args**:\n  - `service_account` (`list[obj]`): ServiceAccount represents a GCP service account. When `null`, the `service_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_connector.principal_info.service_account.new](#fn-beyondcorp_app_connectorservice_accountnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `principal_info` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.beyondcorp_app_connector.principal_info.new` constructs a new object with attributes and blocks configured for the `principal_info`\nTerraform sub block.\n\n\n\n**Args**:\n  - `service_account` (`list[obj]`): ServiceAccount represents a GCP service account. When `null`, the `service_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_connector.principal_info.service_account.new](#fn-principal_infoservice_accountnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `principal_info` sub block.\n', args=[]),
     new(
       service_account=null
     ):: std.prune(a={

@@ -381,7 +381,7 @@ Terraform sub block.
 
 **Args**:
   - `service` (`string`): The name of Service Directory service.
-  - `generic_web_service` (`list[obj]`): The name of Service Directory service. When `null`, the `generic_web_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.service_directory.generic_web_service.new](#fn-dialogflow_cx_webhookgeneric_web_servicenew) constructor.
+  - `generic_web_service` (`list[obj]`): The name of Service Directory service. When `null`, the `generic_web_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.service_directory.generic_web_service.new](#fn-service_directorygeneric_web_servicenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `service_directory` sub block.

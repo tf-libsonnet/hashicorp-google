@@ -892,14 +892,14 @@ If this amount of time elapses, work on the build will cease and the build statu
 This timeout must be equal to or greater than the sum of the timeouts for build steps within the build.
 The expected format is the number of seconds followed by s.
 Default time is ten minutes (600s). When `null`, the `timeout` field will be omitted from the resulting object.
-  - `artifacts` (`list[obj]`): Artifacts produced by the build that should be uploaded upon successful completion of all build steps. When `null`, the `artifacts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.new](#fn-cloudbuild_triggerartifactsnew) constructor.
-  - `available_secrets` (`list[obj]`): Secrets and secret environment variables. When `null`, the `available_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.available_secrets.new](#fn-cloudbuild_triggeravailable_secretsnew) constructor.
-  - `options` (`list[obj]`): Special options for this build. When `null`, the `options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.options.new](#fn-cloudbuild_triggeroptionsnew) constructor.
-  - `secret` (`list[obj]`): Secrets to decrypt using Cloud Key Management Service. When `null`, the `secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.secret.new](#fn-cloudbuild_triggersecretnew) constructor.
+  - `artifacts` (`list[obj]`): Artifacts produced by the build that should be uploaded upon successful completion of all build steps. When `null`, the `artifacts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.new](#fn-buildartifactsnew) constructor.
+  - `available_secrets` (`list[obj]`): Secrets and secret environment variables. When `null`, the `available_secrets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.available_secrets.new](#fn-buildavailable_secretsnew) constructor.
+  - `options` (`list[obj]`): Special options for this build. When `null`, the `options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.options.new](#fn-buildoptionsnew) constructor.
+  - `secret` (`list[obj]`): Secrets to decrypt using Cloud Key Management Service. When `null`, the `secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.secret.new](#fn-buildsecretnew) constructor.
   - `source` (`list[obj]`): The location of the source files to build.
 
-One of &#39;storageSource&#39; or &#39;repoSource&#39; must be provided. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.source.new](#fn-cloudbuild_triggersourcenew) constructor.
-  - `step` (`list[obj]`): The operations to be performed on the workspace. When `null`, the `step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.step.new](#fn-cloudbuild_triggerstepnew) constructor.
+One of &#39;storageSource&#39; or &#39;repoSource&#39; must be provided. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.source.new](#fn-buildsourcenew) constructor.
+  - `step` (`list[obj]`): The operations to be performed on the workspace. When `null`, the `step` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.step.new](#fn-buildstepnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `build` sub block.
@@ -936,7 +936,7 @@ Cloud Storage location using the builder service account&#39;s credentials.
 
 The location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.
 
-If any objects fail to be pushed, the build is marked FAILURE. When `null`, the `objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.objects.new](#fn-cloudbuild_triggerbuildobjectsnew) constructor.
+If any objects fail to be pushed, the build is marked FAILURE. When `null`, the `objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.objects.new](#fn-buildbuildobjectsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `artifacts` sub block.
@@ -986,7 +986,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `secret_manager` (`list[obj]`): Pairs a secret environment variable with a SecretVersion in Secret Manager. When `null`, the `secret_manager` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.available_secrets.secret_manager.new](#fn-cloudbuild_triggerbuildsecret_managernew) constructor.
+  - `secret_manager` (`list[obj]`): Pairs a secret environment variable with a SecretVersion in Secret Manager. When `null`, the `secret_manager` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.available_secrets.secret_manager.new](#fn-buildbuildsecret_managernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `available_secrets` sub block.
@@ -1070,7 +1070,7 @@ Upon completion of the build, volumes and their contents are discarded. Global
 volume names and paths cannot conflict with the volumes defined a build step.
 
 Using a global volume in a build with only one step is not valid as it is indicative
-of a build request with an incorrect configuration. When `null`, the `volumes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.options.volumes.new](#fn-cloudbuild_triggerbuildvolumesnew) constructor.
+of a build request with an incorrect configuration. When `null`, the `volumes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.options.volumes.new](#fn-buildbuildvolumesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `options` sub block.
@@ -1150,8 +1150,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `repo_source` (`list[obj]`): Location of the source in a Google Cloud Source Repository. When `null`, the `repo_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.source.repo_source.new](#fn-cloudbuild_triggerbuildrepo_sourcenew) constructor.
-  - `storage_source` (`list[obj]`): Location of the source in an archive file in Google Cloud Storage. When `null`, the `storage_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.source.storage_source.new](#fn-cloudbuild_triggerbuildstorage_sourcenew) constructor.
+  - `repo_source` (`list[obj]`): Location of the source in a Google Cloud Source Repository. When `null`, the `repo_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.source.repo_source.new](#fn-buildbuildrepo_sourcenew) constructor.
+  - `storage_source` (`list[obj]`): Location of the source in an archive file in Google Cloud Storage. When `null`, the `storage_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.source.storage_source.new](#fn-buildbuildstorage_sourcenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.
@@ -1304,7 +1304,7 @@ build step. Upon completion of the build, volumes and their contents
 are discarded.
 
 Using a named volume in only one step is not valid as it is
-indicative of a build request with an incorrect configuration. When `null`, the `volumes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.step.volumes.new](#fn-cloudbuild_triggerbuildvolumesnew) constructor.
+indicative of a build request with an incorrect configuration. When `null`, the `volumes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.step.volumes.new](#fn-buildbuildvolumesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `step` sub block.
@@ -1391,8 +1391,8 @@ Terraform sub block.
 https://github.com/googlecloudplatform/cloud-builders is &#34;cloud-builders&#34;. When `null`, the `name` field will be omitted from the resulting object.
   - `owner` (`string`): Owner of the repository. For example: The owner for
 https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;. When `null`, the `owner` field will be omitted from the resulting object.
-  - `pull_request` (`list[obj]`): filter to match changes in pull requests. Specify only one of &#39;pull_request&#39; or &#39;push&#39;. When `null`, the `pull_request` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.github.pull_request.new](#fn-cloudbuild_triggerpull_requestnew) constructor.
-  - `push` (`list[obj]`): filter to match changes in refs, like branches or tags. Specify only one of &#39;pull_request&#39; or &#39;push&#39;. When `null`, the `push` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.github.push.new](#fn-cloudbuild_triggerpushnew) constructor.
+  - `pull_request` (`list[obj]`): filter to match changes in pull requests. Specify only one of &#39;pull_request&#39; or &#39;push&#39;. When `null`, the `pull_request` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.github.pull_request.new](#fn-githubpull_requestnew) constructor.
+  - `push` (`list[obj]`): filter to match changes in refs, like branches or tags. Specify only one of &#39;pull_request&#39; or &#39;push&#39;. When `null`, the `push` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.github.push.new](#fn-githubpushnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `github` sub block.

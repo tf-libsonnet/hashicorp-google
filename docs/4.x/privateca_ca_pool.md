@@ -353,15 +353,15 @@ Terraform sub block.
 **Args**:
   - `maximum_lifetime` (`string`): The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority
 expires before a Certificate&#39;s requested maximumLifetime, the effective lifetime will be explicitly truncated to match it. When `null`, the `maximum_lifetime` field will be omitted from the resulting object.
-  - `allowed_issuance_modes` (`list[obj]`): IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool. When `null`, the `allowed_issuance_modes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.allowed_issuance_modes.new](#fn-privateca_ca_poolallowed_issuance_modesnew) constructor.
+  - `allowed_issuance_modes` (`list[obj]`): IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool. When `null`, the `allowed_issuance_modes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.allowed_issuance_modes.new](#fn-issuance_policyallowed_issuance_modesnew) constructor.
   - `allowed_key_types` (`list[obj]`): If any AllowedKeyType is specified, then the certificate request&#39;s public key must match one of the key types listed here.
-Otherwise, any key may be used. When `null`, the `allowed_key_types` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.allowed_key_types.new](#fn-privateca_ca_poolallowed_key_typesnew) constructor.
+Otherwise, any key may be used. When `null`, the `allowed_key_types` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.allowed_key_types.new](#fn-issuance_policyallowed_key_typesnew) constructor.
   - `baseline_values` (`list[obj]`): A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request
 includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate
 request uses a CertificateTemplate that defines conflicting predefinedValues for the same properties, the certificate
-issuance request will fail. When `null`, the `baseline_values` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.new](#fn-privateca_ca_poolbaseline_valuesnew) constructor.
+issuance request will fail. When `null`, the `baseline_values` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.new](#fn-issuance_policybaseline_valuesnew) constructor.
   - `identity_constraints` (`list[obj]`): Describes constraints on identities that may appear in Certificates issued through this CaPool.
-If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s identity. When `null`, the `identity_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.identity_constraints.new](#fn-privateca_ca_poolidentity_constraintsnew) constructor.
+If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s identity. When `null`, the `identity_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.identity_constraints.new](#fn-issuance_policyidentity_constraintsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `issuance_policy` sub block.
@@ -408,8 +408,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `elliptic_curve` (`list[obj]`): Represents an allowed Elliptic Curve key type. When `null`, the `elliptic_curve` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.allowed_key_types.elliptic_curve.new](#fn-privateca_ca_poolissuance_policyelliptic_curvenew) constructor.
-  - `rsa` (`list[obj]`): Describes an RSA key that may be used in a Certificate issued from a CaPool. When `null`, the `rsa` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.allowed_key_types.rsa.new](#fn-privateca_ca_poolissuance_policyrsanew) constructor.
+  - `elliptic_curve` (`list[obj]`): Represents an allowed Elliptic Curve key type. When `null`, the `elliptic_curve` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.allowed_key_types.elliptic_curve.new](#fn-issuance_policyissuance_policyelliptic_curvenew) constructor.
+  - `rsa` (`list[obj]`): Describes an RSA key that may be used in a Certificate issued from a CaPool. When `null`, the `rsa` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.allowed_key_types.rsa.new](#fn-issuance_policyissuance_policyrsanew) constructor.
 
 **Returns**:
   - An attribute object that represents the `allowed_key_types` sub block.
@@ -483,10 +483,10 @@ Terraform sub block.
 **Args**:
   - `aia_ocsp_servers` (`list`): Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
 &#34;Authority Information Access&#34; extension in the certificate. When `null`, the `aia_ocsp_servers` field will be omitted from the resulting object.
-  - `additional_extensions` (`list[obj]`): Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs. When `null`, the `additional_extensions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.additional_extensions.new](#fn-privateca_ca_poolissuance_policyadditional_extensionsnew) constructor.
-  - `ca_options` (`list[obj]`): Describes values that are relevant in a CA certificate. When `null`, the `ca_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.ca_options.new](#fn-privateca_ca_poolissuance_policyca_optionsnew) constructor.
-  - `key_usage` (`list[obj]`): Indicates the intended use for keys that correspond to a certificate. When `null`, the `key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.key_usage.new](#fn-privateca_ca_poolissuance_policykey_usagenew) constructor.
-  - `policy_ids` (`list[obj]`): Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4. When `null`, the `policy_ids` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.policy_ids.new](#fn-privateca_ca_poolissuance_policypolicy_idsnew) constructor.
+  - `additional_extensions` (`list[obj]`): Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs. When `null`, the `additional_extensions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.additional_extensions.new](#fn-issuance_policyissuance_policyadditional_extensionsnew) constructor.
+  - `ca_options` (`list[obj]`): Describes values that are relevant in a CA certificate. When `null`, the `ca_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.ca_options.new](#fn-issuance_policyissuance_policyca_optionsnew) constructor.
+  - `key_usage` (`list[obj]`): Indicates the intended use for keys that correspond to a certificate. When `null`, the `key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.key_usage.new](#fn-issuance_policyissuance_policykey_usagenew) constructor.
+  - `policy_ids` (`list[obj]`): Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4. When `null`, the `policy_ids` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.policy_ids.new](#fn-issuance_policyissuance_policypolicy_idsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `baseline_values` sub block.
@@ -512,7 +512,7 @@ Terraform sub block.
   - `critical` (`bool`): Indicates whether or not this extension is critical (i.e., if the client does not know how to
 handle this extension, the client should consider this to be an error).
   - `value` (`string`): The value of this X.509 extension. A base64-encoded string.
-  - `object_id` (`list[obj]`): Describes values that are relevant in a CA certificate. When `null`, the `object_id` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.additional_extensions.object_id.new](#fn-privateca_ca_poolissuance_policybaseline_valuesobject_idnew) constructor.
+  - `object_id` (`list[obj]`): Describes values that are relevant in a CA certificate. When `null`, the `object_id` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.additional_extensions.object_id.new](#fn-issuance_policyissuance_policybaseline_valuesobject_idnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `additional_extensions` sub block.
@@ -588,9 +588,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `base_key_usage` (`list[obj]`): Describes high-level ways in which a key may be used. When `null`, the `base_key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.key_usage.base_key_usage.new](#fn-privateca_ca_poolissuance_policybaseline_valuesbase_key_usagenew) constructor.
-  - `extended_key_usage` (`list[obj]`): Describes high-level ways in which a key may be used. When `null`, the `extended_key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.key_usage.extended_key_usage.new](#fn-privateca_ca_poolissuance_policybaseline_valuesextended_key_usagenew) constructor.
-  - `unknown_extended_key_usages` (`list[obj]`): An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages. When `null`, the `unknown_extended_key_usages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.key_usage.unknown_extended_key_usages.new](#fn-privateca_ca_poolissuance_policybaseline_valuesunknown_extended_key_usagesnew) constructor.
+  - `base_key_usage` (`list[obj]`): Describes high-level ways in which a key may be used. When `null`, the `base_key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.key_usage.base_key_usage.new](#fn-issuance_policyissuance_policybaseline_valuesbase_key_usagenew) constructor.
+  - `extended_key_usage` (`list[obj]`): Describes high-level ways in which a key may be used. When `null`, the `extended_key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.key_usage.extended_key_usage.new](#fn-issuance_policyissuance_policybaseline_valuesextended_key_usagenew) constructor.
+  - `unknown_extended_key_usages` (`list[obj]`): An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages. When `null`, the `unknown_extended_key_usages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.baseline_values.key_usage.unknown_extended_key_usages.new](#fn-issuance_policyissuance_policybaseline_valuesunknown_extended_key_usagesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `key_usage` sub block.
@@ -724,7 +724,7 @@ Otherwise, the requested SubjectAltNames will be discarded.
 Otherwise, the requested Subject will be discarded.
   - `cel_expression` (`list[obj]`): A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a
 certificate is signed. To see the full allowed syntax and some examples,
-see https://cloud.google.com/certificate-authority-service/docs/cel-guide When `null`, the `cel_expression` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.identity_constraints.cel_expression.new](#fn-privateca_ca_poolissuance_policycel_expressionnew) constructor.
+see https://cloud.google.com/certificate-authority-service/docs/cel-guide When `null`, the `cel_expression` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_ca_pool.issuance_policy.identity_constraints.cel_expression.new](#fn-issuance_policyissuance_policycel_expressionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `identity_constraints` sub block.

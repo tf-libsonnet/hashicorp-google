@@ -788,7 +788,7 @@ The possible values for this attribute are:
 For example, a Webhook endpoint might use
 &#34;https://example.com/push&#34;.
   - `oidc_token` (`list[obj]`): If specified, Pub/Sub will generate and attach an OIDC JWT token as
-an Authorization header in the HTTP request for every pushed message. When `null`, the `oidc_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.push_config.oidc_token.new](#fn-pubsub_subscriptionoidc_tokennew) constructor.
+an Authorization header in the HTTP request for every pushed message. When `null`, the `oidc_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.push_config.oidc_token.new](#fn-push_configoidc_tokennew) constructor.
 
 **Returns**:
   - An attribute object that represents the `push_config` sub block.

@@ -722,7 +722,7 @@ Create/Update methods return INVALID_ARGUMENT if the
 length is greater than 512. When `null`, the `description` field will be omitted from the resulting object.
   - `weekly_maintenance_window` (`list[obj]`): Optional. Maintenance window that is applied to resources covered by this policy.
 Minimum 1. For the current version, the maximum number
-of weekly_window is expected to be one. When `null`, the `weekly_maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.weekly_maintenance_window.new](#fn-redis_instanceweekly_maintenance_windownew) constructor.
+of weekly_window is expected to be one. When `null`, the `weekly_maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.weekly_maintenance_window.new](#fn-maintenance_policyweekly_maintenance_windownew) constructor.
 
 **Returns**:
   - An attribute object that represents the `maintenance_policy` sub block.
@@ -755,7 +755,7 @@ Terraform sub block.
 - FRIDAY: Friday
 - SATURDAY: Saturday
 - SUNDAY: Sunday Possible values: [&#34;DAY_OF_WEEK_UNSPECIFIED&#34;, &#34;MONDAY&#34;, &#34;TUESDAY&#34;, &#34;WEDNESDAY&#34;, &#34;THURSDAY&#34;, &#34;FRIDAY&#34;, &#34;SATURDAY&#34;, &#34;SUNDAY&#34;]
-  - `start_time` (`list[obj]`): Required. Start time of the window in UTC time. When `null`, the `start_time` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.weekly_maintenance_window.start_time.new](#fn-redis_instancemaintenance_policystart_timenew) constructor.
+  - `start_time` (`list[obj]`): Required. Start time of the window in UTC time. When `null`, the `start_time` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.weekly_maintenance_window.start_time.new](#fn-maintenance_policymaintenance_policystart_timenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `weekly_maintenance_window` sub block.

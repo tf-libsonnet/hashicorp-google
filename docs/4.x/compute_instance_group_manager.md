@@ -668,7 +668,7 @@ Terraform sub block.
 **Args**:
   - `instance_template` (`string`): The full URL to an instance template from which all new instances of this version will be created.
   - `name` (`string`): Version name. When `null`, the `name` field will be omitted from the resulting object.
-  - `target_size` (`list[obj]`): The number of instances calculated as a fixed number or a percentage depending on the settings. When `null`, the `target_size` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.version.target_size.new](#fn-compute_instance_group_managertarget_sizenew) constructor.
+  - `target_size` (`list[obj]`): The number of instances calculated as a fixed number or a percentage depending on the settings. When `null`, the `target_size` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.version.target_size.new](#fn-versiontarget_sizenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `version` sub block.

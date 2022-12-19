@@ -60,7 +60,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         subscribe_mib_per_sec: subscribe_mib_per_sec,
       }),
     },
-    '#new':: d.fn(help='\n`google.pubsub_lite_topic.partition_config.new` constructs a new object with attributes and blocks configured for the `partition_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `count` (`number`): The number of partitions in the topic. Must be at least 1.\n  - `capacity` (`list[obj]`): The capacity configuration. When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.partition_config.capacity.new](#fn-pubsub_lite_topiccapacitynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `partition_config` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.pubsub_lite_topic.partition_config.new` constructs a new object with attributes and blocks configured for the `partition_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `count` (`number`): The number of partitions in the topic. Must be at least 1.\n  - `capacity` (`list[obj]`): The capacity configuration. When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.partition_config.capacity.new](#fn-partition_configcapacitynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `partition_config` sub block.\n', args=[]),
     new(
       count,
       capacity=null

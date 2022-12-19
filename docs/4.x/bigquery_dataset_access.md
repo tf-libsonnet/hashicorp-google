@@ -477,7 +477,7 @@ Terraform sub block.
 **Args**:
   - `target_types` (`list`): Which resources in the dataset this entry applies to. Currently, only views are supported,
 but additional target types may be added in the future. Possible values: VIEWS
-  - `dataset` (`list[obj]`): The dataset this entry applies to When `null`, the `dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset_access.dataset.dataset.new](#fn-bigquery_dataset_accessdatasetnew) constructor.
+  - `dataset` (`list[obj]`): The dataset this entry applies to When `null`, the `dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset_access.dataset.dataset.new](#fn-datasetdatasetnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `dataset` sub block.

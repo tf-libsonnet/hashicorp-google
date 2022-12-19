@@ -305,7 +305,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `gke_cluster` (`list[obj]`): If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. When `null`, the `gke_cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_membership.endpoint.gke_cluster.new](#fn-gke_hub_membershipgke_clusternew) constructor.
+  - `gke_cluster` (`list[obj]`): If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. When `null`, the `gke_cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_membership.endpoint.gke_cluster.new](#fn-endpointgke_clusternew) constructor.
 
 **Returns**:
   - An attribute object that represents the `endpoint` sub block.

@@ -13,7 +13,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         log_type: log_type,
       }),
     },
-    '#new':: d.fn(help='\n`google.iam_policy.audit_config.new` constructs a new object with attributes and blocks configured for the `audit_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `service` (`string`): \n  - `audit_log_configs` (`list[obj]`):  When `null`, the `audit_log_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_policy.audit_config.audit_log_configs.new](#fn-iam_policyaudit_log_configsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `audit_config` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.iam_policy.audit_config.new` constructs a new object with attributes and blocks configured for the `audit_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `service` (`string`): \n  - `audit_log_configs` (`list[obj]`):  When `null`, the `audit_log_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_policy.audit_config.audit_log_configs.new](#fn-audit_configaudit_log_configsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `audit_config` sub block.\n', args=[]),
     new(
       service,
       audit_log_configs=null
@@ -35,7 +35,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         title: title,
       }),
     },
-    '#new':: d.fn(help='\n`google.iam_policy.binding.new` constructs a new object with attributes and blocks configured for the `binding`\nTerraform sub block.\n\n\n\n**Args**:\n  - `members` (`list`): \n  - `role` (`string`): \n  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_policy.binding.condition.new](#fn-iam_policyconditionnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `binding` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.iam_policy.binding.new` constructs a new object with attributes and blocks configured for the `binding`\nTerraform sub block.\n\n\n\n**Args**:\n  - `members` (`list`): \n  - `role` (`string`): \n  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_policy.binding.condition.new](#fn-bindingconditionnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `binding` sub block.\n', args=[]),
     new(
       members,
       role,

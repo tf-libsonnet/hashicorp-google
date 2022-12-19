@@ -298,7 +298,7 @@ Terraform sub block.
   - `namespace` (`string`): Namespace designated on the game server cluster where the game server
 instances will be created. The namespace existence will be validated
 during creation.
-  - `gke_cluster_reference` (`list[obj]`): Reference of the GKE cluster where the game servers are installed. When `null`, the `gke_cluster_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_cluster.connection_info.gke_cluster_reference.new](#fn-game_services_game_server_clustergke_cluster_referencenew) constructor.
+  - `gke_cluster_reference` (`list[obj]`): Reference of the GKE cluster where the game servers are installed. When `null`, the `gke_cluster_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_cluster.connection_info.gke_cluster_reference.new](#fn-connection_infogke_cluster_referencenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `connection_info` sub block.

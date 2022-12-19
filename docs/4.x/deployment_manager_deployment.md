@@ -394,10 +394,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `config` (`list[obj]`): The root configuration file to use for this deployment. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.target.config.new](#fn-deployment_manager_deploymentconfignew) constructor.
+  - `config` (`list[obj]`): The root configuration file to use for this deployment. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.target.config.new](#fn-targetconfignew) constructor.
   - `imports` (`list[obj]`): Specifies import files for this configuration. This can be
 used to import templates or other files. For example, you might
-import a text file in order to use the file in a template. When `null`, the `imports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.target.imports.new](#fn-deployment_manager_deploymentimportsnew) constructor.
+import a text file in order to use the file in a template. When `null`, the `imports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.target.imports.new](#fn-targetimportsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `target` sub block.

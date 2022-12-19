@@ -402,7 +402,7 @@ Terraform sub block.
 
 **Args**:
   - `site_to_site_data_transfer` (`bool`): A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
-  - `instances` (`list[obj]`): The list of router appliance instances When `null`, the `instances` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_router_appliance_instances.instances.new](#fn-network_connectivity_spokeinstancesnew) constructor.
+  - `instances` (`list[obj]`): The list of router appliance instances When `null`, the `instances` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_router_appliance_instances.instances.new](#fn-linked_router_appliance_instancesinstancesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `linked_router_appliance_instances` sub block.

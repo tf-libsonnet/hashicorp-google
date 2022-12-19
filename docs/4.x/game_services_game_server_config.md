@@ -376,10 +376,10 @@ Terraform sub block.
 Example spec can be found :
 https://agones.dev/site/docs/reference/fleetautoscaler/
   - `name` (`string`): The name of the ScalingConfig
-  - `schedules` (`list[obj]`): The schedules to which this scaling config applies. When `null`, the `schedules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_config.scaling_configs.schedules.new](#fn-game_services_game_server_configschedulesnew) constructor.
+  - `schedules` (`list[obj]`): The schedules to which this scaling config applies. When `null`, the `schedules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_config.scaling_configs.schedules.new](#fn-scaling_configsschedulesnew) constructor.
   - `selectors` (`list[obj]`): Labels used to identify the clusters to which this scaling config
 applies. A cluster is subject to this scaling config if its labels match
-any of the selector entries. When `null`, the `selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_config.scaling_configs.selectors.new](#fn-game_services_game_server_configselectorsnew) constructor.
+any of the selector entries. When `null`, the `selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_config.scaling_configs.selectors.new](#fn-scaling_configsselectorsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `scaling_configs` sub block.

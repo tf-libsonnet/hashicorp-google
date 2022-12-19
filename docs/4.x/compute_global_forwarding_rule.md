@@ -454,7 +454,7 @@ Supported values are:
 *   MATCH_ALL: All `filterLabels` must have matching labels in the provided metadata. Possible values: NOT_SET, MATCH_ALL, MATCH_ANY
   - `filter_labels` (`list[obj]`): The list of label value pairs that must match labels in the provided metadata based on `filterMatchCriteria`
 
-This list must not be empty and can have at the most 64 entries. When `null`, the `filter_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.metadata_filters.filter_labels.new](#fn-compute_global_forwarding_rulefilter_labelsnew) constructor.
+This list must not be empty and can have at the most 64 entries. When `null`, the `filter_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.metadata_filters.filter_labels.new](#fn-metadata_filtersfilter_labelsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metadata_filters` sub block.

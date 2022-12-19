@@ -403,7 +403,7 @@ Boolean. Set value to true to use. Do not set to false, instead
 use the &#39;specified_amount&#39; block. When `null`, the `last_period_amount` field will be omitted from the resulting object.
   - `specified_amount` (`list[obj]`): A specified amount to use as the budget. currencyCode is
 optional. If specified, it must match the currency of the
-billing account. The currencyCode is provided on output. When `null`, the `specified_amount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.amount.specified_amount.new](#fn-billing_budgetspecified_amountnew) constructor.
+billing account. The currencyCode is provided on output. When `null`, the `specified_amount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.amount.specified_amount.new](#fn-amountspecified_amountnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `amount` sub block.
@@ -490,7 +490,7 @@ account and all subaccounts, if they exist. When `null`, the `subaccounts` field
   - `custom_period` (`list[obj]`): Specifies to track usage from any start date (required) to any end date (optional).
 This time period is static, it does not recur.
 
-Exactly one of &#39;calendar_period&#39;, &#39;custom_period&#39; must be provided. When `null`, the `custom_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.new](#fn-billing_budgetcustom_periodnew) constructor.
+Exactly one of &#39;calendar_period&#39;, &#39;custom_period&#39; must be provided. When `null`, the `custom_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.new](#fn-budget_filtercustom_periodnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `budget_filter` sub block.
@@ -514,8 +514,8 @@ Terraform sub block.
 
 **Args**:
   - `end_date` (`list[obj]`): Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. 
-If unset, specifies to track all usage incurred since the startDate. When `null`, the `end_date` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.end_date.new](#fn-billing_budgetbudget_filterend_datenew) constructor.
-  - `start_date` (`list[obj]`): A start date is required. The start date must be after January 1, 2017. When `null`, the `start_date` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.start_date.new](#fn-billing_budgetbudget_filterstart_datenew) constructor.
+If unset, specifies to track all usage incurred since the startDate. When `null`, the `end_date` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.end_date.new](#fn-budget_filterbudget_filterend_datenew) constructor.
+  - `start_date` (`list[obj]`): A start date is required. The start date must be after January 1, 2017. When `null`, the `start_date` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.start_date.new](#fn-budget_filterbudget_filterstart_datenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `custom_period` sub block.

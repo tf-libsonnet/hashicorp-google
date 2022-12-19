@@ -350,7 +350,7 @@ Terraform sub block.
 **Args**:
   - `dest_ip_ranges` (`list`): CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256. When `null`, the `dest_ip_ranges` field will be omitted from the resulting object.
   - `src_ip_ranges` (`list`): CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256. When `null`, the `src_ip_ranges` field will be omitted from the resulting object.
-  - `layer4_configs` (`list[obj]`): Pairs of IP protocols and ports that the rule should match. When `null`, the `layer4_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.match.layer4_configs.new](#fn-compute_firewall_policy_rulelayer4_configsnew) constructor.
+  - `layer4_configs` (`list[obj]`): Pairs of IP protocols and ports that the rule should match. When `null`, the `layer4_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.match.layer4_configs.new](#fn-matchlayer4_configsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `match` sub block.

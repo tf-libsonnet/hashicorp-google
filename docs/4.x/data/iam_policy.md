@@ -181,7 +181,7 @@ Terraform sub block.
 
 **Args**:
   - `service` (`string`): 
-  - `audit_log_configs` (`list[obj]`):  When `null`, the `audit_log_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_policy.audit_config.audit_log_configs.new](#fn-iam_policyaudit_log_configsnew) constructor.
+  - `audit_log_configs` (`list[obj]`):  When `null`, the `audit_log_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_policy.audit_config.audit_log_configs.new](#fn-audit_configaudit_log_configsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `audit_config` sub block.
@@ -230,7 +230,7 @@ Terraform sub block.
 **Args**:
   - `members` (`list`): 
   - `role` (`string`): 
-  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_policy.binding.condition.new](#fn-iam_policyconditionnew) constructor.
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_policy.binding.condition.new](#fn-bindingconditionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `binding` sub block.
