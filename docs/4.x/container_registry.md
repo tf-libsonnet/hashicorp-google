@@ -1,0 +1,111 @@
+---
+permalink: /container_registry/
+---
+
+# container_registry
+
+`container_registry` represents the `google_container_registry` Terraform resource.
+
+
+
+This package contains functions and utilities for setting up the resource using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withLocation()`](#fn-withlocation)
+* [`fn withProject()`](#fn-withproject)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`google.container_registry.new` injects a new `google_container_registry` Terraform `resource`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    google.container_registry.new('some_id')
+
+You can get the reference to the `id` field of the created `google.container_registry` using the reference:
+
+    $._ref.google_container_registry.some_id.get('id')
+
+This is the same as directly entering `"${ google_container_registry.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block.
+  - `location` (`string`): The location of the registry. One of ASIA, EU, US or not specified. See the official documentation for more information on registry locations. When `null`, the `location` field will be omitted from the resulting object.
+  - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
+
+**Returns**:
+- A mixin object that injects the new resource into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`google.container_registry.newAttrs` constructs a new object with attributes and blocks configured for the `container_registry`
+Terraform resource.
+
+Unlike [google.container_registry.new](#fn-containerregistrynew), this function will not inject the `resource`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `location` (`string`): The location of the registry. One of ASIA, EU, US or not specified. See the official documentation for more information on registry locations. When `null`, the `location` field will be omitted from the resulting object.
+  - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_registry` resource into the root Terraform configuration.
+
+
+### fn withLocation
+
+```ts
+withLocation()
+```
+
+`google.container_registry.withLocation` constructs a mixin object that can be merged into the `container_registry`
+Terraform resource block to set or update the location field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `location` field.
+
+
+### fn withProject
+
+```ts
+withProject()
+```
+
+`google.container_registry.withProject` constructs a mixin object that can be merged into the `container_registry`
+Terraform resource block to set or update the project field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `project` field.

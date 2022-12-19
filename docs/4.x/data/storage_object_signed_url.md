@@ -1,0 +1,225 @@
+---
+permalink: /data/storage_object_signed_url/
+---
+
+# data.storage_object_signed_url
+
+`storage_object_signed_url` represents the `google_storage_object_signed_url` Terraform data source.
+
+
+
+This package contains functions and utilities for setting up the data source using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withBucket()`](#fn-withbucket)
+* [`fn withContentMd5()`](#fn-withcontentmd5)
+* [`fn withContentType()`](#fn-withcontenttype)
+* [`fn withCredentials()`](#fn-withcredentials)
+* [`fn withDuration()`](#fn-withduration)
+* [`fn withExtensionHeaders()`](#fn-withextensionheaders)
+* [`fn withHttpMethod()`](#fn-withhttpmethod)
+* [`fn withPath()`](#fn-withpath)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`google.data.storage_object_signed_url.new` injects a new `data_google_storage_object_signed_url` Terraform `data source`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    google.data.storage_object_signed_url.new('some_id')
+
+You can get the reference to the `id` field of the created `google.data.storage_object_signed_url` using the reference:
+
+    $._ref.data_google_storage_object_signed_url.some_id.get('id')
+
+This is the same as directly entering `"${ data_google_storage_object_signed_url.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block.
+  - `bucket` (`string`): 
+  - `content_md5` (`string`):  When `null`, the `content_md5` field will be omitted from the resulting object.
+  - `content_type` (`string`):  When `null`, the `content_type` field will be omitted from the resulting object.
+  - `credentials` (`string`):  When `null`, the `credentials` field will be omitted from the resulting object.
+  - `duration` (`string`):  When `null`, the `duration` field will be omitted from the resulting object.
+  - `extension_headers` (`obj`):  When `null`, the `extension_headers` field will be omitted from the resulting object.
+  - `http_method` (`string`):  When `null`, the `http_method` field will be omitted from the resulting object.
+  - `path` (`string`): 
+
+**Returns**:
+- A mixin object that injects the new data source into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`google.data.storage_object_signed_url.newAttrs` constructs a new object with attributes and blocks configured for the `storage_object_signed_url`
+Terraform data source.
+
+Unlike [google.data.storage_object_signed_url.new](#fn-storageobjectsignedurlnew), this function will not inject the `data source`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `bucket` (`string`): 
+  - `content_md5` (`string`):  When `null`, the `content_md5` field will be omitted from the resulting object.
+  - `content_type` (`string`):  When `null`, the `content_type` field will be omitted from the resulting object.
+  - `credentials` (`string`):  When `null`, the `credentials` field will be omitted from the resulting object.
+  - `duration` (`string`):  When `null`, the `duration` field will be omitted from the resulting object.
+  - `extension_headers` (`obj`):  When `null`, the `extension_headers` field will be omitted from the resulting object.
+  - `http_method` (`string`):  When `null`, the `http_method` field will be omitted from the resulting object.
+  - `path` (`string`): 
+
+**Returns**:
+  - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `storage_object_signed_url` data source into the root Terraform configuration.
+
+
+### fn withBucket
+
+```ts
+withBucket()
+```
+
+`google.storage_object_signed_url.withBucket` constructs a mixin object that can be merged into the `storage_object_signed_url`
+Terraform data source block to set or update the bucket field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `bucket` field.
+
+
+### fn withContentMd5
+
+```ts
+withContentMd5()
+```
+
+`google.storage_object_signed_url.withContentMd5` constructs a mixin object that can be merged into the `storage_object_signed_url`
+Terraform data source block to set or update the content_md5 field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `content_md5` field.
+
+
+### fn withContentType
+
+```ts
+withContentType()
+```
+
+`google.storage_object_signed_url.withContentType` constructs a mixin object that can be merged into the `storage_object_signed_url`
+Terraform data source block to set or update the content_type field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `content_type` field.
+
+
+### fn withCredentials
+
+```ts
+withCredentials()
+```
+
+`google.storage_object_signed_url.withCredentials` constructs a mixin object that can be merged into the `storage_object_signed_url`
+Terraform data source block to set or update the credentials field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `credentials` field.
+
+
+### fn withDuration
+
+```ts
+withDuration()
+```
+
+`google.storage_object_signed_url.withDuration` constructs a mixin object that can be merged into the `storage_object_signed_url`
+Terraform data source block to set or update the duration field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `duration` field.
+
+
+### fn withExtensionHeaders
+
+```ts
+withExtensionHeaders()
+```
+
+`google.storage_object_signed_url.withExtensionHeaders` constructs a mixin object that can be merged into the `storage_object_signed_url`
+Terraform data source block to set or update the extension_headers field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `extension_headers` field.
+
+
+### fn withHttpMethod
+
+```ts
+withHttpMethod()
+```
+
+`google.storage_object_signed_url.withHttpMethod` constructs a mixin object that can be merged into the `storage_object_signed_url`
+Terraform data source block to set or update the http_method field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `http_method` field.
+
+
+### fn withPath
+
+```ts
+withPath()
+```
+
+`google.storage_object_signed_url.withPath` constructs a mixin object that can be merged into the `storage_object_signed_url`
+Terraform data source block to set or update the path field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `path` field.

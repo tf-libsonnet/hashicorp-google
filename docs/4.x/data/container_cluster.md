@@ -1,0 +1,130 @@
+---
+permalink: /data/container_cluster/
+---
+
+# data.container_cluster
+
+`container_cluster` represents the `google_container_cluster` Terraform data source.
+
+
+
+This package contains functions and utilities for setting up the data source using Jsonnet code.
+
+
+## Index
+
+* [`fn new()`](#fn-new)
+* [`fn newAttrs()`](#fn-newattrs)
+* [`fn withLocation()`](#fn-withlocation)
+* [`fn withName()`](#fn-withname)
+* [`fn withProject()`](#fn-withproject)
+
+## Fields
+
+### fn new
+
+```ts
+new()
+```
+
+
+`google.data.container_cluster.new` injects a new `data_google_container_cluster` Terraform `data source`
+block into the root module document.
+
+Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
+resource. For example, if you added a new instance to the root using:
+
+    # arguments omitted for brevity
+    google.data.container_cluster.new('some_id')
+
+You can get the reference to the `id` field of the created `google.data.container_cluster` using the reference:
+
+    $._ref.data_google_container_cluster.some_id.get('id')
+
+This is the same as directly entering `"${ data_google_container_cluster.some_id.id }"` as the value.
+
+NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
+or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block.
+  - `location` (`string`): The location (region or zone) in which the cluster master will be created, as well as the default node location. If you specify a zone (such as us-central1-a), the cluster will be a zonal cluster with a single cluster master. If you specify a region (such as us-west1), the cluster will be a regional cluster with multiple masters spread across zones in the region, and with default node locations in those zones as well. When `null`, the `location` field will be omitted from the resulting object.
+  - `name` (`string`): The name of the cluster, unique within the project and location.
+  - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
+
+**Returns**:
+- A mixin object that injects the new data source into the root Terraform configuration.
+
+
+### fn newAttrs
+
+```ts
+newAttrs()
+```
+
+
+`google.data.container_cluster.newAttrs` constructs a new object with attributes and blocks configured for the `container_cluster`
+Terraform data source.
+
+Unlike [google.data.container_cluster.new](#fn-containerclusternew), this function will not inject the `data source`
+block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
+[tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
+
+This is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to
+injecting into a complete block.
+
+**Args**:
+  - `location` (`string`): The location (region or zone) in which the cluster master will be created, as well as the default node location. If you specify a zone (such as us-central1-a), the cluster will be a zonal cluster with a single cluster master. If you specify a region (such as us-west1), the cluster will be a regional cluster with multiple masters spread across zones in the region, and with default node locations in those zones as well. When `null`, the `location` field will be omitted from the resulting object.
+  - `name` (`string`): The name of the cluster, unique within the project and location.
+  - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `container_cluster` data source into the root Terraform configuration.
+
+
+### fn withLocation
+
+```ts
+withLocation()
+```
+
+`google.container_cluster.withLocation` constructs a mixin object that can be merged into the `container_cluster`
+Terraform data source block to set or update the location field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `location` field.
+
+
+### fn withName
+
+```ts
+withName()
+```
+
+`google.container_cluster.withName` constructs a mixin object that can be merged into the `container_cluster`
+Terraform data source block to set or update the name field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `name` field.
+
+
+### fn withProject
+
+```ts
+withProject()
+```
+
+`google.container_cluster.withProject` constructs a mixin object that can be merged into the `container_cluster`
+Terraform data source block to set or update the project field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`TODO`): The value to set for the `project` field.
