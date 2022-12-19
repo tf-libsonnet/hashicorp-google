@@ -19,7 +19,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         resource_link: resource_link,
       }),
     },
-    '#new':: d.fn(help='\n`google.gke_hub_membership.endpoint.new` constructs a new object with attributes and blocks configured for the `endpoint`\nTerraform sub block.\n\n\n\n**Args**:\n  - `gke_cluster` (`list[obj]`): If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. When `null`, the `gke_cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_membership.endpoint.gke_cluster.new](#fn-gke_clusternew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `endpoint` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.gke_hub_membership.endpoint.new` constructs a new object with attributes and blocks configured for the `endpoint`\nTerraform sub block.\n\n\n\n**Args**:\n  - `gke_cluster` (`list[obj]`): If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource. When `null`, the `gke_cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_membership.endpoint.gke_cluster.new](#fn-gke_hub_membershipgke_clusternew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `endpoint` sub block.\n', args=[]),
     new(
       gke_cluster=null
     ):: std.prune(a={

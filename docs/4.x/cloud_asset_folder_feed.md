@@ -389,7 +389,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `pubsub_destination` (`list[obj]`): Destination on Cloud Pubsub. When `null`, the `pubsub_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_folder_feed.feed_output_config.pubsub_destination.new](#fn-pubsub_destinationnew) constructor.
+  - `pubsub_destination` (`list[obj]`): Destination on Cloud Pubsub. When `null`, the `pubsub_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_folder_feed.feed_output_config.pubsub_destination.new](#fn-cloud_asset_folder_feedpubsub_destinationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `feed_output_config` sub block.

@@ -656,7 +656,7 @@ The following example is a valid match expression for private NAT:
 &#34;nexthop.hub == &#39;https://networkconnectivity.googleapis.com/v1alpha1/projects/my-project/global/hub/hub-1&#39;&#34;
   - `rule_number` (`number`): An integer uniquely identifying a rule in the list.
 The rule number must be a positive value between 0 and 65000, and must be unique among rules within a NAT.
-  - `action` (`list[obj]`): The action to be enforced for traffic that matches this rule. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.rules.action.new](#fn-actionnew) constructor.
+  - `action` (`list[obj]`): The action to be enforced for traffic that matches this rule. When `null`, the `action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.rules.action.new](#fn-compute_router_natactionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rules` sub block.

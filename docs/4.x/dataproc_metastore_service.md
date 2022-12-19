@@ -524,7 +524,7 @@ Terraform sub block.
   - `config_overrides` (`obj`): A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
 The mappings override system defaults (some keys cannot be overridden) When `null`, the `config_overrides` field will be omitted from the resulting object.
   - `version` (`string`): The Hive metastore schema version.
-  - `kerberos_config` (`list[obj]`): Information used to configure the Hive metastore service as a service principal in a Kerberos realm. When `null`, the `kerberos_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.hive_metastore_config.kerberos_config.new](#fn-kerberos_confignew) constructor.
+  - `kerberos_config` (`list[obj]`): Information used to configure the Hive metastore service as a service principal in a Kerberos realm. When `null`, the `kerberos_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.hive_metastore_config.kerberos_config.new](#fn-dataproc_metastore_servicekerberos_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `hive_metastore_config` sub block.
@@ -549,7 +549,7 @@ Terraform sub block.
 **Args**:
   - `krb5_config_gcs_uri` (`string`): A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
   - `principal` (`string`): A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form &#34;primary/instance@REALM&#34;, but there is no exact format.
-  - `keytab` (`list[obj]`): A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC). When `null`, the `keytab` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.hive_metastore_config.kerberos_config.keytab.new](#fn-hive_metastore_configkeytabnew) constructor.
+  - `keytab` (`list[obj]`): A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC). When `null`, the `keytab` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.hive_metastore_config.kerberos_config.keytab.new](#fn-dataproc_metastore_servicehive_metastore_configkeytabnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `kerberos_config` sub block.
@@ -621,7 +621,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `consumers` (`list[obj]`): The consumer-side network configuration for the Dataproc Metastore instance. When `null`, the `consumers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.network_config.consumers.new](#fn-consumersnew) constructor.
+  - `consumers` (`list[obj]`): The consumer-side network configuration for the Dataproc Metastore instance. When `null`, the `consumers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.network_config.consumers.new](#fn-dataproc_metastore_serviceconsumersnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_config` sub block.

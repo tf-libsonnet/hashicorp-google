@@ -283,7 +283,7 @@ Terraform sub block.
   - `order` (`number`): The order of this field with respect to other fields in this tag template.
 A higher value indicates a more important field. The value can be negative.
 Multiple fields can have the same order, and field orders within a tag do not have to be sequential. When `null`, the `order` field will be omitted from the resulting object.
-  - `type` (`list[obj]`): The type of value this tag field can contain. When `null`, the `type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.type.new](#fn-typenew) constructor.
+  - `type` (`list[obj]`): The type of value this tag field can contain. When `null`, the `type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.type.new](#fn-data_catalog_tag_templatetypenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `fields` sub block.
@@ -309,7 +309,7 @@ Terraform sub block.
   - `primitive_type` (`string`): Represents primitive types - string, bool etc.
  Exactly one of &#39;primitive_type&#39; or &#39;enum_type&#39; must be set Possible values: [&#34;DOUBLE&#34;, &#34;STRING&#34;, &#34;BOOL&#34;, &#34;TIMESTAMP&#34;] When `null`, the `primitive_type` field will be omitted from the resulting object.
   - `enum_type` (`list[obj]`): Represents an enum type.
- Exactly one of &#39;primitive_type&#39; or &#39;enum_type&#39; must be set When `null`, the `enum_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.type.enum_type.new](#fn-fieldsenum_typenew) constructor.
+ Exactly one of &#39;primitive_type&#39; or &#39;enum_type&#39; must be set When `null`, the `enum_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.type.enum_type.new](#fn-data_catalog_tag_templatefieldsenum_typenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `type` sub block.
@@ -336,7 +336,7 @@ Terraform sub block.
 values must be case-insensitively unique within this set. Currently,
 enum values can only be added to the list of allowed values. Deletion
 and renaming of enum values are not supported.
-Can have up to 500 allowed values. When `null`, the `allowed_values` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.type.enum_type.allowed_values.new](#fn-fieldstypeallowed_valuesnew) constructor.
+Can have up to 500 allowed values. When `null`, the `allowed_values` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.type.enum_type.allowed_values.new](#fn-data_catalog_tag_templatefieldstypeallowed_valuesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `enum_type` sub block.

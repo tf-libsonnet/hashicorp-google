@@ -510,7 +510,7 @@ The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative U
 It can contain a path, query string arguments, and \# fragments. 
 If the relative URL is empty, then the root path &#34;/&#34; will be used. 
 No spaces are allowed, and the maximum length allowed is 2083 characters
-  - `app_engine_routing` (`list[obj]`): App Engine Routing setting for the job. When `null`, the `app_engine_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.app_engine_http_target.app_engine_routing.new](#fn-app_engine_routingnew) constructor.
+  - `app_engine_routing` (`list[obj]`): App Engine Routing setting for the job. When `null`, the `app_engine_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.app_engine_http_target.app_engine_routing.new](#fn-cloud_scheduler_jobapp_engine_routingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `app_engine_http_target` sub block.
@@ -571,9 +571,9 @@ Repeated headers are not supported, but a header value can contain commas. When 
   - `http_method` (`string`): Which HTTP method to use for the request. When `null`, the `http_method` field will be omitted from the resulting object.
   - `uri` (`string`): The full URI path that the request will be sent to.
   - `oauth_token` (`list[obj]`): Contains information needed for generating an OAuth token.
-This type of authorization should be used when sending requests to a GCP endpoint. When `null`, the `oauth_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.oauth_token.new](#fn-oauth_tokennew) constructor.
+This type of authorization should be used when sending requests to a GCP endpoint. When `null`, the `oauth_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.oauth_token.new](#fn-cloud_scheduler_joboauth_tokennew) constructor.
   - `oidc_token` (`list[obj]`): Contains information needed for generating an OpenID Connect token.
-This type of authorization should be used when sending requests to third party endpoints or Cloud Run. When `null`, the `oidc_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.oidc_token.new](#fn-oidc_tokennew) constructor.
+This type of authorization should be used when sending requests to third party endpoints or Cloud Run. When `null`, the `oidc_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.oidc_token.new](#fn-cloud_scheduler_joboidc_tokennew) constructor.
 
 **Returns**:
   - An attribute object that represents the `http_target` sub block.

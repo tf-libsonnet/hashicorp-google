@@ -335,7 +335,7 @@ Terraform sub block.
 
 **Args**:
   - `metadata` (`obj`): Preserved metadata defined for this instance. This is a list of key-&gt;value pairs. When `null`, the `metadata` field will be omitted from the resulting object.
-  - `disk` (`list[obj]`): Stateful disks for the instance. When `null`, the `disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_per_instance_config.preserved_state.disk.new](#fn-disknew) constructor.
+  - `disk` (`list[obj]`): Stateful disks for the instance. When `null`, the `disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_per_instance_config.preserved_state.disk.new](#fn-compute_region_per_instance_configdisknew) constructor.
 
 **Returns**:
   - An attribute object that represents the `preserved_state` sub block.

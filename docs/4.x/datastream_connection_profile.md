@@ -605,7 +605,7 @@ Terraform sub block.
   - `password` (`string`): Password for the MySQL connection.
   - `port` (`number`): Port for the MySQL connection. When `null`, the `port` field will be omitted from the resulting object.
   - `username` (`string`): Username for the MySQL connection.
-  - `ssl_config` (`list[obj]`): SSL configuration for the MySQL connection. When `null`, the `ssl_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.mysql_profile.ssl_config.new](#fn-ssl_confignew) constructor.
+  - `ssl_config` (`list[obj]`): SSL configuration for the MySQL connection. When `null`, the `ssl_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.mysql_profile.ssl_config.new](#fn-datastream_connection_profilessl_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `mysql_profile` sub block.

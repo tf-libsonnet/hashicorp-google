@@ -328,7 +328,7 @@ the BGP connection between the two peers. If set, this value must be between 20 
 custom mode. This field can only be populated if advertiseMode
 is CUSTOM and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
-Leave this field blank to advertise no custom IP ranges. When `null`, the `advertised_ip_ranges` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router.bgp.advertised_ip_ranges.new](#fn-advertised_ip_rangesnew) constructor.
+Leave this field blank to advertise no custom IP ranges. When `null`, the `advertised_ip_ranges` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router.bgp.advertised_ip_ranges.new](#fn-compute_routeradvertised_ip_rangesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `bgp` sub block.

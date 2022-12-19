@@ -340,7 +340,7 @@ Terraform sub block.
 
 **Args**:
   - `count` (`number`): The number of partitions in the topic. Must be at least 1.
-  - `capacity` (`list[obj]`): The capacity configuration. When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.partition_config.capacity.new](#fn-capacitynew) constructor.
+  - `capacity` (`list[obj]`): The capacity configuration. When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.partition_config.capacity.new](#fn-pubsub_lite_topiccapacitynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `partition_config` sub block.

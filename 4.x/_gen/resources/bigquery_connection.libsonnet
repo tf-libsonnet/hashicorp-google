@@ -11,7 +11,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         iam_role_id: iam_role_id,
       }),
     },
-    '#new':: d.fn(help='\n`google.bigquery_connection.aws.new` constructs a new object with attributes and blocks configured for the `aws`\nTerraform sub block.\n\n\n\n**Args**:\n  - `access_role` (`list[obj]`): Authentication using Google owned service account to assume into customer&#39;s AWS IAM Role. When `null`, the `access_role` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.aws.access_role.new](#fn-access_rolenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `aws` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.bigquery_connection.aws.new` constructs a new object with attributes and blocks configured for the `aws`\nTerraform sub block.\n\n\n\n**Args**:\n  - `access_role` (`list[obj]`): Authentication using Google owned service account to assume into customer&#39;s AWS IAM Role. When `null`, the `access_role` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.aws.access_role.new](#fn-bigquery_connectionaccess_rolenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `aws` sub block.\n', args=[]),
     new(
       access_role=null
     ):: std.prune(a={
@@ -53,7 +53,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         username: username,
       }),
     },
-    '#new':: d.fn(help='\n`google.bigquery_connection.cloud_sql.new` constructs a new object with attributes and blocks configured for the `cloud_sql`\nTerraform sub block.\n\n\n\n**Args**:\n  - `database` (`string`): Database name.\n  - `instance_id` (`string`): Cloud SQL instance ID in the form project:location:instance.\n  - `type` (`string`): Type of the Cloud SQL database. Possible values: [&#34;DATABASE_TYPE_UNSPECIFIED&#34;, &#34;POSTGRES&#34;, &#34;MYSQL&#34;]\n  - `credential` (`list[obj]`): Cloud SQL properties. When `null`, the `credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.credential.new](#fn-credentialnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `cloud_sql` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.bigquery_connection.cloud_sql.new` constructs a new object with attributes and blocks configured for the `cloud_sql`\nTerraform sub block.\n\n\n\n**Args**:\n  - `database` (`string`): Database name.\n  - `instance_id` (`string`): Cloud SQL instance ID in the form project:location:instance.\n  - `type` (`string`): Type of the Cloud SQL database. Possible values: [&#34;DATABASE_TYPE_UNSPECIFIED&#34;, &#34;POSTGRES&#34;, &#34;MYSQL&#34;]\n  - `credential` (`list[obj]`): Cloud SQL properties. When `null`, the `credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.credential.new](#fn-bigquery_connectioncredentialnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `cloud_sql` sub block.\n', args=[]),
     new(
       database,
       instance_id,

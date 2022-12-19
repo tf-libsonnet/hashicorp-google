@@ -614,9 +614,9 @@ Terraform sub block.
 
 **Args**:
   - `header_action` (`list[obj]`): The header actions, including adding and removing
-headers, for request handled by this origin. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.header_action.new](#fn-header_actionnew) constructor.
+headers, for request handled by this origin. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.header_action.new](#fn-network_services_edge_cache_originheader_actionnew) constructor.
   - `url_rewrite` (`list[obj]`): The URL rewrite configuration for request that are
-handled by this origin. When `null`, the `url_rewrite` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.url_rewrite.new](#fn-url_rewritenew) constructor.
+handled by this origin. When `null`, the `url_rewrite` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.url_rewrite.new](#fn-network_services_edge_cache_originurl_rewritenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `origin_override_action` sub block.
@@ -641,7 +641,7 @@ Terraform sub block.
 **Args**:
   - `request_headers_to_add` (`list[obj]`): Describes a header to add.
 
-You may add a maximum of 5 request headers. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.header_action.request_headers_to_add.new](#fn-origin_override_actionrequest_headers_to_addnew) constructor.
+You may add a maximum of 5 request headers. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.header_action.request_headers_to_add.new](#fn-network_services_edge_cache_originorigin_override_actionrequest_headers_to_addnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header_action` sub block.

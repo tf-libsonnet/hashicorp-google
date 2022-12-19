@@ -254,7 +254,7 @@ Terraform sub block.
   - `num_nodes` (`number`): The number of nodes in your Cloud Bigtable cluster. Required, with a minimum of 1 for a PRODUCTION instance. Must be left unset for a DEVELOPMENT instance. When `null`, the `num_nodes` field will be omitted from the resulting object.
   - `storage_type` (`string`): The storage type to use. One of &#34;SSD&#34; or &#34;HDD&#34;. Defaults to &#34;SSD&#34;. When `null`, the `storage_type` field will be omitted from the resulting object.
   - `zone` (`string`): The zone to create the Cloud Bigtable cluster in. Each cluster must have a different zone in the same region. Zones that support Bigtable instances are noted on the Cloud Bigtable locations page. When `null`, the `zone` field will be omitted from the resulting object.
-  - `autoscaling_config` (`list[obj]`): A list of Autoscaling configurations. Only one element is used and allowed. When `null`, the `autoscaling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.autoscaling_config.new](#fn-autoscaling_confignew) constructor.
+  - `autoscaling_config` (`list[obj]`): A list of Autoscaling configurations. Only one element is used and allowed. When `null`, the `autoscaling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.autoscaling_config.new](#fn-bigtable_instanceautoscaling_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `cluster` sub block.

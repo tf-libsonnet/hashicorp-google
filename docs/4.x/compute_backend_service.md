@@ -1089,9 +1089,9 @@ internally behave as though all responses from this backend had a
 &#34;Cache-Control: public, max-age=[TTL]&#34; header, regardless of any
 existing Cache-Control header. The actual headers served in
 responses will not be altered. When `null`, the `signed_url_cache_max_age_sec` field will be omitted from the resulting object.
-  - `cache_key_policy` (`list[obj]`): The CacheKeyPolicy for this CdnPolicy. When `null`, the `cache_key_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.cache_key_policy.new](#fn-cache_key_policynew) constructor.
+  - `cache_key_policy` (`list[obj]`): The CacheKeyPolicy for this CdnPolicy. When `null`, the `cache_key_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.cache_key_policy.new](#fn-compute_backend_servicecache_key_policynew) constructor.
   - `negative_caching_policy` (`list[obj]`): Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
-Omitting the policy and leaving negativeCaching enabled will use Cloud CDN&#39;s default cache TTLs. When `null`, the `negative_caching_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.negative_caching_policy.new](#fn-negative_caching_policynew) constructor.
+Omitting the policy and leaving negativeCaching enabled will use Cloud CDN&#39;s default cache TTLs. When `null`, the `negative_caching_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.negative_caching_policy.new](#fn-compute_backend_servicenegative_caching_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `cdn_policy` sub block.
@@ -1231,7 +1231,7 @@ Defaults to 1024. When `null`, the `minimum_ring_size` field will be omitted fro
   - `http_cookie` (`list[obj]`): Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
 balancer. If the cookie is not present, it will be generated.
-This field is applicable if the sessionAffinity is set to HTTP_COOKIE. When `null`, the `http_cookie` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.http_cookie.new](#fn-http_cookienew) constructor.
+This field is applicable if the sessionAffinity is set to HTTP_COOKIE. When `null`, the `http_cookie` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.http_cookie.new](#fn-compute_backend_servicehttp_cookienew) constructor.
 
 **Returns**:
   - An attribute object that represents the `consistent_hash` sub block.
@@ -1256,7 +1256,7 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the cookie. When `null`, the `name` field will be omitted from the resulting object.
   - `path` (`string`): Path to set for the cookie. When `null`, the `path` field will be omitted from the resulting object.
-  - `ttl` (`list[obj]`): Lifetime of the cookie. When `null`, the `ttl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.http_cookie.ttl.new](#fn-consistent_hashttlnew) constructor.
+  - `ttl` (`list[obj]`): Lifetime of the cookie. When `null`, the `ttl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.http_cookie.ttl.new](#fn-compute_backend_serviceconsistent_hashttlnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `http_cookie` sub block.
@@ -1392,9 +1392,9 @@ by a thousand to get a double. That is, if the desired factor is 1.9, the
 runtime value should be 1900. Defaults to 1900. When `null`, the `success_rate_stdev_factor` field will be omitted from the resulting object.
   - `base_ejection_time` (`list[obj]`): The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
-30000ms or 30s. When `null`, the `base_ejection_time` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.base_ejection_time.new](#fn-base_ejection_timenew) constructor.
+30000ms or 30s. When `null`, the `base_ejection_time` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.base_ejection_time.new](#fn-compute_backend_servicebase_ejection_timenew) constructor.
   - `interval` (`list[obj]`): Time interval between ejection sweep analysis. This can result in both new
-ejections as well as hosts being returned to service. Defaults to 10 seconds. When `null`, the `interval` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.interval.new](#fn-intervalnew) constructor.
+ejections as well as hosts being returned to service. Defaults to 10 seconds. When `null`, the `interval` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.interval.new](#fn-compute_backend_serviceintervalnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `outlier_detection` sub block.

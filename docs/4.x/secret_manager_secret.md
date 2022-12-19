@@ -391,7 +391,7 @@ Terraform sub block.
 
 **Args**:
   - `automatic` (`bool`): The Secret will automatically be replicated without any restrictions. When `null`, the `automatic` field will be omitted from the resulting object.
-  - `user_managed` (`list[obj]`): The Secret will automatically be replicated without any restrictions. When `null`, the `user_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.new](#fn-user_managednew) constructor.
+  - `user_managed` (`list[obj]`): The Secret will automatically be replicated without any restrictions. When `null`, the `user_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.new](#fn-secret_manager_secretuser_managednew) constructor.
 
 **Returns**:
   - An attribute object that represents the `replication` sub block.
@@ -414,7 +414,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `replicas` (`list[obj]`): The list of Replicas for this Secret. Cannot be empty. When `null`, the `replicas` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.replicas.new](#fn-replicationreplicasnew) constructor.
+  - `replicas` (`list[obj]`): The list of Replicas for this Secret. Cannot be empty. When `null`, the `replicas` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.replicas.new](#fn-secret_manager_secretreplicationreplicasnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `user_managed` sub block.
@@ -438,7 +438,7 @@ Terraform sub block.
 
 **Args**:
   - `location` (`string`): The canonical IDs of the location to replicate data. For example: &#34;us-east1&#34;.
-  - `customer_managed_encryption` (`list[obj]`): Customer Managed Encryption for the secret. When `null`, the `customer_managed_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.replicas.customer_managed_encryption.new](#fn-replicationuser_managedcustomer_managed_encryptionnew) constructor.
+  - `customer_managed_encryption` (`list[obj]`): Customer Managed Encryption for the secret. When `null`, the `customer_managed_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.replicas.customer_managed_encryption.new](#fn-secret_manager_secretreplicationuser_managedcustomer_managed_encryptionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `replicas` sub block.

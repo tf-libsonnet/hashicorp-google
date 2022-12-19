@@ -428,7 +428,7 @@ Note: Do not forget to include whitespace at part boundaries, so the training ph
 If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set.
 If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways:
 Part.text is set to a part of the phrase that has no parameters.
-Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set. When `null`, the `parts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.training_phrases.parts.new](#fn-partsnew) constructor.
+Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set. When `null`, the `parts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.training_phrases.parts.new](#fn-dialogflow_cx_intentpartsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `training_phrases` sub block.

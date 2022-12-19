@@ -495,7 +495,7 @@ an empty list as an intent to stream all the supported resource types in this FH
 The output is organized in one table per resource type. The server reuses the existing tables (if any) that
 are named after the resource types, e.g. &#34;Patient&#34;, &#34;Observation&#34;. When there is no existing table for a given
 resource type, the server attempts to create one.
-See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details. When `null`, the `bigquery_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_fhir_store.stream_configs.bigquery_destination.new](#fn-bigquery_destinationnew) constructor.
+See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details. When `null`, the `bigquery_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_fhir_store.stream_configs.bigquery_destination.new](#fn-healthcare_fhir_storebigquery_destinationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `stream_configs` sub block.
@@ -519,7 +519,7 @@ Terraform sub block.
 
 **Args**:
   - `dataset_uri` (`string`): BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
-  - `schema_config` (`list[obj]`): The configuration for the exported BigQuery schema. When `null`, the `schema_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_fhir_store.stream_configs.bigquery_destination.schema_config.new](#fn-stream_configsschema_confignew) constructor.
+  - `schema_config` (`list[obj]`): The configuration for the exported BigQuery schema. When `null`, the `schema_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_fhir_store.stream_configs.bigquery_destination.schema_config.new](#fn-healthcare_fhir_storestream_configsschema_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `bigquery_destination` sub block.

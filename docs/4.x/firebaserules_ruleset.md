@@ -197,7 +197,7 @@ Terraform sub block.
 
 **Args**:
   - `language` (`string`): `Language` of the `Source` bundle. If unspecified, the language will default to `FIREBASE_RULES`. Possible values: LANGUAGE_UNSPECIFIED, FIREBASE_RULES, EVENT_FLOW_TRIGGERS When `null`, the `language` field will be omitted from the resulting object.
-  - `files` (`list[obj]`): `File` set constituting the `Source` bundle. When `null`, the `files` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firebaserules_ruleset.source.files.new](#fn-filesnew) constructor.
+  - `files` (`list[obj]`): `File` set constituting the `Source` bundle. When `null`, the `files` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firebaserules_ruleset.source.files.new](#fn-firebaserules_rulesetfilesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.

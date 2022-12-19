@@ -324,7 +324,7 @@ Terraform sub block.
   - `idp_entity_id` (`string`): Unique identifier for all SAML entities
   - `sign_request` (`bool`): Indicates if outbounding SAMLRequest should be signed. When `null`, the `sign_request` field will be omitted from the resulting object.
   - `sso_url` (`string`): URL to send Authentication request to.
-  - `idp_certificates` (`list[obj]`): The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP. When `null`, the `idp_certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_tenant_inbound_saml_config.idp_config.idp_certificates.new](#fn-idp_certificatesnew) constructor.
+  - `idp_certificates` (`list[obj]`): The IDP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP. When `null`, the `idp_certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_tenant_inbound_saml_config.idp_config.idp_certificates.new](#fn-identity_platform_tenant_inbound_saml_configidp_certificatesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `idp_config` sub block.

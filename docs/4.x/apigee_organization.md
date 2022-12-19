@@ -364,7 +364,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `property` (`list[obj]`): List of all properties in the object. When `null`, the `property` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_organization.properties.property.new](#fn-propertynew) constructor.
+  - `property` (`list[obj]`): List of all properties in the object. When `null`, the `property` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_organization.properties.property.new](#fn-apigee_organizationpropertynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `properties` sub block.

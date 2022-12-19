@@ -453,8 +453,8 @@ for this revision, use the &#34;autoscaling.knative.dev/minScale&#34; annotation
 key. To set maximum instances for this revision, use the
 &#34;autoscaling.knative.dev/maxScale&#34; annotation key. To set Cloud SQL
 connections for the revision, use the &#34;run.googleapis.com/cloudsql-instances&#34;
-annotation key. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.metadata.new](#fn-metadatanew) constructor.
-  - `spec` (`list[obj]`): RevisionSpec holds the desired state of the Revision (from the client). When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.new](#fn-specnew) constructor.
+annotation key. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.metadata.new](#fn-cloud_run_servicemetadatanew) constructor.
+  - `spec` (`list[obj]`): RevisionSpec holds the desired state of the Revision (from the client). When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.new](#fn-cloud_run_servicespecnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `template` sub block.
@@ -531,8 +531,8 @@ will use the project&#39;s default service account. When `null`, the `service_ac
 In the context of a Revision, we disallow a number of the fields of
 this Container, including: name, ports, and volumeMounts.
 The runtime contract is documented here:
-https://github.com/knative/serving/blob/main/docs/runtime-contract.md When `null`, the `containers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.new](#fn-templatecontainersnew) constructor.
-  - `volumes` (`list[obj]`): Volume represents a named volume in a container. When `null`, the `volumes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.volumes.new](#fn-templatevolumesnew) constructor.
+https://github.com/knative/serving/blob/main/docs/runtime-contract.md When `null`, the `containers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.new](#fn-cloud_run_servicetemplatecontainersnew) constructor.
+  - `volumes` (`list[obj]`): Volume represents a named volume in a container. When `null`, the `volumes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.volumes.new](#fn-cloud_run_servicetemplatevolumesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `spec` sub block.
@@ -579,20 +579,20 @@ More info: https://kubernetes.io/docs/concepts/containers/images
   - `working_dir` (`string`): Container&#39;s working directory.
 If not specified, the container runtime&#39;s default will be used, which
 might be configured in the container image. When `null`, the `working_dir` field will be omitted from the resulting object.
-  - `env` (`list[obj]`): List of environment variables to set in the container. When `null`, the `env` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env.new](#fn-templatespecenvnew) constructor.
+  - `env` (`list[obj]`): List of environment variables to set in the container. When `null`, the `env` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env.new](#fn-cloud_run_servicetemplatespecenvnew) constructor.
   - `env_from` (`list[obj]`): List of sources to populate environment variables in the container.
 All invalid keys will be reported as an event when the container is starting.
 When a key exists in multiple sources, the value associated with the last source will
 take precedence. Values defined by an Env with a duplicate key will take
-precedence. When `null`, the `env_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.new](#fn-templatespecenv_fromnew) constructor.
+precedence. When `null`, the `env_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.new](#fn-cloud_run_servicetemplatespecenv_fromnew) constructor.
   - `ports` (`list[obj]`): List of open ports in the container.
 More Info:
-https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort When `null`, the `ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.ports.new](#fn-templatespecportsnew) constructor.
+https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort When `null`, the `ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.ports.new](#fn-cloud_run_servicetemplatespecportsnew) constructor.
   - `resources` (`list[obj]`): Compute Resources required by this container. Used to set values such as max memory
 More info:
-https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.resources.new](#fn-templatespecresourcesnew) constructor.
+https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.resources.new](#fn-cloud_run_servicetemplatespecresourcesnew) constructor.
   - `volume_mounts` (`list[obj]`): Volume to mount into the container&#39;s filesystem.
-Only supports SecretVolumeSources. When `null`, the `volume_mounts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.volume_mounts.new](#fn-templatespecvolume_mountsnew) constructor.
+Only supports SecretVolumeSources. When `null`, the `volume_mounts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.volume_mounts.new](#fn-cloud_run_servicetemplatespecvolume_mountsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `containers` sub block.
@@ -624,7 +624,7 @@ syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
 references will never be expanded, regardless of whether the variable
 exists or not.
 Defaults to &#34;&#34;. When `null`, the `value` field will be omitted from the resulting object.
-  - `value_from` (`list[obj]`): Source for the environment variable&#39;s value. Only supports secret_key_ref. When `null`, the `value_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env.value_from.new](#fn-templatespeccontainersvalue_fromnew) constructor.
+  - `value_from` (`list[obj]`): Source for the environment variable&#39;s value. Only supports secret_key_ref. When `null`, the `value_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env.value_from.new](#fn-cloud_run_servicetemplatespeccontainersvalue_fromnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `env` sub block.
@@ -647,7 +647,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `secret_key_ref` (`list[obj]`): Selects a key (version) of a secret in Secret Manager. When `null`, the `secret_key_ref` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env.value_from.secret_key_ref.new](#fn-templatespeccontainersenvsecret_key_refnew) constructor.
+  - `secret_key_ref` (`list[obj]`): Selects a key (version) of a secret in Secret Manager. When `null`, the `secret_key_ref` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env.value_from.secret_key_ref.new](#fn-cloud_run_servicetemplatespeccontainersenvsecret_key_refnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `value_from` sub block.
@@ -700,8 +700,8 @@ Terraform sub block.
 
 **Args**:
   - `prefix` (`string`): An optional identifier to prepend to each key in the ConfigMap. When `null`, the `prefix` field will be omitted from the resulting object.
-  - `config_map_ref` (`list[obj]`): The ConfigMap to select from. When `null`, the `config_map_ref` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.config_map_ref.new](#fn-templatespeccontainersconfig_map_refnew) constructor.
-  - `secret_ref` (`list[obj]`): The Secret to select from. When `null`, the `secret_ref` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.secret_ref.new](#fn-templatespeccontainerssecret_refnew) constructor.
+  - `config_map_ref` (`list[obj]`): The ConfigMap to select from. When `null`, the `config_map_ref` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.config_map_ref.new](#fn-cloud_run_servicetemplatespeccontainersconfig_map_refnew) constructor.
+  - `secret_ref` (`list[obj]`): The Secret to select from. When `null`, the `secret_ref` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.secret_ref.new](#fn-cloud_run_servicetemplatespeccontainerssecret_refnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `env_from` sub block.
@@ -725,7 +725,7 @@ Terraform sub block.
 
 **Args**:
   - `optional` (`bool`): Specify whether the ConfigMap must be defined When `null`, the `optional` field will be omitted from the resulting object.
-  - `local_object_reference` (`list[obj]`): The ConfigMap to select from. When `null`, the `local_object_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.config_map_ref.local_object_reference.new](#fn-templatespeccontainersenv_fromlocal_object_referencenew) constructor.
+  - `local_object_reference` (`list[obj]`): The ConfigMap to select from. When `null`, the `local_object_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.config_map_ref.local_object_reference.new](#fn-cloud_run_servicetemplatespeccontainersenv_fromlocal_object_referencenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `config_map_ref` sub block.
@@ -774,7 +774,7 @@ Terraform sub block.
 
 **Args**:
   - `optional` (`bool`): Specify whether the Secret must be defined When `null`, the `optional` field will be omitted from the resulting object.
-  - `local_object_reference` (`list[obj]`): The Secret to select from. When `null`, the `local_object_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.secret_ref.local_object_reference.new](#fn-templatespeccontainersenv_fromlocal_object_referencenew) constructor.
+  - `local_object_reference` (`list[obj]`): The Secret to select from. When `null`, the `local_object_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.secret_ref.local_object_reference.new](#fn-cloud_run_servicetemplatespeccontainersenv_fromlocal_object_referencenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `secret_ref` sub block.
@@ -905,7 +905,7 @@ Terraform sub block.
   - `name` (`string`): Volume&#39;s name.
   - `secret` (`list[obj]`): The secret&#39;s value will be presented as the content of a file whose
 name is defined in the item path. If no items are defined, the name of
-the file is the secret_name. When `null`, the `secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.volumes.secret.new](#fn-templatespecsecretnew) constructor.
+the file is the secret_name. When `null`, the `secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.volumes.secret.new](#fn-cloud_run_servicetemplatespecsecretnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `volumes` sub block.
@@ -945,7 +945,7 @@ annotation.
 secret_name.
 If specified, the key will be used as the version to fetch from Cloud
 Secret Manager and the path will be the name of the file exposed in the
-volume. When items are defined, they must specify a key and a path. When `null`, the `items` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.volumes.secret.items.new](#fn-templatespecvolumesitemsnew) constructor.
+volume. When items are defined, they must specify a key and a path. When `null`, the `items` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.volumes.secret.items.new](#fn-cloud_run_servicetemplatespecvolumesitemsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `secret` sub block.

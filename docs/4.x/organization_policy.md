@@ -347,8 +347,8 @@ Terraform sub block.
 **Args**:
   - `inherit_from_parent` (`bool`): If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy. When `null`, the `inherit_from_parent` field will be omitted from the resulting object.
   - `suggested_value` (`string`): The Google Cloud Console will try to default to a configuration that matches the value specified in this field. When `null`, the `suggested_value` field will be omitted from the resulting object.
-  - `allow` (`list[obj]`): One or the other must be set. When `null`, the `allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.organization_policy.list_policy.allow.new](#fn-allownew) constructor.
-  - `deny` (`list[obj]`): One or the other must be set. When `null`, the `deny` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.organization_policy.list_policy.deny.new](#fn-denynew) constructor.
+  - `allow` (`list[obj]`): One or the other must be set. When `null`, the `allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.organization_policy.list_policy.allow.new](#fn-organization_policyallownew) constructor.
+  - `deny` (`list[obj]`): One or the other must be set. When `null`, the `deny` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.organization_policy.list_policy.deny.new](#fn-organization_policydenynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `list_policy` sub block.

@@ -82,7 +82,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         uri: uri,
       }),
     },
-    '#new':: d.fn(help='\n`google.dialogflow_cx_webhook.service_directory.new` constructs a new object with attributes and blocks configured for the `service_directory`\nTerraform sub block.\n\n\n\n**Args**:\n  - `service` (`string`): The name of Service Directory service.\n  - `generic_web_service` (`list[obj]`): The name of Service Directory service. When `null`, the `generic_web_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.service_directory.generic_web_service.new](#fn-generic_web_servicenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `service_directory` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.dialogflow_cx_webhook.service_directory.new` constructs a new object with attributes and blocks configured for the `service_directory`\nTerraform sub block.\n\n\n\n**Args**:\n  - `service` (`string`): The name of Service Directory service.\n  - `generic_web_service` (`list[obj]`): The name of Service Directory service. When `null`, the `generic_web_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.service_directory.generic_web_service.new](#fn-dialogflow_cx_webhookgeneric_web_servicenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `service_directory` sub block.\n', args=[]),
     new(
       service,
       generic_web_service=null

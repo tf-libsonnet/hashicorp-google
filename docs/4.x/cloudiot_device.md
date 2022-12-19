@@ -316,7 +316,7 @@ Terraform sub block.
 
 **Args**:
   - `expiration_time` (`string`): The time at which this credential becomes invalid. When `null`, the `expiration_time` field will be omitted from the resulting object.
-  - `public_key` (`list[obj]`): A public key used to verify the signature of JSON Web Tokens (JWTs). When `null`, the `public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.credentials.public_key.new](#fn-public_keynew) constructor.
+  - `public_key` (`list[obj]`): A public key used to verify the signature of JSON Web Tokens (JWTs). When `null`, the `public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.credentials.public_key.new](#fn-cloudiot_devicepublic_keynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `credentials` sub block.

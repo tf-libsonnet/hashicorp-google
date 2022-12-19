@@ -247,7 +247,7 @@ Terraform sub block.
 
 **Args**:
   - `config_version` (`string`): Version of the configuration. When `null`, the `config_version` field will be omitted from the resulting object.
-  - `realms_selector` (`list[obj]`): Selection by realms. When `null`, the `realms_selector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.game_server_config_overrides.realms_selector.new](#fn-realms_selectornew) constructor.
+  - `realms_selector` (`list[obj]`): Selection by realms. When `null`, the `realms_selector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.game_server_config_overrides.realms_selector.new](#fn-game_services_game_server_deployment_rolloutrealms_selectornew) constructor.
 
 **Returns**:
   - An attribute object that represents the `game_server_config_overrides` sub block.

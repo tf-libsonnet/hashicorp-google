@@ -754,7 +754,7 @@ A duration in seconds with up to nine fractional digits, terminated by &#39;s&#3
   - `min_idle_instances` (`number`): Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service. When `null`, the `min_idle_instances` field will be omitted from the resulting object.
   - `min_pending_latency` (`string`): Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `min_pending_latency` field will be omitted from the resulting object.
-  - `standard_scheduler_settings` (`list[obj]`): Scheduler settings for standard environment. When `null`, the `standard_scheduler_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_standard_app_version.automatic_scaling.standard_scheduler_settings.new](#fn-standard_scheduler_settingsnew) constructor.
+  - `standard_scheduler_settings` (`list[obj]`): Scheduler settings for standard environment. When `null`, the `standard_scheduler_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_standard_app_version.automatic_scaling.standard_scheduler_settings.new](#fn-app_engine_standard_app_versionstandard_scheduler_settingsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `automatic_scaling` sub block.
@@ -829,8 +829,8 @@ Terraform sub block.
 
 **Args**:
   - `files` (`list[obj]`): Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-All files must be readable using the credentials supplied with this call. When `null`, the `files` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_standard_app_version.deployment.files.new](#fn-filesnew) constructor.
-  - `zip` (`list[obj]`): Zip File When `null`, the `zip` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_standard_app_version.deployment.zip.new](#fn-zipnew) constructor.
+All files must be readable using the credentials supplied with this call. When `null`, the `files` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_standard_app_version.deployment.files.new](#fn-app_engine_standard_app_versionfilesnew) constructor.
+  - `zip` (`list[obj]`): Zip File When `null`, the `zip` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_standard_app_version.deployment.zip.new](#fn-app_engine_standard_app_versionzipnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `deployment` sub block.
@@ -932,8 +932,8 @@ Terraform sub block.
   - `url_regex` (`string`): URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
 All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path. When `null`, the `url_regex` field will be omitted from the resulting object.
   - `script` (`list[obj]`): Executes a script to handle the requests that match this URL pattern.
-Only the auto value is supported for Node.js in the App Engine standard environment, for example &#34;script:&#34; &#34;auto&#34;. When `null`, the `script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_standard_app_version.handlers.script.new](#fn-scriptnew) constructor.
-  - `static_files` (`list[obj]`): Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them. When `null`, the `static_files` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_standard_app_version.handlers.static_files.new](#fn-static_filesnew) constructor.
+Only the auto value is supported for Node.js in the App Engine standard environment, for example &#34;script:&#34; &#34;auto&#34;. When `null`, the `script` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_standard_app_version.handlers.script.new](#fn-app_engine_standard_app_versionscriptnew) constructor.
+  - `static_files` (`list[obj]`): Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them. When `null`, the `static_files` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_standard_app_version.handlers.static_files.new](#fn-app_engine_standard_app_versionstatic_filesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `handlers` sub block.

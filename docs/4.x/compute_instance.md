@@ -974,7 +974,7 @@ Terraform sub block.
   - `kms_key_self_link` (`string`): The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set. When `null`, the `kms_key_self_link` field will be omitted from the resulting object.
   - `mode` (`string`): Read/write mode for the disk. One of &#34;READ_ONLY&#34; or &#34;READ_WRITE&#34;. When `null`, the `mode` field will be omitted from the resulting object.
   - `source` (`string`): The name or self_link of the disk attached to this instance. When `null`, the `source` field will be omitted from the resulting object.
-  - `initialize_params` (`list[obj]`): Parameters with which a disk was created alongside the instance. When `null`, the `initialize_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.boot_disk.initialize_params.new](#fn-initialize_paramsnew) constructor.
+  - `initialize_params` (`list[obj]`): Parameters with which a disk was created alongside the instance. When `null`, the `initialize_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.boot_disk.initialize_params.new](#fn-compute_instanceinitialize_paramsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `boot_disk` sub block.
@@ -1053,9 +1053,9 @@ Terraform sub block.
   - `stack_type` (`string`): The stack type for this network interface to identify whether the IPv6 feature is enabled or not. If not specified, IPV4_ONLY will be used. When `null`, the `stack_type` field will be omitted from the resulting object.
   - `subnetwork` (`string`): The name or self_link of the subnetwork attached to this interface. When `null`, the `subnetwork` field will be omitted from the resulting object.
   - `subnetwork_project` (`string`): The project in which the subnetwork belongs. When `null`, the `subnetwork_project` field will be omitted from the resulting object.
-  - `access_config` (`list[obj]`): Access configurations, i.e. IPs via which this instance can be accessed via the Internet. When `null`, the `access_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.network_interface.access_config.new](#fn-access_confignew) constructor.
-  - `alias_ip_range` (`list[obj]`): An array of alias IP ranges for this network interface. When `null`, the `alias_ip_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.network_interface.alias_ip_range.new](#fn-alias_ip_rangenew) constructor.
-  - `ipv6_access_config` (`list[obj]`): An array of IPv6 access configurations for this interface. Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this instance will have no external IPv6 Internet access. When `null`, the `ipv6_access_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.network_interface.ipv6_access_config.new](#fn-ipv6_access_confignew) constructor.
+  - `access_config` (`list[obj]`): Access configurations, i.e. IPs via which this instance can be accessed via the Internet. When `null`, the `access_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.network_interface.access_config.new](#fn-compute_instanceaccess_confignew) constructor.
+  - `alias_ip_range` (`list[obj]`): An array of alias IP ranges for this network interface. When `null`, the `alias_ip_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.network_interface.alias_ip_range.new](#fn-compute_instancealias_ip_rangenew) constructor.
+  - `ipv6_access_config` (`list[obj]`): An array of IPv6 access configurations for this interface. Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this instance will have no external IPv6 Internet access. When `null`, the `ipv6_access_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.network_interface.ipv6_access_config.new](#fn-compute_instanceipv6_access_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_interface` sub block.
@@ -1152,7 +1152,7 @@ Terraform sub block.
 
 **Args**:
   - `type` (`string`): The type of reservation from which this instance can consume resources.
-  - `specific_reservation` (`list[obj]`): Specifies the label selector for the reservation to use. When `null`, the `specific_reservation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.reservation_affinity.specific_reservation.new](#fn-specific_reservationnew) constructor.
+  - `specific_reservation` (`list[obj]`): Specifies the label selector for the reservation to use. When `null`, the `specific_reservation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.reservation_affinity.specific_reservation.new](#fn-compute_instancespecific_reservationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `reservation_affinity` sub block.
@@ -1205,7 +1205,7 @@ Terraform sub block.
   - `on_host_maintenance` (`string`): Describes maintenance behavior for the instance. One of MIGRATE or TERMINATE, When `null`, the `on_host_maintenance` field will be omitted from the resulting object.
   - `preemptible` (`bool`): Whether the instance is preemptible. When `null`, the `preemptible` field will be omitted from the resulting object.
   - `provisioning_model` (`string`): Whether the instance is spot. If this is set as SPOT. When `null`, the `provisioning_model` field will be omitted from the resulting object.
-  - `node_affinities` (`list[obj]`): Specifies node affinities or anti-affinities to determine which sole-tenant nodes your instances and managed instance groups will use as host systems. When `null`, the `node_affinities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.scheduling.node_affinities.new](#fn-node_affinitiesnew) constructor.
+  - `node_affinities` (`list[obj]`): Specifies node affinities or anti-affinities to determine which sole-tenant nodes your instances and managed instance groups will use as host systems. When `null`, the `node_affinities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.scheduling.node_affinities.new](#fn-compute_instancenode_affinitiesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `scheduling` sub block.

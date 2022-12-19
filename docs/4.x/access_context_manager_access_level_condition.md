@@ -352,7 +352,7 @@ An empty list allows all statuses. Possible values: [&#34;ENCRYPTION_UNSPECIFIED
   - `require_screen_lock` (`bool`): Whether or not screenlock is required for the DevicePolicy
 to be true. Defaults to false. When `null`, the `require_screen_lock` field will be omitted from the resulting object.
   - `os_constraints` (`list[obj]`): A list of allowed OS versions.
-An empty list allows all types and all versions. When `null`, the `os_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.device_policy.os_constraints.new](#fn-os_constraintsnew) constructor.
+An empty list allows all types and all versions. When `null`, the `os_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.device_policy.os_constraints.new](#fn-access_context_manager_access_level_conditionos_constraintsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `device_policy` sub block.

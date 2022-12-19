@@ -315,7 +315,7 @@ is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
 for the AccessLevel to be applied. Default value: &#34;AND&#34; Possible values: [&#34;AND&#34;, &#34;OR&#34;] When `null`, the `combining_function` field will be omitted from the resulting object.
-  - `conditions` (`list[obj]`): A set of requirements for the AccessLevel to be granted. When `null`, the `conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level.basic.conditions.new](#fn-conditionsnew) constructor.
+  - `conditions` (`list[obj]`): A set of requirements for the AccessLevel to be granted. When `null`, the `conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level.basic.conditions.new](#fn-access_context_manager_access_levelconditionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `basic` sub block.
@@ -369,7 +369,7 @@ granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name} When `null`, the `required_access_levels` field will be omitted from the resulting object.
   - `device_policy` (`list[obj]`): Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
-allowed. When `null`, the `device_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level.basic.conditions.device_policy.new](#fn-basicdevice_policynew) constructor.
+allowed. When `null`, the `device_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level.basic.conditions.device_policy.new](#fn-access_context_manager_access_levelbasicdevice_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `conditions` sub block.
@@ -401,7 +401,7 @@ An empty list allows all statuses. Possible values: [&#34;ENCRYPTION_UNSPECIFIED
   - `require_screen_lock` (`bool`): Whether or not screenlock is required for the DevicePolicy
 to be true. Defaults to false. When `null`, the `require_screen_lock` field will be omitted from the resulting object.
   - `os_constraints` (`list[obj]`): A list of allowed OS versions.
-An empty list allows all types and all versions. When `null`, the `os_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level.basic.conditions.device_policy.os_constraints.new](#fn-basicconditionsos_constraintsnew) constructor.
+An empty list allows all types and all versions. When `null`, the `os_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level.basic.conditions.device_policy.os_constraints.new](#fn-access_context_manager_access_levelbasicconditionsos_constraintsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `device_policy` sub block.
@@ -453,7 +453,7 @@ Terraform sub block.
 **Args**:
   - `expr` (`list[obj]`): Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
 This page details the objects and attributes that are used to the build the CEL expressions for 
-custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec. When `null`, the `expr` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level.custom.expr.new](#fn-exprnew) constructor.
+custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec. When `null`, the `expr` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level.custom.expr.new](#fn-access_context_manager_access_levelexprnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `custom` sub block.

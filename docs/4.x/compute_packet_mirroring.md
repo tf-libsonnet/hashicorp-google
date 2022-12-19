@@ -469,8 +469,8 @@ Terraform sub block.
 
 **Args**:
   - `tags` (`list`): All instances with these tags will be mirrored. When `null`, the `tags` field will be omitted from the resulting object.
-  - `instances` (`list[obj]`): All the listed instances will be mirrored.  Specify at most 50. When `null`, the `instances` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.mirrored_resources.instances.new](#fn-instancesnew) constructor.
-  - `subnetworks` (`list[obj]`): All instances in one of these subnetworks will be mirrored. When `null`, the `subnetworks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.mirrored_resources.subnetworks.new](#fn-subnetworksnew) constructor.
+  - `instances` (`list[obj]`): All the listed instances will be mirrored.  Specify at most 50. When `null`, the `instances` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.mirrored_resources.instances.new](#fn-compute_packet_mirroringinstancesnew) constructor.
+  - `subnetworks` (`list[obj]`): All instances in one of these subnetworks will be mirrored. When `null`, the `subnetworks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.mirrored_resources.subnetworks.new](#fn-compute_packet_mirroringsubnetworksnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `mirrored_resources` sub block.
