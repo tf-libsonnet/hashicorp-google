@@ -105,9 +105,9 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The rawDisk.source URL
 * The sourceDisk URL When `null`, the `source_snapshot` field will be omitted from the resulting object.
   - `guest_os_features` (`list[obj]`): A list of features to enable on the guest operating system.
-Applicable only for bootable images. When `null`, the `guest_os_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.guest_os_features.new](#fn-computeimageguestosfeaturesnew) constructor.
-  - `raw_disk` (`list[obj]`): The parameters of the raw disk image. When `null`, the `raw_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.raw_disk.new](#fn-computeimagerawdisknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.timeouts.new](#fn-computeimagetimeoutsnew) constructor.
+Applicable only for bootable images. When `null`, the `guest_os_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.guest_os_features.new](#fn-guest_os_featuresnew) constructor.
+  - `raw_disk` (`list[obj]`): The parameters of the raw disk image. When `null`, the `raw_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.raw_disk.new](#fn-raw_disknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -123,7 +123,7 @@ newAttrs()
 `google.compute_image.newAttrs` constructs a new object with attributes and blocks configured for the `compute_image`
 Terraform resource.
 
-Unlike [google.compute_image.new](#fn-computeimagenew), this function will not inject the `resource`
+Unlike [google.compute_image.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -169,9 +169,9 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The rawDisk.source URL
 * The sourceDisk URL When `null`, the `source_snapshot` field will be omitted from the resulting object.
   - `guest_os_features` (`list[obj]`): A list of features to enable on the guest operating system.
-Applicable only for bootable images. When `null`, the `guest_os_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.guest_os_features.new](#fn-computeimageguestosfeaturesnew) constructor.
-  - `raw_disk` (`list[obj]`): The parameters of the raw disk image. When `null`, the `raw_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.raw_disk.new](#fn-computeimagerawdisknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.timeouts.new](#fn-computeimagetimeoutsnew) constructor.
+Applicable only for bootable images. When `null`, the `guest_os_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.guest_os_features.new](#fn-guest_os_featuresnew) constructor.
+  - `raw_disk` (`list[obj]`): The parameters of the raw disk image. When `null`, the `raw_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.raw_disk.new](#fn-raw_disknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_image` resource into the root Terraform configuration.

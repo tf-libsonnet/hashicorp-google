@@ -69,8 +69,8 @@ key-value pair. When `null`, the `labels` field will be omitted from the resulti
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `realm_id` (`string`): The realm id of the game server realm.
   - `connection_info` (`list[obj]`): Game server cluster connection information. This information is used to
-manage game server clusters. When `null`, the `connection_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_cluster.connection_info.new](#fn-gameservicesgameserverclusterconnectioninfonew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_cluster.timeouts.new](#fn-gameservicesgameserverclustertimeoutsnew) constructor.
+manage game server clusters. When `null`, the `connection_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_cluster.connection_info.new](#fn-connection_infonew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `google.game_services_game_server_cluster.newAttrs` constructs a new object with attributes and blocks configured for the `game_services_game_server_cluster`
 Terraform resource.
 
-Unlike [google.game_services_game_server_cluster.new](#fn-gameservicesgameserverclusternew), this function will not inject the `resource`
+Unlike [google.game_services_game_server_cluster.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -102,8 +102,8 @@ key-value pair. When `null`, the `labels` field will be omitted from the resulti
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `realm_id` (`string`): The realm id of the game server realm.
   - `connection_info` (`list[obj]`): Game server cluster connection information. This information is used to
-manage game server clusters. When `null`, the `connection_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_cluster.connection_info.new](#fn-gameservicesgameserverclusterconnectioninfonew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_cluster.timeouts.new](#fn-gameservicesgameserverclustertimeoutsnew) constructor.
+manage game server clusters. When `null`, the `connection_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_cluster.connection_info.new](#fn-connection_infonew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `game_services_game_server_cluster` resource into the root Terraform configuration.
@@ -298,7 +298,7 @@ Terraform sub block.
   - `namespace` (`string`): Namespace designated on the game server cluster where the game server
 instances will be created. The namespace existence will be validated
 during creation.
-  - `gke_cluster_reference` (`list[obj]`): Reference of the GKE cluster where the game servers are installed. When `null`, the `gke_cluster_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_cluster.connection_info.gke_cluster_reference.new](#fn-connectioninfogkeclusterreferencenew) constructor.
+  - `gke_cluster_reference` (`list[obj]`): Reference of the GKE cluster where the game servers are installed. When `null`, the `gke_cluster_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_cluster.connection_info.gke_cluster_reference.new](#fn-connection_infogke_cluster_referencenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `connection_info` sub block.

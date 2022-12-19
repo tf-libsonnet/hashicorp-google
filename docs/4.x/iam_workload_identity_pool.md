@@ -63,7 +63,7 @@ access again. When `null`, the `disabled` field will be omitted from the resulti
   - `workload_identity_pool_id` (`string`): The ID to use for the pool, which becomes the final component of the resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 &#39;gcp-&#39; is reserved for use by Google, and may not be specified.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool.timeouts.new](#fn-iamworkloadidentitypooltimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -79,7 +79,7 @@ newAttrs()
 `google.iam_workload_identity_pool.newAttrs` constructs a new object with attributes and blocks configured for the `iam_workload_identity_pool`
 Terraform resource.
 
-Unlike [google.iam_workload_identity_pool.new](#fn-iamworkloadidentitypoolnew), this function will not inject the `resource`
+Unlike [google.iam_workload_identity_pool.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -96,7 +96,7 @@ access again. When `null`, the `disabled` field will be omitted from the resulti
   - `workload_identity_pool_id` (`string`): The ID to use for the pool, which becomes the final component of the resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 &#39;gcp-&#39; is reserved for use by Google, and may not be specified.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool.timeouts.new](#fn-iamworkloadidentitypooltimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iam_workload_identity_pool` resource into the root Terraform configuration.

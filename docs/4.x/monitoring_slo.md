@@ -125,7 +125,7 @@ SLIs are used to measure and calculate the quality of the Service&#39;s
 performance with respect to a single aspect of service quality.
 
 Exactly one of the following must be set:
-&#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `basic_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.basic_sli.new](#fn-monitoringslobasicslinew) constructor.
+&#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `basic_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.basic_sli.new](#fn-basic_slinew) constructor.
   - `request_based_sli` (`list[obj]`): A request-based SLI defines a SLI for which atomic units of
 service are counted directly.
 
@@ -133,8 +133,8 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service&#39;s
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-&#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `request_based_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.request_based_sli.new](#fn-monitoringslorequestbasedslinew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.timeouts.new](#fn-monitoringslotimeoutsnew) constructor.
+&#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `request_based_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.request_based_sli.new](#fn-request_based_slinew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.timeouts.new](#fn-timeoutsnew) constructor.
   - `windows_based_sli` (`list[obj]`): A windows-based SLI defines the criteria for time windows.
 good_service is defined based off the count of these time windows
 for which the provided service was of good quality.
@@ -144,7 +144,7 @@ the quality of the Service&#39;s performance with respect to a single
 aspect of service quality.
 
 Exactly one of the following must be set:
-&#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `windows_based_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.new](#fn-monitoringslowindowsbasedslinew) constructor.
+&#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `windows_based_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.new](#fn-windows_based_slinew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -160,7 +160,7 @@ newAttrs()
 `google.monitoring_slo.newAttrs` constructs a new object with attributes and blocks configured for the `monitoring_slo`
 Terraform resource.
 
-Unlike [google.monitoring_slo.new](#fn-monitoringslonew), this function will not inject the `resource`
+Unlike [google.monitoring_slo.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -190,7 +190,7 @@ SLIs are used to measure and calculate the quality of the Service&#39;s
 performance with respect to a single aspect of service quality.
 
 Exactly one of the following must be set:
-&#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `basic_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.basic_sli.new](#fn-monitoringslobasicslinew) constructor.
+&#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `basic_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.basic_sli.new](#fn-basic_slinew) constructor.
   - `request_based_sli` (`list[obj]`): A request-based SLI defines a SLI for which atomic units of
 service are counted directly.
 
@@ -198,8 +198,8 @@ A SLI describes a good service.
 It is used to measure and calculate the quality of the Service&#39;s
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
-&#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `request_based_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.request_based_sli.new](#fn-monitoringslorequestbasedslinew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.timeouts.new](#fn-monitoringslotimeoutsnew) constructor.
+&#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `request_based_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.request_based_sli.new](#fn-request_based_slinew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.timeouts.new](#fn-timeoutsnew) constructor.
   - `windows_based_sli` (`list[obj]`): A windows-based SLI defines the criteria for time windows.
 good_service is defined based off the count of these time windows
 for which the provided service was of good quality.
@@ -209,7 +209,7 @@ the quality of the Service&#39;s performance with respect to a single
 aspect of service quality.
 
 Exactly one of the following must be set:
-&#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `windows_based_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.new](#fn-monitoringslowindowsbasedslinew) constructor.
+&#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `windows_based_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.new](#fn-windows_based_slinew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitoring_slo` resource into the root Terraform configuration.
@@ -525,8 +525,8 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don&#39;t support breaking down by version, setting this
 field will result in an error. When `null`, the `version` field will be omitted from the resulting object.
-  - `availability` (`list[obj]`): Availability based SLI, dervied from count of requests made to this service that return successfully. When `null`, the `availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.basic_sli.availability.new](#fn-basicsliavailabilitynew) constructor.
-  - `latency` (`list[obj]`): Parameters for a latency threshold SLI. When `null`, the `latency` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.basic_sli.latency.new](#fn-basicslilatencynew) constructor.
+  - `availability` (`list[obj]`): Availability based SLI, dervied from count of requests made to this service that return successfully. When `null`, the `availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.basic_sli.availability.new](#fn-basic_sliavailabilitynew) constructor.
+  - `latency` (`list[obj]`): Parameters for a latency threshold SLI. When `null`, the `latency` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.basic_sli.latency.new](#fn-basic_slilatencynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `basic_sli` sub block.
@@ -603,14 +603,14 @@ total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
 measuring good service and total service.
 
-Exactly one of &#39;distribution_cut&#39; or &#39;good_total_ratio&#39; can be set. When `null`, the `distribution_cut` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.request_based_sli.distribution_cut.new](#fn-requestbasedslidistributioncutnew) constructor.
+Exactly one of &#39;distribution_cut&#39; or &#39;good_total_ratio&#39; can be set. When `null`, the `distribution_cut` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.request_based_sli.distribution_cut.new](#fn-request_based_slidistribution_cutnew) constructor.
   - `good_total_ratio` (`list[obj]`): A means to compute a ratio of &#39;good_service&#39; to &#39;total_service&#39;.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service &#43; bad_service = total_service
 will be assumed.
 
-Exactly one of &#39;distribution_cut&#39; or &#39;good_total_ratio&#39; can be set. When `null`, the `good_total_ratio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.request_based_sli.good_total_ratio.new](#fn-requestbasedsligoodtotalrationew) constructor.
+Exactly one of &#39;distribution_cut&#39; or &#39;good_total_ratio&#39; can be set. When `null`, the `good_total_ratio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.request_based_sli.good_total_ratio.new](#fn-request_based_sligood_total_rationew) constructor.
 
 **Returns**:
   - An attribute object that represents the `request_based_sli` sub block.
@@ -642,7 +642,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 will be the count of values x in the Distribution such
 that range.min &lt;= x &lt;= range.max. inclusive of min and
 max. Open ranges can be defined by setting
-just one of min or max. When `null`, the `range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.request_based_sli.distribution_cut.range.new](#fn-distributioncutrangenew) constructor.
+just one of min or max. When `null`, the `range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.request_based_sli.distribution_cut.range.new](#fn-request_based_slirequest_based_slirangenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `distribution_cut` sub block.
@@ -776,7 +776,7 @@ integer fraction of a day and at least 60s. When `null`, the `window_period` fie
   - `good_total_ratio_threshold` (`list[obj]`): Criterion that describes a window as good if its performance is
 high enough. One of &#39;good_bad_metric_filter&#39;,
 &#39;good_total_ratio_threshold&#39;, &#39;metric_mean_in_range&#39;,
-&#39;metric_sum_in_range&#39; must be set for &#39;windows_based_sli&#39;. When `null`, the `good_total_ratio_threshold` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.new](#fn-windowsbasedsligoodtotalratiothresholdnew) constructor.
+&#39;metric_sum_in_range&#39; must be set for &#39;windows_based_sli&#39;. When `null`, the `good_total_ratio_threshold` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.new](#fn-windows_based_sligood_total_ratio_thresholdnew) constructor.
   - `metric_mean_in_range` (`list[obj]`): Criterion that describes a window as good if the metric&#39;s value
 is in a good range, *averaged* across returned streams.
 One of &#39;good_bad_metric_filter&#39;,
@@ -784,7 +784,7 @@ One of &#39;good_bad_metric_filter&#39;,
 &#39;good_total_ratio_threshold&#39;, &#39;metric_mean_in_range&#39;,
 &#39;metric_sum_in_range&#39; must be set for &#39;windows_based_sli&#39;.
 Average value X of &#39;time_series&#39; should satisfy
-&#39;range.min &lt;= X &lt;= range.max&#39; for a good window. When `null`, the `metric_mean_in_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.metric_mean_in_range.new](#fn-windowsbasedslimetricmeaninrangenew) constructor.
+&#39;range.min &lt;= X &lt;= range.max&#39; for a good window. When `null`, the `metric_mean_in_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.metric_mean_in_range.new](#fn-windows_based_slimetric_mean_in_rangenew) constructor.
   - `metric_sum_in_range` (`list[obj]`): Criterion that describes a window as good if the metric&#39;s value
 is in a good range, *summed* across returned streams.
 Summed value &#39;X&#39; of &#39;time_series&#39; should satisfy
@@ -792,7 +792,7 @@ Summed value &#39;X&#39; of &#39;time_series&#39; should satisfy
 
 One of &#39;good_bad_metric_filter&#39;,
 &#39;good_total_ratio_threshold&#39;, &#39;metric_mean_in_range&#39;,
-&#39;metric_sum_in_range&#39; must be set for &#39;windows_based_sli&#39;. When `null`, the `metric_sum_in_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.metric_sum_in_range.new](#fn-windowsbasedslimetricsuminrangenew) constructor.
+&#39;metric_sum_in_range&#39; must be set for &#39;windows_based_sli&#39;. When `null`, the `metric_sum_in_range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.metric_sum_in_range.new](#fn-windows_based_slimetric_sum_in_rangenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `windows_based_sli` sub block.
@@ -817,8 +817,8 @@ Terraform sub block.
 **Args**:
   - `threshold` (`number`): If window performance &gt;= threshold, the window is counted
 as good. When `null`, the `threshold` field will be omitted from the resulting object.
-  - `basic_sli_performance` (`list[obj]`): Basic SLI to evaluate to judge window quality. When `null`, the `basic_sli_performance` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.basic_sli_performance.new](#fn-goodtotalratiothresholdbasicsliperformancenew) constructor.
-  - `performance` (`list[obj]`): Request-based SLI to evaluate to judge window quality. When `null`, the `performance` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.performance.new](#fn-goodtotalratiothresholdperformancenew) constructor.
+  - `basic_sli_performance` (`list[obj]`): Basic SLI to evaluate to judge window quality. When `null`, the `basic_sli_performance` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.basic_sli_performance.new](#fn-windows_based_sliwindows_based_slibasic_sli_performancenew) constructor.
+  - `performance` (`list[obj]`): Request-based SLI to evaluate to judge window quality. When `null`, the `performance` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.performance.new](#fn-windows_based_sliwindows_based_sliperformancenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `good_total_ratio_threshold` sub block.
@@ -859,8 +859,8 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don&#39;t support breaking down by version, setting this
 field will result in an error. When `null`, the `version` field will be omitted from the resulting object.
-  - `availability` (`list[obj]`): Availability based SLI, dervied from count of requests made to this service that return successfully. When `null`, the `availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.basic_sli_performance.availability.new](#fn-basicsliperformanceavailabilitynew) constructor.
-  - `latency` (`list[obj]`): Parameters for a latency threshold SLI. When `null`, the `latency` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.basic_sli_performance.latency.new](#fn-basicsliperformancelatencynew) constructor.
+  - `availability` (`list[obj]`): Availability based SLI, dervied from count of requests made to this service that return successfully. When `null`, the `availability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.basic_sli_performance.availability.new](#fn-windows_based_sliwindows_based_sligood_total_ratio_thresholdavailabilitynew) constructor.
+  - `latency` (`list[obj]`): Parameters for a latency threshold SLI. When `null`, the `latency` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.basic_sli_performance.latency.new](#fn-windows_based_sliwindows_based_sligood_total_ratio_thresholdlatencynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `basic_sli_performance` sub block.
@@ -935,12 +935,12 @@ Terraform sub block.
 Distribution that fall into a good range. The total_service is the
 total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
-measuring good service and total service. When `null`, the `distribution_cut` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.performance.distribution_cut.new](#fn-performancedistributioncutnew) constructor.
+measuring good service and total service. When `null`, the `distribution_cut` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.performance.distribution_cut.new](#fn-windows_based_sliwindows_based_sligood_total_ratio_thresholddistribution_cutnew) constructor.
   - `good_total_ratio` (`list[obj]`): A means to compute a ratio of &#39;good_service&#39; to &#39;total_service&#39;.
 Defines computing this ratio with two TimeSeries [monitoring filters](https://cloud.google.com/monitoring/api/v3/filters)
 Must specify exactly two of good, bad, and total service filters.
 The relationship good_service &#43; bad_service = total_service
-will be assumed. When `null`, the `good_total_ratio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.performance.good_total_ratio.new](#fn-performancegoodtotalrationew) constructor.
+will be assumed. When `null`, the `good_total_ratio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.performance.good_total_ratio.new](#fn-windows_based_sliwindows_based_sligood_total_ratio_thresholdgood_total_rationew) constructor.
 
 **Returns**:
   - An attribute object that represents the `performance` sub block.
@@ -972,7 +972,7 @@ MetricKind = DELTA or MetricKind = CUMULATIVE.
 will be the count of values x in the Distribution such
 that range.min &lt;= x &lt;= range.max. inclusive of min and
 max. Open ranges can be defined by setting
-just one of min or max. When `null`, the `range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.performance.distribution_cut.range.new](#fn-distributioncutrangenew) constructor.
+just one of min or max. When `null`, the `range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.performance.distribution_cut.range.new](#fn-windows_based_sliwindows_based_sligood_total_ratio_thresholdperformancerangenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `distribution_cut` sub block.
@@ -1080,7 +1080,7 @@ that range.min &lt;= x &lt;= range.max. inclusive of min and
 max. Open ranges can be defined by setting
 just one of min or max. Mean value &#39;X&#39; of &#39;time_series&#39;
 values should satisfy &#39;range.min &lt;= X &lt;= range.max&#39; for a
-good service. When `null`, the `range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.metric_mean_in_range.range.new](#fn-metricmeaninrangerangenew) constructor.
+good service. When `null`, the `range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.metric_mean_in_range.range.new](#fn-windows_based_sliwindows_based_slirangenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metric_mean_in_range` sub block.
@@ -1144,7 +1144,7 @@ will be the count of values x in the Distribution such
 that range.min &lt;= x &lt;= range.max. inclusive of min and
 max. Open ranges can be defined by setting
 just one of min or max. Summed value &#39;X&#39; should satisfy
-&#39;range.min &lt;= X &lt;= range.max&#39; for a good window. When `null`, the `range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.metric_sum_in_range.range.new](#fn-metricsuminrangerangenew) constructor.
+&#39;range.min &lt;= X &lt;= range.max&#39; for a good window. When `null`, the `range` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.windows_based_sli.metric_sum_in_range.range.new](#fn-windows_based_sliwindows_based_slirangenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metric_sum_in_range` sub block.

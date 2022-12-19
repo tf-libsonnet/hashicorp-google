@@ -83,10 +83,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): A reference to the zone where the machine resides.
   - `name` (`string`): The name specified for the Notebook runtime.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `access_config` (`list[obj]`): The config settings for accessing runtime. When `null`, the `access_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.access_config.new](#fn-notebooksruntimeaccessconfignew) constructor.
-  - `software_config` (`list[obj]`): The config settings for software inside the runtime. When `null`, the `software_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.software_config.new](#fn-notebooksruntimesoftwareconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.timeouts.new](#fn-notebooksruntimetimeoutsnew) constructor.
-  - `virtual_machine` (`list[obj]`): Use a Compute Engine VM image to start the managed notebook instance. When `null`, the `virtual_machine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.new](#fn-notebooksruntimevirtualmachinenew) constructor.
+  - `access_config` (`list[obj]`): The config settings for accessing runtime. When `null`, the `access_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.access_config.new](#fn-access_confignew) constructor.
+  - `software_config` (`list[obj]`): The config settings for software inside the runtime. When `null`, the `software_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.software_config.new](#fn-software_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_machine` (`list[obj]`): Use a Compute Engine VM image to start the managed notebook instance. When `null`, the `virtual_machine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.new](#fn-virtual_machinenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,7 +102,7 @@ newAttrs()
 `google.notebooks_runtime.newAttrs` constructs a new object with attributes and blocks configured for the `notebooks_runtime`
 Terraform resource.
 
-Unlike [google.notebooks_runtime.new](#fn-notebooksruntimenew), this function will not inject the `resource`
+Unlike [google.notebooks_runtime.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -113,10 +113,10 @@ injecting into a complete block.
   - `location` (`string`): A reference to the zone where the machine resides.
   - `name` (`string`): The name specified for the Notebook runtime.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `access_config` (`list[obj]`): The config settings for accessing runtime. When `null`, the `access_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.access_config.new](#fn-notebooksruntimeaccessconfignew) constructor.
-  - `software_config` (`list[obj]`): The config settings for software inside the runtime. When `null`, the `software_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.software_config.new](#fn-notebooksruntimesoftwareconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.timeouts.new](#fn-notebooksruntimetimeoutsnew) constructor.
-  - `virtual_machine` (`list[obj]`): Use a Compute Engine VM image to start the managed notebook instance. When `null`, the `virtual_machine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.new](#fn-notebooksruntimevirtualmachinenew) constructor.
+  - `access_config` (`list[obj]`): The config settings for accessing runtime. When `null`, the `access_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.access_config.new](#fn-access_confignew) constructor.
+  - `software_config` (`list[obj]`): The config settings for software inside the runtime. When `null`, the `software_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.software_config.new](#fn-software_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.timeouts.new](#fn-timeoutsnew) constructor.
+  - `virtual_machine` (`list[obj]`): Use a Compute Engine VM image to start the managed notebook instance. When `null`, the `virtual_machine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.new](#fn-virtual_machinenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `notebooks_runtime` resource into the root Terraform configuration.
@@ -375,7 +375,7 @@ Please follow the [cron format](https://en.wikipedia.org/wiki/Cron). When `null`
 fully boots up. The path must be a URL or
 Cloud Storage path (gs://path-to-file/file-name). When `null`, the `post_startup_script` field will be omitted from the resulting object.
   - `post_startup_script_behavior` (`string`): Behavior for the post startup script. Possible values: [&#34;POST_STARTUP_SCRIPT_BEHAVIOR_UNSPECIFIED&#34;, &#34;RUN_EVERY_START&#34;, &#34;DOWNLOAD_AND_RUN_EVERY_START&#34;] When `null`, the `post_startup_script_behavior` field will be omitted from the resulting object.
-  - `kernels` (`list[obj]`): Use a list of container images to use as Kernels in the notebook instance. When `null`, the `kernels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.software_config.kernels.new](#fn-softwareconfigkernelsnew) constructor.
+  - `kernels` (`list[obj]`): Use a list of container images to use as Kernels in the notebook instance. When `null`, the `kernels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.software_config.kernels.new](#fn-software_configkernelsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `software_config` sub block.
@@ -448,7 +448,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `virtual_machine_config` (`list[obj]`): Virtual Machine configuration settings. When `null`, the `virtual_machine_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.new](#fn-virtualmachinevirtualmachineconfignew) constructor.
+  - `virtual_machine_config` (`list[obj]`): Virtual Machine configuration settings. When `null`, the `virtual_machine_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.new](#fn-virtual_machinevirtual_machine_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `virtual_machine` sub block.
@@ -515,11 +515,11 @@ partial URI are valid. Examples:
   - `tags` (`list`): The Compute Engine tags to add to runtime (see [Tagging instances]
 (https://cloud.google.com/compute/docs/
 label-or-tag-resources#tags)). When `null`, the `tags` field will be omitted from the resulting object.
-  - `accelerator_config` (`list[obj]`): The Compute Engine accelerator configuration for this runtime. When `null`, the `accelerator_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.accelerator_config.new](#fn-virtualmachineconfigacceleratorconfignew) constructor.
-  - `container_images` (`list[obj]`): Use a list of container images to start the notebook instance. When `null`, the `container_images` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.container_images.new](#fn-virtualmachineconfigcontainerimagesnew) constructor.
-  - `data_disk` (`list[obj]`): Data disk option configuration settings. When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.data_disk.new](#fn-virtualmachineconfigdatadisknew) constructor.
-  - `encryption_config` (`list[obj]`): Encryption settings for virtual machine data disk. When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.encryption_config.new](#fn-virtualmachineconfigencryptionconfignew) constructor.
-  - `shielded_instance_config` (`list[obj]`): Shielded VM Instance configuration settings. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.shielded_instance_config.new](#fn-virtualmachineconfigshieldedinstanceconfignew) constructor.
+  - `accelerator_config` (`list[obj]`): The Compute Engine accelerator configuration for this runtime. When `null`, the `accelerator_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.accelerator_config.new](#fn-virtual_machinevirtual_machineaccelerator_confignew) constructor.
+  - `container_images` (`list[obj]`): Use a list of container images to start the notebook instance. When `null`, the `container_images` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.container_images.new](#fn-virtual_machinevirtual_machinecontainer_imagesnew) constructor.
+  - `data_disk` (`list[obj]`): Data disk option configuration settings. When `null`, the `data_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.data_disk.new](#fn-virtual_machinevirtual_machinedata_disknew) constructor.
+  - `encryption_config` (`list[obj]`): Encryption settings for virtual machine data disk. When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.encryption_config.new](#fn-virtual_machinevirtual_machineencryption_confignew) constructor.
+  - `shielded_instance_config` (`list[obj]`): Shielded VM Instance configuration settings. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.shielded_instance_config.new](#fn-virtual_machinevirtual_machineshielded_instance_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `virtual_machine_config` sub block.
@@ -611,7 +611,7 @@ be created alongside the new instance. Use initialization
 parameters to create boot disks or local SSDs attached to the
 new instance. This property is mutually exclusive with the
 source property; you can only define one or the other, but not
-both. When `null`, the `initialize_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.data_disk.initialize_params.new](#fn-datadiskinitializeparamsnew) constructor.
+both. When `null`, the `initialize_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.virtual_machine_config.data_disk.initialize_params.new](#fn-virtual_machinevirtual_machinevirtual_machine_configinitialize_paramsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `data_disk` sub block.

@@ -58,7 +58,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): A user-defined name of the Certificate Map. Certificate Map names must be unique
 globally and match the pattern &#39;projects/*/locations/*/certificateMaps/*&#39;.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate_map.timeouts.new](#fn-certificatemanagercertificatemaptimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate_map.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -74,7 +74,7 @@ newAttrs()
 `google.certificate_manager_certificate_map.newAttrs` constructs a new object with attributes and blocks configured for the `certificate_manager_certificate_map`
 Terraform resource.
 
-Unlike [google.certificate_manager_certificate_map.new](#fn-certificatemanagercertificatemapnew), this function will not inject the `resource`
+Unlike [google.certificate_manager_certificate_map.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -87,7 +87,7 @@ injecting into a complete block.
   - `name` (`string`): A user-defined name of the Certificate Map. Certificate Map names must be unique
 globally and match the pattern &#39;projects/*/locations/*/certificateMaps/*&#39;.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate_map.timeouts.new](#fn-certificatemanagercertificatemaptimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate_map.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `certificate_manager_certificate_map` resource into the root Terraform configuration.

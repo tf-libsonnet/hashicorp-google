@@ -59,10 +59,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `group` (`string`): The name of the Group to create this membership in.
-  - `preferred_member_key` (`list[obj]`): EntityKey of the member. When `null`, the `preferred_member_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.preferred_member_key.new](#fn-cloudidentitygroupmembershippreferredmemberkeynew) constructor.
+  - `preferred_member_key` (`list[obj]`): EntityKey of the member. When `null`, the `preferred_member_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.preferred_member_key.new](#fn-preferred_member_keynew) constructor.
   - `roles` (`list[obj]`): The MembershipRoles that apply to the Membership.
-Must not contain duplicate MembershipRoles with the same name. When `null`, the `roles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.roles.new](#fn-cloudidentitygroupmembershiprolesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.timeouts.new](#fn-cloudidentitygroupmembershiptimeoutsnew) constructor.
+Must not contain duplicate MembershipRoles with the same name. When `null`, the `roles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.roles.new](#fn-rolesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -78,7 +78,7 @@ newAttrs()
 `google.cloud_identity_group_membership.newAttrs` constructs a new object with attributes and blocks configured for the `cloud_identity_group_membership`
 Terraform resource.
 
-Unlike [google.cloud_identity_group_membership.new](#fn-cloudidentitygroupmembershipnew), this function will not inject the `resource`
+Unlike [google.cloud_identity_group_membership.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -87,10 +87,10 @@ injecting into a complete block.
 
 **Args**:
   - `group` (`string`): The name of the Group to create this membership in.
-  - `preferred_member_key` (`list[obj]`): EntityKey of the member. When `null`, the `preferred_member_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.preferred_member_key.new](#fn-cloudidentitygroupmembershippreferredmemberkeynew) constructor.
+  - `preferred_member_key` (`list[obj]`): EntityKey of the member. When `null`, the `preferred_member_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.preferred_member_key.new](#fn-preferred_member_keynew) constructor.
   - `roles` (`list[obj]`): The MembershipRoles that apply to the Membership.
-Must not contain duplicate MembershipRoles with the same name. When `null`, the `roles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.roles.new](#fn-cloudidentitygroupmembershiprolesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.timeouts.new](#fn-cloudidentitygroupmembershiptimeoutsnew) constructor.
+Must not contain duplicate MembershipRoles with the same name. When `null`, the `roles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.roles.new](#fn-rolesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloud_identity_group_membership` resource into the root Terraform configuration.

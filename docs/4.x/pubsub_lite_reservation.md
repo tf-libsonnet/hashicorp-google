@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `throughput_capacity` (`number`): The reserved throughput capacity. Every unit of throughput capacity is
 equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed
 messages.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_reservation.timeouts.new](#fn-pubsublitereservationtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_reservation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `google.pubsub_lite_reservation.newAttrs` constructs a new object with attributes and blocks configured for the `pubsub_lite_reservation`
 Terraform resource.
 
-Unlike [google.pubsub_lite_reservation.new](#fn-pubsublitereservationnew), this function will not inject the `resource`
+Unlike [google.pubsub_lite_reservation.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -89,7 +89,7 @@ injecting into a complete block.
   - `throughput_capacity` (`number`): The reserved throughput capacity. Every unit of throughput capacity is
 equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed
 messages.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_reservation.timeouts.new](#fn-pubsublitereservationtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_reservation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `pubsub_lite_reservation` resource into the root Terraform configuration.

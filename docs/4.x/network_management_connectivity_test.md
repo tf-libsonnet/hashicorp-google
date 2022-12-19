@@ -89,7 +89,7 @@ interface.
 
 A reachability analysis proceeds even if the destination location
 is ambiguous. However, the result can include endpoints that you
-don&#39;t intend to test. When `null`, the `destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.destination.new](#fn-networkmanagementconnectivitytestdestinationnew) constructor.
+don&#39;t intend to test. When `null`, the `destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.destination.new](#fn-destinationnew) constructor.
   - `source` (`list[obj]`): Required. Source specification of the Connectivity Test.
 
 You can use a combination of source IP address, virtual machine
@@ -112,8 +112,8 @@ address or VPC network.
 
 A reachability analysis proceeds even if the source location is
 ambiguous. However, the test result may include endpoints that
-you don&#39;t intend to test. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.source.new](#fn-networkmanagementconnectivitytestsourcenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.timeouts.new](#fn-networkmanagementconnectivitytesttimeoutsnew) constructor.
+you don&#39;t intend to test. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.source.new](#fn-sourcenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -129,7 +129,7 @@ newAttrs()
 `google.network_management_connectivity_test.newAttrs` constructs a new object with attributes and blocks configured for the `network_management_connectivity_test`
 Terraform resource.
 
-Unlike [google.network_management_connectivity_test.new](#fn-networkmanagementconnectivitytestnew), this function will not inject the `resource`
+Unlike [google.network_management_connectivity_test.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -163,7 +163,7 @@ interface.
 
 A reachability analysis proceeds even if the destination location
 is ambiguous. However, the result can include endpoints that you
-don&#39;t intend to test. When `null`, the `destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.destination.new](#fn-networkmanagementconnectivitytestdestinationnew) constructor.
+don&#39;t intend to test. When `null`, the `destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.destination.new](#fn-destinationnew) constructor.
   - `source` (`list[obj]`): Required. Source specification of the Connectivity Test.
 
 You can use a combination of source IP address, virtual machine
@@ -186,8 +186,8 @@ address or VPC network.
 
 A reachability analysis proceeds even if the source location is
 ambiguous. However, the test result may include endpoints that
-you don&#39;t intend to test. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.source.new](#fn-networkmanagementconnectivitytestsourcenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.timeouts.new](#fn-networkmanagementconnectivitytesttimeoutsnew) constructor.
+you don&#39;t intend to test. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.source.new](#fn-sourcenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_management_connectivity_test` resource into the root Terraform configuration.

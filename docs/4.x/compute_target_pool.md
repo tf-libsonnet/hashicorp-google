@@ -67,7 +67,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Where the target pool resides. Defaults to project region. When `null`, the `region` field will be omitted from the resulting object.
   - `session_affinity` (`string`): How to distribute load. Options are &#34;NONE&#34; (no affinity). &#34;CLIENT_IP&#34; (hash of the source/dest addresses / ports), and &#34;CLIENT_IP_PROTO&#34; also includes the protocol (default &#34;NONE&#34;). When `null`, the `session_affinity` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_pool.timeouts.new](#fn-computetargetpooltimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,7 +83,7 @@ newAttrs()
 `google.compute_target_pool.newAttrs` constructs a new object with attributes and blocks configured for the `compute_target_pool`
 Terraform resource.
 
-Unlike [google.compute_target_pool.new](#fn-computetargetpoolnew), this function will not inject the `resource`
+Unlike [google.compute_target_pool.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -100,7 +100,7 @@ injecting into a complete block.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Where the target pool resides. Defaults to project region. When `null`, the `region` field will be omitted from the resulting object.
   - `session_affinity` (`string`): How to distribute load. Options are &#34;NONE&#34; (no affinity). &#34;CLIENT_IP&#34; (hash of the source/dest addresses / ports), and &#34;CLIENT_IP_PROTO&#34; also includes the protocol (default &#34;NONE&#34;). When `null`, the `session_affinity` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_pool.timeouts.new](#fn-computetargetpooltimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_target_pool` resource into the root Terraform configuration.

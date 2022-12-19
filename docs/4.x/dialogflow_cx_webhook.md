@@ -74,9 +74,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;. When `null`, the `parent` field will be omitted from the resulting object.
   - `security_settings` (`string`): Name of the SecuritySettings reference for the agent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/securitySettings/&lt;Security Settings ID&gt;. When `null`, the `security_settings` field will be omitted from the resulting object.
   - `timeout` (`string`): Webhook execution timeout. When `null`, the `timeout` field will be omitted from the resulting object.
-  - `generic_web_service` (`list[obj]`): Configuration for a generic web service. When `null`, the `generic_web_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.generic_web_service.new](#fn-dialogflowcxwebhookgenericwebservicenew) constructor.
-  - `service_directory` (`list[obj]`): Configuration for a Service Directory service. When `null`, the `service_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.service_directory.new](#fn-dialogflowcxwebhookservicedirectorynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.timeouts.new](#fn-dialogflowcxwebhooktimeoutsnew) constructor.
+  - `generic_web_service` (`list[obj]`): Configuration for a generic web service. When `null`, the `generic_web_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.generic_web_service.new](#fn-generic_web_servicenew) constructor.
+  - `service_directory` (`list[obj]`): Configuration for a Service Directory service. When `null`, the `service_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.service_directory.new](#fn-service_directorynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,7 +92,7 @@ newAttrs()
 `google.dialogflow_cx_webhook.newAttrs` constructs a new object with attributes and blocks configured for the `dialogflow_cx_webhook`
 Terraform resource.
 
-Unlike [google.dialogflow_cx_webhook.new](#fn-dialogflowcxwebhooknew), this function will not inject the `resource`
+Unlike [google.dialogflow_cx_webhook.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -108,9 +108,9 @@ injecting into a complete block.
 Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;. When `null`, the `parent` field will be omitted from the resulting object.
   - `security_settings` (`string`): Name of the SecuritySettings reference for the agent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/securitySettings/&lt;Security Settings ID&gt;. When `null`, the `security_settings` field will be omitted from the resulting object.
   - `timeout` (`string`): Webhook execution timeout. When `null`, the `timeout` field will be omitted from the resulting object.
-  - `generic_web_service` (`list[obj]`): Configuration for a generic web service. When `null`, the `generic_web_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.generic_web_service.new](#fn-dialogflowcxwebhookgenericwebservicenew) constructor.
-  - `service_directory` (`list[obj]`): Configuration for a Service Directory service. When `null`, the `service_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.service_directory.new](#fn-dialogflowcxwebhookservicedirectorynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.timeouts.new](#fn-dialogflowcxwebhooktimeoutsnew) constructor.
+  - `generic_web_service` (`list[obj]`): Configuration for a generic web service. When `null`, the `generic_web_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.generic_web_service.new](#fn-generic_web_servicenew) constructor.
+  - `service_directory` (`list[obj]`): Configuration for a Service Directory service. When `null`, the `service_directory` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.service_directory.new](#fn-service_directorynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dialogflow_cx_webhook` resource into the root Terraform configuration.
@@ -381,7 +381,7 @@ Terraform sub block.
 
 **Args**:
   - `service` (`string`): The name of Service Directory service.
-  - `generic_web_service` (`list[obj]`): The name of Service Directory service. When `null`, the `generic_web_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.service_directory.generic_web_service.new](#fn-servicedirectorygenericwebservicenew) constructor.
+  - `generic_web_service` (`list[obj]`): The name of Service Directory service. When `null`, the `generic_web_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_webhook.service_directory.generic_web_service.new](#fn-service_directorygeneric_web_servicenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `service_directory` sub block.

@@ -69,7 +69,7 @@ Examples:
   To refer to all members of the Google Apps for Business domain
   example.com, the entity would be domain-example.com.
   - `role` (`string`): The access permission for the entity. Possible values: [&#34;OWNER&#34;, &#34;READER&#34;, &#34;WRITER&#34;] When `null`, the `role` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_access_control.timeouts.new](#fn-storagebucketaccesscontroltimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_access_control.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -85,7 +85,7 @@ newAttrs()
 `google.storage_bucket_access_control.newAttrs` constructs a new object with attributes and blocks configured for the `storage_bucket_access_control`
 Terraform resource.
 
-Unlike [google.storage_bucket_access_control.new](#fn-storagebucketaccesscontrolnew), this function will not inject the `resource`
+Unlike [google.storage_bucket_access_control.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -110,7 +110,7 @@ Examples:
   To refer to all members of the Google Apps for Business domain
   example.com, the entity would be domain-example.com.
   - `role` (`string`): The access permission for the entity. Possible values: [&#34;OWNER&#34;, &#34;READER&#34;, &#34;WRITER&#34;] When `null`, the `role` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_access_control.timeouts.new](#fn-storagebucketaccesscontroltimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_access_control.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_bucket_access_control` resource into the root Terraform configuration.

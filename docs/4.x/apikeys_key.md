@@ -71,8 +71,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `display_name` (`string`): Human-readable display name of this API key. Modifiable by user. When `null`, the `display_name` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the key. The name must be unique within the project, must conform with RFC-1034, is restricted to lower-cased letters, and has a maximum length of 63 characters. In another word, the name must match the regular expression: `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
-  - `restrictions` (`list[obj]`): Key restrictions. When `null`, the `restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.new](#fn-apikeyskeyrestrictionsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.timeouts.new](#fn-apikeyskeytimeoutsnew) constructor.
+  - `restrictions` (`list[obj]`): Key restrictions. When `null`, the `restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.new](#fn-restrictionsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,7 +88,7 @@ newAttrs()
 `google.apikeys_key.newAttrs` constructs a new object with attributes and blocks configured for the `apikeys_key`
 Terraform resource.
 
-Unlike [google.apikeys_key.new](#fn-apikeyskeynew), this function will not inject the `resource`
+Unlike [google.apikeys_key.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -99,8 +99,8 @@ injecting into a complete block.
   - `display_name` (`string`): Human-readable display name of this API key. Modifiable by user. When `null`, the `display_name` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the key. The name must be unique within the project, must conform with RFC-1034, is restricted to lower-cased letters, and has a maximum length of 63 characters. In another word, the name must match the regular expression: `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
-  - `restrictions` (`list[obj]`): Key restrictions. When `null`, the `restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.new](#fn-apikeyskeyrestrictionsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.timeouts.new](#fn-apikeyskeytimeoutsnew) constructor.
+  - `restrictions` (`list[obj]`): Key restrictions. When `null`, the `restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.new](#fn-restrictionsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `apikeys_key` resource into the root Terraform configuration.
@@ -244,11 +244,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `android_key_restrictions` (`list[obj]`): The Android apps that are allowed to use the key. When `null`, the `android_key_restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.android_key_restrictions.new](#fn-restrictionsandroidkeyrestrictionsnew) constructor.
-  - `api_targets` (`list[obj]`): A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed. When `null`, the `api_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.api_targets.new](#fn-restrictionsapitargetsnew) constructor.
-  - `browser_key_restrictions` (`list[obj]`): The HTTP referrers (websites) that are allowed to use the key. When `null`, the `browser_key_restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.browser_key_restrictions.new](#fn-restrictionsbrowserkeyrestrictionsnew) constructor.
-  - `ios_key_restrictions` (`list[obj]`): The iOS apps that are allowed to use the key. When `null`, the `ios_key_restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.ios_key_restrictions.new](#fn-restrictionsioskeyrestrictionsnew) constructor.
-  - `server_key_restrictions` (`list[obj]`): The IP addresses of callers that are allowed to use the key. When `null`, the `server_key_restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.server_key_restrictions.new](#fn-restrictionsserverkeyrestrictionsnew) constructor.
+  - `android_key_restrictions` (`list[obj]`): The Android apps that are allowed to use the key. When `null`, the `android_key_restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.android_key_restrictions.new](#fn-restrictionsandroid_key_restrictionsnew) constructor.
+  - `api_targets` (`list[obj]`): A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed. When `null`, the `api_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.api_targets.new](#fn-restrictionsapi_targetsnew) constructor.
+  - `browser_key_restrictions` (`list[obj]`): The HTTP referrers (websites) that are allowed to use the key. When `null`, the `browser_key_restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.browser_key_restrictions.new](#fn-restrictionsbrowser_key_restrictionsnew) constructor.
+  - `ios_key_restrictions` (`list[obj]`): The iOS apps that are allowed to use the key. When `null`, the `ios_key_restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.ios_key_restrictions.new](#fn-restrictionsios_key_restrictionsnew) constructor.
+  - `server_key_restrictions` (`list[obj]`): The IP addresses of callers that are allowed to use the key. When `null`, the `server_key_restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.server_key_restrictions.new](#fn-restrictionsserver_key_restrictionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `restrictions` sub block.
@@ -271,7 +271,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `allowed_applications` (`list[obj]`): A list of Android applications that are allowed to make API calls with this key. When `null`, the `allowed_applications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.android_key_restrictions.allowed_applications.new](#fn-androidkeyrestrictionsallowedapplicationsnew) constructor.
+  - `allowed_applications` (`list[obj]`): A list of Android applications that are allowed to make API calls with this key. When `null`, the `allowed_applications` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apikeys_key.restrictions.android_key_restrictions.allowed_applications.new](#fn-restrictionsrestrictionsallowed_applicationsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `android_key_restrictions` sub block.

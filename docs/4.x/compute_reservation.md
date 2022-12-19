@@ -83,9 +83,9 @@ character, which cannot be a dash.
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false. When `null`, the `specific_reservation_required` field will be omitted from the resulting object.
   - `zone` (`string`): The zone where the reservation is made.
-  - `share_settings` (`list[obj]`): The share setting for reservations. When `null`, the `share_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.share_settings.new](#fn-computereservationsharesettingsnew) constructor.
-  - `specific_reservation` (`list[obj]`): Reservation for instances with specific machine shapes. When `null`, the `specific_reservation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.new](#fn-computereservationspecificreservationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.timeouts.new](#fn-computereservationtimeoutsnew) constructor.
+  - `share_settings` (`list[obj]`): The share setting for reservations. When `null`, the `share_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.share_settings.new](#fn-share_settingsnew) constructor.
+  - `specific_reservation` (`list[obj]`): Reservation for instances with specific machine shapes. When `null`, the `specific_reservation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.new](#fn-specific_reservationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,7 +101,7 @@ newAttrs()
 `google.compute_reservation.newAttrs` constructs a new object with attributes and blocks configured for the `compute_reservation`
 Terraform resource.
 
-Unlike [google.compute_reservation.new](#fn-computereservationnew), this function will not inject the `resource`
+Unlike [google.compute_reservation.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -122,9 +122,9 @@ character, which cannot be a dash.
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false. When `null`, the `specific_reservation_required` field will be omitted from the resulting object.
   - `zone` (`string`): The zone where the reservation is made.
-  - `share_settings` (`list[obj]`): The share setting for reservations. When `null`, the `share_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.share_settings.new](#fn-computereservationsharesettingsnew) constructor.
-  - `specific_reservation` (`list[obj]`): Reservation for instances with specific machine shapes. When `null`, the `specific_reservation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.new](#fn-computereservationspecificreservationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.timeouts.new](#fn-computereservationtimeoutsnew) constructor.
+  - `share_settings` (`list[obj]`): The share setting for reservations. When `null`, the `share_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.share_settings.new](#fn-share_settingsnew) constructor.
+  - `specific_reservation` (`list[obj]`): Reservation for instances with specific machine shapes. When `null`, the `specific_reservation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.new](#fn-specific_reservationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_reservation` resource into the root Terraform configuration.
@@ -338,7 +338,7 @@ Terraform sub block.
 
 **Args**:
   - `share_type` (`string`): Type of sharing for this shared-reservation Possible values: [&#34;LOCAL&#34;, &#34;SPECIFIC_PROJECTS&#34;] When `null`, the `share_type` field will be omitted from the resulting object.
-  - `project_map` (`list[obj]`): A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS. When `null`, the `project_map` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.share_settings.project_map.new](#fn-sharesettingsprojectmapnew) constructor.
+  - `project_map` (`list[obj]`): A map of project number and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS. When `null`, the `project_map` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.share_settings.project_map.new](#fn-share_settingsproject_mapnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `share_settings` sub block.
@@ -385,7 +385,7 @@ Terraform sub block.
 
 **Args**:
   - `count` (`number`): The number of resources that are allocated.
-  - `instance_properties` (`list[obj]`): The instance properties for the reservation. When `null`, the `instance_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.instance_properties.new](#fn-specificreservationinstancepropertiesnew) constructor.
+  - `instance_properties` (`list[obj]`): The instance properties for the reservation. When `null`, the `instance_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.instance_properties.new](#fn-specific_reservationinstance_propertiesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `specific_reservation` sub block.
@@ -413,9 +413,9 @@ Terraform sub block.
 &#39;&#34;Intel Skylake&#34;&#39;. See
 the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
 for information on available CPU platforms. When `null`, the `min_cpu_platform` field will be omitted from the resulting object.
-  - `guest_accelerators` (`list[obj]`): Guest accelerator type and count. When `null`, the `guest_accelerators` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.instance_properties.guest_accelerators.new](#fn-instancepropertiesguestacceleratorsnew) constructor.
+  - `guest_accelerators` (`list[obj]`): Guest accelerator type and count. When `null`, the `guest_accelerators` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.instance_properties.guest_accelerators.new](#fn-specific_reservationspecific_reservationguest_acceleratorsnew) constructor.
   - `local_ssds` (`list[obj]`): The amount of local ssd to reserve with each instance. This
-reserves disks of type &#39;local-ssd&#39;. When `null`, the `local_ssds` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.instance_properties.local_ssds.new](#fn-instancepropertieslocalssdsnew) constructor.
+reserves disks of type &#39;local-ssd&#39;. When `null`, the `local_ssds` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_reservation.specific_reservation.instance_properties.local_ssds.new](#fn-specific_reservationspecific_reservationlocal_ssdsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `instance_properties` sub block.

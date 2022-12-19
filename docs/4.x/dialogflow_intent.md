@@ -87,7 +87,7 @@ Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;. When `null`
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
 * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
 filling prompt is forwarded to the webhook. Possible values: [&#34;WEBHOOK_STATE_ENABLED&#34;, &#34;WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING&#34;] When `null`, the `webhook_state` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_intent.timeouts.new](#fn-dialogflowintenttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_intent.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -103,7 +103,7 @@ newAttrs()
 `google.dialogflow_intent.newAttrs` constructs a new object with attributes and blocks configured for the `dialogflow_intent`
 Terraform resource.
 
-Unlike [google.dialogflow_intent.new](#fn-dialogflowintentnew), this function will not inject the `resource`
+Unlike [google.dialogflow_intent.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -137,7 +137,7 @@ Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;. When `null`
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
 * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
 filling prompt is forwarded to the webhook. Possible values: [&#34;WEBHOOK_STATE_ENABLED&#34;, &#34;WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING&#34;] When `null`, the `webhook_state` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_intent.timeouts.new](#fn-dialogflowintenttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_intent.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dialogflow_intent` resource into the root Terraform configuration.

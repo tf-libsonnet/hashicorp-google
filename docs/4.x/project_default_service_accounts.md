@@ -57,7 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `project` (`string`): The project ID where service accounts are created.
   - `restore_policy` (`string`): The action to be performed in the default service accounts on the resource destroy.
 				Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE. When `null`, the `restore_policy` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.project_default_service_accounts.timeouts.new](#fn-projectdefaultserviceaccountstimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.project_default_service_accounts.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -73,7 +73,7 @@ newAttrs()
 `google.project_default_service_accounts.newAttrs` constructs a new object with attributes and blocks configured for the `project_default_service_accounts`
 Terraform resource.
 
-Unlike [google.project_default_service_accounts.new](#fn-projectdefaultserviceaccountsnew), this function will not inject the `resource`
+Unlike [google.project_default_service_accounts.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -86,7 +86,7 @@ injecting into a complete block.
   - `project` (`string`): The project ID where service accounts are created.
   - `restore_policy` (`string`): The action to be performed in the default service accounts on the resource destroy.
 				Valid values are NONE, REVERT and REVERT_AND_IGNORE_FAILURE. It is applied for any action but in the DEPRIVILEGE. When `null`, the `restore_policy` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.project_default_service_accounts.timeouts.new](#fn-projectdefaultserviceaccountstimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.project_default_service_accounts.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `project_default_service_accounts` resource into the root Terraform configuration.

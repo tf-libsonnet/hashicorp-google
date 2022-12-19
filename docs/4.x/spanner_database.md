@@ -77,8 +77,8 @@ and 7 days, and can be specified in days, hours, minutes, or seconds. For exampl
 the values 1d, 24h, 1440m, and 86400s are equivalent. Default value is 1h.
 If this property is used, you must avoid adding new DDL statements to &#39;ddl&#39; that
 update the database&#39;s version_retention_period. When `null`, the `version_retention_period` field will be omitted from the resulting object.
-  - `encryption_config` (`list[obj]`): Encryption configuration for the database When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_database.encryption_config.new](#fn-spannerdatabaseencryptionconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_database.timeouts.new](#fn-spannerdatabasetimeoutsnew) constructor.
+  - `encryption_config` (`list[obj]`): Encryption configuration for the database When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_database.encryption_config.new](#fn-encryption_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_database.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,7 +94,7 @@ newAttrs()
 `google.spanner_database.newAttrs` constructs a new object with attributes and blocks configured for the `spanner_database`
 Terraform resource.
 
-Unlike [google.spanner_database.new](#fn-spannerdatabasenew), this function will not inject the `resource`
+Unlike [google.spanner_database.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -119,8 +119,8 @@ and 7 days, and can be specified in days, hours, minutes, or seconds. For exampl
 the values 1d, 24h, 1440m, and 86400s are equivalent. Default value is 1h.
 If this property is used, you must avoid adding new DDL statements to &#39;ddl&#39; that
 update the database&#39;s version_retention_period. When `null`, the `version_retention_period` field will be omitted from the resulting object.
-  - `encryption_config` (`list[obj]`): Encryption configuration for the database When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_database.encryption_config.new](#fn-spannerdatabaseencryptionconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_database.timeouts.new](#fn-spannerdatabasetimeoutsnew) constructor.
+  - `encryption_config` (`list[obj]`): Encryption configuration for the database When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_database.encryption_config.new](#fn-encryption_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_database.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spanner_database` resource into the root Terraform configuration.

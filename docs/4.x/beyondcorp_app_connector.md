@@ -65,8 +65,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): ID of the AppConnector.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the AppConnector. When `null`, the `region` field will be omitted from the resulting object.
-  - `principal_info` (`list[obj]`): Principal information about the Identity of the AppConnector. When `null`, the `principal_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_connector.principal_info.new](#fn-beyondcorpappconnectorprincipalinfonew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_connector.timeouts.new](#fn-beyondcorpappconnectortimeoutsnew) constructor.
+  - `principal_info` (`list[obj]`): Principal information about the Identity of the AppConnector. When `null`, the `principal_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_connector.principal_info.new](#fn-principal_infonew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_connector.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -82,7 +82,7 @@ newAttrs()
 `google.beyondcorp_app_connector.newAttrs` constructs a new object with attributes and blocks configured for the `beyondcorp_app_connector`
 Terraform resource.
 
-Unlike [google.beyondcorp_app_connector.new](#fn-beyondcorpappconnectornew), this function will not inject the `resource`
+Unlike [google.beyondcorp_app_connector.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -95,8 +95,8 @@ injecting into a complete block.
   - `name` (`string`): ID of the AppConnector.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the AppConnector. When `null`, the `region` field will be omitted from the resulting object.
-  - `principal_info` (`list[obj]`): Principal information about the Identity of the AppConnector. When `null`, the `principal_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_connector.principal_info.new](#fn-beyondcorpappconnectorprincipalinfonew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_connector.timeouts.new](#fn-beyondcorpappconnectortimeoutsnew) constructor.
+  - `principal_info` (`list[obj]`): Principal information about the Identity of the AppConnector. When `null`, the `principal_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_connector.principal_info.new](#fn-principal_infonew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_connector.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `beyondcorp_app_connector` resource into the root Terraform configuration.
@@ -272,7 +272,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `service_account` (`list[obj]`): ServiceAccount represents a GCP service account. When `null`, the `service_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_connector.principal_info.service_account.new](#fn-principalinfoserviceaccountnew) constructor.
+  - `service_account` (`list[obj]`): ServiceAccount represents a GCP service account. When `null`, the `service_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_connector.principal_info.service_account.new](#fn-principal_infoservice_accountnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `principal_info` sub block.

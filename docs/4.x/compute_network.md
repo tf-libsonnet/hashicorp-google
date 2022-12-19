@@ -90,7 +90,7 @@ network&#39;s cloud routers will only advertise routes with subnetworks
 of this network in the same region as the router. If set to &#39;GLOBAL&#39;,
 this network&#39;s cloud routers will advertise routes with all
 subnetworks of this network, across regions. Possible values: [&#34;REGIONAL&#34;, &#34;GLOBAL&#34;] When `null`, the `routing_mode` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network.timeouts.new](#fn-computenetworktimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -106,7 +106,7 @@ newAttrs()
 `google.compute_network.newAttrs` constructs a new object with attributes and blocks configured for the `compute_network`
 Terraform resource.
 
-Unlike [google.compute_network.new](#fn-computenetworknew), this function will not inject the `resource`
+Unlike [google.compute_network.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -146,7 +146,7 @@ network&#39;s cloud routers will only advertise routes with subnetworks
 of this network in the same region as the router. If set to &#39;GLOBAL&#39;,
 this network&#39;s cloud routers will advertise routes with all
 subnetworks of this network, across regions. Possible values: [&#34;REGIONAL&#34;, &#34;GLOBAL&#34;] When `null`, the `routing_mode` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network.timeouts.new](#fn-computenetworktimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_network` resource into the root Terraform configuration.

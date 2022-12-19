@@ -74,9 +74,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `size` (`number`): The total number of nodes in the node group. One of &#39;initial_size&#39; or &#39;size&#39; must be specified. When `null`, the `size` field will be omitted from the resulting object.
   - `zone` (`string`): Zone where this node group is located When `null`, the `zone` field will be omitted from the resulting object.
   - `autoscaling_policy` (`list[obj]`): If you use sole-tenant nodes for your workloads, you can use the node
-group autoscaler to automatically manage the sizes of your node groups. When `null`, the `autoscaling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.autoscaling_policy.new](#fn-computenodegroupautoscalingpolicynew) constructor.
-  - `maintenance_window` (`list[obj]`): contains properties for the timeframe of maintenance When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.maintenance_window.new](#fn-computenodegroupmaintenancewindownew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.timeouts.new](#fn-computenodegrouptimeoutsnew) constructor.
+group autoscaler to automatically manage the sizes of your node groups. When `null`, the `autoscaling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.autoscaling_policy.new](#fn-autoscaling_policynew) constructor.
+  - `maintenance_window` (`list[obj]`): contains properties for the timeframe of maintenance When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.maintenance_window.new](#fn-maintenance_windownew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,7 +92,7 @@ newAttrs()
 `google.compute_node_group.newAttrs` constructs a new object with attributes and blocks configured for the `compute_node_group`
 Terraform resource.
 
-Unlike [google.compute_node_group.new](#fn-computenodegroupnew), this function will not inject the `resource`
+Unlike [google.compute_node_group.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -109,9 +109,9 @@ injecting into a complete block.
   - `size` (`number`): The total number of nodes in the node group. One of &#39;initial_size&#39; or &#39;size&#39; must be specified. When `null`, the `size` field will be omitted from the resulting object.
   - `zone` (`string`): Zone where this node group is located When `null`, the `zone` field will be omitted from the resulting object.
   - `autoscaling_policy` (`list[obj]`): If you use sole-tenant nodes for your workloads, you can use the node
-group autoscaler to automatically manage the sizes of your node groups. When `null`, the `autoscaling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.autoscaling_policy.new](#fn-computenodegroupautoscalingpolicynew) constructor.
-  - `maintenance_window` (`list[obj]`): contains properties for the timeframe of maintenance When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.maintenance_window.new](#fn-computenodegroupmaintenancewindownew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.timeouts.new](#fn-computenodegrouptimeoutsnew) constructor.
+group autoscaler to automatically manage the sizes of your node groups. When `null`, the `autoscaling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.autoscaling_policy.new](#fn-autoscaling_policynew) constructor.
+  - `maintenance_window` (`list[obj]`): contains properties for the timeframe of maintenance When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.maintenance_window.new](#fn-maintenance_windownew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_node_group` resource into the root Terraform configuration.

@@ -89,12 +89,12 @@ a Google API or a PSC Producer Service Attachment. When `null`, the `psc_target_
   - `subnetwork` (`string`): This field is only used for PSC.
 Optional URL of the subnetwork to which all network endpoints in the NEG belong. When `null`, the `subnetwork` field will be omitted from the resulting object.
   - `app_engine` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `app_engine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.app_engine.new](#fn-computeregionnetworkendpointgroupappenginenew) constructor.
+Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `app_engine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.app_engine.new](#fn-app_enginenew) constructor.
   - `cloud_function` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_function` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_function.new](#fn-computeregionnetworkendpointgroupcloudfunctionnew) constructor.
+Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_function` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_function.new](#fn-cloud_functionnew) constructor.
   - `cloud_run` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_run` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_run.new](#fn-computeregionnetworkendpointgroupcloudrunnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.timeouts.new](#fn-computeregionnetworkendpointgrouptimeoutsnew) constructor.
+Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_run` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_run.new](#fn-cloud_runnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -110,7 +110,7 @@ newAttrs()
 `google.compute_region_network_endpoint_group.newAttrs` constructs a new object with attributes and blocks configured for the `compute_region_network_endpoint_group`
 Terraform resource.
 
-Unlike [google.compute_region_network_endpoint_group.new](#fn-computeregionnetworkendpointgroupnew), this function will not inject the `resource`
+Unlike [google.compute_region_network_endpoint_group.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -138,12 +138,12 @@ a Google API or a PSC Producer Service Attachment. When `null`, the `psc_target_
   - `subnetwork` (`string`): This field is only used for PSC.
 Optional URL of the subnetwork to which all network endpoints in the NEG belong. When `null`, the `subnetwork` field will be omitted from the resulting object.
   - `app_engine` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `app_engine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.app_engine.new](#fn-computeregionnetworkendpointgroupappenginenew) constructor.
+Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `app_engine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.app_engine.new](#fn-app_enginenew) constructor.
   - `cloud_function` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_function` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_function.new](#fn-computeregionnetworkendpointgroupcloudfunctionnew) constructor.
+Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_function` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_function.new](#fn-cloud_functionnew) constructor.
   - `cloud_run` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
-Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_run` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_run.new](#fn-computeregionnetworkendpointgroupcloudrunnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.timeouts.new](#fn-computeregionnetworkendpointgrouptimeoutsnew) constructor.
+Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_run` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_run.new](#fn-cloud_runnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_region_network_endpoint_group` resource into the root Terraform configuration.

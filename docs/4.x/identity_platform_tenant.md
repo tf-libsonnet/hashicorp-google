@@ -61,7 +61,7 @@ are not able to manage its users. When `null`, the `disable_auth` field will be 
   - `display_name` (`string`): Human friendly display name of the tenant.
   - `enable_email_link_signin` (`bool`): Whether to enable email link user authentication. When `null`, the `enable_email_link_signin` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_tenant.timeouts.new](#fn-identityplatformtenanttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_tenant.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -77,7 +77,7 @@ newAttrs()
 `google.identity_platform_tenant.newAttrs` constructs a new object with attributes and blocks configured for the `identity_platform_tenant`
 Terraform resource.
 
-Unlike [google.identity_platform_tenant.new](#fn-identityplatformtenantnew), this function will not inject the `resource`
+Unlike [google.identity_platform_tenant.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -92,7 +92,7 @@ are not able to manage its users. When `null`, the `disable_auth` field will be 
   - `display_name` (`string`): Human friendly display name of the tenant.
   - `enable_email_link_signin` (`bool`): Whether to enable email link user authentication. When `null`, the `enable_email_link_signin` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_tenant.timeouts.new](#fn-identityplatformtenanttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_tenant.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `identity_platform_tenant` resource into the root Terraform configuration.

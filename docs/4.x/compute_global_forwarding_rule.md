@@ -107,8 +107,8 @@ For each `metadataFilter` in this list, if its `filterMatchCriteria` is set to M
 
 `metadataFilters` specified here will be applifed before those specified in the `UrlMap` that this `ForwardingRule` references.
 
-`metadataFilters` only applies to Loadbalancers that have their loadBalancingScheme set to `INTERNAL_SELF_MANAGED`. When `null`, the `metadata_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.metadata_filters.new](#fn-computeglobalforwardingrulemetadatafiltersnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.timeouts.new](#fn-computeglobalforwardingruletimeoutsnew) constructor.
+`metadataFilters` only applies to Loadbalancers that have their loadBalancingScheme set to `INTERNAL_SELF_MANAGED`. When `null`, the `metadata_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.metadata_filters.new](#fn-metadata_filtersnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -124,7 +124,7 @@ newAttrs()
 `google.compute_global_forwarding_rule.newAttrs` constructs a new object with attributes and blocks configured for the `compute_global_forwarding_rule`
 Terraform resource.
 
-Unlike [google.compute_global_forwarding_rule.new](#fn-computeglobalforwardingrulenew), this function will not inject the `resource`
+Unlike [google.compute_global_forwarding_rule.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -173,8 +173,8 @@ For each `metadataFilter` in this list, if its `filterMatchCriteria` is set to M
 
 `metadataFilters` specified here will be applifed before those specified in the `UrlMap` that this `ForwardingRule` references.
 
-`metadataFilters` only applies to Loadbalancers that have their loadBalancingScheme set to `INTERNAL_SELF_MANAGED`. When `null`, the `metadata_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.metadata_filters.new](#fn-computeglobalforwardingrulemetadatafiltersnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.timeouts.new](#fn-computeglobalforwardingruletimeoutsnew) constructor.
+`metadataFilters` only applies to Loadbalancers that have their loadBalancingScheme set to `INTERNAL_SELF_MANAGED`. When `null`, the `metadata_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.metadata_filters.new](#fn-metadata_filtersnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_global_forwarding_rule` resource into the root Terraform configuration.
@@ -454,7 +454,7 @@ Supported values are:
 *   MATCH_ALL: All `filterLabels` must have matching labels in the provided metadata. Possible values: NOT_SET, MATCH_ALL, MATCH_ANY
   - `filter_labels` (`list[obj]`): The list of label value pairs that must match labels in the provided metadata based on `filterMatchCriteria`
 
-This list must not be empty and can have at the most 64 entries. When `null`, the `filter_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.metadata_filters.filter_labels.new](#fn-metadatafiltersfilterlabelsnew) constructor.
+This list must not be empty and can have at the most 64 entries. When `null`, the `filter_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.metadata_filters.filter_labels.new](#fn-metadata_filtersfilter_labelsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metadata_filters` sub block.

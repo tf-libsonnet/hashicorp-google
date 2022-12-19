@@ -65,8 +65,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `network` (`string`): The URL of the network the instance group is in. If this is different from the network where the instances are in, the creation fails. Defaults to the network where the instances are in (if neither network nor instances is specified, this field will be blank). When `null`, the `network` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `zone` (`string`): The zone that this instance group should be created in. When `null`, the `zone` field will be omitted from the resulting object.
-  - `named_port` (`list[obj]`): The named port configuration. When `null`, the `named_port` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group.named_port.new](#fn-computeinstancegroupnamedportnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group.timeouts.new](#fn-computeinstancegrouptimeoutsnew) constructor.
+  - `named_port` (`list[obj]`): The named port configuration. When `null`, the `named_port` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group.named_port.new](#fn-named_portnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -82,7 +82,7 @@ newAttrs()
 `google.compute_instance_group.newAttrs` constructs a new object with attributes and blocks configured for the `compute_instance_group`
 Terraform resource.
 
-Unlike [google.compute_instance_group.new](#fn-computeinstancegroupnew), this function will not inject the `resource`
+Unlike [google.compute_instance_group.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -96,8 +96,8 @@ injecting into a complete block.
   - `network` (`string`): The URL of the network the instance group is in. If this is different from the network where the instances are in, the creation fails. Defaults to the network where the instances are in (if neither network nor instances is specified, this field will be blank). When `null`, the `network` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `zone` (`string`): The zone that this instance group should be created in. When `null`, the `zone` field will be omitted from the resulting object.
-  - `named_port` (`list[obj]`): The named port configuration. When `null`, the `named_port` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group.named_port.new](#fn-computeinstancegroupnamedportnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group.timeouts.new](#fn-computeinstancegrouptimeoutsnew) constructor.
+  - `named_port` (`list[obj]`): The named port configuration. When `null`, the `named_port` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group.named_port.new](#fn-named_portnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_instance_group` resource into the root Terraform configuration.

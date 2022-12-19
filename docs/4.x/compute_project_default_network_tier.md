@@ -53,7 +53,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `network_tier` (`string`): The default network tier to be configured for the project. This field can take the following values: PREMIUM or STANDARD.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_project_default_network_tier.timeouts.new](#fn-computeprojectdefaultnetworktiertimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_project_default_network_tier.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -69,7 +69,7 @@ newAttrs()
 `google.compute_project_default_network_tier.newAttrs` constructs a new object with attributes and blocks configured for the `compute_project_default_network_tier`
 Terraform resource.
 
-Unlike [google.compute_project_default_network_tier.new](#fn-computeprojectdefaultnetworktiernew), this function will not inject the `resource`
+Unlike [google.compute_project_default_network_tier.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -79,7 +79,7 @@ injecting into a complete block.
 **Args**:
   - `network_tier` (`string`): The default network tier to be configured for the project. This field can take the following values: PREMIUM or STANDARD.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_project_default_network_tier.timeouts.new](#fn-computeprojectdefaultnetworktiertimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_project_default_network_tier.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_project_default_network_tier` resource into the root Terraform configuration.

@@ -63,8 +63,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `metadata_schema_uri` (`string`): Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the dataset. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
-  - `encryption_spec` (`list[obj]`): Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key. When `null`, the `encryption_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_dataset.encryption_spec.new](#fn-vertexaidatasetencryptionspecnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_dataset.timeouts.new](#fn-vertexaidatasettimeoutsnew) constructor.
+  - `encryption_spec` (`list[obj]`): Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key. When `null`, the `encryption_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_dataset.encryption_spec.new](#fn-encryption_specnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_dataset.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `google.vertex_ai_dataset.newAttrs` constructs a new object with attributes and blocks configured for the `vertex_ai_dataset`
 Terraform resource.
 
-Unlike [google.vertex_ai_dataset.new](#fn-vertexaidatasetnew), this function will not inject the `resource`
+Unlike [google.vertex_ai_dataset.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -93,8 +93,8 @@ injecting into a complete block.
   - `metadata_schema_uri` (`string`): Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the dataset. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
-  - `encryption_spec` (`list[obj]`): Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key. When `null`, the `encryption_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_dataset.encryption_spec.new](#fn-vertexaidatasetencryptionspecnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_dataset.timeouts.new](#fn-vertexaidatasettimeoutsnew) constructor.
+  - `encryption_spec` (`list[obj]`): Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key. When `null`, the `encryption_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_dataset.encryption_spec.new](#fn-encryption_specnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_dataset.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vertex_ai_dataset` resource into the root Terraform configuration.

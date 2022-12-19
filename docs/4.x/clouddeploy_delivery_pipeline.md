@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Name of the `DeliveryPipeline`. Format is [a-z][a-z0-9\-]{0,62}.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `suspended` (`bool`): When suspended, no new releases or rollouts can be created, but in-progress ones will complete. When `null`, the `suspended` field will be omitted from the resulting object.
-  - `serial_pipeline` (`list[obj]`): SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`. When `null`, the `serial_pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.new](#fn-clouddeploydeliverypipelineserialpipelinenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.timeouts.new](#fn-clouddeploydeliverypipelinetimeoutsnew) constructor.
+  - `serial_pipeline` (`list[obj]`): SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`. When `null`, the `serial_pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.new](#fn-serial_pipelinenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `google.clouddeploy_delivery_pipeline.newAttrs` constructs a new object with attributes and blocks configured for the `clouddeploy_delivery_pipeline`
 Terraform resource.
 
-Unlike [google.clouddeploy_delivery_pipeline.new](#fn-clouddeploydeliverypipelinenew), this function will not inject the `resource`
+Unlike [google.clouddeploy_delivery_pipeline.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -101,8 +101,8 @@ injecting into a complete block.
   - `name` (`string`): Name of the `DeliveryPipeline`. Format is [a-z][a-z0-9\-]{0,62}.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `suspended` (`bool`): When suspended, no new releases or rollouts can be created, but in-progress ones will complete. When `null`, the `suspended` field will be omitted from the resulting object.
-  - `serial_pipeline` (`list[obj]`): SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`. When `null`, the `serial_pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.new](#fn-clouddeploydeliverypipelineserialpipelinenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.timeouts.new](#fn-clouddeploydeliverypipelinetimeoutsnew) constructor.
+  - `serial_pipeline` (`list[obj]`): SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`. When `null`, the `serial_pipeline` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.new](#fn-serial_pipelinenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `clouddeploy_delivery_pipeline` resource into the root Terraform configuration.
@@ -310,7 +310,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `stages` (`list[obj]`): Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow. When `null`, the `stages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.new](#fn-serialpipelinestagesnew) constructor.
+  - `stages` (`list[obj]`): Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow. When `null`, the `stages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.new](#fn-serial_pipelinestagesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `serial_pipeline` sub block.

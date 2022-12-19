@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `mode` (`string`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. If multiple policies are set, you should choose between UNION OR INTERSECTION. When `null`, the `mode` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `table` (`string`): The name of the table.
-  - `max_age` (`list[obj]`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all cells older than the given age. When `null`, the `max_age` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.max_age.new](#fn-bigtablegcpolicymaxagenew) constructor.
-  - `max_version` (`list[obj]`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all versions of a cell except for the most recent. When `null`, the `max_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.max_version.new](#fn-bigtablegcpolicymaxversionnew) constructor.
+  - `max_age` (`list[obj]`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all cells older than the given age. When `null`, the `max_age` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.max_age.new](#fn-max_agenew) constructor.
+  - `max_version` (`list[obj]`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all versions of a cell except for the most recent. When `null`, the `max_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.max_version.new](#fn-max_versionnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `google.bigtable_gc_policy.newAttrs` constructs a new object with attributes and blocks configured for the `bigtable_gc_policy`
 Terraform resource.
 
-Unlike [google.bigtable_gc_policy.new](#fn-bigtablegcpolicynew), this function will not inject the `resource`
+Unlike [google.bigtable_gc_policy.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -103,8 +103,8 @@ injecting into a complete block.
   - `mode` (`string`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. If multiple policies are set, you should choose between UNION OR INTERSECTION. When `null`, the `mode` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `table` (`string`): The name of the table.
-  - `max_age` (`list[obj]`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all cells older than the given age. When `null`, the `max_age` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.max_age.new](#fn-bigtablegcpolicymaxagenew) constructor.
-  - `max_version` (`list[obj]`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all versions of a cell except for the most recent. When `null`, the `max_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.max_version.new](#fn-bigtablegcpolicymaxversionnew) constructor.
+  - `max_age` (`list[obj]`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all cells older than the given age. When `null`, the `max_age` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.max_age.new](#fn-max_agenew) constructor.
+  - `max_version` (`list[obj]`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all versions of a cell except for the most recent. When `null`, the `max_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.max_version.new](#fn-max_versionnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigtable_gc_policy` resource into the root Terraform configuration.

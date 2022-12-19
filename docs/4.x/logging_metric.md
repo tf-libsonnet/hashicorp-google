@@ -93,9 +93,9 @@ the value is to be extracted. 2. regex - A regular expression using the Google R
 log entry field. The value of the field is converted to a string before applying the regex. It is an
 error to specify a regex that does not include exactly one capture group. When `null`, the `value_extractor` field will be omitted from the resulting object.
   - `bucket_options` (`list[obj]`): The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
-describes the bucket boundaries used to create a histogram of the extracted values. When `null`, the `bucket_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.new](#fn-loggingmetricbucketoptionsnew) constructor.
-  - `metric_descriptor` (`list[obj]`): The metric descriptor associated with the logs-based metric. When `null`, the `metric_descriptor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.new](#fn-loggingmetricmetricdescriptornew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.timeouts.new](#fn-loggingmetrictimeoutsnew) constructor.
+describes the bucket boundaries used to create a histogram of the extracted values. When `null`, the `bucket_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.new](#fn-bucket_optionsnew) constructor.
+  - `metric_descriptor` (`list[obj]`): The metric descriptor associated with the logs-based metric. When `null`, the `metric_descriptor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.new](#fn-metric_descriptornew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -111,7 +111,7 @@ newAttrs()
 `google.logging_metric.newAttrs` constructs a new object with attributes and blocks configured for the `logging_metric`
 Terraform resource.
 
-Unlike [google.logging_metric.new](#fn-loggingmetricnew), this function will not inject the `resource`
+Unlike [google.logging_metric.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -141,9 +141,9 @@ the value is to be extracted. 2. regex - A regular expression using the Google R
 log entry field. The value of the field is converted to a string before applying the regex. It is an
 error to specify a regex that does not include exactly one capture group. When `null`, the `value_extractor` field will be omitted from the resulting object.
   - `bucket_options` (`list[obj]`): The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
-describes the bucket boundaries used to create a histogram of the extracted values. When `null`, the `bucket_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.new](#fn-loggingmetricbucketoptionsnew) constructor.
-  - `metric_descriptor` (`list[obj]`): The metric descriptor associated with the logs-based metric. When `null`, the `metric_descriptor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.new](#fn-loggingmetricmetricdescriptornew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.timeouts.new](#fn-loggingmetrictimeoutsnew) constructor.
+describes the bucket boundaries used to create a histogram of the extracted values. When `null`, the `bucket_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.new](#fn-bucket_optionsnew) constructor.
+  - `metric_descriptor` (`list[obj]`): The metric descriptor associated with the logs-based metric. When `null`, the `metric_descriptor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.new](#fn-metric_descriptornew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logging_metric` resource into the root Terraform configuration.
@@ -372,11 +372,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `explicit_buckets` (`list[obj]`): Specifies a set of buckets with arbitrary widths. When `null`, the `explicit_buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.explicit_buckets.new](#fn-bucketoptionsexplicitbucketsnew) constructor.
+  - `explicit_buckets` (`list[obj]`): Specifies a set of buckets with arbitrary widths. When `null`, the `explicit_buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.explicit_buckets.new](#fn-bucket_optionsexplicit_bucketsnew) constructor.
   - `exponential_buckets` (`list[obj]`): Specifies an exponential sequence of buckets that have a width that is proportional to the value of
-the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket. When `null`, the `exponential_buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.exponential_buckets.new](#fn-bucketoptionsexponentialbucketsnew) constructor.
+the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket. When `null`, the `exponential_buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.exponential_buckets.new](#fn-bucket_optionsexponential_bucketsnew) constructor.
   - `linear_buckets` (`list[obj]`): Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
-Each bucket represents a constant absolute uncertainty on the specific value in the bucket. When `null`, the `linear_buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.linear_buckets.new](#fn-bucketoptionslinearbucketsnew) constructor.
+Each bucket represents a constant absolute uncertainty on the specific value in the bucket. When `null`, the `linear_buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.linear_buckets.new](#fn-bucket_optionslinear_bucketsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `bucket_options` sub block.
@@ -487,7 +487,7 @@ For counter metrics, set this to INT64. Possible values: [&#34;BOOL&#34;, &#34;I
   - `labels` (`list[obj]`): The set of labels that can be used to describe a specific instance of this metric type. For
 example, the appengine.googleapis.com/http/server/response_latencies metric type has a label
 for the HTTP response code, response_code, so you can look at latencies for successful responses
-or just for responses that failed. When `null`, the `labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.labels.new](#fn-metricdescriptorlabelsnew) constructor.
+or just for responses that failed. When `null`, the `labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.labels.new](#fn-metric_descriptorlabelsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metric_descriptor` sub block.

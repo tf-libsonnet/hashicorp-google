@@ -119,11 +119,11 @@ Defaults to 1200s if not set. When `null`, the `tcp_established_idle_timeout_sec
   - `tcp_transitory_idle_timeout_sec` (`number`): Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set. When `null`, the `tcp_transitory_idle_timeout_sec` field will be omitted from the resulting object.
   - `udp_idle_timeout_sec` (`number`): Timeout (in seconds) for UDP connections. Defaults to 30s if not set. When `null`, the `udp_idle_timeout_sec` field will be omitted from the resulting object.
-  - `log_config` (`list[obj]`): Configuration for logging on NAT When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.log_config.new](#fn-computerouternatlogconfignew) constructor.
-  - `rules` (`list[obj]`): A list of rules associated with this NAT. When `null`, the `rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.rules.new](#fn-computerouternatrulesnew) constructor.
+  - `log_config` (`list[obj]`): Configuration for logging on NAT When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.log_config.new](#fn-log_confignew) constructor.
+  - `rules` (`list[obj]`): A list of rules associated with this NAT. When `null`, the `rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.rules.new](#fn-rulesnew) constructor.
   - `subnetwork` (`list[obj]`): One or more subnetwork NAT configurations. Only used if
-&#39;source_subnetwork_ip_ranges_to_nat&#39; is set to &#39;LIST_OF_SUBNETWORKS&#39; When `null`, the `subnetwork` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.subnetwork.new](#fn-computerouternatsubnetworknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.timeouts.new](#fn-computerouternattimeoutsnew) constructor.
+&#39;source_subnetwork_ip_ranges_to_nat&#39; is set to &#39;LIST_OF_SUBNETWORKS&#39; When `null`, the `subnetwork` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.subnetwork.new](#fn-subnetworknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -139,7 +139,7 @@ newAttrs()
 `google.compute_router_nat.newAttrs` constructs a new object with attributes and blocks configured for the `compute_router_nat`
 Terraform resource.
 
-Unlike [google.compute_router_nat.new](#fn-computerouternatnew), this function will not inject the `resource`
+Unlike [google.compute_router_nat.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -187,11 +187,11 @@ Defaults to 1200s if not set. When `null`, the `tcp_established_idle_timeout_sec
   - `tcp_transitory_idle_timeout_sec` (`number`): Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set. When `null`, the `tcp_transitory_idle_timeout_sec` field will be omitted from the resulting object.
   - `udp_idle_timeout_sec` (`number`): Timeout (in seconds) for UDP connections. Defaults to 30s if not set. When `null`, the `udp_idle_timeout_sec` field will be omitted from the resulting object.
-  - `log_config` (`list[obj]`): Configuration for logging on NAT When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.log_config.new](#fn-computerouternatlogconfignew) constructor.
-  - `rules` (`list[obj]`): A list of rules associated with this NAT. When `null`, the `rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.rules.new](#fn-computerouternatrulesnew) constructor.
+  - `log_config` (`list[obj]`): Configuration for logging on NAT When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.log_config.new](#fn-log_confignew) constructor.
+  - `rules` (`list[obj]`): A list of rules associated with this NAT. When `null`, the `rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.rules.new](#fn-rulesnew) constructor.
   - `subnetwork` (`list[obj]`): One or more subnetwork NAT configurations. Only used if
-&#39;source_subnetwork_ip_ranges_to_nat&#39; is set to &#39;LIST_OF_SUBNETWORKS&#39; When `null`, the `subnetwork` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.subnetwork.new](#fn-computerouternatsubnetworknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.timeouts.new](#fn-computerouternattimeoutsnew) constructor.
+&#39;source_subnetwork_ip_ranges_to_nat&#39; is set to &#39;LIST_OF_SUBNETWORKS&#39; When `null`, the `subnetwork` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.subnetwork.new](#fn-subnetworknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_nat.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_router_nat` resource into the root Terraform configuration.

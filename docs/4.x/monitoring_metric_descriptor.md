@@ -92,9 +92,9 @@ The supported units are a subset of The Unified Code for Units of Measure standa
 More info can be found in the API documentation
 (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors). When `null`, the `unit` field will be omitted from the resulting object.
   - `value_type` (`string`): Whether the measurement is an integer, a floating-point number, etc. Some combinations of metricKind and valueType might not be supported. Possible values: [&#34;BOOL&#34;, &#34;INT64&#34;, &#34;DOUBLE&#34;, &#34;STRING&#34;, &#34;DISTRIBUTION&#34;]
-  - `labels` (`list[obj]`): The set of labels that can be used to describe a specific instance of this metric type. In order to delete a label, the entire resource must be deleted, then created with the desired labels. When `null`, the `labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_metric_descriptor.labels.new](#fn-monitoringmetricdescriptorlabelsnew) constructor.
-  - `metadata` (`list[obj]`): Metadata which can be used to guide usage of the metric. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_metric_descriptor.metadata.new](#fn-monitoringmetricdescriptormetadatanew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_metric_descriptor.timeouts.new](#fn-monitoringmetricdescriptortimeoutsnew) constructor.
+  - `labels` (`list[obj]`): The set of labels that can be used to describe a specific instance of this metric type. In order to delete a label, the entire resource must be deleted, then created with the desired labels. When `null`, the `labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_metric_descriptor.labels.new](#fn-labelsnew) constructor.
+  - `metadata` (`list[obj]`): Metadata which can be used to guide usage of the metric. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_metric_descriptor.metadata.new](#fn-metadatanew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_metric_descriptor.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -110,7 +110,7 @@ newAttrs()
 `google.monitoring_metric_descriptor.newAttrs` constructs a new object with attributes and blocks configured for the `monitoring_metric_descriptor`
 Terraform resource.
 
-Unlike [google.monitoring_metric_descriptor.new](#fn-monitoringmetricdescriptornew), this function will not inject the `resource`
+Unlike [google.monitoring_metric_descriptor.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -145,9 +145,9 @@ The supported units are a subset of The Unified Code for Units of Measure standa
 More info can be found in the API documentation
 (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.metricDescriptors). When `null`, the `unit` field will be omitted from the resulting object.
   - `value_type` (`string`): Whether the measurement is an integer, a floating-point number, etc. Some combinations of metricKind and valueType might not be supported. Possible values: [&#34;BOOL&#34;, &#34;INT64&#34;, &#34;DOUBLE&#34;, &#34;STRING&#34;, &#34;DISTRIBUTION&#34;]
-  - `labels` (`list[obj]`): The set of labels that can be used to describe a specific instance of this metric type. In order to delete a label, the entire resource must be deleted, then created with the desired labels. When `null`, the `labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_metric_descriptor.labels.new](#fn-monitoringmetricdescriptorlabelsnew) constructor.
-  - `metadata` (`list[obj]`): Metadata which can be used to guide usage of the metric. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_metric_descriptor.metadata.new](#fn-monitoringmetricdescriptormetadatanew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_metric_descriptor.timeouts.new](#fn-monitoringmetricdescriptortimeoutsnew) constructor.
+  - `labels` (`list[obj]`): The set of labels that can be used to describe a specific instance of this metric type. In order to delete a label, the entire resource must be deleted, then created with the desired labels. When `null`, the `labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_metric_descriptor.labels.new](#fn-labelsnew) constructor.
+  - `metadata` (`list[obj]`): Metadata which can be used to guide usage of the metric. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_metric_descriptor.metadata.new](#fn-metadatanew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_metric_descriptor.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitoring_metric_descriptor` resource into the root Terraform configuration.

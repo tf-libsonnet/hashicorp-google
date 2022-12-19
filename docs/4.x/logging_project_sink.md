@@ -67,8 +67,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): The name of the logging sink.
   - `project` (`string`): The ID of the project to create the sink in. If omitted, the project associated with the provider is used. When `null`, the `project` field will be omitted from the resulting object.
   - `unique_writer_identity` (`bool`): Whether or not to create a unique identity associated with this sink. If false (the default), then the writer_identity used is serviceAccount:cloud-logs@system.gserviceaccount.com. If true, then a unique service account is created and used for this sink. If you wish to publish logs across projects, you must set unique_writer_identity to true. When `null`, the `unique_writer_identity` field will be omitted from the resulting object.
-  - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_sink.bigquery_options.new](#fn-loggingprojectsinkbigqueryoptionsnew) constructor.
-  - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_sink.exclusions.new](#fn-loggingprojectsinkexclusionsnew) constructor.
+  - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_sink.bigquery_options.new](#fn-bigquery_optionsnew) constructor.
+  - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_sink.exclusions.new](#fn-exclusionsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,7 +84,7 @@ newAttrs()
 `google.logging_project_sink.newAttrs` constructs a new object with attributes and blocks configured for the `logging_project_sink`
 Terraform resource.
 
-Unlike [google.logging_project_sink.new](#fn-loggingprojectsinknew), this function will not inject the `resource`
+Unlike [google.logging_project_sink.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -99,8 +99,8 @@ injecting into a complete block.
   - `name` (`string`): The name of the logging sink.
   - `project` (`string`): The ID of the project to create the sink in. If omitted, the project associated with the provider is used. When `null`, the `project` field will be omitted from the resulting object.
   - `unique_writer_identity` (`bool`): Whether or not to create a unique identity associated with this sink. If false (the default), then the writer_identity used is serviceAccount:cloud-logs@system.gserviceaccount.com. If true, then a unique service account is created and used for this sink. If you wish to publish logs across projects, you must set unique_writer_identity to true. When `null`, the `unique_writer_identity` field will be omitted from the resulting object.
-  - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_sink.bigquery_options.new](#fn-loggingprojectsinkbigqueryoptionsnew) constructor.
-  - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_sink.exclusions.new](#fn-loggingprojectsinkexclusionsnew) constructor.
+  - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_sink.bigquery_options.new](#fn-bigquery_optionsnew) constructor.
+  - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_sink.exclusions.new](#fn-exclusionsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logging_project_sink` resource into the root Terraform configuration.

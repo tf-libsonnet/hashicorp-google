@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `document_id` (`string`): The client-assigned document ID to use for this document during creation.
   - `fields` (`string`): The document&#39;s [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_document.timeouts.new](#fn-firestoredocumenttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_document.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `google.firestore_document.newAttrs` constructs a new object with attributes and blocks configured for the `firestore_document`
 Terraform resource.
 
-Unlike [google.firestore_document.new](#fn-firestoredocumentnew), this function will not inject the `resource`
+Unlike [google.firestore_document.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `document_id` (`string`): The client-assigned document ID to use for this document during creation.
   - `fields` (`string`): The document&#39;s [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_document.timeouts.new](#fn-firestoredocumenttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_document.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firestore_document` resource into the root Terraform configuration.

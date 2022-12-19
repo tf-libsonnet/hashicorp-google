@@ -73,8 +73,8 @@ Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#
   - `name` (`string`): The resource name for the DicomStore.
 
 ** Changing this property may recreate the Dicom store (removing all data) **
-  - `notification_config` (`list[obj]`): A nested object resource When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_dicom_store.notification_config.new](#fn-healthcaredicomstorenotificationconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_dicom_store.timeouts.new](#fn-healthcaredicomstoretimeoutsnew) constructor.
+  - `notification_config` (`list[obj]`): A nested object resource When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_dicom_store.notification_config.new](#fn-notification_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_dicom_store.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,7 +90,7 @@ newAttrs()
 `google.healthcare_dicom_store.newAttrs` constructs a new object with attributes and blocks configured for the `healthcare_dicom_store`
 Terraform resource.
 
-Unlike [google.healthcare_dicom_store.new](#fn-healthcaredicomstorenew), this function will not inject the `resource`
+Unlike [google.healthcare_dicom_store.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -115,8 +115,8 @@ Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#
   - `name` (`string`): The resource name for the DicomStore.
 
 ** Changing this property may recreate the Dicom store (removing all data) **
-  - `notification_config` (`list[obj]`): A nested object resource When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_dicom_store.notification_config.new](#fn-healthcaredicomstorenotificationconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_dicom_store.timeouts.new](#fn-healthcaredicomstoretimeoutsnew) constructor.
+  - `notification_config` (`list[obj]`): A nested object resource When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_dicom_store.notification_config.new](#fn-notification_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_dicom_store.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `healthcare_dicom_store` resource into the root Terraform configuration.

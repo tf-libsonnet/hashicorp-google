@@ -68,7 +68,7 @@ account represents the identity of the workflow and determines what permissions 
 
 Format: projects/{project}/serviceAccounts/{account}. When `null`, the `service_account` field will be omitted from the resulting object.
   - `source_contents` (`string`): Workflow code to be executed. The size limit is 32KB. When `null`, the `source_contents` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.workflows_workflow.timeouts.new](#fn-workflowsworkflowtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.workflows_workflow.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,7 +84,7 @@ newAttrs()
 `google.workflows_workflow.newAttrs` constructs a new object with attributes and blocks configured for the `workflows_workflow`
 Terraform resource.
 
-Unlike [google.workflows_workflow.new](#fn-workflowsworkflownew), this function will not inject the `resource`
+Unlike [google.workflows_workflow.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -103,7 +103,7 @@ account represents the identity of the workflow and determines what permissions 
 
 Format: projects/{project}/serviceAccounts/{account}. When `null`, the `service_account` field will be omitted from the resulting object.
   - `source_contents` (`string`): Workflow code to be executed. The size limit is 32KB. When `null`, the `source_contents` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.workflows_workflow.timeouts.new](#fn-workflowsworkflowtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.workflows_workflow.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `workflows_workflow` resource into the root Terraform configuration.

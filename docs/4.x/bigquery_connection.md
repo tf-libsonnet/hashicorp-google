@@ -89,12 +89,12 @@ Spanner Connections same as spanner region
 AWS allowed regions are aws-us-east-1
 Azure allowed regions are azure-eastus2 When `null`, the `location` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `aws` (`list[obj]`): Connection properties specific to Amazon Web Services. When `null`, the `aws` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.aws.new](#fn-bigqueryconnectionawsnew) constructor.
-  - `azure` (`list[obj]`): Container for connection properties specific to Azure. When `null`, the `azure` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.azure.new](#fn-bigqueryconnectionazurenew) constructor.
-  - `cloud_resource` (`list[obj]`): Container for connection properties for delegation of access to GCP resources. When `null`, the `cloud_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_resource.new](#fn-bigqueryconnectioncloudresourcenew) constructor.
-  - `cloud_spanner` (`list[obj]`): Connection properties specific to Cloud Spanner When `null`, the `cloud_spanner` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_spanner.new](#fn-bigqueryconnectioncloudspannernew) constructor.
-  - `cloud_sql` (`list[obj]`): A nested object resource When `null`, the `cloud_sql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.new](#fn-bigqueryconnectioncloudsqlnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.timeouts.new](#fn-bigqueryconnectiontimeoutsnew) constructor.
+  - `aws` (`list[obj]`): Connection properties specific to Amazon Web Services. When `null`, the `aws` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.aws.new](#fn-awsnew) constructor.
+  - `azure` (`list[obj]`): Container for connection properties specific to Azure. When `null`, the `azure` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.azure.new](#fn-azurenew) constructor.
+  - `cloud_resource` (`list[obj]`): Container for connection properties for delegation of access to GCP resources. When `null`, the `cloud_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_resource.new](#fn-cloud_resourcenew) constructor.
+  - `cloud_spanner` (`list[obj]`): Connection properties specific to Cloud Spanner When `null`, the `cloud_spanner` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_spanner.new](#fn-cloud_spannernew) constructor.
+  - `cloud_sql` (`list[obj]`): A nested object resource When `null`, the `cloud_sql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.new](#fn-cloud_sqlnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -110,7 +110,7 @@ newAttrs()
 `google.bigquery_connection.newAttrs` constructs a new object with attributes and blocks configured for the `bigquery_connection`
 Terraform resource.
 
-Unlike [google.bigquery_connection.new](#fn-bigqueryconnectionnew), this function will not inject the `resource`
+Unlike [google.bigquery_connection.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -129,12 +129,12 @@ Spanner Connections same as spanner region
 AWS allowed regions are aws-us-east-1
 Azure allowed regions are azure-eastus2 When `null`, the `location` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `aws` (`list[obj]`): Connection properties specific to Amazon Web Services. When `null`, the `aws` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.aws.new](#fn-bigqueryconnectionawsnew) constructor.
-  - `azure` (`list[obj]`): Container for connection properties specific to Azure. When `null`, the `azure` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.azure.new](#fn-bigqueryconnectionazurenew) constructor.
-  - `cloud_resource` (`list[obj]`): Container for connection properties for delegation of access to GCP resources. When `null`, the `cloud_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_resource.new](#fn-bigqueryconnectioncloudresourcenew) constructor.
-  - `cloud_spanner` (`list[obj]`): Connection properties specific to Cloud Spanner When `null`, the `cloud_spanner` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_spanner.new](#fn-bigqueryconnectioncloudspannernew) constructor.
-  - `cloud_sql` (`list[obj]`): A nested object resource When `null`, the `cloud_sql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.new](#fn-bigqueryconnectioncloudsqlnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.timeouts.new](#fn-bigqueryconnectiontimeoutsnew) constructor.
+  - `aws` (`list[obj]`): Connection properties specific to Amazon Web Services. When `null`, the `aws` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.aws.new](#fn-awsnew) constructor.
+  - `azure` (`list[obj]`): Container for connection properties specific to Azure. When `null`, the `azure` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.azure.new](#fn-azurenew) constructor.
+  - `cloud_resource` (`list[obj]`): Container for connection properties for delegation of access to GCP resources. When `null`, the `cloud_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_resource.new](#fn-cloud_resourcenew) constructor.
+  - `cloud_spanner` (`list[obj]`): Connection properties specific to Cloud Spanner When `null`, the `cloud_spanner` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_spanner.new](#fn-cloud_spannernew) constructor.
+  - `cloud_sql` (`list[obj]`): A nested object resource When `null`, the `cloud_sql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.new](#fn-cloud_sqlnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigquery_connection` resource into the root Terraform configuration.
@@ -458,7 +458,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `access_role` (`list[obj]`): Authentication using Google owned service account to assume into customer&#39;s AWS IAM Role. When `null`, the `access_role` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.aws.access_role.new](#fn-awsaccessrolenew) constructor.
+  - `access_role` (`list[obj]`): Authentication using Google owned service account to assume into customer&#39;s AWS IAM Role. When `null`, the `access_role` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.aws.access_role.new](#fn-awsaccess_rolenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `aws` sub block.
@@ -574,7 +574,7 @@ Terraform sub block.
   - `database` (`string`): Database name.
   - `instance_id` (`string`): Cloud SQL instance ID in the form project:location:instance.
   - `type` (`string`): Type of the Cloud SQL database. Possible values: [&#34;DATABASE_TYPE_UNSPECIFIED&#34;, &#34;POSTGRES&#34;, &#34;MYSQL&#34;]
-  - `credential` (`list[obj]`): Cloud SQL properties. When `null`, the `credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.credential.new](#fn-cloudsqlcredentialnew) constructor.
+  - `credential` (`list[obj]`): Cloud SQL properties. When `null`, the `credential` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.credential.new](#fn-cloud_sqlcredentialnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `cloud_sql` sub block.

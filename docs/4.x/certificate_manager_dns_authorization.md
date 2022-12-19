@@ -63,7 +63,7 @@ be used to issue certificates for &#34;example.com&#34; and &#34;*.example.com&#
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_dns_authorization.timeouts.new](#fn-certificatemanagerdnsauthorizationtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_dns_authorization.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -79,7 +79,7 @@ newAttrs()
 `google.certificate_manager_dns_authorization.newAttrs` constructs a new object with attributes and blocks configured for the `certificate_manager_dns_authorization`
 Terraform resource.
 
-Unlike [google.certificate_manager_dns_authorization.new](#fn-certificatemanagerdnsauthorizationnew), this function will not inject the `resource`
+Unlike [google.certificate_manager_dns_authorization.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -96,7 +96,7 @@ be used to issue certificates for &#34;example.com&#34; and &#34;*.example.com&#
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_dns_authorization.timeouts.new](#fn-certificatemanagerdnsauthorizationtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_dns_authorization.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `certificate_manager_dns_authorization` resource into the root Terraform configuration.

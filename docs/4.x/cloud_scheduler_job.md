@@ -98,17 +98,17 @@ This string must not contain more than 500 characters. When `null`, the `descrip
 The value of this field must be a time zone name from the tz database. When `null`, the `time_zone` field will be omitted from the resulting object.
   - `app_engine_http_target` (`list[obj]`): App Engine HTTP target.
 If the job providers a App Engine HTTP target the cron will 
-send a request to the service instance When `null`, the `app_engine_http_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.app_engine_http_target.new](#fn-cloudschedulerjobappenginehttptargetnew) constructor.
+send a request to the service instance When `null`, the `app_engine_http_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.app_engine_http_target.new](#fn-app_engine_http_targetnew) constructor.
   - `http_target` (`list[obj]`): HTTP target.
 If the job providers a http_target the cron will 
-send a request to the targeted url When `null`, the `http_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.new](#fn-cloudschedulerjobhttptargetnew) constructor.
+send a request to the targeted url When `null`, the `http_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.new](#fn-http_targetnew) constructor.
   - `pubsub_target` (`list[obj]`): Pub/Sub target
 If the job providers a Pub/Sub target the cron will publish
-a message to the provided topic When `null`, the `pubsub_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.pubsub_target.new](#fn-cloudschedulerjobpubsubtargetnew) constructor.
+a message to the provided topic When `null`, the `pubsub_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.pubsub_target.new](#fn-pubsub_targetnew) constructor.
   - `retry_config` (`list[obj]`): By default, if a job does not complete successfully, 
 meaning that an acknowledgement is not received from the handler, 
-then it will be retried with exponential backoff according to the settings When `null`, the `retry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.retry_config.new](#fn-cloudschedulerjobretryconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.timeouts.new](#fn-cloudschedulerjobtimeoutsnew) constructor.
+then it will be retried with exponential backoff according to the settings When `null`, the `retry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.retry_config.new](#fn-retry_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -124,7 +124,7 @@ newAttrs()
 `google.cloud_scheduler_job.newAttrs` constructs a new object with attributes and blocks configured for the `cloud_scheduler_job`
 Terraform resource.
 
-Unlike [google.cloud_scheduler_job.new](#fn-cloudschedulerjobnew), this function will not inject the `resource`
+Unlike [google.cloud_scheduler_job.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -151,17 +151,17 @@ This string must not contain more than 500 characters. When `null`, the `descrip
 The value of this field must be a time zone name from the tz database. When `null`, the `time_zone` field will be omitted from the resulting object.
   - `app_engine_http_target` (`list[obj]`): App Engine HTTP target.
 If the job providers a App Engine HTTP target the cron will 
-send a request to the service instance When `null`, the `app_engine_http_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.app_engine_http_target.new](#fn-cloudschedulerjobappenginehttptargetnew) constructor.
+send a request to the service instance When `null`, the `app_engine_http_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.app_engine_http_target.new](#fn-app_engine_http_targetnew) constructor.
   - `http_target` (`list[obj]`): HTTP target.
 If the job providers a http_target the cron will 
-send a request to the targeted url When `null`, the `http_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.new](#fn-cloudschedulerjobhttptargetnew) constructor.
+send a request to the targeted url When `null`, the `http_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.new](#fn-http_targetnew) constructor.
   - `pubsub_target` (`list[obj]`): Pub/Sub target
 If the job providers a Pub/Sub target the cron will publish
-a message to the provided topic When `null`, the `pubsub_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.pubsub_target.new](#fn-cloudschedulerjobpubsubtargetnew) constructor.
+a message to the provided topic When `null`, the `pubsub_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.pubsub_target.new](#fn-pubsub_targetnew) constructor.
   - `retry_config` (`list[obj]`): By default, if a job does not complete successfully, 
 meaning that an acknowledgement is not received from the handler, 
-then it will be retried with exponential backoff according to the settings When `null`, the `retry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.retry_config.new](#fn-cloudschedulerjobretryconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.timeouts.new](#fn-cloudschedulerjobtimeoutsnew) constructor.
+then it will be retried with exponential backoff according to the settings When `null`, the `retry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.retry_config.new](#fn-retry_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloud_scheduler_job` resource into the root Terraform configuration.
@@ -510,7 +510,7 @@ The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative U
 It can contain a path, query string arguments, and \# fragments. 
 If the relative URL is empty, then the root path &#34;/&#34; will be used. 
 No spaces are allowed, and the maximum length allowed is 2083 characters
-  - `app_engine_routing` (`list[obj]`): App Engine Routing setting for the job. When `null`, the `app_engine_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.app_engine_http_target.app_engine_routing.new](#fn-appenginehttptargetappengineroutingnew) constructor.
+  - `app_engine_routing` (`list[obj]`): App Engine Routing setting for the job. When `null`, the `app_engine_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.app_engine_http_target.app_engine_routing.new](#fn-app_engine_http_targetapp_engine_routingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `app_engine_http_target` sub block.
@@ -571,9 +571,9 @@ Repeated headers are not supported, but a header value can contain commas. When 
   - `http_method` (`string`): Which HTTP method to use for the request. When `null`, the `http_method` field will be omitted from the resulting object.
   - `uri` (`string`): The full URI path that the request will be sent to.
   - `oauth_token` (`list[obj]`): Contains information needed for generating an OAuth token.
-This type of authorization should be used when sending requests to a GCP endpoint. When `null`, the `oauth_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.oauth_token.new](#fn-httptargetoauthtokennew) constructor.
+This type of authorization should be used when sending requests to a GCP endpoint. When `null`, the `oauth_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.oauth_token.new](#fn-http_targetoauth_tokennew) constructor.
   - `oidc_token` (`list[obj]`): Contains information needed for generating an OpenID Connect token.
-This type of authorization should be used when sending requests to third party endpoints or Cloud Run. When `null`, the `oidc_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.oidc_token.new](#fn-httptargetoidctokennew) constructor.
+This type of authorization should be used when sending requests to third party endpoints or Cloud Run. When `null`, the `oidc_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.oidc_token.new](#fn-http_targetoidc_tokennew) constructor.
 
 **Returns**:
   - An attribute object that represents the `http_target` sub block.

@@ -103,16 +103,16 @@ NOTE: the granularity should be at least 8 hours, or less frequent. When `null`,
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account. When `null`, the `service_account_name` field will be omitted from the resulting object.
   - `email_preferences` (`list[obj]`): Email notifications will be sent according to these preferences to the
-email address of the user who owns this transfer config. When `null`, the `email_preferences` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.email_preferences.new](#fn-bigquerydatatransferconfigemailpreferencesnew) constructor.
-  - `schedule_options` (`list[obj]`): Options customizing the data transfer schedule. When `null`, the `schedule_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.schedule_options.new](#fn-bigquerydatatransferconfigscheduleoptionsnew) constructor.
+email address of the user who owns this transfer config. When `null`, the `email_preferences` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.email_preferences.new](#fn-email_preferencesnew) constructor.
+  - `schedule_options` (`list[obj]`): Options customizing the data transfer schedule. When `null`, the `schedule_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.schedule_options.new](#fn-schedule_optionsnew) constructor.
   - `sensitive_params` (`list[obj]`): Different parameters are configured primarily using the the &#39;params&#39; field on this
 resource. This block contains the parameters which contain secrets or passwords so that they can be marked
 sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
 in the &#39;params&#39; map in the api request.
 
 Credentials may not be specified in both locations and will cause an error. Changing from one location
-to a different credential configuration in the config will require an apply to update state. When `null`, the `sensitive_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.sensitive_params.new](#fn-bigquerydatatransferconfigsensitiveparamsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.timeouts.new](#fn-bigquerydatatransferconfigtimeoutsnew) constructor.
+to a different credential configuration in the config will require an apply to update state. When `null`, the `sensitive_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.sensitive_params.new](#fn-sensitive_paramsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -128,7 +128,7 @@ newAttrs()
 `google.bigquery_data_transfer_config.newAttrs` constructs a new object with attributes and blocks configured for the `bigquery_data_transfer_config`
 Terraform resource.
 
-Unlike [google.bigquery_data_transfer_config.new](#fn-bigquerydatatransferconfignew), this function will not inject the `resource`
+Unlike [google.bigquery_data_transfer_config.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -167,16 +167,16 @@ NOTE: the granularity should be at least 8 hours, or less frequent. When `null`,
 be created with this service account credentials. It requires that
 requesting user calling this API has permissions to act as this service account. When `null`, the `service_account_name` field will be omitted from the resulting object.
   - `email_preferences` (`list[obj]`): Email notifications will be sent according to these preferences to the
-email address of the user who owns this transfer config. When `null`, the `email_preferences` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.email_preferences.new](#fn-bigquerydatatransferconfigemailpreferencesnew) constructor.
-  - `schedule_options` (`list[obj]`): Options customizing the data transfer schedule. When `null`, the `schedule_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.schedule_options.new](#fn-bigquerydatatransferconfigscheduleoptionsnew) constructor.
+email address of the user who owns this transfer config. When `null`, the `email_preferences` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.email_preferences.new](#fn-email_preferencesnew) constructor.
+  - `schedule_options` (`list[obj]`): Options customizing the data transfer schedule. When `null`, the `schedule_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.schedule_options.new](#fn-schedule_optionsnew) constructor.
   - `sensitive_params` (`list[obj]`): Different parameters are configured primarily using the the &#39;params&#39; field on this
 resource. This block contains the parameters which contain secrets or passwords so that they can be marked
 sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
 in the &#39;params&#39; map in the api request.
 
 Credentials may not be specified in both locations and will cause an error. Changing from one location
-to a different credential configuration in the config will require an apply to update state. When `null`, the `sensitive_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.sensitive_params.new](#fn-bigquerydatatransferconfigsensitiveparamsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.timeouts.new](#fn-bigquerydatatransferconfigtimeoutsnew) constructor.
+to a different credential configuration in the config will require an apply to update state. When `null`, the `sensitive_params` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.sensitive_params.new](#fn-sensitive_paramsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_data_transfer_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigquery_data_transfer_config` resource into the root Terraform configuration.

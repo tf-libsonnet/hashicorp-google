@@ -153,10 +153,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): The location for the resource
   - `name` (`string`): Resource name.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
-  - `instance_filter` (`list[obj]`): Required. Filter to select VMs. When `null`, the `instance_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.instance_filter.new](#fn-osconfigospolicyassignmentinstancefilternew) constructor.
-  - `os_policies` (`list[obj]`): Required. List of OS policies to be applied to the VMs. When `null`, the `os_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.new](#fn-osconfigospolicyassignmentospoliciesnew) constructor.
-  - `rollout` (`list[obj]`): Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted. When `null`, the `rollout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.rollout.new](#fn-osconfigospolicyassignmentrolloutnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.timeouts.new](#fn-osconfigospolicyassignmenttimeoutsnew) constructor.
+  - `instance_filter` (`list[obj]`): Required. Filter to select VMs. When `null`, the `instance_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.instance_filter.new](#fn-instance_filternew) constructor.
+  - `os_policies` (`list[obj]`): Required. List of OS policies to be applied to the VMs. When `null`, the `os_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.new](#fn-os_policiesnew) constructor.
+  - `rollout` (`list[obj]`): Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted. When `null`, the `rollout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.rollout.new](#fn-rolloutnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -172,7 +172,7 @@ newAttrs()
 `google.os_config_os_policy_assignment.newAttrs` constructs a new object with attributes and blocks configured for the `os_config_os_policy_assignment`
 Terraform resource.
 
-Unlike [google.os_config_os_policy_assignment.new](#fn-osconfigospolicyassignmentnew), this function will not inject the `resource`
+Unlike [google.os_config_os_policy_assignment.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -184,10 +184,10 @@ injecting into a complete block.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Resource name.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
-  - `instance_filter` (`list[obj]`): Required. Filter to select VMs. When `null`, the `instance_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.instance_filter.new](#fn-osconfigospolicyassignmentinstancefilternew) constructor.
-  - `os_policies` (`list[obj]`): Required. List of OS policies to be applied to the VMs. When `null`, the `os_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.new](#fn-osconfigospolicyassignmentospoliciesnew) constructor.
-  - `rollout` (`list[obj]`): Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted. When `null`, the `rollout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.rollout.new](#fn-osconfigospolicyassignmentrolloutnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.timeouts.new](#fn-osconfigospolicyassignmenttimeoutsnew) constructor.
+  - `instance_filter` (`list[obj]`): Required. Filter to select VMs. When `null`, the `instance_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.instance_filter.new](#fn-instance_filternew) constructor.
+  - `os_policies` (`list[obj]`): Required. List of OS policies to be applied to the VMs. When `null`, the `os_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.new](#fn-os_policiesnew) constructor.
+  - `rollout` (`list[obj]`): Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted. When `null`, the `rollout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.rollout.new](#fn-rolloutnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `os_config_os_policy_assignment` resource into the root Terraform configuration.
@@ -422,9 +422,9 @@ Terraform sub block.
 
 **Args**:
   - `all` (`bool`): Target all VMs in the project. If true, no other criteria is permitted. When `null`, the `all` field will be omitted from the resulting object.
-  - `exclusion_labels` (`list[obj]`): List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM. When `null`, the `exclusion_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.instance_filter.exclusion_labels.new](#fn-instancefilterexclusionlabelsnew) constructor.
-  - `inclusion_labels` (`list[obj]`): List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM. When `null`, the `inclusion_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.instance_filter.inclusion_labels.new](#fn-instancefilterinclusionlabelsnew) constructor.
-  - `inventories` (`list[obj]`): List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories. When `null`, the `inventories` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.instance_filter.inventories.new](#fn-instancefilterinventoriesnew) constructor.
+  - `exclusion_labels` (`list[obj]`): List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM. When `null`, the `exclusion_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.instance_filter.exclusion_labels.new](#fn-instance_filterexclusion_labelsnew) constructor.
+  - `inclusion_labels` (`list[obj]`): List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM. When `null`, the `inclusion_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.instance_filter.inclusion_labels.new](#fn-instance_filterinclusion_labelsnew) constructor.
+  - `inventories` (`list[obj]`): List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories. When `null`, the `inventories` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.instance_filter.inventories.new](#fn-instance_filterinventoriesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `instance_filter` sub block.
@@ -520,7 +520,7 @@ Terraform sub block.
   - `allow_no_resource_group_match` (`bool`): This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce. When `null`, the `allow_no_resource_group_match` field will be omitted from the resulting object.
   - `description` (`string`): Policy description. Length of the description is limited to 1024 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `mode` (`string`): Required. Policy mode Possible values: MODE_UNSPECIFIED, VALIDATION, ENFORCEMENT
-  - `resource_groups` (`list[obj]`): Required. List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match` When `null`, the `resource_groups` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.new](#fn-ospoliciesresourcegroupsnew) constructor.
+  - `resource_groups` (`list[obj]`): Required. List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match` When `null`, the `resource_groups` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.new](#fn-os_policiesresource_groupsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `os_policies` sub block.
@@ -543,8 +543,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `inventory_filters` (`list[obj]`): List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name=&#39;rhel&#39; and inventory_filters[1].os_short_name=&#39;centos&#39; If the list is empty, this resource group will be applied to the target VM unconditionally. When `null`, the `inventory_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.inventory_filters.new](#fn-resourcegroupsinventoryfiltersnew) constructor.
-  - `resources` (`list[obj]`): Required. List of resources configured for this resource group. The resources are executed in the exact order specified here. When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.new](#fn-resourcegroupsresourcesnew) constructor.
+  - `inventory_filters` (`list[obj]`): List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name=&#39;rhel&#39; and inventory_filters[1].os_short_name=&#39;centos&#39; If the list is empty, this resource group will be applied to the target VM unconditionally. When `null`, the `inventory_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.inventory_filters.new](#fn-os_policiesos_policiesinventory_filtersnew) constructor.
+  - `resources` (`list[obj]`): Required. List of resources configured for this resource group. The resources are executed in the exact order specified here. When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.new](#fn-os_policiesos_policiesresourcesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `resource_groups` sub block.
@@ -591,10 +591,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `exec` (`list[obj]`): Exec resource When `null`, the `exec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.new](#fn-resourcesexecnew) constructor.
-  - `file` (`list[obj]`): File resource When `null`, the `file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.file.new](#fn-resourcesfilenew) constructor.
-  - `pkg` (`list[obj]`): Package resource When `null`, the `pkg` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.new](#fn-resourcespkgnew) constructor.
-  - `repository` (`list[obj]`): Package repository resource When `null`, the `repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.repository.new](#fn-resourcesrepositorynew) constructor.
+  - `exec` (`list[obj]`): Exec resource When `null`, the `exec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.new](#fn-os_policiesos_policiesresource_groupsexecnew) constructor.
+  - `file` (`list[obj]`): File resource When `null`, the `file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.file.new](#fn-os_policiesos_policiesresource_groupsfilenew) constructor.
+  - `pkg` (`list[obj]`): Package resource When `null`, the `pkg` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.new](#fn-os_policiesos_policiesresource_groupspkgnew) constructor.
+  - `repository` (`list[obj]`): Package repository resource When `null`, the `repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.repository.new](#fn-os_policiesos_policiesresource_groupsrepositorynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `resources` sub block.
@@ -617,8 +617,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `enforce` (`list[obj]`): What to run to bring this resource into the desired state. An exit code of 100 indicates &#34;success&#34;, any other exit code indicates a failure running enforce. When `null`, the `enforce` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.enforce.new](#fn-execenforcenew) constructor.
-  - `validate` (`list[obj]`): Required. What to run to validate this resource is in the desired state. An exit code of 100 indicates &#34;in desired state&#34;, and exit code of 101 indicates &#34;not in desired state&#34;. Any other exit code indicates a failure running validate. When `null`, the `validate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.validate.new](#fn-execvalidatenew) constructor.
+  - `enforce` (`list[obj]`): What to run to bring this resource into the desired state. An exit code of 100 indicates &#34;success&#34;, any other exit code indicates a failure running enforce. When `null`, the `enforce` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.enforce.new](#fn-os_policiesos_policiesresource_groupsresourcesenforcenew) constructor.
+  - `validate` (`list[obj]`): Required. What to run to validate this resource is in the desired state. An exit code of 100 indicates &#34;in desired state&#34;, and exit code of 101 indicates &#34;not in desired state&#34;. Any other exit code indicates a failure running validate. When `null`, the `validate` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.validate.new](#fn-os_policiesos_policiesresource_groupsresourcesvalidatenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `exec` sub block.
@@ -645,7 +645,7 @@ Terraform sub block.
   - `interpreter` (`string`): Required. The script interpreter to use. Possible values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL
   - `output_file_path` (`string`): Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes. When `null`, the `output_file_path` field will be omitted from the resulting object.
   - `script` (`string`): An inline script. The size of the script is limited to 1024 characters. When `null`, the `script` field will be omitted from the resulting object.
-  - `file` (`list[obj]`): A remote or local file. When `null`, the `file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.enforce.file.new](#fn-enforcefilenew) constructor.
+  - `file` (`list[obj]`): A remote or local file. When `null`, the `file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.enforce.file.new](#fn-os_policiesos_policiesresource_groupsresourcesexecfilenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `enforce` sub block.
@@ -670,8 +670,8 @@ Terraform sub block.
 **Args**:
   - `allow_insecure` (`bool`): Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified. When `null`, the `allow_insecure` field will be omitted from the resulting object.
   - `local_path` (`string`): A local path within the VM to use. When `null`, the `local_path` field will be omitted from the resulting object.
-  - `gcs` (`list[obj]`): A Cloud Storage object. When `null`, the `gcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.enforce.file.gcs.new](#fn-filegcsnew) constructor.
-  - `remote` (`list[obj]`): A generic remote file. When `null`, the `remote` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.enforce.file.remote.new](#fn-fileremotenew) constructor.
+  - `gcs` (`list[obj]`): A Cloud Storage object. When `null`, the `gcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.enforce.file.gcs.new](#fn-os_policiesos_policiesresource_groupsresourcesexecenforcegcsnew) constructor.
+  - `remote` (`list[obj]`): A generic remote file. When `null`, the `remote` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.enforce.file.remote.new](#fn-os_policiesos_policiesresource_groupsresourcesexecenforceremotenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `file` sub block.
@@ -747,7 +747,7 @@ Terraform sub block.
   - `interpreter` (`string`): Required. The script interpreter to use. Possible values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL
   - `output_file_path` (`string`): Only recorded for enforce Exec. Path to an output file (that is created by this Exec) whose content will be recorded in OSPolicyResourceCompliance after a successful run. Absence or failure to read this file will result in this ExecResource being non-compliant. Output file size is limited to 100K bytes. When `null`, the `output_file_path` field will be omitted from the resulting object.
   - `script` (`string`): An inline script. The size of the script is limited to 1024 characters. When `null`, the `script` field will be omitted from the resulting object.
-  - `file` (`list[obj]`): A remote or local file. When `null`, the `file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.validate.file.new](#fn-validatefilenew) constructor.
+  - `file` (`list[obj]`): A remote or local file. When `null`, the `file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.validate.file.new](#fn-os_policiesos_policiesresource_groupsresourcesexecfilenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `validate` sub block.
@@ -772,8 +772,8 @@ Terraform sub block.
 **Args**:
   - `allow_insecure` (`bool`): Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified. When `null`, the `allow_insecure` field will be omitted from the resulting object.
   - `local_path` (`string`): A local path within the VM to use. When `null`, the `local_path` field will be omitted from the resulting object.
-  - `gcs` (`list[obj]`): A Cloud Storage object. When `null`, the `gcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.validate.file.gcs.new](#fn-filegcsnew) constructor.
-  - `remote` (`list[obj]`): A generic remote file. When `null`, the `remote` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.validate.file.remote.new](#fn-fileremotenew) constructor.
+  - `gcs` (`list[obj]`): A Cloud Storage object. When `null`, the `gcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.validate.file.gcs.new](#fn-os_policiesos_policiesresource_groupsresourcesexecvalidategcsnew) constructor.
+  - `remote` (`list[obj]`): A generic remote file. When `null`, the `remote` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.exec.validate.file.remote.new](#fn-os_policiesos_policiesresource_groupsresourcesexecvalidateremotenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `file` sub block.
@@ -848,7 +848,7 @@ Terraform sub block.
   - `content` (`string`): A a file with this content. The size of the content is limited to 1024 characters. When `null`, the `content` field will be omitted from the resulting object.
   - `path` (`string`): Required. The absolute path of the file within the VM.
   - `state` (`string`): Required. Desired state of the file. Possible values: OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED, COMPLIANT, NON_COMPLIANT, UNKNOWN, NO_OS_POLICIES_APPLICABLE
-  - `file` (`list[obj]`): A remote or local source. When `null`, the `file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.file.file.new](#fn-filefilenew) constructor.
+  - `file` (`list[obj]`): A remote or local source. When `null`, the `file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.file.file.new](#fn-os_policiesos_policiesresource_groupsresourcesfilenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `file` sub block.
@@ -873,8 +873,8 @@ Terraform sub block.
 **Args**:
   - `allow_insecure` (`bool`): Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified. When `null`, the `allow_insecure` field will be omitted from the resulting object.
   - `local_path` (`string`): A local path within the VM to use. When `null`, the `local_path` field will be omitted from the resulting object.
-  - `gcs` (`list[obj]`): A Cloud Storage object. When `null`, the `gcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.file.file.gcs.new](#fn-filegcsnew) constructor.
-  - `remote` (`list[obj]`): A generic remote file. When `null`, the `remote` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.file.file.remote.new](#fn-fileremotenew) constructor.
+  - `gcs` (`list[obj]`): A Cloud Storage object. When `null`, the `gcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.file.file.gcs.new](#fn-os_policiesos_policiesresource_groupsresourcesfilegcsnew) constructor.
+  - `remote` (`list[obj]`): A generic remote file. When `null`, the `remote` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.file.file.remote.new](#fn-os_policiesos_policiesresource_groupsresourcesfileremotenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `file` sub block.
@@ -947,13 +947,13 @@ Terraform sub block.
 
 **Args**:
   - `desired_state` (`string`): Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
-  - `apt` (`list[obj]`): A package managed by Apt. When `null`, the `apt` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.apt.new](#fn-pkgaptnew) constructor.
-  - `deb` (`list[obj]`): A deb package file. When `null`, the `deb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.deb.new](#fn-pkgdebnew) constructor.
-  - `googet` (`list[obj]`): A package managed by GooGet. When `null`, the `googet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.googet.new](#fn-pkggoogetnew) constructor.
-  - `msi` (`list[obj]`): An MSI package. When `null`, the `msi` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.msi.new](#fn-pkgmsinew) constructor.
-  - `rpm` (`list[obj]`): An rpm package file. When `null`, the `rpm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.rpm.new](#fn-pkgrpmnew) constructor.
-  - `yum` (`list[obj]`): A package managed by YUM. When `null`, the `yum` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.yum.new](#fn-pkgyumnew) constructor.
-  - `zypper` (`list[obj]`): A package managed by Zypper. When `null`, the `zypper` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.zypper.new](#fn-pkgzyppernew) constructor.
+  - `apt` (`list[obj]`): A package managed by Apt. When `null`, the `apt` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.apt.new](#fn-os_policiesos_policiesresource_groupsresourcesaptnew) constructor.
+  - `deb` (`list[obj]`): A deb package file. When `null`, the `deb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.deb.new](#fn-os_policiesos_policiesresource_groupsresourcesdebnew) constructor.
+  - `googet` (`list[obj]`): A package managed by GooGet. When `null`, the `googet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.googet.new](#fn-os_policiesos_policiesresource_groupsresourcesgoogetnew) constructor.
+  - `msi` (`list[obj]`): An MSI package. When `null`, the `msi` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.msi.new](#fn-os_policiesos_policiesresource_groupsresourcesmsinew) constructor.
+  - `rpm` (`list[obj]`): An rpm package file. When `null`, the `rpm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.rpm.new](#fn-os_policiesos_policiesresource_groupsresourcesrpmnew) constructor.
+  - `yum` (`list[obj]`): A package managed by YUM. When `null`, the `yum` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.yum.new](#fn-os_policiesos_policiesresource_groupsresourcesyumnew) constructor.
+  - `zypper` (`list[obj]`): A package managed by Zypper. When `null`, the `zypper` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.zypper.new](#fn-os_policiesos_policiesresource_groupsresourceszyppernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `pkg` sub block.
@@ -1000,7 +1000,7 @@ Terraform sub block.
 
 **Args**:
   - `pull_deps` (`bool`): Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update &amp;&amp; apt-get -y install package.deb` When `null`, the `pull_deps` field will be omitted from the resulting object.
-  - `source` (`list[obj]`): Required. A deb package. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.deb.source.new](#fn-debsourcenew) constructor.
+  - `source` (`list[obj]`): Required. A deb package. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.deb.source.new](#fn-os_policiesos_policiesresource_groupsresourcespkgsourcenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `deb` sub block.
@@ -1025,8 +1025,8 @@ Terraform sub block.
 **Args**:
   - `allow_insecure` (`bool`): Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified. When `null`, the `allow_insecure` field will be omitted from the resulting object.
   - `local_path` (`string`): A local path within the VM to use. When `null`, the `local_path` field will be omitted from the resulting object.
-  - `gcs` (`list[obj]`): A Cloud Storage object. When `null`, the `gcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.deb.source.gcs.new](#fn-sourcegcsnew) constructor.
-  - `remote` (`list[obj]`): A generic remote file. When `null`, the `remote` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.deb.source.remote.new](#fn-sourceremotenew) constructor.
+  - `gcs` (`list[obj]`): A Cloud Storage object. When `null`, the `gcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.deb.source.gcs.new](#fn-os_policiesos_policiesresource_groupsresourcespkgdebgcsnew) constructor.
+  - `remote` (`list[obj]`): A generic remote file. When `null`, the `remote` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.deb.source.remote.new](#fn-os_policiesos_policiesresource_groupsresourcespkgdebremotenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.
@@ -1122,7 +1122,7 @@ Terraform sub block.
 
 **Args**:
   - `properties` (`list`): Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`. When `null`, the `properties` field will be omitted from the resulting object.
-  - `source` (`list[obj]`): Required. The MSI package. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.msi.source.new](#fn-msisourcenew) constructor.
+  - `source` (`list[obj]`): Required. The MSI package. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.msi.source.new](#fn-os_policiesos_policiesresource_groupsresourcespkgsourcenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `msi` sub block.
@@ -1147,8 +1147,8 @@ Terraform sub block.
 **Args**:
   - `allow_insecure` (`bool`): Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified. When `null`, the `allow_insecure` field will be omitted from the resulting object.
   - `local_path` (`string`): A local path within the VM to use. When `null`, the `local_path` field will be omitted from the resulting object.
-  - `gcs` (`list[obj]`): A Cloud Storage object. When `null`, the `gcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.msi.source.gcs.new](#fn-sourcegcsnew) constructor.
-  - `remote` (`list[obj]`): A generic remote file. When `null`, the `remote` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.msi.source.remote.new](#fn-sourceremotenew) constructor.
+  - `gcs` (`list[obj]`): A Cloud Storage object. When `null`, the `gcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.msi.source.gcs.new](#fn-os_policiesos_policiesresource_groupsresourcespkgmsigcsnew) constructor.
+  - `remote` (`list[obj]`): A generic remote file. When `null`, the `remote` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.msi.source.remote.new](#fn-os_policiesos_policiesresource_groupsresourcespkgmsiremotenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.
@@ -1221,7 +1221,7 @@ Terraform sub block.
 
 **Args**:
   - `pull_deps` (`bool`): Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm` When `null`, the `pull_deps` field will be omitted from the resulting object.
-  - `source` (`list[obj]`): Required. An rpm package. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.rpm.source.new](#fn-rpmsourcenew) constructor.
+  - `source` (`list[obj]`): Required. An rpm package. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.rpm.source.new](#fn-os_policiesos_policiesresource_groupsresourcespkgsourcenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rpm` sub block.
@@ -1246,8 +1246,8 @@ Terraform sub block.
 **Args**:
   - `allow_insecure` (`bool`): Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified. When `null`, the `allow_insecure` field will be omitted from the resulting object.
   - `local_path` (`string`): A local path within the VM to use. When `null`, the `local_path` field will be omitted from the resulting object.
-  - `gcs` (`list[obj]`): A Cloud Storage object. When `null`, the `gcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.rpm.source.gcs.new](#fn-sourcegcsnew) constructor.
-  - `remote` (`list[obj]`): A generic remote file. When `null`, the `remote` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.rpm.source.remote.new](#fn-sourceremotenew) constructor.
+  - `gcs` (`list[obj]`): A Cloud Storage object. When `null`, the `gcs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.rpm.source.gcs.new](#fn-os_policiesos_policiesresource_groupsresourcespkgrpmgcsnew) constructor.
+  - `remote` (`list[obj]`): A generic remote file. When `null`, the `remote` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.pkg.rpm.source.remote.new](#fn-os_policiesos_policiesresource_groupsresourcespkgrpmremotenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.
@@ -1365,10 +1365,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `apt` (`list[obj]`): An Apt Repository. When `null`, the `apt` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.repository.apt.new](#fn-repositoryaptnew) constructor.
-  - `goo` (`list[obj]`): A Goo Repository. When `null`, the `goo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.repository.goo.new](#fn-repositorygoonew) constructor.
-  - `yum` (`list[obj]`): A Yum Repository. When `null`, the `yum` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.repository.yum.new](#fn-repositoryyumnew) constructor.
-  - `zypper` (`list[obj]`): A Zypper Repository. When `null`, the `zypper` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.repository.zypper.new](#fn-repositoryzyppernew) constructor.
+  - `apt` (`list[obj]`): An Apt Repository. When `null`, the `apt` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.repository.apt.new](#fn-os_policiesos_policiesresource_groupsresourcesaptnew) constructor.
+  - `goo` (`list[obj]`): A Goo Repository. When `null`, the `goo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.repository.goo.new](#fn-os_policiesos_policiesresource_groupsresourcesgoonew) constructor.
+  - `yum` (`list[obj]`): A Yum Repository. When `null`, the `yum` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.repository.yum.new](#fn-os_policiesos_policiesresource_groupsresourcesyumnew) constructor.
+  - `zypper` (`list[obj]`): A Zypper Repository. When `null`, the `zypper` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.repository.zypper.new](#fn-os_policiesos_policiesresource_groupsresourceszyppernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `repository` sub block.
@@ -1493,7 +1493,7 @@ Terraform sub block.
 
 **Args**:
   - `min_wait_duration` (`string`): Required. This determines the minimum duration of time to wait after the configuration changes are applied through the current rollout. A VM continues to count towards the `disruption_budget` at least until this duration of time has passed after configuration changes are applied.
-  - `disruption_budget` (`list[obj]`): Required. The maximum number (or percentage) of VMs per zone to disrupt at any given moment. When `null`, the `disruption_budget` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.rollout.disruption_budget.new](#fn-rolloutdisruptionbudgetnew) constructor.
+  - `disruption_budget` (`list[obj]`): Required. The maximum number (or percentage) of VMs per zone to disrupt at any given moment. When `null`, the `disruption_budget` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.rollout.disruption_budget.new](#fn-rolloutdisruption_budgetnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rollout` sub block.

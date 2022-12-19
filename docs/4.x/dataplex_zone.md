@@ -77,9 +77,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): The name of the zone.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): Required. Immutable. The type of the zone. Possible values: TYPE_UNSPECIFIED, RAW, CURATED
-  - `discovery_spec` (`list[obj]`): Required. Specification of the discovery feature applied to data in this zone. When `null`, the `discovery_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.discovery_spec.new](#fn-dataplexzonediscoveryspecnew) constructor.
-  - `resource_spec` (`list[obj]`): Required. Immutable. Specification of the resources that are referenced by the assets within this zone. When `null`, the `resource_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.resource_spec.new](#fn-dataplexzoneresourcespecnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.timeouts.new](#fn-dataplexzonetimeoutsnew) constructor.
+  - `discovery_spec` (`list[obj]`): Required. Specification of the discovery feature applied to data in this zone. When `null`, the `discovery_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.discovery_spec.new](#fn-discovery_specnew) constructor.
+  - `resource_spec` (`list[obj]`): Required. Immutable. Specification of the resources that are referenced by the assets within this zone. When `null`, the `resource_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.resource_spec.new](#fn-resource_specnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -95,7 +95,7 @@ newAttrs()
 `google.dataplex_zone.newAttrs` constructs a new object with attributes and blocks configured for the `dataplex_zone`
 Terraform resource.
 
-Unlike [google.dataplex_zone.new](#fn-dataplexzonenew), this function will not inject the `resource`
+Unlike [google.dataplex_zone.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -111,9 +111,9 @@ injecting into a complete block.
   - `name` (`string`): The name of the zone.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): Required. Immutable. The type of the zone. Possible values: TYPE_UNSPECIFIED, RAW, CURATED
-  - `discovery_spec` (`list[obj]`): Required. Specification of the discovery feature applied to data in this zone. When `null`, the `discovery_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.discovery_spec.new](#fn-dataplexzonediscoveryspecnew) constructor.
-  - `resource_spec` (`list[obj]`): Required. Immutable. Specification of the resources that are referenced by the assets within this zone. When `null`, the `resource_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.resource_spec.new](#fn-dataplexzoneresourcespecnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.timeouts.new](#fn-dataplexzonetimeoutsnew) constructor.
+  - `discovery_spec` (`list[obj]`): Required. Specification of the discovery feature applied to data in this zone. When `null`, the `discovery_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.discovery_spec.new](#fn-discovery_specnew) constructor.
+  - `resource_spec` (`list[obj]`): Required. Immutable. Specification of the resources that are referenced by the assets within this zone. When `null`, the `resource_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.resource_spec.new](#fn-resource_specnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dataplex_zone` resource into the root Terraform configuration.
@@ -378,8 +378,8 @@ Terraform sub block.
   - `exclude_patterns` (`list`): Optional. The list of patterns to apply for selecting data to exclude during discovery. For Cloud Storage bucket assets, these are interpreted as glob patterns used to match object names. For BigQuery dataset assets, these are interpreted as patterns to match table names. When `null`, the `exclude_patterns` field will be omitted from the resulting object.
   - `include_patterns` (`list`): Optional. The list of patterns to apply for selecting data to include during discovery if only a subset of the data should considered. For Cloud Storage bucket assets, these are interpreted as glob patterns used to match object names. For BigQuery dataset assets, these are interpreted as patterns to match table names. When `null`, the `include_patterns` field will be omitted from the resulting object.
   - `schedule` (`string`): Optional. Cron schedule (https://en.wikipedia.org/wiki/Cron) for running discovery periodically. Successive discovery runs must be scheduled at least 60 minutes apart. The default value is to run discovery every 60 minutes. To explicitly set a timezone to the cron tab, apply a prefix in the cron tab: &#34;CRON_TZ=${IANA_TIME_ZONE}&#34; or TZ=${IANA_TIME_ZONE}&#34;. The ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database. For example, &#34;CRON_TZ=America/New_York 1 * * * *&#34;, or &#34;TZ=America/New_York 1 * * * *&#34;. When `null`, the `schedule` field will be omitted from the resulting object.
-  - `csv_options` (`list[obj]`): Optional. Configuration for CSV data. When `null`, the `csv_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.discovery_spec.csv_options.new](#fn-discoveryspeccsvoptionsnew) constructor.
-  - `json_options` (`list[obj]`): Optional. Configuration for Json data. When `null`, the `json_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.discovery_spec.json_options.new](#fn-discoveryspecjsonoptionsnew) constructor.
+  - `csv_options` (`list[obj]`): Optional. Configuration for CSV data. When `null`, the `csv_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.discovery_spec.csv_options.new](#fn-discovery_speccsv_optionsnew) constructor.
+  - `json_options` (`list[obj]`): Optional. Configuration for Json data. When `null`, the `json_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.discovery_spec.json_options.new](#fn-discovery_specjson_optionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `discovery_spec` sub block.

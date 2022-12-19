@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `labels` (`obj`): A set of key/value label pairs to assign to the feature. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name of the feature. The feature can be up to 64 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The value will be unique given an entity type. When `null`, the `name` field will be omitted from the resulting object.
   - `value_type` (`string`): Type of Feature value. Immutable. https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.featurestores.entityTypes.features#ValueType
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype_feature.timeouts.new](#fn-vertexaifeaturestoreentitytypefeaturetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype_feature.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `google.vertex_ai_featurestore_entitytype_feature.newAttrs` constructs a new object with attributes and blocks configured for the `vertex_ai_featurestore_entitytype_feature`
 Terraform resource.
 
-Unlike [google.vertex_ai_featurestore_entitytype_feature.new](#fn-vertexaifeaturestoreentitytypefeaturenew), this function will not inject the `resource`
+Unlike [google.vertex_ai_featurestore_entitytype_feature.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `labels` (`obj`): A set of key/value label pairs to assign to the feature. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name of the feature. The feature can be up to 64 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The value will be unique given an entity type. When `null`, the `name` field will be omitted from the resulting object.
   - `value_type` (`string`): Type of Feature value. Immutable. https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.featurestores.entityTypes.features#ValueType
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype_feature.timeouts.new](#fn-vertexaifeaturestoreentitytypefeaturetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype_feature.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vertex_ai_featurestore_entitytype_feature` resource into the root Terraform configuration.

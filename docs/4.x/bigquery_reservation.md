@@ -68,7 +68,7 @@ If set to true, this reservation is placed in the organization&#39;s secondary r
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `slot_capacity` (`number`): Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_reservation.timeouts.new](#fn-bigqueryreservationtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_reservation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,7 +84,7 @@ newAttrs()
 `google.bigquery_reservation.newAttrs` constructs a new object with attributes and blocks configured for the `bigquery_reservation`
 Terraform resource.
 
-Unlike [google.bigquery_reservation.new](#fn-bigqueryreservationnew), this function will not inject the `resource`
+Unlike [google.bigquery_reservation.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -104,7 +104,7 @@ If set to true, this reservation is placed in the organization&#39;s secondary r
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `slot_capacity` (`number`): Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_reservation.timeouts.new](#fn-bigqueryreservationtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_reservation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigquery_reservation` resource into the root Terraform configuration.

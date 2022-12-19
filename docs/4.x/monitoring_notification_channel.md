@@ -85,8 +85,8 @@ sensitive and hidden from plan output. The name of the field, eg: password, will
 in the &#39;labels&#39; map in the api request.
 
 Credentials may not be specified in both locations and will cause an error. Changing from one location
-to a different credential configuration in the config will require an apply to update state. When `null`, the `sensitive_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_notification_channel.sensitive_labels.new](#fn-monitoringnotificationchannelsensitivelabelsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_notification_channel.timeouts.new](#fn-monitoringnotificationchanneltimeoutsnew) constructor.
+to a different credential configuration in the config will require an apply to update state. When `null`, the `sensitive_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_notification_channel.sensitive_labels.new](#fn-sensitive_labelsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_notification_channel.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,7 +102,7 @@ newAttrs()
 `google.monitoring_notification_channel.newAttrs` constructs a new object with attributes and blocks configured for the `monitoring_notification_channel`
 Terraform resource.
 
-Unlike [google.monitoring_notification_channel.new](#fn-monitoringnotificationchannelnew), this function will not inject the `resource`
+Unlike [google.monitoring_notification_channel.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -134,8 +134,8 @@ sensitive and hidden from plan output. The name of the field, eg: password, will
 in the &#39;labels&#39; map in the api request.
 
 Credentials may not be specified in both locations and will cause an error. Changing from one location
-to a different credential configuration in the config will require an apply to update state. When `null`, the `sensitive_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_notification_channel.sensitive_labels.new](#fn-monitoringnotificationchannelsensitivelabelsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_notification_channel.timeouts.new](#fn-monitoringnotificationchanneltimeoutsnew) constructor.
+to a different credential configuration in the config will require an apply to update state. When `null`, the `sensitive_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_notification_channel.sensitive_labels.new](#fn-sensitive_labelsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_notification_channel.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitoring_notification_channel` resource into the root Terraform configuration.

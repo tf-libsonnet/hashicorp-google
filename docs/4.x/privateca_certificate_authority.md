@@ -131,13 +131,13 @@ Use with care. Defaults to &#39;false&#39;. When `null`, the `skip_grace_period`
 
 ~&gt; **Note:** For &#39;SUBORDINATE&#39; Certificate Authorities, they need to
 be activated before they can issue certificates. Default value: &#34;SELF_SIGNED&#34; Possible values: [&#34;SELF_SIGNED&#34;, &#34;SUBORDINATE&#34;] When `null`, the `type` field will be omitted from the resulting object.
-  - `config` (`list[obj]`): The config used to create a self-signed X.509 certificate or CSR. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.new](#fn-privatecacertificateauthorityconfignew) constructor.
+  - `config` (`list[obj]`): The config used to create a self-signed X.509 certificate or CSR. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.new](#fn-confignew) constructor.
   - `key_spec` (`list[obj]`): Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
-certificate. Otherwise, it is used to sign a CSR. When `null`, the `key_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.key_spec.new](#fn-privatecacertificateauthoritykeyspecnew) constructor.
+certificate. Otherwise, it is used to sign a CSR. When `null`, the `key_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.key_spec.new](#fn-key_specnew) constructor.
   - `subordinate_config` (`list[obj]`): If this is a subordinate CertificateAuthority, this field will be set
-with the subordinate configuration, which describes its issuers. When `null`, the `subordinate_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.subordinate_config.new](#fn-privatecacertificateauthoritysubordinateconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.timeouts.new](#fn-privatecacertificateauthoritytimeoutsnew) constructor.
+with the subordinate configuration, which describes its issuers. When `null`, the `subordinate_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.subordinate_config.new](#fn-subordinate_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -153,7 +153,7 @@ newAttrs()
 `google.privateca_certificate_authority.newAttrs` constructs a new object with attributes and blocks configured for the `privateca_certificate_authority`
 Terraform resource.
 
-Unlike [google.privateca_certificate_authority.new](#fn-privatecacertificateauthoritynew), this function will not inject the `resource`
+Unlike [google.privateca_certificate_authority.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -192,13 +192,13 @@ Use with care. Defaults to &#39;false&#39;. When `null`, the `skip_grace_period`
 
 ~&gt; **Note:** For &#39;SUBORDINATE&#39; Certificate Authorities, they need to
 be activated before they can issue certificates. Default value: &#34;SELF_SIGNED&#34; Possible values: [&#34;SELF_SIGNED&#34;, &#34;SUBORDINATE&#34;] When `null`, the `type` field will be omitted from the resulting object.
-  - `config` (`list[obj]`): The config used to create a self-signed X.509 certificate or CSR. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.new](#fn-privatecacertificateauthorityconfignew) constructor.
+  - `config` (`list[obj]`): The config used to create a self-signed X.509 certificate or CSR. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.new](#fn-confignew) constructor.
   - `key_spec` (`list[obj]`): Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
-certificate. Otherwise, it is used to sign a CSR. When `null`, the `key_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.key_spec.new](#fn-privatecacertificateauthoritykeyspecnew) constructor.
+certificate. Otherwise, it is used to sign a CSR. When `null`, the `key_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.key_spec.new](#fn-key_specnew) constructor.
   - `subordinate_config` (`list[obj]`): If this is a subordinate CertificateAuthority, this field will be set
-with the subordinate configuration, which describes its issuers. When `null`, the `subordinate_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.subordinate_config.new](#fn-privatecacertificateauthoritysubordinateconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.timeouts.new](#fn-privatecacertificateauthoritytimeoutsnew) constructor.
+with the subordinate configuration, which describes its issuers. When `null`, the `subordinate_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.subordinate_config.new](#fn-subordinate_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `privateca_certificate_authority` resource into the root Terraform configuration.
@@ -576,8 +576,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `subject_config` (`list[obj]`): Specifies some of the values in a certificate that are related to the subject. When `null`, the `subject_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.subject_config.new](#fn-configsubjectconfignew) constructor.
-  - `x509_config` (`list[obj]`): Describes how some of the technical X.509 fields in a certificate should be populated. When `null`, the `x509_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.new](#fn-configx509confignew) constructor.
+  - `subject_config` (`list[obj]`): Specifies some of the values in a certificate that are related to the subject. When `null`, the `subject_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.subject_config.new](#fn-configsubject_confignew) constructor.
+  - `x509_config` (`list[obj]`): Describes how some of the technical X.509 fields in a certificate should be populated. When `null`, the `x509_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.new](#fn-configx509_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `config` sub block.
@@ -600,8 +600,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `subject` (`list[obj]`): Contains distinguished name fields such as the location and organization. When `null`, the `subject` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.subject_config.subject.new](#fn-subjectconfigsubjectnew) constructor.
-  - `subject_alt_name` (`list[obj]`): The subject alternative name fields. When `null`, the `subject_alt_name` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.subject_config.subject_alt_name.new](#fn-subjectconfigsubjectaltnamenew) constructor.
+  - `subject` (`list[obj]`): Contains distinguished name fields such as the location and organization. When `null`, the `subject` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.subject_config.subject.new](#fn-configconfigsubjectnew) constructor.
+  - `subject_alt_name` (`list[obj]`): The subject alternative name fields. When `null`, the `subject_alt_name` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.subject_config.subject_alt_name.new](#fn-configconfigsubject_alt_namenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `subject_config` sub block.
@@ -682,10 +682,10 @@ Terraform sub block.
 **Args**:
   - `aia_ocsp_servers` (`list`): Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the
 &#34;Authority Information Access&#34; extension in the certificate. When `null`, the `aia_ocsp_servers` field will be omitted from the resulting object.
-  - `additional_extensions` (`list[obj]`): Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs. When `null`, the `additional_extensions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.additional_extensions.new](#fn-x509configadditionalextensionsnew) constructor.
-  - `ca_options` (`list[obj]`): Describes values that are relevant in a CA certificate. When `null`, the `ca_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.ca_options.new](#fn-x509configcaoptionsnew) constructor.
-  - `key_usage` (`list[obj]`): Indicates the intended use for keys that correspond to a certificate. When `null`, the `key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.key_usage.new](#fn-x509configkeyusagenew) constructor.
-  - `policy_ids` (`list[obj]`): Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4. When `null`, the `policy_ids` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.policy_ids.new](#fn-x509configpolicyidsnew) constructor.
+  - `additional_extensions` (`list[obj]`): Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs. When `null`, the `additional_extensions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.additional_extensions.new](#fn-configconfigadditional_extensionsnew) constructor.
+  - `ca_options` (`list[obj]`): Describes values that are relevant in a CA certificate. When `null`, the `ca_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.ca_options.new](#fn-configconfigca_optionsnew) constructor.
+  - `key_usage` (`list[obj]`): Indicates the intended use for keys that correspond to a certificate. When `null`, the `key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.key_usage.new](#fn-configconfigkey_usagenew) constructor.
+  - `policy_ids` (`list[obj]`): Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4. When `null`, the `policy_ids` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.policy_ids.new](#fn-configconfigpolicy_idsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `x509_config` sub block.
@@ -711,7 +711,7 @@ Terraform sub block.
   - `critical` (`bool`): Indicates whether or not this extension is critical (i.e., if the client does not know how to
 handle this extension, the client should consider this to be an error).
   - `value` (`string`): The value of this X.509 extension. A base64-encoded string.
-  - `object_id` (`list[obj]`): Describes values that are relevant in a CA certificate. When `null`, the `object_id` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.additional_extensions.object_id.new](#fn-additionalextensionsobjectidnew) constructor.
+  - `object_id` (`list[obj]`): Describes values that are relevant in a CA certificate. When `null`, the `object_id` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.additional_extensions.object_id.new](#fn-configconfigx509_configobject_idnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `additional_extensions` sub block.
@@ -787,9 +787,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `base_key_usage` (`list[obj]`): Describes high-level ways in which a key may be used. When `null`, the `base_key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.key_usage.base_key_usage.new](#fn-keyusagebasekeyusagenew) constructor.
-  - `extended_key_usage` (`list[obj]`): Describes high-level ways in which a key may be used. When `null`, the `extended_key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.key_usage.extended_key_usage.new](#fn-keyusageextendedkeyusagenew) constructor.
-  - `unknown_extended_key_usages` (`list[obj]`): An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages. When `null`, the `unknown_extended_key_usages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.key_usage.unknown_extended_key_usages.new](#fn-keyusageunknownextendedkeyusagesnew) constructor.
+  - `base_key_usage` (`list[obj]`): Describes high-level ways in which a key may be used. When `null`, the `base_key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.key_usage.base_key_usage.new](#fn-configconfigx509_configbase_key_usagenew) constructor.
+  - `extended_key_usage` (`list[obj]`): Describes high-level ways in which a key may be used. When `null`, the `extended_key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.key_usage.extended_key_usage.new](#fn-configconfigx509_configextended_key_usagenew) constructor.
+  - `unknown_extended_key_usages` (`list[obj]`): An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages. When `null`, the `unknown_extended_key_usages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.config.x509_config.key_usage.unknown_extended_key_usages.new](#fn-configconfigx509_configunknown_extended_key_usagesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `key_usage` sub block.
@@ -948,7 +948,7 @@ subordinate CertificateAuthority. This field is used for information
 and usability purposes only. The resource name is in the format
 &#39;projects/*/locations/*/caPools/*/certificateAuthorities/*&#39;. When `null`, the `certificate_authority` field will be omitted from the resulting object.
   - `pem_issuer_chain` (`list[obj]`): Contains the PEM certificate chain for the issuers of this CertificateAuthority, 
-but not pem certificate for this CA itself. When `null`, the `pem_issuer_chain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.subordinate_config.pem_issuer_chain.new](#fn-subordinateconfigpemissuerchainnew) constructor.
+but not pem certificate for this CA itself. When `null`, the `pem_issuer_chain` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate_authority.subordinate_config.pem_issuer_chain.new](#fn-subordinate_configpem_issuer_chainnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `subordinate_config` sub block.

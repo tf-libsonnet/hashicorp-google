@@ -55,7 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `enabled` (`bool`): The current state of the SecretVersion. When `null`, the `enabled` field will be omitted from the resulting object.
   - `secret` (`string`): Secret Manager secret resource
   - `secret_data` (`string`): The secret data. Must be no larger than 64KiB.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret_version.timeouts.new](#fn-secretmanagersecretversiontimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret_version.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -71,7 +71,7 @@ newAttrs()
 `google.secret_manager_secret_version.newAttrs` constructs a new object with attributes and blocks configured for the `secret_manager_secret_version`
 Terraform resource.
 
-Unlike [google.secret_manager_secret_version.new](#fn-secretmanagersecretversionnew), this function will not inject the `resource`
+Unlike [google.secret_manager_secret_version.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -82,7 +82,7 @@ injecting into a complete block.
   - `enabled` (`bool`): The current state of the SecretVersion. When `null`, the `enabled` field will be omitted from the resulting object.
   - `secret` (`string`): Secret Manager secret resource
   - `secret_data` (`string`): The secret data. Must be no larger than 64KiB.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret_version.timeouts.new](#fn-secretmanagersecretversiontimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret_version.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `secret_manager_secret_version` resource into the root Terraform configuration.

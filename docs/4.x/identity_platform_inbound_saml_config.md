@@ -69,10 +69,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 hyphens, underscores or periods. The part after &#39;saml.&#39; must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `idp_config` (`list[obj]`): SAML IdP configuration when the project acts as the relying party When `null`, the `idp_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.idp_config.new](#fn-identityplatforminboundsamlconfigidpconfignew) constructor.
+  - `idp_config` (`list[obj]`): SAML IdP configuration when the project acts as the relying party When `null`, the `idp_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.idp_config.new](#fn-idp_confignew) constructor.
   - `sp_config` (`list[obj]`): SAML SP (Service Provider) configuration when the project acts as the relying party to receive
-and accept an authentication assertion issued by a SAML identity provider. When `null`, the `sp_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.sp_config.new](#fn-identityplatforminboundsamlconfigspconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.timeouts.new](#fn-identityplatforminboundsamlconfigtimeoutsnew) constructor.
+and accept an authentication assertion issued by a SAML identity provider. When `null`, the `sp_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.sp_config.new](#fn-sp_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,7 +88,7 @@ newAttrs()
 `google.identity_platform_inbound_saml_config.newAttrs` constructs a new object with attributes and blocks configured for the `identity_platform_inbound_saml_config`
 Terraform resource.
 
-Unlike [google.identity_platform_inbound_saml_config.new](#fn-identityplatforminboundsamlconfignew), this function will not inject the `resource`
+Unlike [google.identity_platform_inbound_saml_config.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -102,10 +102,10 @@ injecting into a complete block.
 hyphens, underscores or periods. The part after &#39;saml.&#39; must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `idp_config` (`list[obj]`): SAML IdP configuration when the project acts as the relying party When `null`, the `idp_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.idp_config.new](#fn-identityplatforminboundsamlconfigidpconfignew) constructor.
+  - `idp_config` (`list[obj]`): SAML IdP configuration when the project acts as the relying party When `null`, the `idp_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.idp_config.new](#fn-idp_confignew) constructor.
   - `sp_config` (`list[obj]`): SAML SP (Service Provider) configuration when the project acts as the relying party to receive
-and accept an authentication assertion issued by a SAML identity provider. When `null`, the `sp_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.sp_config.new](#fn-identityplatforminboundsamlconfigspconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.timeouts.new](#fn-identityplatforminboundsamlconfigtimeoutsnew) constructor.
+and accept an authentication assertion issued by a SAML identity provider. When `null`, the `sp_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.sp_config.new](#fn-sp_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `identity_platform_inbound_saml_config` resource into the root Terraform configuration.
@@ -305,7 +305,7 @@ Terraform sub block.
   - `idp_entity_id` (`string`): Unique identifier for all SAML entities
   - `sign_request` (`bool`): Indicates if outbounding SAMLRequest should be signed. When `null`, the `sign_request` field will be omitted from the resulting object.
   - `sso_url` (`string`): URL to send Authentication request to.
-  - `idp_certificates` (`list[obj]`): The IdP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP. When `null`, the `idp_certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.idp_config.idp_certificates.new](#fn-idpconfigidpcertificatesnew) constructor.
+  - `idp_certificates` (`list[obj]`): The IdP&#39;s certificate data to verify the signature in the SAMLResponse issued by the IDP. When `null`, the `idp_certificates` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.idp_config.idp_certificates.new](#fn-idp_configidp_certificatesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `idp_config` sub block.

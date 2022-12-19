@@ -68,8 +68,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `parent` (`string`): The AccessPolicy this AccessLevel lives in.
 Format: accessPolicies/{policy_id}
-  - `access_levels` (`list[obj]`): The desired Access Levels that should replace all existing Access Levels in the Access Policy. When `null`, the `access_levels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.new](#fn-accesscontextmanageraccesslevelsaccesslevelsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.timeouts.new](#fn-accesscontextmanageraccesslevelstimeoutsnew) constructor.
+  - `access_levels` (`list[obj]`): The desired Access Levels that should replace all existing Access Levels in the Access Policy. When `null`, the `access_levels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.new](#fn-access_levelsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -85,7 +85,7 @@ newAttrs()
 `google.access_context_manager_access_levels.newAttrs` constructs a new object with attributes and blocks configured for the `access_context_manager_access_levels`
 Terraform resource.
 
-Unlike [google.access_context_manager_access_levels.new](#fn-accesscontextmanageraccesslevelsnew), this function will not inject the `resource`
+Unlike [google.access_context_manager_access_levels.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -95,8 +95,8 @@ injecting into a complete block.
 **Args**:
   - `parent` (`string`): The AccessPolicy this AccessLevel lives in.
 Format: accessPolicies/{policy_id}
-  - `access_levels` (`list[obj]`): The desired Access Levels that should replace all existing Access Levels in the Access Policy. When `null`, the `access_levels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.new](#fn-accesscontextmanageraccesslevelsaccesslevelsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.timeouts.new](#fn-accesscontextmanageraccesslevelstimeoutsnew) constructor.
+  - `access_levels` (`list[obj]`): The desired Access Levels that should replace all existing Access Levels in the Access Policy. When `null`, the `access_levels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.new](#fn-access_levelsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `access_context_manager_access_levels` resource into the root Terraform configuration.
@@ -213,9 +213,9 @@ Terraform sub block.
 with a letter and only include alphanumeric and &#39;_&#39;.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
   - `title` (`string`): Human readable title. Must be unique within the Policy.
-  - `basic` (`list[obj]`): A set of predefined conditions for the access level and a combining function. When `null`, the `basic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.basic.new](#fn-accesslevelsbasicnew) constructor.
+  - `basic` (`list[obj]`): A set of predefined conditions for the access level and a combining function. When `null`, the `basic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.basic.new](#fn-access_levelsbasicnew) constructor.
   - `custom` (`list[obj]`): Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request. 
-See CEL spec at: https://github.com/google/cel-spec. When `null`, the `custom` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.custom.new](#fn-accesslevelscustomnew) constructor.
+See CEL spec at: https://github.com/google/cel-spec. When `null`, the `custom` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.custom.new](#fn-access_levelscustomnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `access_levels` sub block.
@@ -243,7 +243,7 @@ is granted this AccessLevel. If AND is used, each Condition in
 conditions must be satisfied for the AccessLevel to be applied. If
 OR is used, at least one Condition in conditions must be satisfied
 for the AccessLevel to be applied. Default value: &#34;AND&#34; Possible values: [&#34;AND&#34;, &#34;OR&#34;] When `null`, the `combining_function` field will be omitted from the resulting object.
-  - `conditions` (`list[obj]`): A set of requirements for the AccessLevel to be granted. When `null`, the `conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.basic.conditions.new](#fn-basicconditionsnew) constructor.
+  - `conditions` (`list[obj]`): A set of requirements for the AccessLevel to be granted. When `null`, the `conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.basic.conditions.new](#fn-access_levelsaccess_levelsconditionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `basic` sub block.
@@ -297,7 +297,7 @@ granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name} When `null`, the `required_access_levels` field will be omitted from the resulting object.
   - `device_policy` (`list[obj]`): Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
-allowed. When `null`, the `device_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.basic.conditions.device_policy.new](#fn-conditionsdevicepolicynew) constructor.
+allowed. When `null`, the `device_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.basic.conditions.device_policy.new](#fn-access_levelsaccess_levelsbasicdevice_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `conditions` sub block.
@@ -329,7 +329,7 @@ An empty list allows all statuses. Possible values: [&#34;ENCRYPTION_UNSPECIFIED
   - `require_screen_lock` (`bool`): Whether or not screenlock is required for the DevicePolicy
 to be true. Defaults to false. When `null`, the `require_screen_lock` field will be omitted from the resulting object.
   - `os_constraints` (`list[obj]`): A list of allowed OS versions.
-An empty list allows all types and all versions. When `null`, the `os_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.basic.conditions.device_policy.os_constraints.new](#fn-devicepolicyosconstraintsnew) constructor.
+An empty list allows all types and all versions. When `null`, the `os_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.basic.conditions.device_policy.os_constraints.new](#fn-access_levelsaccess_levelsbasicconditionsos_constraintsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `device_policy` sub block.
@@ -380,7 +380,7 @@ Terraform sub block.
 **Args**:
   - `expr` (`list[obj]`): Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
 This page details the objects and attributes that are used to the build the CEL expressions for 
-custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec. When `null`, the `expr` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.custom.expr.new](#fn-customexprnew) constructor.
+custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec. When `null`, the `expr` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.custom.expr.new](#fn-access_levelsaccess_levelsexprnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `custom` sub block.

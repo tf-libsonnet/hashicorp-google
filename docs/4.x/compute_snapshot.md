@@ -85,11 +85,11 @@ character, which cannot be a dash.
   - `storage_locations` (`list`): Cloud Storage bucket storage location of the snapshot (regional or multi-regional). When `null`, the `storage_locations` field will be omitted from the resulting object.
   - `zone` (`string`): A reference to the zone where the disk is hosted. When `null`, the `zone` field will be omitted from the resulting object.
   - `snapshot_encryption_key` (`list[obj]`): The customer-supplied encryption key of the snapshot. Required if the
-source snapshot is protected by a customer-supplied encryption key. When `null`, the `snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.snapshot_encryption_key.new](#fn-computesnapshotsnapshotencryptionkeynew) constructor.
+source snapshot is protected by a customer-supplied encryption key. When `null`, the `snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.snapshot_encryption_key.new](#fn-snapshot_encryption_keynew) constructor.
   - `source_disk_encryption_key` (`list[obj]`): The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key. When `null`, the `source_disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.source_disk_encryption_key.new](#fn-computesnapshotsourcediskencryptionkeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.timeouts.new](#fn-computesnapshottimeoutsnew) constructor.
+key. When `null`, the `source_disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.source_disk_encryption_key.new](#fn-source_disk_encryption_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -105,7 +105,7 @@ newAttrs()
 `google.compute_snapshot.newAttrs` constructs a new object with attributes and blocks configured for the `compute_snapshot`
 Terraform resource.
 
-Unlike [google.compute_snapshot.new](#fn-computesnapshotnew), this function will not inject the `resource`
+Unlike [google.compute_snapshot.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -133,11 +133,11 @@ character, which cannot be a dash.
   - `storage_locations` (`list`): Cloud Storage bucket storage location of the snapshot (regional or multi-regional). When `null`, the `storage_locations` field will be omitted from the resulting object.
   - `zone` (`string`): A reference to the zone where the disk is hosted. When `null`, the `zone` field will be omitted from the resulting object.
   - `snapshot_encryption_key` (`list[obj]`): The customer-supplied encryption key of the snapshot. Required if the
-source snapshot is protected by a customer-supplied encryption key. When `null`, the `snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.snapshot_encryption_key.new](#fn-computesnapshotsnapshotencryptionkeynew) constructor.
+source snapshot is protected by a customer-supplied encryption key. When `null`, the `snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.snapshot_encryption_key.new](#fn-snapshot_encryption_keynew) constructor.
   - `source_disk_encryption_key` (`list[obj]`): The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key. When `null`, the `source_disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.source_disk_encryption_key.new](#fn-computesnapshotsourcediskencryptionkeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.timeouts.new](#fn-computesnapshottimeoutsnew) constructor.
+key. When `null`, the `source_disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.source_disk_encryption_key.new](#fn-source_disk_encryption_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_snapshot` resource into the root Terraform configuration.

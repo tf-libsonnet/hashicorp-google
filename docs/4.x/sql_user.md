@@ -71,8 +71,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): The user type. It determines the method to authenticate the user during login.
                 The default is the database&#39;s built-in user type. Flags include &#34;BUILT_IN&#34;, &#34;CLOUD_IAM_USER&#34;, or &#34;CLOUD_IAM_SERVICE_ACCOUNT&#34;. When `null`, the `type` field will be omitted from the resulting object.
-  - `password_policy` (`list[obj]`):  When `null`, the `password_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_user.password_policy.new](#fn-sqluserpasswordpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_user.timeouts.new](#fn-sqlusertimeoutsnew) constructor.
+  - `password_policy` (`list[obj]`):  When `null`, the `password_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_user.password_policy.new](#fn-password_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_user.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,7 +88,7 @@ newAttrs()
 `google.sql_user.newAttrs` constructs a new object with attributes and blocks configured for the `sql_user`
 Terraform resource.
 
-Unlike [google.sql_user.new](#fn-sqlusernew), this function will not inject the `resource`
+Unlike [google.sql_user.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -107,8 +107,8 @@ injecting into a complete block.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): The user type. It determines the method to authenticate the user during login.
                 The default is the database&#39;s built-in user type. Flags include &#34;BUILT_IN&#34;, &#34;CLOUD_IAM_USER&#34;, or &#34;CLOUD_IAM_SERVICE_ACCOUNT&#34;. When `null`, the `type` field will be omitted from the resulting object.
-  - `password_policy` (`list[obj]`):  When `null`, the `password_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_user.password_policy.new](#fn-sqluserpasswordpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_user.timeouts.new](#fn-sqlusertimeoutsnew) constructor.
+  - `password_policy` (`list[obj]`):  When `null`, the `password_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_user.password_policy.new](#fn-password_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_user.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sql_user` resource into the root Terraform configuration.

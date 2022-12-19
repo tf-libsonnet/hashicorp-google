@@ -55,7 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `common_name` (`string`): The common name to be used in the certificate to identify the client. Constrained to [a-zA-Z.-_ ]&#43;. Changing this forces a new resource to be created.
   - `instance` (`string`): The name of the Cloud SQL instance. Changing this forces a new resource to be created.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_ssl_cert.timeouts.new](#fn-sqlsslcerttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_ssl_cert.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -71,7 +71,7 @@ newAttrs()
 `google.sql_ssl_cert.newAttrs` constructs a new object with attributes and blocks configured for the `sql_ssl_cert`
 Terraform resource.
 
-Unlike [google.sql_ssl_cert.new](#fn-sqlsslcertnew), this function will not inject the `resource`
+Unlike [google.sql_ssl_cert.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -82,7 +82,7 @@ injecting into a complete block.
   - `common_name` (`string`): The common name to be used in the certificate to identify the client. Constrained to [a-zA-Z.-_ ]&#43;. Changing this forces a new resource to be created.
   - `instance` (`string`): The name of the Cloud SQL instance. Changing this forces a new resource to be created.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_ssl_cert.timeouts.new](#fn-sqlsslcerttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_ssl_cert.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sql_ssl_cert` resource into the root Terraform configuration.

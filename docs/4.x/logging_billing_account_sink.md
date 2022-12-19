@@ -65,8 +65,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `disabled` (`bool`): If set to True, then this sink is disabled and it does not export any log entries. When `null`, the `disabled` field will be omitted from the resulting object.
   - `filter` (`string`): The filter to apply when exporting logs. Only log entries that match the filter are exported. When `null`, the `filter` field will be omitted from the resulting object.
   - `name` (`string`): The name of the logging sink.
-  - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_sink.bigquery_options.new](#fn-loggingbillingaccountsinkbigqueryoptionsnew) constructor.
-  - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_sink.exclusions.new](#fn-loggingbillingaccountsinkexclusionsnew) constructor.
+  - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_sink.bigquery_options.new](#fn-bigquery_optionsnew) constructor.
+  - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_sink.exclusions.new](#fn-exclusionsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -82,7 +82,7 @@ newAttrs()
 `google.logging_billing_account_sink.newAttrs` constructs a new object with attributes and blocks configured for the `logging_billing_account_sink`
 Terraform resource.
 
-Unlike [google.logging_billing_account_sink.new](#fn-loggingbillingaccountsinknew), this function will not inject the `resource`
+Unlike [google.logging_billing_account_sink.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -96,8 +96,8 @@ injecting into a complete block.
   - `disabled` (`bool`): If set to True, then this sink is disabled and it does not export any log entries. When `null`, the `disabled` field will be omitted from the resulting object.
   - `filter` (`string`): The filter to apply when exporting logs. Only log entries that match the filter are exported. When `null`, the `filter` field will be omitted from the resulting object.
   - `name` (`string`): The name of the logging sink.
-  - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_sink.bigquery_options.new](#fn-loggingbillingaccountsinkbigqueryoptionsnew) constructor.
-  - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_sink.exclusions.new](#fn-loggingbillingaccountsinkexclusionsnew) constructor.
+  - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_sink.bigquery_options.new](#fn-bigquery_optionsnew) constructor.
+  - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_sink.exclusions.new](#fn-exclusionsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logging_billing_account_sink` resource into the root Terraform configuration.

@@ -80,8 +80,8 @@ Cloud Identity resource hierarchy.
 
 Must be of the form identitysources/{identity_source_id} for external-identity-mapped
 groups or customers/{customer_id} for Google Groups.
-  - `group_key` (`list[obj]`): EntityKey of the Group. When `null`, the `group_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group.group_key.new](#fn-cloudidentitygroupgroupkeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group.timeouts.new](#fn-cloudidentitygrouptimeoutsnew) constructor.
+  - `group_key` (`list[obj]`): EntityKey of the Group. When `null`, the `group_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group.group_key.new](#fn-group_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,7 +97,7 @@ newAttrs()
 `google.cloud_identity_group.newAttrs` constructs a new object with attributes and blocks configured for the `cloud_identity_group`
 Terraform resource.
 
-Unlike [google.cloud_identity_group.new](#fn-cloudidentitygroupnew), this function will not inject the `resource`
+Unlike [google.cloud_identity_group.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -127,8 +127,8 @@ Cloud Identity resource hierarchy.
 
 Must be of the form identitysources/{identity_source_id} for external-identity-mapped
 groups or customers/{customer_id} for Google Groups.
-  - `group_key` (`list[obj]`): EntityKey of the Group. When `null`, the `group_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group.group_key.new](#fn-cloudidentitygroupgroupkeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group.timeouts.new](#fn-cloudidentitygrouptimeoutsnew) constructor.
+  - `group_key` (`list[obj]`): EntityKey of the Group. When `null`, the `group_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group.group_key.new](#fn-group_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloud_identity_group` resource into the root Terraform configuration.

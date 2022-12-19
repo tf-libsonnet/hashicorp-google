@@ -147,11 +147,11 @@ bet set to True if any of the fields in the spec are set to non-default values. 
   - `spec` (`list[obj]`): Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the &#39;useExplicitDryRunSpec&#39; flag is set. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.new](#fn-accesscontextmanagerserviceperimeterspecnew) constructor.
+the &#39;useExplicitDryRunSpec&#39; flag is set. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.new](#fn-specnew) constructor.
   - `status` (`list[obj]`): ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries. When `null`, the `status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.new](#fn-accesscontextmanagerserviceperimeterstatusnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.timeouts.new](#fn-accesscontextmanagerserviceperimetertimeoutsnew) constructor.
+perimeter content and boundaries. When `null`, the `status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.new](#fn-statusnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -167,7 +167,7 @@ newAttrs()
 `google.access_context_manager_service_perimeter.newAttrs` constructs a new object with attributes and blocks configured for the `access_context_manager_service_perimeter`
 Terraform resource.
 
-Unlike [google.access_context_manager_service_perimeter.new](#fn-accesscontextmanagerserviceperimeternew), this function will not inject the `resource`
+Unlike [google.access_context_manager_service_perimeter.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -211,11 +211,11 @@ bet set to True if any of the fields in the spec are set to non-default values. 
   - `spec` (`list[obj]`): Proposed (or dry run) ServicePerimeter configuration.
 This configuration allows to specify and test ServicePerimeter configuration
 without enforcing actual access restrictions. Only allowed to be set when
-the &#39;useExplicitDryRunSpec&#39; flag is set. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.new](#fn-accesscontextmanagerserviceperimeterspecnew) constructor.
+the &#39;useExplicitDryRunSpec&#39; flag is set. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.new](#fn-specnew) constructor.
   - `status` (`list[obj]`): ServicePerimeter configuration. Specifies sets of resources,
 restricted services and access levels that determine
-perimeter content and boundaries. When `null`, the `status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.new](#fn-accesscontextmanagerserviceperimeterstatusnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.timeouts.new](#fn-accesscontextmanagerserviceperimetertimeoutsnew) constructor.
+perimeter content and boundaries. When `null`, the `status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.new](#fn-statusnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `access_context_manager_service_perimeter` resource into the root Terraform configuration.
@@ -465,13 +465,13 @@ restrictions. When `null`, the `restricted_services` field will be omitted from 
   - `egress_policies` (`list[obj]`): List of EgressPolicies to apply to the perimeter. A perimeter may 
 have multiple EgressPolicies, each of which is evaluated separately.
 Access is granted if any EgressPolicy grants it. Must be empty for 
-a perimeter bridge. When `null`, the `egress_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.egress_policies.new](#fn-specegresspoliciesnew) constructor.
+a perimeter bridge. When `null`, the `egress_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.egress_policies.new](#fn-specegress_policiesnew) constructor.
   - `ingress_policies` (`list[obj]`): List of &#39;IngressPolicies&#39; to apply to the perimeter. A perimeter may
 have multiple &#39;IngressPolicies&#39;, each of which is evaluated
 separately. Access is granted if any &#39;Ingress Policy&#39; grants it.
-Must be empty for a perimeter bridge. When `null`, the `ingress_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.ingress_policies.new](#fn-specingresspoliciesnew) constructor.
+Must be empty for a perimeter bridge. When `null`, the `ingress_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.ingress_policies.new](#fn-specingress_policiesnew) constructor.
   - `vpc_accessible_services` (`list[obj]`): Specifies how APIs are allowed to communicate within the Service
-Perimeter. When `null`, the `vpc_accessible_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.vpc_accessible_services.new](#fn-specvpcaccessibleservicesnew) constructor.
+Perimeter. When `null`, the `vpc_accessible_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.vpc_accessible_services.new](#fn-specvpc_accessible_servicesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `spec` sub block.
@@ -494,9 +494,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `egress_from` (`list[obj]`): Defines conditions on the source of a request causing this &#39;EgressPolicy&#39; to apply. When `null`, the `egress_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.egress_policies.egress_from.new](#fn-egresspoliciesegressfromnew) constructor.
+  - `egress_from` (`list[obj]`): Defines conditions on the source of a request causing this &#39;EgressPolicy&#39; to apply. When `null`, the `egress_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.egress_policies.egress_from.new](#fn-specspecegress_fromnew) constructor.
   - `egress_to` (`list[obj]`): Defines the conditions on the &#39;ApiOperation&#39; and destination resources that 
-cause this &#39;EgressPolicy&#39; to apply. When `null`, the `egress_to` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.egress_policies.egress_to.new](#fn-egresspoliciesegresstonew) constructor.
+cause this &#39;EgressPolicy&#39; to apply. When `null`, the `egress_to` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.egress_policies.egress_to.new](#fn-specspecegress_tonew) constructor.
 
 **Returns**:
   - An attribute object that represents the `egress_policies` sub block.
@@ -556,7 +556,7 @@ if it contains a resource in this list. If * is specified for resources,
 then this &#39;EgressTo&#39; rule will authorize access to all resources outside 
 the perimeter. When `null`, the `resources` field will be omitted from the resulting object.
   - `operations` (`list[obj]`): A list of &#39;ApiOperations&#39; that this egress rule applies to. A request matches 
-if it contains an operation/service in this list. When `null`, the `operations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.egress_policies.egress_to.operations.new](#fn-egresstooperationsnew) constructor.
+if it contains an operation/service in this list. When `null`, the `operations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.egress_policies.egress_to.operations.new](#fn-specspecegress_policiesoperationsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `egress_to` sub block.
@@ -585,7 +585,7 @@ field set to &#39;*&#39; will allow all methods AND permissions for all services
   - `method_selectors` (`list[obj]`): API methods or permissions to allow. Method or permission must belong 
 to the service specified by &#39;serviceName&#39; field. A single MethodSelector 
 entry with &#39;*&#39; specified for the &#39;method&#39; field will allow all methods 
-AND permissions for the service specified in &#39;serviceName&#39;. When `null`, the `method_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.egress_policies.egress_to.operations.method_selectors.new](#fn-operationsmethodselectorsnew) constructor.
+AND permissions for the service specified in &#39;serviceName&#39;. When `null`, the `method_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.egress_policies.egress_to.operations.method_selectors.new](#fn-specspecegress_policiesegress_tomethod_selectorsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `operations` sub block.
@@ -636,9 +636,9 @@ Terraform sub block.
 
 **Args**:
   - `ingress_from` (`list[obj]`): Defines the conditions on the source of a request causing this &#39;IngressPolicy&#39;
-to apply. When `null`, the `ingress_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.ingress_policies.ingress_from.new](#fn-ingresspoliciesingressfromnew) constructor.
+to apply. When `null`, the `ingress_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.ingress_policies.ingress_from.new](#fn-specspecingress_fromnew) constructor.
   - `ingress_to` (`list[obj]`): Defines the conditions on the &#39;ApiOperation&#39; and request destination that cause
-this &#39;IngressPolicy&#39; to apply. When `null`, the `ingress_to` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.ingress_policies.ingress_to.new](#fn-ingresspoliciesingresstonew) constructor.
+this &#39;IngressPolicy&#39; to apply. When `null`, the `ingress_to` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.ingress_policies.ingress_to.new](#fn-specspecingress_tonew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ingress_policies` sub block.
@@ -667,7 +667,7 @@ individual user or service account only. When `null`, the `identities` field wil
   - `identity_type` (`string`): Specifies the type of identities that are allowed access from outside the 
 perimeter. If left unspecified, then members of &#39;identities&#39; field will be 
 allowed access. Possible values: [&#34;IDENTITY_TYPE_UNSPECIFIED&#34;, &#34;ANY_IDENTITY&#34;, &#34;ANY_USER_ACCOUNT&#34;, &#34;ANY_SERVICE_ACCOUNT&#34;] When `null`, the `identity_type` field will be omitted from the resulting object.
-  - `sources` (`list[obj]`): Sources that this &#39;IngressPolicy&#39; authorizes access from. When `null`, the `sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.ingress_policies.ingress_from.sources.new](#fn-ingressfromsourcesnew) constructor.
+  - `sources` (`list[obj]`): Sources that this &#39;IngressPolicy&#39; authorizes access from. When `null`, the `sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.ingress_policies.ingress_from.sources.new](#fn-specspecingress_policiessourcesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ingress_from` sub block.
@@ -735,7 +735,7 @@ then this &#39;IngressTo&#39; rule will authorize access to all
 resources inside the perimeter, provided that the request
 also matches the &#39;operations&#39; field. When `null`, the `resources` field will be omitted from the resulting object.
   - `operations` (`list[obj]`): A list of &#39;ApiOperations&#39; the sources specified in corresponding &#39;IngressFrom&#39; 
-are allowed to perform in this &#39;ServicePerimeter&#39;. When `null`, the `operations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.ingress_policies.ingress_to.operations.new](#fn-ingresstooperationsnew) constructor.
+are allowed to perform in this &#39;ServicePerimeter&#39;. When `null`, the `operations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.ingress_policies.ingress_to.operations.new](#fn-specspecingress_policiesoperationsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ingress_to` sub block.
@@ -764,7 +764,7 @@ field set to &#39;*&#39; will allow all methods AND permissions for all services
   - `method_selectors` (`list[obj]`): API methods or permissions to allow. Method or permission must belong to 
 the service specified by serviceName field. A single &#39;MethodSelector&#39; entry 
 with &#39;*&#39; specified for the method field will allow all methods AND 
-permissions for the service specified in &#39;serviceName&#39;. When `null`, the `method_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.ingress_policies.ingress_to.operations.method_selectors.new](#fn-operationsmethodselectorsnew) constructor.
+permissions for the service specified in &#39;serviceName&#39;. When `null`, the `method_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.ingress_policies.ingress_to.operations.method_selectors.new](#fn-specspecingress_policiesingress_tomethod_selectorsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `operations` sub block.
@@ -861,13 +861,13 @@ restrictions. When `null`, the `restricted_services` field will be omitted from 
   - `egress_policies` (`list[obj]`): List of EgressPolicies to apply to the perimeter. A perimeter may 
 have multiple EgressPolicies, each of which is evaluated separately.
 Access is granted if any EgressPolicy grants it. Must be empty for 
-a perimeter bridge. When `null`, the `egress_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.egress_policies.new](#fn-statusegresspoliciesnew) constructor.
+a perimeter bridge. When `null`, the `egress_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.egress_policies.new](#fn-statusegress_policiesnew) constructor.
   - `ingress_policies` (`list[obj]`): List of &#39;IngressPolicies&#39; to apply to the perimeter. A perimeter may
 have multiple &#39;IngressPolicies&#39;, each of which is evaluated
 separately. Access is granted if any &#39;Ingress Policy&#39; grants it.
-Must be empty for a perimeter bridge. When `null`, the `ingress_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.ingress_policies.new](#fn-statusingresspoliciesnew) constructor.
+Must be empty for a perimeter bridge. When `null`, the `ingress_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.ingress_policies.new](#fn-statusingress_policiesnew) constructor.
   - `vpc_accessible_services` (`list[obj]`): Specifies how APIs are allowed to communicate within the Service
-Perimeter. When `null`, the `vpc_accessible_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.vpc_accessible_services.new](#fn-statusvpcaccessibleservicesnew) constructor.
+Perimeter. When `null`, the `vpc_accessible_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.vpc_accessible_services.new](#fn-statusvpc_accessible_servicesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `status` sub block.
@@ -890,9 +890,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `egress_from` (`list[obj]`): Defines conditions on the source of a request causing this &#39;EgressPolicy&#39; to apply. When `null`, the `egress_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.egress_policies.egress_from.new](#fn-egresspoliciesegressfromnew) constructor.
+  - `egress_from` (`list[obj]`): Defines conditions on the source of a request causing this &#39;EgressPolicy&#39; to apply. When `null`, the `egress_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.egress_policies.egress_from.new](#fn-statusstatusegress_fromnew) constructor.
   - `egress_to` (`list[obj]`): Defines the conditions on the &#39;ApiOperation&#39; and destination resources that 
-cause this &#39;EgressPolicy&#39; to apply. When `null`, the `egress_to` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.egress_policies.egress_to.new](#fn-egresspoliciesegresstonew) constructor.
+cause this &#39;EgressPolicy&#39; to apply. When `null`, the `egress_to` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.egress_policies.egress_to.new](#fn-statusstatusegress_tonew) constructor.
 
 **Returns**:
   - An attribute object that represents the `egress_policies` sub block.
@@ -952,7 +952,7 @@ if it contains a resource in this list. If * is specified for resources,
 then this &#39;EgressTo&#39; rule will authorize access to all resources outside 
 the perimeter. When `null`, the `resources` field will be omitted from the resulting object.
   - `operations` (`list[obj]`): A list of &#39;ApiOperations&#39; that this egress rule applies to. A request matches 
-if it contains an operation/service in this list. When `null`, the `operations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.egress_policies.egress_to.operations.new](#fn-egresstooperationsnew) constructor.
+if it contains an operation/service in this list. When `null`, the `operations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.egress_policies.egress_to.operations.new](#fn-statusstatusegress_policiesoperationsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `egress_to` sub block.
@@ -981,7 +981,7 @@ field set to &#39;*&#39; will allow all methods AND permissions for all services
   - `method_selectors` (`list[obj]`): API methods or permissions to allow. Method or permission must belong 
 to the service specified by &#39;serviceName&#39; field. A single MethodSelector 
 entry with &#39;*&#39; specified for the &#39;method&#39; field will allow all methods 
-AND permissions for the service specified in &#39;serviceName&#39;. When `null`, the `method_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.egress_policies.egress_to.operations.method_selectors.new](#fn-operationsmethodselectorsnew) constructor.
+AND permissions for the service specified in &#39;serviceName&#39;. When `null`, the `method_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.egress_policies.egress_to.operations.method_selectors.new](#fn-statusstatusegress_policiesegress_tomethod_selectorsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `operations` sub block.
@@ -1032,9 +1032,9 @@ Terraform sub block.
 
 **Args**:
   - `ingress_from` (`list[obj]`): Defines the conditions on the source of a request causing this &#39;IngressPolicy&#39;
-to apply. When `null`, the `ingress_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.ingress_policies.ingress_from.new](#fn-ingresspoliciesingressfromnew) constructor.
+to apply. When `null`, the `ingress_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.ingress_policies.ingress_from.new](#fn-statusstatusingress_fromnew) constructor.
   - `ingress_to` (`list[obj]`): Defines the conditions on the &#39;ApiOperation&#39; and request destination that cause
-this &#39;IngressPolicy&#39; to apply. When `null`, the `ingress_to` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.ingress_policies.ingress_to.new](#fn-ingresspoliciesingresstonew) constructor.
+this &#39;IngressPolicy&#39; to apply. When `null`, the `ingress_to` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.ingress_policies.ingress_to.new](#fn-statusstatusingress_tonew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ingress_policies` sub block.
@@ -1063,7 +1063,7 @@ individual user or service account only. When `null`, the `identities` field wil
   - `identity_type` (`string`): Specifies the type of identities that are allowed access from outside the 
 perimeter. If left unspecified, then members of &#39;identities&#39; field will be 
 allowed access. Possible values: [&#34;IDENTITY_TYPE_UNSPECIFIED&#34;, &#34;ANY_IDENTITY&#34;, &#34;ANY_USER_ACCOUNT&#34;, &#34;ANY_SERVICE_ACCOUNT&#34;] When `null`, the `identity_type` field will be omitted from the resulting object.
-  - `sources` (`list[obj]`): Sources that this &#39;IngressPolicy&#39; authorizes access from. When `null`, the `sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.ingress_policies.ingress_from.sources.new](#fn-ingressfromsourcesnew) constructor.
+  - `sources` (`list[obj]`): Sources that this &#39;IngressPolicy&#39; authorizes access from. When `null`, the `sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.ingress_policies.ingress_from.sources.new](#fn-statusstatusingress_policiessourcesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ingress_from` sub block.
@@ -1131,7 +1131,7 @@ then this &#39;IngressTo&#39; rule will authorize access to all
 resources inside the perimeter, provided that the request
 also matches the &#39;operations&#39; field. When `null`, the `resources` field will be omitted from the resulting object.
   - `operations` (`list[obj]`): A list of &#39;ApiOperations&#39; the sources specified in corresponding &#39;IngressFrom&#39; 
-are allowed to perform in this &#39;ServicePerimeter&#39;. When `null`, the `operations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.ingress_policies.ingress_to.operations.new](#fn-ingresstooperationsnew) constructor.
+are allowed to perform in this &#39;ServicePerimeter&#39;. When `null`, the `operations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.ingress_policies.ingress_to.operations.new](#fn-statusstatusingress_policiesoperationsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ingress_to` sub block.
@@ -1160,7 +1160,7 @@ field set to &#39;*&#39; will allow all methods AND permissions for all services
   - `method_selectors` (`list[obj]`): API methods or permissions to allow. Method or permission must belong to 
 the service specified by serviceName field. A single &#39;MethodSelector&#39; entry 
 with &#39;*&#39; specified for the method field will allow all methods AND 
-permissions for the service specified in &#39;serviceName&#39;. When `null`, the `method_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.ingress_policies.ingress_to.operations.method_selectors.new](#fn-operationsmethodselectorsnew) constructor.
+permissions for the service specified in &#39;serviceName&#39;. When `null`, the `method_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.ingress_policies.ingress_to.operations.method_selectors.new](#fn-statusstatusingress_policiesingress_tomethod_selectorsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `operations` sub block.

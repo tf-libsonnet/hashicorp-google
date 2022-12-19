@@ -64,7 +64,7 @@ IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user. When `null`, the `priority` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `source_range` (`string`): IP address or range, defined using CIDR notation, of requests that this rule applies to.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_firewall_rule.timeouts.new](#fn-appenginefirewallruletimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_firewall_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `google.app_engine_firewall_rule.newAttrs` constructs a new object with attributes and blocks configured for the `app_engine_firewall_rule`
 Terraform resource.
 
-Unlike [google.app_engine_firewall_rule.new](#fn-appenginefirewallrulenew), this function will not inject the `resource`
+Unlike [google.app_engine_firewall_rule.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -98,7 +98,7 @@ IPv6 traffic when no previous rule matches. Only the action of
 this rule can be modified by the user. When `null`, the `priority` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `source_range` (`string`): IP address or range, defined using CIDR notation, of requests that this rule applies to.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_firewall_rule.timeouts.new](#fn-appenginefirewallruletimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_firewall_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `app_engine_firewall_rule` resource into the root Terraform configuration.

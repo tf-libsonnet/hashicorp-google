@@ -63,7 +63,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `labels` (`obj`): A mapping of labels to assign to the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
-  - `cluster` (`list[obj]`): A block of cluster configuration options. This can be specified at least once. When `null`, the `cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.new](#fn-bigtableinstanceclusternew) constructor.
+  - `cluster` (`list[obj]`): A block of cluster configuration options. This can be specified at least once. When `null`, the `cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.new](#fn-clusternew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -79,7 +79,7 @@ newAttrs()
 `google.bigtable_instance.newAttrs` constructs a new object with attributes and blocks configured for the `bigtable_instance`
 Terraform resource.
 
-Unlike [google.bigtable_instance.new](#fn-bigtableinstancenew), this function will not inject the `resource`
+Unlike [google.bigtable_instance.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -93,7 +93,7 @@ injecting into a complete block.
   - `labels` (`obj`): A mapping of labels to assign to the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
-  - `cluster` (`list[obj]`): A block of cluster configuration options. This can be specified at least once. When `null`, the `cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.new](#fn-bigtableinstanceclusternew) constructor.
+  - `cluster` (`list[obj]`): A block of cluster configuration options. This can be specified at least once. When `null`, the `cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.new](#fn-clusternew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigtable_instance` resource into the root Terraform configuration.
@@ -254,7 +254,7 @@ Terraform sub block.
   - `num_nodes` (`number`): The number of nodes in your Cloud Bigtable cluster. Required, with a minimum of 1 for a PRODUCTION instance. Must be left unset for a DEVELOPMENT instance. When `null`, the `num_nodes` field will be omitted from the resulting object.
   - `storage_type` (`string`): The storage type to use. One of &#34;SSD&#34; or &#34;HDD&#34;. Defaults to &#34;SSD&#34;. When `null`, the `storage_type` field will be omitted from the resulting object.
   - `zone` (`string`): The zone to create the Cloud Bigtable cluster in. Each cluster must have a different zone in the same region. Zones that support Bigtable instances are noted on the Cloud Bigtable locations page. When `null`, the `zone` field will be omitted from the resulting object.
-  - `autoscaling_config` (`list[obj]`): A list of Autoscaling configurations. Only one element is used and allowed. When `null`, the `autoscaling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.autoscaling_config.new](#fn-clusterautoscalingconfignew) constructor.
+  - `autoscaling_config` (`list[obj]`): A list of Autoscaling configurations. Only one element is used and allowed. When `null`, the `autoscaling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.autoscaling_config.new](#fn-clusterautoscaling_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `cluster` sub block.

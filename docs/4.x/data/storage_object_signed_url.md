@@ -76,7 +76,7 @@ newAttrs()
 `google.data.storage_object_signed_url.newAttrs` constructs a new object with attributes and blocks configured for the `storage_object_signed_url`
 Terraform data source.
 
-Unlike [google.data.storage_object_signed_url.new](#fn-storageobjectsignedurlnew), this function will not inject the `data source`
+Unlike [google.data.storage_object_signed_url.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 
