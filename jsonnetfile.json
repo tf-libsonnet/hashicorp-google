@@ -4,6 +4,15 @@
     {
       "source": {
         "git": {
+          "remote": "https://github.com/jsonnet-libs/docsonnet.git",
+          "subdir": "doc-util"
+        }
+      },
+      "version": "e7f3020f5733ac3dd0a1998f49591a5afd24948d"
+    },
+    {
+      "source": {
+        "git": {
           "remote": "https://github.com/tf-libsonnet/core.git",
           "subdir": ""
         }
