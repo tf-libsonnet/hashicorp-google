@@ -59,8 +59,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 The repo name may contain slashes. eg, &#39;name/with/slash&#39;
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `pubsub_configs` (`list[obj]`): How this repository publishes a change in the repository through Cloud Pub/Sub. 
-Keyed by the topic names. When `null`, the `pubsub_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.pubsub_configs.new](#fn-sourcerepo_repositorypubsub_configsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.timeouts.new](#fn-sourcerepo_repositorytimeoutsnew) constructor.
+Keyed by the topic names. When `null`, the `pubsub_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.pubsub_configs.new](#fn-pubsub_configsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -76,7 +76,7 @@ newAttrs()
 `google.sourcerepo_repository.newAttrs` constructs a new object with attributes and blocks configured for the `sourcerepo_repository`
 Terraform resource.
 
-Unlike [google.sourcerepo_repository.new](#fn-sourcerepo_repositorynew), this function will not inject the `resource`
+Unlike [google.sourcerepo_repository.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,8 +88,8 @@ injecting into a complete block.
 The repo name may contain slashes. eg, &#39;name/with/slash&#39;
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `pubsub_configs` (`list[obj]`): How this repository publishes a change in the repository through Cloud Pub/Sub. 
-Keyed by the topic names. When `null`, the `pubsub_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.pubsub_configs.new](#fn-sourcerepo_repositorypubsub_configsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.timeouts.new](#fn-sourcerepo_repositorytimeoutsnew) constructor.
+Keyed by the topic names. When `null`, the `pubsub_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.pubsub_configs.new](#fn-pubsub_configsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sourcerepo_repository` resource into the root Terraform configuration.

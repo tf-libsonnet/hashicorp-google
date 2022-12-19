@@ -79,9 +79,9 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don&#39;t all live in the same
-project. When `null`, the `attestation_authority` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.attestation_authority.new](#fn-container_analysis_noteattestation_authoritynew) constructor.
-  - `related_url` (`list[obj]`): URLs associated with this note and related metadata. When `null`, the `related_url` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.related_url.new](#fn-container_analysis_noterelated_urlnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.timeouts.new](#fn-container_analysis_notetimeoutsnew) constructor.
+project. When `null`, the `attestation_authority` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.attestation_authority.new](#fn-attestation_authoritynew) constructor.
+  - `related_url` (`list[obj]`): URLs associated with this note and related metadata. When `null`, the `related_url` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.related_url.new](#fn-related_urlnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,7 +97,7 @@ newAttrs()
 `google.container_analysis_note.newAttrs` constructs a new object with attributes and blocks configured for the `container_analysis_note`
 Terraform resource.
 
-Unlike [google.container_analysis_note.new](#fn-container_analysis_notenew), this function will not inject the `resource`
+Unlike [google.container_analysis_note.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -119,9 +119,9 @@ grouping mechanism also provides a security boundary, since IAM ACLs
 gate the ability for a principle to attach an Occurrence to a given
 Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don&#39;t all live in the same
-project. When `null`, the `attestation_authority` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.attestation_authority.new](#fn-container_analysis_noteattestation_authoritynew) constructor.
-  - `related_url` (`list[obj]`): URLs associated with this note and related metadata. When `null`, the `related_url` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.related_url.new](#fn-container_analysis_noterelated_urlnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.timeouts.new](#fn-container_analysis_notetimeoutsnew) constructor.
+project. When `null`, the `attestation_authority` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.attestation_authority.new](#fn-attestation_authoritynew) constructor.
+  - `related_url` (`list[obj]`): URLs associated with this note and related metadata. When `null`, the `related_url` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.related_url.new](#fn-related_urlnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_analysis_note` resource into the root Terraform configuration.
@@ -357,7 +357,7 @@ name of the Note (which might be a UUID for security purposes)
 from &#34;readable&#34; names more suitable for debug output. Note that
 these hints should NOT be used to look up AttestationAuthorities
 in security sensitive contexts, such as when looking up
-Attestations to verify. When `null`, the `hint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.attestation_authority.hint.new](#fn-attestation_authorityhintnew) constructor.
+Attestations to verify. When `null`, the `hint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.attestation_authority.hint.new](#fn-hintnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `attestation_authority` sub block.

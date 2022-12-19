@@ -68,7 +68,7 @@ newAttrs()
 `google.data.service_account_jwt.newAttrs` constructs a new object with attributes and blocks configured for the `service_account_jwt`
 Terraform data source.
 
-Unlike [google.data.service_account_jwt.new](#fn-service_account_jwtnew), this function will not inject the `data source`
+Unlike [google.data.service_account_jwt.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

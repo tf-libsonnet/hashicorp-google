@@ -69,9 +69,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `metadata` (`obj`): The metadata key-value pairs assigned to the device. When `null`, the `metadata` field will be omitted from the resulting object.
   - `name` (`string`): A unique name for the resource.
   - `registry` (`string`): The name of the device registry where this device should be created.
-  - `credentials` (`list[obj]`): The credentials used to authenticate this device. When `null`, the `credentials` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.credentials.new](#fn-cloudiot_devicecredentialsnew) constructor.
-  - `gateway_config` (`list[obj]`): Gateway-related configuration and state. When `null`, the `gateway_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.gateway_config.new](#fn-cloudiot_devicegateway_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.timeouts.new](#fn-cloudiot_devicetimeoutsnew) constructor.
+  - `credentials` (`list[obj]`): The credentials used to authenticate this device. When `null`, the `credentials` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.credentials.new](#fn-credentialsnew) constructor.
+  - `gateway_config` (`list[obj]`): Gateway-related configuration and state. When `null`, the `gateway_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.gateway_config.new](#fn-gateway_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -87,7 +87,7 @@ newAttrs()
 `google.cloudiot_device.newAttrs` constructs a new object with attributes and blocks configured for the `cloudiot_device`
 Terraform resource.
 
-Unlike [google.cloudiot_device.new](#fn-cloudiot_devicenew), this function will not inject the `resource`
+Unlike [google.cloudiot_device.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -100,9 +100,9 @@ injecting into a complete block.
   - `metadata` (`obj`): The metadata key-value pairs assigned to the device. When `null`, the `metadata` field will be omitted from the resulting object.
   - `name` (`string`): A unique name for the resource.
   - `registry` (`string`): The name of the device registry where this device should be created.
-  - `credentials` (`list[obj]`): The credentials used to authenticate this device. When `null`, the `credentials` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.credentials.new](#fn-cloudiot_devicecredentialsnew) constructor.
-  - `gateway_config` (`list[obj]`): Gateway-related configuration and state. When `null`, the `gateway_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.gateway_config.new](#fn-cloudiot_devicegateway_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.timeouts.new](#fn-cloudiot_devicetimeoutsnew) constructor.
+  - `credentials` (`list[obj]`): The credentials used to authenticate this device. When `null`, the `credentials` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.credentials.new](#fn-credentialsnew) constructor.
+  - `gateway_config` (`list[obj]`): Gateway-related configuration and state. When `null`, the `gateway_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.gateway_config.new](#fn-gateway_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloudiot_device` resource into the root Terraform configuration.
@@ -316,7 +316,7 @@ Terraform sub block.
 
 **Args**:
   - `expiration_time` (`string`): The time at which this credential becomes invalid. When `null`, the `expiration_time` field will be omitted from the resulting object.
-  - `public_key` (`list[obj]`): A public key used to verify the signature of JSON Web Tokens (JWTs). When `null`, the `public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.credentials.public_key.new](#fn-credentialspublic_keynew) constructor.
+  - `public_key` (`list[obj]`): A public key used to verify the signature of JSON Web Tokens (JWTs). When `null`, the `public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudiot_device.credentials.public_key.new](#fn-public_keynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `credentials` sub block.

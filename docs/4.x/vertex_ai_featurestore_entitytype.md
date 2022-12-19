@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number. When `null`, the `name` field will be omitted from the resulting object.
   - `monitoring_config` (`list[obj]`): The default monitoring configuration for all Features under this EntityType.
 
-If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled. When `null`, the `monitoring_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.monitoring_config.new](#fn-vertex_ai_featurestore_entitytypemonitoring_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.timeouts.new](#fn-vertex_ai_featurestore_entitytypetimeoutsnew) constructor.
+If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled. When `null`, the `monitoring_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.monitoring_config.new](#fn-monitoring_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `google.vertex_ai_featurestore_entitytype.newAttrs` constructs a new object with attributes and blocks configured for the `vertex_ai_featurestore_entitytype`
 Terraform resource.
 
-Unlike [google.vertex_ai_featurestore_entitytype.new](#fn-vertex_ai_featurestore_entitytypenew), this function will not inject the `resource`
+Unlike [google.vertex_ai_featurestore_entitytype.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -99,8 +99,8 @@ injecting into a complete block.
   - `name` (`string`): The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number. When `null`, the `name` field will be omitted from the resulting object.
   - `monitoring_config` (`list[obj]`): The default monitoring configuration for all Features under this EntityType.
 
-If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled. When `null`, the `monitoring_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.monitoring_config.new](#fn-vertex_ai_featurestore_entitytypemonitoring_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.timeouts.new](#fn-vertex_ai_featurestore_entitytypetimeoutsnew) constructor.
+If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled. When `null`, the `monitoring_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.monitoring_config.new](#fn-monitoring_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vertex_ai_featurestore_entitytype` resource into the root Terraform configuration.
@@ -244,10 +244,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `categorical_threshold_config` (`list[obj]`): Threshold for categorical features of anomaly detection. This is shared by all types of Featurestore Monitoring for categorical features (i.e. Features with type (Feature.ValueType) BOOL or STRING). When `null`, the `categorical_threshold_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.monitoring_config.categorical_threshold_config.new](#fn-monitoring_configcategorical_threshold_confignew) constructor.
-  - `import_features_analysis` (`list[obj]`): The config for ImportFeatures Analysis Based Feature Monitoring. When `null`, the `import_features_analysis` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.monitoring_config.import_features_analysis.new](#fn-monitoring_configimport_features_analysisnew) constructor.
-  - `numerical_threshold_config` (`list[obj]`): Threshold for numerical features of anomaly detection. This is shared by all objectives of Featurestore Monitoring for numerical features (i.e. Features with type (Feature.ValueType) DOUBLE or INT64). When `null`, the `numerical_threshold_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.monitoring_config.numerical_threshold_config.new](#fn-monitoring_confignumerical_threshold_confignew) constructor.
-  - `snapshot_analysis` (`list[obj]`): The config for Snapshot Analysis Based Feature Monitoring. When `null`, the `snapshot_analysis` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.monitoring_config.snapshot_analysis.new](#fn-monitoring_configsnapshot_analysisnew) constructor.
+  - `categorical_threshold_config` (`list[obj]`): Threshold for categorical features of anomaly detection. This is shared by all types of Featurestore Monitoring for categorical features (i.e. Features with type (Feature.ValueType) BOOL or STRING). When `null`, the `categorical_threshold_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.monitoring_config.categorical_threshold_config.new](#fn-categorical_threshold_confignew) constructor.
+  - `import_features_analysis` (`list[obj]`): The config for ImportFeatures Analysis Based Feature Monitoring. When `null`, the `import_features_analysis` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.monitoring_config.import_features_analysis.new](#fn-import_features_analysisnew) constructor.
+  - `numerical_threshold_config` (`list[obj]`): Threshold for numerical features of anomaly detection. This is shared by all objectives of Featurestore Monitoring for numerical features (i.e. Features with type (Feature.ValueType) DOUBLE or INT64). When `null`, the `numerical_threshold_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.monitoring_config.numerical_threshold_config.new](#fn-numerical_threshold_confignew) constructor.
+  - `snapshot_analysis` (`list[obj]`): The config for Snapshot Analysis Based Feature Monitoring. When `null`, the `snapshot_analysis` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype.monitoring_config.snapshot_analysis.new](#fn-snapshot_analysisnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `monitoring_config` sub block.

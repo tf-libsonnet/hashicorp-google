@@ -60,7 +60,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 key-value pair. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): Location of the Deployment. When `null`, the `location` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment.timeouts.new](#fn-game_services_game_server_deploymenttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -76,7 +76,7 @@ newAttrs()
 `google.game_services_game_server_deployment.newAttrs` constructs a new object with attributes and blocks configured for the `game_services_game_server_deployment`
 Terraform resource.
 
-Unlike [google.game_services_game_server_deployment.new](#fn-game_services_game_server_deploymentnew), this function will not inject the `resource`
+Unlike [google.game_services_game_server_deployment.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -90,7 +90,7 @@ injecting into a complete block.
 key-value pair. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): Location of the Deployment. When `null`, the `location` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment.timeouts.new](#fn-game_services_game_server_deploymenttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `game_services_game_server_deployment` resource into the root Terraform configuration.

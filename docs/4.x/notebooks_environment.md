@@ -71,9 +71,9 @@ Format: projects/{project_id}/locations/{location}/environments/{environmentId}
   - `post_startup_script` (`string`): Path to a Bash script that automatically runs after a notebook instance fully boots up.
 The path must be a URL or Cloud Storage path. Example: &#34;gs://path-to-file/file-name&#34; When `null`, the `post_startup_script` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `container_image` (`list[obj]`): Use a container image to start the notebook instance. When `null`, the `container_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_environment.container_image.new](#fn-notebooks_environmentcontainer_imagenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_environment.timeouts.new](#fn-notebooks_environmenttimeoutsnew) constructor.
-  - `vm_image` (`list[obj]`): Use a Compute Engine VM image to start the notebook instance. When `null`, the `vm_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_environment.vm_image.new](#fn-notebooks_environmentvm_imagenew) constructor.
+  - `container_image` (`list[obj]`): Use a container image to start the notebook instance. When `null`, the `container_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_environment.container_image.new](#fn-container_imagenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_environment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vm_image` (`list[obj]`): Use a Compute Engine VM image to start the notebook instance. When `null`, the `vm_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_environment.vm_image.new](#fn-vm_imagenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -89,7 +89,7 @@ newAttrs()
 `google.notebooks_environment.newAttrs` constructs a new object with attributes and blocks configured for the `notebooks_environment`
 Terraform resource.
 
-Unlike [google.notebooks_environment.new](#fn-notebooks_environmentnew), this function will not inject the `resource`
+Unlike [google.notebooks_environment.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -105,9 +105,9 @@ Format: projects/{project_id}/locations/{location}/environments/{environmentId}
   - `post_startup_script` (`string`): Path to a Bash script that automatically runs after a notebook instance fully boots up.
 The path must be a URL or Cloud Storage path. Example: &#34;gs://path-to-file/file-name&#34; When `null`, the `post_startup_script` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `container_image` (`list[obj]`): Use a container image to start the notebook instance. When `null`, the `container_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_environment.container_image.new](#fn-notebooks_environmentcontainer_imagenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_environment.timeouts.new](#fn-notebooks_environmenttimeoutsnew) constructor.
-  - `vm_image` (`list[obj]`): Use a Compute Engine VM image to start the notebook instance. When `null`, the `vm_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_environment.vm_image.new](#fn-notebooks_environmentvm_imagenew) constructor.
+  - `container_image` (`list[obj]`): Use a container image to start the notebook instance. When `null`, the `container_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_environment.container_image.new](#fn-container_imagenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_environment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vm_image` (`list[obj]`): Use a Compute Engine VM image to start the notebook instance. When `null`, the `vm_image` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_environment.vm_image.new](#fn-vm_imagenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `notebooks_environment` resource into the root Terraform configuration.

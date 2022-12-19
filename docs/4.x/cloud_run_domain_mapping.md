@@ -63,9 +63,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): The location of the cloud run instance. eg us-central1
   - `name` (`string`): Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `metadata` (`list[obj]`): Metadata associated with this DomainMapping. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_domain_mapping.metadata.new](#fn-cloud_run_domain_mappingmetadatanew) constructor.
-  - `spec` (`list[obj]`): The spec for this DomainMapping. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_domain_mapping.spec.new](#fn-cloud_run_domain_mappingspecnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_domain_mapping.timeouts.new](#fn-cloud_run_domain_mappingtimeoutsnew) constructor.
+  - `metadata` (`list[obj]`): Metadata associated with this DomainMapping. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_domain_mapping.metadata.new](#fn-metadatanew) constructor.
+  - `spec` (`list[obj]`): The spec for this DomainMapping. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_domain_mapping.spec.new](#fn-specnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_domain_mapping.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -81,7 +81,7 @@ newAttrs()
 `google.cloud_run_domain_mapping.newAttrs` constructs a new object with attributes and blocks configured for the `cloud_run_domain_mapping`
 Terraform resource.
 
-Unlike [google.cloud_run_domain_mapping.new](#fn-cloud_run_domain_mappingnew), this function will not inject the `resource`
+Unlike [google.cloud_run_domain_mapping.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -92,9 +92,9 @@ injecting into a complete block.
   - `location` (`string`): The location of the cloud run instance. eg us-central1
   - `name` (`string`): Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `metadata` (`list[obj]`): Metadata associated with this DomainMapping. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_domain_mapping.metadata.new](#fn-cloud_run_domain_mappingmetadatanew) constructor.
-  - `spec` (`list[obj]`): The spec for this DomainMapping. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_domain_mapping.spec.new](#fn-cloud_run_domain_mappingspecnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_domain_mapping.timeouts.new](#fn-cloud_run_domain_mappingtimeoutsnew) constructor.
+  - `metadata` (`list[obj]`): Metadata associated with this DomainMapping. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_domain_mapping.metadata.new](#fn-metadatanew) constructor.
+  - `spec` (`list[obj]`): The spec for this DomainMapping. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_domain_mapping.spec.new](#fn-specnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_domain_mapping.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloud_run_domain_mapping` resource into the root Terraform configuration.

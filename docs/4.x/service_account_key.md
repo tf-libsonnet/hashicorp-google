@@ -72,7 +72,7 @@ newAttrs()
 `google.service_account_key.newAttrs` constructs a new object with attributes and blocks configured for the `service_account_key`
 Terraform resource.
 
-Unlike [google.service_account_key.new](#fn-service_account_keynew), this function will not inject the `resource`
+Unlike [google.service_account_key.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 

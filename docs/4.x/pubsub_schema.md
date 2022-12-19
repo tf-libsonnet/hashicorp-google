@@ -59,7 +59,7 @@ that is a valid schema definition of the type specified in type. When `null`, th
   - `name` (`string`): The ID to use for the schema, which will become the final component of the schema&#39;s resource name.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): The type of the schema definition Default value: &#34;TYPE_UNSPECIFIED&#34; Possible values: [&#34;TYPE_UNSPECIFIED&#34;, &#34;PROTOCOL_BUFFER&#34;, &#34;AVRO&#34;] When `null`, the `type` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_schema.timeouts.new](#fn-pubsub_schematimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_schema.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `google.pubsub_schema.newAttrs` constructs a new object with attributes and blocks configured for the `pubsub_schema`
 Terraform resource.
 
-Unlike [google.pubsub_schema.new](#fn-pubsub_schemanew), this function will not inject the `resource`
+Unlike [google.pubsub_schema.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -89,7 +89,7 @@ that is a valid schema definition of the type specified in type. When `null`, th
   - `name` (`string`): The ID to use for the schema, which will become the final component of the schema&#39;s resource name.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): The type of the schema definition Default value: &#34;TYPE_UNSPECIFIED&#34; Possible values: [&#34;TYPE_UNSPECIFIED&#34;, &#34;PROTOCOL_BUFFER&#34;, &#34;AVRO&#34;] When `null`, the `type` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_schema.timeouts.new](#fn-pubsub_schematimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_schema.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `pubsub_schema` resource into the root Terraform configuration.

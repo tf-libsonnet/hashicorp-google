@@ -61,7 +61,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): The location of the resource. The supported locations are: global, us-central1, us-east1, us-west1, asia-east1, europe-west1. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the view. For example: `projects/my-project/locations/global/buckets/my-bucket/views/my-view`
   - `parent` (`string`): The parent of the resource. When `null`, the `parent` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_log_view.timeouts.new](#fn-logging_log_viewtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_log_view.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -77,7 +77,7 @@ newAttrs()
 `google.logging_log_view.newAttrs` constructs a new object with attributes and blocks configured for the `logging_log_view`
 Terraform resource.
 
-Unlike [google.logging_log_view.new](#fn-logging_log_viewnew), this function will not inject the `resource`
+Unlike [google.logging_log_view.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -91,7 +91,7 @@ injecting into a complete block.
   - `location` (`string`): The location of the resource. The supported locations are: global, us-central1, us-east1, us-west1, asia-east1, europe-west1. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the view. For example: `projects/my-project/locations/global/buckets/my-bucket/views/my-view`
   - `parent` (`string`): The parent of the resource. When `null`, the `parent` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_log_view.timeouts.new](#fn-logging_log_viewtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_log_view.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logging_log_view` resource into the root Terraform configuration.

@@ -75,8 +75,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `labels` (`obj`): The labels with user-defined metadata to organize your Indexes. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the index. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
-  - `metadata` (`list[obj]`): An additional information about the Index When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.new](#fn-vertex_ai_indexmetadatanew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.timeouts.new](#fn-vertex_ai_indextimeoutsnew) constructor.
+  - `metadata` (`list[obj]`): An additional information about the Index When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.new](#fn-metadatanew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -92,7 +92,7 @@ newAttrs()
 `google.vertex_ai_index.newAttrs` constructs a new object with attributes and blocks configured for the `vertex_ai_index`
 Terraform resource.
 
-Unlike [google.vertex_ai_index.new](#fn-vertex_ai_indexnew), this function will not inject the `resource`
+Unlike [google.vertex_ai_index.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -108,8 +108,8 @@ injecting into a complete block.
   - `labels` (`obj`): The labels with user-defined metadata to organize your Indexes. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the index. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
-  - `metadata` (`list[obj]`): An additional information about the Index When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.new](#fn-vertex_ai_indexmetadatanew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.timeouts.new](#fn-vertex_ai_indextimeoutsnew) constructor.
+  - `metadata` (`list[obj]`): An additional information about the Index When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.new](#fn-metadatanew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vertex_ai_index` resource into the root Terraform configuration.
@@ -309,7 +309,7 @@ The expected structure and format of the files this URI points to is
 described at https://cloud.google.com/vertex-ai/docs/matching-engine/using-matching-engine#input-data-format When `null`, the `contents_delta_uri` field will be omitted from the resulting object.
   - `is_complete_overwrite` (`bool`): If this field is set together with contentsDeltaUri when calling IndexService.UpdateIndex,
 then existing content of the Index will be replaced by the data from the contentsDeltaUri. When `null`, the `is_complete_overwrite` field will be omitted from the resulting object.
-  - `config` (`list[obj]`): The configuration of the Matching Engine Index. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.config.new](#fn-metadataconfignew) constructor.
+  - `config` (`list[obj]`): The configuration of the Matching Engine Index. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.config.new](#fn-confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metadata` sub block.
@@ -345,7 +345,7 @@ Required if tree-AH algorithm is used. When `null`, the `approximate_neighbors_c
   - `feature_norm_type` (`string`): Type of normalization to be carried out on each vector. The value must be one of the followings: 
 * UNIT_L2_NORM: Unit L2 normalization type
 * NONE: No normalization type is specified. When `null`, the `feature_norm_type` field will be omitted from the resulting object.
-  - `algorithm_config` (`list[obj]`): The configuration with regard to the algorithms used for efficient search. When `null`, the `algorithm_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.config.algorithm_config.new](#fn-configalgorithm_confignew) constructor.
+  - `algorithm_config` (`list[obj]`): The configuration with regard to the algorithms used for efficient search. When `null`, the `algorithm_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.config.algorithm_config.new](#fn-metadataalgorithm_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `config` sub block.
@@ -369,9 +369,9 @@ Terraform sub block.
 
 **Args**:
   - `brute_force_config` (`list[obj]`): Configuration options for using brute force search, which simply implements the
-standard linear search in the database for each query. When `null`, the `brute_force_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.config.algorithm_config.brute_force_config.new](#fn-algorithm_configbrute_force_confignew) constructor.
+standard linear search in the database for each query. When `null`, the `brute_force_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.config.algorithm_config.brute_force_config.new](#fn-metadataconfigbrute_force_confignew) constructor.
   - `tree_ah_config` (`list[obj]`): Configuration options for using the tree-AH algorithm (Shallow tree &#43; Asymmetric Hashing).
-Please refer to this paper for more details: https://arxiv.org/abs/1908.10396 When `null`, the `tree_ah_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.config.algorithm_config.tree_ah_config.new](#fn-algorithm_configtree_ah_confignew) constructor.
+Please refer to this paper for more details: https://arxiv.org/abs/1908.10396 When `null`, the `tree_ah_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.config.algorithm_config.tree_ah_config.new](#fn-metadataconfigtree_ah_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `algorithm_config` sub block.

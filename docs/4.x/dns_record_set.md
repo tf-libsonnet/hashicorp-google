@@ -85,7 +85,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `rrdatas` (`list`): The string data for the records in this record set whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding \&#34; if you don&#39;t want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add \&#34;\&#34; inside the Terraform configuration string (e.g. &#34;first255characters\&#34;\&#34;morecharacters&#34;). When `null`, the `rrdatas` field will be omitted from the resulting object.
   - `ttl` (`number`): The time-to-live of this record set (seconds). When `null`, the `ttl` field will be omitted from the resulting object.
   - `type` (`string`): The DNS record set type.
-  - `routing_policy` (`list[obj]`): The configuration for steering traffic based on query. You can specify either Weighted Round Robin(WRR) type or Geolocation(GEO) type. When `null`, the `routing_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.new](#fn-dns_record_setrouting_policynew) constructor.
+  - `routing_policy` (`list[obj]`): The configuration for steering traffic based on query. You can specify either Weighted Round Robin(WRR) type or Geolocation(GEO) type. When `null`, the `routing_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.new](#fn-routing_policynew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,7 +101,7 @@ newAttrs()
 `google.dns_record_set.newAttrs` constructs a new object with attributes and blocks configured for the `dns_record_set`
 Terraform resource.
 
-Unlike [google.dns_record_set.new](#fn-dns_record_setnew), this function will not inject the `resource`
+Unlike [google.dns_record_set.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -115,7 +115,7 @@ injecting into a complete block.
   - `rrdatas` (`list`): The string data for the records in this record set whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding \&#34; if you don&#39;t want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add \&#34;\&#34; inside the Terraform configuration string (e.g. &#34;first255characters\&#34;\&#34;morecharacters&#34;). When `null`, the `rrdatas` field will be omitted from the resulting object.
   - `ttl` (`number`): The time-to-live of this record set (seconds). When `null`, the `ttl` field will be omitted from the resulting object.
   - `type` (`string`): The DNS record set type.
-  - `routing_policy` (`list[obj]`): The configuration for steering traffic based on query. You can specify either Weighted Round Robin(WRR) type or Geolocation(GEO) type. When `null`, the `routing_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.new](#fn-dns_record_setrouting_policynew) constructor.
+  - `routing_policy` (`list[obj]`): The configuration for steering traffic based on query. You can specify either Weighted Round Robin(WRR) type or Geolocation(GEO) type. When `null`, the `routing_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.new](#fn-routing_policynew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dns_record_set` resource into the root Terraform configuration.
@@ -272,9 +272,9 @@ Terraform sub block.
 
 **Args**:
   - `enable_geo_fencing` (`bool`): Specifies whether to enable fencing for geo queries. When `null`, the `enable_geo_fencing` field will be omitted from the resulting object.
-  - `geo` (`list[obj]`): The configuration for Geo location based routing policy. When `null`, the `geo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.geo.new](#fn-routing_policygeonew) constructor.
-  - `primary_backup` (`list[obj]`): The configuration for a primary-backup policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy. When `null`, the `primary_backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.new](#fn-routing_policyprimary_backupnew) constructor.
-  - `wrr` (`list[obj]`): The configuration for Weighted Round Robin based routing policy. When `null`, the `wrr` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.wrr.new](#fn-routing_policywrrnew) constructor.
+  - `geo` (`list[obj]`): The configuration for Geo location based routing policy. When `null`, the `geo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.geo.new](#fn-geonew) constructor.
+  - `primary_backup` (`list[obj]`): The configuration for a primary-backup policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy. When `null`, the `primary_backup` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.new](#fn-primary_backupnew) constructor.
+  - `wrr` (`list[obj]`): The configuration for Weighted Round Robin based routing policy. When `null`, the `wrr` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.wrr.new](#fn-wrrnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `routing_policy` sub block.
@@ -299,7 +299,7 @@ Terraform sub block.
 **Args**:
   - `location` (`string`): The location name defined in Google Cloud.
   - `rrdatas` (`list`):  When `null`, the `rrdatas` field will be omitted from the resulting object.
-  - `health_checked_targets` (`list[obj]`): For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item. When `null`, the `health_checked_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.geo.health_checked_targets.new](#fn-geohealth_checked_targetsnew) constructor.
+  - `health_checked_targets` (`list[obj]`): For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item. When `null`, the `health_checked_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.geo.health_checked_targets.new](#fn-routing_policyhealth_checked_targetsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `geo` sub block.
@@ -322,7 +322,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `internal_load_balancers` (`list[obj]`): The list of internal load balancers to health check. When `null`, the `internal_load_balancers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.geo.health_checked_targets.internal_load_balancers.new](#fn-health_checked_targetsinternal_load_balancersnew) constructor.
+  - `internal_load_balancers` (`list[obj]`): The list of internal load balancers to health check. When `null`, the `internal_load_balancers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.geo.health_checked_targets.internal_load_balancers.new](#fn-routing_policygeointernal_load_balancersnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `health_checked_targets` sub block.
@@ -376,8 +376,8 @@ Terraform sub block.
 **Args**:
   - `enable_geo_fencing_for_backups` (`bool`): Specifies whether to enable fencing for backup geo queries. When `null`, the `enable_geo_fencing_for_backups` field will be omitted from the resulting object.
   - `trickle_ratio` (`number`): Specifies the percentage of traffic to send to the backup targets even when the primary targets are healthy. When `null`, the `trickle_ratio` field will be omitted from the resulting object.
-  - `backup_geo` (`list[obj]`): The backup geo targets, which provide a regional failover policy for the otherwise global primary targets. When `null`, the `backup_geo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.backup_geo.new](#fn-primary_backupbackup_geonew) constructor.
-  - `primary` (`list[obj]`): The list of global primary targets to be health checked. When `null`, the `primary` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.primary.new](#fn-primary_backupprimarynew) constructor.
+  - `backup_geo` (`list[obj]`): The backup geo targets, which provide a regional failover policy for the otherwise global primary targets. When `null`, the `backup_geo` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.backup_geo.new](#fn-routing_policybackup_geonew) constructor.
+  - `primary` (`list[obj]`): The list of global primary targets to be health checked. When `null`, the `primary` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.primary.new](#fn-routing_policyprimarynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `primary_backup` sub block.
@@ -402,7 +402,7 @@ Terraform sub block.
 **Args**:
   - `location` (`string`): The location name defined in Google Cloud.
   - `rrdatas` (`list`):  When `null`, the `rrdatas` field will be omitted from the resulting object.
-  - `health_checked_targets` (`list[obj]`): For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item. When `null`, the `health_checked_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.backup_geo.health_checked_targets.new](#fn-backup_geohealth_checked_targetsnew) constructor.
+  - `health_checked_targets` (`list[obj]`): For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item. When `null`, the `health_checked_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.backup_geo.health_checked_targets.new](#fn-routing_policyprimary_backuphealth_checked_targetsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `backup_geo` sub block.
@@ -425,7 +425,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `internal_load_balancers` (`list[obj]`): The list of internal load balancers to health check. When `null`, the `internal_load_balancers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.backup_geo.health_checked_targets.internal_load_balancers.new](#fn-health_checked_targetsinternal_load_balancersnew) constructor.
+  - `internal_load_balancers` (`list[obj]`): The list of internal load balancers to health check. When `null`, the `internal_load_balancers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.backup_geo.health_checked_targets.internal_load_balancers.new](#fn-routing_policyprimary_backupbackup_geointernal_load_balancersnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `health_checked_targets` sub block.
@@ -477,7 +477,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `internal_load_balancers` (`list[obj]`): The list of internal load balancers to health check. When `null`, the `internal_load_balancers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.primary.internal_load_balancers.new](#fn-primaryinternal_load_balancersnew) constructor.
+  - `internal_load_balancers` (`list[obj]`): The list of internal load balancers to health check. When `null`, the `internal_load_balancers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.primary.internal_load_balancers.new](#fn-routing_policyprimary_backupinternal_load_balancersnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `primary` sub block.
@@ -531,7 +531,7 @@ Terraform sub block.
 **Args**:
   - `rrdatas` (`list`):  When `null`, the `rrdatas` field will be omitted from the resulting object.
   - `weight` (`number`): The ratio of traffic routed to the target.
-  - `health_checked_targets` (`list[obj]`): The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of `rrdatas` or `health_checked_targets` can be set. When `null`, the `health_checked_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.wrr.health_checked_targets.new](#fn-wrrhealth_checked_targetsnew) constructor.
+  - `health_checked_targets` (`list[obj]`): The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of `rrdatas` or `health_checked_targets` can be set. When `null`, the `health_checked_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.wrr.health_checked_targets.new](#fn-routing_policyhealth_checked_targetsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `wrr` sub block.
@@ -554,7 +554,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `internal_load_balancers` (`list[obj]`): The list of internal load balancers to health check. When `null`, the `internal_load_balancers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.wrr.health_checked_targets.internal_load_balancers.new](#fn-health_checked_targetsinternal_load_balancersnew) constructor.
+  - `internal_load_balancers` (`list[obj]`): The list of internal load balancers to health check. When `null`, the `internal_load_balancers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.wrr.health_checked_targets.internal_load_balancers.new](#fn-routing_policywrrinternal_load_balancersnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `health_checked_targets` sub block.

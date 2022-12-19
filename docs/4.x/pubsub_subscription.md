@@ -134,7 +134,7 @@ messageRetentionDuration window. When `null`, the `retain_acked_messages` field 
   - `topic` (`string`): A reference to a Topic resource.
   - `bigquery_config` (`list[obj]`): If delivery to BigQuery is used with this subscription, this field is used to configure it.
 Either pushConfig or bigQueryConfig can be set, but not both.
-If both are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `bigquery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.bigquery_config.new](#fn-pubsub_subscriptionbigquery_confignew) constructor.
+If both are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `bigquery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.bigquery_config.new](#fn-bigquery_confignew) constructor.
   - `dead_letter_policy` (`list[obj]`): A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
 is disabled.
@@ -142,22 +142,22 @@ is disabled.
 The Cloud Pub/Sub service account associated with this subscription&#39;s
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription. When `null`, the `dead_letter_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.dead_letter_policy.new](#fn-pubsub_subscriptiondead_letter_policynew) constructor.
+permission to Acknowledge() messages on this subscription. When `null`, the `dead_letter_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.dead_letter_policy.new](#fn-dead_letter_policynew) constructor.
   - `expiration_policy` (`list[obj]`): A policy that specifies the conditions for this subscription&#39;s expiration.
 A subscription is considered active as long as any connected subscriber
 is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is &#34;&#34;, the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day. When `null`, the `expiration_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.expiration_policy.new](#fn-pubsub_subscriptionexpiration_policynew) constructor.
+is 1 day. When `null`, the `expiration_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.expiration_policy.new](#fn-expiration_policynew) constructor.
   - `push_config` (`list[obj]`): If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods. When `null`, the `push_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.push_config.new](#fn-pubsub_subscriptionpush_confignew) constructor.
+pull and ack messages using API methods. When `null`, the `push_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.push_config.new](#fn-push_confignew) constructor.
   - `retry_policy` (`list[obj]`): A policy that specifies how Pub/Sub retries message delivery for this subscription.
 
 If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. 
-RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.retry_policy.new](#fn-pubsub_subscriptionretry_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.timeouts.new](#fn-pubsub_subscriptiontimeoutsnew) constructor.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.retry_policy.new](#fn-retry_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -173,7 +173,7 @@ newAttrs()
 `google.pubsub_subscription.newAttrs` constructs a new object with attributes and blocks configured for the `pubsub_subscription`
 Terraform resource.
 
-Unlike [google.pubsub_subscription.new](#fn-pubsub_subscriptionnew), this function will not inject the `resource`
+Unlike [google.pubsub_subscription.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -234,7 +234,7 @@ messageRetentionDuration window. When `null`, the `retain_acked_messages` field 
   - `topic` (`string`): A reference to a Topic resource.
   - `bigquery_config` (`list[obj]`): If delivery to BigQuery is used with this subscription, this field is used to configure it.
 Either pushConfig or bigQueryConfig can be set, but not both.
-If both are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `bigquery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.bigquery_config.new](#fn-pubsub_subscriptionbigquery_confignew) constructor.
+If both are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `bigquery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.bigquery_config.new](#fn-bigquery_confignew) constructor.
   - `dead_letter_policy` (`list[obj]`): A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
 is disabled.
@@ -242,22 +242,22 @@ is disabled.
 The Cloud Pub/Sub service account associated with this subscription&#39;s
 parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
-permission to Acknowledge() messages on this subscription. When `null`, the `dead_letter_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.dead_letter_policy.new](#fn-pubsub_subscriptiondead_letter_policynew) constructor.
+permission to Acknowledge() messages on this subscription. When `null`, the `dead_letter_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.dead_letter_policy.new](#fn-dead_letter_policynew) constructor.
   - `expiration_policy` (`list[obj]`): A policy that specifies the conditions for this subscription&#39;s expiration.
 A subscription is considered active as long as any connected subscriber
 is successfully consuming messages from the subscription or is issuing
 operations on the subscription. If expirationPolicy is not set, a default
 policy with ttl of 31 days will be used.  If it is set but ttl is &#34;&#34;, the
 resource never expires.  The minimum allowed value for expirationPolicy.ttl
-is 1 day. When `null`, the `expiration_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.expiration_policy.new](#fn-pubsub_subscriptionexpiration_policynew) constructor.
+is 1 day. When `null`, the `expiration_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.expiration_policy.new](#fn-expiration_policynew) constructor.
   - `push_config` (`list[obj]`): If push delivery is used with this subscription, this field is used to
 configure it. An empty pushConfig signifies that the subscriber will
-pull and ack messages using API methods. When `null`, the `push_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.push_config.new](#fn-pubsub_subscriptionpush_confignew) constructor.
+pull and ack messages using API methods. When `null`, the `push_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.push_config.new](#fn-push_confignew) constructor.
   - `retry_policy` (`list[obj]`): A policy that specifies how Pub/Sub retries message delivery for this subscription.
 
 If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. 
-RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.retry_policy.new](#fn-pubsub_subscriptionretry_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.timeouts.new](#fn-pubsub_subscriptiontimeoutsnew) constructor.
+RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.retry_policy.new](#fn-retry_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `pubsub_subscription` resource into the root Terraform configuration.
@@ -788,7 +788,7 @@ The possible values for this attribute are:
 For example, a Webhook endpoint might use
 &#34;https://example.com/push&#34;.
   - `oidc_token` (`list[obj]`): If specified, Pub/Sub will generate and attach an OIDC JWT token as
-an Authorization header in the HTTP request for every pushed message. When `null`, the `oidc_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.push_config.oidc_token.new](#fn-push_configoidc_tokennew) constructor.
+an Authorization header in the HTTP request for every pushed message. When `null`, the `oidc_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.push_config.oidc_token.new](#fn-oidc_tokennew) constructor.
 
 **Returns**:
   - An attribute object that represents the `push_config` sub block.

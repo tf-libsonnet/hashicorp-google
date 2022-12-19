@@ -91,10 +91,10 @@ An object containing a list of &#34;key&#34;: value pairs. Example:
   - `ttl` (`string`): The TTL for the Secret.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `ttl` field will be omitted from the resulting object.
   - `replication` (`list[obj]`): The replication policy of the secret data attached to the Secret. It cannot be changed
-after the Secret has been created. When `null`, the `replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.new](#fn-secret_manager_secretreplicationnew) constructor.
-  - `rotation` (`list[obj]`): The rotation time and period for a Secret. At &#39;next_rotation_time&#39;, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. &#39;topics&#39; must be set to configure rotation. When `null`, the `rotation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.rotation.new](#fn-secret_manager_secretrotationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.timeouts.new](#fn-secret_manager_secrettimeoutsnew) constructor.
-  - `topics` (`list[obj]`): A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions. When `null`, the `topics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.topics.new](#fn-secret_manager_secrettopicsnew) constructor.
+after the Secret has been created. When `null`, the `replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.new](#fn-replicationnew) constructor.
+  - `rotation` (`list[obj]`): The rotation time and period for a Secret. At &#39;next_rotation_time&#39;, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. &#39;topics&#39; must be set to configure rotation. When `null`, the `rotation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.rotation.new](#fn-rotationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.timeouts.new](#fn-timeoutsnew) constructor.
+  - `topics` (`list[obj]`): A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions. When `null`, the `topics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.topics.new](#fn-topicsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -110,7 +110,7 @@ newAttrs()
 `google.secret_manager_secret.newAttrs` constructs a new object with attributes and blocks configured for the `secret_manager_secret`
 Terraform resource.
 
-Unlike [google.secret_manager_secret.new](#fn-secret_manager_secretnew), this function will not inject the `resource`
+Unlike [google.secret_manager_secret.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -137,10 +137,10 @@ An object containing a list of &#34;key&#34;: value pairs. Example:
   - `ttl` (`string`): The TTL for the Secret.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `ttl` field will be omitted from the resulting object.
   - `replication` (`list[obj]`): The replication policy of the secret data attached to the Secret. It cannot be changed
-after the Secret has been created. When `null`, the `replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.new](#fn-secret_manager_secretreplicationnew) constructor.
-  - `rotation` (`list[obj]`): The rotation time and period for a Secret. At &#39;next_rotation_time&#39;, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. &#39;topics&#39; must be set to configure rotation. When `null`, the `rotation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.rotation.new](#fn-secret_manager_secretrotationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.timeouts.new](#fn-secret_manager_secrettimeoutsnew) constructor.
-  - `topics` (`list[obj]`): A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions. When `null`, the `topics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.topics.new](#fn-secret_manager_secrettopicsnew) constructor.
+after the Secret has been created. When `null`, the `replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.new](#fn-replicationnew) constructor.
+  - `rotation` (`list[obj]`): The rotation time and period for a Secret. At &#39;next_rotation_time&#39;, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. &#39;topics&#39; must be set to configure rotation. When `null`, the `rotation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.rotation.new](#fn-rotationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.timeouts.new](#fn-timeoutsnew) constructor.
+  - `topics` (`list[obj]`): A list of up to 10 Pub/Sub topics to which messages are published when control plane operations are called on the secret or its versions. When `null`, the `topics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.topics.new](#fn-topicsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `secret_manager_secret` resource into the root Terraform configuration.
@@ -391,7 +391,7 @@ Terraform sub block.
 
 **Args**:
   - `automatic` (`bool`): The Secret will automatically be replicated without any restrictions. When `null`, the `automatic` field will be omitted from the resulting object.
-  - `user_managed` (`list[obj]`): The Secret will automatically be replicated without any restrictions. When `null`, the `user_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.new](#fn-replicationuser_managednew) constructor.
+  - `user_managed` (`list[obj]`): The Secret will automatically be replicated without any restrictions. When `null`, the `user_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.new](#fn-user_managednew) constructor.
 
 **Returns**:
   - An attribute object that represents the `replication` sub block.
@@ -414,7 +414,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `replicas` (`list[obj]`): The list of Replicas for this Secret. Cannot be empty. When `null`, the `replicas` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.replicas.new](#fn-user_managedreplicasnew) constructor.
+  - `replicas` (`list[obj]`): The list of Replicas for this Secret. Cannot be empty. When `null`, the `replicas` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.replicas.new](#fn-replicationreplicasnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `user_managed` sub block.
@@ -438,7 +438,7 @@ Terraform sub block.
 
 **Args**:
   - `location` (`string`): The canonical IDs of the location to replicate data. For example: &#34;us-east1&#34;.
-  - `customer_managed_encryption` (`list[obj]`): Customer Managed Encryption for the secret. When `null`, the `customer_managed_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.replicas.customer_managed_encryption.new](#fn-replicascustomer_managed_encryptionnew) constructor.
+  - `customer_managed_encryption` (`list[obj]`): Customer Managed Encryption for the secret. When `null`, the `customer_managed_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.replicas.customer_managed_encryption.new](#fn-replicationuser_managedcustomer_managed_encryptionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `replicas` sub block.

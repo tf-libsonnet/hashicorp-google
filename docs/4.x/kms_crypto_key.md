@@ -77,8 +77,8 @@ the format of a decimal number with up to 9 fractional digits, followed by the
 letter &#39;s&#39; (seconds). It must be greater than a day (ie, 86400). When `null`, the `rotation_period` field will be omitted from the resulting object.
   - `skip_initial_version_creation` (`bool`): If set to true, the request will create a CryptoKey without any CryptoKeyVersions. 
 You must use the &#39;google_kms_key_ring_import_job&#39; resource to import the CryptoKeyVersion. When `null`, the `skip_initial_version_creation` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.timeouts.new](#fn-kms_crypto_keytimeoutsnew) constructor.
-  - `version_template` (`list[obj]`): A template describing settings for new crypto key versions. When `null`, the `version_template` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.version_template.new](#fn-kms_crypto_keyversion_templatenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.timeouts.new](#fn-timeoutsnew) constructor.
+  - `version_template` (`list[obj]`): A template describing settings for new crypto key versions. When `null`, the `version_template` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.version_template.new](#fn-version_templatenew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,7 +94,7 @@ newAttrs()
 `google.kms_crypto_key.newAttrs` constructs a new object with attributes and blocks configured for the `kms_crypto_key`
 Terraform resource.
 
-Unlike [google.kms_crypto_key.new](#fn-kms_crypto_keynew), this function will not inject the `resource`
+Unlike [google.kms_crypto_key.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -118,8 +118,8 @@ the format of a decimal number with up to 9 fractional digits, followed by the
 letter &#39;s&#39; (seconds). It must be greater than a day (ie, 86400). When `null`, the `rotation_period` field will be omitted from the resulting object.
   - `skip_initial_version_creation` (`bool`): If set to true, the request will create a CryptoKey without any CryptoKeyVersions. 
 You must use the &#39;google_kms_key_ring_import_job&#39; resource to import the CryptoKeyVersion. When `null`, the `skip_initial_version_creation` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.timeouts.new](#fn-kms_crypto_keytimeoutsnew) constructor.
-  - `version_template` (`list[obj]`): A template describing settings for new crypto key versions. When `null`, the `version_template` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.version_template.new](#fn-kms_crypto_keyversion_templatenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.timeouts.new](#fn-timeoutsnew) constructor.
+  - `version_template` (`list[obj]`): A template describing settings for new crypto key versions. When `null`, the `version_template` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_crypto_key.version_template.new](#fn-version_templatenew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `kms_crypto_key` resource into the root Terraform configuration.

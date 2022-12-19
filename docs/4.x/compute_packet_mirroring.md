@@ -85,13 +85,13 @@ If it is not provided, the provider region is used. When `null`, the `region` fi
   - `collector_ilb` (`list[obj]`): The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true. When `null`, the `collector_ilb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.collector_ilb.new](#fn-compute_packet_mirroringcollector_ilbnew) constructor.
-  - `filter` (`list[obj]`): A filter for mirrored traffic.  If unset, all traffic is mirrored. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.filter.new](#fn-compute_packet_mirroringfilternew) constructor.
-  - `mirrored_resources` (`list[obj]`): A means of specifying which resources to mirror. When `null`, the `mirrored_resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.mirrored_resources.new](#fn-compute_packet_mirroringmirrored_resourcesnew) constructor.
+set to true. When `null`, the `collector_ilb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.collector_ilb.new](#fn-collector_ilbnew) constructor.
+  - `filter` (`list[obj]`): A filter for mirrored traffic.  If unset, all traffic is mirrored. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.filter.new](#fn-filternew) constructor.
+  - `mirrored_resources` (`list[obj]`): A means of specifying which resources to mirror. When `null`, the `mirrored_resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.mirrored_resources.new](#fn-mirrored_resourcesnew) constructor.
   - `network` (`list[obj]`): Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.network.new](#fn-compute_packet_mirroringnetworknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.timeouts.new](#fn-compute_packet_mirroringtimeoutsnew) constructor.
+network. All mirrored subnetworks should belong to the given network. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.network.new](#fn-networknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -107,7 +107,7 @@ newAttrs()
 `google.compute_packet_mirroring.newAttrs` constructs a new object with attributes and blocks configured for the `compute_packet_mirroring`
 Terraform resource.
 
-Unlike [google.compute_packet_mirroring.new](#fn-compute_packet_mirroringnew), this function will not inject the `resource`
+Unlike [google.compute_packet_mirroring.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -126,13 +126,13 @@ If it is not provided, the provider region is used. When `null`, the `region` fi
   - `collector_ilb` (`list[obj]`): The Forwarding Rule resource (of type load_balancing_scheme=INTERNAL)
 that will be used as collector for mirrored traffic. The
 specified forwarding rule must have is_mirroring_collector
-set to true. When `null`, the `collector_ilb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.collector_ilb.new](#fn-compute_packet_mirroringcollector_ilbnew) constructor.
-  - `filter` (`list[obj]`): A filter for mirrored traffic.  If unset, all traffic is mirrored. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.filter.new](#fn-compute_packet_mirroringfilternew) constructor.
-  - `mirrored_resources` (`list[obj]`): A means of specifying which resources to mirror. When `null`, the `mirrored_resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.mirrored_resources.new](#fn-compute_packet_mirroringmirrored_resourcesnew) constructor.
+set to true. When `null`, the `collector_ilb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.collector_ilb.new](#fn-collector_ilbnew) constructor.
+  - `filter` (`list[obj]`): A filter for mirrored traffic.  If unset, all traffic is mirrored. When `null`, the `filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.filter.new](#fn-filternew) constructor.
+  - `mirrored_resources` (`list[obj]`): A means of specifying which resources to mirror. When `null`, the `mirrored_resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.mirrored_resources.new](#fn-mirrored_resourcesnew) constructor.
   - `network` (`list[obj]`): Specifies the mirrored VPC network. Only packets in this network
 will be mirrored. All mirrored VMs should have a NIC in the given
-network. All mirrored subnetworks should belong to the given network. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.network.new](#fn-compute_packet_mirroringnetworknew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.timeouts.new](#fn-compute_packet_mirroringtimeoutsnew) constructor.
+network. All mirrored subnetworks should belong to the given network. When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.network.new](#fn-networknew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_packet_mirroring` resource into the root Terraform configuration.
@@ -469,8 +469,8 @@ Terraform sub block.
 
 **Args**:
   - `tags` (`list`): All instances with these tags will be mirrored. When `null`, the `tags` field will be omitted from the resulting object.
-  - `instances` (`list[obj]`): All the listed instances will be mirrored.  Specify at most 50. When `null`, the `instances` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.mirrored_resources.instances.new](#fn-mirrored_resourcesinstancesnew) constructor.
-  - `subnetworks` (`list[obj]`): All instances in one of these subnetworks will be mirrored. When `null`, the `subnetworks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.mirrored_resources.subnetworks.new](#fn-mirrored_resourcessubnetworksnew) constructor.
+  - `instances` (`list[obj]`): All the listed instances will be mirrored.  Specify at most 50. When `null`, the `instances` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.mirrored_resources.instances.new](#fn-instancesnew) constructor.
+  - `subnetworks` (`list[obj]`): All instances in one of these subnetworks will be mirrored. When `null`, the `subnetworks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_packet_mirroring.mirrored_resources.subnetworks.new](#fn-subnetworksnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `mirrored_resources` sub block.

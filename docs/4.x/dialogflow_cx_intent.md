@@ -81,9 +81,9 @@ Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Age
   - `priority` (`number`): The priority of this intent. Higher numbers represent higher priorities.
 If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the Normal priority in the console.
 If the supplied value is negative, the intent is ignored in runtime detect intent requests. When `null`, the `priority` field will be omitted from the resulting object.
-  - `parameters` (`list[obj]`): The collection of parameters associated with the intent. When `null`, the `parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.parameters.new](#fn-dialogflow_cx_intentparametersnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.timeouts.new](#fn-dialogflow_cx_intenttimeoutsnew) constructor.
-  - `training_phrases` (`list[obj]`): The collection of training phrases the agent is trained on to identify the intent. When `null`, the `training_phrases` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.training_phrases.new](#fn-dialogflow_cx_intenttraining_phrasesnew) constructor.
+  - `parameters` (`list[obj]`): The collection of parameters associated with the intent. When `null`, the `parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.parameters.new](#fn-parametersnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.timeouts.new](#fn-timeoutsnew) constructor.
+  - `training_phrases` (`list[obj]`): The collection of training phrases the agent is trained on to identify the intent. When `null`, the `training_phrases` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.training_phrases.new](#fn-training_phrasesnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -99,7 +99,7 @@ newAttrs()
 `google.dialogflow_cx_intent.newAttrs` constructs a new object with attributes and blocks configured for the `dialogflow_cx_intent`
 Terraform resource.
 
-Unlike [google.dialogflow_cx_intent.new](#fn-dialogflow_cx_intentnew), this function will not inject the `resource`
+Unlike [google.dialogflow_cx_intent.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -122,9 +122,9 @@ Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Age
   - `priority` (`number`): The priority of this intent. Higher numbers represent higher priorities.
 If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the Normal priority in the console.
 If the supplied value is negative, the intent is ignored in runtime detect intent requests. When `null`, the `priority` field will be omitted from the resulting object.
-  - `parameters` (`list[obj]`): The collection of parameters associated with the intent. When `null`, the `parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.parameters.new](#fn-dialogflow_cx_intentparametersnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.timeouts.new](#fn-dialogflow_cx_intenttimeoutsnew) constructor.
-  - `training_phrases` (`list[obj]`): The collection of training phrases the agent is trained on to identify the intent. When `null`, the `training_phrases` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.training_phrases.new](#fn-dialogflow_cx_intenttraining_phrasesnew) constructor.
+  - `parameters` (`list[obj]`): The collection of parameters associated with the intent. When `null`, the `parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.parameters.new](#fn-parametersnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.timeouts.new](#fn-timeoutsnew) constructor.
+  - `training_phrases` (`list[obj]`): The collection of training phrases the agent is trained on to identify the intent. When `null`, the `training_phrases` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.training_phrases.new](#fn-training_phrasesnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dialogflow_cx_intent` resource into the root Terraform configuration.
@@ -428,7 +428,7 @@ Note: Do not forget to include whitespace at part boundaries, so the training ph
 If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set.
 If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways:
 Part.text is set to a part of the phrase that has no parameters.
-Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set. When `null`, the `parts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.training_phrases.parts.new](#fn-training_phrasespartsnew) constructor.
+Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set. When `null`, the `parts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_intent.training_phrases.parts.new](#fn-partsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `training_phrases` sub block.

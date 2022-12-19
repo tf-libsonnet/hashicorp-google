@@ -55,7 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `dicom_store_id` (`string`): 
   - `members` (`list`): 
   - `role` (`string`): 
-  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_dicom_store_iam_binding.condition.new](#fn-healthcare_dicom_store_iam_bindingconditionnew) constructor.
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_dicom_store_iam_binding.condition.new](#fn-conditionnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -71,7 +71,7 @@ newAttrs()
 `google.healthcare_dicom_store_iam_binding.newAttrs` constructs a new object with attributes and blocks configured for the `healthcare_dicom_store_iam_binding`
 Terraform resource.
 
-Unlike [google.healthcare_dicom_store_iam_binding.new](#fn-healthcare_dicom_store_iam_bindingnew), this function will not inject the `resource`
+Unlike [google.healthcare_dicom_store_iam_binding.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -82,7 +82,7 @@ injecting into a complete block.
   - `dicom_store_id` (`string`): 
   - `members` (`list`): 
   - `role` (`string`): 
-  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_dicom_store_iam_binding.condition.new](#fn-healthcare_dicom_store_iam_bindingconditionnew) constructor.
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_dicom_store_iam_binding.condition.new](#fn-conditionnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `healthcare_dicom_store_iam_binding` resource into the root Terraform configuration.

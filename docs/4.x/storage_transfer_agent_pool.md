@@ -68,8 +68,8 @@ The agentPoolId must meet the following requirements:
 
 As expressed by the regular expression: ^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `bandwidth_limit` (`list[obj]`): Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;. When `null`, the `bandwidth_limit` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_agent_pool.bandwidth_limit.new](#fn-storage_transfer_agent_poolbandwidth_limitnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_agent_pool.timeouts.new](#fn-storage_transfer_agent_pooltimeoutsnew) constructor.
+  - `bandwidth_limit` (`list[obj]`): Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;. When `null`, the `bandwidth_limit` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_agent_pool.bandwidth_limit.new](#fn-bandwidth_limitnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_agent_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -85,7 +85,7 @@ newAttrs()
 `google.storage_transfer_agent_pool.newAttrs` constructs a new object with attributes and blocks configured for the `storage_transfer_agent_pool`
 Terraform resource.
 
-Unlike [google.storage_transfer_agent_pool.new](#fn-storage_transfer_agent_poolnew), this function will not inject the `resource`
+Unlike [google.storage_transfer_agent_pool.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -105,8 +105,8 @@ The agentPoolId must meet the following requirements:
 
 As expressed by the regular expression: ^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `bandwidth_limit` (`list[obj]`): Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;. When `null`, the `bandwidth_limit` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_agent_pool.bandwidth_limit.new](#fn-storage_transfer_agent_poolbandwidth_limitnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_agent_pool.timeouts.new](#fn-storage_transfer_agent_pooltimeoutsnew) constructor.
+  - `bandwidth_limit` (`list[obj]`): Specifies the bandwidth limit details. If this field is unspecified, the default value is set as &#39;No Limit&#39;. When `null`, the `bandwidth_limit` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_agent_pool.bandwidth_limit.new](#fn-bandwidth_limitnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_agent_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_transfer_agent_pool` resource into the root Terraform configuration.

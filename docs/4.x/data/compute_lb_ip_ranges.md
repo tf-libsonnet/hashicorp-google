@@ -60,7 +60,7 @@ newAttrs()
 `google.data.compute_lb_ip_ranges.newAttrs` constructs a new object with attributes and blocks configured for the `compute_lb_ip_ranges`
 Terraform data source.
 
-Unlike [google.data.compute_lb_ip_ranges.new](#fn-compute_lb_ip_rangesnew), this function will not inject the `data source`
+Unlike [google.data.compute_lb_ip_ranges.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

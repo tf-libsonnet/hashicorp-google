@@ -64,7 +64,7 @@ newAttrs()
 `google.data.project_organization_policy.newAttrs` constructs a new object with attributes and blocks configured for the `project_organization_policy`
 Terraform data source.
 
-Unlike [google.data.project_organization_policy.new](#fn-project_organization_policynew), this function will not inject the `data source`
+Unlike [google.data.project_organization_policy.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

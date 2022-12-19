@@ -57,7 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `language_tag` (`string`): The preferred language for notifications, as a ISO 639-1 language code. See Supported languages for a list of supported languages.
   - `notification_category_subscriptions` (`list`): The categories of notifications that the contact will receive communications for.
   - `parent` (`string`): The resource to save this contact for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.essential_contacts_contact.timeouts.new](#fn-essential_contacts_contacttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.essential_contacts_contact.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -73,7 +73,7 @@ newAttrs()
 `google.essential_contacts_contact.newAttrs` constructs a new object with attributes and blocks configured for the `essential_contacts_contact`
 Terraform resource.
 
-Unlike [google.essential_contacts_contact.new](#fn-essential_contacts_contactnew), this function will not inject the `resource`
+Unlike [google.essential_contacts_contact.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -85,7 +85,7 @@ injecting into a complete block.
   - `language_tag` (`string`): The preferred language for notifications, as a ISO 639-1 language code. See Supported languages for a list of supported languages.
   - `notification_category_subscriptions` (`list`): The categories of notifications that the contact will receive communications for.
   - `parent` (`string`): The resource to save this contact for. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.essential_contacts_contact.timeouts.new](#fn-essential_contacts_contacttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.essential_contacts_contact.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `essential_contacts_contact` resource into the root Terraform configuration.

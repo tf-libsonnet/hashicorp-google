@@ -87,8 +87,8 @@ except the last character, which cannot be a dash.
   - `target_service` (`string`): The URL of a forwarding rule that represents the service identified by
 this service attachment.
   - `consumer_accept_lists` (`list[obj]`): An array of projects that are allowed to connect to this service
-attachment. When `null`, the `consumer_accept_lists` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.consumer_accept_lists.new](#fn-compute_service_attachmentconsumer_accept_listsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.timeouts.new](#fn-compute_service_attachmenttimeoutsnew) constructor.
+attachment. When `null`, the `consumer_accept_lists` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.consumer_accept_lists.new](#fn-consumer_accept_listsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -104,7 +104,7 @@ newAttrs()
 `google.compute_service_attachment.newAttrs` constructs a new object with attributes and blocks configured for the `compute_service_attachment`
 Terraform resource.
 
-Unlike [google.compute_service_attachment.new](#fn-compute_service_attachmentnew), this function will not inject the `resource`
+Unlike [google.compute_service_attachment.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -136,8 +136,8 @@ except the last character, which cannot be a dash.
   - `target_service` (`string`): The URL of a forwarding rule that represents the service identified by
 this service attachment.
   - `consumer_accept_lists` (`list[obj]`): An array of projects that are allowed to connect to this service
-attachment. When `null`, the `consumer_accept_lists` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.consumer_accept_lists.new](#fn-compute_service_attachmentconsumer_accept_listsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.timeouts.new](#fn-compute_service_attachmenttimeoutsnew) constructor.
+attachment. When `null`, the `consumer_accept_lists` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.consumer_accept_lists.new](#fn-consumer_accept_listsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_service_attachment` resource into the root Terraform configuration.

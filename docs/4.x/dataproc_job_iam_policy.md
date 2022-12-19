@@ -68,7 +68,7 @@ newAttrs()
 `google.dataproc_job_iam_policy.newAttrs` constructs a new object with attributes and blocks configured for the `dataproc_job_iam_policy`
 Terraform resource.
 
-Unlike [google.dataproc_job_iam_policy.new](#fn-dataproc_job_iam_policynew), this function will not inject the `resource`
+Unlike [google.dataproc_job_iam_policy.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 

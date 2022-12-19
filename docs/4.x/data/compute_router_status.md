@@ -66,7 +66,7 @@ newAttrs()
 `google.data.compute_router_status.newAttrs` constructs a new object with attributes and blocks configured for the `compute_router_status`
 Terraform data source.
 
-Unlike [google.data.compute_router_status.new](#fn-compute_router_statusnew), this function will not inject the `data source`
+Unlike [google.data.compute_router_status.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

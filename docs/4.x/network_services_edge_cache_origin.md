@@ -133,12 +133,12 @@ Valid values are:
 - RETRIABLE_4XX: Retry for retriable 4xx response codes, which include HTTP 409 (Conflict) and HTTP 429 (Too Many Requests)
 - NOT_FOUND: Retry if the origin returns a HTTP 404 (Not Found). This can be useful when generating video content, and the segment is not available yet.
 - FORBIDDEN: Retry if the origin returns a HTTP 403 (Forbidden). Possible values: [&#34;CONNECT_FAILURE&#34;, &#34;HTTP_5XX&#34;, &#34;GATEWAY_ERROR&#34;, &#34;RETRIABLE_4XX&#34;, &#34;NOT_FOUND&#34;, &#34;FORBIDDEN&#34;] When `null`, the `retry_conditions` field will be omitted from the resulting object.
-  - `aws_v4_authentication` (`list[obj]`): Enable AWS Signature Version 4 origin authentication. When `null`, the `aws_v4_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.aws_v4_authentication.new](#fn-network_services_edge_cache_originaws_v4_authenticationnew) constructor.
+  - `aws_v4_authentication` (`list[obj]`): Enable AWS Signature Version 4 origin authentication. When `null`, the `aws_v4_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.aws_v4_authentication.new](#fn-aws_v4_authenticationnew) constructor.
   - `origin_override_action` (`list[obj]`): The override actions, including url rewrites and header
-additions, for requests that use this origin. When `null`, the `origin_override_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.new](#fn-network_services_edge_cache_originorigin_override_actionnew) constructor.
-  - `origin_redirect` (`list[obj]`): Follow redirects from this origin. When `null`, the `origin_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_redirect.new](#fn-network_services_edge_cache_originorigin_redirectnew) constructor.
-  - `timeout` (`list[obj]`): The connection and HTTP timeout configuration for this origin. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeout.new](#fn-network_services_edge_cache_origintimeoutnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeouts.new](#fn-network_services_edge_cache_origintimeoutsnew) constructor.
+additions, for requests that use this origin. When `null`, the `origin_override_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.new](#fn-origin_override_actionnew) constructor.
+  - `origin_redirect` (`list[obj]`): Follow redirects from this origin. When `null`, the `origin_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_redirect.new](#fn-origin_redirectnew) constructor.
+  - `timeout` (`list[obj]`): The connection and HTTP timeout configuration for this origin. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeout.new](#fn-timeoutnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -154,7 +154,7 @@ newAttrs()
 `google.network_services_edge_cache_origin.newAttrs` constructs a new object with attributes and blocks configured for the `network_services_edge_cache_origin`
 Terraform resource.
 
-Unlike [google.network_services_edge_cache_origin.new](#fn-network_services_edge_cache_originnew), this function will not inject the `resource`
+Unlike [google.network_services_edge_cache_origin.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -214,12 +214,12 @@ Valid values are:
 - RETRIABLE_4XX: Retry for retriable 4xx response codes, which include HTTP 409 (Conflict) and HTTP 429 (Too Many Requests)
 - NOT_FOUND: Retry if the origin returns a HTTP 404 (Not Found). This can be useful when generating video content, and the segment is not available yet.
 - FORBIDDEN: Retry if the origin returns a HTTP 403 (Forbidden). Possible values: [&#34;CONNECT_FAILURE&#34;, &#34;HTTP_5XX&#34;, &#34;GATEWAY_ERROR&#34;, &#34;RETRIABLE_4XX&#34;, &#34;NOT_FOUND&#34;, &#34;FORBIDDEN&#34;] When `null`, the `retry_conditions` field will be omitted from the resulting object.
-  - `aws_v4_authentication` (`list[obj]`): Enable AWS Signature Version 4 origin authentication. When `null`, the `aws_v4_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.aws_v4_authentication.new](#fn-network_services_edge_cache_originaws_v4_authenticationnew) constructor.
+  - `aws_v4_authentication` (`list[obj]`): Enable AWS Signature Version 4 origin authentication. When `null`, the `aws_v4_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.aws_v4_authentication.new](#fn-aws_v4_authenticationnew) constructor.
   - `origin_override_action` (`list[obj]`): The override actions, including url rewrites and header
-additions, for requests that use this origin. When `null`, the `origin_override_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.new](#fn-network_services_edge_cache_originorigin_override_actionnew) constructor.
-  - `origin_redirect` (`list[obj]`): Follow redirects from this origin. When `null`, the `origin_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_redirect.new](#fn-network_services_edge_cache_originorigin_redirectnew) constructor.
-  - `timeout` (`list[obj]`): The connection and HTTP timeout configuration for this origin. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeout.new](#fn-network_services_edge_cache_origintimeoutnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeouts.new](#fn-network_services_edge_cache_origintimeoutsnew) constructor.
+additions, for requests that use this origin. When `null`, the `origin_override_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.new](#fn-origin_override_actionnew) constructor.
+  - `origin_redirect` (`list[obj]`): Follow redirects from this origin. When `null`, the `origin_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_redirect.new](#fn-origin_redirectnew) constructor.
+  - `timeout` (`list[obj]`): The connection and HTTP timeout configuration for this origin. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeout.new](#fn-timeoutnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_services_edge_cache_origin` resource into the root Terraform configuration.
@@ -614,9 +614,9 @@ Terraform sub block.
 
 **Args**:
   - `header_action` (`list[obj]`): The header actions, including adding and removing
-headers, for request handled by this origin. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.header_action.new](#fn-origin_override_actionheader_actionnew) constructor.
+headers, for request handled by this origin. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.header_action.new](#fn-header_actionnew) constructor.
   - `url_rewrite` (`list[obj]`): The URL rewrite configuration for request that are
-handled by this origin. When `null`, the `url_rewrite` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.url_rewrite.new](#fn-origin_override_actionurl_rewritenew) constructor.
+handled by this origin. When `null`, the `url_rewrite` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.url_rewrite.new](#fn-url_rewritenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `origin_override_action` sub block.
@@ -641,7 +641,7 @@ Terraform sub block.
 **Args**:
   - `request_headers_to_add` (`list[obj]`): Describes a header to add.
 
-You may add a maximum of 5 request headers. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.header_action.request_headers_to_add.new](#fn-header_actionrequest_headers_to_addnew) constructor.
+You may add a maximum of 5 request headers. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.header_action.request_headers_to_add.new](#fn-origin_override_actionrequest_headers_to_addnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header_action` sub block.

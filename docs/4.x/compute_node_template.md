@@ -77,10 +77,10 @@ If it is not provided, the provider region is used. When `null`, the `region` fi
   - `node_type_flexibility` (`list[obj]`): Flexible properties for the desired node type. Node groups that
 use this node template will create nodes of a type that matches
 these properties. Only one of nodeTypeFlexibility and nodeType can
-be specified. When `null`, the `node_type_flexibility` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_template.node_type_flexibility.new](#fn-compute_node_templatenode_type_flexibilitynew) constructor.
+be specified. When `null`, the `node_type_flexibility` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_template.node_type_flexibility.new](#fn-node_type_flexibilitynew) constructor.
   - `server_binding` (`list[obj]`): The server binding policy for nodes using this template. Determines
-where the nodes should restart following a maintenance event. When `null`, the `server_binding` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_template.server_binding.new](#fn-compute_node_templateserver_bindingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_template.timeouts.new](#fn-compute_node_templatetimeoutsnew) constructor.
+where the nodes should restart following a maintenance event. When `null`, the `server_binding` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_template.server_binding.new](#fn-server_bindingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_template.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -96,7 +96,7 @@ newAttrs()
 `google.compute_node_template.newAttrs` constructs a new object with attributes and blocks configured for the `compute_node_template`
 Terraform resource.
 
-Unlike [google.compute_node_template.new](#fn-compute_node_templatenew), this function will not inject the `resource`
+Unlike [google.compute_node_template.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -117,10 +117,10 @@ If it is not provided, the provider region is used. When `null`, the `region` fi
   - `node_type_flexibility` (`list[obj]`): Flexible properties for the desired node type. Node groups that
 use this node template will create nodes of a type that matches
 these properties. Only one of nodeTypeFlexibility and nodeType can
-be specified. When `null`, the `node_type_flexibility` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_template.node_type_flexibility.new](#fn-compute_node_templatenode_type_flexibilitynew) constructor.
+be specified. When `null`, the `node_type_flexibility` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_template.node_type_flexibility.new](#fn-node_type_flexibilitynew) constructor.
   - `server_binding` (`list[obj]`): The server binding policy for nodes using this template. Determines
-where the nodes should restart following a maintenance event. When `null`, the `server_binding` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_template.server_binding.new](#fn-compute_node_templateserver_bindingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_template.timeouts.new](#fn-compute_node_templatetimeoutsnew) constructor.
+where the nodes should restart following a maintenance event. When `null`, the `server_binding` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_template.server_binding.new](#fn-server_bindingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_template.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_node_template` resource into the root Terraform configuration.

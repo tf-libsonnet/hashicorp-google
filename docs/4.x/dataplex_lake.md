@@ -65,8 +65,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): The location for the resource
   - `name` (`string`): The name of the lake.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
-  - `metastore` (`list[obj]`): Optional. Settings to manage lake and Dataproc Metastore service instance association. When `null`, the `metastore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_lake.metastore.new](#fn-dataplex_lakemetastorenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_lake.timeouts.new](#fn-dataplex_laketimeoutsnew) constructor.
+  - `metastore` (`list[obj]`): Optional. Settings to manage lake and Dataproc Metastore service instance association. When `null`, the `metastore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_lake.metastore.new](#fn-metastorenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_lake.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -82,7 +82,7 @@ newAttrs()
 `google.dataplex_lake.newAttrs` constructs a new object with attributes and blocks configured for the `dataplex_lake`
 Terraform resource.
 
-Unlike [google.dataplex_lake.new](#fn-dataplex_lakenew), this function will not inject the `resource`
+Unlike [google.dataplex_lake.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -96,8 +96,8 @@ injecting into a complete block.
   - `location` (`string`): The location for the resource
   - `name` (`string`): The name of the lake.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
-  - `metastore` (`list[obj]`): Optional. Settings to manage lake and Dataproc Metastore service instance association. When `null`, the `metastore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_lake.metastore.new](#fn-dataplex_lakemetastorenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_lake.timeouts.new](#fn-dataplex_laketimeoutsnew) constructor.
+  - `metastore` (`list[obj]`): Optional. Settings to manage lake and Dataproc Metastore service instance association. When `null`, the `metastore` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_lake.metastore.new](#fn-metastorenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_lake.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dataplex_lake` resource into the root Terraform configuration.

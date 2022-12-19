@@ -93,8 +93,8 @@ granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name} When `null`, the `required_access_levels` field will be omitted from the resulting object.
   - `device_policy` (`list[obj]`): Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
-allowed. When `null`, the `device_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.device_policy.new](#fn-access_context_manager_access_level_conditiondevice_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.timeouts.new](#fn-access_context_manager_access_level_conditiontimeoutsnew) constructor.
+allowed. When `null`, the `device_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.device_policy.new](#fn-device_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -110,7 +110,7 @@ newAttrs()
 `google.access_context_manager_access_level_condition.newAttrs` constructs a new object with attributes and blocks configured for the `access_context_manager_access_level_condition`
 Terraform resource.
 
-Unlike [google.access_context_manager_access_level_condition.new](#fn-access_context_manager_access_level_conditionnew), this function will not inject the `resource`
+Unlike [google.access_context_manager_access_level_condition.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -150,8 +150,8 @@ granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name} When `null`, the `required_access_levels` field will be omitted from the resulting object.
   - `device_policy` (`list[obj]`): Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
-allowed. When `null`, the `device_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.device_policy.new](#fn-access_context_manager_access_level_conditiondevice_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.timeouts.new](#fn-access_context_manager_access_level_conditiontimeoutsnew) constructor.
+allowed. When `null`, the `device_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.device_policy.new](#fn-device_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `access_context_manager_access_level_condition` resource into the root Terraform configuration.
@@ -352,7 +352,7 @@ An empty list allows all statuses. Possible values: [&#34;ENCRYPTION_UNSPECIFIED
   - `require_screen_lock` (`bool`): Whether or not screenlock is required for the DevicePolicy
 to be true. Defaults to false. When `null`, the `require_screen_lock` field will be omitted from the resulting object.
   - `os_constraints` (`list[obj]`): A list of allowed OS versions.
-An empty list allows all types and all versions. When `null`, the `os_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.device_policy.os_constraints.new](#fn-device_policyos_constraintsnew) constructor.
+An empty list allows all types and all versions. When `null`, the `os_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.device_policy.os_constraints.new](#fn-os_constraintsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `device_policy` sub block.

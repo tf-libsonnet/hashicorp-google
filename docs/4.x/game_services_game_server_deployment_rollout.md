@@ -67,8 +67,8 @@ applied by default to all realms and clusters. For example,
   - `game_server_config_overrides` (`list[obj]`): The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
-processed. When `null`, the `game_server_config_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.game_server_config_overrides.new](#fn-game_services_game_server_deployment_rolloutgame_server_config_overridesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.timeouts.new](#fn-game_services_game_server_deployment_rollouttimeoutsnew) constructor.
+processed. When `null`, the `game_server_config_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.game_server_config_overrides.new](#fn-game_server_config_overridesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,7 +84,7 @@ newAttrs()
 `google.game_services_game_server_deployment_rollout.newAttrs` constructs a new object with attributes and blocks configured for the `game_services_game_server_deployment_rollout`
 Terraform resource.
 
-Unlike [google.game_services_game_server_deployment_rollout.new](#fn-game_services_game_server_deployment_rolloutnew), this function will not inject the `resource`
+Unlike [google.game_services_game_server_deployment_rollout.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -101,8 +101,8 @@ applied by default to all realms and clusters. For example,
   - `game_server_config_overrides` (`list[obj]`): The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
-processed. When `null`, the `game_server_config_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.game_server_config_overrides.new](#fn-game_services_game_server_deployment_rolloutgame_server_config_overridesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.timeouts.new](#fn-game_services_game_server_deployment_rollouttimeoutsnew) constructor.
+processed. When `null`, the `game_server_config_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.game_server_config_overrides.new](#fn-game_server_config_overridesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `game_services_game_server_deployment_rollout` resource into the root Terraform configuration.
@@ -247,7 +247,7 @@ Terraform sub block.
 
 **Args**:
   - `config_version` (`string`): Version of the configuration. When `null`, the `config_version` field will be omitted from the resulting object.
-  - `realms_selector` (`list[obj]`): Selection by realms. When `null`, the `realms_selector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.game_server_config_overrides.realms_selector.new](#fn-game_server_config_overridesrealms_selectornew) constructor.
+  - `realms_selector` (`list[obj]`): Selection by realms. When `null`, the `realms_selector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.game_server_config_overrides.realms_selector.new](#fn-realms_selectornew) constructor.
 
 **Returns**:
   - An attribute object that represents the `game_server_config_overrides` sub block.

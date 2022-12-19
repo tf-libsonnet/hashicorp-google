@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Template location region. When `null`, the `region` field will be omitted from the resulting object.
   - `tag_template_id` (`string`): The id of the tag template to create.
-  - `fields` (`list[obj]`): Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields. When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.new](#fn-data_catalog_tag_templatefieldsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.timeouts.new](#fn-data_catalog_tag_templatetimeoutsnew) constructor.
+  - `fields` (`list[obj]`): Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields. When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.new](#fn-fieldsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `google.data_catalog_tag_template.newAttrs` constructs a new object with attributes and blocks configured for the `data_catalog_tag_template`
 Terraform resource.
 
-Unlike [google.data_catalog_tag_template.new](#fn-data_catalog_tag_templatenew), this function will not inject the `resource`
+Unlike [google.data_catalog_tag_template.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -99,8 +99,8 @@ injecting into a complete block.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Template location region. When `null`, the `region` field will be omitted from the resulting object.
   - `tag_template_id` (`string`): The id of the tag template to create.
-  - `fields` (`list[obj]`): Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields. When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.new](#fn-data_catalog_tag_templatefieldsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.timeouts.new](#fn-data_catalog_tag_templatetimeoutsnew) constructor.
+  - `fields` (`list[obj]`): Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields. When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.new](#fn-fieldsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_catalog_tag_template` resource into the root Terraform configuration.
@@ -283,7 +283,7 @@ Terraform sub block.
   - `order` (`number`): The order of this field with respect to other fields in this tag template.
 A higher value indicates a more important field. The value can be negative.
 Multiple fields can have the same order, and field orders within a tag do not have to be sequential. When `null`, the `order` field will be omitted from the resulting object.
-  - `type` (`list[obj]`): The type of value this tag field can contain. When `null`, the `type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.type.new](#fn-fieldstypenew) constructor.
+  - `type` (`list[obj]`): The type of value this tag field can contain. When `null`, the `type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.type.new](#fn-typenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `fields` sub block.
@@ -309,7 +309,7 @@ Terraform sub block.
   - `primitive_type` (`string`): Represents primitive types - string, bool etc.
  Exactly one of &#39;primitive_type&#39; or &#39;enum_type&#39; must be set Possible values: [&#34;DOUBLE&#34;, &#34;STRING&#34;, &#34;BOOL&#34;, &#34;TIMESTAMP&#34;] When `null`, the `primitive_type` field will be omitted from the resulting object.
   - `enum_type` (`list[obj]`): Represents an enum type.
- Exactly one of &#39;primitive_type&#39; or &#39;enum_type&#39; must be set When `null`, the `enum_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.type.enum_type.new](#fn-typeenum_typenew) constructor.
+ Exactly one of &#39;primitive_type&#39; or &#39;enum_type&#39; must be set When `null`, the `enum_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.type.enum_type.new](#fn-fieldsenum_typenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `type` sub block.
@@ -336,7 +336,7 @@ Terraform sub block.
 values must be case-insensitively unique within this set. Currently,
 enum values can only be added to the list of allowed values. Deletion
 and renaming of enum values are not supported.
-Can have up to 500 allowed values. When `null`, the `allowed_values` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.type.enum_type.allowed_values.new](#fn-enum_typeallowed_valuesnew) constructor.
+Can have up to 500 allowed values. When `null`, the `allowed_values` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.type.enum_type.allowed_values.new](#fn-fieldstypeallowed_valuesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `enum_type` sub block.

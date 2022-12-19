@@ -66,7 +66,7 @@ newAttrs()
 `google.data.cloud_identity_groups.newAttrs` constructs a new object with attributes and blocks configured for the `cloud_identity_groups`
 Terraform data source.
 
-Unlike [google.data.cloud_identity_groups.new](#fn-cloud_identity_groupsnew), this function will not inject the `data source`
+Unlike [google.data.cloud_identity_groups.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

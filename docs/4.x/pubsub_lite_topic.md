@@ -71,10 +71,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the pubsub lite topic. When `null`, the `region` field will be omitted from the resulting object.
   - `zone` (`string`): The zone of the pubsub lite topic. When `null`, the `zone` field will be omitted from the resulting object.
-  - `partition_config` (`list[obj]`): The settings for this topic&#39;s partitions. When `null`, the `partition_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.partition_config.new](#fn-pubsub_lite_topicpartition_confignew) constructor.
-  - `reservation_config` (`list[obj]`): The settings for this topic&#39;s Reservation usage. When `null`, the `reservation_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.reservation_config.new](#fn-pubsub_lite_topicreservation_confignew) constructor.
-  - `retention_config` (`list[obj]`): The settings for a topic&#39;s message retention. When `null`, the `retention_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.retention_config.new](#fn-pubsub_lite_topicretention_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.timeouts.new](#fn-pubsub_lite_topictimeoutsnew) constructor.
+  - `partition_config` (`list[obj]`): The settings for this topic&#39;s partitions. When `null`, the `partition_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.partition_config.new](#fn-partition_confignew) constructor.
+  - `reservation_config` (`list[obj]`): The settings for this topic&#39;s Reservation usage. When `null`, the `reservation_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.reservation_config.new](#fn-reservation_confignew) constructor.
+  - `retention_config` (`list[obj]`): The settings for a topic&#39;s message retention. When `null`, the `retention_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.retention_config.new](#fn-retention_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,7 +90,7 @@ newAttrs()
 `google.pubsub_lite_topic.newAttrs` constructs a new object with attributes and blocks configured for the `pubsub_lite_topic`
 Terraform resource.
 
-Unlike [google.pubsub_lite_topic.new](#fn-pubsub_lite_topicnew), this function will not inject the `resource`
+Unlike [google.pubsub_lite_topic.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -102,10 +102,10 @@ injecting into a complete block.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the pubsub lite topic. When `null`, the `region` field will be omitted from the resulting object.
   - `zone` (`string`): The zone of the pubsub lite topic. When `null`, the `zone` field will be omitted from the resulting object.
-  - `partition_config` (`list[obj]`): The settings for this topic&#39;s partitions. When `null`, the `partition_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.partition_config.new](#fn-pubsub_lite_topicpartition_confignew) constructor.
-  - `reservation_config` (`list[obj]`): The settings for this topic&#39;s Reservation usage. When `null`, the `reservation_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.reservation_config.new](#fn-pubsub_lite_topicreservation_confignew) constructor.
-  - `retention_config` (`list[obj]`): The settings for a topic&#39;s message retention. When `null`, the `retention_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.retention_config.new](#fn-pubsub_lite_topicretention_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.timeouts.new](#fn-pubsub_lite_topictimeoutsnew) constructor.
+  - `partition_config` (`list[obj]`): The settings for this topic&#39;s partitions. When `null`, the `partition_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.partition_config.new](#fn-partition_confignew) constructor.
+  - `reservation_config` (`list[obj]`): The settings for this topic&#39;s Reservation usage. When `null`, the `reservation_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.reservation_config.new](#fn-reservation_confignew) constructor.
+  - `retention_config` (`list[obj]`): The settings for a topic&#39;s message retention. When `null`, the `retention_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.retention_config.new](#fn-retention_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `pubsub_lite_topic` resource into the root Terraform configuration.
@@ -340,7 +340,7 @@ Terraform sub block.
 
 **Args**:
   - `count` (`number`): The number of partitions in the topic. Must be at least 1.
-  - `capacity` (`list[obj]`): The capacity configuration. When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.partition_config.capacity.new](#fn-partition_configcapacitynew) constructor.
+  - `capacity` (`list[obj]`): The capacity configuration. When `null`, the `capacity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_lite_topic.partition_config.capacity.new](#fn-capacitynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `partition_config` sub block.

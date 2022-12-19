@@ -79,14 +79,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `display_name` (`string`): User data for display name in UI. Must be &lt;= 60 chars. When `null`, the `display_name` field will be omitted from the resulting object.
   - `all_updates_rule` (`list[obj]`): Defines notifications that are sent on every update to the
 billing account&#39;s spend, regardless of the thresholds defined
-using threshold rules. When `null`, the `all_updates_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.all_updates_rule.new](#fn-billing_budgetall_updates_rulenew) constructor.
-  - `amount` (`list[obj]`): The budgeted amount for each usage period. When `null`, the `amount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.amount.new](#fn-billing_budgetamountnew) constructor.
+using threshold rules. When `null`, the `all_updates_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.all_updates_rule.new](#fn-all_updates_rulenew) constructor.
+  - `amount` (`list[obj]`): The budgeted amount for each usage period. When `null`, the `amount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.amount.new](#fn-amountnew) constructor.
   - `budget_filter` (`list[obj]`): Filters that define which resources are used to compute the actual
-spend against the budget. When `null`, the `budget_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.new](#fn-billing_budgetbudget_filternew) constructor.
+spend against the budget. When `null`, the `budget_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.new](#fn-budget_filternew) constructor.
   - `threshold_rules` (`list[obj]`): Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
-budget. When `null`, the `threshold_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.threshold_rules.new](#fn-billing_budgetthreshold_rulesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.timeouts.new](#fn-billing_budgettimeoutsnew) constructor.
+budget. When `null`, the `threshold_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.threshold_rules.new](#fn-threshold_rulesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,7 +102,7 @@ newAttrs()
 `google.billing_budget.newAttrs` constructs a new object with attributes and blocks configured for the `billing_budget`
 Terraform resource.
 
-Unlike [google.billing_budget.new](#fn-billing_budgetnew), this function will not inject the `resource`
+Unlike [google.billing_budget.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -114,14 +114,14 @@ injecting into a complete block.
   - `display_name` (`string`): User data for display name in UI. Must be &lt;= 60 chars. When `null`, the `display_name` field will be omitted from the resulting object.
   - `all_updates_rule` (`list[obj]`): Defines notifications that are sent on every update to the
 billing account&#39;s spend, regardless of the thresholds defined
-using threshold rules. When `null`, the `all_updates_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.all_updates_rule.new](#fn-billing_budgetall_updates_rulenew) constructor.
-  - `amount` (`list[obj]`): The budgeted amount for each usage period. When `null`, the `amount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.amount.new](#fn-billing_budgetamountnew) constructor.
+using threshold rules. When `null`, the `all_updates_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.all_updates_rule.new](#fn-all_updates_rulenew) constructor.
+  - `amount` (`list[obj]`): The budgeted amount for each usage period. When `null`, the `amount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.amount.new](#fn-amountnew) constructor.
   - `budget_filter` (`list[obj]`): Filters that define which resources are used to compute the actual
-spend against the budget. When `null`, the `budget_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.new](#fn-billing_budgetbudget_filternew) constructor.
+spend against the budget. When `null`, the `budget_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.new](#fn-budget_filternew) constructor.
   - `threshold_rules` (`list[obj]`): Rules that trigger alerts (notifications of thresholds being
 crossed) when spend exceeds the specified percentages of the
-budget. When `null`, the `threshold_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.threshold_rules.new](#fn-billing_budgetthreshold_rulesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.timeouts.new](#fn-billing_budgettimeoutsnew) constructor.
+budget. When `null`, the `threshold_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.threshold_rules.new](#fn-threshold_rulesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `billing_budget` resource into the root Terraform configuration.
@@ -403,7 +403,7 @@ Boolean. Set value to true to use. Do not set to false, instead
 use the &#39;specified_amount&#39; block. When `null`, the `last_period_amount` field will be omitted from the resulting object.
   - `specified_amount` (`list[obj]`): A specified amount to use as the budget. currencyCode is
 optional. If specified, it must match the currency of the
-billing account. The currencyCode is provided on output. When `null`, the `specified_amount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.amount.specified_amount.new](#fn-amountspecified_amountnew) constructor.
+billing account. The currencyCode is provided on output. When `null`, the `specified_amount` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.amount.specified_amount.new](#fn-specified_amountnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `amount` sub block.
@@ -490,7 +490,7 @@ account and all subaccounts, if they exist. When `null`, the `subaccounts` field
   - `custom_period` (`list[obj]`): Specifies to track usage from any start date (required) to any end date (optional).
 This time period is static, it does not recur.
 
-Exactly one of &#39;calendar_period&#39;, &#39;custom_period&#39; must be provided. When `null`, the `custom_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.new](#fn-budget_filtercustom_periodnew) constructor.
+Exactly one of &#39;calendar_period&#39;, &#39;custom_period&#39; must be provided. When `null`, the `custom_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.new](#fn-custom_periodnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `budget_filter` sub block.
@@ -514,8 +514,8 @@ Terraform sub block.
 
 **Args**:
   - `end_date` (`list[obj]`): Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. 
-If unset, specifies to track all usage incurred since the startDate. When `null`, the `end_date` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.end_date.new](#fn-custom_periodend_datenew) constructor.
-  - `start_date` (`list[obj]`): A start date is required. The start date must be after January 1, 2017. When `null`, the `start_date` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.start_date.new](#fn-custom_periodstart_datenew) constructor.
+If unset, specifies to track all usage incurred since the startDate. When `null`, the `end_date` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.end_date.new](#fn-budget_filterend_datenew) constructor.
+  - `start_date` (`list[obj]`): A start date is required. The start date must be after January 1, 2017. When `null`, the `start_date` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.start_date.new](#fn-budget_filterstart_datenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `custom_period` sub block.

@@ -74,8 +74,8 @@ These are in the same namespace as the managed SSL certificates. When `null`, th
   - `type` (`string`): Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API
 which type this is. Default value: &#34;MANAGED&#34; Possible values: [&#34;MANAGED&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `managed` (`list[obj]`): Properties relevant to a managed certificate.  These will be used if the
-certificate is managed (as indicated by a value of &#39;MANAGED&#39; in &#39;type&#39;). When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.managed.new](#fn-compute_managed_ssl_certificatemanagednew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.timeouts.new](#fn-compute_managed_ssl_certificatetimeoutsnew) constructor.
+certificate is managed (as indicated by a value of &#39;MANAGED&#39; in &#39;type&#39;). When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.managed.new](#fn-managednew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,7 +91,7 @@ newAttrs()
 `google.compute_managed_ssl_certificate.newAttrs` constructs a new object with attributes and blocks configured for the `compute_managed_ssl_certificate`
 Terraform resource.
 
-Unlike [google.compute_managed_ssl_certificate.new](#fn-compute_managed_ssl_certificatenew), this function will not inject the `resource`
+Unlike [google.compute_managed_ssl_certificate.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -115,8 +115,8 @@ These are in the same namespace as the managed SSL certificates. When `null`, th
   - `type` (`string`): Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API
 which type this is. Default value: &#34;MANAGED&#34; Possible values: [&#34;MANAGED&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `managed` (`list[obj]`): Properties relevant to a managed certificate.  These will be used if the
-certificate is managed (as indicated by a value of &#39;MANAGED&#39; in &#39;type&#39;). When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.managed.new](#fn-compute_managed_ssl_certificatemanagednew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.timeouts.new](#fn-compute_managed_ssl_certificatetimeoutsnew) constructor.
+certificate is managed (as indicated by a value of &#39;MANAGED&#39; in &#39;type&#39;). When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.managed.new](#fn-managednew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_managed_ssl_certificate` resource into the root Terraform configuration.

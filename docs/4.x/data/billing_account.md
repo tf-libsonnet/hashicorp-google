@@ -66,7 +66,7 @@ newAttrs()
 `google.data.billing_account.newAttrs` constructs a new object with attributes and blocks configured for the `billing_account`
 Terraform data source.
 
-Unlike [google.data.billing_account.new](#fn-billing_accountnew), this function will not inject the `data source`
+Unlike [google.data.billing_account.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

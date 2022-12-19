@@ -63,8 +63,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `labels` (`obj`): The labels with user-defined metadata to organize your Tensorboards. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the tensorboard. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
-  - `encryption_spec` (`list[obj]`): Customer-managed encryption key spec for a Tensorboard. If set, this Tensorboard and all sub-resources of this Tensorboard will be secured by this key. When `null`, the `encryption_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_tensorboard.encryption_spec.new](#fn-vertex_ai_tensorboardencryption_specnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_tensorboard.timeouts.new](#fn-vertex_ai_tensorboardtimeoutsnew) constructor.
+  - `encryption_spec` (`list[obj]`): Customer-managed encryption key spec for a Tensorboard. If set, this Tensorboard and all sub-resources of this Tensorboard will be secured by this key. When `null`, the `encryption_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_tensorboard.encryption_spec.new](#fn-encryption_specnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_tensorboard.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `google.vertex_ai_tensorboard.newAttrs` constructs a new object with attributes and blocks configured for the `vertex_ai_tensorboard`
 Terraform resource.
 
-Unlike [google.vertex_ai_tensorboard.new](#fn-vertex_ai_tensorboardnew), this function will not inject the `resource`
+Unlike [google.vertex_ai_tensorboard.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -93,8 +93,8 @@ injecting into a complete block.
   - `labels` (`obj`): The labels with user-defined metadata to organize your Tensorboards. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the tensorboard. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
-  - `encryption_spec` (`list[obj]`): Customer-managed encryption key spec for a Tensorboard. If set, this Tensorboard and all sub-resources of this Tensorboard will be secured by this key. When `null`, the `encryption_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_tensorboard.encryption_spec.new](#fn-vertex_ai_tensorboardencryption_specnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_tensorboard.timeouts.new](#fn-vertex_ai_tensorboardtimeoutsnew) constructor.
+  - `encryption_spec` (`list[obj]`): Customer-managed encryption key spec for a Tensorboard. If set, this Tensorboard and all sub-resources of this Tensorboard will be secured by this key. When `null`, the `encryption_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_tensorboard.encryption_spec.new](#fn-encryption_specnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_tensorboard.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vertex_ai_tensorboard` resource into the root Terraform configuration.

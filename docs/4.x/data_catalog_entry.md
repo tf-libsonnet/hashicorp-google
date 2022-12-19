@@ -87,8 +87,8 @@ When creating an entry, users should check the enum values first, if nothing mat
 to be created, then provide a custom value, for example &#34;my_special_type&#34;.
 userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. When `null`, the `user_specified_type` field will be omitted from the resulting object.
-  - `gcs_fileset_spec` (`list[obj]`): Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET. When `null`, the `gcs_fileset_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_entry.gcs_fileset_spec.new](#fn-data_catalog_entrygcs_fileset_specnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_entry.timeouts.new](#fn-data_catalog_entrytimeoutsnew) constructor.
+  - `gcs_fileset_spec` (`list[obj]`): Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET. When `null`, the `gcs_fileset_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_entry.gcs_fileset_spec.new](#fn-gcs_fileset_specnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_entry.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -104,7 +104,7 @@ newAttrs()
 `google.data_catalog_entry.newAttrs` constructs a new object with attributes and blocks configured for the `data_catalog_entry`
 Terraform resource.
 
-Unlike [google.data_catalog_entry.new](#fn-data_catalog_entrynew), this function will not inject the `resource`
+Unlike [google.data_catalog_entry.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -137,8 +137,8 @@ When creating an entry, users should check the enum values first, if nothing mat
 to be created, then provide a custom value, for example &#34;my_special_type&#34;.
 userSpecifiedType strings must begin with a letter or underscore and can only contain letters,
 numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long. When `null`, the `user_specified_type` field will be omitted from the resulting object.
-  - `gcs_fileset_spec` (`list[obj]`): Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET. When `null`, the `gcs_fileset_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_entry.gcs_fileset_spec.new](#fn-data_catalog_entrygcs_fileset_specnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_entry.timeouts.new](#fn-data_catalog_entrytimeoutsnew) constructor.
+  - `gcs_fileset_spec` (`list[obj]`): Specification that applies to a Cloud Storage fileset. This is only valid on entries of type FILESET. When `null`, the `gcs_fileset_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_entry.gcs_fileset_spec.new](#fn-gcs_fileset_specnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_entry.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_catalog_entry` resource into the root Terraform configuration.

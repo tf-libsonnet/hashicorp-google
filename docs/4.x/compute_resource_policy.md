@@ -93,10 +93,10 @@ must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where resource policy resides. When `null`, the `region` field will be omitted from the resulting object.
-  - `group_placement_policy` (`list[obj]`): Resource policy for instances used for placement configuration. When `null`, the `group_placement_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.group_placement_policy.new](#fn-compute_resource_policygroup_placement_policynew) constructor.
-  - `instance_schedule_policy` (`list[obj]`): Resource policy for scheduling instance operations. When `null`, the `instance_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.instance_schedule_policy.new](#fn-compute_resource_policyinstance_schedule_policynew) constructor.
-  - `snapshot_schedule_policy` (`list[obj]`): Policy for creating snapshots of persistent disks. When `null`, the `snapshot_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.new](#fn-compute_resource_policysnapshot_schedule_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.timeouts.new](#fn-compute_resource_policytimeoutsnew) constructor.
+  - `group_placement_policy` (`list[obj]`): Resource policy for instances used for placement configuration. When `null`, the `group_placement_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.group_placement_policy.new](#fn-group_placement_policynew) constructor.
+  - `instance_schedule_policy` (`list[obj]`): Resource policy for scheduling instance operations. When `null`, the `instance_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.instance_schedule_policy.new](#fn-instance_schedule_policynew) constructor.
+  - `snapshot_schedule_policy` (`list[obj]`): Policy for creating snapshots of persistent disks. When `null`, the `snapshot_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.new](#fn-snapshot_schedule_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -112,7 +112,7 @@ newAttrs()
 `google.compute_resource_policy.newAttrs` constructs a new object with attributes and blocks configured for the `compute_resource_policy`
 Terraform resource.
 
-Unlike [google.compute_resource_policy.new](#fn-compute_resource_policynew), this function will not inject the `resource`
+Unlike [google.compute_resource_policy.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -130,10 +130,10 @@ must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where resource policy resides. When `null`, the `region` field will be omitted from the resulting object.
-  - `group_placement_policy` (`list[obj]`): Resource policy for instances used for placement configuration. When `null`, the `group_placement_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.group_placement_policy.new](#fn-compute_resource_policygroup_placement_policynew) constructor.
-  - `instance_schedule_policy` (`list[obj]`): Resource policy for scheduling instance operations. When `null`, the `instance_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.instance_schedule_policy.new](#fn-compute_resource_policyinstance_schedule_policynew) constructor.
-  - `snapshot_schedule_policy` (`list[obj]`): Policy for creating snapshots of persistent disks. When `null`, the `snapshot_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.new](#fn-compute_resource_policysnapshot_schedule_policynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.timeouts.new](#fn-compute_resource_policytimeoutsnew) constructor.
+  - `group_placement_policy` (`list[obj]`): Resource policy for instances used for placement configuration. When `null`, the `group_placement_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.group_placement_policy.new](#fn-group_placement_policynew) constructor.
+  - `instance_schedule_policy` (`list[obj]`): Resource policy for scheduling instance operations. When `null`, the `instance_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.instance_schedule_policy.new](#fn-instance_schedule_policynew) constructor.
+  - `snapshot_schedule_policy` (`list[obj]`): Policy for creating snapshots of persistent disks. When `null`, the `snapshot_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.new](#fn-snapshot_schedule_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_resource_policy` resource into the root Terraform configuration.
@@ -402,8 +402,8 @@ Terraform sub block.
   - `start_time` (`string`): The start time of the schedule. The timestamp is an RFC3339 string. When `null`, the `start_time` field will be omitted from the resulting object.
   - `time_zone` (`string`): Specifies the time zone to be used in interpreting the schedule. The value of this field must be a time zone name
 from the tz database: http://en.wikipedia.org/wiki/Tz_database.
-  - `vm_start_schedule` (`list[obj]`): Specifies the schedule for starting instances. When `null`, the `vm_start_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.instance_schedule_policy.vm_start_schedule.new](#fn-instance_schedule_policyvm_start_schedulenew) constructor.
-  - `vm_stop_schedule` (`list[obj]`): Specifies the schedule for stopping instances. When `null`, the `vm_stop_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.instance_schedule_policy.vm_stop_schedule.new](#fn-instance_schedule_policyvm_stop_schedulenew) constructor.
+  - `vm_start_schedule` (`list[obj]`): Specifies the schedule for starting instances. When `null`, the `vm_start_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.instance_schedule_policy.vm_start_schedule.new](#fn-vm_start_schedulenew) constructor.
+  - `vm_stop_schedule` (`list[obj]`): Specifies the schedule for stopping instances. When `null`, the `vm_stop_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.instance_schedule_policy.vm_stop_schedule.new](#fn-vm_stop_schedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `instance_schedule_policy` sub block.
@@ -472,9 +472,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `retention_policy` (`list[obj]`): Retention policy applied to snapshots created by this resource policy. When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.retention_policy.new](#fn-snapshot_schedule_policyretention_policynew) constructor.
-  - `schedule` (`list[obj]`): Contains one of an &#39;hourlySchedule&#39;, &#39;dailySchedule&#39;, or &#39;weeklySchedule&#39;. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.schedule.new](#fn-snapshot_schedule_policyschedulenew) constructor.
-  - `snapshot_properties` (`list[obj]`): Properties with which the snapshots are created, such as labels. When `null`, the `snapshot_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.snapshot_properties.new](#fn-snapshot_schedule_policysnapshot_propertiesnew) constructor.
+  - `retention_policy` (`list[obj]`): Retention policy applied to snapshots created by this resource policy. When `null`, the `retention_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.retention_policy.new](#fn-retention_policynew) constructor.
+  - `schedule` (`list[obj]`): Contains one of an &#39;hourlySchedule&#39;, &#39;dailySchedule&#39;, or &#39;weeklySchedule&#39;. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.schedule.new](#fn-schedulenew) constructor.
+  - `snapshot_properties` (`list[obj]`): Properties with which the snapshots are created, such as labels. When `null`, the `snapshot_properties` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.snapshot_properties.new](#fn-snapshot_propertiesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `snapshot_schedule_policy` sub block.
@@ -522,9 +522,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `daily_schedule` (`list[obj]`): The policy will execute every nth day at the specified time. When `null`, the `daily_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.schedule.daily_schedule.new](#fn-scheduledaily_schedulenew) constructor.
-  - `hourly_schedule` (`list[obj]`): The policy will execute every nth hour starting at the specified time. When `null`, the `hourly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.schedule.hourly_schedule.new](#fn-schedulehourly_schedulenew) constructor.
-  - `weekly_schedule` (`list[obj]`): Allows specifying a snapshot time for each day of the week. When `null`, the `weekly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.schedule.weekly_schedule.new](#fn-scheduleweekly_schedulenew) constructor.
+  - `daily_schedule` (`list[obj]`): The policy will execute every nth day at the specified time. When `null`, the `daily_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.schedule.daily_schedule.new](#fn-snapshot_schedule_policydaily_schedulenew) constructor.
+  - `hourly_schedule` (`list[obj]`): The policy will execute every nth hour starting at the specified time. When `null`, the `hourly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.schedule.hourly_schedule.new](#fn-snapshot_schedule_policyhourly_schedulenew) constructor.
+  - `weekly_schedule` (`list[obj]`): Allows specifying a snapshot time for each day of the week. When `null`, the `weekly_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.schedule.weekly_schedule.new](#fn-snapshot_schedule_policyweekly_schedulenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `schedule` sub block.
@@ -600,7 +600,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `day_of_weeks` (`list[obj]`): May contain up to seven (one for each day of the week) snapshot times. When `null`, the `day_of_weeks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.schedule.weekly_schedule.day_of_weeks.new](#fn-weekly_scheduleday_of_weeksnew) constructor.
+  - `day_of_weeks` (`list[obj]`): May contain up to seven (one for each day of the week) snapshot times. When `null`, the `day_of_weeks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.schedule.weekly_schedule.day_of_weeks.new](#fn-snapshot_schedule_policyscheduleday_of_weeksnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `weekly_schedule` sub block.

@@ -139,7 +139,7 @@ Cloud Router is configured.
 DEDICATED. Possible values: [&#34;DEDICATED&#34;, &#34;PARTNER&#34;, &#34;PARTNER_PROVIDER&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `vlan_tag8021q` (`number`): The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream. When `null`, the `vlan_tag8021q` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_interconnect_attachment.timeouts.new](#fn-compute_interconnect_attachmenttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_interconnect_attachment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -155,7 +155,7 @@ newAttrs()
 `google.compute_interconnect_attachment.newAttrs` constructs a new object with attributes and blocks configured for the `compute_interconnect_attachment`
 Terraform resource.
 
-Unlike [google.compute_interconnect_attachment.new](#fn-compute_interconnect_attachmentnew), this function will not inject the `resource`
+Unlike [google.compute_interconnect_attachment.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -238,7 +238,7 @@ Cloud Router is configured.
 DEDICATED. Possible values: [&#34;DEDICATED&#34;, &#34;PARTNER&#34;, &#34;PARTNER_PROVIDER&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `vlan_tag8021q` (`number`): The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream. When `null`, the `vlan_tag8021q` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_interconnect_attachment.timeouts.new](#fn-compute_interconnect_attachmenttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_interconnect_attachment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_interconnect_attachment` resource into the root Terraform configuration.

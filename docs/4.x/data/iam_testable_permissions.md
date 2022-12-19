@@ -66,7 +66,7 @@ newAttrs()
 `google.data.iam_testable_permissions.newAttrs` constructs a new object with attributes and blocks configured for the `iam_testable_permissions`
 Terraform data source.
 
-Unlike [google.data.iam_testable_permissions.new](#fn-iam_testable_permissionsnew), this function will not inject the `data source`
+Unlike [google.data.iam_testable_permissions.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

@@ -79,9 +79,9 @@ Cannot be more than 31 days or less than 10 minutes. When `null`, the `message_r
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `message_storage_policy` (`list[obj]`): Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
-constraints are in effect. When `null`, the `message_storage_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.message_storage_policy.new](#fn-pubsub_topicmessage_storage_policynew) constructor.
-  - `schema_settings` (`list[obj]`): Settings for validating messages published against a schema. When `null`, the `schema_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.schema_settings.new](#fn-pubsub_topicschema_settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.timeouts.new](#fn-pubsub_topictimeoutsnew) constructor.
+constraints are in effect. When `null`, the `message_storage_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.message_storage_policy.new](#fn-message_storage_policynew) constructor.
+  - `schema_settings` (`list[obj]`): Settings for validating messages published against a schema. When `null`, the `schema_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.schema_settings.new](#fn-schema_settingsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,7 +97,7 @@ newAttrs()
 `google.pubsub_topic.newAttrs` constructs a new object with attributes and blocks configured for the `pubsub_topic`
 Terraform resource.
 
-Unlike [google.pubsub_topic.new](#fn-pubsub_topicnew), this function will not inject the `resource`
+Unlike [google.pubsub_topic.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -122,9 +122,9 @@ Cannot be more than 31 days or less than 10 minutes. When `null`, the `message_r
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `message_storage_policy` (`list[obj]`): Policy constraining the set of Google Cloud Platform regions where
 messages published to the topic may be stored. If not present, then no
-constraints are in effect. When `null`, the `message_storage_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.message_storage_policy.new](#fn-pubsub_topicmessage_storage_policynew) constructor.
-  - `schema_settings` (`list[obj]`): Settings for validating messages published against a schema. When `null`, the `schema_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.schema_settings.new](#fn-pubsub_topicschema_settingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.timeouts.new](#fn-pubsub_topictimeoutsnew) constructor.
+constraints are in effect. When `null`, the `message_storage_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.message_storage_policy.new](#fn-message_storage_policynew) constructor.
+  - `schema_settings` (`list[obj]`): Settings for validating messages published against a schema. When `null`, the `schema_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.schema_settings.new](#fn-schema_settingsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_topic.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `pubsub_topic` resource into the root Terraform configuration.

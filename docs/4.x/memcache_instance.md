@@ -87,10 +87,10 @@ determined by our system based on the latest supported minor version. Default va
   - `region` (`string`): The region of the Memcache instance. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
   - `zones` (`list`): Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used. When `null`, the `zones` field will be omitted from the resulting object.
-  - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.maintenance_policy.new](#fn-memcache_instancemaintenance_policynew) constructor.
-  - `memcache_parameters` (`list[obj]`): User-specified parameters for this memcache instance. When `null`, the `memcache_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.memcache_parameters.new](#fn-memcache_instancememcache_parametersnew) constructor.
-  - `node_config` (`list[obj]`): Configuration for memcache nodes. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.node_config.new](#fn-memcache_instancenode_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.timeouts.new](#fn-memcache_instancetimeoutsnew) constructor.
+  - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.maintenance_policy.new](#fn-maintenance_policynew) constructor.
+  - `memcache_parameters` (`list[obj]`): User-specified parameters for this memcache instance. When `null`, the `memcache_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.memcache_parameters.new](#fn-memcache_parametersnew) constructor.
+  - `node_config` (`list[obj]`): Configuration for memcache nodes. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.node_config.new](#fn-node_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -106,7 +106,7 @@ newAttrs()
 `google.memcache_instance.newAttrs` constructs a new object with attributes and blocks configured for the `memcache_instance`
 Terraform resource.
 
-Unlike [google.memcache_instance.new](#fn-memcache_instancenew), this function will not inject the `resource`
+Unlike [google.memcache_instance.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -127,10 +127,10 @@ determined by our system based on the latest supported minor version. Default va
   - `region` (`string`): The region of the Memcache instance. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
   - `zones` (`list`): Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used. When `null`, the `zones` field will be omitted from the resulting object.
-  - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.maintenance_policy.new](#fn-memcache_instancemaintenance_policynew) constructor.
-  - `memcache_parameters` (`list[obj]`): User-specified parameters for this memcache instance. When `null`, the `memcache_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.memcache_parameters.new](#fn-memcache_instancememcache_parametersnew) constructor.
-  - `node_config` (`list[obj]`): Configuration for memcache nodes. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.node_config.new](#fn-memcache_instancenode_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.timeouts.new](#fn-memcache_instancetimeoutsnew) constructor.
+  - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.maintenance_policy.new](#fn-maintenance_policynew) constructor.
+  - `memcache_parameters` (`list[obj]`): User-specified parameters for this memcache instance. When `null`, the `memcache_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.memcache_parameters.new](#fn-memcache_parametersnew) constructor.
+  - `node_config` (`list[obj]`): Configuration for memcache nodes. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.node_config.new](#fn-node_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `memcache_instance` resource into the root Terraform configuration.
@@ -449,7 +449,7 @@ Create/Update methods return INVALID_ARGUMENT if the
 length is greater than 512. When `null`, the `description` field will be omitted from the resulting object.
   - `weekly_maintenance_window` (`list[obj]`): Required. Maintenance window that is applied to resources covered by this policy.
 Minimum 1. For the current version, the maximum number of weekly_maintenance_windows
-is expected to be one. When `null`, the `weekly_maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.maintenance_policy.weekly_maintenance_window.new](#fn-maintenance_policyweekly_maintenance_windownew) constructor.
+is expected to be one. When `null`, the `weekly_maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.maintenance_policy.weekly_maintenance_window.new](#fn-weekly_maintenance_windownew) constructor.
 
 **Returns**:
   - An attribute object that represents the `maintenance_policy` sub block.
@@ -484,7 +484,7 @@ Terraform sub block.
   - `duration` (`string`): Required. The length of the maintenance window, ranging from 3 hours to 8 hours.
 A duration in seconds with up to nine fractional digits,
 terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
-  - `start_time` (`list[obj]`): Required. Start time of the window in UTC time. When `null`, the `start_time` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.maintenance_policy.weekly_maintenance_window.start_time.new](#fn-weekly_maintenance_windowstart_timenew) constructor.
+  - `start_time` (`list[obj]`): Required. Start time of the window in UTC time. When `null`, the `start_time` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.maintenance_policy.weekly_maintenance_window.start_time.new](#fn-maintenance_policystart_timenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `weekly_maintenance_window` sub block.

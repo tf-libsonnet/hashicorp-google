@@ -248,19 +248,19 @@ like URL rewrites, header transformations, etc. prior to forwarding the request 
 If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService
 is set, defaultRouteAction cannot contain any weightedBackendServices.
 
-Only one of defaultRouteAction or defaultUrlRedirect must be set. When `null`, the `default_route_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.new](#fn-compute_url_mapdefault_route_actionnew) constructor.
+Only one of defaultRouteAction or defaultUrlRedirect must be set. When `null`, the `default_route_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.new](#fn-default_route_actionnew) constructor.
   - `default_url_redirect` (`list[obj]`): When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set. When `null`, the `default_url_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_url_redirect.new](#fn-compute_url_mapdefault_url_redirectnew) constructor.
+defaultRouteAction must not be set. When `null`, the `default_url_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_url_redirect.new](#fn-default_url_redirectnew) constructor.
   - `header_action` (`list[obj]`): Specifies changes to request and response headers that need to take effect for
 the selected backendService. The headerAction specified here take effect after
-headerAction specified under pathMatcher. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.header_action.new](#fn-compute_url_mapheader_actionnew) constructor.
-  - `host_rule` (`list[obj]`): The list of HostRules to use against the URL. When `null`, the `host_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.host_rule.new](#fn-compute_url_maphost_rulenew) constructor.
-  - `path_matcher` (`list[obj]`): The list of named PathMatchers to use against the URL. When `null`, the `path_matcher` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.new](#fn-compute_url_mappath_matchernew) constructor.
+headerAction specified under pathMatcher. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.header_action.new](#fn-header_actionnew) constructor.
+  - `host_rule` (`list[obj]`): The list of HostRules to use against the URL. When `null`, the `host_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.host_rule.new](#fn-host_rulenew) constructor.
+  - `path_matcher` (`list[obj]`): The list of named PathMatchers to use against the URL. When `null`, the `path_matcher` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.new](#fn-path_matchernew) constructor.
   - `test` (`list[obj]`): The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
-tests per UrlMap. When `null`, the `test` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.test.new](#fn-compute_url_maptestnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.timeouts.new](#fn-compute_url_maptimeoutsnew) constructor.
+tests per UrlMap. When `null`, the `test` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.test.new](#fn-testnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -276,7 +276,7 @@ newAttrs()
 `google.compute_url_map.newAttrs` constructs a new object with attributes and blocks configured for the `compute_url_map`
 Terraform resource.
 
-Unlike [google.compute_url_map.new](#fn-compute_url_mapnew), this function will not inject the `resource`
+Unlike [google.compute_url_map.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -299,19 +299,19 @@ like URL rewrites, header transformations, etc. prior to forwarding the request 
 If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService
 is set, defaultRouteAction cannot contain any weightedBackendServices.
 
-Only one of defaultRouteAction or defaultUrlRedirect must be set. When `null`, the `default_route_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.new](#fn-compute_url_mapdefault_route_actionnew) constructor.
+Only one of defaultRouteAction or defaultUrlRedirect must be set. When `null`, the `default_route_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.new](#fn-default_route_actionnew) constructor.
   - `default_url_redirect` (`list[obj]`): When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set. When `null`, the `default_url_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_url_redirect.new](#fn-compute_url_mapdefault_url_redirectnew) constructor.
+defaultRouteAction must not be set. When `null`, the `default_url_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_url_redirect.new](#fn-default_url_redirectnew) constructor.
   - `header_action` (`list[obj]`): Specifies changes to request and response headers that need to take effect for
 the selected backendService. The headerAction specified here take effect after
-headerAction specified under pathMatcher. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.header_action.new](#fn-compute_url_mapheader_actionnew) constructor.
-  - `host_rule` (`list[obj]`): The list of HostRules to use against the URL. When `null`, the `host_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.host_rule.new](#fn-compute_url_maphost_rulenew) constructor.
-  - `path_matcher` (`list[obj]`): The list of named PathMatchers to use against the URL. When `null`, the `path_matcher` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.new](#fn-compute_url_mappath_matchernew) constructor.
+headerAction specified under pathMatcher. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.header_action.new](#fn-header_actionnew) constructor.
+  - `host_rule` (`list[obj]`): The list of HostRules to use against the URL. When `null`, the `host_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.host_rule.new](#fn-host_rulenew) constructor.
+  - `path_matcher` (`list[obj]`): The list of named PathMatchers to use against the URL. When `null`, the `path_matcher` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.new](#fn-path_matchernew) constructor.
   - `test` (`list[obj]`): The list of expected URL mapping tests. Request to update this UrlMap will
 succeed only if all of the test cases pass. You can specify a maximum of 100
-tests per UrlMap. When `null`, the `test` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.test.new](#fn-compute_url_maptestnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.timeouts.new](#fn-compute_url_maptimeoutsnew) constructor.
+tests per UrlMap. When `null`, the `test` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.test.new](#fn-testnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_url_map` resource into the root Terraform configuration.
@@ -657,22 +657,22 @@ Terraform sub block.
 
 **Args**:
   - `cors_policy` (`list[obj]`): The specification for allowing client side cross-origin requests. Please see
-[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/) When `null`, the `cors_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.cors_policy.new](#fn-default_route_actioncors_policynew) constructor.
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/) When `null`, the `cors_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.cors_policy.new](#fn-cors_policynew) constructor.
   - `fault_injection_policy` (`list[obj]`): The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
 percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
 by the Loadbalancer for a percentage of requests.
 
-timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy. When `null`, the `fault_injection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.fault_injection_policy.new](#fn-default_route_actionfault_injection_policynew) constructor.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy. When `null`, the `fault_injection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.fault_injection_policy.new](#fn-fault_injection_policynew) constructor.
   - `request_mirror_policy` (`list[obj]`): Specifies the policy on how requests intended for the route&#39;s backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
-the host / authority header is suffixed with -shadow. When `null`, the `request_mirror_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.request_mirror_policy.new](#fn-default_route_actionrequest_mirror_policynew) constructor.
-  - `retry_policy` (`list[obj]`): Specifies the retry policy associated with this route. When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.retry_policy.new](#fn-default_route_actionretry_policynew) constructor.
+the host / authority header is suffixed with -shadow. When `null`, the `request_mirror_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.request_mirror_policy.new](#fn-request_mirror_policynew) constructor.
+  - `retry_policy` (`list[obj]`): Specifies the retry policy associated with this route. When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.retry_policy.new](#fn-retry_policynew) constructor.
   - `timeout` (`list[obj]`): Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 
-If not specified, will use the largest timeout among all backend services associated with the route. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.timeout.new](#fn-default_route_actiontimeoutnew) constructor.
-  - `url_rewrite` (`list[obj]`): The spec to modify the URL of the request, prior to forwarding the request to the matched service. When `null`, the `url_rewrite` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.url_rewrite.new](#fn-default_route_actionurl_rewritenew) constructor.
+If not specified, will use the largest timeout among all backend services associated with the route. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.timeout.new](#fn-timeoutnew) constructor.
+  - `url_rewrite` (`list[obj]`): The spec to modify the URL of the request, prior to forwarding the request to the matched service. When `null`, the `url_rewrite` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.url_rewrite.new](#fn-url_rewritenew) constructor.
   - `weighted_backend_services` (`list[obj]`): A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
 If all traffic needs to go to a single backend service, there must be one weightedBackendService
@@ -680,7 +680,7 @@ with weight set to a non 0 number.
 
 Once a backendService is identified and before forwarding the request to the backend service,
 advanced routing actions like Url rewrites and header transformations are applied depending on
-additional settings specified in this HttpRouteAction. When `null`, the `weighted_backend_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.weighted_backend_services.new](#fn-default_route_actionweighted_backend_servicesnew) constructor.
+additional settings specified in this HttpRouteAction. When `null`, the `weighted_backend_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.weighted_backend_services.new](#fn-weighted_backend_servicesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `default_route_action` sub block.
@@ -738,8 +738,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `abort` (`list[obj]`): The specification for how client requests are aborted as part of fault injection. When `null`, the `abort` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.fault_injection_policy.abort.new](#fn-fault_injection_policyabortnew) constructor.
-  - `delay` (`list[obj]`): The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. When `null`, the `delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.fault_injection_policy.delay.new](#fn-fault_injection_policydelaynew) constructor.
+  - `abort` (`list[obj]`): The specification for how client requests are aborted as part of fault injection. When `null`, the `abort` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.fault_injection_policy.abort.new](#fn-default_route_actionabortnew) constructor.
+  - `delay` (`list[obj]`): The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. When `null`, the `delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.fault_injection_policy.delay.new](#fn-default_route_actiondelaynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `fault_injection_policy` sub block.
@@ -790,7 +790,7 @@ Terraform sub block.
 **Args**:
   - `percentage` (`number`): The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive. When `null`, the `percentage` field will be omitted from the resulting object.
-  - `fixed_delay` (`list[obj]`): Specifies the value of the fixed delay interval. When `null`, the `fixed_delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.fault_injection_policy.delay.fixed_delay.new](#fn-delayfixed_delaynew) constructor.
+  - `fixed_delay` (`list[obj]`): Specifies the value of the fixed delay interval. When `null`, the `fixed_delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.fault_injection_policy.delay.fixed_delay.new](#fn-default_route_actionfault_injection_policyfixed_delaynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `delay` sub block.
@@ -882,7 +882,7 @@ Terraform sub block.
   - `per_try_timeout` (`list[obj]`): Specifies a non-zero timeout per retry attempt.
 
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
-will use the largest timeout among all backend services associated with the route. When `null`, the `per_try_timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.retry_policy.per_try_timeout.new](#fn-retry_policyper_try_timeoutnew) constructor.
+will use the largest timeout among all backend services associated with the route. When `null`, the `per_try_timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.retry_policy.per_try_timeout.new](#fn-default_route_actionper_try_timeoutnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `retry_policy` sub block.
@@ -1002,7 +1002,7 @@ The value must be between 0 and 1000 When `null`, the `weight` field will be omi
 the selected backendService.
 
 headerAction specified here take effect before headerAction in the enclosing
-HttpRouteRule, PathMatcher and UrlMap. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.weighted_backend_services.header_action.new](#fn-weighted_backend_servicesheader_actionnew) constructor.
+HttpRouteRule, PathMatcher and UrlMap. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.weighted_backend_services.header_action.new](#fn-default_route_actionheader_actionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `weighted_backend_services` sub block.
@@ -1029,8 +1029,8 @@ Terraform sub block.
 forwarding the request to the backendService. When `null`, the `request_headers_to_remove` field will be omitted from the resulting object.
   - `response_headers_to_remove` (`list`): A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client. When `null`, the `response_headers_to_remove` field will be omitted from the resulting object.
-  - `request_headers_to_add` (`list[obj]`): Headers to add to a matching request prior to forwarding the request to the backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.weighted_backend_services.header_action.request_headers_to_add.new](#fn-header_actionrequest_headers_to_addnew) constructor.
-  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.weighted_backend_services.header_action.response_headers_to_add.new](#fn-header_actionresponse_headers_to_addnew) constructor.
+  - `request_headers_to_add` (`list[obj]`): Headers to add to a matching request prior to forwarding the request to the backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.weighted_backend_services.header_action.request_headers_to_add.new](#fn-default_route_actionweighted_backend_servicesrequest_headers_to_addnew) constructor.
+  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.default_route_action.weighted_backend_services.header_action.response_headers_to_add.new](#fn-default_route_actionweighted_backend_servicesresponse_headers_to_addnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header_action` sub block.
@@ -1165,8 +1165,8 @@ prior to forwarding the request to the backendService. When `null`, the `request
   - `response_headers_to_remove` (`list`): A list of header names for headers that need to be removed from the response
 prior to sending the response back to the client. When `null`, the `response_headers_to_remove` field will be omitted from the resulting object.
   - `request_headers_to_add` (`list[obj]`): Headers to add to a matching request prior to forwarding the request to the
-backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.header_action.request_headers_to_add.new](#fn-header_actionrequest_headers_to_addnew) constructor.
-  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.header_action.response_headers_to_add.new](#fn-header_actionresponse_headers_to_addnew) constructor.
+backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.header_action.request_headers_to_add.new](#fn-request_headers_to_addnew) constructor.
+  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.header_action.response_headers_to_add.new](#fn-response_headers_to_addnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header_action` sub block.
@@ -1281,25 +1281,25 @@ advanced routing actions like URL rewrites, header transformations, etc. prior t
 to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set.
 Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.
 
-Only one of defaultRouteAction or defaultUrlRedirect must be set. When `null`, the `default_route_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.new](#fn-path_matcherdefault_route_actionnew) constructor.
+Only one of defaultRouteAction or defaultUrlRedirect must be set. When `null`, the `default_route_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.new](#fn-default_route_actionnew) constructor.
   - `default_url_redirect` (`list[obj]`): When none of the specified hostRules match, the request is redirected to a URL specified
 by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or
-defaultRouteAction must not be set. When `null`, the `default_url_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_url_redirect.new](#fn-path_matcherdefault_url_redirectnew) constructor.
+defaultRouteAction must not be set. When `null`, the `default_url_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_url_redirect.new](#fn-default_url_redirectnew) constructor.
   - `header_action` (`list[obj]`): Specifies changes to request and response headers that need to take effect for
 the selected backendService. HeaderAction specified here are applied after the
-matching HttpRouteRule HeaderAction and before the HeaderAction in the UrlMap When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.header_action.new](#fn-path_matcherheader_actionnew) constructor.
+matching HttpRouteRule HeaderAction and before the HeaderAction in the UrlMap When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.header_action.new](#fn-header_actionnew) constructor.
   - `path_rule` (`list[obj]`): The list of path rules. Use this list instead of routeRules when routing based
 on simple path matching is all that&#39;s required. The order by which path rules
 are specified does not matter. Matches are always done on the longest-path-first
 basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/*
 irrespective of the order in which those paths appear in this list. Within a
-given pathMatcher, only one of pathRules or routeRules must be set. When `null`, the `path_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.new](#fn-path_matcherpath_rulenew) constructor.
+given pathMatcher, only one of pathRules or routeRules must be set. When `null`, the `path_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.new](#fn-path_rulenew) constructor.
   - `route_rules` (`list[obj]`): The list of ordered HTTP route rules. Use this list instead of pathRules when
 advanced route matching and routing actions are desired. The order of specifying
 routeRules matters: the first rule that matches will cause its specified routing
 action to take effect. Within a given pathMatcher, only one of pathRules or
 routeRules must be set. routeRules are not supported in UrlMaps intended for
-External load balancers. When `null`, the `route_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.new](#fn-path_matcherroute_rulesnew) constructor.
+External load balancers. When `null`, the `route_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.new](#fn-route_rulesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `path_matcher` sub block.
@@ -1323,22 +1323,22 @@ Terraform sub block.
 
 **Args**:
   - `cors_policy` (`list[obj]`): The specification for allowing client side cross-origin requests. Please see
-[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/) When `null`, the `cors_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.cors_policy.new](#fn-default_route_actioncors_policynew) constructor.
+[W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/) When `null`, the `cors_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.cors_policy.new](#fn-path_matchercors_policynew) constructor.
   - `fault_injection_policy` (`list[obj]`): The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure.
 As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a
 percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted
 by the Loadbalancer for a percentage of requests.
 
-timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy. When `null`, the `fault_injection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.fault_injection_policy.new](#fn-default_route_actionfault_injection_policynew) constructor.
+timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy. When `null`, the `fault_injection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.fault_injection_policy.new](#fn-path_matcherfault_injection_policynew) constructor.
   - `request_mirror_policy` (`list[obj]`): Specifies the policy on how requests intended for the route&#39;s backends are shadowed to a separate mirrored backend service.
 Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service,
-the host / authority header is suffixed with -shadow. When `null`, the `request_mirror_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.request_mirror_policy.new](#fn-default_route_actionrequest_mirror_policynew) constructor.
-  - `retry_policy` (`list[obj]`): Specifies the retry policy associated with this route. When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.retry_policy.new](#fn-default_route_actionretry_policynew) constructor.
+the host / authority header is suffixed with -shadow. When `null`, the `request_mirror_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.request_mirror_policy.new](#fn-path_matcherrequest_mirror_policynew) constructor.
+  - `retry_policy` (`list[obj]`): Specifies the retry policy associated with this route. When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.retry_policy.new](#fn-path_matcherretry_policynew) constructor.
   - `timeout` (`list[obj]`): Specifies the timeout for the selected route. Timeout is computed from the time the request has been
 fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.
 
-If not specified, will use the largest timeout among all backend services associated with the route. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.timeout.new](#fn-default_route_actiontimeoutnew) constructor.
-  - `url_rewrite` (`list[obj]`): The spec to modify the URL of the request, prior to forwarding the request to the matched service. When `null`, the `url_rewrite` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.url_rewrite.new](#fn-default_route_actionurl_rewritenew) constructor.
+If not specified, will use the largest timeout among all backend services associated with the route. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.timeout.new](#fn-path_matchertimeoutnew) constructor.
+  - `url_rewrite` (`list[obj]`): The spec to modify the URL of the request, prior to forwarding the request to the matched service. When `null`, the `url_rewrite` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.url_rewrite.new](#fn-path_matcherurl_rewritenew) constructor.
   - `weighted_backend_services` (`list[obj]`): A list of weighted backend services to send traffic to when a route match occurs.
 The weights determine the fraction of traffic that flows to their corresponding backend service.
 If all traffic needs to go to a single backend service, there must be one weightedBackendService
@@ -1346,7 +1346,7 @@ with weight set to a non 0 number.
 
 Once a backendService is identified and before forwarding the request to the backend service,
 advanced routing actions like Url rewrites and header transformations are applied depending on
-additional settings specified in this HttpRouteAction. When `null`, the `weighted_backend_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.weighted_backend_services.new](#fn-default_route_actionweighted_backend_servicesnew) constructor.
+additional settings specified in this HttpRouteAction. When `null`, the `weighted_backend_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.weighted_backend_services.new](#fn-path_matcherweighted_backend_servicesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `default_route_action` sub block.
@@ -1404,8 +1404,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `abort` (`list[obj]`): The specification for how client requests are aborted as part of fault injection. When `null`, the `abort` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.fault_injection_policy.abort.new](#fn-fault_injection_policyabortnew) constructor.
-  - `delay` (`list[obj]`): The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. When `null`, the `delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.fault_injection_policy.delay.new](#fn-fault_injection_policydelaynew) constructor.
+  - `abort` (`list[obj]`): The specification for how client requests are aborted as part of fault injection. When `null`, the `abort` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.fault_injection_policy.abort.new](#fn-path_matcherdefault_route_actionabortnew) constructor.
+  - `delay` (`list[obj]`): The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. When `null`, the `delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.fault_injection_policy.delay.new](#fn-path_matcherdefault_route_actiondelaynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `fault_injection_policy` sub block.
@@ -1456,7 +1456,7 @@ Terraform sub block.
 **Args**:
   - `percentage` (`number`): The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection.
 The value must be between 0.0 and 100.0 inclusive. When `null`, the `percentage` field will be omitted from the resulting object.
-  - `fixed_delay` (`list[obj]`): Specifies the value of the fixed delay interval. When `null`, the `fixed_delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.fault_injection_policy.delay.fixed_delay.new](#fn-delayfixed_delaynew) constructor.
+  - `fixed_delay` (`list[obj]`): Specifies the value of the fixed delay interval. When `null`, the `fixed_delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.fault_injection_policy.delay.fixed_delay.new](#fn-path_matcherdefault_route_actionfault_injection_policyfixed_delaynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `delay` sub block.
@@ -1548,7 +1548,7 @@ Terraform sub block.
   - `per_try_timeout` (`list[obj]`): Specifies a non-zero timeout per retry attempt.
 
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set,
-will use the largest timeout among all backend services associated with the route. When `null`, the `per_try_timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.retry_policy.per_try_timeout.new](#fn-retry_policyper_try_timeoutnew) constructor.
+will use the largest timeout among all backend services associated with the route. When `null`, the `per_try_timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.retry_policy.per_try_timeout.new](#fn-path_matcherdefault_route_actionper_try_timeoutnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `retry_policy` sub block.
@@ -1668,7 +1668,7 @@ The value must be between 0 and 1000 When `null`, the `weight` field will be omi
 the selected backendService.
 
 headerAction specified here take effect before headerAction in the enclosing
-HttpRouteRule, PathMatcher and UrlMap. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.weighted_backend_services.header_action.new](#fn-weighted_backend_servicesheader_actionnew) constructor.
+HttpRouteRule, PathMatcher and UrlMap. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.weighted_backend_services.header_action.new](#fn-path_matcherdefault_route_actionheader_actionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `weighted_backend_services` sub block.
@@ -1695,8 +1695,8 @@ Terraform sub block.
 forwarding the request to the backendService. When `null`, the `request_headers_to_remove` field will be omitted from the resulting object.
   - `response_headers_to_remove` (`list`): A list of header names for headers that need to be removed from the response prior to sending the
 response back to the client. When `null`, the `response_headers_to_remove` field will be omitted from the resulting object.
-  - `request_headers_to_add` (`list[obj]`): Headers to add to a matching request prior to forwarding the request to the backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.weighted_backend_services.header_action.request_headers_to_add.new](#fn-header_actionrequest_headers_to_addnew) constructor.
-  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.weighted_backend_services.header_action.response_headers_to_add.new](#fn-header_actionresponse_headers_to_addnew) constructor.
+  - `request_headers_to_add` (`list[obj]`): Headers to add to a matching request prior to forwarding the request to the backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.weighted_backend_services.header_action.request_headers_to_add.new](#fn-path_matcherdefault_route_actionweighted_backend_servicesrequest_headers_to_addnew) constructor.
+  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.default_route_action.weighted_backend_services.header_action.response_headers_to_add.new](#fn-path_matcherdefault_route_actionweighted_backend_servicesresponse_headers_to_addnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header_action` sub block.
@@ -1831,8 +1831,8 @@ prior to forwarding the request to the backendService. When `null`, the `request
   - `response_headers_to_remove` (`list`): A list of header names for headers that need to be removed from the response
 prior to sending the response back to the client. When `null`, the `response_headers_to_remove` field will be omitted from the resulting object.
   - `request_headers_to_add` (`list[obj]`): Headers to add to a matching request prior to forwarding the request to the
-backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.header_action.request_headers_to_add.new](#fn-header_actionrequest_headers_to_addnew) constructor.
-  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.header_action.response_headers_to_add.new](#fn-header_actionresponse_headers_to_addnew) constructor.
+backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.header_action.request_headers_to_add.new](#fn-path_matcherrequest_headers_to_addnew) constructor.
+  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.header_action.response_headers_to_add.new](#fn-path_matcherresponse_headers_to_addnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header_action` sub block.
@@ -1919,10 +1919,10 @@ actions like URL rewrites, header transformations, etc. prior to forwarding the
 request to the selected backend. If routeAction specifies any
 weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
-or urlRedirect must be set. When `null`, the `route_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.new](#fn-path_ruleroute_actionnew) constructor.
+or urlRedirect must be set. When `null`, the `route_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.new](#fn-path_matcherroute_actionnew) constructor.
   - `url_redirect` (`list[obj]`): When a path pattern is matched, the request is redirected to a URL specified
 by urlRedirect. If urlRedirect is specified, service or routeAction must not
-be set. When `null`, the `url_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.url_redirect.new](#fn-path_ruleurl_redirectnew) constructor.
+be set. When `null`, the `url_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.url_redirect.new](#fn-path_matcherurl_redirectnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `path_rule` sub block.
@@ -1946,25 +1946,25 @@ Terraform sub block.
 
 **Args**:
   - `cors_policy` (`list[obj]`): The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing When `null`, the `cors_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.cors_policy.new](#fn-route_actioncors_policynew) constructor.
+Recommendation for Cross Origin Resource Sharing When `null`, the `cors_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.cors_policy.new](#fn-path_matcherpath_rulecors_policynew) constructor.
   - `fault_injection_policy` (`list[obj]`): The specification for fault injection introduced into traffic to test the
 resiliency of clients to backend service failure. As part of fault injection,
 when clients send requests to a backend service, delays can be introduced by
 Loadbalancer on a percentage of requests before sending those request to the
 backend service. Similarly requests from clients can be aborted by the
 Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy. When `null`, the `fault_injection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.fault_injection_policy.new](#fn-route_actionfault_injection_policynew) constructor.
+ignored by clients that are configured with a fault_injection_policy. When `null`, the `fault_injection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.fault_injection_policy.new](#fn-path_matcherpath_rulefault_injection_policynew) constructor.
   - `request_mirror_policy` (`list[obj]`): Specifies the policy on how requests intended for the route&#39;s backends are
 shadowed to a separate mirrored backend service. Loadbalancer does not wait for
 responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow. When `null`, the `request_mirror_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.request_mirror_policy.new](#fn-route_actionrequest_mirror_policynew) constructor.
-  - `retry_policy` (`list[obj]`): Specifies the retry policy associated with this route. When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.retry_policy.new](#fn-route_actionretry_policynew) constructor.
+service, the host / authority header is suffixed with -shadow. When `null`, the `request_mirror_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.request_mirror_policy.new](#fn-path_matcherpath_rulerequest_mirror_policynew) constructor.
+  - `retry_policy` (`list[obj]`): Specifies the retry policy associated with this route. When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.retry_policy.new](#fn-path_matcherpath_ruleretry_policynew) constructor.
   - `timeout` (`list[obj]`): Specifies the timeout for the selected route. Timeout is computed from the time
 the request is has been fully processed (i.e. end-of-stream) up until the
 response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.timeout.new](#fn-route_actiontimeoutnew) constructor.
+specified, the default value is 15 seconds. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.timeout.new](#fn-path_matcherpath_ruletimeoutnew) constructor.
   - `url_rewrite` (`list[obj]`): The spec to modify the URL of the request, prior to forwarding the request to
-the matched service When `null`, the `url_rewrite` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.url_rewrite.new](#fn-route_actionurl_rewritenew) constructor.
+the matched service When `null`, the `url_rewrite` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.url_rewrite.new](#fn-path_matcherpath_ruleurl_rewritenew) constructor.
   - `weighted_backend_services` (`list[obj]`): A list of weighted backend services to send traffic to when a route match
 occurs. The weights determine the fraction of traffic that flows to their
 corresponding backend service. If all traffic needs to go to a single backend
@@ -1972,7 +1972,7 @@ service, there must be one  weightedBackendService with weight set to a non 0
 number. Once a backendService is identified and before forwarding the request to
 the backend service, advanced routing actions like Url rewrites and header
 transformations are applied depending on additional settings specified in this
-HttpRouteAction. When `null`, the `weighted_backend_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.weighted_backend_services.new](#fn-route_actionweighted_backend_servicesnew) constructor.
+HttpRouteAction. When `null`, the `weighted_backend_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.weighted_backend_services.new](#fn-path_matcherpath_ruleweighted_backend_servicesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `route_action` sub block.
@@ -2032,9 +2032,9 @@ Terraform sub block.
 
 **Args**:
   - `abort` (`list[obj]`): The specification for how client requests are aborted as part of fault
-injection. When `null`, the `abort` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.fault_injection_policy.abort.new](#fn-fault_injection_policyabortnew) constructor.
+injection. When `null`, the `abort` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.fault_injection_policy.abort.new](#fn-path_matcherpath_ruleroute_actionabortnew) constructor.
   - `delay` (`list[obj]`): The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service. When `null`, the `delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.fault_injection_policy.delay.new](#fn-fault_injection_policydelaynew) constructor.
+injection, before being sent to a backend service. When `null`, the `delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.fault_injection_policy.delay.new](#fn-path_matcherpath_ruleroute_actiondelaynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `fault_injection_policy` sub block.
@@ -2087,7 +2087,7 @@ Terraform sub block.
   - `percentage` (`number`): The percentage of traffic (connections/operations/requests) on which delay will
 be introduced as part of fault injection. The value must be between 0.0 and
 100.0 inclusive.
-  - `fixed_delay` (`list[obj]`): Specifies the value of the fixed delay interval. When `null`, the `fixed_delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.fault_injection_policy.delay.fixed_delay.new](#fn-delayfixed_delaynew) constructor.
+  - `fixed_delay` (`list[obj]`): Specifies the value of the fixed delay interval. When `null`, the `fixed_delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.fault_injection_policy.delay.fixed_delay.new](#fn-path_matcherpath_ruleroute_actionfault_injection_policyfixed_delaynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `delay` sub block.
@@ -2183,7 +2183,7 @@ gRPC status code in the response header is set to deadline-exceeded
 header is set to resource-exhausted
 * unavailable: Loadbalancer will retry if
 the gRPC status code in the response header is set to unavailable When `null`, the `retry_conditions` field will be omitted from the resulting object.
-  - `per_try_timeout` (`list[obj]`): Specifies a non-zero timeout per retry attempt. When `null`, the `per_try_timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.retry_policy.per_try_timeout.new](#fn-retry_policyper_try_timeoutnew) constructor.
+  - `per_try_timeout` (`list[obj]`): Specifies a non-zero timeout per retry attempt. When `null`, the `per_try_timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.retry_policy.per_try_timeout.new](#fn-path_matcherpath_ruleroute_actionper_try_timeoutnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `retry_policy` sub block.
@@ -2299,7 +2299,7 @@ backendService as determined by the BackendService&#39;s session affinity policy
 The value must be between 0 and 1000
   - `header_action` (`list[obj]`): Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.weighted_backend_services.header_action.new](#fn-weighted_backend_servicesheader_actionnew) constructor.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.weighted_backend_services.header_action.new](#fn-path_matcherpath_ruleroute_actionheader_actionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `weighted_backend_services` sub block.
@@ -2327,8 +2327,8 @@ prior to forwarding the request to the backendService. When `null`, the `request
   - `response_headers_to_remove` (`list`): A list of header names for headers that need to be removed from the response
 prior to sending the response back to the client. When `null`, the `response_headers_to_remove` field will be omitted from the resulting object.
   - `request_headers_to_add` (`list[obj]`): Headers to add to a matching request prior to forwarding the request to the
-backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.weighted_backend_services.header_action.request_headers_to_add.new](#fn-header_actionrequest_headers_to_addnew) constructor.
-  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.weighted_backend_services.header_action.response_headers_to_add.new](#fn-header_actionresponse_headers_to_addnew) constructor.
+backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.weighted_backend_services.header_action.request_headers_to_add.new](#fn-path_matcherpath_ruleroute_actionweighted_backend_servicesrequest_headers_to_addnew) constructor.
+  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.path_rule.route_action.weighted_backend_services.header_action.response_headers_to_add.new](#fn-path_matcherpath_ruleroute_actionweighted_backend_servicesresponse_headers_to_addnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header_action` sub block.
@@ -2488,17 +2488,17 @@ service or routeAction.weightedBackendService must be set. When `null`, the `ser
   - `header_action` (`list[obj]`): Specifies changes to request and response headers that need to take effect for
 the selected backendService. The headerAction specified here are applied before
 the matching pathMatchers[].headerAction and after pathMatchers[].routeRules[].r
-outeAction.weightedBackendService.backendServiceWeightAction[].headerAction When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.header_action.new](#fn-route_rulesheader_actionnew) constructor.
-  - `match_rules` (`list[obj]`): The rules for determining a match. When `null`, the `match_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.match_rules.new](#fn-route_rulesmatch_rulesnew) constructor.
+outeAction.weightedBackendService.backendServiceWeightAction[].headerAction When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.header_action.new](#fn-path_matcherheader_actionnew) constructor.
+  - `match_rules` (`list[obj]`): The rules for determining a match. When `null`, the `match_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.match_rules.new](#fn-path_matchermatch_rulesnew) constructor.
   - `route_action` (`list[obj]`): In response to a matching matchRule, the load balancer performs advanced routing
 actions like URL rewrites, header transformations, etc. prior to forwarding the
 request to the selected backend. If  routeAction specifies any
 weightedBackendServices, service must not be set. Conversely if service is set,
 routeAction cannot contain any  weightedBackendServices. Only one of routeAction
-or urlRedirect must be set. When `null`, the `route_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.new](#fn-route_rulesroute_actionnew) constructor.
+or urlRedirect must be set. When `null`, the `route_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.new](#fn-path_matcherroute_actionnew) constructor.
   - `url_redirect` (`list[obj]`): When this rule is matched, the request is redirected to a URL specified by
 urlRedirect. If urlRedirect is specified, service or routeAction must not be
-set. When `null`, the `url_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.url_redirect.new](#fn-route_rulesurl_redirectnew) constructor.
+set. When `null`, the `url_redirect` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.url_redirect.new](#fn-path_matcherurl_redirectnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `route_rules` sub block.
@@ -2526,8 +2526,8 @@ prior to forwarding the request to the backendService. When `null`, the `request
   - `response_headers_to_remove` (`list`): A list of header names for headers that need to be removed from the response
 prior to sending the response back to the client. When `null`, the `response_headers_to_remove` field will be omitted from the resulting object.
   - `request_headers_to_add` (`list[obj]`): Headers to add to a matching request prior to forwarding the request to the
-backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.header_action.request_headers_to_add.new](#fn-header_actionrequest_headers_to_addnew) constructor.
-  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.header_action.response_headers_to_add.new](#fn-header_actionresponse_headers_to_addnew) constructor.
+backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.header_action.request_headers_to_add.new](#fn-path_matcherroute_rulesrequest_headers_to_addnew) constructor.
+  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.header_action.response_headers_to_add.new](#fn-path_matcherroute_rulesresponse_headers_to_addnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header_action` sub block.
@@ -2621,7 +2621,7 @@ and anchor supplied with the original URL. For regular expression grammar please
 see en.cppreference.com/w/cpp/regex/ecmascript  Only one of prefixMatch,
 fullPathMatch or regexMatch must be specified. When `null`, the `regex_match` field will be omitted from the resulting object.
   - `header_matches` (`list[obj]`): Specifies a list of header match criteria, all of which must match corresponding
-headers in the request. When `null`, the `header_matches` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.match_rules.header_matches.new](#fn-match_rulesheader_matchesnew) constructor.
+headers in the request. When `null`, the `header_matches` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.match_rules.header_matches.new](#fn-path_matcherroute_rulesheader_matchesnew) constructor.
   - `metadata_filters` (`list[obj]`): Opaque filter criteria used by Loadbalancer to restrict routing configuration to
 a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS
 clients present node metadata. If a match takes place, the relevant routing
@@ -2632,9 +2632,9 @@ filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match
 with corresponding labels in the provided metadata. metadataFilters specified
 here can be overrides those specified in ForwardingRule that refers to this
 UrlMap. metadataFilters only applies to Loadbalancers that have their
-loadBalancingScheme set to INTERNAL_SELF_MANAGED. When `null`, the `metadata_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.match_rules.metadata_filters.new](#fn-match_rulesmetadata_filtersnew) constructor.
+loadBalancingScheme set to INTERNAL_SELF_MANAGED. When `null`, the `metadata_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.match_rules.metadata_filters.new](#fn-path_matcherroute_rulesmetadata_filtersnew) constructor.
   - `query_parameter_matches` (`list[obj]`): Specifies a list of query parameter match criteria, all of which must match
-corresponding query parameters in the request. When `null`, the `query_parameter_matches` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.match_rules.query_parameter_matches.new](#fn-match_rulesquery_parameter_matchesnew) constructor.
+corresponding query parameters in the request. When `null`, the `query_parameter_matches` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.match_rules.query_parameter_matches.new](#fn-path_matcherroute_rulesquery_parameter_matchesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `match_rules` sub block.
@@ -2686,7 +2686,7 @@ in rangeMatch. If the header does not contain an integer, number or is empty,
 the match fails. For example for a range [-5, 0]   - -3 will match.  - 0 will
 not match.  - 0.25 will not match.  - -3someString will not match.   Only one of
 exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch
-must be set. When `null`, the `range_match` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.match_rules.header_matches.range_match.new](#fn-header_matchesrange_matchnew) constructor.
+must be set. When `null`, the `range_match` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.match_rules.header_matches.range_match.new](#fn-path_matcherroute_rulesmatch_rulesrange_matchnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header_matches` sub block.
@@ -2741,7 +2741,7 @@ provided metadata.
 the provided metadata. Possible values: [&#34;MATCH_ALL&#34;, &#34;MATCH_ANY&#34;]
   - `filter_labels` (`list[obj]`): The list of label value pairs that must match labels in the provided metadata
 based on filterMatchCriteria  This list must not be empty and can have at the
-most 64 entries. When `null`, the `filter_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.match_rules.metadata_filters.filter_labels.new](#fn-metadata_filtersfilter_labelsnew) constructor.
+most 64 entries. When `null`, the `filter_labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.match_rules.metadata_filters.filter_labels.new](#fn-path_matcherroute_rulesmatch_rulesfilter_labelsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `metadata_filters` sub block.
@@ -2825,25 +2825,25 @@ Terraform sub block.
 
 **Args**:
   - `cors_policy` (`list[obj]`): The specification for allowing client side cross-origin requests. Please see W3C
-Recommendation for Cross Origin Resource Sharing When `null`, the `cors_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.cors_policy.new](#fn-route_actioncors_policynew) constructor.
+Recommendation for Cross Origin Resource Sharing When `null`, the `cors_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.cors_policy.new](#fn-path_matcherroute_rulescors_policynew) constructor.
   - `fault_injection_policy` (`list[obj]`): The specification for fault injection introduced into traffic to test the
 resiliency of clients to backend service failure. As part of fault injection,
 when clients send requests to a backend service, delays can be introduced by
 Loadbalancer on a percentage of requests before sending those request to the
 backend service. Similarly requests from clients can be aborted by the
 Loadbalancer for a percentage of requests. timeout and retry_policy will be
-ignored by clients that are configured with a fault_injection_policy. When `null`, the `fault_injection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.fault_injection_policy.new](#fn-route_actionfault_injection_policynew) constructor.
+ignored by clients that are configured with a fault_injection_policy. When `null`, the `fault_injection_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.fault_injection_policy.new](#fn-path_matcherroute_rulesfault_injection_policynew) constructor.
   - `request_mirror_policy` (`list[obj]`): Specifies the policy on how requests intended for the route&#39;s backends are
 shadowed to a separate mirrored backend service. Loadbalancer does not wait for
 responses from the shadow service. Prior to sending traffic to the shadow
-service, the host / authority header is suffixed with -shadow. When `null`, the `request_mirror_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.request_mirror_policy.new](#fn-route_actionrequest_mirror_policynew) constructor.
-  - `retry_policy` (`list[obj]`): Specifies the retry policy associated with this route. When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.retry_policy.new](#fn-route_actionretry_policynew) constructor.
+service, the host / authority header is suffixed with -shadow. When `null`, the `request_mirror_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.request_mirror_policy.new](#fn-path_matcherroute_rulesrequest_mirror_policynew) constructor.
+  - `retry_policy` (`list[obj]`): Specifies the retry policy associated with this route. When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.retry_policy.new](#fn-path_matcherroute_rulesretry_policynew) constructor.
   - `timeout` (`list[obj]`): Specifies the timeout for the selected route. Timeout is computed from the time
 the request is has been fully processed (i.e. end-of-stream) up until the
 response has been completely processed. Timeout includes all retries. If not
-specified, the default value is 15 seconds. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.timeout.new](#fn-route_actiontimeoutnew) constructor.
+specified, the default value is 15 seconds. When `null`, the `timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.timeout.new](#fn-path_matcherroute_rulestimeoutnew) constructor.
   - `url_rewrite` (`list[obj]`): The spec to modify the URL of the request, prior to forwarding the request to
-the matched service When `null`, the `url_rewrite` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.url_rewrite.new](#fn-route_actionurl_rewritenew) constructor.
+the matched service When `null`, the `url_rewrite` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.url_rewrite.new](#fn-path_matcherroute_rulesurl_rewritenew) constructor.
   - `weighted_backend_services` (`list[obj]`): A list of weighted backend services to send traffic to when a route match
 occurs. The weights determine the fraction of traffic that flows to their
 corresponding backend service. If all traffic needs to go to a single backend
@@ -2851,7 +2851,7 @@ service, there must be one  weightedBackendService with weight set to a non 0
 number. Once a backendService is identified and before forwarding the request to
 the backend service, advanced routing actions like Url rewrites and header
 transformations are applied depending on additional settings specified in this
-HttpRouteAction. When `null`, the `weighted_backend_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.weighted_backend_services.new](#fn-route_actionweighted_backend_servicesnew) constructor.
+HttpRouteAction. When `null`, the `weighted_backend_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.weighted_backend_services.new](#fn-path_matcherroute_rulesweighted_backend_servicesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `route_action` sub block.
@@ -2912,9 +2912,9 @@ Terraform sub block.
 
 **Args**:
   - `abort` (`list[obj]`): The specification for how client requests are aborted as part of fault
-injection. When `null`, the `abort` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.fault_injection_policy.abort.new](#fn-fault_injection_policyabortnew) constructor.
+injection. When `null`, the `abort` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.fault_injection_policy.abort.new](#fn-path_matcherroute_rulesroute_actionabortnew) constructor.
   - `delay` (`list[obj]`): The specification for how client requests are delayed as part of fault
-injection, before being sent to a backend service. When `null`, the `delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.fault_injection_policy.delay.new](#fn-fault_injection_policydelaynew) constructor.
+injection, before being sent to a backend service. When `null`, the `delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.fault_injection_policy.delay.new](#fn-path_matcherroute_rulesroute_actiondelaynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `fault_injection_policy` sub block.
@@ -2967,7 +2967,7 @@ Terraform sub block.
   - `percentage` (`number`): The percentage of traffic (connections/operations/requests) on which delay will
 be introduced as part of fault injection. The value must be between 0.0 and
 100.0 inclusive. When `null`, the `percentage` field will be omitted from the resulting object.
-  - `fixed_delay` (`list[obj]`): Specifies the value of the fixed delay interval. When `null`, the `fixed_delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.fault_injection_policy.delay.fixed_delay.new](#fn-delayfixed_delaynew) constructor.
+  - `fixed_delay` (`list[obj]`): Specifies the value of the fixed delay interval. When `null`, the `fixed_delay` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.fault_injection_policy.delay.fixed_delay.new](#fn-path_matcherroute_rulesroute_actionfault_injection_policyfixed_delaynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `delay` sub block.
@@ -3065,7 +3065,7 @@ Terraform sub block.
   the response header is set to unavailable When `null`, the `retry_conditions` field will be omitted from the resulting object.
   - `per_try_timeout` (`list[obj]`): Specifies a non-zero timeout per retry attempt.
 If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction
-is not set, will use the largest timeout among all backend services associated with the route. When `null`, the `per_try_timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.retry_policy.per_try_timeout.new](#fn-retry_policyper_try_timeoutnew) constructor.
+is not set, will use the largest timeout among all backend services associated with the route. When `null`, the `per_try_timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.retry_policy.per_try_timeout.new](#fn-path_matcherroute_rulesroute_actionper_try_timeoutnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `retry_policy` sub block.
@@ -3181,7 +3181,7 @@ backendService as determined by the BackendService&#39;s session affinity policy
 The value must be between 0 and 1000
   - `header_action` (`list[obj]`): Specifies changes to request and response headers that need to take effect for
 the selected backendService. headerAction specified here take effect before
-headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.weighted_backend_services.header_action.new](#fn-weighted_backend_servicesheader_actionnew) constructor.
+headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. When `null`, the `header_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.weighted_backend_services.header_action.new](#fn-path_matcherroute_rulesroute_actionheader_actionnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `weighted_backend_services` sub block.
@@ -3209,8 +3209,8 @@ prior to forwarding the request to the backendService. When `null`, the `request
   - `response_headers_to_remove` (`list`): A list of header names for headers that need to be removed from the response
 prior to sending the response back to the client. When `null`, the `response_headers_to_remove` field will be omitted from the resulting object.
   - `request_headers_to_add` (`list[obj]`): Headers to add to a matching request prior to forwarding the request to the
-backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.weighted_backend_services.header_action.request_headers_to_add.new](#fn-header_actionrequest_headers_to_addnew) constructor.
-  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.weighted_backend_services.header_action.response_headers_to_add.new](#fn-header_actionresponse_headers_to_addnew) constructor.
+backendService. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.weighted_backend_services.header_action.request_headers_to_add.new](#fn-path_matcherroute_rulesroute_actionweighted_backend_servicesrequest_headers_to_addnew) constructor.
+  - `response_headers_to_add` (`list[obj]`): Headers to add the response prior to sending the response back to the client. When `null`, the `response_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_url_map.path_matcher.route_rules.route_action.weighted_backend_services.header_action.response_headers_to_add.new](#fn-path_matcherroute_rulesroute_actionweighted_backend_servicesresponse_headers_to_addnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header_action` sub block.

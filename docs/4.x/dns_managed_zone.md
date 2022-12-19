@@ -95,16 +95,16 @@ Must be unique within the project.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `visibility` (`string`): The zone&#39;s visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources. Default value: &#34;public&#34; Possible values: [&#34;private&#34;, &#34;public&#34;] When `null`, the `visibility` field will be omitted from the resulting object.
-  - `cloud_logging_config` (`list[obj]`): Cloud logging configuration When `null`, the `cloud_logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.cloud_logging_config.new](#fn-dns_managed_zonecloud_logging_confignew) constructor.
-  - `dnssec_config` (`list[obj]`): DNSSEC configuration When `null`, the `dnssec_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.dnssec_config.new](#fn-dns_managed_zonednssec_confignew) constructor.
+  - `cloud_logging_config` (`list[obj]`): Cloud logging configuration When `null`, the `cloud_logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.cloud_logging_config.new](#fn-cloud_logging_confignew) constructor.
+  - `dnssec_config` (`list[obj]`): DNSSEC configuration When `null`, the `dnssec_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.dnssec_config.new](#fn-dnssec_confignew) constructor.
   - `forwarding_config` (`list[obj]`): The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
-to forward to. When `null`, the `forwarding_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.forwarding_config.new](#fn-dns_managed_zoneforwarding_confignew) constructor.
+to forward to. When `null`, the `forwarding_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.forwarding_config.new](#fn-forwarding_confignew) constructor.
   - `peering_config` (`list[obj]`): The presence of this field indicates that DNS Peering is enabled for this
-zone. The value of this field contains the network to peer with. When `null`, the `peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.peering_config.new](#fn-dns_managed_zonepeering_confignew) constructor.
+zone. The value of this field contains the network to peer with. When `null`, the `peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.peering_config.new](#fn-peering_confignew) constructor.
   - `private_visibility_config` (`list[obj]`): For privately visible zones, the set of Virtual Private Cloud
-resources that the zone is visible from. When `null`, the `private_visibility_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.private_visibility_config.new](#fn-dns_managed_zoneprivate_visibility_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.timeouts.new](#fn-dns_managed_zonetimeoutsnew) constructor.
+resources that the zone is visible from. When `null`, the `private_visibility_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.private_visibility_config.new](#fn-private_visibility_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -120,7 +120,7 @@ newAttrs()
 `google.dns_managed_zone.newAttrs` constructs a new object with attributes and blocks configured for the `dns_managed_zone`
 Terraform resource.
 
-Unlike [google.dns_managed_zone.new](#fn-dns_managed_zonenew), this function will not inject the `resource`
+Unlike [google.dns_managed_zone.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -137,16 +137,16 @@ Must be unique within the project.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `visibility` (`string`): The zone&#39;s visibility: public zones are exposed to the Internet,
 while private zones are visible only to Virtual Private Cloud resources. Default value: &#34;public&#34; Possible values: [&#34;private&#34;, &#34;public&#34;] When `null`, the `visibility` field will be omitted from the resulting object.
-  - `cloud_logging_config` (`list[obj]`): Cloud logging configuration When `null`, the `cloud_logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.cloud_logging_config.new](#fn-dns_managed_zonecloud_logging_confignew) constructor.
-  - `dnssec_config` (`list[obj]`): DNSSEC configuration When `null`, the `dnssec_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.dnssec_config.new](#fn-dns_managed_zonednssec_confignew) constructor.
+  - `cloud_logging_config` (`list[obj]`): Cloud logging configuration When `null`, the `cloud_logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.cloud_logging_config.new](#fn-cloud_logging_confignew) constructor.
+  - `dnssec_config` (`list[obj]`): DNSSEC configuration When `null`, the `dnssec_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.dnssec_config.new](#fn-dnssec_confignew) constructor.
   - `forwarding_config` (`list[obj]`): The presence for this field indicates that outbound forwarding is enabled
 for this zone. The value of this field contains the set of destinations
-to forward to. When `null`, the `forwarding_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.forwarding_config.new](#fn-dns_managed_zoneforwarding_confignew) constructor.
+to forward to. When `null`, the `forwarding_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.forwarding_config.new](#fn-forwarding_confignew) constructor.
   - `peering_config` (`list[obj]`): The presence of this field indicates that DNS Peering is enabled for this
-zone. The value of this field contains the network to peer with. When `null`, the `peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.peering_config.new](#fn-dns_managed_zonepeering_confignew) constructor.
+zone. The value of this field contains the network to peer with. When `null`, the `peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.peering_config.new](#fn-peering_confignew) constructor.
   - `private_visibility_config` (`list[obj]`): For privately visible zones, the set of Virtual Private Cloud
-resources that the zone is visible from. When `null`, the `private_visibility_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.private_visibility_config.new](#fn-dns_managed_zoneprivate_visibility_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.timeouts.new](#fn-dns_managed_zonetimeoutsnew) constructor.
+resources that the zone is visible from. When `null`, the `private_visibility_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.private_visibility_config.new](#fn-private_visibility_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dns_managed_zone` resource into the root Terraform configuration.
@@ -532,7 +532,7 @@ non_existence can only be updated when the state is &#39;off&#39;. Possible valu
   - `default_key_specs` (`list[obj]`): Specifies parameters that will be used for generating initial DnsKeys
 for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
 you must also provide one for the other.
-default_key_specs can only be updated when the state is &#39;off&#39;. When `null`, the `default_key_specs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.dnssec_config.default_key_specs.new](#fn-dnssec_configdefault_key_specsnew) constructor.
+default_key_specs can only be updated when the state is &#39;off&#39;. When `null`, the `default_key_specs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.dnssec_config.default_key_specs.new](#fn-default_key_specsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `dnssec_config` sub block.
@@ -588,7 +588,7 @@ Terraform sub block.
 **Args**:
   - `target_name_servers` (`list[obj]`): List of target name servers to forward to. Cloud DNS will
 select the best available name server if more than
-one target is given. When `null`, the `target_name_servers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.forwarding_config.target_name_servers.new](#fn-forwarding_configtarget_name_serversnew) constructor.
+one target is given. When `null`, the `target_name_servers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.forwarding_config.target_name_servers.new](#fn-target_name_serversnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `forwarding_config` sub block.
@@ -637,7 +637,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `target_network` (`list[obj]`): The network with which to peer. When `null`, the `target_network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.peering_config.target_network.new](#fn-peering_configtarget_networknew) constructor.
+  - `target_network` (`list[obj]`): The network with which to peer. When `null`, the `target_network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.peering_config.target_network.new](#fn-target_networknew) constructor.
 
 **Returns**:
   - An attribute object that represents the `peering_config` sub block.
@@ -685,12 +685,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `gke_clusters` (`list[obj]`): The list of Google Kubernetes Engine clusters that can see this zone. When `null`, the `gke_clusters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.private_visibility_config.gke_clusters.new](#fn-private_visibility_configgke_clustersnew) constructor.
+  - `gke_clusters` (`list[obj]`): The list of Google Kubernetes Engine clusters that can see this zone. When `null`, the `gke_clusters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.private_visibility_config.gke_clusters.new](#fn-gke_clustersnew) constructor.
   - `networks` (`list[obj]`): The list of VPC networks that can see this zone. Until the provider updates to use the Terraform 0.12 SDK in a future release, you
 may experience issues with this resource while updating. If you&#39;ve defined a &#39;networks&#39; block and
 add another &#39;networks&#39; block while keeping the old block, Terraform will see an incorrect diff
 and apply an incorrect update to the resource. If you encounter this issue, remove all &#39;networks&#39;
-blocks in an update and then apply another update adding all of them back simultaneously. When `null`, the `networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.private_visibility_config.networks.new](#fn-private_visibility_confignetworksnew) constructor.
+blocks in an update and then apply another update adding all of them back simultaneously. When `null`, the `networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.private_visibility_config.networks.new](#fn-networksnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `private_visibility_config` sub block.

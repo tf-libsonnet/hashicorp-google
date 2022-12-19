@@ -111,9 +111,9 @@ If it is not provided, the provider region is used. When `null`, the `region` fi
 custom mode. This field can only be populated if advertiseMode
 is &#39;CUSTOM&#39; and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
-Leave this field blank to advertise no custom IP ranges. When `null`, the `advertised_ip_ranges` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.advertised_ip_ranges.new](#fn-compute_router_peeradvertised_ip_rangesnew) constructor.
-  - `bfd` (`list[obj]`): BFD configuration for the BGP peering. When `null`, the `bfd` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.bfd.new](#fn-compute_router_peerbfdnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.timeouts.new](#fn-compute_router_peertimeoutsnew) constructor.
+Leave this field blank to advertise no custom IP ranges. When `null`, the `advertised_ip_ranges` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.advertised_ip_ranges.new](#fn-advertised_ip_rangesnew) constructor.
+  - `bfd` (`list[obj]`): BFD configuration for the BGP peering. When `null`, the `bfd` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.bfd.new](#fn-bfdnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -129,7 +129,7 @@ newAttrs()
 `google.compute_router_peer.newAttrs` constructs a new object with attributes and blocks configured for the `compute_router_peer`
 Terraform resource.
 
-Unlike [google.compute_router_peer.new](#fn-compute_router_peernew), this function will not inject the `resource`
+Unlike [google.compute_router_peer.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -179,9 +179,9 @@ If it is not provided, the provider region is used. When `null`, the `region` fi
 custom mode. This field can only be populated if advertiseMode
 is &#39;CUSTOM&#39; and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
-Leave this field blank to advertise no custom IP ranges. When `null`, the `advertised_ip_ranges` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.advertised_ip_ranges.new](#fn-compute_router_peeradvertised_ip_rangesnew) constructor.
-  - `bfd` (`list[obj]`): BFD configuration for the BGP peering. When `null`, the `bfd` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.bfd.new](#fn-compute_router_peerbfdnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.timeouts.new](#fn-compute_router_peertimeoutsnew) constructor.
+Leave this field blank to advertise no custom IP ranges. When `null`, the `advertised_ip_ranges` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.advertised_ip_ranges.new](#fn-advertised_ip_rangesnew) constructor.
+  - `bfd` (`list[obj]`): BFD configuration for the BGP peering. When `null`, the `bfd` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.bfd.new](#fn-bfdnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_router_peer` resource into the root Terraform configuration.

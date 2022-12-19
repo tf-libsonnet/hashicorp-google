@@ -114,8 +114,8 @@ For more details about this behavior, see [this section](https://www.terraform.i
 If not specified IPV4_ONLY will be used. Possible values: [&#34;IPV4_ONLY&#34;, &#34;IPV4_IPV6&#34;] When `null`, the `stack_type` field will be omitted from the resulting object.
   - `log_config` (`list[obj]`): Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the &#39;purpose&#39; of this
-subnetwork is &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.log_config.new](#fn-compute_subnetworklog_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.timeouts.new](#fn-compute_subnetworktimeoutsnew) constructor.
+subnetwork is &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.log_config.new](#fn-log_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -131,7 +131,7 @@ newAttrs()
 `google.compute_subnetwork.newAttrs` constructs a new object with attributes and blocks configured for the `compute_subnetwork`
 Terraform resource.
 
-Unlike [google.compute_subnetwork.new](#fn-compute_subnetworknew), this function will not inject the `resource`
+Unlike [google.compute_subnetwork.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -187,8 +187,8 @@ For more details about this behavior, see [this section](https://www.terraform.i
 If not specified IPV4_ONLY will be used. Possible values: [&#34;IPV4_ONLY&#34;, &#34;IPV4_IPV6&#34;] When `null`, the `stack_type` field will be omitted from the resulting object.
   - `log_config` (`list[obj]`): Denotes the logging options for the subnetwork flow logs. If logging is enabled
 logs will be exported to Stackdriver. This field cannot be set if the &#39;purpose&#39; of this
-subnetwork is &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.log_config.new](#fn-compute_subnetworklog_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.timeouts.new](#fn-compute_subnetworktimeoutsnew) constructor.
+subnetwork is &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.log_config.new](#fn-log_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_subnetwork` resource into the root Terraform configuration.

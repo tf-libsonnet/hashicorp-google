@@ -66,8 +66,8 @@ the field path &#39;__name__&#39;. If, on creation, &#39;__name__&#39; was not
 specified as the last field, it will be added automatically with the
 same direction as that of the last field defined. If the final field
 in a composite index is not directional, the &#39;__name__&#39; will be
-ordered &#39;&#34;ASCENDING&#34;&#39; (unless explicitly specified otherwise). When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.fields.new](#fn-firestore_indexfieldsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.timeouts.new](#fn-firestore_indextimeoutsnew) constructor.
+ordered &#39;&#34;ASCENDING&#34;&#39; (unless explicitly specified otherwise). When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.fields.new](#fn-fieldsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,7 +83,7 @@ newAttrs()
 `google.firestore_index.newAttrs` constructs a new object with attributes and blocks configured for the `firestore_index`
 Terraform resource.
 
-Unlike [google.firestore_index.new](#fn-firestore_indexnew), this function will not inject the `resource`
+Unlike [google.firestore_index.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -100,8 +100,8 @@ the field path &#39;__name__&#39;. If, on creation, &#39;__name__&#39; was not
 specified as the last field, it will be added automatically with the
 same direction as that of the last field defined. If the final field
 in a composite index is not directional, the &#39;__name__&#39; will be
-ordered &#39;&#34;ASCENDING&#34;&#39; (unless explicitly specified otherwise). When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.fields.new](#fn-firestore_indexfieldsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.timeouts.new](#fn-firestore_indextimeoutsnew) constructor.
+ordered &#39;&#34;ASCENDING&#34;&#39; (unless explicitly specified otherwise). When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.fields.new](#fn-fieldsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firestore_index` resource into the root Terraform configuration.

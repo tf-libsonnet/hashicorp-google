@@ -70,7 +70,7 @@ newAttrs()
 `google.data.compute_backend_bucket.newAttrs` constructs a new object with attributes and blocks configured for the `compute_backend_bucket`
 Terraform data source.
 
-Unlike [google.data.compute_backend_bucket.new](#fn-compute_backend_bucketnew), this function will not inject the `data source`
+Unlike [google.data.compute_backend_bucket.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

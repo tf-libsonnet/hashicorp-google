@@ -155,9 +155,9 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
   - `workload_identity_pool_provider_id` (`string`): The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 &#39;gcp-&#39; is reserved for use by Google, and may not be specified.
-  - `aws` (`list[obj]`): An Amazon Web Services identity provider. Not compatible with the property oidc. When `null`, the `aws` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.aws.new](#fn-iam_workload_identity_pool_providerawsnew) constructor.
-  - `oidc` (`list[obj]`): An OpenId Connect 1.0 identity provider. Not compatible with the property aws. When `null`, the `oidc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.oidc.new](#fn-iam_workload_identity_pool_provideroidcnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.timeouts.new](#fn-iam_workload_identity_pool_providertimeoutsnew) constructor.
+  - `aws` (`list[obj]`): An Amazon Web Services identity provider. Not compatible with the property oidc. When `null`, the `aws` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.aws.new](#fn-awsnew) constructor.
+  - `oidc` (`list[obj]`): An OpenId Connect 1.0 identity provider. Not compatible with the property aws. When `null`, the `oidc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.oidc.new](#fn-oidcnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -173,7 +173,7 @@ newAttrs()
 `google.iam_workload_identity_pool_provider.newAttrs` constructs a new object with attributes and blocks configured for the `iam_workload_identity_pool_provider`
 Terraform resource.
 
-Unlike [google.iam_workload_identity_pool_provider.new](#fn-iam_workload_identity_pool_providernew), this function will not inject the `resource`
+Unlike [google.iam_workload_identity_pool_provider.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -271,9 +271,9 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
   - `workload_identity_pool_provider_id` (`string`): The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 &#39;gcp-&#39; is reserved for use by Google, and may not be specified.
-  - `aws` (`list[obj]`): An Amazon Web Services identity provider. Not compatible with the property oidc. When `null`, the `aws` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.aws.new](#fn-iam_workload_identity_pool_providerawsnew) constructor.
-  - `oidc` (`list[obj]`): An OpenId Connect 1.0 identity provider. Not compatible with the property aws. When `null`, the `oidc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.oidc.new](#fn-iam_workload_identity_pool_provideroidcnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.timeouts.new](#fn-iam_workload_identity_pool_providertimeoutsnew) constructor.
+  - `aws` (`list[obj]`): An Amazon Web Services identity provider. Not compatible with the property oidc. When `null`, the `aws` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.aws.new](#fn-awsnew) constructor.
+  - `oidc` (`list[obj]`): An OpenId Connect 1.0 identity provider. Not compatible with the property aws. When `null`, the `oidc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.oidc.new](#fn-oidcnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iam_workload_identity_pool_provider` resource into the root Terraform configuration.

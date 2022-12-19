@@ -72,7 +72,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): The queue name. When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `app_engine_routing_override` (`list[obj]`): Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue When `null`, the `app_engine_routing_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.app_engine_routing_override.new](#fn-cloud_tasks_queueapp_engine_routing_overridenew) constructor.
+to App Engine tasks in this queue When `null`, the `app_engine_routing_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.app_engine_routing_override.new](#fn-app_engine_routing_overridenew) constructor.
   - `rate_limits` (`list[obj]`): Rate limits for task dispatches.
 
 The queue&#39;s actual dispatch rate is the result of:
@@ -81,10 +81,10 @@ The queue&#39;s actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue&#39;s state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
   Unavailable) responses from the worker, high error rates, or to
-  smooth sudden large traffic spikes. When `null`, the `rate_limits` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.rate_limits.new](#fn-cloud_tasks_queuerate_limitsnew) constructor.
-  - `retry_config` (`list[obj]`): Settings that determine the retry behavior. When `null`, the `retry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.retry_config.new](#fn-cloud_tasks_queueretry_confignew) constructor.
-  - `stackdriver_logging_config` (`list[obj]`): Configuration options for writing logs to Stackdriver Logging. When `null`, the `stackdriver_logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.stackdriver_logging_config.new](#fn-cloud_tasks_queuestackdriver_logging_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.timeouts.new](#fn-cloud_tasks_queuetimeoutsnew) constructor.
+  smooth sudden large traffic spikes. When `null`, the `rate_limits` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.rate_limits.new](#fn-rate_limitsnew) constructor.
+  - `retry_config` (`list[obj]`): Settings that determine the retry behavior. When `null`, the `retry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.retry_config.new](#fn-retry_confignew) constructor.
+  - `stackdriver_logging_config` (`list[obj]`): Configuration options for writing logs to Stackdriver Logging. When `null`, the `stackdriver_logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.stackdriver_logging_config.new](#fn-stackdriver_logging_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,7 +100,7 @@ newAttrs()
 `google.cloud_tasks_queue.newAttrs` constructs a new object with attributes and blocks configured for the `cloud_tasks_queue`
 Terraform resource.
 
-Unlike [google.cloud_tasks_queue.new](#fn-cloud_tasks_queuenew), this function will not inject the `resource`
+Unlike [google.cloud_tasks_queue.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -112,7 +112,7 @@ injecting into a complete block.
   - `name` (`string`): The queue name. When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `app_engine_routing_override` (`list[obj]`): Overrides for task-level appEngineRouting. These settings apply only
-to App Engine tasks in this queue When `null`, the `app_engine_routing_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.app_engine_routing_override.new](#fn-cloud_tasks_queueapp_engine_routing_overridenew) constructor.
+to App Engine tasks in this queue When `null`, the `app_engine_routing_override` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.app_engine_routing_override.new](#fn-app_engine_routing_overridenew) constructor.
   - `rate_limits` (`list[obj]`): Rate limits for task dispatches.
 
 The queue&#39;s actual dispatch rate is the result of:
@@ -121,10 +121,10 @@ The queue&#39;s actual dispatch rate is the result of:
 * User-specified throttling: rateLimits, retryConfig, and the queue&#39;s state.
 * System throttling due to 429 (Too Many Requests) or 503 (Service
   Unavailable) responses from the worker, high error rates, or to
-  smooth sudden large traffic spikes. When `null`, the `rate_limits` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.rate_limits.new](#fn-cloud_tasks_queuerate_limitsnew) constructor.
-  - `retry_config` (`list[obj]`): Settings that determine the retry behavior. When `null`, the `retry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.retry_config.new](#fn-cloud_tasks_queueretry_confignew) constructor.
-  - `stackdriver_logging_config` (`list[obj]`): Configuration options for writing logs to Stackdriver Logging. When `null`, the `stackdriver_logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.stackdriver_logging_config.new](#fn-cloud_tasks_queuestackdriver_logging_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.timeouts.new](#fn-cloud_tasks_queuetimeoutsnew) constructor.
+  smooth sudden large traffic spikes. When `null`, the `rate_limits` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.rate_limits.new](#fn-rate_limitsnew) constructor.
+  - `retry_config` (`list[obj]`): Settings that determine the retry behavior. When `null`, the `retry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.retry_config.new](#fn-retry_confignew) constructor.
+  - `stackdriver_logging_config` (`list[obj]`): Configuration options for writing logs to Stackdriver Logging. When `null`, the `stackdriver_logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.stackdriver_logging_config.new](#fn-stackdriver_logging_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_tasks_queue.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloud_tasks_queue` resource into the root Terraform configuration.

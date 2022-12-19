@@ -72,10 +72,10 @@ The default value is &#39;global&#39;. When `null`, the `location` field will be
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `basic_algorithm` (`list[obj]`): Basic algorithm for autoscaling. When `null`, the `basic_algorithm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.basic_algorithm.new](#fn-dataproc_autoscaling_policybasic_algorithmnew) constructor.
-  - `secondary_worker_config` (`list[obj]`): Describes how the autoscaler will operate for secondary workers. When `null`, the `secondary_worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.secondary_worker_config.new](#fn-dataproc_autoscaling_policysecondary_worker_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.timeouts.new](#fn-dataproc_autoscaling_policytimeoutsnew) constructor.
-  - `worker_config` (`list[obj]`): Describes how the autoscaler will operate for primary workers. When `null`, the `worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.worker_config.new](#fn-dataproc_autoscaling_policyworker_confignew) constructor.
+  - `basic_algorithm` (`list[obj]`): Basic algorithm for autoscaling. When `null`, the `basic_algorithm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.basic_algorithm.new](#fn-basic_algorithmnew) constructor.
+  - `secondary_worker_config` (`list[obj]`): Describes how the autoscaler will operate for secondary workers. When `null`, the `secondary_worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.secondary_worker_config.new](#fn-secondary_worker_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `worker_config` (`list[obj]`): Describes how the autoscaler will operate for primary workers. When `null`, the `worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.worker_config.new](#fn-worker_confignew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,7 +91,7 @@ newAttrs()
 `google.dataproc_autoscaling_policy.newAttrs` constructs a new object with attributes and blocks configured for the `dataproc_autoscaling_policy`
 Terraform resource.
 
-Unlike [google.dataproc_autoscaling_policy.new](#fn-dataproc_autoscaling_policynew), this function will not inject the `resource`
+Unlike [google.dataproc_autoscaling_policy.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -105,10 +105,10 @@ The default value is &#39;global&#39;. When `null`, the `location` field will be
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `basic_algorithm` (`list[obj]`): Basic algorithm for autoscaling. When `null`, the `basic_algorithm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.basic_algorithm.new](#fn-dataproc_autoscaling_policybasic_algorithmnew) constructor.
-  - `secondary_worker_config` (`list[obj]`): Describes how the autoscaler will operate for secondary workers. When `null`, the `secondary_worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.secondary_worker_config.new](#fn-dataproc_autoscaling_policysecondary_worker_confignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.timeouts.new](#fn-dataproc_autoscaling_policytimeoutsnew) constructor.
-  - `worker_config` (`list[obj]`): Describes how the autoscaler will operate for primary workers. When `null`, the `worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.worker_config.new](#fn-dataproc_autoscaling_policyworker_confignew) constructor.
+  - `basic_algorithm` (`list[obj]`): Basic algorithm for autoscaling. When `null`, the `basic_algorithm` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.basic_algorithm.new](#fn-basic_algorithmnew) constructor.
+  - `secondary_worker_config` (`list[obj]`): Describes how the autoscaler will operate for secondary workers. When `null`, the `secondary_worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.secondary_worker_config.new](#fn-secondary_worker_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `worker_config` (`list[obj]`): Describes how the autoscaler will operate for primary workers. When `null`, the `worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.worker_config.new](#fn-worker_confignew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dataproc_autoscaling_policy` resource into the root Terraform configuration.
@@ -330,7 +330,7 @@ Terraform sub block.
 update operation from the previous event has completed.
 
 Bounds: [2m, 1d]. Default: 2m. When `null`, the `cooldown_period` field will be omitted from the resulting object.
-  - `yarn_config` (`list[obj]`): YARN autoscaling configuration. When `null`, the `yarn_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.basic_algorithm.yarn_config.new](#fn-basic_algorithmyarn_confignew) constructor.
+  - `yarn_config` (`list[obj]`): YARN autoscaling configuration. When `null`, the `yarn_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_autoscaling_policy.basic_algorithm.yarn_config.new](#fn-yarn_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `basic_algorithm` sub block.
