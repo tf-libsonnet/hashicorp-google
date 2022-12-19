@@ -71,10 +71,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `constraint` (`string`): The name of the Constraint the Policy is configuring, for example, serviceuser.services.
   - `folder` (`string`): The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
   - `version` (`number`): Version of the Policy. Default version is 0. When `null`, the `version` field will be omitted from the resulting object.
-  - `boolean_policy` (`list[obj]`): A boolean policy is a constraint that is either enforced or not. When `null`, the `boolean_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.boolean_policy.new](#fn-folderorganizationpolicybooleanpolicynew) constructor.
-  - `list_policy` (`list[obj]`): A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values.  When `null`, the `list_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.list_policy.new](#fn-folderorganizationpolicylistpolicynew) constructor.
-  - `restore_policy` (`list[obj]`): A restore policy is a constraint to restore the default policy. When `null`, the `restore_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.restore_policy.new](#fn-folderorganizationpolicyrestorepolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.timeouts.new](#fn-folderorganizationpolicytimeoutsnew) constructor.
+  - `boolean_policy` (`list[obj]`): A boolean policy is a constraint that is either enforced or not. When `null`, the `boolean_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.boolean_policy.new](#fn-folder_organization_policyboolean_policynew) constructor.
+  - `list_policy` (`list[obj]`): A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values.  When `null`, the `list_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.list_policy.new](#fn-folder_organization_policylist_policynew) constructor.
+  - `restore_policy` (`list[obj]`): A restore policy is a constraint to restore the default policy. When `null`, the `restore_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.restore_policy.new](#fn-folder_organization_policyrestore_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.timeouts.new](#fn-folder_organization_policytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,7 +90,7 @@ newAttrs()
 `google.folder_organization_policy.newAttrs` constructs a new object with attributes and blocks configured for the `folder_organization_policy`
 Terraform resource.
 
-Unlike [google.folder_organization_policy.new](#fn-folderorganizationpolicynew), this function will not inject the `resource`
+Unlike [google.folder_organization_policy.new](#fn-folder_organization_policynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -101,10 +101,10 @@ injecting into a complete block.
   - `constraint` (`string`): The name of the Constraint the Policy is configuring, for example, serviceuser.services.
   - `folder` (`string`): The resource name of the folder to set the policy for. Its format is folders/{folder_id}.
   - `version` (`number`): Version of the Policy. Default version is 0. When `null`, the `version` field will be omitted from the resulting object.
-  - `boolean_policy` (`list[obj]`): A boolean policy is a constraint that is either enforced or not. When `null`, the `boolean_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.boolean_policy.new](#fn-folderorganizationpolicybooleanpolicynew) constructor.
-  - `list_policy` (`list[obj]`): A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values.  When `null`, the `list_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.list_policy.new](#fn-folderorganizationpolicylistpolicynew) constructor.
-  - `restore_policy` (`list[obj]`): A restore policy is a constraint to restore the default policy. When `null`, the `restore_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.restore_policy.new](#fn-folderorganizationpolicyrestorepolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.timeouts.new](#fn-folderorganizationpolicytimeoutsnew) constructor.
+  - `boolean_policy` (`list[obj]`): A boolean policy is a constraint that is either enforced or not. When `null`, the `boolean_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.boolean_policy.new](#fn-folder_organization_policyboolean_policynew) constructor.
+  - `list_policy` (`list[obj]`): A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values.  When `null`, the `list_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.list_policy.new](#fn-folder_organization_policylist_policynew) constructor.
+  - `restore_policy` (`list[obj]`): A restore policy is a constraint to restore the default policy. When `null`, the `restore_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.restore_policy.new](#fn-folder_organization_policyrestore_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.timeouts.new](#fn-folder_organization_policytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `folder_organization_policy` resource into the root Terraform configuration.
@@ -347,8 +347,8 @@ Terraform sub block.
 **Args**:
   - `inherit_from_parent` (`bool`): If set to true, the values from the effective Policy of the parent resource are inherited, meaning the values set in this Policy are added to the values inherited up the hierarchy. When `null`, the `inherit_from_parent` field will be omitted from the resulting object.
   - `suggested_value` (`string`): The Google Cloud Console will try to default to a configuration that matches the value specified in this field. When `null`, the `suggested_value` field will be omitted from the resulting object.
-  - `allow` (`list[obj]`): One or the other must be set. When `null`, the `allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.list_policy.allow.new](#fn-listpolicyallownew) constructor.
-  - `deny` (`list[obj]`): One or the other must be set. When `null`, the `deny` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.list_policy.deny.new](#fn-listpolicydenynew) constructor.
+  - `allow` (`list[obj]`): One or the other must be set. When `null`, the `allow` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.list_policy.allow.new](#fn-list_policyallownew) constructor.
+  - `deny` (`list[obj]`): One or the other must be set. When `null`, the `deny` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.folder_organization_policy.list_policy.deny.new](#fn-list_policydenynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `list_policy` sub block.

@@ -89,10 +89,10 @@ of a deployment in preview (unless updating to preview=false). Thus,
 Terraform will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true. When `null`, the `preview` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `labels` (`list[obj]`): Key-value pairs to apply to this labels. When `null`, the `labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.labels.new](#fn-deploymentmanagerdeploymentlabelsnew) constructor.
+  - `labels` (`list[obj]`): Key-value pairs to apply to this labels. When `null`, the `labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.labels.new](#fn-deployment_manager_deploymentlabelsnew) constructor.
   - `target` (`list[obj]`): Parameters that define your deployment, including the deployment
-configuration and relevant templates. When `null`, the `target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.target.new](#fn-deploymentmanagerdeploymenttargetnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.timeouts.new](#fn-deploymentmanagerdeploymenttimeoutsnew) constructor.
+configuration and relevant templates. When `null`, the `target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.target.new](#fn-deployment_manager_deploymenttargetnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.timeouts.new](#fn-deployment_manager_deploymenttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -108,7 +108,7 @@ newAttrs()
 `google.deployment_manager_deployment.newAttrs` constructs a new object with attributes and blocks configured for the `deployment_manager_deployment`
 Terraform resource.
 
-Unlike [google.deployment_manager_deployment.new](#fn-deploymentmanagerdeploymentnew), this function will not inject the `resource`
+Unlike [google.deployment_manager_deployment.new](#fn-deployment_manager_deploymentnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -138,10 +138,10 @@ of a deployment in preview (unless updating to preview=false). Thus,
 Terraform will force-recreate deployments if either preview is updated
 to true or if other fields are updated while preview is true. When `null`, the `preview` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `labels` (`list[obj]`): Key-value pairs to apply to this labels. When `null`, the `labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.labels.new](#fn-deploymentmanagerdeploymentlabelsnew) constructor.
+  - `labels` (`list[obj]`): Key-value pairs to apply to this labels. When `null`, the `labels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.labels.new](#fn-deployment_manager_deploymentlabelsnew) constructor.
   - `target` (`list[obj]`): Parameters that define your deployment, including the deployment
-configuration and relevant templates. When `null`, the `target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.target.new](#fn-deploymentmanagerdeploymenttargetnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.timeouts.new](#fn-deploymentmanagerdeploymenttimeoutsnew) constructor.
+configuration and relevant templates. When `null`, the `target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.target.new](#fn-deployment_manager_deploymenttargetnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.deployment_manager_deployment.timeouts.new](#fn-deployment_manager_deploymenttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `deployment_manager_deployment` resource into the root Terraform configuration.

@@ -64,7 +64,7 @@ newAttrs()
 `google.data.storage_project_service_account.newAttrs` constructs a new object with attributes and blocks configured for the `storage_project_service_account`
 Terraform data source.
 
-Unlike [google.data.storage_project_service_account.new](#fn-storageprojectserviceaccountnew), this function will not inject the `data source`
+Unlike [google.data.storage_project_service_account.new](#fn-storage_project_service_accountnew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

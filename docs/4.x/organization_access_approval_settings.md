@@ -66,8 +66,8 @@ resources of that resource. A maximum of 50 email addresses are allowed. When `n
 Access requests for the resource given by name against any of these services contained here will be required
 to have explicit approval. Enrollment can be done for individual services.
 
-A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded. When `null`, the `enrolled_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.organization_access_approval_settings.enrolled_services.new](#fn-organizationaccessapprovalsettingsenrolledservicesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.organization_access_approval_settings.timeouts.new](#fn-organizationaccessapprovalsettingstimeoutsnew) constructor.
+A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded. When `null`, the `enrolled_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.organization_access_approval_settings.enrolled_services.new](#fn-organization_access_approval_settingsenrolled_servicesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.organization_access_approval_settings.timeouts.new](#fn-organization_access_approval_settingstimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,7 +83,7 @@ newAttrs()
 `google.organization_access_approval_settings.newAttrs` constructs a new object with attributes and blocks configured for the `organization_access_approval_settings`
 Terraform resource.
 
-Unlike [google.organization_access_approval_settings.new](#fn-organizationaccessapprovalsettingsnew), this function will not inject the `resource`
+Unlike [google.organization_access_approval_settings.new](#fn-organization_access_approval_settingsnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -101,8 +101,8 @@ resources of that resource. A maximum of 50 email addresses are allowed. When `n
 Access requests for the resource given by name against any of these services contained here will be required
 to have explicit approval. Enrollment can be done for individual services.
 
-A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded. When `null`, the `enrolled_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.organization_access_approval_settings.enrolled_services.new](#fn-organizationaccessapprovalsettingsenrolledservicesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.organization_access_approval_settings.timeouts.new](#fn-organizationaccessapprovalsettingstimeoutsnew) constructor.
+A maximum of 10 enrolled services will be enforced, to be expanded as the set of supported services is expanded. When `null`, the `enrolled_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.organization_access_approval_settings.enrolled_services.new](#fn-organization_access_approval_settingsenrolled_servicesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.organization_access_approval_settings.timeouts.new](#fn-organization_access_approval_settingstimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `organization_access_approval_settings` resource into the root Terraform configuration.

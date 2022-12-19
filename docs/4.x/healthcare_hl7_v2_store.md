@@ -81,12 +81,12 @@ Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#
   - `name` (`string`): The resource name for the Hl7V2Store.
 
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
-  - `notification_config` (`list[obj]`): A nested object resource When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.notification_config.new](#fn-healthcarehl7v2storenotificationconfignew) constructor.
+  - `notification_config` (`list[obj]`): A nested object resource When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.notification_config.new](#fn-healthcare_hl7_v2_storenotification_confignew) constructor.
   - `notification_configs` (`list[obj]`): A list of notification configs. Each configuration uses a filter to determine whether to publish a
 message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name
-is sent as part of the notification. Supplied by the client. When `null`, the `notification_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.notification_configs.new](#fn-healthcarehl7v2storenotificationconfigsnew) constructor.
-  - `parser_config` (`list[obj]`): A nested object resource When `null`, the `parser_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.parser_config.new](#fn-healthcarehl7v2storeparserconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.timeouts.new](#fn-healthcarehl7v2storetimeoutsnew) constructor.
+is sent as part of the notification. Supplied by the client. When `null`, the `notification_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.notification_configs.new](#fn-healthcare_hl7_v2_storenotification_configsnew) constructor.
+  - `parser_config` (`list[obj]`): A nested object resource When `null`, the `parser_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.parser_config.new](#fn-healthcare_hl7_v2_storeparser_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.timeouts.new](#fn-healthcare_hl7_v2_storetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,7 +102,7 @@ newAttrs()
 `google.healthcare_hl7_v2_store.newAttrs` constructs a new object with attributes and blocks configured for the `healthcare_hl7_v2_store`
 Terraform resource.
 
-Unlike [google.healthcare_hl7_v2_store.new](#fn-healthcarehl7v2storenew), this function will not inject the `resource`
+Unlike [google.healthcare_hl7_v2_store.new](#fn-healthcare_hl7_v2_storenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -127,12 +127,12 @@ Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#
   - `name` (`string`): The resource name for the Hl7V2Store.
 
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
-  - `notification_config` (`list[obj]`): A nested object resource When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.notification_config.new](#fn-healthcarehl7v2storenotificationconfignew) constructor.
+  - `notification_config` (`list[obj]`): A nested object resource When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.notification_config.new](#fn-healthcare_hl7_v2_storenotification_confignew) constructor.
   - `notification_configs` (`list[obj]`): A list of notification configs. Each configuration uses a filter to determine whether to publish a
 message (both Ingest &amp; Create) on the corresponding notification destination. Only the message name
-is sent as part of the notification. Supplied by the client. When `null`, the `notification_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.notification_configs.new](#fn-healthcarehl7v2storenotificationconfigsnew) constructor.
-  - `parser_config` (`list[obj]`): A nested object resource When `null`, the `parser_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.parser_config.new](#fn-healthcarehl7v2storeparserconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.timeouts.new](#fn-healthcarehl7v2storetimeoutsnew) constructor.
+is sent as part of the notification. Supplied by the client. When `null`, the `notification_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.notification_configs.new](#fn-healthcare_hl7_v2_storenotification_configsnew) constructor.
+  - `parser_config` (`list[obj]`): A nested object resource When `null`, the `parser_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.parser_config.new](#fn-healthcare_hl7_v2_storeparser_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_hl7_v2_store.timeouts.new](#fn-healthcare_hl7_v2_storetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `healthcare_hl7_v2_store` resource into the root Terraform configuration.

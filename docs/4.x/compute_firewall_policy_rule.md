@@ -73,8 +73,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `priority` (`number`): An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
   - `target_resources` (`list`): A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule. When `null`, the `target_resources` field will be omitted from the resulting object.
   - `target_service_accounts` (`list`): A list of service accounts indicating the sets of instances that are applied with this rule. When `null`, the `target_service_accounts` field will be omitted from the resulting object.
-  - `match` (`list[obj]`): A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced. When `null`, the `match` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.match.new](#fn-computefirewallpolicyrulematchnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.timeouts.new](#fn-computefirewallpolicyruletimeoutsnew) constructor.
+  - `match` (`list[obj]`): A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced. When `null`, the `match` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.match.new](#fn-compute_firewall_policy_rulematchnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.timeouts.new](#fn-compute_firewall_policy_ruletimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,7 +90,7 @@ newAttrs()
 `google.compute_firewall_policy_rule.newAttrs` constructs a new object with attributes and blocks configured for the `compute_firewall_policy_rule`
 Terraform resource.
 
-Unlike [google.compute_firewall_policy_rule.new](#fn-computefirewallpolicyrulenew), this function will not inject the `resource`
+Unlike [google.compute_firewall_policy_rule.new](#fn-compute_firewall_policy_rulenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -107,8 +107,8 @@ injecting into a complete block.
   - `priority` (`number`): An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
   - `target_resources` (`list`): A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule. When `null`, the `target_resources` field will be omitted from the resulting object.
   - `target_service_accounts` (`list`): A list of service accounts indicating the sets of instances that are applied with this rule. When `null`, the `target_service_accounts` field will be omitted from the resulting object.
-  - `match` (`list[obj]`): A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced. When `null`, the `match` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.match.new](#fn-computefirewallpolicyrulematchnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.timeouts.new](#fn-computefirewallpolicyruletimeoutsnew) constructor.
+  - `match` (`list[obj]`): A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding &#39;action&#39; is enforced. When `null`, the `match` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.match.new](#fn-compute_firewall_policy_rulematchnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.timeouts.new](#fn-compute_firewall_policy_ruletimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_firewall_policy_rule` resource into the root Terraform configuration.
@@ -350,7 +350,7 @@ Terraform sub block.
 **Args**:
   - `dest_ip_ranges` (`list`): CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256. When `null`, the `dest_ip_ranges` field will be omitted from the resulting object.
   - `src_ip_ranges` (`list`): CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256. When `null`, the `src_ip_ranges` field will be omitted from the resulting object.
-  - `layer4_configs` (`list[obj]`): Pairs of IP protocols and ports that the rule should match. When `null`, the `layer4_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.match.layer4_configs.new](#fn-matchlayer4configsnew) constructor.
+  - `layer4_configs` (`list[obj]`): Pairs of IP protocols and ports that the rule should match. When `null`, the `layer4_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.match.layer4_configs.new](#fn-matchlayer4_configsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `match` sub block.

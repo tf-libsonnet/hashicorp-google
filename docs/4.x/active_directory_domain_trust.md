@@ -66,7 +66,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
   - `trust_direction` (`string`): The trust direction, which decides if the current domain is trusted, trusting, or both. Possible values: [&#34;INBOUND&#34;, &#34;OUTBOUND&#34;, &#34;BIDIRECTIONAL&#34;]
   - `trust_handshake_secret` (`string`): The trust secret used for the handshake with the target domain. This will not be stored.
   - `trust_type` (`string`): The type of trust represented by the trust resource. Possible values: [&#34;FOREST&#34;, &#34;EXTERNAL&#34;]
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.active_directory_domain_trust.timeouts.new](#fn-activedirectorydomaintrusttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.active_directory_domain_trust.timeouts.new](#fn-active_directory_domain_trusttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -82,7 +82,7 @@ newAttrs()
 `google.active_directory_domain_trust.newAttrs` constructs a new object with attributes and blocks configured for the `active_directory_domain_trust`
 Terraform resource.
 
-Unlike [google.active_directory_domain_trust.new](#fn-activedirectorydomaintrustnew), this function will not inject the `resource`
+Unlike [google.active_directory_domain_trust.new](#fn-active_directory_domain_trustnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -99,7 +99,7 @@ https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locatio
   - `trust_direction` (`string`): The trust direction, which decides if the current domain is trusted, trusting, or both. Possible values: [&#34;INBOUND&#34;, &#34;OUTBOUND&#34;, &#34;BIDIRECTIONAL&#34;]
   - `trust_handshake_secret` (`string`): The trust secret used for the handshake with the target domain. This will not be stored.
   - `trust_type` (`string`): The type of trust represented by the trust resource. Possible values: [&#34;FOREST&#34;, &#34;EXTERNAL&#34;]
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.active_directory_domain_trust.timeouts.new](#fn-activedirectorydomaintrusttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.active_directory_domain_trust.timeouts.new](#fn-active_directory_domain_trusttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `active_directory_domain_trust` resource into the root Terraform configuration.

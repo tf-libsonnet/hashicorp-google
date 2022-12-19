@@ -124,11 +124,11 @@ the disk.
 
 If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
-you do not need to provide a key to use the disk later. When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_disk.disk_encryption_key.new](#fn-computeregiondiskdiskencryptionkeynew) constructor.
+you do not need to provide a key to use the disk later. When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_disk.disk_encryption_key.new](#fn-compute_region_diskdisk_encryption_keynew) constructor.
   - `source_snapshot_encryption_key` (`list[obj]`): The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key. When `null`, the `source_snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_disk.source_snapshot_encryption_key.new](#fn-computeregiondisksourcesnapshotencryptionkeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_disk.timeouts.new](#fn-computeregiondisktimeoutsnew) constructor.
+key. When `null`, the `source_snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_disk.source_snapshot_encryption_key.new](#fn-compute_region_disksource_snapshot_encryption_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_disk.timeouts.new](#fn-compute_region_disktimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -144,7 +144,7 @@ newAttrs()
 `google.compute_region_disk.newAttrs` constructs a new object with attributes and blocks configured for the `compute_region_disk`
 Terraform resource.
 
-Unlike [google.compute_region_disk.new](#fn-computeregiondisknew), this function will not inject the `resource`
+Unlike [google.compute_region_disk.new](#fn-compute_region_disknew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -208,11 +208,11 @@ the disk.
 
 If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
-you do not need to provide a key to use the disk later. When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_disk.disk_encryption_key.new](#fn-computeregiondiskdiskencryptionkeynew) constructor.
+you do not need to provide a key to use the disk later. When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_disk.disk_encryption_key.new](#fn-compute_region_diskdisk_encryption_keynew) constructor.
   - `source_snapshot_encryption_key` (`list[obj]`): The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key. When `null`, the `source_snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_disk.source_snapshot_encryption_key.new](#fn-computeregiondisksourcesnapshotencryptionkeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_disk.timeouts.new](#fn-computeregiondisktimeoutsnew) constructor.
+key. When `null`, the `source_snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_disk.source_snapshot_encryption_key.new](#fn-compute_region_disksource_snapshot_encryption_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_disk.timeouts.new](#fn-compute_region_disktimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_region_disk` resource into the root Terraform configuration.

@@ -61,8 +61,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.sign_in.new](#fn-identityplatformprojectdefaultconfigsigninnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.timeouts.new](#fn-identityplatformprojectdefaultconfigtimeoutsnew) constructor.
+  - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.sign_in.new](#fn-identity_platform_project_default_configsign_innew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.timeouts.new](#fn-identity_platform_project_default_configtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -78,7 +78,7 @@ newAttrs()
 `google.identity_platform_project_default_config.newAttrs` constructs a new object with attributes and blocks configured for the `identity_platform_project_default_config`
 Terraform resource.
 
-Unlike [google.identity_platform_project_default_config.new](#fn-identityplatformprojectdefaultconfignew), this function will not inject the `resource`
+Unlike [google.identity_platform_project_default_config.new](#fn-identity_platform_project_default_confignew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -87,8 +87,8 @@ injecting into a complete block.
 
 **Args**:
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.sign_in.new](#fn-identityplatformprojectdefaultconfigsigninnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.timeouts.new](#fn-identityplatformprojectdefaultconfigtimeoutsnew) constructor.
+  - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.sign_in.new](#fn-identity_platform_project_default_configsign_innew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.timeouts.new](#fn-identity_platform_project_default_configtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `identity_platform_project_default_config` resource into the root Terraform configuration.
@@ -201,9 +201,9 @@ Terraform sub block.
 
 **Args**:
   - `allow_duplicate_emails` (`bool`): Whether to allow more than one account to have the same email. When `null`, the `allow_duplicate_emails` field will be omitted from the resulting object.
-  - `anonymous` (`list[obj]`): Configuration options related to authenticating an anonymous user. When `null`, the `anonymous` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.sign_in.anonymous.new](#fn-signinanonymousnew) constructor.
-  - `email` (`list[obj]`): Configuration options related to authenticating a user by their email address. When `null`, the `email` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.sign_in.email.new](#fn-signinemailnew) constructor.
-  - `phone_number` (`list[obj]`): Configuration options related to authenticated a user by their phone number. When `null`, the `phone_number` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.sign_in.phone_number.new](#fn-signinphonenumbernew) constructor.
+  - `anonymous` (`list[obj]`): Configuration options related to authenticating an anonymous user. When `null`, the `anonymous` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.sign_in.anonymous.new](#fn-sign_inanonymousnew) constructor.
+  - `email` (`list[obj]`): Configuration options related to authenticating a user by their email address. When `null`, the `email` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.sign_in.email.new](#fn-sign_inemailnew) constructor.
+  - `phone_number` (`list[obj]`): Configuration options related to authenticated a user by their phone number. When `null`, the `phone_number` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_project_default_config.sign_in.phone_number.new](#fn-sign_inphone_numbernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `sign_in` sub block.

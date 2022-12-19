@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `network` (`string`): The name of the primary network for the peering.
   - `peering` (`string`): Name of the peering.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering_routes_config.timeouts.new](#fn-computenetworkpeeringroutesconfigtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering_routes_config.timeouts.new](#fn-compute_network_peering_routes_configtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `google.compute_network_peering_routes_config.newAttrs` constructs a new object with attributes and blocks configured for the `compute_network_peering_routes_config`
 Terraform resource.
 
-Unlike [google.compute_network_peering_routes_config.new](#fn-computenetworkpeeringroutesconfignew), this function will not inject the `resource`
+Unlike [google.compute_network_peering_routes_config.new](#fn-compute_network_peering_routes_confignew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `network` (`string`): The name of the primary network for the peering.
   - `peering` (`string`): Name of the peering.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering_routes_config.timeouts.new](#fn-computenetworkpeeringroutesconfigtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering_routes_config.timeouts.new](#fn-compute_network_peering_routes_configtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_network_peering_routes_config` resource into the root Terraform configuration.

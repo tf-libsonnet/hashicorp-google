@@ -60,7 +60,7 @@ newAttrs()
 `google.data.client_config.newAttrs` constructs a new object with attributes and blocks configured for the `client_config`
 Terraform data source.
 
-Unlike [google.data.client_config.new](#fn-clientconfignew), this function will not inject the `data source`
+Unlike [google.data.client_config.new](#fn-client_confignew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

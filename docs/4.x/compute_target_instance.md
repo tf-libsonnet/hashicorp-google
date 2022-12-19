@@ -73,7 +73,7 @@ character, which cannot be a dash.
 Currently only NO_NAT (default value) is supported. Default value: &#34;NO_NAT&#34; Possible values: [&#34;NO_NAT&#34;] When `null`, the `nat_policy` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `zone` (`string`): URL of the zone where the target instance resides. When `null`, the `zone` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_instance.timeouts.new](#fn-computetargetinstancetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_instance.timeouts.new](#fn-compute_target_instancetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -89,7 +89,7 @@ newAttrs()
 `google.compute_target_instance.newAttrs` constructs a new object with attributes and blocks configured for the `compute_target_instance`
 Terraform resource.
 
-Unlike [google.compute_target_instance.new](#fn-computetargetinstancenew), this function will not inject the `resource`
+Unlike [google.compute_target_instance.new](#fn-compute_target_instancenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -115,7 +115,7 @@ character, which cannot be a dash.
 Currently only NO_NAT (default value) is supported. Default value: &#34;NO_NAT&#34; Possible values: [&#34;NO_NAT&#34;] When `null`, the `nat_policy` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `zone` (`string`): URL of the zone where the target instance resides. When `null`, the `zone` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_instance.timeouts.new](#fn-computetargetinstancetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_instance.timeouts.new](#fn-compute_target_instancetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_target_instance` resource into the root Terraform configuration.

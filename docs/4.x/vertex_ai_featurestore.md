@@ -67,9 +67,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): The name of the Featurestore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number. When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the dataset. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
-  - `encryption_spec` (`list[obj]`): If set, both of the online and offline data storage will be secured by this key. When `null`, the `encryption_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.encryption_spec.new](#fn-vertexaifeaturestoreencryptionspecnew) constructor.
-  - `online_serving_config` (`list[obj]`): Config for online serving resources. When `null`, the `online_serving_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.online_serving_config.new](#fn-vertexaifeaturestoreonlineservingconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.timeouts.new](#fn-vertexaifeaturestoretimeoutsnew) constructor.
+  - `encryption_spec` (`list[obj]`): If set, both of the online and offline data storage will be secured by this key. When `null`, the `encryption_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.encryption_spec.new](#fn-vertex_ai_featurestoreencryption_specnew) constructor.
+  - `online_serving_config` (`list[obj]`): Config for online serving resources. When `null`, the `online_serving_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.online_serving_config.new](#fn-vertex_ai_featurestoreonline_serving_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.timeouts.new](#fn-vertex_ai_featurestoretimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -85,7 +85,7 @@ newAttrs()
 `google.vertex_ai_featurestore.newAttrs` constructs a new object with attributes and blocks configured for the `vertex_ai_featurestore`
 Terraform resource.
 
-Unlike [google.vertex_ai_featurestore.new](#fn-vertexaifeaturestorenew), this function will not inject the `resource`
+Unlike [google.vertex_ai_featurestore.new](#fn-vertex_ai_featurestorenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -98,9 +98,9 @@ injecting into a complete block.
   - `name` (`string`): The name of the Featurestore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number. When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the dataset. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
-  - `encryption_spec` (`list[obj]`): If set, both of the online and offline data storage will be secured by this key. When `null`, the `encryption_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.encryption_spec.new](#fn-vertexaifeaturestoreencryptionspecnew) constructor.
-  - `online_serving_config` (`list[obj]`): Config for online serving resources. When `null`, the `online_serving_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.online_serving_config.new](#fn-vertexaifeaturestoreonlineservingconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.timeouts.new](#fn-vertexaifeaturestoretimeoutsnew) constructor.
+  - `encryption_spec` (`list[obj]`): If set, both of the online and offline data storage will be secured by this key. When `null`, the `encryption_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.encryption_spec.new](#fn-vertex_ai_featurestoreencryption_specnew) constructor.
+  - `online_serving_config` (`list[obj]`): Config for online serving resources. When `null`, the `online_serving_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.online_serving_config.new](#fn-vertex_ai_featurestoreonline_serving_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.timeouts.new](#fn-vertex_ai_featurestoretimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vertex_ai_featurestore` resource into the root Terraform configuration.

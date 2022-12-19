@@ -60,8 +60,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `display_name` (`string`): The human-readable name of the environment (unique in an agent). Limit of 64 characters.
   - `parent` (`string`): The Agent to create an Environment for.
 Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;. When `null`, the `parent` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_environment.timeouts.new](#fn-dialogflowcxenvironmenttimeoutsnew) constructor.
-  - `version_configs` (`list[obj]`): A list of configurations for flow versions. You should include version configs for all flows that are reachable from [Start Flow][Agent.start_flow] in the agent. Otherwise, an error will be returned. When `null`, the `version_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_environment.version_configs.new](#fn-dialogflowcxenvironmentversionconfigsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_environment.timeouts.new](#fn-dialogflow_cx_environmenttimeoutsnew) constructor.
+  - `version_configs` (`list[obj]`): A list of configurations for flow versions. You should include version configs for all flows that are reachable from [Start Flow][Agent.start_flow] in the agent. Otherwise, an error will be returned. When `null`, the `version_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_environment.version_configs.new](#fn-dialogflow_cx_environmentversion_configsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -77,7 +77,7 @@ newAttrs()
 `google.dialogflow_cx_environment.newAttrs` constructs a new object with attributes and blocks configured for the `dialogflow_cx_environment`
 Terraform resource.
 
-Unlike [google.dialogflow_cx_environment.new](#fn-dialogflowcxenvironmentnew), this function will not inject the `resource`
+Unlike [google.dialogflow_cx_environment.new](#fn-dialogflow_cx_environmentnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -89,8 +89,8 @@ injecting into a complete block.
   - `display_name` (`string`): The human-readable name of the environment (unique in an agent). Limit of 64 characters.
   - `parent` (`string`): The Agent to create an Environment for.
 Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;. When `null`, the `parent` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_environment.timeouts.new](#fn-dialogflowcxenvironmenttimeoutsnew) constructor.
-  - `version_configs` (`list[obj]`): A list of configurations for flow versions. You should include version configs for all flows that are reachable from [Start Flow][Agent.start_flow] in the agent. Otherwise, an error will be returned. When `null`, the `version_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_environment.version_configs.new](#fn-dialogflowcxenvironmentversionconfigsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_environment.timeouts.new](#fn-dialogflow_cx_environmenttimeoutsnew) constructor.
+  - `version_configs` (`list[obj]`): A list of configurations for flow versions. You should include version configs for all flows that are reachable from [Start Flow][Agent.start_flow] in the agent. Otherwise, an error will be returned. When `null`, the `version_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_environment.version_configs.new](#fn-dialogflow_cx_environmentversion_configsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dialogflow_cx_environment` resource into the root Terraform configuration.

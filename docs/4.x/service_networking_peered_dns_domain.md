@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `network` (`string`): Network in the consumer project to peer with.
   - `project` (`string`): The ID of the project that the service account will be created in. Defaults to the provider project configuration. When `null`, the `project` field will be omitted from the resulting object.
   - `service` (`string`): The name of the service to create a peered DNS domain for, e.g. servicenetworking.googleapis.com When `null`, the `service` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.service_networking_peered_dns_domain.timeouts.new](#fn-servicenetworkingpeereddnsdomaintimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.service_networking_peered_dns_domain.timeouts.new](#fn-service_networking_peered_dns_domaintimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `google.service_networking_peered_dns_domain.newAttrs` constructs a new object with attributes and blocks configured for the `service_networking_peered_dns_domain`
 Terraform resource.
 
-Unlike [google.service_networking_peered_dns_domain.new](#fn-servicenetworkingpeereddnsdomainnew), this function will not inject the `resource`
+Unlike [google.service_networking_peered_dns_domain.new](#fn-service_networking_peered_dns_domainnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `network` (`string`): Network in the consumer project to peer with.
   - `project` (`string`): The ID of the project that the service account will be created in. Defaults to the provider project configuration. When `null`, the `project` field will be omitted from the resulting object.
   - `service` (`string`): The name of the service to create a peered DNS domain for, e.g. servicenetworking.googleapis.com When `null`, the `service` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.service_networking_peered_dns_domain.timeouts.new](#fn-servicenetworkingpeereddnsdomaintimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.service_networking_peered_dns_domain.timeouts.new](#fn-service_networking_peered_dns_domaintimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `service_networking_peered_dns_domain` resource into the root Terraform configuration.

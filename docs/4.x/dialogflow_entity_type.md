@@ -65,8 +65,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 types can contain references to other entity types (with or without aliases).
 * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: [&#34;KIND_MAP&#34;, &#34;KIND_LIST&#34;, &#34;KIND_REGEXP&#34;]
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `entities` (`list[obj]`): The collection of entity entries associated with the entity type. When `null`, the `entities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_entity_type.entities.new](#fn-dialogflowentitytypeentitiesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_entity_type.timeouts.new](#fn-dialogflowentitytypetimeoutsnew) constructor.
+  - `entities` (`list[obj]`): The collection of entity entries associated with the entity type. When `null`, the `entities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_entity_type.entities.new](#fn-dialogflow_entity_typeentitiesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_entity_type.timeouts.new](#fn-dialogflow_entity_typetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -82,7 +82,7 @@ newAttrs()
 `google.dialogflow_entity_type.newAttrs` constructs a new object with attributes and blocks configured for the `dialogflow_entity_type`
 Terraform resource.
 
-Unlike [google.dialogflow_entity_type.new](#fn-dialogflowentitytypenew), this function will not inject the `resource`
+Unlike [google.dialogflow_entity_type.new](#fn-dialogflow_entity_typenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -98,8 +98,8 @@ injecting into a complete block.
 types can contain references to other entity types (with or without aliases).
 * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: [&#34;KIND_MAP&#34;, &#34;KIND_LIST&#34;, &#34;KIND_REGEXP&#34;]
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `entities` (`list[obj]`): The collection of entity entries associated with the entity type. When `null`, the `entities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_entity_type.entities.new](#fn-dialogflowentitytypeentitiesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_entity_type.timeouts.new](#fn-dialogflowentitytypetimeoutsnew) constructor.
+  - `entities` (`list[obj]`): The collection of entity entries associated with the entity type. When `null`, the `entities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_entity_type.entities.new](#fn-dialogflow_entity_typeentitiesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_entity_type.timeouts.new](#fn-dialogflow_entity_typetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dialogflow_entity_type` resource into the root Terraform configuration.

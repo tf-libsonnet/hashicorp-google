@@ -56,7 +56,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `crypto_key` (`string`): The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: &#39;&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}&#39;&#39;
   - `plaintext` (`string`): The plaintext to be encrypted.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_secret_ciphertext.timeouts.new](#fn-kmssecretciphertexttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_secret_ciphertext.timeouts.new](#fn-kms_secret_ciphertexttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -72,7 +72,7 @@ newAttrs()
 `google.kms_secret_ciphertext.newAttrs` constructs a new object with attributes and blocks configured for the `kms_secret_ciphertext`
 Terraform resource.
 
-Unlike [google.kms_secret_ciphertext.new](#fn-kmssecretciphertextnew), this function will not inject the `resource`
+Unlike [google.kms_secret_ciphertext.new](#fn-kms_secret_ciphertextnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -84,7 +84,7 @@ injecting into a complete block.
   - `crypto_key` (`string`): The full name of the CryptoKey that will be used to encrypt the provided plaintext.
 Format: &#39;&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}&#39;&#39;
   - `plaintext` (`string`): The plaintext to be encrypted.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_secret_ciphertext.timeouts.new](#fn-kmssecretciphertexttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.kms_secret_ciphertext.timeouts.new](#fn-kms_secret_ciphertexttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `kms_secret_ciphertext` resource into the root Terraform configuration.

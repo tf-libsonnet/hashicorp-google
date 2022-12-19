@@ -65,7 +65,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   * allAuthenticatedUsers
   - `object` (`string`): The name of the object, if applied to an object. When `null`, the `object` field will be omitted from the resulting object.
   - `role` (`string`): The access permission for the entity. Possible values: [&#34;OWNER&#34;, &#34;READER&#34;]
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_default_object_access_control.timeouts.new](#fn-storagedefaultobjectaccesscontroltimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_default_object_access_control.timeouts.new](#fn-storage_default_object_access_controltimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -81,7 +81,7 @@ newAttrs()
 `google.storage_default_object_access_control.newAttrs` constructs a new object with attributes and blocks configured for the `storage_default_object_access_control`
 Terraform resource.
 
-Unlike [google.storage_default_object_access_control.new](#fn-storagedefaultobjectaccesscontrolnew), this function will not inject the `resource`
+Unlike [google.storage_default_object_access_control.new](#fn-storage_default_object_access_controlnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -101,7 +101,7 @@ injecting into a complete block.
   * allAuthenticatedUsers
   - `object` (`string`): The name of the object, if applied to an object. When `null`, the `object` field will be omitted from the resulting object.
   - `role` (`string`): The access permission for the entity. Possible values: [&#34;OWNER&#34;, &#34;READER&#34;]
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_default_object_access_control.timeouts.new](#fn-storagedefaultobjectaccesscontroltimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_default_object_access_control.timeouts.new](#fn-storage_default_object_access_controltimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_default_object_access_control` resource into the root Terraform configuration.

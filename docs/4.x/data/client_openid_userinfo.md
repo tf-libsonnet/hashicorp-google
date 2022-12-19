@@ -60,7 +60,7 @@ newAttrs()
 `google.data.client_openid_userinfo.newAttrs` constructs a new object with attributes and blocks configured for the `client_openid_userinfo`
 Terraform data source.
 
-Unlike [google.data.client_openid_userinfo.new](#fn-clientopeniduserinfonew), this function will not inject the `data source`
+Unlike [google.data.client_openid_userinfo.new](#fn-client_openid_userinfonew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

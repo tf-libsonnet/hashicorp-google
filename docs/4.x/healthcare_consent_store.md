@@ -74,7 +74,7 @@ An object containing a list of &#34;key&#34;: value pairs.
 Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name of this ConsentStore, for example:
 &#34;consent1&#34;
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_consent_store.timeouts.new](#fn-healthcareconsentstoretimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_consent_store.timeouts.new](#fn-healthcare_consent_storetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,7 +90,7 @@ newAttrs()
 `google.healthcare_consent_store.newAttrs` constructs a new object with attributes and blocks configured for the `healthcare_consent_store`
 Terraform resource.
 
-Unlike [google.healthcare_consent_store.new](#fn-healthcareconsentstorenew), this function will not inject the `resource`
+Unlike [google.healthcare_consent_store.new](#fn-healthcare_consent_storenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -118,7 +118,7 @@ An object containing a list of &#34;key&#34;: value pairs.
 Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name of this ConsentStore, for example:
 &#34;consent1&#34;
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_consent_store.timeouts.new](#fn-healthcareconsentstoretimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_consent_store.timeouts.new](#fn-healthcare_consent_storetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `healthcare_consent_store` resource into the root Terraform configuration.

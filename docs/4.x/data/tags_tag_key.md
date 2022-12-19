@@ -64,7 +64,7 @@ newAttrs()
 `google.data.tags_tag_key.newAttrs` constructs a new object with attributes and blocks configured for the `tags_tag_key`
 Terraform data source.
 
-Unlike [google.data.tags_tag_key.new](#fn-tagstagkeynew), this function will not inject the `data source`
+Unlike [google.data.tags_tag_key.new](#fn-tags_tag_keynew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

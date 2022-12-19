@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Required. The resource name of the channel. Must be unique within the location on the project.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `third_party_provider` (`string`): The name of the event provider (e.g. Eventarc SaaS partner) associated with the channel. This provider will be granted permissions to publish events to the channel. Format: `projects/{project}/locations/{location}/providers/{provider_id}`. When `null`, the `third_party_provider` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.eventarc_channel.timeouts.new](#fn-eventarcchanneltimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.eventarc_channel.timeouts.new](#fn-eventarc_channeltimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `google.eventarc_channel.newAttrs` constructs a new object with attributes and blocks configured for the `eventarc_channel`
 Terraform resource.
 
-Unlike [google.eventarc_channel.new](#fn-eventarcchannelnew), this function will not inject the `resource`
+Unlike [google.eventarc_channel.new](#fn-eventarc_channelnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `name` (`string`): Required. The resource name of the channel. Must be unique within the location on the project.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `third_party_provider` (`string`): The name of the event provider (e.g. Eventarc SaaS partner) associated with the channel. This provider will be granted permissions to publish events to the channel. Format: `projects/{project}/locations/{location}/providers/{provider_id}`. When `null`, the `third_party_provider` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.eventarc_channel.timeouts.new](#fn-eventarcchanneltimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.eventarc_channel.timeouts.new](#fn-eventarc_channeltimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `eventarc_channel` resource into the root Terraform configuration.

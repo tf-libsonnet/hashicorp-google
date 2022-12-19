@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `disabled` (`bool`): Whether the service account is disabled. Defaults to false When `null`, the `disabled` field will be omitted from the resulting object.
   - `display_name` (`string`): The display name for the service account. Can be updated without creating a new resource. When `null`, the `display_name` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project that the service account will be created in. Defaults to the provider project configuration. When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.service_account.timeouts.new](#fn-serviceaccounttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.service_account.timeouts.new](#fn-service_accounttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -75,7 +75,7 @@ newAttrs()
 `google.service_account.newAttrs` constructs a new object with attributes and blocks configured for the `service_account`
 Terraform resource.
 
-Unlike [google.service_account.new](#fn-serviceaccountnew), this function will not inject the `resource`
+Unlike [google.service_account.new](#fn-service_accountnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -88,7 +88,7 @@ injecting into a complete block.
   - `disabled` (`bool`): Whether the service account is disabled. Defaults to false When `null`, the `disabled` field will be omitted from the resulting object.
   - `display_name` (`string`): The display name for the service account. Can be updated without creating a new resource. When `null`, the `display_name` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project that the service account will be created in. Defaults to the provider project configuration. When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.service_account.timeouts.new](#fn-serviceaccounttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.service_account.timeouts.new](#fn-service_accounttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `service_account` resource into the root Terraform configuration.

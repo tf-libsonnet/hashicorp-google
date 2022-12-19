@@ -87,8 +87,8 @@ The VPC Peering should be set up before provisioning the node. If this field is 
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled. When `null`, the `use_service_networking` field will be omitted from the resulting object.
   - `zone` (`string`): The GCP location for the TPU. If it is not provided, the provider zone is used. When `null`, the `zone` field will be omitted from the resulting object.
-  - `scheduling_config` (`list[obj]`): Sets the scheduling options for this TPU instance. When `null`, the `scheduling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.tpu_node.scheduling_config.new](#fn-tpunodeschedulingconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.tpu_node.timeouts.new](#fn-tpunodetimeoutsnew) constructor.
+  - `scheduling_config` (`list[obj]`): Sets the scheduling options for this TPU instance. When `null`, the `scheduling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.tpu_node.scheduling_config.new](#fn-tpu_nodescheduling_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.tpu_node.timeouts.new](#fn-tpu_nodetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -104,7 +104,7 @@ newAttrs()
 `google.tpu_node.newAttrs` constructs a new object with attributes and blocks configured for the `tpu_node`
 Terraform resource.
 
-Unlike [google.tpu_node.new](#fn-tpunodenew), this function will not inject the `resource`
+Unlike [google.tpu_node.new](#fn-tpu_nodenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -136,8 +136,8 @@ The VPC Peering should be set up before provisioning the node. If this field is 
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled. When `null`, the `use_service_networking` field will be omitted from the resulting object.
   - `zone` (`string`): The GCP location for the TPU. If it is not provided, the provider zone is used. When `null`, the `zone` field will be omitted from the resulting object.
-  - `scheduling_config` (`list[obj]`): Sets the scheduling options for this TPU instance. When `null`, the `scheduling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.tpu_node.scheduling_config.new](#fn-tpunodeschedulingconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.tpu_node.timeouts.new](#fn-tpunodetimeoutsnew) constructor.
+  - `scheduling_config` (`list[obj]`): Sets the scheduling options for this TPU instance. When `null`, the `scheduling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.tpu_node.scheduling_config.new](#fn-tpu_nodescheduling_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.tpu_node.timeouts.new](#fn-tpu_nodetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `tpu_node` resource into the root Terraform configuration.

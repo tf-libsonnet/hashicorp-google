@@ -73,8 +73,8 @@ Creating, updating, or deleting target servers. Possible values: [&#34;DEPLOYMEN
   - `name` (`string`): The resource ID of the environment.
   - `org_id` (`string`): The Apigee Organization associated with the Apigee environment,
 in the format &#39;organizations/{{org_name}}&#39;.
-  - `node_config` (`list[obj]`): NodeConfig for setting the min/max number of nodes associated with the environment. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_environment.node_config.new](#fn-apigeeenvironmentnodeconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_environment.timeouts.new](#fn-apigeeenvironmenttimeoutsnew) constructor.
+  - `node_config` (`list[obj]`): NodeConfig for setting the min/max number of nodes associated with the environment. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_environment.node_config.new](#fn-apigee_environmentnode_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_environment.timeouts.new](#fn-apigee_environmenttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,7 +90,7 @@ newAttrs()
 `google.apigee_environment.newAttrs` constructs a new object with attributes and blocks configured for the `apigee_environment`
 Terraform resource.
 
-Unlike [google.apigee_environment.new](#fn-apigeeenvironmentnew), this function will not inject the `resource`
+Unlike [google.apigee_environment.new](#fn-apigee_environmentnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -112,8 +112,8 @@ Creating, updating, or deleting target servers. Possible values: [&#34;DEPLOYMEN
   - `name` (`string`): The resource ID of the environment.
   - `org_id` (`string`): The Apigee Organization associated with the Apigee environment,
 in the format &#39;organizations/{{org_name}}&#39;.
-  - `node_config` (`list[obj]`): NodeConfig for setting the min/max number of nodes associated with the environment. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_environment.node_config.new](#fn-apigeeenvironmentnodeconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_environment.timeouts.new](#fn-apigeeenvironmenttimeoutsnew) constructor.
+  - `node_config` (`list[obj]`): NodeConfig for setting the min/max number of nodes associated with the environment. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_environment.node_config.new](#fn-apigee_environmentnode_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_environment.timeouts.new](#fn-apigee_environmenttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `apigee_environment` resource into the root Terraform configuration.

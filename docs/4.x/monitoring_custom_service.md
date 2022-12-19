@@ -67,8 +67,8 @@ numbers, underscores, and dashes. Label keys and values have a maximum
 length of 63 characters, and must be less than 128 bytes in size. Up to 64
 label entries may be stored. For labels which do not have a semantic value,
 the empty string may be supplied for the label value. When `null`, the `user_labels` field will be omitted from the resulting object.
-  - `telemetry` (`list[obj]`): Configuration for how to query telemetry on a Service. When `null`, the `telemetry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_custom_service.telemetry.new](#fn-monitoringcustomservicetelemetrynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_custom_service.timeouts.new](#fn-monitoringcustomservicetimeoutsnew) constructor.
+  - `telemetry` (`list[obj]`): Configuration for how to query telemetry on a Service. When `null`, the `telemetry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_custom_service.telemetry.new](#fn-monitoring_custom_servicetelemetrynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_custom_service.timeouts.new](#fn-monitoring_custom_servicetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,7 +84,7 @@ newAttrs()
 `google.monitoring_custom_service.newAttrs` constructs a new object with attributes and blocks configured for the `monitoring_custom_service`
 Terraform resource.
 
-Unlike [google.monitoring_custom_service.new](#fn-monitoringcustomservicenew), this function will not inject the `resource`
+Unlike [google.monitoring_custom_service.new](#fn-monitoring_custom_servicenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -102,8 +102,8 @@ numbers, underscores, and dashes. Label keys and values have a maximum
 length of 63 characters, and must be less than 128 bytes in size. Up to 64
 label entries may be stored. For labels which do not have a semantic value,
 the empty string may be supplied for the label value. When `null`, the `user_labels` field will be omitted from the resulting object.
-  - `telemetry` (`list[obj]`): Configuration for how to query telemetry on a Service. When `null`, the `telemetry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_custom_service.telemetry.new](#fn-monitoringcustomservicetelemetrynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_custom_service.timeouts.new](#fn-monitoringcustomservicetimeoutsnew) constructor.
+  - `telemetry` (`list[obj]`): Configuration for how to query telemetry on a Service. When `null`, the `telemetry` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_custom_service.telemetry.new](#fn-monitoring_custom_servicetelemetrynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_custom_service.timeouts.new](#fn-monitoring_custom_servicetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitoring_custom_service` resource into the root Terraform configuration.

@@ -63,7 +63,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Name of the peering.
   - `network` (`string`): The primary network of the peering.
   - `peer_network` (`string`): The peer network in the peering. The peer network may belong to a different project.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering.timeouts.new](#fn-computenetworkpeeringtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering.timeouts.new](#fn-compute_network_peeringtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -79,7 +79,7 @@ newAttrs()
 `google.compute_network_peering.newAttrs` constructs a new object with attributes and blocks configured for the `compute_network_peering`
 Terraform resource.
 
-Unlike [google.compute_network_peering.new](#fn-computenetworkpeeringnew), this function will not inject the `resource`
+Unlike [google.compute_network_peering.new](#fn-compute_network_peeringnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -94,7 +94,7 @@ injecting into a complete block.
   - `name` (`string`): Name of the peering.
   - `network` (`string`): The primary network of the peering.
   - `peer_network` (`string`): The peer network in the peering. The peer network may belong to a different project.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering.timeouts.new](#fn-computenetworkpeeringtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering.timeouts.new](#fn-compute_network_peeringtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_network_peering` resource into the root Terraform configuration.

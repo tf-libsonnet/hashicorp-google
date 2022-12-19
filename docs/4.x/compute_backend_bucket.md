@@ -82,8 +82,8 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `cdn_policy` (`list[obj]`): Cloud CDN configuration for this Backend Bucket. When `null`, the `cdn_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.cdn_policy.new](#fn-computebackendbucketcdnpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.timeouts.new](#fn-computebackendbuckettimeoutsnew) constructor.
+  - `cdn_policy` (`list[obj]`): Cloud CDN configuration for this Backend Bucket. When `null`, the `cdn_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.cdn_policy.new](#fn-compute_backend_bucketcdn_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.timeouts.new](#fn-compute_backend_buckettimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -99,7 +99,7 @@ newAttrs()
 `google.compute_backend_bucket.newAttrs` constructs a new object with attributes and blocks configured for the `compute_backend_bucket`
 Terraform resource.
 
-Unlike [google.compute_backend_bucket.new](#fn-computebackendbucketnew), this function will not inject the `resource`
+Unlike [google.compute_backend_bucket.new](#fn-compute_backend_bucketnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -122,8 +122,8 @@ the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the
 last character, which cannot be a dash.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `cdn_policy` (`list[obj]`): Cloud CDN configuration for this Backend Bucket. When `null`, the `cdn_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.cdn_policy.new](#fn-computebackendbucketcdnpolicynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.timeouts.new](#fn-computebackendbuckettimeoutsnew) constructor.
+  - `cdn_policy` (`list[obj]`): Cloud CDN configuration for this Backend Bucket. When `null`, the `cdn_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.cdn_policy.new](#fn-compute_backend_bucketcdn_policynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.timeouts.new](#fn-compute_backend_buckettimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_backend_bucket` resource into the root Terraform configuration.
@@ -364,10 +364,10 @@ Cloud CDN will internally behave as though
 all responses from this backend had a &#34;Cache-Control: public,
 max-age=[TTL]&#34; header, regardless of any existing Cache-Control
 header. The actual headers served in responses will not be altered. When `null`, the `signed_url_cache_max_age_sec` field will be omitted from the resulting object.
-  - `bypass_cache_on_request_headers` (`list[obj]`): Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings. When `null`, the `bypass_cache_on_request_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.cdn_policy.bypass_cache_on_request_headers.new](#fn-cdnpolicybypasscacheonrequestheadersnew) constructor.
-  - `cache_key_policy` (`list[obj]`): The CacheKeyPolicy for this CdnPolicy. When `null`, the `cache_key_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.cdn_policy.cache_key_policy.new](#fn-cdnpolicycachekeypolicynew) constructor.
+  - `bypass_cache_on_request_headers` (`list[obj]`): Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings. When `null`, the `bypass_cache_on_request_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.cdn_policy.bypass_cache_on_request_headers.new](#fn-cdn_policybypass_cache_on_request_headersnew) constructor.
+  - `cache_key_policy` (`list[obj]`): The CacheKeyPolicy for this CdnPolicy. When `null`, the `cache_key_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.cdn_policy.cache_key_policy.new](#fn-cdn_policycache_key_policynew) constructor.
   - `negative_caching_policy` (`list[obj]`): Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
-Omitting the policy and leaving negativeCaching enabled will use Cloud CDN&#39;s default cache TTLs. When `null`, the `negative_caching_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.cdn_policy.negative_caching_policy.new](#fn-cdnpolicynegativecachingpolicynew) constructor.
+Omitting the policy and leaving negativeCaching enabled will use Cloud CDN&#39;s default cache TTLs. When `null`, the `negative_caching_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_bucket.cdn_policy.negative_caching_policy.new](#fn-cdn_policynegative_caching_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `cdn_policy` sub block.

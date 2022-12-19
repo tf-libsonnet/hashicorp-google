@@ -83,8 +83,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `source` (`string`): A path to the data you want to upload. Must be defined if content is not. When `null`, the `source` field will be omitted from the resulting object.
   - `storage_class` (`string`): The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket&#39;s default storage class or to a standard class. When `null`, the `storage_class` field will be omitted from the resulting object.
   - `temporary_hold` (`bool`): Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. When `null`, the `temporary_hold` field will be omitted from the resulting object.
-  - `customer_encryption` (`list[obj]`): Encryption key; encoded using base64. When `null`, the `customer_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.customer_encryption.new](#fn-storagebucketobjectcustomerencryptionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.timeouts.new](#fn-storagebucketobjecttimeoutsnew) constructor.
+  - `customer_encryption` (`list[obj]`): Encryption key; encoded using base64. When `null`, the `customer_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.customer_encryption.new](#fn-storage_bucket_objectcustomer_encryptionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.timeouts.new](#fn-storage_bucket_objecttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,7 +100,7 @@ newAttrs()
 `google.storage_bucket_object.newAttrs` constructs a new object with attributes and blocks configured for the `storage_bucket_object`
 Terraform resource.
 
-Unlike [google.storage_bucket_object.new](#fn-storagebucketobjectnew), this function will not inject the `resource`
+Unlike [google.storage_bucket_object.new](#fn-storage_bucket_objectnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -123,8 +123,8 @@ injecting into a complete block.
   - `source` (`string`): A path to the data you want to upload. Must be defined if content is not. When `null`, the `source` field will be omitted from the resulting object.
   - `storage_class` (`string`): The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket&#39;s default storage class or to a standard class. When `null`, the `storage_class` field will be omitted from the resulting object.
   - `temporary_hold` (`bool`): Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. When `null`, the `temporary_hold` field will be omitted from the resulting object.
-  - `customer_encryption` (`list[obj]`): Encryption key; encoded using base64. When `null`, the `customer_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.customer_encryption.new](#fn-storagebucketobjectcustomerencryptionnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.timeouts.new](#fn-storagebucketobjecttimeoutsnew) constructor.
+  - `customer_encryption` (`list[obj]`): Encryption key; encoded using base64. When `null`, the `customer_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.customer_encryption.new](#fn-storage_bucket_objectcustomer_encryptionnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.timeouts.new](#fn-storage_bucket_objecttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_bucket_object` resource into the root Terraform configuration.

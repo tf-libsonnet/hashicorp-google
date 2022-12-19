@@ -144,13 +144,13 @@ the disk.
 
 If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
-you do not need to provide a key to use the disk later. When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.disk_encryption_key.new](#fn-computediskdiskencryptionkeynew) constructor.
+you do not need to provide a key to use the disk later. When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.disk_encryption_key.new](#fn-compute_diskdisk_encryption_keynew) constructor.
   - `source_image_encryption_key` (`list[obj]`): The customer-supplied encryption key of the source image. Required if
-the source image is protected by a customer-supplied encryption key. When `null`, the `source_image_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.source_image_encryption_key.new](#fn-computedisksourceimageencryptionkeynew) constructor.
+the source image is protected by a customer-supplied encryption key. When `null`, the `source_image_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.source_image_encryption_key.new](#fn-compute_disksource_image_encryption_keynew) constructor.
   - `source_snapshot_encryption_key` (`list[obj]`): The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key. When `null`, the `source_snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.source_snapshot_encryption_key.new](#fn-computedisksourcesnapshotencryptionkeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.timeouts.new](#fn-computedisktimeoutsnew) constructor.
+key. When `null`, the `source_snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.source_snapshot_encryption_key.new](#fn-compute_disksource_snapshot_encryption_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.timeouts.new](#fn-compute_disktimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -166,7 +166,7 @@ newAttrs()
 `google.compute_disk.newAttrs` constructs a new object with attributes and blocks configured for the `compute_disk`
 Terraform resource.
 
-Unlike [google.compute_disk.new](#fn-computedisknew), this function will not inject the `resource`
+Unlike [google.compute_disk.new](#fn-compute_disknew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -245,13 +245,13 @@ the disk.
 
 If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
-you do not need to provide a key to use the disk later. When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.disk_encryption_key.new](#fn-computediskdiskencryptionkeynew) constructor.
+you do not need to provide a key to use the disk later. When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.disk_encryption_key.new](#fn-compute_diskdisk_encryption_keynew) constructor.
   - `source_image_encryption_key` (`list[obj]`): The customer-supplied encryption key of the source image. Required if
-the source image is protected by a customer-supplied encryption key. When `null`, the `source_image_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.source_image_encryption_key.new](#fn-computedisksourceimageencryptionkeynew) constructor.
+the source image is protected by a customer-supplied encryption key. When `null`, the `source_image_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.source_image_encryption_key.new](#fn-compute_disksource_image_encryption_keynew) constructor.
   - `source_snapshot_encryption_key` (`list[obj]`): The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
-key. When `null`, the `source_snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.source_snapshot_encryption_key.new](#fn-computedisksourcesnapshotencryptionkeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.timeouts.new](#fn-computedisktimeoutsnew) constructor.
+key. When `null`, the `source_snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.source_snapshot_encryption_key.new](#fn-compute_disksource_snapshot_encryption_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_disk.timeouts.new](#fn-compute_disktimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_disk` resource into the root Terraform configuration.

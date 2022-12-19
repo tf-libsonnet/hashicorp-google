@@ -53,7 +53,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `parent` (`string`): The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
   - `tag_value` (`string`): The TagValue of the TagBinding. Must be of the form tagValues/456.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.tags_tag_binding.timeouts.new](#fn-tagstagbindingtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.tags_tag_binding.timeouts.new](#fn-tags_tag_bindingtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -69,7 +69,7 @@ newAttrs()
 `google.tags_tag_binding.newAttrs` constructs a new object with attributes and blocks configured for the `tags_tag_binding`
 Terraform resource.
 
-Unlike [google.tags_tag_binding.new](#fn-tagstagbindingnew), this function will not inject the `resource`
+Unlike [google.tags_tag_binding.new](#fn-tags_tag_bindingnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -79,7 +79,7 @@ injecting into a complete block.
 **Args**:
   - `parent` (`string`): The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
   - `tag_value` (`string`): The TagValue of the TagBinding. Must be of the form tagValues/456.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.tags_tag_binding.timeouts.new](#fn-tagstagbindingtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.tags_tag_binding.timeouts.new](#fn-tags_tag_bindingtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `tags_tag_binding` resource into the root Terraform configuration.

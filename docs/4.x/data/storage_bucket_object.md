@@ -64,7 +64,7 @@ newAttrs()
 `google.data.storage_bucket_object.newAttrs` constructs a new object with attributes and blocks configured for the `storage_bucket_object`
 Terraform data source.
 
-Unlike [google.data.storage_bucket_object.new](#fn-storagebucketobjectnew), this function will not inject the `data source`
+Unlike [google.data.storage_bucket_object.new](#fn-storage_bucket_objectnew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

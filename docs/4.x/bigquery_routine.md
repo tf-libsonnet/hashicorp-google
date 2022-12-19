@@ -89,8 +89,8 @@ cannot suppress the recurring diff this causes. As a workaround, we recommend us
 the schema as returned by the API. When `null`, the `return_type` field will be omitted from the resulting object.
   - `routine_id` (`string`): The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
   - `routine_type` (`string`): The type of routine. Possible values: [&#34;SCALAR_FUNCTION&#34;, &#34;PROCEDURE&#34;, &#34;TABLE_VALUED_FUNCTION&#34;] When `null`, the `routine_type` field will be omitted from the resulting object.
-  - `arguments` (`list[obj]`): Input/output argument of a function or a stored procedure. When `null`, the `arguments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.arguments.new](#fn-bigqueryroutineargumentsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.timeouts.new](#fn-bigqueryroutinetimeoutsnew) constructor.
+  - `arguments` (`list[obj]`): Input/output argument of a function or a stored procedure. When `null`, the `arguments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.arguments.new](#fn-bigquery_routineargumentsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.timeouts.new](#fn-bigquery_routinetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -106,7 +106,7 @@ newAttrs()
 `google.bigquery_routine.newAttrs` constructs a new object with attributes and blocks configured for the `bigquery_routine`
 Terraform resource.
 
-Unlike [google.bigquery_routine.new](#fn-bigqueryroutinenew), this function will not inject the `resource`
+Unlike [google.bigquery_routine.new](#fn-bigquery_routinenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -139,8 +139,8 @@ cannot suppress the recurring diff this causes. As a workaround, we recommend us
 the schema as returned by the API. When `null`, the `return_type` field will be omitted from the resulting object.
   - `routine_id` (`string`): The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
   - `routine_type` (`string`): The type of routine. Possible values: [&#34;SCALAR_FUNCTION&#34;, &#34;PROCEDURE&#34;, &#34;TABLE_VALUED_FUNCTION&#34;] When `null`, the `routine_type` field will be omitted from the resulting object.
-  - `arguments` (`list[obj]`): Input/output argument of a function or a stored procedure. When `null`, the `arguments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.arguments.new](#fn-bigqueryroutineargumentsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.timeouts.new](#fn-bigqueryroutinetimeoutsnew) constructor.
+  - `arguments` (`list[obj]`): Input/output argument of a function or a stored procedure. When `null`, the `arguments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.arguments.new](#fn-bigquery_routineargumentsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.timeouts.new](#fn-bigquery_routinetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigquery_routine` resource into the root Terraform configuration.

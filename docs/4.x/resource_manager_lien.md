@@ -67,7 +67,7 @@ Each value should correspond to an IAM permission. The server will validate
 the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. [&#39;resourcemanager.projects.delete&#39;]
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.resource_manager_lien.timeouts.new](#fn-resourcemanagerlientimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.resource_manager_lien.timeouts.new](#fn-resource_manager_lientimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,7 +83,7 @@ newAttrs()
 `google.resource_manager_lien.newAttrs` constructs a new object with attributes and blocks configured for the `resource_manager_lien`
 Terraform resource.
 
-Unlike [google.resource_manager_lien.new](#fn-resourcemanagerliennew), this function will not inject the `resource`
+Unlike [google.resource_manager_lien.new](#fn-resource_manager_liennew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -105,7 +105,7 @@ Each value should correspond to an IAM permission. The server will validate
 the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. [&#39;resourcemanager.projects.delete&#39;]
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.resource_manager_lien.timeouts.new](#fn-resourcemanagerlientimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.resource_manager_lien.timeouts.new](#fn-resource_manager_lientimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `resource_manager_lien` resource into the root Terraform configuration.

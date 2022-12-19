@@ -61,8 +61,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): The name of the table.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `split_keys` (`list`): A list of predefined keys to split the table on. !&gt; Warning: Modifying the split_keys of an existing table will cause Terraform to delete/recreate the entire google_bigtable_table resource. When `null`, the `split_keys` field will be omitted from the resulting object.
-  - `column_family` (`list[obj]`): A group of columns within a table which share a common configuration. This can be specified multiple times. When `null`, the `column_family` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_table.column_family.new](#fn-bigtabletablecolumnfamilynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_table.timeouts.new](#fn-bigtabletabletimeoutsnew) constructor.
+  - `column_family` (`list[obj]`): A group of columns within a table which share a common configuration. This can be specified multiple times. When `null`, the `column_family` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_table.column_family.new](#fn-bigtable_tablecolumn_familynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_table.timeouts.new](#fn-bigtable_tabletimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -78,7 +78,7 @@ newAttrs()
 `google.bigtable_table.newAttrs` constructs a new object with attributes and blocks configured for the `bigtable_table`
 Terraform resource.
 
-Unlike [google.bigtable_table.new](#fn-bigtabletablenew), this function will not inject the `resource`
+Unlike [google.bigtable_table.new](#fn-bigtable_tablenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -90,8 +90,8 @@ injecting into a complete block.
   - `name` (`string`): The name of the table.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `split_keys` (`list`): A list of predefined keys to split the table on. !&gt; Warning: Modifying the split_keys of an existing table will cause Terraform to delete/recreate the entire google_bigtable_table resource. When `null`, the `split_keys` field will be omitted from the resulting object.
-  - `column_family` (`list[obj]`): A group of columns within a table which share a common configuration. This can be specified multiple times. When `null`, the `column_family` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_table.column_family.new](#fn-bigtabletablecolumnfamilynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_table.timeouts.new](#fn-bigtabletabletimeoutsnew) constructor.
+  - `column_family` (`list[obj]`): A group of columns within a table which share a common configuration. This can be specified multiple times. When `null`, the `column_family` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_table.column_family.new](#fn-bigtable_tablecolumn_familynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_table.timeouts.new](#fn-bigtable_tabletimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigtable_table` resource into the root Terraform configuration.

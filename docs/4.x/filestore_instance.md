@@ -77,10 +77,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE
   - `zone` (`string`): The name of the Filestore zone of the instance. When `null`, the `zone` field will be omitted from the resulting object.
   - `file_shares` (`list[obj]`): File system shares on the instance. For this version, only a
-single file share is supported. When `null`, the `file_shares` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.file_shares.new](#fn-filestoreinstancefilesharesnew) constructor.
+single file share is supported. When `null`, the `file_shares` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.file_shares.new](#fn-filestore_instancefile_sharesnew) constructor.
   - `networks` (`list[obj]`): VPC networks to which the instance is connected. For this version,
-only a single network is supported. When `null`, the `networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.networks.new](#fn-filestoreinstancenetworksnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.timeouts.new](#fn-filestoreinstancetimeoutsnew) constructor.
+only a single network is supported. When `null`, the `networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.networks.new](#fn-filestore_instancenetworksnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.timeouts.new](#fn-filestore_instancetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -96,7 +96,7 @@ newAttrs()
 `google.filestore_instance.newAttrs` constructs a new object with attributes and blocks configured for the `filestore_instance`
 Terraform resource.
 
-Unlike [google.filestore_instance.new](#fn-filestoreinstancenew), this function will not inject the `resource`
+Unlike [google.filestore_instance.new](#fn-filestore_instancenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -114,10 +114,10 @@ injecting into a complete block.
 Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE
   - `zone` (`string`): The name of the Filestore zone of the instance. When `null`, the `zone` field will be omitted from the resulting object.
   - `file_shares` (`list[obj]`): File system shares on the instance. For this version, only a
-single file share is supported. When `null`, the `file_shares` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.file_shares.new](#fn-filestoreinstancefilesharesnew) constructor.
+single file share is supported. When `null`, the `file_shares` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.file_shares.new](#fn-filestore_instancefile_sharesnew) constructor.
   - `networks` (`list[obj]`): VPC networks to which the instance is connected. For this version,
-only a single network is supported. When `null`, the `networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.networks.new](#fn-filestoreinstancenetworksnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.timeouts.new](#fn-filestoreinstancetimeoutsnew) constructor.
+only a single network is supported. When `null`, the `networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.networks.new](#fn-filestore_instancenetworksnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.timeouts.new](#fn-filestore_instancetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `filestore_instance` resource into the root Terraform configuration.
@@ -381,7 +381,7 @@ Terraform sub block.
   - `capacity_gb` (`number`): File share capacity in GiB. This must be at least 1024 GiB
 for the standard tier, or 2560 GiB for the premium tier.
   - `name` (`string`): The name of the fileshare (16 characters or less)
-  - `nfs_export_options` (`list[obj]`): Nfs Export Options. There is a limit of 10 export options per file share. When `null`, the `nfs_export_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.file_shares.nfs_export_options.new](#fn-filesharesnfsexportoptionsnew) constructor.
+  - `nfs_export_options` (`list[obj]`): Nfs Export Options. There is a limit of 10 export options per file share. When `null`, the `nfs_export_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.file_shares.nfs_export_options.new](#fn-file_sharesnfs_export_optionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `file_shares` sub block.

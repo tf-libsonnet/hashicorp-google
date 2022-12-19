@@ -69,7 +69,7 @@ newAttrs()
 `google.data.privateca_certificate_authority.newAttrs` constructs a new object with attributes and blocks configured for the `privateca_certificate_authority`
 Terraform data source.
 
-Unlike [google.data.privateca_certificate_authority.new](#fn-privatecacertificateauthoritynew), this function will not inject the `data source`
+Unlike [google.data.privateca_certificate_authority.new](#fn-privateca_certificate_authoritynew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

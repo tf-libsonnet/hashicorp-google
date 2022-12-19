@@ -63,7 +63,7 @@ Defaults to 3306. When `null`, the `port` field will be omitted from the resulti
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The Region in which the created instance should reside.
 If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_source_representation_instance.timeouts.new](#fn-sqlsourcerepresentationinstancetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_source_representation_instance.timeouts.new](#fn-sql_source_representation_instancetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -79,7 +79,7 @@ newAttrs()
 `google.sql_source_representation_instance.newAttrs` constructs a new object with attributes and blocks configured for the `sql_source_representation_instance`
 Terraform resource.
 
-Unlike [google.sql_source_representation_instance.new](#fn-sqlsourcerepresentationinstancenew), this function will not inject the `resource`
+Unlike [google.sql_source_representation_instance.new](#fn-sql_source_representation_instancenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -95,7 +95,7 @@ Defaults to 3306. When `null`, the `port` field will be omitted from the resulti
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The Region in which the created instance should reside.
 If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_source_representation_instance.timeouts.new](#fn-sqlsourcerepresentationinstancetimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_source_representation_instance.timeouts.new](#fn-sql_source_representation_instancetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sql_source_representation_instance` resource into the root Terraform configuration.

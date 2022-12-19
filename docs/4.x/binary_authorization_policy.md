@@ -71,7 +71,7 @@ policy will be subject to the project admission policy. Possible values: [&#34;E
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `admission_whitelist_patterns` (`list[obj]`): A whitelist of image patterns to exclude from admission rules. If an
 image&#39;s name matches a whitelist pattern, the image&#39;s admission
-requests will always be permitted regardless of your admission rules. When `null`, the `admission_whitelist_patterns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.admission_whitelist_patterns.new](#fn-binaryauthorizationpolicyadmissionwhitelistpatternsnew) constructor.
+requests will always be permitted regardless of your admission rules. When `null`, the `admission_whitelist_patterns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.admission_whitelist_patterns.new](#fn-binary_authorization_policyadmission_whitelist_patternsnew) constructor.
   - `cluster_admission_rules` (`list[obj]`): Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
 to by one or more attestors, that all pod creations will be allowed,
@@ -81,10 +81,10 @@ admission rule per cluster spec.
 
 Identifier format: &#39;{{location}}.{{clusterId}}&#39;.
 A location is either a compute zone (e.g. &#39;us-central1-a&#39;) or a region
-(e.g. &#39;us-central1&#39;). When `null`, the `cluster_admission_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.cluster_admission_rules.new](#fn-binaryauthorizationpolicyclusteradmissionrulesnew) constructor.
+(e.g. &#39;us-central1&#39;). When `null`, the `cluster_admission_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.cluster_admission_rules.new](#fn-binary_authorization_policycluster_admission_rulesnew) constructor.
   - `default_admission_rule` (`list[obj]`): Default admission rule for a cluster without a per-cluster admission
-rule. When `null`, the `default_admission_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.default_admission_rule.new](#fn-binaryauthorizationpolicydefaultadmissionrulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.timeouts.new](#fn-binaryauthorizationpolicytimeoutsnew) constructor.
+rule. When `null`, the `default_admission_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.default_admission_rule.new](#fn-binary_authorization_policydefault_admission_rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.timeouts.new](#fn-binary_authorization_policytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,7 +100,7 @@ newAttrs()
 `google.binary_authorization_policy.newAttrs` constructs a new object with attributes and blocks configured for the `binary_authorization_policy`
 Terraform resource.
 
-Unlike [google.binary_authorization_policy.new](#fn-binaryauthorizationpolicynew), this function will not inject the `resource`
+Unlike [google.binary_authorization_policy.new](#fn-binary_authorization_policynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -115,7 +115,7 @@ policy will be subject to the project admission policy. Possible values: [&#34;E
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `admission_whitelist_patterns` (`list[obj]`): A whitelist of image patterns to exclude from admission rules. If an
 image&#39;s name matches a whitelist pattern, the image&#39;s admission
-requests will always be permitted regardless of your admission rules. When `null`, the `admission_whitelist_patterns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.admission_whitelist_patterns.new](#fn-binaryauthorizationpolicyadmissionwhitelistpatternsnew) constructor.
+requests will always be permitted regardless of your admission rules. When `null`, the `admission_whitelist_patterns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.admission_whitelist_patterns.new](#fn-binary_authorization_policyadmission_whitelist_patternsnew) constructor.
   - `cluster_admission_rules` (`list[obj]`): Per-cluster admission rules. An admission rule specifies either that
 all container images used in a pod creation request must be attested
 to by one or more attestors, that all pod creations will be allowed,
@@ -125,10 +125,10 @@ admission rule per cluster spec.
 
 Identifier format: &#39;{{location}}.{{clusterId}}&#39;.
 A location is either a compute zone (e.g. &#39;us-central1-a&#39;) or a region
-(e.g. &#39;us-central1&#39;). When `null`, the `cluster_admission_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.cluster_admission_rules.new](#fn-binaryauthorizationpolicyclusteradmissionrulesnew) constructor.
+(e.g. &#39;us-central1&#39;). When `null`, the `cluster_admission_rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.cluster_admission_rules.new](#fn-binary_authorization_policycluster_admission_rulesnew) constructor.
   - `default_admission_rule` (`list[obj]`): Default admission rule for a cluster without a per-cluster admission
-rule. When `null`, the `default_admission_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.default_admission_rule.new](#fn-binaryauthorizationpolicydefaultadmissionrulenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.timeouts.new](#fn-binaryauthorizationpolicytimeoutsnew) constructor.
+rule. When `null`, the `default_admission_rule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.default_admission_rule.new](#fn-binary_authorization_policydefault_admission_rulenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_policy.timeouts.new](#fn-binary_authorization_policytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `binary_authorization_policy` resource into the root Terraform configuration.

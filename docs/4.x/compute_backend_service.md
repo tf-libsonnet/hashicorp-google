@@ -197,10 +197,10 @@ types and may result in errors if used with the GA API. Possible values: [&#34;H
 not applicable if the protocol is UDP. Possible values: [&#34;NONE&#34;, &#34;CLIENT_IP&#34;, &#34;CLIENT_IP_PORT_PROTO&#34;, &#34;CLIENT_IP_PROTO&#34;, &#34;GENERATED_COOKIE&#34;, &#34;HEADER_FIELD&#34;, &#34;HTTP_COOKIE&#34;] When `null`, the `session_affinity` field will be omitted from the resulting object.
   - `timeout_sec` (`number`): How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400]. When `null`, the `timeout_sec` field will be omitted from the resulting object.
-  - `backend` (`list[obj]`): The set of backends that serve this BackendService. When `null`, the `backend` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.backend.new](#fn-computebackendservicebackendnew) constructor.
-  - `cdn_policy` (`list[obj]`): Cloud CDN configuration for this BackendService. When `null`, the `cdn_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.new](#fn-computebackendservicecdnpolicynew) constructor.
+  - `backend` (`list[obj]`): The set of backends that serve this BackendService. When `null`, the `backend` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.backend.new](#fn-compute_backend_servicebackendnew) constructor.
+  - `cdn_policy` (`list[obj]`): Cloud CDN configuration for this BackendService. When `null`, the `cdn_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.new](#fn-compute_backend_servicecdn_policynew) constructor.
   - `circuit_breakers` (`list[obj]`): Settings controlling the volume of connections to a backend service. This field
-is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED. When `null`, the `circuit_breakers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.circuit_breakers.new](#fn-computebackendservicecircuitbreakersnew) constructor.
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED. When `null`, the `circuit_breakers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.circuit_breakers.new](#fn-compute_backend_servicecircuit_breakersnew) constructor.
   - `consistent_hash` (`list[obj]`): Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
 policy is applicable only for HTTP connections. The affinity to a particular
@@ -208,18 +208,18 @@ destination host will be lost when one or more hosts are added/removed from the
 destination service. This field specifies parameters that control consistent
 hashing. This field only applies if the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
-set to MAGLEV or RING_HASH. When `null`, the `consistent_hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.new](#fn-computebackendserviceconsistenthashnew) constructor.
-  - `iap` (`list[obj]`): Settings for enabling Cloud Identity Aware Proxy When `null`, the `iap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.iap.new](#fn-computebackendserviceiapnew) constructor.
+set to MAGLEV or RING_HASH. When `null`, the `consistent_hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.new](#fn-compute_backend_serviceconsistent_hashnew) constructor.
+  - `iap` (`list[obj]`): Settings for enabling Cloud Identity Aware Proxy When `null`, the `iap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.iap.new](#fn-compute_backend_serviceiapnew) constructor.
   - `log_config` (`list[obj]`): This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.log_config.new](#fn-computebackendservicelogconfignew) constructor.
+If logging is enabled, logs will be exported to Stackdriver. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.log_config.new](#fn-compute_backend_servicelog_confignew) constructor.
   - `outlier_detection` (`list[obj]`): Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED. When `null`, the `outlier_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.new](#fn-computebackendserviceoutlierdetectionnew) constructor.
+to INTERNAL_SELF_MANAGED. When `null`, the `outlier_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.new](#fn-compute_backend_serviceoutlier_detectionnew) constructor.
   - `security_settings` (`list[obj]`): The security settings that apply to this backend service. This field is applicable to either
 a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
 load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
-load_balancing_scheme set to INTERNAL_SELF_MANAGED. When `null`, the `security_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.security_settings.new](#fn-computebackendservicesecuritysettingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.timeouts.new](#fn-computebackendservicetimeoutsnew) constructor.
+load_balancing_scheme set to INTERNAL_SELF_MANAGED. When `null`, the `security_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.security_settings.new](#fn-compute_backend_servicesecurity_settingsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.timeouts.new](#fn-compute_backend_servicetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -235,7 +235,7 @@ newAttrs()
 `google.compute_backend_service.newAttrs` constructs a new object with attributes and blocks configured for the `compute_backend_service`
 Terraform resource.
 
-Unlike [google.compute_backend_service.new](#fn-computebackendservicenew), this function will not inject the `resource`
+Unlike [google.compute_backend_service.new](#fn-compute_backend_servicenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -330,10 +330,10 @@ types and may result in errors if used with the GA API. Possible values: [&#34;H
 not applicable if the protocol is UDP. Possible values: [&#34;NONE&#34;, &#34;CLIENT_IP&#34;, &#34;CLIENT_IP_PORT_PROTO&#34;, &#34;CLIENT_IP_PROTO&#34;, &#34;GENERATED_COOKIE&#34;, &#34;HEADER_FIELD&#34;, &#34;HTTP_COOKIE&#34;] When `null`, the `session_affinity` field will be omitted from the resulting object.
   - `timeout_sec` (`number`): How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400]. When `null`, the `timeout_sec` field will be omitted from the resulting object.
-  - `backend` (`list[obj]`): The set of backends that serve this BackendService. When `null`, the `backend` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.backend.new](#fn-computebackendservicebackendnew) constructor.
-  - `cdn_policy` (`list[obj]`): Cloud CDN configuration for this BackendService. When `null`, the `cdn_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.new](#fn-computebackendservicecdnpolicynew) constructor.
+  - `backend` (`list[obj]`): The set of backends that serve this BackendService. When `null`, the `backend` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.backend.new](#fn-compute_backend_servicebackendnew) constructor.
+  - `cdn_policy` (`list[obj]`): Cloud CDN configuration for this BackendService. When `null`, the `cdn_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.new](#fn-compute_backend_servicecdn_policynew) constructor.
   - `circuit_breakers` (`list[obj]`): Settings controlling the volume of connections to a backend service. This field
-is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED. When `null`, the `circuit_breakers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.circuit_breakers.new](#fn-computebackendservicecircuitbreakersnew) constructor.
+is applicable only when the load_balancing_scheme is set to INTERNAL_SELF_MANAGED. When `null`, the `circuit_breakers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.circuit_breakers.new](#fn-compute_backend_servicecircuit_breakersnew) constructor.
   - `consistent_hash` (`list[obj]`): Consistent Hash-based load balancing can be used to provide soft session
 affinity based on HTTP headers, cookies or other properties. This load balancing
 policy is applicable only for HTTP connections. The affinity to a particular
@@ -341,18 +341,18 @@ destination host will be lost when one or more hosts are added/removed from the
 destination service. This field specifies parameters that control consistent
 hashing. This field only applies if the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
-set to MAGLEV or RING_HASH. When `null`, the `consistent_hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.new](#fn-computebackendserviceconsistenthashnew) constructor.
-  - `iap` (`list[obj]`): Settings for enabling Cloud Identity Aware Proxy When `null`, the `iap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.iap.new](#fn-computebackendserviceiapnew) constructor.
+set to MAGLEV or RING_HASH. When `null`, the `consistent_hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.new](#fn-compute_backend_serviceconsistent_hashnew) constructor.
+  - `iap` (`list[obj]`): Settings for enabling Cloud Identity Aware Proxy When `null`, the `iap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.iap.new](#fn-compute_backend_serviceiapnew) constructor.
   - `log_config` (`list[obj]`): This field denotes the logging options for the load balancer traffic served by this backend service.
-If logging is enabled, logs will be exported to Stackdriver. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.log_config.new](#fn-computebackendservicelogconfignew) constructor.
+If logging is enabled, logs will be exported to Stackdriver. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.log_config.new](#fn-compute_backend_servicelog_confignew) constructor.
   - `outlier_detection` (`list[obj]`): Settings controlling eviction of unhealthy hosts from the load balancing pool.
 This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED. When `null`, the `outlier_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.new](#fn-computebackendserviceoutlierdetectionnew) constructor.
+to INTERNAL_SELF_MANAGED. When `null`, the `outlier_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.new](#fn-compute_backend_serviceoutlier_detectionnew) constructor.
   - `security_settings` (`list[obj]`): The security settings that apply to this backend service. This field is applicable to either
 a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
 load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
-load_balancing_scheme set to INTERNAL_SELF_MANAGED. When `null`, the `security_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.security_settings.new](#fn-computebackendservicesecuritysettingsnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.timeouts.new](#fn-computebackendservicetimeoutsnew) constructor.
+load_balancing_scheme set to INTERNAL_SELF_MANAGED. When `null`, the `security_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.security_settings.new](#fn-compute_backend_servicesecurity_settingsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.timeouts.new](#fn-compute_backend_servicetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_backend_service` resource into the root Terraform configuration.
@@ -1089,9 +1089,9 @@ internally behave as though all responses from this backend had a
 &#34;Cache-Control: public, max-age=[TTL]&#34; header, regardless of any
 existing Cache-Control header. The actual headers served in
 responses will not be altered. When `null`, the `signed_url_cache_max_age_sec` field will be omitted from the resulting object.
-  - `cache_key_policy` (`list[obj]`): The CacheKeyPolicy for this CdnPolicy. When `null`, the `cache_key_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.cache_key_policy.new](#fn-cdnpolicycachekeypolicynew) constructor.
+  - `cache_key_policy` (`list[obj]`): The CacheKeyPolicy for this CdnPolicy. When `null`, the `cache_key_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.cache_key_policy.new](#fn-cdn_policycache_key_policynew) constructor.
   - `negative_caching_policy` (`list[obj]`): Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
-Omitting the policy and leaving negativeCaching enabled will use Cloud CDN&#39;s default cache TTLs. When `null`, the `negative_caching_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.negative_caching_policy.new](#fn-cdnpolicynegativecachingpolicynew) constructor.
+Omitting the policy and leaving negativeCaching enabled will use Cloud CDN&#39;s default cache TTLs. When `null`, the `negative_caching_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.negative_caching_policy.new](#fn-cdn_policynegative_caching_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `cdn_policy` sub block.
@@ -1231,7 +1231,7 @@ Defaults to 1024. When `null`, the `minimum_ring_size` field will be omitted fro
   - `http_cookie` (`list[obj]`): Hash is based on HTTP Cookie. This field describes a HTTP cookie
 that will be used as the hash key for the consistent hash load
 balancer. If the cookie is not present, it will be generated.
-This field is applicable if the sessionAffinity is set to HTTP_COOKIE. When `null`, the `http_cookie` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.http_cookie.new](#fn-consistenthashhttpcookienew) constructor.
+This field is applicable if the sessionAffinity is set to HTTP_COOKIE. When `null`, the `http_cookie` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.http_cookie.new](#fn-consistent_hashhttp_cookienew) constructor.
 
 **Returns**:
   - An attribute object that represents the `consistent_hash` sub block.
@@ -1256,7 +1256,7 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the cookie. When `null`, the `name` field will be omitted from the resulting object.
   - `path` (`string`): Path to set for the cookie. When `null`, the `path` field will be omitted from the resulting object.
-  - `ttl` (`list[obj]`): Lifetime of the cookie. When `null`, the `ttl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.http_cookie.ttl.new](#fn-httpcookiettlnew) constructor.
+  - `ttl` (`list[obj]`): Lifetime of the cookie. When `null`, the `ttl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.http_cookie.ttl.new](#fn-http_cookiettlnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `http_cookie` sub block.
@@ -1392,9 +1392,9 @@ by a thousand to get a double. That is, if the desired factor is 1.9, the
 runtime value should be 1900. Defaults to 1900. When `null`, the `success_rate_stdev_factor` field will be omitted from the resulting object.
   - `base_ejection_time` (`list[obj]`): The base time that a host is ejected for. The real time is equal to the base
 time multiplied by the number of times the host has been ejected. Defaults to
-30000ms or 30s. When `null`, the `base_ejection_time` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.base_ejection_time.new](#fn-outlierdetectionbaseejectiontimenew) constructor.
+30000ms or 30s. When `null`, the `base_ejection_time` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.base_ejection_time.new](#fn-outlier_detectionbase_ejection_timenew) constructor.
   - `interval` (`list[obj]`): Time interval between ejection sweep analysis. This can result in both new
-ejections as well as hosts being returned to service. Defaults to 10 seconds. When `null`, the `interval` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.interval.new](#fn-outlierdetectionintervalnew) constructor.
+ejections as well as hosts being returned to service. Defaults to 10 seconds. When `null`, the `interval` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.interval.new](#fn-outlier_detectionintervalnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `outlier_detection` sub block.

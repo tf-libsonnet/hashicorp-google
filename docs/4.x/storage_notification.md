@@ -72,7 +72,7 @@ newAttrs()
 `google.storage_notification.newAttrs` constructs a new object with attributes and blocks configured for the `storage_notification`
 Terraform resource.
 
-Unlike [google.storage_notification.new](#fn-storagenotificationnew), this function will not inject the `resource`
+Unlike [google.storage_notification.new](#fn-storage_notificationnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 

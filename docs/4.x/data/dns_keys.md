@@ -64,7 +64,7 @@ newAttrs()
 `google.data.dns_keys.newAttrs` constructs a new object with attributes and blocks configured for the `dns_keys`
 Terraform data source.
 
-Unlike [google.data.dns_keys.new](#fn-dnskeysnew), this function will not inject the `data source`
+Unlike [google.data.dns_keys.new](#fn-dns_keysnew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

@@ -89,7 +89,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `template_gcs_path` (`string`): The Google Cloud Storage path to the Dataflow job template.
   - `transform_name_mapping` (`obj`): Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. When `null`, the `transform_name_mapping` field will be omitted from the resulting object.
   - `zone` (`string`): The zone in which the created job should run. If it is not provided, the provider zone is used. When `null`, the `zone` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataflow_job.timeouts.new](#fn-dataflowjobtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataflow_job.timeouts.new](#fn-dataflow_jobtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -105,7 +105,7 @@ newAttrs()
 `google.dataflow_job.newAttrs` constructs a new object with attributes and blocks configured for the `dataflow_job`
 Terraform resource.
 
-Unlike [google.dataflow_job.new](#fn-dataflowjobnew), this function will not inject the `resource`
+Unlike [google.dataflow_job.new](#fn-dataflow_jobnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -133,7 +133,7 @@ injecting into a complete block.
   - `template_gcs_path` (`string`): The Google Cloud Storage path to the Dataflow job template.
   - `transform_name_mapping` (`obj`): Only applicable when updating a pipeline. Map of transform name prefixes of the job to be replaced with the corresponding name prefixes of the new job. When `null`, the `transform_name_mapping` field will be omitted from the resulting object.
   - `zone` (`string`): The zone in which the created job should run. If it is not provided, the provider zone is used. When `null`, the `zone` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataflow_job.timeouts.new](#fn-dataflowjobtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataflow_job.timeouts.new](#fn-dataflow_jobtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dataflow_job` resource into the root Terraform configuration.

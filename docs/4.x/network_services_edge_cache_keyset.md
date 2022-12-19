@@ -73,12 +73,12 @@ You may specify no more than one Google-managed public key.
 If you specify &#39;public_keys&#39;, you must specify at least one (1) key and may specify up to three (3) keys.
 
 Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key.
-Ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset. When `null`, the `public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.public_key.new](#fn-networkservicesedgecachekeysetpublickeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.timeouts.new](#fn-networkservicesedgecachekeysettimeoutsnew) constructor.
+Ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset. When `null`, the `public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.public_key.new](#fn-network_services_edge_cache_keysetpublic_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.timeouts.new](#fn-network_services_edge_cache_keysettimeoutsnew) constructor.
   - `validation_shared_keys` (`list[obj]`): An ordered list of shared keys to use for validating signed requests.
 Shared keys are secret.  Ensure that only authorized users can add &#39;validation_shared_keys&#39; to a keyset.
 You can rotate keys by appending (pushing) a new key to the list of &#39;validation_shared_keys&#39; and removing any superseded keys.
-You must specify &#39;public_keys&#39; or &#39;validation_shared_keys&#39; (or both). The keys in &#39;public_keys&#39; are checked first. When `null`, the `validation_shared_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.validation_shared_keys.new](#fn-networkservicesedgecachekeysetvalidationsharedkeysnew) constructor.
+You must specify &#39;public_keys&#39; or &#39;validation_shared_keys&#39; (or both). The keys in &#39;public_keys&#39; are checked first. When `null`, the `validation_shared_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.validation_shared_keys.new](#fn-network_services_edge_cache_keysetvalidation_shared_keysnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,7 +94,7 @@ newAttrs()
 `google.network_services_edge_cache_keyset.newAttrs` constructs a new object with attributes and blocks configured for the `network_services_edge_cache_keyset`
 Terraform resource.
 
-Unlike [google.network_services_edge_cache_keyset.new](#fn-networkservicesedgecachekeysetnew), this function will not inject the `resource`
+Unlike [google.network_services_edge_cache_keyset.new](#fn-network_services_edge_cache_keysetnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -114,12 +114,12 @@ You may specify no more than one Google-managed public key.
 If you specify &#39;public_keys&#39;, you must specify at least one (1) key and may specify up to three (3) keys.
 
 Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key.
-Ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset. When `null`, the `public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.public_key.new](#fn-networkservicesedgecachekeysetpublickeynew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.timeouts.new](#fn-networkservicesedgecachekeysettimeoutsnew) constructor.
+Ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset. When `null`, the `public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.public_key.new](#fn-network_services_edge_cache_keysetpublic_keynew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.timeouts.new](#fn-network_services_edge_cache_keysettimeoutsnew) constructor.
   - `validation_shared_keys` (`list[obj]`): An ordered list of shared keys to use for validating signed requests.
 Shared keys are secret.  Ensure that only authorized users can add &#39;validation_shared_keys&#39; to a keyset.
 You can rotate keys by appending (pushing) a new key to the list of &#39;validation_shared_keys&#39; and removing any superseded keys.
-You must specify &#39;public_keys&#39; or &#39;validation_shared_keys&#39; (or both). The keys in &#39;public_keys&#39; are checked first. When `null`, the `validation_shared_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.validation_shared_keys.new](#fn-networkservicesedgecachekeysetvalidationsharedkeysnew) constructor.
+You must specify &#39;public_keys&#39; or &#39;validation_shared_keys&#39; (or both). The keys in &#39;public_keys&#39; are checked first. When `null`, the `validation_shared_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.validation_shared_keys.new](#fn-network_services_edge_cache_keysetvalidation_shared_keysnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_services_edge_cache_keyset` resource into the root Terraform configuration.

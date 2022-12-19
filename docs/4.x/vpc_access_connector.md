@@ -73,8 +73,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `network` (`string`): Name or self_link of the VPC network. Required if &#39;ip_cidr_range&#39; is set. When `null`, the `network` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the VPC Access connector resides. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
-  - `subnet` (`list[obj]`): The subnet in which to house the connector When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.subnet.new](#fn-vpcaccessconnectorsubnetnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.timeouts.new](#fn-vpcaccessconnectortimeoutsnew) constructor.
+  - `subnet` (`list[obj]`): The subnet in which to house the connector When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.subnet.new](#fn-vpc_access_connectorsubnetnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.timeouts.new](#fn-vpc_access_connectortimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,7 +90,7 @@ newAttrs()
 `google.vpc_access_connector.newAttrs` constructs a new object with attributes and blocks configured for the `vpc_access_connector`
 Terraform resource.
 
-Unlike [google.vpc_access_connector.new](#fn-vpcaccessconnectornew), this function will not inject the `resource`
+Unlike [google.vpc_access_connector.new](#fn-vpc_access_connectornew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -108,8 +108,8 @@ injecting into a complete block.
   - `network` (`string`): Name or self_link of the VPC network. Required if &#39;ip_cidr_range&#39; is set. When `null`, the `network` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the VPC Access connector resides. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
-  - `subnet` (`list[obj]`): The subnet in which to house the connector When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.subnet.new](#fn-vpcaccessconnectorsubnetnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.timeouts.new](#fn-vpcaccessconnectortimeoutsnew) constructor.
+  - `subnet` (`list[obj]`): The subnet in which to house the connector When `null`, the `subnet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.subnet.new](#fn-vpc_access_connectorsubnetnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vpc_access_connector.timeouts.new](#fn-vpc_access_connectortimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vpc_access_connector` resource into the root Terraform configuration.

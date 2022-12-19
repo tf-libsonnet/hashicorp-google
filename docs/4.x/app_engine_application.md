@@ -67,9 +67,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location_id` (`string`): The location to serve the app from.
   - `project` (`string`): The project ID to create the application under. When `null`, the `project` field will be omitted from the resulting object.
   - `serving_status` (`string`): The serving status of the app. When `null`, the `serving_status` field will be omitted from the resulting object.
-  - `feature_settings` (`list[obj]`): A block of optional settings to configure specific App Engine features: When `null`, the `feature_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.feature_settings.new](#fn-appengineapplicationfeaturesettingsnew) constructor.
-  - `iap` (`list[obj]`): Settings for enabling Cloud Identity Aware Proxy When `null`, the `iap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.iap.new](#fn-appengineapplicationiapnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.timeouts.new](#fn-appengineapplicationtimeoutsnew) constructor.
+  - `feature_settings` (`list[obj]`): A block of optional settings to configure specific App Engine features: When `null`, the `feature_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.feature_settings.new](#fn-app_engine_applicationfeature_settingsnew) constructor.
+  - `iap` (`list[obj]`): Settings for enabling Cloud Identity Aware Proxy When `null`, the `iap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.iap.new](#fn-app_engine_applicationiapnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.timeouts.new](#fn-app_engine_applicationtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -85,7 +85,7 @@ newAttrs()
 `google.app_engine_application.newAttrs` constructs a new object with attributes and blocks configured for the `app_engine_application`
 Terraform resource.
 
-Unlike [google.app_engine_application.new](#fn-appengineapplicationnew), this function will not inject the `resource`
+Unlike [google.app_engine_application.new](#fn-app_engine_applicationnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -98,9 +98,9 @@ injecting into a complete block.
   - `location_id` (`string`): The location to serve the app from.
   - `project` (`string`): The project ID to create the application under. When `null`, the `project` field will be omitted from the resulting object.
   - `serving_status` (`string`): The serving status of the app. When `null`, the `serving_status` field will be omitted from the resulting object.
-  - `feature_settings` (`list[obj]`): A block of optional settings to configure specific App Engine features: When `null`, the `feature_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.feature_settings.new](#fn-appengineapplicationfeaturesettingsnew) constructor.
-  - `iap` (`list[obj]`): Settings for enabling Cloud Identity Aware Proxy When `null`, the `iap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.iap.new](#fn-appengineapplicationiapnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.timeouts.new](#fn-appengineapplicationtimeoutsnew) constructor.
+  - `feature_settings` (`list[obj]`): A block of optional settings to configure specific App Engine features: When `null`, the `feature_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.feature_settings.new](#fn-app_engine_applicationfeature_settingsnew) constructor.
+  - `iap` (`list[obj]`): Settings for enabling Cloud Identity Aware Proxy When `null`, the `iap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.iap.new](#fn-app_engine_applicationiapnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.timeouts.new](#fn-app_engine_applicationtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `app_engine_application` resource into the root Terraform configuration.

@@ -69,7 +69,7 @@ character, which cannot be a dash.
 this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. When `null`, the `proxy_bind` field will be omitted from the resulting object.
   - `proxy_header` (`string`): Specifies the type of proxy header to append before sending data to
 the backend. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;PROXY_V1&#34;] When `null`, the `proxy_header` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_tcp_proxy.timeouts.new](#fn-computetargettcpproxytimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_tcp_proxy.timeouts.new](#fn-compute_target_tcp_proxytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -85,7 +85,7 @@ newAttrs()
 `google.compute_target_tcp_proxy.newAttrs` constructs a new object with attributes and blocks configured for the `compute_target_tcp_proxy`
 Terraform resource.
 
-Unlike [google.compute_target_tcp_proxy.new](#fn-computetargettcpproxynew), this function will not inject the `resource`
+Unlike [google.compute_target_tcp_proxy.new](#fn-compute_target_tcp_proxynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -107,7 +107,7 @@ character, which cannot be a dash.
 this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. When `null`, the `proxy_bind` field will be omitted from the resulting object.
   - `proxy_header` (`string`): Specifies the type of proxy header to append before sending data to
 the backend. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;PROXY_V1&#34;] When `null`, the `proxy_header` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_tcp_proxy.timeouts.new](#fn-computetargettcpproxytimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_tcp_proxy.timeouts.new](#fn-compute_target_tcp_proxytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_target_tcp_proxy` resource into the root Terraform configuration.

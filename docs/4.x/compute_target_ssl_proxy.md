@@ -78,7 +78,7 @@ SSL certificate must be specified. When `null`, the `ssl_certificates` field wil
   - `ssl_policy` (`string`): A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy
 resource will not have any SSL policy configured. When `null`, the `ssl_policy` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_ssl_proxy.timeouts.new](#fn-computetargetsslproxytimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_ssl_proxy.timeouts.new](#fn-compute_target_ssl_proxytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,7 +94,7 @@ newAttrs()
 `google.compute_target_ssl_proxy.newAttrs` constructs a new object with attributes and blocks configured for the `compute_target_ssl_proxy`
 Terraform resource.
 
-Unlike [google.compute_target_ssl_proxy.new](#fn-computetargetsslproxynew), this function will not inject the `resource`
+Unlike [google.compute_target_ssl_proxy.new](#fn-compute_target_ssl_proxynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -123,7 +123,7 @@ SSL certificate must be specified. When `null`, the `ssl_certificates` field wil
   - `ssl_policy` (`string`): A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy
 resource will not have any SSL policy configured. When `null`, the `ssl_policy` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_ssl_proxy.timeouts.new](#fn-computetargetsslproxytimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_target_ssl_proxy.timeouts.new](#fn-compute_target_ssl_proxytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_target_ssl_proxy` resource into the root Terraform configuration.

@@ -65,7 +65,7 @@ groups that are clusters. When `null`, the `is_cluster` field will be omitted fr
 &#34;projects/{project_id_or_number}/groups/{group_id}&#34;. For
 groups with no parent, parentName is the empty string, &#34;&#34;. When `null`, the `parent_name` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_group.timeouts.new](#fn-monitoringgrouptimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_group.timeouts.new](#fn-monitoring_grouptimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -81,7 +81,7 @@ newAttrs()
 `google.monitoring_group.newAttrs` constructs a new object with attributes and blocks configured for the `monitoring_group`
 Terraform resource.
 
-Unlike [google.monitoring_group.new](#fn-monitoringgroupnew), this function will not inject the `resource`
+Unlike [google.monitoring_group.new](#fn-monitoring_groupnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -100,7 +100,7 @@ groups that are clusters. When `null`, the `is_cluster` field will be omitted fr
 &#34;projects/{project_id_or_number}/groups/{group_id}&#34;. For
 groups with no parent, parentName is the empty string, &#34;&#34;. When `null`, the `parent_name` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_group.timeouts.new](#fn-monitoringgrouptimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_group.timeouts.new](#fn-monitoring_grouptimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitoring_group` resource into the root Terraform configuration.

@@ -54,7 +54,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `environment` (`string`): The resource ID of the environment.
   - `instance_id` (`string`): The Apigee instance associated with the Apigee environment,
 in the format &#39;organisations/{{org_name}}/instances/{{instance_name}}&#39;.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_instance_attachment.timeouts.new](#fn-apigeeinstanceattachmenttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_instance_attachment.timeouts.new](#fn-apigee_instance_attachmenttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -70,7 +70,7 @@ newAttrs()
 `google.apigee_instance_attachment.newAttrs` constructs a new object with attributes and blocks configured for the `apigee_instance_attachment`
 Terraform resource.
 
-Unlike [google.apigee_instance_attachment.new](#fn-apigeeinstanceattachmentnew), this function will not inject the `resource`
+Unlike [google.apigee_instance_attachment.new](#fn-apigee_instance_attachmentnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -81,7 +81,7 @@ injecting into a complete block.
   - `environment` (`string`): The resource ID of the environment.
   - `instance_id` (`string`): The Apigee instance associated with the Apigee environment,
 in the format &#39;organisations/{{org_name}}/instances/{{instance_name}}&#39;.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_instance_attachment.timeouts.new](#fn-apigeeinstanceattachmenttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_instance_attachment.timeouts.new](#fn-apigee_instance_attachmenttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `apigee_instance_attachment` resource into the root Terraform configuration.

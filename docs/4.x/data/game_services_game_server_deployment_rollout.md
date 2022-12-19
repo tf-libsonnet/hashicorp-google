@@ -62,7 +62,7 @@ newAttrs()
 `google.data.game_services_game_server_deployment_rollout.newAttrs` constructs a new object with attributes and blocks configured for the `game_services_game_server_deployment_rollout`
 Terraform data source.
 
-Unlike [google.data.game_services_game_server_deployment_rollout.new](#fn-gameservicesgameserverdeploymentrolloutnew), this function will not inject the `data source`
+Unlike [google.data.game_services_game_server_deployment_rollout.new](#fn-game_services_game_server_deployment_rolloutnew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

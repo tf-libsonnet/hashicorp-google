@@ -69,8 +69,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability. When `null`, the `multi_cluster_routing_use_any` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `single_cluster_routing` (`list[obj]`): Use a single-cluster routing policy. When `null`, the `single_cluster_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.single_cluster_routing.new](#fn-bigtableappprofilesingleclusterroutingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.timeouts.new](#fn-bigtableappprofiletimeoutsnew) constructor.
+  - `single_cluster_routing` (`list[obj]`): Use a single-cluster routing policy. When `null`, the `single_cluster_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.single_cluster_routing.new](#fn-bigtable_app_profilesingle_cluster_routingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.timeouts.new](#fn-bigtable_app_profiletimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,7 +86,7 @@ newAttrs()
 `google.bigtable_app_profile.newAttrs` constructs a new object with attributes and blocks configured for the `bigtable_app_profile`
 Terraform resource.
 
-Unlike [google.bigtable_app_profile.new](#fn-bigtableappprofilenew), this function will not inject the `resource`
+Unlike [google.bigtable_app_profile.new](#fn-bigtable_app_profilenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -103,8 +103,8 @@ injecting into a complete block.
 in the event of transient errors or delays. Clusters in a region are considered equidistant. Choosing this option sacrifices read-your-writes
 consistency to improve availability. When `null`, the `multi_cluster_routing_use_any` field will be omitted from the resulting object.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `single_cluster_routing` (`list[obj]`): Use a single-cluster routing policy. When `null`, the `single_cluster_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.single_cluster_routing.new](#fn-bigtableappprofilesingleclusterroutingnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.timeouts.new](#fn-bigtableappprofiletimeoutsnew) constructor.
+  - `single_cluster_routing` (`list[obj]`): Use a single-cluster routing policy. When `null`, the `single_cluster_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.single_cluster_routing.new](#fn-bigtable_app_profilesingle_cluster_routingnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.timeouts.new](#fn-bigtable_app_profiletimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigtable_app_profile` resource into the root Terraform configuration.

@@ -84,9 +84,9 @@ enablement check, quota, and billing.
 will be returned only when the expression evaluates to true. When set, expression field
 must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
 expression &#34;temporal_asset.deleted == true&#34; will only publish Asset deletions. Other fields of
-condition are optional. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.condition.new](#fn-cloudassetorganizationfeedconditionnew) constructor.
-  - `feed_output_config` (`list[obj]`): Output configuration for asset feed destination. When `null`, the `feed_output_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.feed_output_config.new](#fn-cloudassetorganizationfeedfeedoutputconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.timeouts.new](#fn-cloudassetorganizationfeedtimeoutsnew) constructor.
+condition are optional. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.condition.new](#fn-cloud_asset_organization_feedconditionnew) constructor.
+  - `feed_output_config` (`list[obj]`): Output configuration for asset feed destination. When `null`, the `feed_output_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.feed_output_config.new](#fn-cloud_asset_organization_feedfeed_output_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.timeouts.new](#fn-cloud_asset_organization_feedtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -102,7 +102,7 @@ newAttrs()
 `google.cloud_asset_organization_feed.newAttrs` constructs a new object with attributes and blocks configured for the `cloud_asset_organization_feed`
 Terraform resource.
 
-Unlike [google.cloud_asset_organization_feed.new](#fn-cloudassetorganizationfeednew), this function will not inject the `resource`
+Unlike [google.cloud_asset_organization_feed.new](#fn-cloud_asset_organization_feednew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -129,9 +129,9 @@ enablement check, quota, and billing.
 will be returned only when the expression evaluates to true. When set, expression field
 must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with
 expression &#34;temporal_asset.deleted == true&#34; will only publish Asset deletions. Other fields of
-condition are optional. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.condition.new](#fn-cloudassetorganizationfeedconditionnew) constructor.
-  - `feed_output_config` (`list[obj]`): Output configuration for asset feed destination. When `null`, the `feed_output_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.feed_output_config.new](#fn-cloudassetorganizationfeedfeedoutputconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.timeouts.new](#fn-cloudassetorganizationfeedtimeoutsnew) constructor.
+condition are optional. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.condition.new](#fn-cloud_asset_organization_feedconditionnew) constructor.
+  - `feed_output_config` (`list[obj]`): Output configuration for asset feed destination. When `null`, the `feed_output_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.feed_output_config.new](#fn-cloud_asset_organization_feedfeed_output_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.timeouts.new](#fn-cloud_asset_organization_feedtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloud_asset_organization_feed` resource into the root Terraform configuration.
@@ -389,7 +389,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `pubsub_destination` (`list[obj]`): Destination on Cloud Pubsub. When `null`, the `pubsub_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.feed_output_config.pubsub_destination.new](#fn-feedoutputconfigpubsubdestinationnew) constructor.
+  - `pubsub_destination` (`list[obj]`): Destination on Cloud Pubsub. When `null`, the `pubsub_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_asset_organization_feed.feed_output_config.pubsub_destination.new](#fn-feed_output_configpubsub_destinationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `feed_output_config` sub block.

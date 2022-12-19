@@ -65,7 +65,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): The name of the OauthIdpConfig. Must start with &#39;oidc.&#39;.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `tenant` (`string`): The name of the tenant where this OIDC IDP configuration resource exists
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_tenant_oauth_idp_config.timeouts.new](#fn-identityplatformtenantoauthidpconfigtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_tenant_oauth_idp_config.timeouts.new](#fn-identity_platform_tenant_oauth_idp_configtimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -81,7 +81,7 @@ newAttrs()
 `google.identity_platform_tenant_oauth_idp_config.newAttrs` constructs a new object with attributes and blocks configured for the `identity_platform_tenant_oauth_idp_config`
 Terraform resource.
 
-Unlike [google.identity_platform_tenant_oauth_idp_config.new](#fn-identityplatformtenantoauthidpconfignew), this function will not inject the `resource`
+Unlike [google.identity_platform_tenant_oauth_idp_config.new](#fn-identity_platform_tenant_oauth_idp_confignew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -97,7 +97,7 @@ injecting into a complete block.
   - `name` (`string`): The name of the OauthIdpConfig. Must start with &#39;oidc.&#39;.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `tenant` (`string`): The name of the tenant where this OIDC IDP configuration resource exists
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_tenant_oauth_idp_config.timeouts.new](#fn-identityplatformtenantoauthidpconfigtimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_tenant_oauth_idp_config.timeouts.new](#fn-identity_platform_tenant_oauth_idp_configtimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `identity_platform_tenant_oauth_idp_config` resource into the root Terraform configuration.

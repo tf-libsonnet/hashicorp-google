@@ -62,7 +62,7 @@ newAttrs()
 `google.data.app_engine_default_service_account.newAttrs` constructs a new object with attributes and blocks configured for the `app_engine_default_service_account`
 Terraform data source.
 
-Unlike [google.data.app_engine_default_service_account.new](#fn-appenginedefaultserviceaccountnew), this function will not inject the `data source`
+Unlike [google.data.app_engine_default_service_account.new](#fn-app_engine_default_service_accountnew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

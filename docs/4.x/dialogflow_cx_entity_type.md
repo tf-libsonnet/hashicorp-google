@@ -81,10 +81,10 @@ If not specified, the agent&#39;s default language is used. Many languages are s
   - `parent` (`string`): The agent to create a entity type for.
 Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;. When `null`, the `parent` field will be omitted from the resulting object.
   - `redact` (`bool`): Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging. When `null`, the `redact` field will be omitted from the resulting object.
-  - `entities` (`list[obj]`): The collection of entity entries associated with the entity type. When `null`, the `entities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_entity_type.entities.new](#fn-dialogflowcxentitytypeentitiesnew) constructor.
+  - `entities` (`list[obj]`): The collection of entity entries associated with the entity type. When `null`, the `entities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_entity_type.entities.new](#fn-dialogflow_cx_entity_typeentitiesnew) constructor.
   - `excluded_phrases` (`list[obj]`): Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
-If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive. When `null`, the `excluded_phrases` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_entity_type.excluded_phrases.new](#fn-dialogflowcxentitytypeexcludedphrasesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_entity_type.timeouts.new](#fn-dialogflowcxentitytypetimeoutsnew) constructor.
+If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive. When `null`, the `excluded_phrases` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_entity_type.excluded_phrases.new](#fn-dialogflow_cx_entity_typeexcluded_phrasesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_entity_type.timeouts.new](#fn-dialogflow_cx_entity_typetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,7 +100,7 @@ newAttrs()
 `google.dialogflow_cx_entity_type.newAttrs` constructs a new object with attributes and blocks configured for the `dialogflow_cx_entity_type`
 Terraform resource.
 
-Unlike [google.dialogflow_cx_entity_type.new](#fn-dialogflowcxentitytypenew), this function will not inject the `resource`
+Unlike [google.dialogflow_cx_entity_type.new](#fn-dialogflow_cx_entity_typenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -125,10 +125,10 @@ If not specified, the agent&#39;s default language is used. Many languages are s
   - `parent` (`string`): The agent to create a entity type for.
 Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;. When `null`, the `parent` field will be omitted from the resulting object.
   - `redact` (`bool`): Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging. When `null`, the `redact` field will be omitted from the resulting object.
-  - `entities` (`list[obj]`): The collection of entity entries associated with the entity type. When `null`, the `entities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_entity_type.entities.new](#fn-dialogflowcxentitytypeentitiesnew) constructor.
+  - `entities` (`list[obj]`): The collection of entity entries associated with the entity type. When `null`, the `entities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_entity_type.entities.new](#fn-dialogflow_cx_entity_typeentitiesnew) constructor.
   - `excluded_phrases` (`list[obj]`): Collection of exceptional words and phrases that shouldn&#39;t be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion.
-If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive. When `null`, the `excluded_phrases` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_entity_type.excluded_phrases.new](#fn-dialogflowcxentitytypeexcludedphrasesnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_entity_type.timeouts.new](#fn-dialogflowcxentitytypetimeoutsnew) constructor.
+If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive. When `null`, the `excluded_phrases` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_entity_type.excluded_phrases.new](#fn-dialogflow_cx_entity_typeexcluded_phrasesnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_entity_type.timeouts.new](#fn-dialogflow_cx_entity_typetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dialogflow_cx_entity_type` resource into the root Terraform configuration.

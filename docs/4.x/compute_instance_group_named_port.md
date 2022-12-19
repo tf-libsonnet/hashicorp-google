@@ -60,7 +60,7 @@ long, and comply with RFC1035.
   - `port` (`number`): The port number, which can be a value between 1 and 65535.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `zone` (`string`): The zone of the instance group. When `null`, the `zone` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_named_port.timeouts.new](#fn-computeinstancegroupnamedporttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_named_port.timeouts.new](#fn-compute_instance_group_named_porttimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -76,7 +76,7 @@ newAttrs()
 `google.compute_instance_group_named_port.newAttrs` constructs a new object with attributes and blocks configured for the `compute_instance_group_named_port`
 Terraform resource.
 
-Unlike [google.compute_instance_group_named_port.new](#fn-computeinstancegroupnamedportnew), this function will not inject the `resource`
+Unlike [google.compute_instance_group_named_port.new](#fn-compute_instance_group_named_portnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -90,7 +90,7 @@ long, and comply with RFC1035.
   - `port` (`number`): The port number, which can be a value between 1 and 65535.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `zone` (`string`): The zone of the instance group. When `null`, the `zone` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_named_port.timeouts.new](#fn-computeinstancegroupnamedporttimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_named_port.timeouts.new](#fn-compute_instance_group_named_porttimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_instance_group_named_port` resource into the root Terraform configuration.

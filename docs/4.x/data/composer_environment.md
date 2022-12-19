@@ -66,7 +66,7 @@ newAttrs()
 `google.data.composer_environment.newAttrs` constructs a new object with attributes and blocks configured for the `composer_environment`
 Terraform data source.
 
-Unlike [google.data.composer_environment.new](#fn-composerenvironmentnew), this function will not inject the `data source`
+Unlike [google.data.composer_environment.new](#fn-composer_environmentnew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

@@ -67,8 +67,8 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `redundancy_type` (`string`): Indicates the redundancy type of this external VPN gateway Possible values: [&#34;FOUR_IPS_REDUNDANCY&#34;, &#34;SINGLE_IP_INTERNALLY_REDUNDANT&#34;, &#34;TWO_IPS_REDUNDANCY&#34;] When `null`, the `redundancy_type` field will be omitted from the resulting object.
-  - `interface` (`list[obj]`): A list of interfaces on this external VPN gateway. When `null`, the `interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.interface.new](#fn-computeexternalvpngatewayinterfacenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.timeouts.new](#fn-computeexternalvpngatewaytimeoutsnew) constructor.
+  - `interface` (`list[obj]`): A list of interfaces on this external VPN gateway. When `null`, the `interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.interface.new](#fn-compute_external_vpn_gatewayinterfacenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.timeouts.new](#fn-compute_external_vpn_gatewaytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,7 +84,7 @@ newAttrs()
 `google.compute_external_vpn_gateway.newAttrs` constructs a new object with attributes and blocks configured for the `compute_external_vpn_gateway`
 Terraform resource.
 
-Unlike [google.compute_external_vpn_gateway.new](#fn-computeexternalvpngatewaynew), this function will not inject the `resource`
+Unlike [google.compute_external_vpn_gateway.new](#fn-compute_external_vpn_gatewaynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -102,8 +102,8 @@ characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `redundancy_type` (`string`): Indicates the redundancy type of this external VPN gateway Possible values: [&#34;FOUR_IPS_REDUNDANCY&#34;, &#34;SINGLE_IP_INTERNALLY_REDUNDANT&#34;, &#34;TWO_IPS_REDUNDANCY&#34;] When `null`, the `redundancy_type` field will be omitted from the resulting object.
-  - `interface` (`list[obj]`): A list of interfaces on this external VPN gateway. When `null`, the `interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.interface.new](#fn-computeexternalvpngatewayinterfacenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.timeouts.new](#fn-computeexternalvpngatewaytimeoutsnew) constructor.
+  - `interface` (`list[obj]`): A list of interfaces on this external VPN gateway. When `null`, the `interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.interface.new](#fn-compute_external_vpn_gatewayinterfacenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.timeouts.new](#fn-compute_external_vpn_gatewaytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_external_vpn_gateway` resource into the root Terraform configuration.

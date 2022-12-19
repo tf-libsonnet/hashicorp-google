@@ -64,7 +64,7 @@ newAttrs()
 `google.data.compute_node_types.newAttrs` constructs a new object with attributes and blocks configured for the `compute_node_types`
 Terraform data source.
 
-Unlike [google.data.compute_node_types.new](#fn-computenodetypesnew), this function will not inject the `data source`
+Unlike [google.data.compute_node_types.new](#fn-compute_node_typesnew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

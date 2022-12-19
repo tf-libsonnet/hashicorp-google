@@ -67,8 +67,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `folder` (`string`): The folder to be exported to the sink. Note that either [FOLDER_ID] or &#34;folders/[FOLDER_ID]&#34; is accepted.
   - `include_children` (`bool`): Whether or not to include children folders in the sink export. If true, logs associated with child projects are also exported; otherwise only logs relating to the provided folder are included. When `null`, the `include_children` field will be omitted from the resulting object.
   - `name` (`string`): The name of the logging sink.
-  - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_folder_sink.bigquery_options.new](#fn-loggingfoldersinkbigqueryoptionsnew) constructor.
-  - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_folder_sink.exclusions.new](#fn-loggingfoldersinkexclusionsnew) constructor.
+  - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_folder_sink.bigquery_options.new](#fn-logging_folder_sinkbigquery_optionsnew) constructor.
+  - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_folder_sink.exclusions.new](#fn-logging_folder_sinkexclusionsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -84,7 +84,7 @@ newAttrs()
 `google.logging_folder_sink.newAttrs` constructs a new object with attributes and blocks configured for the `logging_folder_sink`
 Terraform resource.
 
-Unlike [google.logging_folder_sink.new](#fn-loggingfoldersinknew), this function will not inject the `resource`
+Unlike [google.logging_folder_sink.new](#fn-logging_folder_sinknew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -99,8 +99,8 @@ injecting into a complete block.
   - `folder` (`string`): The folder to be exported to the sink. Note that either [FOLDER_ID] or &#34;folders/[FOLDER_ID]&#34; is accepted.
   - `include_children` (`bool`): Whether or not to include children folders in the sink export. If true, logs associated with child projects are also exported; otherwise only logs relating to the provided folder are included. When `null`, the `include_children` field will be omitted from the resulting object.
   - `name` (`string`): The name of the logging sink.
-  - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_folder_sink.bigquery_options.new](#fn-loggingfoldersinkbigqueryoptionsnew) constructor.
-  - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_folder_sink.exclusions.new](#fn-loggingfoldersinkexclusionsnew) constructor.
+  - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_folder_sink.bigquery_options.new](#fn-logging_folder_sinkbigquery_optionsnew) constructor.
+  - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_folder_sink.exclusions.new](#fn-logging_folder_sinkexclusionsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logging_folder_sink` resource into the root Terraform configuration.

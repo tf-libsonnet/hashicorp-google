@@ -141,10 +141,10 @@ range associated with the private service access connection, or &#34;auto&#34;. 
   - `transit_encryption_mode` (`string`): The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
 
 - SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication Default value: &#34;DISABLED&#34; Possible values: [&#34;SERVER_AUTHENTICATION&#34;, &#34;DISABLED&#34;] When `null`, the `transit_encryption_mode` field will be omitted from the resulting object.
-  - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.new](#fn-redisinstancemaintenancepolicynew) constructor.
-  - `maintenance_schedule` (`list[obj]`): Upcoming maintenance schedule. When `null`, the `maintenance_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_schedule.new](#fn-redisinstancemaintenanceschedulenew) constructor.
-  - `persistence_config` (`list[obj]`): Persistence configuration for an instance. When `null`, the `persistence_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.persistence_config.new](#fn-redisinstancepersistenceconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.timeouts.new](#fn-redisinstancetimeoutsnew) constructor.
+  - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.new](#fn-redis_instancemaintenance_policynew) constructor.
+  - `maintenance_schedule` (`list[obj]`): Upcoming maintenance schedule. When `null`, the `maintenance_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_schedule.new](#fn-redis_instancemaintenance_schedulenew) constructor.
+  - `persistence_config` (`list[obj]`): Persistence configuration for an instance. When `null`, the `persistence_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.persistence_config.new](#fn-redis_instancepersistence_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.timeouts.new](#fn-redis_instancetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -160,7 +160,7 @@ newAttrs()
 `google.redis_instance.newAttrs` constructs a new object with attributes and blocks configured for the `redis_instance`
 Terraform resource.
 
-Unlike [google.redis_instance.new](#fn-redisinstancenew), this function will not inject the `resource`
+Unlike [google.redis_instance.new](#fn-redis_instancenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -224,10 +224,10 @@ range associated with the private service access connection, or &#34;auto&#34;. 
   - `transit_encryption_mode` (`string`): The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
 
 - SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication Default value: &#34;DISABLED&#34; Possible values: [&#34;SERVER_AUTHENTICATION&#34;, &#34;DISABLED&#34;] When `null`, the `transit_encryption_mode` field will be omitted from the resulting object.
-  - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.new](#fn-redisinstancemaintenancepolicynew) constructor.
-  - `maintenance_schedule` (`list[obj]`): Upcoming maintenance schedule. When `null`, the `maintenance_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_schedule.new](#fn-redisinstancemaintenanceschedulenew) constructor.
-  - `persistence_config` (`list[obj]`): Persistence configuration for an instance. When `null`, the `persistence_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.persistence_config.new](#fn-redisinstancepersistenceconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.timeouts.new](#fn-redisinstancetimeoutsnew) constructor.
+  - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.new](#fn-redis_instancemaintenance_policynew) constructor.
+  - `maintenance_schedule` (`list[obj]`): Upcoming maintenance schedule. When `null`, the `maintenance_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_schedule.new](#fn-redis_instancemaintenance_schedulenew) constructor.
+  - `persistence_config` (`list[obj]`): Persistence configuration for an instance. When `null`, the `persistence_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.persistence_config.new](#fn-redis_instancepersistence_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.timeouts.new](#fn-redis_instancetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `redis_instance` resource into the root Terraform configuration.
@@ -722,7 +722,7 @@ Create/Update methods return INVALID_ARGUMENT if the
 length is greater than 512. When `null`, the `description` field will be omitted from the resulting object.
   - `weekly_maintenance_window` (`list[obj]`): Optional. Maintenance window that is applied to resources covered by this policy.
 Minimum 1. For the current version, the maximum number
-of weekly_window is expected to be one. When `null`, the `weekly_maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.weekly_maintenance_window.new](#fn-maintenancepolicyweeklymaintenancewindownew) constructor.
+of weekly_window is expected to be one. When `null`, the `weekly_maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.weekly_maintenance_window.new](#fn-maintenance_policyweekly_maintenance_windownew) constructor.
 
 **Returns**:
   - An attribute object that represents the `maintenance_policy` sub block.
@@ -755,7 +755,7 @@ Terraform sub block.
 - FRIDAY: Friday
 - SATURDAY: Saturday
 - SUNDAY: Sunday Possible values: [&#34;DAY_OF_WEEK_UNSPECIFIED&#34;, &#34;MONDAY&#34;, &#34;TUESDAY&#34;, &#34;WEDNESDAY&#34;, &#34;THURSDAY&#34;, &#34;FRIDAY&#34;, &#34;SATURDAY&#34;, &#34;SUNDAY&#34;]
-  - `start_time` (`list[obj]`): Required. Start time of the window in UTC time. When `null`, the `start_time` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.weekly_maintenance_window.start_time.new](#fn-weeklymaintenancewindowstarttimenew) constructor.
+  - `start_time` (`list[obj]`): Required. Start time of the window in UTC time. When `null`, the `start_time` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.weekly_maintenance_window.start_time.new](#fn-weekly_maintenance_windowstart_timenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `weekly_maintenance_window` sub block.

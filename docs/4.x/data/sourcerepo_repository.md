@@ -65,7 +65,7 @@ newAttrs()
 `google.data.sourcerepo_repository.newAttrs` constructs a new object with attributes and blocks configured for the `sourcerepo_repository`
 Terraform data source.
 
-Unlike [google.data.sourcerepo_repository.new](#fn-sourcereporepositorynew), this function will not inject the `data source`
+Unlike [google.data.sourcerepo_repository.new](#fn-sourcerepo_repositorynew), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 

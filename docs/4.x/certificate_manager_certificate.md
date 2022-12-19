@@ -78,11 +78,11 @@ served from non-core Google data centers.
 Currently allowed only for managed certificates. When `null`, the `scope` field will be omitted from the resulting object.
   - `managed` (`list[obj]`): Configuration and state of a Managed Certificate.
 Certificate Manager provisions and renews Managed Certificates
-automatically, for as long as it&#39;s authorized to do so. When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.managed.new](#fn-certificatemanagercertificatemanagednew) constructor.
+automatically, for as long as it&#39;s authorized to do so. When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.managed.new](#fn-certificate_manager_certificatemanagednew) constructor.
   - `self_managed` (`list[obj]`): Certificate data for a SelfManaged Certificate.
 SelfManaged Certificates are uploaded by the user. Updating such
-certificates before they expire remains the user&#39;s responsibility. When `null`, the `self_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.self_managed.new](#fn-certificatemanagercertificateselfmanagednew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.timeouts.new](#fn-certificatemanagercertificatetimeoutsnew) constructor.
+certificates before they expire remains the user&#39;s responsibility. When `null`, the `self_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.self_managed.new](#fn-certificate_manager_certificateself_managednew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.timeouts.new](#fn-certificate_manager_certificatetimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -98,7 +98,7 @@ newAttrs()
 `google.certificate_manager_certificate.newAttrs` constructs a new object with attributes and blocks configured for the `certificate_manager_certificate`
 Terraform resource.
 
-Unlike [google.certificate_manager_certificate.new](#fn-certificatemanagercertificatenew), this function will not inject the `resource`
+Unlike [google.certificate_manager_certificate.new](#fn-certificate_manager_certificatenew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -122,11 +122,11 @@ served from non-core Google data centers.
 Currently allowed only for managed certificates. When `null`, the `scope` field will be omitted from the resulting object.
   - `managed` (`list[obj]`): Configuration and state of a Managed Certificate.
 Certificate Manager provisions and renews Managed Certificates
-automatically, for as long as it&#39;s authorized to do so. When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.managed.new](#fn-certificatemanagercertificatemanagednew) constructor.
+automatically, for as long as it&#39;s authorized to do so. When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.managed.new](#fn-certificate_manager_certificatemanagednew) constructor.
   - `self_managed` (`list[obj]`): Certificate data for a SelfManaged Certificate.
 SelfManaged Certificates are uploaded by the user. Updating such
-certificates before they expire remains the user&#39;s responsibility. When `null`, the `self_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.self_managed.new](#fn-certificatemanagercertificateselfmanagednew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.timeouts.new](#fn-certificatemanagercertificatetimeoutsnew) constructor.
+certificates before they expire remains the user&#39;s responsibility. When `null`, the `self_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.self_managed.new](#fn-certificate_manager_certificateself_managednew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.timeouts.new](#fn-certificate_manager_certificatetimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `certificate_manager_certificate` resource into the root Terraform configuration.

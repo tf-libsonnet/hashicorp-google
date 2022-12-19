@@ -102,7 +102,7 @@ associated. When `null`, the `target_vpn_gateway` field will be omitted from the
 This must be used if a High Availability VPN gateway resource is created.
 This field must reference a &#39;google_compute_ha_vpn_gateway&#39; resource. When `null`, the `vpn_gateway` field will be omitted from the resulting object.
   - `vpn_gateway_interface` (`number`): The interface ID of the VPN gateway with which this VPN tunnel is associated. When `null`, the `vpn_gateway_interface` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_vpn_tunnel.timeouts.new](#fn-computevpntunneltimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_vpn_tunnel.timeouts.new](#fn-compute_vpn_tunneltimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -118,7 +118,7 @@ newAttrs()
 `google.compute_vpn_tunnel.newAttrs` constructs a new object with attributes and blocks configured for the `compute_vpn_tunnel`
 Terraform resource.
 
-Unlike [google.compute_vpn_tunnel.new](#fn-computevpntunnelnew), this function will not inject the `resource`
+Unlike [google.compute_vpn_tunnel.new](#fn-compute_vpn_tunnelnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -163,7 +163,7 @@ associated. When `null`, the `target_vpn_gateway` field will be omitted from the
 This must be used if a High Availability VPN gateway resource is created.
 This field must reference a &#39;google_compute_ha_vpn_gateway&#39; resource. When `null`, the `vpn_gateway` field will be omitted from the resulting object.
   - `vpn_gateway_interface` (`number`): The interface ID of the VPN gateway with which this VPN tunnel is associated. When `null`, the `vpn_gateway_interface` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_vpn_tunnel.timeouts.new](#fn-computevpntunneltimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_vpn_tunnel.timeouts.new](#fn-compute_vpn_tunneltimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_vpn_tunnel` resource into the root Terraform configuration.

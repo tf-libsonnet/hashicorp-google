@@ -64,8 +64,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 displayed in chooser dialogs. When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): The resource name.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `attestation_authority_note` (`list[obj]`): A Container Analysis ATTESTATION_AUTHORITY Note, created by the user. When `null`, the `attestation_authority_note` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.attestation_authority_note.new](#fn-binaryauthorizationattestorattestationauthoritynotenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.timeouts.new](#fn-binaryauthorizationattestortimeoutsnew) constructor.
+  - `attestation_authority_note` (`list[obj]`): A Container Analysis ATTESTATION_AUTHORITY Note, created by the user. When `null`, the `attestation_authority_note` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.attestation_authority_note.new](#fn-binary_authorization_attestorattestation_authority_notenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.timeouts.new](#fn-binary_authorization_attestortimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -81,7 +81,7 @@ newAttrs()
 `google.binary_authorization_attestor.newAttrs` constructs a new object with attributes and blocks configured for the `binary_authorization_attestor`
 Terraform resource.
 
-Unlike [google.binary_authorization_attestor.new](#fn-binaryauthorizationattestornew), this function will not inject the `resource`
+Unlike [google.binary_authorization_attestor.new](#fn-binary_authorization_attestornew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -93,8 +93,8 @@ injecting into a complete block.
 displayed in chooser dialogs. When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): The resource name.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
-  - `attestation_authority_note` (`list[obj]`): A Container Analysis ATTESTATION_AUTHORITY Note, created by the user. When `null`, the `attestation_authority_note` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.attestation_authority_note.new](#fn-binaryauthorizationattestorattestationauthoritynotenew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.timeouts.new](#fn-binaryauthorizationattestortimeoutsnew) constructor.
+  - `attestation_authority_note` (`list[obj]`): A Container Analysis ATTESTATION_AUTHORITY Note, created by the user. When `null`, the `attestation_authority_note` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.attestation_authority_note.new](#fn-binary_authorization_attestorattestation_authority_notenew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.timeouts.new](#fn-binary_authorization_attestortimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `binary_authorization_attestor` resource into the root Terraform configuration.
@@ -251,7 +251,7 @@ If this field is non-empty, one of the specified public keys must
 verify that an attestation was signed by this attestor for the
 image specified in the admission request.
 If this field is empty, this attestor always returns that no valid
-attestations exist. When `null`, the `public_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.attestation_authority_note.public_keys.new](#fn-attestationauthoritynotepublickeysnew) constructor.
+attestations exist. When `null`, the `public_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.attestation_authority_note.public_keys.new](#fn-attestation_authority_notepublic_keysnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `attestation_authority_note` sub block.
@@ -289,7 +289,7 @@ be overwritten by the API-calculated ID. When `null`, the `ascii_armored_pgp_pub
 NOTE: id may be explicitly provided by the caller when using this
 type of public key, but it MUST be a valid RFC3986 URI. If id is left
 blank, a default one will be computed based on the digest of the DER
-encoding of the public key. When `null`, the `pkix_public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.attestation_authority_note.public_keys.pkix_public_key.new](#fn-publickeyspkixpublickeynew) constructor.
+encoding of the public key. When `null`, the `pkix_public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.binary_authorization_attestor.attestation_authority_note.public_keys.pkix_public_key.new](#fn-public_keyspkix_public_keynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `public_keys` sub block.

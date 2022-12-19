@@ -63,8 +63,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `name` (`string`): Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, &#34;projects/123/policies/compute.disableSerialPortAccess&#34;. Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
   - `parent` (`string`): The parent of the resource.
-  - `spec` (`list[obj]`): Basic information about the Organization Policy. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.org_policy_policy.spec.new](#fn-orgpolicypolicyspecnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.org_policy_policy.timeouts.new](#fn-orgpolicypolicytimeoutsnew) constructor.
+  - `spec` (`list[obj]`): Basic information about the Organization Policy. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.org_policy_policy.spec.new](#fn-org_policy_policyspecnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.org_policy_policy.timeouts.new](#fn-org_policy_policytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,7 +80,7 @@ newAttrs()
 `google.org_policy_policy.newAttrs` constructs a new object with attributes and blocks configured for the `org_policy_policy`
 Terraform resource.
 
-Unlike [google.org_policy_policy.new](#fn-orgpolicypolicynew), this function will not inject the `resource`
+Unlike [google.org_policy_policy.new](#fn-org_policy_policynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -90,8 +90,8 @@ injecting into a complete block.
 **Args**:
   - `name` (`string`): Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, &#34;projects/123/policies/compute.disableSerialPortAccess&#34;. Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
   - `parent` (`string`): The parent of the resource.
-  - `spec` (`list[obj]`): Basic information about the Organization Policy. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.org_policy_policy.spec.new](#fn-orgpolicypolicyspecnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.org_policy_policy.timeouts.new](#fn-orgpolicypolicytimeoutsnew) constructor.
+  - `spec` (`list[obj]`): Basic information about the Organization Policy. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.org_policy_policy.spec.new](#fn-org_policy_policyspecnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.org_policy_policy.timeouts.new](#fn-org_policy_policytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `org_policy_policy` resource into the root Terraform configuration.

@@ -85,7 +85,7 @@ The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec. When `null`, the `timeout_sec` field will be omitted from the resulting object.
   - `unhealthy_threshold` (`number`): A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2. When `null`, the `unhealthy_threshold` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_http_health_check.timeouts.new](#fn-computehttphealthchecktimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_http_health_check.timeouts.new](#fn-compute_http_health_checktimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,7 +101,7 @@ newAttrs()
 `google.compute_http_health_check.newAttrs` constructs a new object with attributes and blocks configured for the `compute_http_health_check`
 Terraform resource.
 
-Unlike [google.compute_http_health_check.new](#fn-computehttphealthchecknew), this function will not inject the `resource`
+Unlike [google.compute_http_health_check.new](#fn-compute_http_health_checknew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -135,7 +135,7 @@ The default value is 5 seconds.  It is invalid for timeoutSec to have
 greater value than checkIntervalSec. When `null`, the `timeout_sec` field will be omitted from the resulting object.
   - `unhealthy_threshold` (`number`): A so-far healthy instance will be marked unhealthy after this many
 consecutive failures. The default value is 2. When `null`, the `unhealthy_threshold` field will be omitted from the resulting object.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_http_health_check.timeouts.new](#fn-computehttphealthchecktimeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_http_health_check.timeouts.new](#fn-compute_http_health_checktimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_http_health_check` resource into the root Terraform configuration.

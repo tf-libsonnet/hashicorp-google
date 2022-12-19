@@ -87,11 +87,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 be unique globally and match pattern &#39;projects/*/locations/*/functions/*&#39;.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `build_config` (`list[obj]`): Describes the Build step of the function that builds a container
-from the given source. When `null`, the `build_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.build_config.new](#fn-cloudfunctions2functionbuildconfignew) constructor.
+from the given source. When `null`, the `build_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.build_config.new](#fn-cloudfunctions2_functionbuild_confignew) constructor.
   - `event_trigger` (`list[obj]`): An Eventarc trigger managed by Google Cloud Functions that fires events in
-response to a condition in another service. When `null`, the `event_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.event_trigger.new](#fn-cloudfunctions2functioneventtriggernew) constructor.
-  - `service_config` (`list[obj]`): Describes the Service being deployed. When `null`, the `service_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.service_config.new](#fn-cloudfunctions2functionserviceconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.timeouts.new](#fn-cloudfunctions2functiontimeoutsnew) constructor.
+response to a condition in another service. When `null`, the `event_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.event_trigger.new](#fn-cloudfunctions2_functionevent_triggernew) constructor.
+  - `service_config` (`list[obj]`): Describes the Service being deployed. When `null`, the `service_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.service_config.new](#fn-cloudfunctions2_functionservice_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.timeouts.new](#fn-cloudfunctions2_functiontimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -107,7 +107,7 @@ newAttrs()
 `google.cloudfunctions2_function.newAttrs` constructs a new object with attributes and blocks configured for the `cloudfunctions2_function`
 Terraform resource.
 
-Unlike [google.cloudfunctions2_function.new](#fn-cloudfunctions2functionnew), this function will not inject the `resource`
+Unlike [google.cloudfunctions2_function.new](#fn-cloudfunctions2_functionnew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -122,11 +122,11 @@ injecting into a complete block.
 be unique globally and match pattern &#39;projects/*/locations/*/functions/*&#39;.
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `build_config` (`list[obj]`): Describes the Build step of the function that builds a container
-from the given source. When `null`, the `build_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.build_config.new](#fn-cloudfunctions2functionbuildconfignew) constructor.
+from the given source. When `null`, the `build_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.build_config.new](#fn-cloudfunctions2_functionbuild_confignew) constructor.
   - `event_trigger` (`list[obj]`): An Eventarc trigger managed by Google Cloud Functions that fires events in
-response to a condition in another service. When `null`, the `event_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.event_trigger.new](#fn-cloudfunctions2functioneventtriggernew) constructor.
-  - `service_config` (`list[obj]`): Describes the Service being deployed. When `null`, the `service_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.service_config.new](#fn-cloudfunctions2functionserviceconfignew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.timeouts.new](#fn-cloudfunctions2functiontimeoutsnew) constructor.
+response to a condition in another service. When `null`, the `event_trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.event_trigger.new](#fn-cloudfunctions2_functionevent_triggernew) constructor.
+  - `service_config` (`list[obj]`): Describes the Service being deployed. When `null`, the `service_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.service_config.new](#fn-cloudfunctions2_functionservice_confignew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.timeouts.new](#fn-cloudfunctions2_functiontimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloudfunctions2_function` resource into the root Terraform configuration.
@@ -386,7 +386,7 @@ function exported by the module specified in source_location. When `null`, the `
   - `runtime` (`string`): The runtime in which to run the function. Required when deploying a new
 function, optional when updating an existing function. When `null`, the `runtime` field will be omitted from the resulting object.
   - `worker_pool` (`string`): Name of the Cloud Build Custom Worker Pool that should be used to build the function. When `null`, the `worker_pool` field will be omitted from the resulting object.
-  - `source` (`list[obj]`): The location of the function source code. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.build_config.source.new](#fn-buildconfigsourcenew) constructor.
+  - `source` (`list[obj]`): The location of the function source code. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.build_config.source.new](#fn-build_configsourcenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `build_config` sub block.
@@ -409,8 +409,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `repo_source` (`list[obj]`): If provided, get the source from this location in a Cloud Source Repository. When `null`, the `repo_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.build_config.source.repo_source.new](#fn-sourcereposourcenew) constructor.
-  - `storage_source` (`list[obj]`): If provided, get the source from this location in Google Cloud Storage. When `null`, the `storage_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.build_config.source.storage_source.new](#fn-sourcestoragesourcenew) constructor.
+  - `repo_source` (`list[obj]`): If provided, get the source from this location in a Cloud Source Repository. When `null`, the `repo_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.build_config.source.repo_source.new](#fn-sourcerepo_sourcenew) constructor.
+  - `storage_source` (`list[obj]`): If provided, get the source from this location in Google Cloud Storage. When `null`, the `storage_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.build_config.source.storage_source.new](#fn-sourcestorage_sourcenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `source` sub block.
@@ -500,7 +500,7 @@ Retried execution is charged as any other execution. Possible values: [&#34;RETR
 events originating in this region. It can be the same
 region as the function, a different region or multi-region, or the global
 region. If not provided, defaults to the same region as the function. When `null`, the `trigger_region` field will be omitted from the resulting object.
-  - `event_filters` (`list[obj]`): Criteria used to filter events. When `null`, the `event_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.event_trigger.event_filters.new](#fn-eventtriggereventfiltersnew) constructor.
+  - `event_filters` (`list[obj]`): Criteria used to filter events. When `null`, the `event_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.event_trigger.event_filters.new](#fn-event_triggerevent_filtersnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `event_trigger` sub block.
@@ -572,8 +572,8 @@ can be terminated if the function is not completed at the end of the
 timeout period. Defaults to 60 seconds. When `null`, the `timeout_seconds` field will be omitted from the resulting object.
   - `vpc_connector` (`string`): The Serverless VPC Access connector that this cloud function can connect to. When `null`, the `vpc_connector` field will be omitted from the resulting object.
   - `vpc_connector_egress_settings` (`string`): Available egress settings. Possible values: [&#34;VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED&#34;, &#34;PRIVATE_RANGES_ONLY&#34;, &#34;ALL_TRAFFIC&#34;] When `null`, the `vpc_connector_egress_settings` field will be omitted from the resulting object.
-  - `secret_environment_variables` (`list[obj]`): Secret environment variables configuration. When `null`, the `secret_environment_variables` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.service_config.secret_environment_variables.new](#fn-serviceconfigsecretenvironmentvariablesnew) constructor.
-  - `secret_volumes` (`list[obj]`): Secret volumes configuration. When `null`, the `secret_volumes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.service_config.secret_volumes.new](#fn-serviceconfigsecretvolumesnew) constructor.
+  - `secret_environment_variables` (`list[obj]`): Secret environment variables configuration. When `null`, the `secret_environment_variables` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.service_config.secret_environment_variables.new](#fn-service_configsecret_environment_variablesnew) constructor.
+  - `secret_volumes` (`list[obj]`): Secret volumes configuration. When `null`, the `secret_volumes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.service_config.secret_volumes.new](#fn-service_configsecret_volumesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `service_config` sub block.
@@ -625,7 +625,7 @@ Terraform sub block.
   - `mount_path` (`string`): The path within the container to mount the secret volume. For example, setting the mountPath as /etc/secrets would mount the secret value files under the /etc/secrets directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount path: /etc/secrets
   - `project_id` (`string`): Project identifier (preferrably project number but can also be the project ID) of the project that contains the secret. If not set, it will be populated with the function&#39;s project assuming that the secret exists in the same project as of the function.
   - `secret` (`string`): Name of the secret in secret manager (not the full resource name).
-  - `versions` (`list[obj]`): List of secret versions to mount for this secret. If empty, the latest version of the secret will be made available in a file named after the secret under the mount point.&#39; When `null`, the `versions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.service_config.secret_volumes.versions.new](#fn-secretvolumesversionsnew) constructor.
+  - `versions` (`list[obj]`): List of secret versions to mount for this secret. If empty, the latest version of the secret will be made available in a file named after the secret under the mount point.&#39; When `null`, the `versions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudfunctions2_function.service_config.secret_volumes.versions.new](#fn-secret_volumesversionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `secret_volumes` sub block.

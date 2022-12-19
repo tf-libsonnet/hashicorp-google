@@ -75,9 +75,9 @@ Defaults to no logging if not set. When `null`, the `enable_logging` field will 
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `alternative_name_server_config` (`list[obj]`): Sets an alternative name server for the associated networks.
 When specified, all DNS queries are forwarded to a name server that you choose.
-Names such as .internal are not available when an alternative name server is specified. When `null`, the `alternative_name_server_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.alternative_name_server_config.new](#fn-dnspolicyalternativenameserverconfignew) constructor.
-  - `networks` (`list[obj]`): List of network names specifying networks to which this policy is applied. When `null`, the `networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.networks.new](#fn-dnspolicynetworksnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.timeouts.new](#fn-dnspolicytimeoutsnew) constructor.
+Names such as .internal are not available when an alternative name server is specified. When `null`, the `alternative_name_server_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.alternative_name_server_config.new](#fn-dns_policyalternative_name_server_confignew) constructor.
+  - `networks` (`list[obj]`): List of network names specifying networks to which this policy is applied. When `null`, the `networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.networks.new](#fn-dns_policynetworksnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.timeouts.new](#fn-dns_policytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,7 +93,7 @@ newAttrs()
 `google.dns_policy.newAttrs` constructs a new object with attributes and blocks configured for the `dns_policy`
 Terraform resource.
 
-Unlike [google.dns_policy.new](#fn-dnspolicynew), this function will not inject the `resource`
+Unlike [google.dns_policy.new](#fn-dns_policynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -112,9 +112,9 @@ Defaults to no logging if not set. When `null`, the `enable_logging` field will 
   - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `alternative_name_server_config` (`list[obj]`): Sets an alternative name server for the associated networks.
 When specified, all DNS queries are forwarded to a name server that you choose.
-Names such as .internal are not available when an alternative name server is specified. When `null`, the `alternative_name_server_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.alternative_name_server_config.new](#fn-dnspolicyalternativenameserverconfignew) constructor.
-  - `networks` (`list[obj]`): List of network names specifying networks to which this policy is applied. When `null`, the `networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.networks.new](#fn-dnspolicynetworksnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.timeouts.new](#fn-dnspolicytimeoutsnew) constructor.
+Names such as .internal are not available when an alternative name server is specified. When `null`, the `alternative_name_server_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.alternative_name_server_config.new](#fn-dns_policyalternative_name_server_confignew) constructor.
+  - `networks` (`list[obj]`): List of network names specifying networks to which this policy is applied. When `null`, the `networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.networks.new](#fn-dns_policynetworksnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.timeouts.new](#fn-dns_policytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dns_policy` resource into the root Terraform configuration.
@@ -329,7 +329,7 @@ Terraform sub block.
 **Args**:
   - `target_name_servers` (`list[obj]`): Sets an alternative name server for the associated networks. When specified,
 all DNS queries are forwarded to a name server that you choose. Names such as .internal
-are not available when an alternative name server is specified. When `null`, the `target_name_servers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.alternative_name_server_config.target_name_servers.new](#fn-alternativenameserverconfigtargetnameserversnew) constructor.
+are not available when an alternative name server is specified. When `null`, the `target_name_servers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_policy.alternative_name_server_config.target_name_servers.new](#fn-alternative_name_server_configtarget_name_serversnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `alternative_name_server_config` sub block.

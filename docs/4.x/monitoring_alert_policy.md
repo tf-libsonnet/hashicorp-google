@@ -109,17 +109,17 @@ objects.The field can contain up to 64 entries. Each key and value is limited
 to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys
 must begin with a letter. When `null`, the `user_labels` field will be omitted from the resulting object.
-  - `alert_strategy` (`list[obj]`): Control over how this alert policy&#39;s notification channels are notified. When `null`, the `alert_strategy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.alert_strategy.new](#fn-monitoringalertpolicyalertstrategynew) constructor.
+  - `alert_strategy` (`list[obj]`): Control over how this alert policy&#39;s notification channels are notified. When `null`, the `alert_strategy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.alert_strategy.new](#fn-monitoring_alert_policyalert_strategynew) constructor.
   - `conditions` (`list[obj]`): A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
 evaluate to true, then an incident is created. A policy can have from
-one to six conditions. When `null`, the `conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.new](#fn-monitoringalertpolicyconditionsnew) constructor.
+one to six conditions. When `null`, the `conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.new](#fn-monitoring_alert_policyconditionsnew) constructor.
   - `documentation` (`list[obj]`): Documentation that is included with notifications and incidents related
 to this policy. Best practice is for the documentation to include information
 to help responders understand, mitigate, escalate, and correct the underlying
 problems detected by the alerting policy. Notification channels that have
-limited capacity might not show this documentation. When `null`, the `documentation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.documentation.new](#fn-monitoringalertpolicydocumentationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.timeouts.new](#fn-monitoringalertpolicytimeoutsnew) constructor.
+limited capacity might not show this documentation. When `null`, the `documentation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.documentation.new](#fn-monitoring_alert_policydocumentationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.timeouts.new](#fn-monitoring_alert_policytimeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -135,7 +135,7 @@ newAttrs()
 `google.monitoring_alert_policy.newAttrs` constructs a new object with attributes and blocks configured for the `monitoring_alert_policy`
 Terraform resource.
 
-Unlike [google.monitoring_alert_policy.new](#fn-monitoringalertpolicynew), this function will not inject the `resource`
+Unlike [google.monitoring_alert_policy.new](#fn-monitoring_alert_policynew), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -163,17 +163,17 @@ objects.The field can contain up to 64 entries. Each key and value is limited
 to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys
 must begin with a letter. When `null`, the `user_labels` field will be omitted from the resulting object.
-  - `alert_strategy` (`list[obj]`): Control over how this alert policy&#39;s notification channels are notified. When `null`, the `alert_strategy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.alert_strategy.new](#fn-monitoringalertpolicyalertstrategynew) constructor.
+  - `alert_strategy` (`list[obj]`): Control over how this alert policy&#39;s notification channels are notified. When `null`, the `alert_strategy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.alert_strategy.new](#fn-monitoring_alert_policyalert_strategynew) constructor.
   - `conditions` (`list[obj]`): A list of conditions for the policy. The conditions are combined by
 AND or OR according to the combiner field. If the combined conditions
 evaluate to true, then an incident is created. A policy can have from
-one to six conditions. When `null`, the `conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.new](#fn-monitoringalertpolicyconditionsnew) constructor.
+one to six conditions. When `null`, the `conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.new](#fn-monitoring_alert_policyconditionsnew) constructor.
   - `documentation` (`list[obj]`): Documentation that is included with notifications and incidents related
 to this policy. Best practice is for the documentation to include information
 to help responders understand, mitigate, escalate, and correct the underlying
 problems detected by the alerting policy. Notification channels that have
-limited capacity might not show this documentation. When `null`, the `documentation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.documentation.new](#fn-monitoringalertpolicydocumentationnew) constructor.
-  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.timeouts.new](#fn-monitoringalertpolicytimeoutsnew) constructor.
+limited capacity might not show this documentation. When `null`, the `documentation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.documentation.new](#fn-monitoring_alert_policydocumentationnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.timeouts.new](#fn-monitoring_alert_policytimeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitoring_alert_policy` resource into the root Terraform configuration.
@@ -441,7 +441,7 @@ Terraform sub block.
 **Args**:
   - `auto_close` (`string`): If an alert policy that was active has no data for this long, any open incidents will close. When `null`, the `auto_close` field will be omitted from the resulting object.
   - `notification_rate_limit` (`list[obj]`): Required for alert policies with a LogMatch condition.
-This limit is not implemented for alert policies that are not log-based. When `null`, the `notification_rate_limit` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.alert_strategy.notification_rate_limit.new](#fn-alertstrategynotificationratelimitnew) constructor.
+This limit is not implemented for alert policies that are not log-based. When `null`, the `notification_rate_limit` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.alert_strategy.notification_rate_limit.new](#fn-alert_strategynotification_rate_limitnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `alert_strategy` sub block.
@@ -493,12 +493,12 @@ incidents. To avoid confusion, don&#39;t use the same
 display name for multiple conditions in the same
 policy.
   - `condition_absent` (`list[obj]`): A condition that checks that a time series
-continues to receive new data points. When `null`, the `condition_absent` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_absent.new](#fn-conditionsconditionabsentnew) constructor.
+continues to receive new data points. When `null`, the `condition_absent` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_absent.new](#fn-conditionscondition_absentnew) constructor.
   - `condition_matched_log` (`list[obj]`): A condition that checks for log messages matching given constraints.
-If set, no other conditions can be present. When `null`, the `condition_matched_log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_matched_log.new](#fn-conditionsconditionmatchedlognew) constructor.
-  - `condition_monitoring_query_language` (`list[obj]`): A Monitoring Query Language query that outputs a boolean stream When `null`, the `condition_monitoring_query_language` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_monitoring_query_language.new](#fn-conditionsconditionmonitoringquerylanguagenew) constructor.
+If set, no other conditions can be present. When `null`, the `condition_matched_log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_matched_log.new](#fn-conditionscondition_matched_lognew) constructor.
+  - `condition_monitoring_query_language` (`list[obj]`): A Monitoring Query Language query that outputs a boolean stream When `null`, the `condition_monitoring_query_language` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_monitoring_query_language.new](#fn-conditionscondition_monitoring_query_languagenew) constructor.
   - `condition_threshold` (`list[obj]`): A condition that compares a time series against a
-threshold. When `null`, the `condition_threshold` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_threshold.new](#fn-conditionsconditionthresholdnew) constructor.
+threshold. When `null`, the `condition_threshold` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_threshold.new](#fn-conditionscondition_thresholdnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `conditions` sub block.
@@ -546,13 +546,13 @@ on each resource to a single stream for each
 resource or when aggregating streams across
 all members of a group of resources).
 Multiple aggregations are applied in the
-order specified. When `null`, the `aggregations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_absent.aggregations.new](#fn-conditionabsentaggregationsnew) constructor.
+order specified. When `null`, the `aggregations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_absent.aggregations.new](#fn-condition_absentaggregationsnew) constructor.
   - `trigger` (`list[obj]`): The number/percent of time series for which
 the comparison must hold in order for the
 condition to trigger. If unspecified, then
 the condition will trigger if the comparison
 is true for any of the time series that have
-been identified by filter and aggregations. When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_absent.trigger.new](#fn-conditionabsenttriggernew) constructor.
+been identified by filter and aggregations. When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_absent.trigger.new](#fn-condition_absenttriggernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `condition_absent` sub block.
@@ -754,7 +754,7 @@ the condition will trigger if the comparison
 is true for any of the time series that have
 been identified by filter and aggregations,
 or by the ratio, if denominator_filter and
-denominator_aggregations are specified. When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_monitoring_query_language.trigger.new](#fn-conditionmonitoringquerylanguagetriggernew) constructor.
+denominator_aggregations are specified. When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_monitoring_query_language.trigger.new](#fn-condition_monitoring_query_languagetriggernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `condition_monitoring_query_language` sub block.
@@ -872,7 +872,7 @@ order specified.This field is similar to the
 one in the MetricService.ListTimeSeries
 request. It is advisable to use the
 ListTimeSeries method when debugging this
-field. When `null`, the `aggregations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_threshold.aggregations.new](#fn-conditionthresholdaggregationsnew) constructor.
+field. When `null`, the `aggregations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_threshold.aggregations.new](#fn-condition_thresholdaggregationsnew) constructor.
   - `denominator_aggregations` (`list[obj]`): Specifies the alignment of data points in
 individual time series selected by
 denominatorFilter as well as how to combine
@@ -888,7 +888,7 @@ series that have the same periodicity and
 labels.This field is similar to the one in
 the MetricService.ListTimeSeries request. It
 is advisable to use the ListTimeSeries
-method when debugging this field. When `null`, the `denominator_aggregations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_threshold.denominator_aggregations.new](#fn-conditionthresholddenominatoraggregationsnew) constructor.
+method when debugging this field. When `null`, the `denominator_aggregations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_threshold.denominator_aggregations.new](#fn-condition_thresholddenominator_aggregationsnew) constructor.
   - `trigger` (`list[obj]`): The number/percent of time series for which
 the comparison must hold in order for the
 condition to trigger. If unspecified, then
@@ -896,7 +896,7 @@ the condition will trigger if the comparison
 is true for any of the time series that have
 been identified by filter and aggregations,
 or by the ratio, if denominator_filter and
-denominator_aggregations are specified. When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_threshold.trigger.new](#fn-conditionthresholdtriggernew) constructor.
+denominator_aggregations are specified. When `null`, the `trigger` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_threshold.trigger.new](#fn-condition_thresholdtriggernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `condition_threshold` sub block.
