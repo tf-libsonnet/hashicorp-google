@@ -65,12 +65,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): The name specified for the model.
   - `online_prediction_console_logging` (`bool`): If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging When `null`, the `online_prediction_console_logging` field will be omitted from the resulting object.
   - `online_prediction_logging` (`bool`): If true, online prediction access logs are sent to StackDriver Logging. When `null`, the `online_prediction_logging` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `regions` (`list`): The list of regions where the model is going to be deployed.
 Currently only one region per model is supported When `null`, the `regions` field will be omitted from the resulting object.
   - `default_version` (`list[obj]`): The default version of the model. This version will be used to handle
 prediction requests that do not specify a version. When `null`, the `default_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.ml_engine_model.default_version.new](#fn-default_versionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.ml_engine_model.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.ml_engine_model.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -99,12 +99,12 @@ injecting into a complete block.
   - `name` (`string`): The name specified for the model.
   - `online_prediction_console_logging` (`bool`): If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging When `null`, the `online_prediction_console_logging` field will be omitted from the resulting object.
   - `online_prediction_logging` (`bool`): If true, online prediction access logs are sent to StackDriver Logging. When `null`, the `online_prediction_logging` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `regions` (`list`): The list of regions where the model is going to be deployed.
 Currently only one region per model is supported When `null`, the `regions` field will be omitted from the resulting object.
   - `default_version` (`list[obj]`): The default version of the model. This version will be used to handle
 prediction requests that do not specify a version. When `null`, the `default_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.ml_engine_model.default_version.new](#fn-default_versionnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.ml_engine_model.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.ml_engine_model.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `ml_engine_model` resource into the root Terraform configuration.
@@ -335,8 +335,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

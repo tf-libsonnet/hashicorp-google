@@ -58,12 +58,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): Human readable description of the realm. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels associated with this realm. Each label is a key-value pair. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): Location of the Realm. When `null`, the `location` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `realm_id` (`string`): GCP region of the Realm.
   - `time_zone` (`string`): Required. Time zone where all realm-specific policies are evaluated. The value of
 this field must be from the IANA time zone database:
 https://www.iana.org/time-zones.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_realm.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_realm.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -90,12 +90,12 @@ injecting into a complete block.
   - `description` (`string`): Human readable description of the realm. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels associated with this realm. Each label is a key-value pair. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): Location of the Realm. When `null`, the `location` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `realm_id` (`string`): GCP region of the Realm.
   - `time_zone` (`string`): Required. Time zone where all realm-specific policies are evaluated. The value of
 this field must be from the IANA time zone database:
 https://www.iana.org/time-zones.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_realm.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_realm.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `game_services_realm` resource into the root Terraform configuration.
@@ -250,9 +250,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

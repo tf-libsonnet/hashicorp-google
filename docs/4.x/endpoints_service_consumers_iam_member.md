@@ -53,11 +53,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `consumer_project` (`string`): Set the `consumer_project` field on the resulting resource block.
-  - `member` (`string`): Set the `member` field on the resulting resource block.
-  - `role` (`string`): Set the `role` field on the resulting resource block.
-  - `service_name` (`string`): Set the `service_name` field on the resulting resource block.
-  - `condition` (`list[obj]`): Set the `condition` field on the resulting resource block. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.endpoints_service_consumers_iam_member.condition.new](#fn-conditionnew) constructor.
+  - `consumer_project` (`string`): 
+  - `member` (`string`): 
+  - `role` (`string`): 
+  - `service_name` (`string`): 
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.endpoints_service_consumers_iam_member.condition.new](#fn-conditionnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -81,11 +81,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `consumer_project` (`string`): Set the `consumer_project` field on the resulting object.
-  - `member` (`string`): Set the `member` field on the resulting object.
-  - `role` (`string`): Set the `role` field on the resulting object.
-  - `service_name` (`string`): Set the `service_name` field on the resulting object.
-  - `condition` (`list[obj]`): Set the `condition` field on the resulting object. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.endpoints_service_consumers_iam_member.condition.new](#fn-conditionnew) constructor.
+  - `consumer_project` (`string`): 
+  - `member` (`string`): 
+  - `role` (`string`): 
+  - `service_name` (`string`): 
+  - `condition` (`list[obj]`):  When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.endpoints_service_consumers_iam_member.condition.new](#fn-conditionnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `endpoints_service_consumers_iam_member` resource into the root Terraform configuration.
@@ -209,9 +209,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `description` (`string`): Set the `description` field on the resulting object. When `null`, the `description` field will be omitted from the resulting object.
-  - `expression` (`string`): Set the `expression` field on the resulting object.
-  - `title` (`string`): Set the `title` field on the resulting object.
+  - `description` (`string`):  When `null`, the `description` field will be omitted from the resulting object.
+  - `expression` (`string`): 
+  - `title` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `condition` sub block.

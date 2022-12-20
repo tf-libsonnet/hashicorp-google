@@ -108,7 +108,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `display_name` (`string`): Name used for UI elements listing this SLO. When `null`, the `display_name` field will be omitted from the resulting object.
   - `goal` (`number`): The fraction of service that must be good in order for this objective
 to be met. 0 &lt; goal &lt;= 0.999
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `rolling_period_days` (`number`): A rolling time period, semantically &#34;in the past X days&#34;.
 Must be between 1 to 30 days, inclusive. When `null`, the `rolling_period_days` field will be omitted from the resulting object.
   - `service` (`string`): ID of the service to which this SLO belongs.
@@ -134,7 +134,7 @@ It is used to measure and calculate the quality of the Service&#39;s
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 &#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `request_based_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.request_based_sli.new](#fn-request_based_slinew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.timeouts.new](#fn-timeoutsnew) constructor.
   - `windows_based_sli` (`list[obj]`): A windows-based SLI defines the criteria for time windows.
 good_service is defined based off the count of these time windows
 for which the provided service was of good quality.
@@ -173,7 +173,7 @@ injecting into a complete block.
   - `display_name` (`string`): Name used for UI elements listing this SLO. When `null`, the `display_name` field will be omitted from the resulting object.
   - `goal` (`number`): The fraction of service that must be good in order for this objective
 to be met. 0 &lt; goal &lt;= 0.999
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `rolling_period_days` (`number`): A rolling time period, semantically &#34;in the past X days&#34;.
 Must be between 1 to 30 days, inclusive. When `null`, the `rolling_period_days` field will be omitted from the resulting object.
   - `service` (`string`): ID of the service to which this SLO belongs.
@@ -199,7 +199,7 @@ It is used to measure and calculate the quality of the Service&#39;s
 performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 &#39;basic_sli&#39;, &#39;request_based_sli&#39;, &#39;windows_based_sli&#39; When `null`, the `request_based_sli` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.request_based_sli.new](#fn-request_based_slinew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_slo.timeouts.new](#fn-timeoutsnew) constructor.
   - `windows_based_sli` (`list[obj]`): A windows-based SLI defines the criteria for time windows.
 good_service is defined based off the count of these time windows
 for which the provided service was of good quality.
@@ -740,9 +740,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

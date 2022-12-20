@@ -147,7 +147,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `scratch_disk` (`list[obj]`): The scratch disks attached to the instance. When `null`, the `scratch_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.scratch_disk.new](#fn-scratch_disknew) constructor.
   - `service_account` (`list[obj]`): The service account to attach to the instance. When `null`, the `service_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.service_account.new](#fn-service_accountnew) constructor.
   - `shielded_instance_config` (`list[obj]`): The shielded vm config being used by the instance. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.shielded_instance_config.new](#fn-shielded_instance_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -199,7 +199,7 @@ injecting into a complete block.
   - `scratch_disk` (`list[obj]`): The scratch disks attached to the instance. When `null`, the `scratch_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.scratch_disk.new](#fn-scratch_disknew) constructor.
   - `service_account` (`list[obj]`): The service account to attach to the instance. When `null`, the `service_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.service_account.new](#fn-service_accountnew) constructor.
   - `shielded_instance_config` (`list[obj]`): The shielded vm config being used by the instance. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.shielded_instance_config.new](#fn-shielded_instance_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_instance` resource into the root Terraform configuration.
@@ -1201,7 +1201,7 @@ Terraform sub block.
 **Args**:
   - `automatic_restart` (`bool`): Specifies if the instance should be restarted if it was terminated by Compute Engine (not a user). When `null`, the `automatic_restart` field will be omitted from the resulting object.
   - `instance_termination_action` (`string`): Specifies the action GCE should take when SPOT VM is preempted. When `null`, the `instance_termination_action` field will be omitted from the resulting object.
-  - `min_node_cpus` (`number`): Set the `min_node_cpus` field on the resulting object. When `null`, the `min_node_cpus` field will be omitted from the resulting object.
+  - `min_node_cpus` (`number`):  When `null`, the `min_node_cpus` field will be omitted from the resulting object.
   - `on_host_maintenance` (`string`): Describes maintenance behavior for the instance. One of MIGRATE or TERMINATE, When `null`, the `on_host_maintenance` field will be omitted from the resulting object.
   - `preemptible` (`bool`): Whether the instance is preemptible. When `null`, the `preemptible` field will be omitted from the resulting object.
   - `provisioning_model` (`string`): Whether the instance is spot. If this is set as SPOT. When `null`, the `provisioning_model` field will be omitted from the resulting object.
@@ -1228,9 +1228,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `operator` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `node_affinities` sub block.
@@ -1325,9 +1325,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

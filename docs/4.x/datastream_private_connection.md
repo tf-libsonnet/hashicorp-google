@@ -62,8 +62,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location this repository is located in.
   - `private_connection_id` (`string`): The private connectivity identifier.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_private_connection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_private_connection.timeouts.new](#fn-timeoutsnew) constructor.
   - `vpc_peering_config` (`list[obj]`): The VPC Peering configuration is used to create VPC peering
 between Datastream and the consumer&#39;s VPC. When `null`, the `vpc_peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_private_connection.vpc_peering_config.new](#fn-vpc_peering_confignew) constructor.
 
@@ -93,8 +93,8 @@ injecting into a complete block.
   - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location this repository is located in.
   - `private_connection_id` (`string`): The private connectivity identifier.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_private_connection.timeouts.new](#fn-timeoutsnew) constructor.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_private_connection.timeouts.new](#fn-timeoutsnew) constructor.
   - `vpc_peering_config` (`list[obj]`): The VPC Peering configuration is used to create VPC peering
 between Datastream and the consumer&#39;s VPC. When `null`, the `vpc_peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_private_connection.vpc_peering_config.new](#fn-vpc_peering_confignew) constructor.
 
@@ -272,8 +272,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

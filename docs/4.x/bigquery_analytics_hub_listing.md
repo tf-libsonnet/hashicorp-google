@@ -81,12 +81,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `listing_id` (`string`): The ID of the listing. Must contain only Unicode letters, numbers (0-9), underscores (_). Should not use characters that require URL-escaping, or characters outside of ASCII, spaces.
   - `location` (`string`): The name of the location this data exchange listing.
   - `primary_contact` (`string`): Email or URL of the primary point of contact of the listing. When `null`, the `primary_contact` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `request_access` (`string`): Email or URL of the request access of the listing. Subscribers can use this reference to request access. When `null`, the `request_access` field will be omitted from the resulting object.
   - `bigquery_dataset` (`list[obj]`): Shared dataset i.e. BigQuery dataset source. When `null`, the `bigquery_dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.bigquery_dataset.new](#fn-bigquery_datasetnew) constructor.
   - `data_provider` (`list[obj]`): Details of the data provider who owns the source data. When `null`, the `data_provider` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.data_provider.new](#fn-data_providernew) constructor.
   - `publisher` (`list[obj]`): Details of the publisher who owns the listing and who can share the source data. When `null`, the `publisher` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.publisher.new](#fn-publishernew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -119,12 +119,12 @@ injecting into a complete block.
   - `listing_id` (`string`): The ID of the listing. Must contain only Unicode letters, numbers (0-9), underscores (_). Should not use characters that require URL-escaping, or characters outside of ASCII, spaces.
   - `location` (`string`): The name of the location this data exchange listing.
   - `primary_contact` (`string`): Email or URL of the primary point of contact of the listing. When `null`, the `primary_contact` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `request_access` (`string`): Email or URL of the request access of the listing. Subscribers can use this reference to request access. When `null`, the `request_access` field will be omitted from the resulting object.
   - `bigquery_dataset` (`list[obj]`): Shared dataset i.e. BigQuery dataset source. When `null`, the `bigquery_dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.bigquery_dataset.new](#fn-bigquery_datasetnew) constructor.
   - `data_provider` (`list[obj]`): Details of the data provider who owns the source data. When `null`, the `data_provider` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.data_provider.new](#fn-data_providernew) constructor.
   - `publisher` (`list[obj]`): Details of the publisher who owns the listing and who can share the source data. When `null`, the `publisher` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.publisher.new](#fn-publishernew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigquery_analytics_hub_listing` resource into the root Terraform configuration.
@@ -541,9 +541,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

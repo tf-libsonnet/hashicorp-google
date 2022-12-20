@@ -81,13 +81,13 @@ Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;. When `null`
   - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
   to the Normal priority in the console.
   - If the supplied value is negative, the intent is ignored in runtime detect intent requests. When `null`, the `priority` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `reset_contexts` (`bool`): Indicates whether to delete all contexts in the current session when this intent is matched. When `null`, the `reset_contexts` field will be omitted from the resulting object.
   - `webhook_state` (`string`): Indicates whether webhooks are enabled for the intent.
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
 * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
 filling prompt is forwarded to the webhook. Possible values: [&#34;WEBHOOK_STATE_ENABLED&#34;, &#34;WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING&#34;] When `null`, the `webhook_state` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_intent.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_intent.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -131,13 +131,13 @@ Format: projects/&lt;Project ID&gt;/agent/intents/&lt;Intent ID&gt;. When `null`
   - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
   to the Normal priority in the console.
   - If the supplied value is negative, the intent is ignored in runtime detect intent requests. When `null`, the `priority` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `reset_contexts` (`bool`): Indicates whether to delete all contexts in the current session when this intent is matched. When `null`, the `reset_contexts` field will be omitted from the resulting object.
   - `webhook_state` (`string`): Indicates whether webhooks are enabled for the intent.
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
 * WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING: Webhook is enabled in the agent and in the intent. Also, each slot
 filling prompt is forwarded to the webhook. Possible values: [&#34;WEBHOOK_STATE_ENABLED&#34;, &#34;WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING&#34;] When `null`, the `webhook_state` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_intent.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_intent.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dialogflow_intent` resource into the root Terraform configuration.
@@ -388,9 +388,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

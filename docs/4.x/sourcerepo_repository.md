@@ -57,10 +57,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `name` (`string`): Resource name of the repository, of the form &#39;{{repo}}&#39;.
 The repo name may contain slashes. eg, &#39;name/with/slash&#39;
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `pubsub_configs` (`list[obj]`): How this repository publishes a change in the repository through Cloud Pub/Sub. 
 Keyed by the topic names. When `null`, the `pubsub_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.pubsub_configs.new](#fn-pubsub_configsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -86,10 +86,10 @@ injecting into a complete block.
 **Args**:
   - `name` (`string`): Resource name of the repository, of the form &#39;{{repo}}&#39;.
 The repo name may contain slashes. eg, &#39;name/with/slash&#39;
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `pubsub_configs` (`list[obj]`): How this repository publishes a change in the repository through Cloud Pub/Sub. 
 Keyed by the topic names. When `null`, the `pubsub_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.pubsub_configs.new](#fn-pubsub_configsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sourcerepo_repository.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `sourcerepo_repository` resource into the root Terraform configuration.
@@ -224,7 +224,7 @@ Terraform sub block.
 This service account needs to be in the same project as the PubsubConfig. When added, 
 the caller needs to have iam.serviceAccounts.actAs permission on this service account. 
 If unspecified, it defaults to the compute engine default service account. When `null`, the `service_account_email` field will be omitted from the resulting object.
-  - `topic` (`string`): Set the `topic` field on the resulting object.
+  - `topic` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `pubsub_configs` sub block.
@@ -247,9 +247,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

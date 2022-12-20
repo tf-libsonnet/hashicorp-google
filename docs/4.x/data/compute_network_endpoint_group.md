@@ -56,8 +56,8 @@ the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash. When `null`, the `name` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
-  - `self_link` (`string`): Set the `self_link` field on the resulting data source block. When `null`, the `self_link` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `self_link` (`string`):  When `null`, the `self_link` field will be omitted from the resulting object.
   - `zone` (`string`): Zone where the network endpoint group is located. When `null`, the `zone` field will be omitted from the resulting object.
 
 **Returns**:
@@ -89,8 +89,8 @@ the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash. When `null`, the `name` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `self_link` (`string`): Set the `self_link` field on the resulting object. When `null`, the `self_link` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
+  - `self_link` (`string`):  When `null`, the `self_link` field will be omitted from the resulting object.
   - `zone` (`string`): Zone where the network endpoint group is located. When `null`, the `zone` field will be omitted from the resulting object.
 
 **Returns**:

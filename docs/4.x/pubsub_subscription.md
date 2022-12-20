@@ -126,7 +126,7 @@ than 7 days (&#39;&#34;604800s&#34;&#39;) or less than 10 minutes (&#39;&#34;600
 A duration in seconds with up to nine fractional digits, terminated
 by &#39;s&#39;. Example: &#39;&#34;600.5s&#34;&#39;. When `null`, the `message_retention_duration` field will be omitted from the resulting object.
   - `name` (`string`): Name of the subscription.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `retain_acked_messages` (`bool`): Indicates whether to retain acknowledged messages. If &#39;true&#39;, then
 messages are not expunged from the subscription&#39;s backlog, even if
 they are acknowledged, until they fall out of the
@@ -157,7 +157,7 @@ pull and ack messages using API methods. When `null`, the `push_config` sub bloc
 
 If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. 
 RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.retry_policy.new](#fn-retry_policynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -226,7 +226,7 @@ than 7 days (&#39;&#34;604800s&#34;&#39;) or less than 10 minutes (&#39;&#34;600
 A duration in seconds with up to nine fractional digits, terminated
 by &#39;s&#39;. Example: &#39;&#34;600.5s&#34;&#39;. When `null`, the `message_retention_duration` field will be omitted from the resulting object.
   - `name` (`string`): Name of the subscription.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `retain_acked_messages` (`bool`): Indicates whether to retain acknowledged messages. If &#39;true&#39;, then
 messages are not expunged from the subscription&#39;s backlog, even if
 they are acknowledged, until they fall out of the
@@ -257,7 +257,7 @@ pull and ack messages using API methods. When `null`, the `push_config` sub bloc
 
 If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. 
 RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.retry_policy.new](#fn-retry_policynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `pubsub_subscription` resource into the root Terraform configuration.
@@ -869,9 +869,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

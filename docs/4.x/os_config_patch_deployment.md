@@ -126,13 +126,13 @@ A duration in seconds with up to nine fractional digits, terminated by &#39;s&#3
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 * Must be unique within the project.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `instance_filter` (`list[obj]`): VM instances to patch. When `null`, the `instance_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.instance_filter.new](#fn-instance_filternew) constructor.
   - `one_time_schedule` (`list[obj]`): Schedule a one-time execution. When `null`, the `one_time_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.one_time_schedule.new](#fn-one_time_schedulenew) constructor.
   - `patch_config` (`list[obj]`): Patch configuration that is applied. When `null`, the `patch_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.new](#fn-patch_confignew) constructor.
   - `recurring_schedule` (`list[obj]`): Schedule recurring executions. When `null`, the `recurring_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.recurring_schedule.new](#fn-recurring_schedulenew) constructor.
   - `rollout` (`list[obj]`): Rollout strategy of the patch job. When `null`, the `rollout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.rollout.new](#fn-rolloutnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -165,13 +165,13 @@ A duration in seconds with up to nine fractional digits, terminated by &#39;s&#3
 * Must be between 1-63 characters.
 * Must end with a number or a letter.
 * Must be unique within the project.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `instance_filter` (`list[obj]`): VM instances to patch. When `null`, the `instance_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.instance_filter.new](#fn-instance_filternew) constructor.
   - `one_time_schedule` (`list[obj]`): Schedule a one-time execution. When `null`, the `one_time_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.one_time_schedule.new](#fn-one_time_schedulenew) constructor.
   - `patch_config` (`list[obj]`): Patch configuration that is applied. When `null`, the `patch_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.patch_config.new](#fn-patch_confignew) constructor.
   - `recurring_schedule` (`list[obj]`): Schedule recurring executions. When `null`, the `recurring_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.recurring_schedule.new](#fn-recurring_schedulenew) constructor.
   - `rollout` (`list[obj]`): Rollout strategy of the patch job. When `null`, the `rollout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.rollout.new](#fn-rolloutnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_patch_deployment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `os_config_patch_deployment` resource into the root Terraform configuration.
@@ -1182,8 +1182,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

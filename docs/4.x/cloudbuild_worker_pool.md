@@ -68,7 +68,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): User-defined name of the `WorkerPool`.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `network_config` (`list[obj]`): Network configuration for the `WorkerPool`. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_worker_pool.network_config.new](#fn-network_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_worker_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_worker_pool.timeouts.new](#fn-timeoutsnew) constructor.
   - `worker_config` (`list[obj]`): Configuration to be used for a creating workers in the `WorkerPool`. When `null`, the `worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_worker_pool.worker_config.new](#fn-worker_confignew) constructor.
 
 **Returns**:
@@ -99,7 +99,7 @@ injecting into a complete block.
   - `name` (`string`): User-defined name of the `WorkerPool`.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `network_config` (`list[obj]`): Network configuration for the `WorkerPool`. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_worker_pool.network_config.new](#fn-network_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_worker_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_worker_pool.timeouts.new](#fn-timeoutsnew) constructor.
   - `worker_config` (`list[obj]`): Configuration to be used for a creating workers in the `WorkerPool`. When `null`, the `worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_worker_pool.worker_config.new](#fn-worker_confignew) constructor.
 
 **Returns**:
@@ -336,9 +336,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -66,7 +66,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `public_key` (`list[obj]`): An ordered list of Ed25519 public keys to use for validating signed requests.
 You must specify &#39;public_keys&#39; or &#39;validation_shared_keys&#39; (or both). The keys in &#39;public_keys&#39; are checked first.
 You may specify no more than one Google-managed public key.
@@ -74,7 +74,7 @@ If you specify &#39;public_keys&#39;, you must specify at least one (1) key and 
 
 Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key.
 Ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset. When `null`, the `public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.public_key.new](#fn-public_keynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.timeouts.new](#fn-timeoutsnew) constructor.
   - `validation_shared_keys` (`list[obj]`): An ordered list of shared keys to use for validating signed requests.
 Shared keys are secret.  Ensure that only authorized users can add &#39;validation_shared_keys&#39; to a keyset.
 You can rotate keys by appending (pushing) a new key to the list of &#39;validation_shared_keys&#39; and removing any superseded keys.
@@ -107,7 +107,7 @@ injecting into a complete block.
   - `name` (`string`): Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `public_key` (`list[obj]`): An ordered list of Ed25519 public keys to use for validating signed requests.
 You must specify &#39;public_keys&#39; or &#39;validation_shared_keys&#39; (or both). The keys in &#39;public_keys&#39; are checked first.
 You may specify no more than one Google-managed public key.
@@ -115,7 +115,7 @@ If you specify &#39;public_keys&#39;, you must specify at least one (1) key and 
 
 Ed25519 public keys are not secret, and only allow Google to validate a request was signed by your corresponding private key.
 Ensure that the private key is kept secret, and that only authorized users can add public keys to a keyset. When `null`, the `public_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.public_key.new](#fn-public_keynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_keyset.timeouts.new](#fn-timeoutsnew) constructor.
   - `validation_shared_keys` (`list[obj]`): An ordered list of shared keys to use for validating signed requests.
 Shared keys are secret.  Ensure that only authorized users can add &#39;validation_shared_keys&#39; to a keyset.
 You can rotate keys by appending (pushing) a new key to the list of &#39;validation_shared_keys&#39; and removing any superseded keys.
@@ -341,9 +341,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

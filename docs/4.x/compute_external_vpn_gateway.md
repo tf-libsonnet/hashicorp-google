@@ -65,10 +65,10 @@ match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `redundancy_type` (`string`): Indicates the redundancy type of this external VPN gateway Possible values: [&#34;FOUR_IPS_REDUNDANCY&#34;, &#34;SINGLE_IP_INTERNALLY_REDUNDANT&#34;, &#34;TWO_IPS_REDUNDANCY&#34;] When `null`, the `redundancy_type` field will be omitted from the resulting object.
   - `interface` (`list[obj]`): A list of interfaces on this external VPN gateway. When `null`, the `interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.interface.new](#fn-interfacenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -100,10 +100,10 @@ match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means
 the first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `redundancy_type` (`string`): Indicates the redundancy type of this external VPN gateway Possible values: [&#34;FOUR_IPS_REDUNDANCY&#34;, &#34;SINGLE_IP_INTERNALLY_REDUNDANT&#34;, &#34;TWO_IPS_REDUNDANCY&#34;] When `null`, the `redundancy_type` field will be omitted from the resulting object.
   - `interface` (`list[obj]`): A list of interfaces on this external VPN gateway. When `null`, the `interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.interface.new](#fn-interfacenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_external_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_external_vpn_gateway` resource into the root Terraform configuration.
@@ -289,8 +289,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

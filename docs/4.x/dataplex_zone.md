@@ -79,7 +79,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `type` (`string`): Required. Immutable. The type of the zone. Possible values: TYPE_UNSPECIFIED, RAW, CURATED
   - `discovery_spec` (`list[obj]`): Required. Specification of the discovery feature applied to data in this zone. When `null`, the `discovery_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.discovery_spec.new](#fn-discovery_specnew) constructor.
   - `resource_spec` (`list[obj]`): Required. Immutable. Specification of the resources that are referenced by the assets within this zone. When `null`, the `resource_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.resource_spec.new](#fn-resource_specnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -113,7 +113,7 @@ injecting into a complete block.
   - `type` (`string`): Required. Immutable. The type of the zone. Possible values: TYPE_UNSPECIFIED, RAW, CURATED
   - `discovery_spec` (`list[obj]`): Required. Specification of the discovery feature applied to data in this zone. When `null`, the `discovery_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.discovery_spec.new](#fn-discovery_specnew) constructor.
   - `resource_spec` (`list[obj]`): Required. Immutable. Specification of the resources that are referenced by the assets within this zone. When `null`, the `resource_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.resource_spec.new](#fn-resource_specnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_zone.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dataplex_zone` resource into the root Terraform configuration.
@@ -475,9 +475,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

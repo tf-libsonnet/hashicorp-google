@@ -48,9 +48,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `additional_authenticated_data` (`string`): Set the `additional_authenticated_data` field on the resulting data source block. When `null`, the `additional_authenticated_data` field will be omitted from the resulting object.
-  - `ciphertext` (`string`): Set the `ciphertext` field on the resulting data source block.
-  - `crypto_key` (`string`): Set the `crypto_key` field on the resulting data source block.
+  - `additional_authenticated_data` (`string`):  When `null`, the `additional_authenticated_data` field will be omitted from the resulting object.
+  - `ciphertext` (`string`): 
+  - `crypto_key` (`string`): 
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -74,9 +74,9 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `additional_authenticated_data` (`string`): Set the `additional_authenticated_data` field on the resulting object. When `null`, the `additional_authenticated_data` field will be omitted from the resulting object.
-  - `ciphertext` (`string`): Set the `ciphertext` field on the resulting object.
-  - `crypto_key` (`string`): Set the `crypto_key` field on the resulting object.
+  - `additional_authenticated_data` (`string`):  When `null`, the `additional_authenticated_data` field will be omitted from the resulting object.
+  - `ciphertext` (`string`): 
+  - `crypto_key` (`string`): 
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `kms_secret` data source into the root Terraform configuration.

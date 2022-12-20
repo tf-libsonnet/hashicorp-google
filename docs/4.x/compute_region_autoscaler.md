@@ -76,7 +76,7 @@ the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where the instance group resides. When `null`, the `region` field will be omitted from the resulting object.
   - `target` (`string`): URL of the managed instance group that this autoscaler will scale.
   - `autoscaling_policy` (`list[obj]`): The configuration parameters for the autoscaling algorithm. You can
@@ -85,7 +85,7 @@ customMetricUtilizations, and loadBalancingUtilization.
 
 If none of these are specified, the default will be to autoscale based
 on cpuUtilization to 0.6 or 60%. When `null`, the `autoscaling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_autoscaler.autoscaling_policy.new](#fn-autoscaling_policynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_autoscaler.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_autoscaler.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -115,7 +115,7 @@ the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where the instance group resides. When `null`, the `region` field will be omitted from the resulting object.
   - `target` (`string`): URL of the managed instance group that this autoscaler will scale.
   - `autoscaling_policy` (`list[obj]`): The configuration parameters for the autoscaling algorithm. You can
@@ -124,7 +124,7 @@ customMetricUtilizations, and loadBalancingUtilization.
 
 If none of these are specified, the default will be to autoscale based
 on cpuUtilization to 0.6 or 60%. When `null`, the `autoscaling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_autoscaler.autoscaling_policy.new](#fn-autoscaling_policynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_autoscaler.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_autoscaler.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_region_autoscaler` resource into the root Terraform configuration.
@@ -506,7 +506,7 @@ Terraform sub block.
   - `disabled` (`bool`): A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect. When `null`, the `disabled` field will be omitted from the resulting object.
   - `duration_sec` (`number`): The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
   - `min_required_replicas` (`number`): Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `name` (`string`): 
   - `schedule` (`string`): The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
   - `time_zone` (`string`): The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database. When `null`, the `time_zone` field will be omitted from the resulting object.
 
@@ -531,9 +531,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

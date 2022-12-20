@@ -67,7 +67,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 Maximum of 512 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Unique name for the connectivity test.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `protocol` (`string`): IP Protocol of the test. When not provided, &#34;TCP&#34; is assumed. When `null`, the `protocol` field will be omitted from the resulting object.
   - `related_projects` (`list`): Other projects that may be relevant for reachability analysis.
 This is applicable to scenarios where a test can cross project
@@ -113,7 +113,7 @@ address or VPC network.
 A reachability analysis proceeds even if the source location is
 ambiguous. However, the test result may include endpoints that
 you don&#39;t intend to test. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.source.new](#fn-sourcenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -141,7 +141,7 @@ injecting into a complete block.
 Maximum of 512 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Unique name for the connectivity test.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `protocol` (`string`): IP Protocol of the test. When not provided, &#34;TCP&#34; is assumed. When `null`, the `protocol` field will be omitted from the resulting object.
   - `related_projects` (`list`): Other projects that may be relevant for reachability analysis.
 This is applicable to scenarios where a test can cross project
@@ -187,7 +187,7 @@ address or VPC network.
 A reachability analysis proceeds even if the source location is
 ambiguous. However, the test result may include endpoints that
 you don&#39;t intend to test. When `null`, the `source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.source.new](#fn-sourcenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_management_connectivity_test.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `network_management_connectivity_test` resource into the root Terraform configuration.
@@ -493,9 +493,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

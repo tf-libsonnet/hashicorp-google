@@ -148,7 +148,7 @@ ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling. When `null`, the `instance_class` field will be omitted from the resulting object.
   - `nobuild_files_regex` (`string`): Files that match this pattern will not be built into this version. Only applicable for Go runtimes. When `null`, the `nobuild_files_regex` field will be omitted from the resulting object.
   - `noop_on_destroy` (`bool`): If set to &#39;true&#39;, the application version will not be deleted. When `null`, the `noop_on_destroy` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `runtime` (`string`): Desired runtime. Example python27.
   - `runtime_api_version` (`string`): The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at &#39;https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref&#39;\
@@ -173,7 +173,7 @@ The first matching URL handles the request and other request handlers are not at
   - `network` (`list[obj]`): Extra network settings When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_flexible_app_version.network.new](#fn-networknew) constructor.
   - `readiness_check` (`list[obj]`): Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation. When `null`, the `readiness_check` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_flexible_app_version.readiness_check.new](#fn-readiness_checknew) constructor.
   - `resources` (`list[obj]`): Machine resources for a version. When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_flexible_app_version.resources.new](#fn-resourcesnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_flexible_app_version.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_flexible_app_version.timeouts.new](#fn-timeoutsnew) constructor.
   - `vpc_access_connector` (`list[obj]`): Enables VPC connectivity for standard apps. When `null`, the `vpc_access_connector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_flexible_app_version.vpc_access_connector.new](#fn-vpc_access_connectornew) constructor.
 
 **Returns**:
@@ -210,7 +210,7 @@ ManualScaling: B1, B2, B4, B8, B4_1G
 Defaults to F1 for AutomaticScaling and B1 for ManualScaling. When `null`, the `instance_class` field will be omitted from the resulting object.
   - `nobuild_files_regex` (`string`): Files that match this pattern will not be built into this version. Only applicable for Go runtimes. When `null`, the `nobuild_files_regex` field will be omitted from the resulting object.
   - `noop_on_destroy` (`bool`): If set to &#39;true&#39;, the application version will not be deleted. When `null`, the `noop_on_destroy` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `runtime` (`string`): Desired runtime. Example python27.
   - `runtime_api_version` (`string`): The version of the API in the given runtime environment.
 Please see the app.yaml reference for valid values at &#39;https://cloud.google.com/appengine/docs/standard/&lt;language&gt;/config/appref&#39;\
@@ -235,7 +235,7 @@ The first matching URL handles the request and other request handlers are not at
   - `network` (`list[obj]`): Extra network settings When `null`, the `network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_flexible_app_version.network.new](#fn-networknew) constructor.
   - `readiness_check` (`list[obj]`): Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation. When `null`, the `readiness_check` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_flexible_app_version.readiness_check.new](#fn-readiness_checknew) constructor.
   - `resources` (`list[obj]`): Machine resources for a version. When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_flexible_app_version.resources.new](#fn-resourcesnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_flexible_app_version.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_flexible_app_version.timeouts.new](#fn-timeoutsnew) constructor.
   - `vpc_access_connector` (`list[obj]`): Enables VPC connectivity for standard apps. When `null`, the `vpc_access_connector` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_flexible_app_version.vpc_access_connector.new](#fn-vpc_access_connectornew) constructor.
 
 **Returns**:
@@ -1253,7 +1253,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
+  - `name` (`string`): 
   - `sha1_sum` (`string`): SHA1 checksum of the file When `null`, the `sha1_sum` field will be omitted from the resulting object.
   - `source_url` (`string`): Source URL
 
@@ -1618,9 +1618,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

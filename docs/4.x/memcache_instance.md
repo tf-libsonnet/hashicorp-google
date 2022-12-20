@@ -83,14 +83,14 @@ Currently the latest supported major version is MEMCACHE_1_5. The minor version 
 determined by our system based on the latest supported minor version. Default value: &#34;MEMCACHE_1_5&#34; Possible values: [&#34;MEMCACHE_1_5&#34;] When `null`, the `memcache_version` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the instance.
   - `node_count` (`number`): Number of nodes in the memcache instance.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the Memcache instance. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
   - `zones` (`list`): Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used. When `null`, the `zones` field will be omitted from the resulting object.
   - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.maintenance_policy.new](#fn-maintenance_policynew) constructor.
   - `memcache_parameters` (`list[obj]`): User-specified parameters for this memcache instance. When `null`, the `memcache_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.memcache_parameters.new](#fn-memcache_parametersnew) constructor.
   - `node_config` (`list[obj]`): Configuration for memcache nodes. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.node_config.new](#fn-node_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -123,14 +123,14 @@ Currently the latest supported major version is MEMCACHE_1_5. The minor version 
 determined by our system based on the latest supported minor version. Default value: &#34;MEMCACHE_1_5&#34; Possible values: [&#34;MEMCACHE_1_5&#34;] When `null`, the `memcache_version` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the instance.
   - `node_count` (`number`): Number of nodes in the memcache instance.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the Memcache instance. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
   - `zones` (`list`): Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used. When `null`, the `zones` field will be omitted from the resulting object.
   - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.maintenance_policy.new](#fn-maintenance_policynew) constructor.
   - `memcache_parameters` (`list[obj]`): User-specified parameters for this memcache instance. When `null`, the `memcache_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.memcache_parameters.new](#fn-memcache_parametersnew) constructor.
   - `node_config` (`list[obj]`): Configuration for memcache nodes. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.node_config.new](#fn-node_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `memcache_instance` resource into the root Terraform configuration.
@@ -582,9 +582,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -298,7 +298,7 @@ Terraform sub block.
 
 **Args**:
   - `location` (`string`): The location name defined in Google Cloud.
-  - `rrdatas` (`list`): Set the `rrdatas` field on the resulting object. When `null`, the `rrdatas` field will be omitted from the resulting object.
+  - `rrdatas` (`list`):  When `null`, the `rrdatas` field will be omitted from the resulting object.
   - `health_checked_targets` (`list[obj]`): For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item. When `null`, the `health_checked_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.geo.health_checked_targets.new](#fn-routing_policyrouting_policyhealth_checked_targetsnew) constructor.
 
 **Returns**:
@@ -401,7 +401,7 @@ Terraform sub block.
 
 **Args**:
   - `location` (`string`): The location name defined in Google Cloud.
-  - `rrdatas` (`list`): Set the `rrdatas` field on the resulting object. When `null`, the `rrdatas` field will be omitted from the resulting object.
+  - `rrdatas` (`list`):  When `null`, the `rrdatas` field will be omitted from the resulting object.
   - `health_checked_targets` (`list[obj]`): For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item. When `null`, the `health_checked_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.primary_backup.backup_geo.health_checked_targets.new](#fn-routing_policyrouting_policyprimary_backuphealth_checked_targetsnew) constructor.
 
 **Returns**:
@@ -529,7 +529,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `rrdatas` (`list`): Set the `rrdatas` field on the resulting object. When `null`, the `rrdatas` field will be omitted from the resulting object.
+  - `rrdatas` (`list`):  When `null`, the `rrdatas` field will be omitted from the resulting object.
   - `weight` (`number`): The ratio of traffic routed to the target.
   - `health_checked_targets` (`list[obj]`): The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of `rrdatas` or `health_checked_targets` can be set. When `null`, the `health_checked_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_record_set.routing_policy.wrr.health_checked_targets.new](#fn-routing_policyrouting_policyhealth_checked_targetsnew) constructor.
 

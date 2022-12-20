@@ -63,12 +63,12 @@ applied by default to all realms and clusters. For example,
 
 &#39;projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config&#39;.
   - `deployment_id` (`string`): The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `game_server_config_overrides` (`list[obj]`): The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
 processed. When `null`, the `game_server_config_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.game_server_config_overrides.new](#fn-game_server_config_overridesnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -97,12 +97,12 @@ applied by default to all realms and clusters. For example,
 
 &#39;projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config&#39;.
   - `deployment_id` (`string`): The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `game_server_config_overrides` (`list[obj]`): The game_server_config_overrides contains the per game server config
 overrides. The overrides are processed in the order they are listed. As
 soon as a match is found for a cluster, the rest of the list is not
 processed. When `null`, the `game_server_config_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.game_server_config_overrides.new](#fn-game_server_config_overridesnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_deployment_rollout.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `game_services_game_server_deployment_rollout` resource into the root Terraform configuration.
@@ -293,9 +293,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -103,7 +103,7 @@ to the name field in each of the NotificationChannel objects that are
 returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 &#39;projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]&#39; When `null`, the `notification_channels` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `user_labels` (`obj`): This field is intended to be used for organizing and identifying the AlertPolicy
 objects.The field can contain up to 64 entries. Each key and value is limited
 to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
@@ -119,7 +119,7 @@ to this policy. Best practice is for the documentation to include information
 to help responders understand, mitigate, escalate, and correct the underlying
 problems detected by the alerting policy. Notification channels that have
 limited capacity might not show this documentation. When `null`, the `documentation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.documentation.new](#fn-documentationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -157,7 +157,7 @@ to the name field in each of the NotificationChannel objects that are
 returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 &#39;projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]&#39; When `null`, the `notification_channels` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `user_labels` (`obj`): This field is intended to be used for organizing and identifying the AlertPolicy
 objects.The field can contain up to 64 entries. Each key and value is limited
 to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
@@ -173,7 +173,7 @@ to this policy. Best practice is for the documentation to include information
 to help responders understand, mitigate, escalate, and correct the underlying
 problems detected by the alerting policy. Notification channels that have
 limited capacity might not show this documentation. When `null`, the `documentation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.documentation.new](#fn-documentationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `monitoring_alert_policy` resource into the root Terraform configuration.
@@ -1165,9 +1165,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

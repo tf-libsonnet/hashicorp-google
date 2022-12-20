@@ -129,7 +129,7 @@ name must be 1-63 characters long and match the regular expression
 &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a
 lowercase letter, and all following characters must be a dash, lowercase
 letter, or digit, except the last character, which cannot be a dash.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the regional interconnect attachment resides. When `null`, the `region` field will be omitted from the resulting object.
   - `router` (`string`): URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
@@ -139,7 +139,7 @@ Cloud Router is configured.
 DEDICATED. Possible values: [&#34;DEDICATED&#34;, &#34;PARTNER&#34;, &#34;PARTNER_PROVIDER&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `vlan_tag8021q` (`number`): The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream. When `null`, the `vlan_tag8021q` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_interconnect_attachment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_interconnect_attachment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -228,7 +228,7 @@ name must be 1-63 characters long and match the regular expression
 &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the first character must be a
 lowercase letter, and all following characters must be a dash, lowercase
 letter, or digit, except the last character, which cannot be a dash.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the regional interconnect attachment resides. When `null`, the `region` field will be omitted from the resulting object.
   - `router` (`string`): URL of the cloud router to be used for dynamic routing. This router must be in
 the same region as this InterconnectAttachment. The InterconnectAttachment will
@@ -238,7 +238,7 @@ Cloud Router is configured.
 DEDICATED. Possible values: [&#34;DEDICATED&#34;, &#34;PARTNER&#34;, &#34;PARTNER_PROVIDER&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `vlan_tag8021q` (`number`): The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
 using PARTNER type this will be managed upstream. When `null`, the `vlan_tag8021q` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_interconnect_attachment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_interconnect_attachment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_interconnect_attachment` resource into the root Terraform configuration.
@@ -537,9 +537,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

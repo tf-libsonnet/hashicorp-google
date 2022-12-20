@@ -70,12 +70,12 @@ character, which cannot be a dash.
 
 
 These are in the same namespace as the managed SSL certificates. When `null`, the `name` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API
 which type this is. Default value: &#34;MANAGED&#34; Possible values: [&#34;MANAGED&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `managed` (`list[obj]`): Properties relevant to a managed certificate.  These will be used if the
 certificate is managed (as indicated by a value of &#39;MANAGED&#39; in &#39;type&#39;). When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.managed.new](#fn-managednew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -111,12 +111,12 @@ character, which cannot be a dash.
 
 
 These are in the same namespace as the managed SSL certificates. When `null`, the `name` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): Enum field whose value is always &#39;MANAGED&#39; - used to signal to the API
 which type this is. Default value: &#34;MANAGED&#34; Possible values: [&#34;MANAGED&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `managed` (`list[obj]`): Properties relevant to a managed certificate.  These will be used if the
 certificate is managed (as indicated by a value of &#39;MANAGED&#39; in &#39;type&#39;). When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.managed.new](#fn-managednew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_managed_ssl_certificate.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_managed_ssl_certificate` resource into the root Terraform configuration.
@@ -316,8 +316,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

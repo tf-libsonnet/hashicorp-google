@@ -107,7 +107,7 @@ zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId]. When `null`, the `location_id` field will be omitted from the resulting object.
   - `memory_size_gb` (`number`): Redis memory size in GiB.
   - `name` (`string`): The ID of the instance or a fully qualified identifier for the instance.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `read_replicas_mode` (`string`): Optional. Read replica mode. Can only be specified when trying to create the instance.
 If not set, Memorystore Redis backend will default to READ_REPLICAS_DISABLED.
 - READ_REPLICAS_DISABLED: If disabled, read endpoint will not be provided and the
@@ -144,7 +144,7 @@ range associated with the private service access connection, or &#34;auto&#34;. 
   - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.new](#fn-maintenance_policynew) constructor.
   - `maintenance_schedule` (`list[obj]`): Upcoming maintenance schedule. When `null`, the `maintenance_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_schedule.new](#fn-maintenance_schedulenew) constructor.
   - `persistence_config` (`list[obj]`): Persistence configuration for an instance. When `null`, the `persistence_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.persistence_config.new](#fn-persistence_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -190,7 +190,7 @@ zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId]. When `null`, the `location_id` field will be omitted from the resulting object.
   - `memory_size_gb` (`number`): Redis memory size in GiB.
   - `name` (`string`): The ID of the instance or a fully qualified identifier for the instance.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `read_replicas_mode` (`string`): Optional. Read replica mode. Can only be specified when trying to create the instance.
 If not set, Memorystore Redis backend will default to READ_REPLICAS_DISABLED.
 - READ_REPLICAS_DISABLED: If disabled, read endpoint will not be provided and the
@@ -227,7 +227,7 @@ range associated with the private service access connection, or &#34;auto&#34;. 
   - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.new](#fn-maintenance_policynew) constructor.
   - `maintenance_schedule` (`list[obj]`): Upcoming maintenance schedule. When `null`, the `maintenance_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_schedule.new](#fn-maintenance_schedulenew) constructor.
   - `persistence_config` (`list[obj]`): Persistence configuration for an instance. When `null`, the `persistence_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.persistence_config.new](#fn-persistence_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `redis_instance` resource into the root Terraform configuration.
@@ -864,9 +864,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

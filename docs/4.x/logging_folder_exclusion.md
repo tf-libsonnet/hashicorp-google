@@ -53,7 +53,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): A human-readable description. When `null`, the `description` field will be omitted from the resulting object.
   - `disabled` (`bool`): Whether this exclusion rule should be disabled or not. This defaults to false. When `null`, the `disabled` field will be omitted from the resulting object.
   - `filter` (`string`): The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-  - `folder` (`string`): Set the `folder` field on the resulting resource block.
+  - `folder` (`string`): 
   - `name` (`string`): The name of the logging exclusion.
 
 **Returns**:
@@ -81,7 +81,7 @@ injecting into a complete block.
   - `description` (`string`): A human-readable description. When `null`, the `description` field will be omitted from the resulting object.
   - `disabled` (`bool`): Whether this exclusion rule should be disabled or not. This defaults to false. When `null`, the `disabled` field will be omitted from the resulting object.
   - `filter` (`string`): The filter to apply when excluding logs. Only log entries that match the filter are excluded.
-  - `folder` (`string`): Set the `folder` field on the resulting object.
+  - `folder` (`string`): 
   - `name` (`string`): The name of the logging exclusion.
 
 **Returns**:

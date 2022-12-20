@@ -109,7 +109,7 @@ this field is set to false, the revision name will still autogenerate.) When `nu
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
 More info: http://kubernetes.io/docs/user-guide/identifiers#names
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `metadata` (`list[obj]`): Metadata associated with this Service, including name, namespace, labels,
 and annotations. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.metadata.new](#fn-metadatanew) constructor.
   - `template` (`list[obj]`): template holds the latest specification for the Revision to
@@ -122,7 +122,7 @@ https://github.com/knative/serving/blob/main/docs/client-conventions.md#associat
 
 Cloud Run does not currently support referencing a build that is
 responsible for materializing the container image from source. When `null`, the `template` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.new](#fn-templatenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.timeouts.new](#fn-timeoutsnew) constructor.
   - `traffic` (`list[obj]`): Traffic specifies how to distribute traffic over a collection of Knative Revisions
 and Configurations When `null`, the `traffic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.traffic.new](#fn-trafficnew) constructor.
 
@@ -158,7 +158,7 @@ this field is set to false, the revision name will still autogenerate.) When `nu
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
 More info: http://kubernetes.io/docs/user-guide/identifiers#names
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `metadata` (`list[obj]`): Metadata associated with this Service, including name, namespace, labels,
 and annotations. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.metadata.new](#fn-metadatanew) constructor.
   - `template` (`list[obj]`): template holds the latest specification for the Revision to
@@ -171,7 +171,7 @@ https://github.com/knative/serving/blob/main/docs/client-conventions.md#associat
 
 Cloud Run does not currently support referencing a build that is
 responsible for materializing the container image from source. When `null`, the `template` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.new](#fn-templatenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.timeouts.new](#fn-timeoutsnew) constructor.
   - `traffic` (`list[obj]`): Traffic specifies how to distribute traffic over a collection of Knative Revisions
 and Configurations When `null`, the `traffic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.traffic.new](#fn-trafficnew) constructor.
 
@@ -1000,9 +1000,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

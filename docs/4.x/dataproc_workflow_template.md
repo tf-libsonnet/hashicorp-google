@@ -170,7 +170,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `jobs` (`list[obj]`): Required. The Directed Acyclic Graph of Jobs to submit. When `null`, the `jobs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_workflow_template.jobs.new](#fn-jobsnew) constructor.
   - `parameters` (`list[obj]`): Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated. When `null`, the `parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_workflow_template.parameters.new](#fn-parametersnew) constructor.
   - `placement` (`list[obj]`): Required. WorkflowTemplate scheduling information. When `null`, the `placement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_workflow_template.placement.new](#fn-placementnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_workflow_template.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_workflow_template.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -203,7 +203,7 @@ injecting into a complete block.
   - `jobs` (`list[obj]`): Required. The Directed Acyclic Graph of Jobs to submit. When `null`, the `jobs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_workflow_template.jobs.new](#fn-jobsnew) constructor.
   - `parameters` (`list[obj]`): Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated. When `null`, the `parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_workflow_template.parameters.new](#fn-parametersnew) constructor.
   - `placement` (`list[obj]`): Required. WorkflowTemplate scheduling information. When `null`, the `placement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_workflow_template.placement.new](#fn-placementnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_workflow_template.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_workflow_template.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dataproc_workflow_template` resource into the root Terraform configuration.
@@ -1760,8 +1760,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

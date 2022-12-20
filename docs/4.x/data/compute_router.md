@@ -56,7 +56,7 @@ which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
   - `network` (`string`): A reference to the network to which this router belongs.
-  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the router resides. When `null`, the `region` field will be omitted from the resulting object.
 
 **Returns**:
@@ -88,7 +88,7 @@ which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
   - `network` (`string`): A reference to the network to which this router belongs.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the router resides. When `null`, the `region` field will be omitted from the resulting object.
 
 **Returns**:

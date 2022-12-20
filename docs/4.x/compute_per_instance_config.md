@@ -76,13 +76,13 @@ Default is &#39;REPLACE&#39;. Possible values are:
 * REFRESH
 * NONE When `null`, the `most_disruptive_allowed_action` field will be omitted from the resulting object.
   - `name` (`string`): The name for this per-instance config and its corresponding instance.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `remove_instance_state_on_destroy` (`bool`): When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update. When `null`, the `remove_instance_state_on_destroy` field will be omitted from the resulting object.
   - `zone` (`string`): Zone where the containing instance group manager is located When `null`, the `zone` field will be omitted from the resulting object.
   - `preserved_state` (`list[obj]`): The preserved state for this instance. When `null`, the `preserved_state` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.new](#fn-preserved_statenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -120,13 +120,13 @@ Default is &#39;REPLACE&#39;. Possible values are:
 * REFRESH
 * NONE When `null`, the `most_disruptive_allowed_action` field will be omitted from the resulting object.
   - `name` (`string`): The name for this per-instance config and its corresponding instance.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `remove_instance_state_on_destroy` (`bool`): When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update. When `null`, the `remove_instance_state_on_destroy` field will be omitted from the resulting object.
   - `zone` (`string`): Zone where the containing instance group manager is located When `null`, the `zone` field will be omitted from the resulting object.
   - `preserved_state` (`list[obj]`): The preserved state for this instance. When `null`, the `preserved_state` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.new](#fn-preserved_statenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_per_instance_config` resource into the root Terraform configuration.
@@ -389,9 +389,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -82,13 +82,13 @@ which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
   - `nat_subnets` (`list`): An array of subnets that is provided for NAT in this service attachment.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where the resource resides. When `null`, the `region` field will be omitted from the resulting object.
   - `target_service` (`string`): The URL of a forwarding rule that represents the service identified by
 this service attachment.
   - `consumer_accept_lists` (`list[obj]`): An array of projects that are allowed to connect to this service
 attachment. When `null`, the `consumer_accept_lists` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.consumer_accept_lists.new](#fn-consumer_accept_listsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -131,13 +131,13 @@ which means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
   - `nat_subnets` (`list`): An array of subnets that is provided for NAT in this service attachment.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where the resource resides. When `null`, the `region` field will be omitted from the resulting object.
   - `target_service` (`string`): The URL of a forwarding rule that represents the service identified by
 this service attachment.
   - `consumer_accept_lists` (`list[obj]`): An array of projects that are allowed to connect to this service
 attachment. When `null`, the `consumer_accept_lists` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.consumer_accept_lists.new](#fn-consumer_accept_listsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_service_attachment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_service_attachment` resource into the root Terraform configuration.
@@ -418,9 +418,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

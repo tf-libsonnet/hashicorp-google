@@ -82,10 +82,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `location` (`string`): A reference to the zone where the machine resides.
   - `name` (`string`): The name specified for the Notebook runtime.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `access_config` (`list[obj]`): The config settings for accessing runtime. When `null`, the `access_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.access_config.new](#fn-access_confignew) constructor.
   - `software_config` (`list[obj]`): The config settings for software inside the runtime. When `null`, the `software_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.software_config.new](#fn-software_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.timeouts.new](#fn-timeoutsnew) constructor.
   - `virtual_machine` (`list[obj]`): Use a Compute Engine VM image to start the managed notebook instance. When `null`, the `virtual_machine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.new](#fn-virtual_machinenew) constructor.
 
 **Returns**:
@@ -112,10 +112,10 @@ injecting into a complete block.
 **Args**:
   - `location` (`string`): A reference to the zone where the machine resides.
   - `name` (`string`): The name specified for the Notebook runtime.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `access_config` (`list[obj]`): The config settings for accessing runtime. When `null`, the `access_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.access_config.new](#fn-access_confignew) constructor.
   - `software_config` (`list[obj]`): The config settings for software inside the runtime. When `null`, the `software_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.software_config.new](#fn-software_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.timeouts.new](#fn-timeoutsnew) constructor.
   - `virtual_machine` (`list[obj]`): Use a Compute Engine VM image to start the managed notebook instance. When `null`, the `virtual_machine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.notebooks_runtime.virtual_machine.new](#fn-virtual_machinenew) constructor.
 
 **Returns**:
@@ -423,9 +423,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

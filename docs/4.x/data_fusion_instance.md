@@ -89,7 +89,7 @@ such as Compute Engine VMs. When `null`, the `labels` field will be omitted from
   - `private_instance` (`bool`): Specifies whether the Data Fusion instance should be private. If set to
 true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet. When `null`, the `private_instance` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the Data Fusion instance. When `null`, the `region` field will be omitted from the resulting object.
   - `type` (`string`): Represents the type of Data Fusion instance. Each type is configured with
 the default settings for processing and memory.
@@ -106,7 +106,7 @@ pipelines at low cost. Possible values: [&#34;BASIC&#34;, &#34;ENTERPRISE&#34;, 
   - `crypto_key_config` (`list[obj]`): The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK) feature. When `null`, the `crypto_key_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.crypto_key_config.new](#fn-crypto_key_confignew) constructor.
   - `event_publish_config` (`list[obj]`): Option to enable and pass metadata for event publishing. When `null`, the `event_publish_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.event_publish_config.new](#fn-event_publish_confignew) constructor.
   - `network_config` (`list[obj]`): Network configuration options. These are required when a private Data Fusion instance is to be created. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.network_config.new](#fn-network_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -143,7 +143,7 @@ such as Compute Engine VMs. When `null`, the `labels` field will be omitted from
   - `private_instance` (`bool`): Specifies whether the Data Fusion instance should be private. If set to
 true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet. When `null`, the `private_instance` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the Data Fusion instance. When `null`, the `region` field will be omitted from the resulting object.
   - `type` (`string`): Represents the type of Data Fusion instance. Each type is configured with
 the default settings for processing and memory.
@@ -160,7 +160,7 @@ pipelines at low cost. Possible values: [&#34;BASIC&#34;, &#34;ENTERPRISE&#34;, 
   - `crypto_key_config` (`list[obj]`): The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK) feature. When `null`, the `crypto_key_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.crypto_key_config.new](#fn-crypto_key_confignew) constructor.
   - `event_publish_config` (`list[obj]`): Option to enable and pass metadata for event publishing. When `null`, the `event_publish_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.event_publish_config.new](#fn-event_publish_confignew) constructor.
   - `network_config` (`list[obj]`): Network configuration options. These are required when a private Data Fusion instance is to be created. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.network_config.new](#fn-network_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_fusion_instance` resource into the root Terraform configuration.
@@ -644,9 +644,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

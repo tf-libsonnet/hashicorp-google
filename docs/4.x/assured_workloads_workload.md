@@ -73,7 +73,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `provisioned_resources_parent` (`string`): Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id}, organizations/{organization_id} When `null`, the `provisioned_resources_parent` field will be omitted from the resulting object.
   - `kms_settings` (`list[obj]`): Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes. When `null`, the `kms_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.assured_workloads_workload.kms_settings.new](#fn-kms_settingsnew) constructor.
   - `resource_settings` (`list[obj]`): Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional. When `null`, the `resource_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.assured_workloads_workload.resource_settings.new](#fn-resource_settingsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.assured_workloads_workload.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.assured_workloads_workload.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -106,7 +106,7 @@ injecting into a complete block.
   - `provisioned_resources_parent` (`string`): Input only. The parent resource for the resources managed by this Assured Workload. May be either an organization or a folder. Must be the same or a child of the Workload parent. If not specified all resources are created under the Workload parent. Formats: folders/{folder_id}, organizations/{organization_id} When `null`, the `provisioned_resources_parent` field will be omitted from the resulting object.
   - `kms_settings` (`list[obj]`): Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes. When `null`, the `kms_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.assured_workloads_workload.kms_settings.new](#fn-kms_settingsnew) constructor.
   - `resource_settings` (`list[obj]`): Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional. When `null`, the `resource_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.assured_workloads_workload.resource_settings.new](#fn-resource_settingsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.assured_workloads_workload.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.assured_workloads_workload.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `assured_workloads_workload` resource into the root Terraform configuration.
@@ -399,9 +399,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

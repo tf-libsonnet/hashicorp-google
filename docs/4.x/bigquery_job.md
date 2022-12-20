@@ -100,12 +100,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `job_timeout_ms` (`string`): Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job. When `null`, the `job_timeout_ms` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels associated with this job. You can use these to organize and group your jobs. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The geographic location of the job. The default value is US. When `null`, the `location` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `copy` (`list[obj]`): Copies a table. When `null`, the `copy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.copy.new](#fn-copynew) constructor.
   - `extract` (`list[obj]`): Configures an extract job. When `null`, the `extract` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.extract.new](#fn-extractnew) constructor.
   - `load` (`list[obj]`): Configures a load job. When `null`, the `load` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.load.new](#fn-loadnew) constructor.
   - `query` (`list[obj]`): Configures a query job. When `null`, the `query` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.query.new](#fn-querynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -133,12 +133,12 @@ injecting into a complete block.
   - `job_timeout_ms` (`string`): Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job. When `null`, the `job_timeout_ms` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels associated with this job. You can use these to organize and group your jobs. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The geographic location of the job. The default value is US. When `null`, the `location` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `copy` (`list[obj]`): Copies a table. When `null`, the `copy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.copy.new](#fn-copynew) constructor.
   - `extract` (`list[obj]`): Configures an extract job. When `null`, the `extract` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.extract.new](#fn-extractnew) constructor.
   - `load` (`list[obj]`): Configures a load job. When `null`, the `load` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.load.new](#fn-loadnew) constructor.
   - `query` (`list[obj]`): Configures a query job. When `null`, the `query` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.query.new](#fn-querynew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigquery_job` resource into the root Terraform configuration.
@@ -985,8 +985,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

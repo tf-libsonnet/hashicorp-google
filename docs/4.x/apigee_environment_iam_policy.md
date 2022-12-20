@@ -48,9 +48,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `env_id` (`string`): Set the `env_id` field on the resulting resource block.
-  - `org_id` (`string`): Set the `org_id` field on the resulting resource block.
-  - `policy_data` (`string`): Set the `policy_data` field on the resulting resource block.
+  - `env_id` (`string`): 
+  - `org_id` (`string`): 
+  - `policy_data` (`string`): 
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -74,9 +74,9 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `env_id` (`string`): Set the `env_id` field on the resulting object.
-  - `org_id` (`string`): Set the `org_id` field on the resulting object.
-  - `policy_data` (`string`): Set the `policy_data` field on the resulting object.
+  - `env_id` (`string`): 
+  - `org_id` (`string`): 
+  - `policy_data` (`string`): 
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `apigee_environment_iam_policy` resource into the root Terraform configuration.

@@ -51,7 +51,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): The location of this cloud function.
   - `name` (`string`): A user-defined name of the function. Function names must
 be unique globally and match pattern &#39;projects/*/locations/*/functions/*&#39;.
-  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -78,7 +78,7 @@ injecting into a complete block.
   - `location` (`string`): The location of this cloud function.
   - `name` (`string`): A user-defined name of the function. Function names must
 be unique globally and match pattern &#39;projects/*/locations/*/functions/*&#39;.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `cloudfunctions2_function` data source into the root Terraform configuration.

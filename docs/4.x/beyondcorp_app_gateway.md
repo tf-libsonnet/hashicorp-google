@@ -60,10 +60,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `host_type` (`string`): The type of hosting used by the AppGateway. Default value: &#34;HOST_TYPE_UNSPECIFIED&#34; Possible values: [&#34;HOST_TYPE_UNSPECIFIED&#34;, &#34;GCP_REGIONAL_MIG&#34;] When `null`, the `host_type` field will be omitted from the resulting object.
   - `labels` (`obj`): Resource labels to represent user provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): ID of the AppGateway.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the AppGateway. When `null`, the `region` field will be omitted from the resulting object.
   - `type` (`string`): The type of network connectivity used by the AppGateway. Default value: &#34;TYPE_UNSPECIFIED&#34; Possible values: [&#34;TYPE_UNSPECIFIED&#34;, &#34;TCP_PROXY&#34;] When `null`, the `type` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_gateway.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,10 +91,10 @@ injecting into a complete block.
   - `host_type` (`string`): The type of hosting used by the AppGateway. Default value: &#34;HOST_TYPE_UNSPECIFIED&#34; Possible values: [&#34;HOST_TYPE_UNSPECIFIED&#34;, &#34;GCP_REGIONAL_MIG&#34;] When `null`, the `host_type` field will be omitted from the resulting object.
   - `labels` (`obj`): Resource labels to represent user provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): ID of the AppGateway.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the AppGateway. When `null`, the `region` field will be omitted from the resulting object.
   - `type` (`string`): The type of network connectivity used by the AppGateway. Default value: &#34;TYPE_UNSPECIFIED&#34; Possible values: [&#34;TYPE_UNSPECIFIED&#34;, &#34;TCP_PROXY&#34;] When `null`, the `type` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_gateway.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.beyondcorp_app_gateway.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `beyondcorp_app_gateway` resource into the root Terraform configuration.
@@ -265,8 +265,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

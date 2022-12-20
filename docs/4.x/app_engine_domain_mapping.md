@@ -59,9 +59,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `domain_name` (`string`): Relative name of the domain serving the application. Example: example.com.
   - `override_strategy` (`string`): Whether the domain creation should override any existing mappings for this domain.
 By default, overrides are rejected. Default value: &#34;STRICT&#34; Possible values: [&#34;STRICT&#34;, &#34;OVERRIDE&#34;] When `null`, the `override_strategy` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `ssl_settings` (`list[obj]`): SSL configuration for this domain. If unconfigured, this domain will not serve with SSL. When `null`, the `ssl_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_domain_mapping.ssl_settings.new](#fn-ssl_settingsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_domain_mapping.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_domain_mapping.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -88,9 +88,9 @@ injecting into a complete block.
   - `domain_name` (`string`): Relative name of the domain serving the application. Example: example.com.
   - `override_strategy` (`string`): Whether the domain creation should override any existing mappings for this domain.
 By default, overrides are rejected. Default value: &#34;STRICT&#34; Possible values: [&#34;STRICT&#34;, &#34;OVERRIDE&#34;] When `null`, the `override_strategy` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `ssl_settings` (`list[obj]`): SSL configuration for this domain. If unconfigured, this domain will not serve with SSL. When `null`, the `ssl_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_domain_mapping.ssl_settings.new](#fn-ssl_settingsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_domain_mapping.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_domain_mapping.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `app_engine_domain_mapping` resource into the root Terraform configuration.
@@ -264,9 +264,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -73,11 +73,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `labels` (`obj`): The labels associated with this game server config. Each label is a
 key-value pair. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): Location of the Deployment. When `null`, the `location` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `fleet_configs` (`list[obj]`): The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one. When `null`, the `fleet_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_config.fleet_configs.new](#fn-fleet_configsnew) constructor.
   - `scaling_configs` (`list[obj]`): Optional. This contains the autoscaling settings. When `null`, the `scaling_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_config.scaling_configs.new](#fn-scaling_configsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_config.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -107,11 +107,11 @@ injecting into a complete block.
   - `labels` (`obj`): The labels associated with this game server config. Each label is a
 key-value pair. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): Location of the Deployment. When `null`, the `location` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `fleet_configs` (`list[obj]`): The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one. When `null`, the `fleet_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_config.fleet_configs.new](#fn-fleet_configsnew) constructor.
   - `scaling_configs` (`list[obj]`): Optional. This contains the autoscaling settings. When `null`, the `scaling_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_config.scaling_configs.new](#fn-scaling_configsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_config.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.game_services_game_server_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `game_services_game_server_config` resource into the root Terraform configuration.
@@ -460,8 +460,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

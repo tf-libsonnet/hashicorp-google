@@ -49,10 +49,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `delegates` (`list`): Set the `delegates` field on the resulting data source block. When `null`, the `delegates` field will be omitted from the resulting object.
+  - `delegates` (`list`):  When `null`, the `delegates` field will be omitted from the resulting object.
   - `expires_in` (`number`): Number of seconds until the JWT expires. If set and non-zero an `exp` claim will be added to the payload derived from the current timestamp plus expires_in seconds. When `null`, the `expires_in` field will be omitted from the resulting object.
   - `payload` (`string`): A JSON-encoded JWT claims set that will be included in the signed JWT.
-  - `target_service_account` (`string`): Set the `target_service_account` field on the resulting data source block.
+  - `target_service_account` (`string`): 
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -76,10 +76,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `delegates` (`list`): Set the `delegates` field on the resulting object. When `null`, the `delegates` field will be omitted from the resulting object.
+  - `delegates` (`list`):  When `null`, the `delegates` field will be omitted from the resulting object.
   - `expires_in` (`number`): Number of seconds until the JWT expires. If set and non-zero an `exp` claim will be added to the payload derived from the current timestamp plus expires_in seconds. When `null`, the `expires_in` field will be omitted from the resulting object.
   - `payload` (`string`): A JSON-encoded JWT claims set that will be included in the signed JWT.
-  - `target_service_account` (`string`): Set the `target_service_account` field on the resulting object.
+  - `target_service_account` (`string`): 
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `service_account_jwt` data source into the root Terraform configuration.

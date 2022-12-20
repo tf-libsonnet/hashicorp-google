@@ -72,7 +72,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
   - `imported_libraries` (`list`): Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the
 imported JAVASCRIPT libraries. When `null`, the `imported_libraries` field will be omitted from the resulting object.
   - `language` (`string`): The language of the routine. Possible values: [&#34;SQL&#34;, &#34;JAVASCRIPT&#34;] When `null`, the `language` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `return_table_type` (`string`): Optional. Can be set only if routineType = &#34;TABLE_VALUED_FUNCTION&#34;.
 
 If absent, the return table type is inferred from definitionBody at query time in each query
@@ -90,7 +90,7 @@ the schema as returned by the API. When `null`, the `return_type` field will be 
   - `routine_id` (`string`): The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
   - `routine_type` (`string`): The type of routine. Possible values: [&#34;SCALAR_FUNCTION&#34;, &#34;PROCEDURE&#34;, &#34;TABLE_VALUED_FUNCTION&#34;] When `null`, the `routine_type` field will be omitted from the resulting object.
   - `arguments` (`list[obj]`): Input/output argument of a function or a stored procedure. When `null`, the `arguments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.arguments.new](#fn-argumentsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -122,7 +122,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
   - `imported_libraries` (`list`): Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the
 imported JAVASCRIPT libraries. When `null`, the `imported_libraries` field will be omitted from the resulting object.
   - `language` (`string`): The language of the routine. Possible values: [&#34;SQL&#34;, &#34;JAVASCRIPT&#34;] When `null`, the `language` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `return_table_type` (`string`): Optional. Can be set only if routineType = &#34;TABLE_VALUED_FUNCTION&#34;.
 
 If absent, the return table type is inferred from definitionBody at query time in each query
@@ -140,7 +140,7 @@ the schema as returned by the API. When `null`, the `return_type` field will be 
   - `routine_id` (`string`): The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
   - `routine_type` (`string`): The type of routine. Possible values: [&#34;SCALAR_FUNCTION&#34;, &#34;PROCEDURE&#34;, &#34;TABLE_VALUED_FUNCTION&#34;] When `null`, the `routine_type` field will be omitted from the resulting object.
   - `arguments` (`list[obj]`): Input/output argument of a function or a stored procedure. When `null`, the `arguments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.arguments.new](#fn-argumentsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigquery_routine` resource into the root Terraform configuration.
@@ -444,9 +444,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

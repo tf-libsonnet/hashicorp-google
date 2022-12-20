@@ -54,7 +54,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `disabled` (`bool`): Whether this exclusion rule should be disabled or not. This defaults to false. When `null`, the `disabled` field will be omitted from the resulting object.
   - `filter` (`string`): The filter to apply when excluding logs. Only log entries that match the filter are excluded.
   - `name` (`string`): The name of the logging exclusion.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -82,7 +82,7 @@ injecting into a complete block.
   - `disabled` (`bool`): Whether this exclusion rule should be disabled or not. This defaults to false. When `null`, the `disabled` field will be omitted from the resulting object.
   - `filter` (`string`): The filter to apply when excluding logs. Only log entries that match the filter are excluded.
   - `name` (`string`): The name of the logging exclusion.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logging_project_exclusion` resource into the root Terraform configuration.

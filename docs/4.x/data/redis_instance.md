@@ -49,7 +49,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
   - `name` (`string`): The ID of the instance or a fully qualified identifier for the instance.
-  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The name of the Redis region of the instance. When `null`, the `region` field will be omitted from the resulting object.
 
 **Returns**:
@@ -75,7 +75,7 @@ injecting into a complete block.
 
 **Args**:
   - `name` (`string`): The ID of the instance or a fully qualified identifier for the instance.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The name of the Redis region of the instance. When `null`, the `region` field will be omitted from the resulting object.
 
 **Returns**:

@@ -61,7 +61,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `mode` (`string`): The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. When `null`, the `mode` field will be omitted from the resulting object.
   - `project` (`string`): The project that the referenced compute instance is a part of. If instance is referenced by its self_link the project defined in the link will take precedence. When `null`, the `project` field will be omitted from the resulting object.
   - `zone` (`string`): The zone that the referenced compute instance is located within. If instance is referenced by its self_link the zone defined in the link will take precedence. When `null`, the `zone` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_attached_disk.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_attached_disk.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -91,7 +91,7 @@ injecting into a complete block.
   - `mode` (`string`): The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. When `null`, the `mode` field will be omitted from the resulting object.
   - `project` (`string`): The project that the referenced compute instance is a part of. If instance is referenced by its self_link the project defined in the link will take precedence. When `null`, the `project` field will be omitted from the resulting object.
   - `zone` (`string`): The zone that the referenced compute instance is located within. If instance is referenced by its self_link the zone defined in the link will take precedence. When `null`, the `zone` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_attached_disk.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_attached_disk.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_attached_disk` resource into the root Terraform configuration.
@@ -246,8 +246,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -66,11 +66,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `display_name` (`string`): The display name for this template. When `null`, the `display_name` field will be omitted from the resulting object.
   - `force_delete` (`bool`): This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template. When `null`, the `force_delete` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Template location region. When `null`, the `region` field will be omitted from the resulting object.
   - `tag_template_id` (`string`): The id of the tag template to create.
   - `fields` (`list[obj]`): Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields. When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.new](#fn-fieldsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -96,11 +96,11 @@ injecting into a complete block.
 **Args**:
   - `display_name` (`string`): The display name for this template. When `null`, the `display_name` field will be omitted from the resulting object.
   - `force_delete` (`bool`): This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template. When `null`, the `force_delete` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Template location region. When `null`, the `region` field will be omitted from the resulting object.
   - `tag_template_id` (`string`): The id of the tag template to create.
   - `fields` (`list[obj]`): Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields. When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.fields.new](#fn-fieldsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_catalog_tag_template.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_catalog_tag_template` resource into the root Terraform configuration.
@@ -278,7 +278,7 @@ Terraform sub block.
 **Args**:
   - `description` (`string`): A description for this field. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): The display name for this field. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `field_id` (`string`): Set the `field_id` field on the resulting object.
+  - `field_id` (`string`): 
   - `is_required` (`bool`): Whether this is a required field. Defaults to false. When `null`, the `is_required` field will be omitted from the resulting object.
   - `order` (`number`): The order of this field with respect to other fields in this tag template.
 A higher value indicates a more important field. The value can be negative.
@@ -382,9 +382,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

@@ -63,13 +63,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `auth_domain` (`string`): The domain to authenticate users with when using App Engine&#39;s User API. When `null`, the `auth_domain` field will be omitted from the resulting object.
-  - `database_type` (`string`): Set the `database_type` field on the resulting resource block. When `null`, the `database_type` field will be omitted from the resulting object.
+  - `database_type` (`string`):  When `null`, the `database_type` field will be omitted from the resulting object.
   - `location_id` (`string`): The location to serve the app from.
   - `project` (`string`): The project ID to create the application under. When `null`, the `project` field will be omitted from the resulting object.
   - `serving_status` (`string`): The serving status of the app. When `null`, the `serving_status` field will be omitted from the resulting object.
   - `feature_settings` (`list[obj]`): A block of optional settings to configure specific App Engine features: When `null`, the `feature_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.feature_settings.new](#fn-feature_settingsnew) constructor.
   - `iap` (`list[obj]`): Settings for enabling Cloud Identity Aware Proxy When `null`, the `iap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.iap.new](#fn-iapnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -94,13 +94,13 @@ injecting into a complete block.
 
 **Args**:
   - `auth_domain` (`string`): The domain to authenticate users with when using App Engine&#39;s User API. When `null`, the `auth_domain` field will be omitted from the resulting object.
-  - `database_type` (`string`): Set the `database_type` field on the resulting object. When `null`, the `database_type` field will be omitted from the resulting object.
+  - `database_type` (`string`):  When `null`, the `database_type` field will be omitted from the resulting object.
   - `location_id` (`string`): The location to serve the app from.
   - `project` (`string`): The project ID to create the application under. When `null`, the `project` field will be omitted from the resulting object.
   - `serving_status` (`string`): The serving status of the app. When `null`, the `serving_status` field will be omitted from the resulting object.
   - `feature_settings` (`list[obj]`): A block of optional settings to configure specific App Engine features: When `null`, the `feature_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.feature_settings.new](#fn-feature_settingsnew) constructor.
   - `iap` (`list[obj]`): Settings for enabling Cloud Identity Aware Proxy When `null`, the `iap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.iap.new](#fn-iapnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.app_engine_application.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `app_engine_application` resource into the root Terraform configuration.
@@ -313,7 +313,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `split_health_checks` (`bool`): Set the `split_health_checks` field on the resulting object.
+  - `split_health_checks` (`bool`): 
 
 **Returns**:
   - An attribute object that represents the `feature_settings` sub block.
@@ -361,8 +361,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

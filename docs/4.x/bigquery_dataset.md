@@ -126,12 +126,12 @@ contains at least two geographic places.
 The default value is multi-regional location &#39;US&#39;.
 Changing this forces a new resource to be created. When `null`, the `location` field will be omitted from the resulting object.
   - `max_time_travel_hours` (`string`): Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to 7 days). When `null`, the `max_time_travel_hours` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `access` (`list[obj]`): An array of objects that define dataset access for one or more entities. When `null`, the `access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.access.new](#fn-accessnew) constructor.
   - `default_encryption_configuration` (`list[obj]`): The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
 this value, unless table creation request (or query) overrides the key. When `null`, the `default_encryption_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.default_encryption_configuration.new](#fn-default_encryption_configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -206,12 +206,12 @@ contains at least two geographic places.
 The default value is multi-regional location &#39;US&#39;.
 Changing this forces a new resource to be created. When `null`, the `location` field will be omitted from the resulting object.
   - `max_time_travel_hours` (`string`): Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to 7 days). When `null`, the `max_time_travel_hours` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `access` (`list[obj]`): An array of objects that define dataset access for one or more entities. When `null`, the `access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.access.new](#fn-accessnew) constructor.
   - `default_encryption_configuration` (`list[obj]`): The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
 this value, unless table creation request (or query) overrides the key. When `null`, the `default_encryption_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.default_encryption_configuration.new](#fn-default_encryption_configurationnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigquery_dataset` resource into the root Terraform configuration.
@@ -688,9 +688,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

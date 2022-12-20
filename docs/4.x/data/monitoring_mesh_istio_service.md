@@ -51,7 +51,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `dataSrcLabel` (`string`): The name label of the block.
   - `mesh_uid` (`string`): Identifier for the mesh in which this Istio service is defined.
                         Corresponds to the meshUid metric label in Istio metrics.
-  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `service_name` (`string`): The name of the Istio service underlying this service. 
                         Corresponds to the destination_service_name metric label in Istio metrics.
   - `service_namespace` (`string`): The namespace of the Istio service underlying this service.
@@ -81,7 +81,7 @@ injecting into a complete block.
 **Args**:
   - `mesh_uid` (`string`): Identifier for the mesh in which this Istio service is defined.
                         Corresponds to the meshUid metric label in Istio metrics.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `service_name` (`string`): The name of the Istio service underlying this service. 
                         Corresponds to the destination_service_name metric label in Istio metrics.
   - `service_namespace` (`string`): The namespace of the Istio service underlying this service.

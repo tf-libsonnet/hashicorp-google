@@ -316,7 +316,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `release_channel` (`list[obj]`): Configuration options for the Release channel feature, which provide more control over automatic upgrades of your GKE clusters. Note that removing this field from your config will not unenroll it. Instead, use the &#34;UNSPECIFIED&#34; channel. When `null`, the `release_channel` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.release_channel.new](#fn-release_channelnew) constructor.
   - `resource_usage_export_config` (`list[obj]`): Configuration for the ResourceUsageExportConfig feature. When `null`, the `resource_usage_export_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.resource_usage_export_config.new](#fn-resource_usage_export_confignew) constructor.
   - `service_external_ips_config` (`list[obj]`): If set, and enabled=true, services with external ips field will not be blocked When `null`, the `service_external_ips_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.service_external_ips_config.new](#fn-service_external_ips_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.timeouts.new](#fn-timeoutsnew) constructor.
   - `vertical_pod_autoscaling` (`list[obj]`): Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it. When `null`, the `vertical_pod_autoscaling` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.vertical_pod_autoscaling.new](#fn-vertical_pod_autoscalingnew) constructor.
   - `workload_identity_config` (`list[obj]`): Configuration for the use of Kubernetes Service Accounts in GCP IAM policies. When `null`, the `workload_identity_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.workload_identity_config.new](#fn-workload_identity_confignew) constructor.
 
@@ -394,7 +394,7 @@ injecting into a complete block.
   - `release_channel` (`list[obj]`): Configuration options for the Release channel feature, which provide more control over automatic upgrades of your GKE clusters. Note that removing this field from your config will not unenroll it. Instead, use the &#34;UNSPECIFIED&#34; channel. When `null`, the `release_channel` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.release_channel.new](#fn-release_channelnew) constructor.
   - `resource_usage_export_config` (`list[obj]`): Configuration for the ResourceUsageExportConfig feature. When `null`, the `resource_usage_export_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.resource_usage_export_config.new](#fn-resource_usage_export_confignew) constructor.
   - `service_external_ips_config` (`list[obj]`): If set, and enabled=true, services with external ips field will not be blocked When `null`, the `service_external_ips_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.service_external_ips_config.new](#fn-service_external_ips_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.timeouts.new](#fn-timeoutsnew) constructor.
   - `vertical_pod_autoscaling` (`list[obj]`): Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it. When `null`, the `vertical_pod_autoscaling` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.vertical_pod_autoscaling.new](#fn-vertical_pod_autoscalingnew) constructor.
   - `workload_identity_config` (`list[obj]`): Configuration for the use of Kubernetes Service Accounts in GCP IAM policies. When `null`, the `workload_identity_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.workload_identity_config.new](#fn-workload_identity_confignew) constructor.
 
@@ -1915,8 +1915,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `disabled` (`bool`): Set the `disabled` field on the resulting object.
-  - `load_balancer_type` (`string`): Set the `load_balancer_type` field on the resulting object. When `null`, the `load_balancer_type` field will be omitted from the resulting object.
+  - `disabled` (`bool`): 
+  - `load_balancer_type` (`string`):  When `null`, the `load_balancer_type` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cloudrun_config` sub block.
@@ -1939,7 +1939,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
+  - `enabled` (`bool`): 
 
 **Returns**:
   - An attribute object that represents the `dns_cache_config` sub block.
@@ -1962,7 +1962,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
+  - `enabled` (`bool`): 
 
 **Returns**:
   - An attribute object that represents the `gce_persistent_disk_csi_driver_config` sub block.
@@ -1985,7 +1985,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
+  - `enabled` (`bool`): 
 
 **Returns**:
   - An attribute object that represents the `gcp_filestore_csi_driver_config` sub block.
@@ -2008,7 +2008,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `disabled` (`bool`): Set the `disabled` field on the resulting object.
+  - `disabled` (`bool`): 
 
 **Returns**:
   - An attribute object that represents the `horizontal_pod_autoscaling` sub block.
@@ -2031,7 +2031,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `disabled` (`bool`): Set the `disabled` field on the resulting object.
+  - `disabled` (`bool`): 
 
 **Returns**:
   - An attribute object that represents the `http_load_balancing` sub block.
@@ -2054,7 +2054,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `disabled` (`bool`): Set the `disabled` field on the resulting object.
+  - `disabled` (`bool`): 
 
 **Returns**:
   - An attribute object that represents the `network_policy_config` sub block.
@@ -2444,7 +2444,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `start_time` (`string`): Set the `start_time` field on the resulting object.
+  - `start_time` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `daily_maintenance_window` sub block.
@@ -2467,9 +2467,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `end_time` (`string`): Set the `end_time` field on the resulting object.
-  - `exclusion_name` (`string`): Set the `exclusion_name` field on the resulting object.
-  - `start_time` (`string`): Set the `start_time` field on the resulting object.
+  - `end_time` (`string`): 
+  - `exclusion_name` (`string`): 
+  - `start_time` (`string`): 
   - `exclusion_options` (`list[obj]`): Maintenance exclusion related options. When `null`, the `exclusion_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.maintenance_policy.maintenance_exclusion.exclusion_options.new](#fn-maintenance_policymaintenance_policyexclusion_optionsnew) constructor.
 
 **Returns**:
@@ -2516,9 +2516,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `end_time` (`string`): Set the `end_time` field on the resulting object.
-  - `recurrence` (`string`): Set the `recurrence` field on the resulting object.
-  - `start_time` (`string`): Set the `start_time` field on the resulting object.
+  - `end_time` (`string`): 
+  - `recurrence` (`string`): 
+  - `start_time` (`string`): 
 
 **Returns**:
   - An attribute object that represents the `recurring_window` sub block.
@@ -3508,10 +3508,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `read` (`string`): Set the `read` field on the resulting object. When `null`, the `read` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `read` (`string`):  When `null`, the `read` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

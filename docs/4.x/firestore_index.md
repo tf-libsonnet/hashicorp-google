@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `collection` (`string`): The collection being indexed.
   - `database` (`string`): The Firestore database id. Defaults to &#39;&#34;(default)&#34;&#39;. When `null`, the `database` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `query_scope` (`string`): The scope at which a query is run. Default value: &#34;COLLECTION&#34; Possible values: [&#34;COLLECTION&#34;, &#34;COLLECTION_GROUP&#34;] When `null`, the `query_scope` field will be omitted from the resulting object.
   - `fields` (`list[obj]`): The fields supported by this index. The last field entry is always for
 the field path &#39;__name__&#39;. If, on creation, &#39;__name__&#39; was not
@@ -67,7 +67,7 @@ specified as the last field, it will be added automatically with the
 same direction as that of the last field defined. If the final field
 in a composite index is not directional, the &#39;__name__&#39; will be
 ordered &#39;&#34;ASCENDING&#34;&#39; (unless explicitly specified otherwise). When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.fields.new](#fn-fieldsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -93,7 +93,7 @@ injecting into a complete block.
 **Args**:
   - `collection` (`string`): The collection being indexed.
   - `database` (`string`): The Firestore database id. Defaults to &#39;&#34;(default)&#34;&#39;. When `null`, the `database` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `query_scope` (`string`): The scope at which a query is run. Default value: &#34;COLLECTION&#34; Possible values: [&#34;COLLECTION&#34;, &#34;COLLECTION_GROUP&#34;] When `null`, the `query_scope` field will be omitted from the resulting object.
   - `fields` (`list[obj]`): The fields supported by this index. The last field entry is always for
 the field path &#39;__name__&#39;. If, on creation, &#39;__name__&#39; was not
@@ -101,7 +101,7 @@ specified as the last field, it will be added automatically with the
 same direction as that of the last field defined. If the final field
 in a composite index is not directional, the &#39;__name__&#39; will be
 ordered &#39;&#34;ASCENDING&#34;&#39; (unless explicitly specified otherwise). When `null`, the `fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.fields.new](#fn-fieldsnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_index.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firestore_index` resource into the root Terraform configuration.
@@ -288,8 +288,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

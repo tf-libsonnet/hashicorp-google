@@ -68,7 +68,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `expiration_time` (`string`): Time of expiration for this note. Leave empty if note does not expire. When `null`, the `expiration_time` field will be omitted from the resulting object.
   - `long_description` (`string`): A detailed description of the note When `null`, the `long_description` field will be omitted from the resulting object.
   - `name` (`string`): The name of the note.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `related_note_names` (`list`): Names of other notes related to this note. When `null`, the `related_note_names` field will be omitted from the resulting object.
   - `short_description` (`string`): A one sentence description of the note. When `null`, the `short_description` field will be omitted from the resulting object.
   - `attestation_authority` (`list[obj]`): Note kind that represents a logical attestation &#34;role&#34; or &#34;authority&#34;.
@@ -81,7 +81,7 @@ Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don&#39;t all live in the same
 project. When `null`, the `attestation_authority` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.attestation_authority.new](#fn-attestation_authoritynew) constructor.
   - `related_url` (`list[obj]`): URLs associated with this note and related metadata. When `null`, the `related_url` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.related_url.new](#fn-related_urlnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -108,7 +108,7 @@ injecting into a complete block.
   - `expiration_time` (`string`): Time of expiration for this note. Leave empty if note does not expire. When `null`, the `expiration_time` field will be omitted from the resulting object.
   - `long_description` (`string`): A detailed description of the note When `null`, the `long_description` field will be omitted from the resulting object.
   - `name` (`string`): The name of the note.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `related_note_names` (`list`): Names of other notes related to this note. When `null`, the `related_note_names` field will be omitted from the resulting object.
   - `short_description` (`string`): A one sentence description of the note. When `null`, the `short_description` field will be omitted from the resulting object.
   - `attestation_authority` (`list[obj]`): Note kind that represents a logical attestation &#34;role&#34; or &#34;authority&#34;.
@@ -121,7 +121,7 @@ Note. It also provides a single point of lookup to find all attached
 Attestation Occurrences, even if they don&#39;t all live in the same
 project. When `null`, the `attestation_authority` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.attestation_authority.new](#fn-attestation_authoritynew) constructor.
   - `related_url` (`list[obj]`): URLs associated with this note and related metadata. When `null`, the `related_url` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.related_url.new](#fn-related_urlnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_analysis_note.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_analysis_note` resource into the root Terraform configuration.
@@ -428,9 +428,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

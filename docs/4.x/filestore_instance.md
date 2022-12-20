@@ -72,7 +72,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location of the instance. This can be a region for ENTERPRISE tier instances. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the instance.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `tier` (`string`): The service tier of the instance.
 Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE
   - `zone` (`string`): The name of the Filestore zone of the instance. When `null`, the `zone` field will be omitted from the resulting object.
@@ -80,7 +80,7 @@ Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD
 single file share is supported. When `null`, the `file_shares` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.file_shares.new](#fn-file_sharesnew) constructor.
   - `networks` (`list[obj]`): VPC networks to which the instance is connected. For this version,
 only a single network is supported. When `null`, the `networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.networks.new](#fn-networksnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -109,7 +109,7 @@ injecting into a complete block.
   - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location of the instance. This can be a region for ENTERPRISE tier instances. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the instance.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `tier` (`string`): The service tier of the instance.
 Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE
   - `zone` (`string`): The name of the Filestore zone of the instance. When `null`, the `zone` field will be omitted from the resulting object.
@@ -117,7 +117,7 @@ Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD
 single file share is supported. When `null`, the `file_shares` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.file_shares.new](#fn-file_sharesnew) constructor.
   - `networks` (`list[obj]`): VPC networks to which the instance is connected. For this version,
 only a single network is supported. When `null`, the `networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.networks.new](#fn-networksnew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `filestore_instance` resource into the root Terraform configuration.
@@ -470,9 +470,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

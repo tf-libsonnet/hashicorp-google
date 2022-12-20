@@ -55,7 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
                         Corresponds to the destination_service_namespace metric label in Istio metrics.
   - `mesh_uid` (`string`): Identifier for the Istio mesh in which this canonical service is defined.
                         Corresponds to the meshUid metric label in Istio metrics.
-  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -85,7 +85,7 @@ injecting into a complete block.
                         Corresponds to the destination_service_namespace metric label in Istio metrics.
   - `mesh_uid` (`string`): Identifier for the Istio mesh in which this canonical service is defined.
                         Corresponds to the meshUid metric label in Istio metrics.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `monitoring_istio_canonical_service` data source into the root Terraform configuration.

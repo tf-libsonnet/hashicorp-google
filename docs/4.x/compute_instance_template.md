@@ -132,7 +132,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `scheduling` (`list[obj]`): The scheduling strategy to use. When `null`, the `scheduling` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.scheduling.new](#fn-schedulingnew) constructor.
   - `service_account` (`list[obj]`): Service account to attach to the instance. When `null`, the `service_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.service_account.new](#fn-service_accountnew) constructor.
   - `shielded_instance_config` (`list[obj]`): Enable Shielded VM on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Note: shielded_instance_config can only be used with boot images with shielded vm support. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.shielded_instance_config.new](#fn-shielded_instance_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -178,7 +178,7 @@ injecting into a complete block.
   - `scheduling` (`list[obj]`): The scheduling strategy to use. When `null`, the `scheduling` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.scheduling.new](#fn-schedulingnew) constructor.
   - `service_account` (`list[obj]`): Service account to attach to the instance. When `null`, the `service_account` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.service_account.new](#fn-service_accountnew) constructor.
   - `shielded_instance_config` (`list[obj]`): Enable Shielded VM on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Note: shielded_instance_config can only be used with boot images with shielded vm support. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.shielded_instance_config.new](#fn-shielded_instance_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_instance_template` resource into the root Terraform configuration.
@@ -1089,9 +1089,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `key` (`string`): Set the `key` field on the resulting object.
-  - `operator` (`string`): Set the `operator` field on the resulting object.
-  - `values` (`list`): Set the `values` field on the resulting object.
+  - `key` (`string`): 
+  - `operator` (`string`): 
+  - `values` (`list`): 
 
 **Returns**:
   - An attribute object that represents the `node_affinities` sub block.
@@ -1163,8 +1163,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

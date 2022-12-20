@@ -49,10 +49,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `delegates` (`list`): Set the `delegates` field on the resulting data source block. When `null`, the `delegates` field will be omitted from the resulting object.
-  - `include_email` (`bool`): Set the `include_email` field on the resulting data source block. When `null`, the `include_email` field will be omitted from the resulting object.
-  - `target_audience` (`string`): Set the `target_audience` field on the resulting data source block.
-  - `target_service_account` (`string`): Set the `target_service_account` field on the resulting data source block. When `null`, the `target_service_account` field will be omitted from the resulting object.
+  - `delegates` (`list`):  When `null`, the `delegates` field will be omitted from the resulting object.
+  - `include_email` (`bool`):  When `null`, the `include_email` field will be omitted from the resulting object.
+  - `target_audience` (`string`): 
+  - `target_service_account` (`string`):  When `null`, the `target_service_account` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -76,10 +76,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `delegates` (`list`): Set the `delegates` field on the resulting object. When `null`, the `delegates` field will be omitted from the resulting object.
-  - `include_email` (`bool`): Set the `include_email` field on the resulting object. When `null`, the `include_email` field will be omitted from the resulting object.
-  - `target_audience` (`string`): Set the `target_audience` field on the resulting object.
-  - `target_service_account` (`string`): Set the `target_service_account` field on the resulting object. When `null`, the `target_service_account` field will be omitted from the resulting object.
+  - `delegates` (`list`):  When `null`, the `delegates` field will be omitted from the resulting object.
+  - `include_email` (`bool`):  When `null`, the `include_email` field will be omitted from the resulting object.
+  - `target_audience` (`string`): 
+  - `target_service_account` (`string`):  When `null`, the `target_service_account` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `service_account_id_token` data source into the root Terraform configuration.

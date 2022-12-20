@@ -79,7 +79,7 @@ domain specified will be granted the specified access When `null`, the `domain` 
   - `group_by_email` (`string`): An email address of a Google Group to grant access to. When `null`, the `group_by_email` field will be omitted from the resulting object.
   - `iam_member` (`string`): Some other type of member that appears in the IAM Policy but isn&#39;t a user,
 group, domain, or special group. For example: &#39;allUsers&#39; When `null`, the `iam_member` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `role` (`string`): Describes the rights granted to the user specified by the other
 member of the access object. Basic, predefined, and custom roles are
 supported. Predefined roles that have equivalent basic roles are
@@ -107,7 +107,7 @@ executed against that routine will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that routine is updated by any user, access to the routine
 needs to be granted again via an update operation. When `null`, the `routine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset_access.routine.new](#fn-routinenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset_access.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset_access.timeouts.new](#fn-timeoutsnew) constructor.
   - `view` (`list[obj]`): A view from a different dataset to grant access to. Queries
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
@@ -144,7 +144,7 @@ domain specified will be granted the specified access When `null`, the `domain` 
   - `group_by_email` (`string`): An email address of a Google Group to grant access to. When `null`, the `group_by_email` field will be omitted from the resulting object.
   - `iam_member` (`string`): Some other type of member that appears in the IAM Policy but isn&#39;t a user,
 group, domain, or special group. For example: &#39;allUsers&#39; When `null`, the `iam_member` field will be omitted from the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `role` (`string`): Describes the rights granted to the user specified by the other
 member of the access object. Basic, predefined, and custom roles are
 supported. Predefined roles that have equivalent basic roles are
@@ -172,7 +172,7 @@ executed against that routine will have read access to tables in
 this dataset. The role field is not required when this field is
 set. If that routine is updated by any user, access to the routine
 needs to be granted again via an update operation. When `null`, the `routine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset_access.routine.new](#fn-routinenew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset_access.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset_access.timeouts.new](#fn-timeoutsnew) constructor.
   - `view` (`list[obj]`): A view from a different dataset to grant access to. Queries
 executed against that view will have read access to tables in
 this dataset. The role field is not required when this field is
@@ -551,8 +551,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

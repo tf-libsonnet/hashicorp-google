@@ -68,11 +68,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): The name of the InboundSamlConfig resource. Must start with &#39;saml.&#39; and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after &#39;saml.&#39; must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
-  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `idp_config` (`list[obj]`): SAML IdP configuration when the project acts as the relying party When `null`, the `idp_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.idp_config.new](#fn-idp_confignew) constructor.
   - `sp_config` (`list[obj]`): SAML SP (Service Provider) configuration when the project acts as the relying party to receive
 and accept an authentication assertion issued by a SAML identity provider. When `null`, the `sp_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.sp_config.new](#fn-sp_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -101,11 +101,11 @@ injecting into a complete block.
   - `name` (`string`): The name of the InboundSamlConfig resource. Must start with &#39;saml.&#39; and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after &#39;saml.&#39; must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`):  When `null`, the `project` field will be omitted from the resulting object.
   - `idp_config` (`list[obj]`): SAML IdP configuration when the project acts as the relying party When `null`, the `idp_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.idp_config.new](#fn-idp_confignew) constructor.
   - `sp_config` (`list[obj]`): SAML SP (Service Provider) configuration when the project acts as the relying party to receive
 and accept an authentication assertion issued by a SAML identity provider. When `null`, the `sp_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.sp_config.new](#fn-sp_confignew) constructor.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`):  When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_inbound_saml_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `identity_platform_inbound_saml_config` resource into the root Terraform configuration.
@@ -375,9 +375,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
-  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
-  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
+  - `create` (`string`):  When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`):  When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`):  When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
