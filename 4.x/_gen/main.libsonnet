@@ -314,6 +314,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   eventarc_channel: (import 'resources/eventarc_channel.libsonnet'),
   eventarc_google_channel_config: (import 'resources/eventarc_google_channel_config.libsonnet'),
   eventarc_trigger: (import 'resources/eventarc_trigger.libsonnet'),
+  filestore_backup: (import 'resources/filestore_backup.libsonnet'),
   filestore_instance: (import 'resources/filestore_instance.libsonnet'),
   filestore_snapshot: (import 'resources/filestore_snapshot.libsonnet'),
   firebaserules_release: (import 'resources/firebaserules_release.libsonnet'),

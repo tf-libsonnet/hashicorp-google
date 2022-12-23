@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withBucketName()`](#fn-withbucketname)
 * [`fn withBucketOptions()`](#fn-withbucketoptions)
 * [`fn withBucketOptionsMixin()`](#fn-withbucketoptionsmixin)
 * [`fn withDescription()`](#fn-withdescription)
@@ -71,6 +72,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `bucket_name` (`string`): The resource name of the Log Bucket that owns the Log Metric. Only Log Buckets in projects
+are supported. The bucket has to be in the same project as the metric. When `null`, the `bucket_name` field will be omitted from the resulting object.
   - `description` (`string`): A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `filter` (`string`): An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
@@ -94,7 +97,10 @@ log entry field. The value of the field is converted to a string before applying
 error to specify a regex that does not include exactly one capture group. When `null`, the `value_extractor` field will be omitted from the resulting object.
   - `bucket_options` (`list[obj]`): The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values. When `null`, the `bucket_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.new](#fn-bucket_optionsnew) constructor.
-  - `metric_descriptor` (`list[obj]`): The metric descriptor associated with the logs-based metric. When `null`, the `metric_descriptor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.new](#fn-metric_descriptornew) constructor.
+  - `metric_descriptor` (`list[obj]`): The optional metric descriptor associated with the logs-based metric.
+If unspecified, it uses a default metric descriptor with a DELTA metric kind,
+INT64 value type, with no labels and a unit of &#34;1&#34;. Such a metric counts the
+number of log entries matching the filter expression. When `null`, the `metric_descriptor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.new](#fn-metric_descriptornew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -119,6 +125,8 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `bucket_name` (`string`): The resource name of the Log Bucket that owns the Log Metric. Only Log Buckets in projects
+are supported. The bucket has to be in the same project as the metric. When `null`, the `bucket_name` field will be omitted from the resulting object.
   - `description` (`string`): A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `filter` (`string`): An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
@@ -142,11 +150,30 @@ log entry field. The value of the field is converted to a string before applying
 error to specify a regex that does not include exactly one capture group. When `null`, the `value_extractor` field will be omitted from the resulting object.
   - `bucket_options` (`list[obj]`): The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values. When `null`, the `bucket_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.bucket_options.new](#fn-bucket_optionsnew) constructor.
-  - `metric_descriptor` (`list[obj]`): The metric descriptor associated with the logs-based metric. When `null`, the `metric_descriptor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.new](#fn-metric_descriptornew) constructor.
+  - `metric_descriptor` (`list[obj]`): The optional metric descriptor associated with the logs-based metric.
+If unspecified, it uses a default metric descriptor with a DELTA metric kind,
+INT64 value type, with no labels and a unit of &#34;1&#34;. Such a metric counts the
+number of log entries matching the filter expression. When `null`, the `metric_descriptor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.metric_descriptor.new](#fn-metric_descriptornew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_metric.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logging_metric` resource into the root Terraform configuration.
+
+
+### fn withBucketName
+
+```ts
+withBucketName()
+```
+
+`google.string.withBucketName` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the bucket_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `bucket_name` field.
 
 
 ### fn withBucketOptions

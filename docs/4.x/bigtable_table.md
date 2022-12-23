@@ -17,6 +17,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withColumnFamily()`](#fn-withcolumnfamily)
 * [`fn withColumnFamilyMixin()`](#fn-withcolumnfamilymixin)
+* [`fn withDeletionProtection()`](#fn-withdeletionprotection)
 * [`fn withInstanceName()`](#fn-withinstancename)
 * [`fn withName()`](#fn-withname)
 * [`fn withProject()`](#fn-withproject)
@@ -57,6 +58,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `deletion_protection` (`string`): A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value. When `null`, the `deletion_protection` field will be omitted from the resulting object.
   - `instance_name` (`string`): The name of the Bigtable instance.
   - `name` (`string`): The name of the table.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
@@ -86,6 +88,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `deletion_protection` (`string`): A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value. When `null`, the `deletion_protection` field will be omitted from the resulting object.
   - `instance_name` (`string`): The name of the Bigtable instance.
   - `name` (`string`): The name of the table.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
@@ -132,6 +135,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `column_family` field.
+
+
+### fn withDeletionProtection
+
+```ts
+withDeletionProtection()
+```
+
+`google.string.withDeletionProtection` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the deletion_protection field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `deletion_protection` field.
 
 
 ### fn withInstanceName

@@ -324,6 +324,7 @@ project.
 * [eventarc_channel](eventarc_channel.md)
 * [eventarc_google_channel_config](eventarc_google_channel_config.md)
 * [eventarc_trigger](eventarc_trigger.md)
+* [filestore_backup](filestore_backup.md)
 * [filestore_instance](filestore_instance.md)
 * [filestore_snapshot](filestore_snapshot.md)
 * [firebaserules_release](firebaserules_release.md)
