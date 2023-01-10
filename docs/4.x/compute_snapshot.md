@@ -84,8 +84,19 @@ character, which cannot be a dash.
   - `source_disk` (`string`): A reference to the disk used to create this snapshot.
   - `storage_locations` (`list`): Cloud Storage bucket storage location of the snapshot (regional or multi-regional). When `null`, the `storage_locations` field will be omitted from the resulting object.
   - `zone` (`string`): A reference to the zone where the disk is hosted. When `null`, the `zone` field will be omitted from the resulting object.
-  - `snapshot_encryption_key` (`list[obj]`): The customer-supplied encryption key of the snapshot. Required if the
-source snapshot is protected by a customer-supplied encryption key. When `null`, the `snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.snapshot_encryption_key.new](#fn-snapshot_encryption_keynew) constructor.
+  - `snapshot_encryption_key` (`list[obj]`): Encrypts the snapshot using a customer-supplied encryption key.
+
+After you encrypt a snapshot using a customer-supplied key, you must
+provide the same key if you use the snapshot later. For example, you
+must provide the encryption key when you create a disk from the
+encrypted snapshot in a future request.
+
+Customer-supplied encryption keys do not protect access to metadata of
+the snapshot.
+
+If you do not provide an encryption key when creating the snapshot,
+then the snapshot will be encrypted using an automatically generated
+key and you do not need to provide a key to use the snapshot later. When `null`, the `snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.snapshot_encryption_key.new](#fn-snapshot_encryption_keynew) constructor.
   - `source_disk_encryption_key` (`list[obj]`): The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
 key. When `null`, the `source_disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.source_disk_encryption_key.new](#fn-source_disk_encryption_keynew) constructor.
@@ -132,8 +143,19 @@ character, which cannot be a dash.
   - `source_disk` (`string`): A reference to the disk used to create this snapshot.
   - `storage_locations` (`list`): Cloud Storage bucket storage location of the snapshot (regional or multi-regional). When `null`, the `storage_locations` field will be omitted from the resulting object.
   - `zone` (`string`): A reference to the zone where the disk is hosted. When `null`, the `zone` field will be omitted from the resulting object.
-  - `snapshot_encryption_key` (`list[obj]`): The customer-supplied encryption key of the snapshot. Required if the
-source snapshot is protected by a customer-supplied encryption key. When `null`, the `snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.snapshot_encryption_key.new](#fn-snapshot_encryption_keynew) constructor.
+  - `snapshot_encryption_key` (`list[obj]`): Encrypts the snapshot using a customer-supplied encryption key.
+
+After you encrypt a snapshot using a customer-supplied key, you must
+provide the same key if you use the snapshot later. For example, you
+must provide the encryption key when you create a disk from the
+encrypted snapshot in a future request.
+
+Customer-supplied encryption keys do not protect access to metadata of
+the snapshot.
+
+If you do not provide an encryption key when creating the snapshot,
+then the snapshot will be encrypted using an automatically generated
+key and you do not need to provide a key to use the snapshot later. When `null`, the `snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.snapshot_encryption_key.new](#fn-snapshot_encryption_keynew) constructor.
   - `source_disk_encryption_key` (`list[obj]`): The customer-supplied encryption key of the source snapshot. Required
 if the source snapshot is protected by a customer-supplied encryption
 key. When `null`, the `source_disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_snapshot.source_disk_encryption_key.new](#fn-source_disk_encryption_keynew) constructor.

@@ -56,6 +56,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-disknew)
   * [`obj disk.disk_encryption_key`](#obj-diskdisk_encryption_key)
     * [`fn new()`](#fn-diskdisk_encryption_keynew)
+  * [`obj disk.source_image_encryption_key`](#obj-disksource_image_encryption_key)
+    * [`fn new()`](#fn-disksource_image_encryption_keynew)
+  * [`obj disk.source_snapshot_encryption_key`](#obj-disksource_snapshot_encryption_key)
+    * [`fn new()`](#fn-disksource_snapshot_encryption_keynew)
 * [`obj guest_accelerator`](#obj-guest_accelerator)
   * [`fn new()`](#fn-guest_acceleratornew)
 * [`obj network_interface`](#obj-network_interface)
@@ -838,8 +842,21 @@ Terraform sub block.
   - `resource_policies` (`list`): A list (short name or id) of resource policies to attach to this disk. Currently a max of 1 resource policy is supported. When `null`, the `resource_policies` field will be omitted from the resulting object.
   - `source` (`string`): The name (not self_link) of the disk (such as those managed by google_compute_disk) to attach. ~&gt; Note: Either source or source_image is required when creating a new instance except for when creating a local SSD. When `null`, the `source` field will be omitted from the resulting object.
   - `source_image` (`string`): The image from which to initialize this disk. This can be one of: the image&#39;s self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~&gt; Note: Either source or source_image is required when creating a new instance except for when creating a local SSD. When `null`, the `source_image` field will be omitted from the resulting object.
+  - `source_snapshot` (`string`): The source snapshot to create this disk. When creating
+a new instance, one of initializeParams.sourceSnapshot,
+initializeParams.sourceImage, or disks.source is
+required except for local SSD. When `null`, the `source_snapshot` field will be omitted from the resulting object.
   - `type` (`string`): The type of Google Compute Engine disk, can be either &#34;SCRATCH&#34; or &#34;PERSISTENT&#34;. When `null`, the `type` field will be omitted from the resulting object.
   - `disk_encryption_key` (`list[obj]`): Encrypts or decrypts a disk using a customer-supplied encryption key. When `null`, the `disk_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.disk.disk_encryption_key.new](#fn-diskdisk_encryption_keynew) constructor.
+  - `source_image_encryption_key` (`list[obj]`): The customer-supplied encryption key of the source
+image. Required if the source image is protected by a
+customer-supplied encryption key.
+
+Instance templates do not store customer-supplied
+encryption keys, so you cannot create disks for
+instances in a managed instance group if the source
+images are encrypted with your own keys. When `null`, the `source_image_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.disk.source_image_encryption_key.new](#fn-disksource_image_encryption_keynew) constructor.
+  - `source_snapshot_encryption_key` (`list[obj]`): The customer-supplied encryption key of the source snapshot. When `null`, the `source_snapshot_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.disk.source_snapshot_encryption_key.new](#fn-disksource_snapshot_encryption_keynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `disk` sub block.
@@ -866,6 +883,60 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `disk_encryption_key` sub block.
+
+
+## obj disk.source_image_encryption_key
+
+
+
+### fn disk.source_image_encryption_key.new
+
+```ts
+new()
+```
+
+
+`google.compute_instance_template.disk.source_image_encryption_key.new` constructs a new object with attributes and blocks configured for the `source_image_encryption_key`
+Terraform sub block.
+
+
+
+**Args**:
+  - `kms_key_self_link` (`string`): The self link of the encryption key that is stored in
+Google Cloud KMS.
+  - `kms_key_service_account` (`string`): The service account being used for the encryption
+request for the given KMS key. If absent, the Compute
+Engine default service account is used. When `null`, the `kms_key_service_account` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `source_image_encryption_key` sub block.
+
+
+## obj disk.source_snapshot_encryption_key
+
+
+
+### fn disk.source_snapshot_encryption_key.new
+
+```ts
+new()
+```
+
+
+`google.compute_instance_template.disk.source_snapshot_encryption_key.new` constructs a new object with attributes and blocks configured for the `source_snapshot_encryption_key`
+Terraform sub block.
+
+
+
+**Args**:
+  - `kms_key_self_link` (`string`): The self link of the encryption key that is stored in
+Google Cloud KMS.
+  - `kms_key_service_account` (`string`): The service account being used for the encryption
+request for the given KMS key. If absent, the Compute
+Engine default service account is used. When `null`, the `kms_key_service_account` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `source_snapshot_encryption_key` sub block.
 
 
 ## obj guest_accelerator

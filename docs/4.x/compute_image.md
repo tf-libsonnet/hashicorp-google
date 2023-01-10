@@ -20,6 +20,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withFamily()`](#fn-withfamily)
 * [`fn withGuestOsFeatures()`](#fn-withguestosfeatures)
 * [`fn withGuestOsFeaturesMixin()`](#fn-withguestosfeaturesmixin)
+* [`fn withImageEncryptionKey()`](#fn-withimageencryptionkey)
+* [`fn withImageEncryptionKeyMixin()`](#fn-withimageencryptionkeymixin)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withLicenses()`](#fn-withlicenses)
 * [`fn withName()`](#fn-withname)
@@ -33,6 +35,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj guest_os_features`](#obj-guest_os_features)
   * [`fn new()`](#fn-guest_os_featuresnew)
+* [`obj image_encryption_key`](#obj-image_encryption_key)
+  * [`fn new()`](#fn-image_encryption_keynew)
 * [`obj raw_disk`](#obj-raw_disk)
   * [`fn new()`](#fn-raw_disknew)
 * [`obj timeouts`](#obj-timeouts)
@@ -106,6 +110,11 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceDisk URL When `null`, the `source_snapshot` field will be omitted from the resulting object.
   - `guest_os_features` (`list[obj]`): A list of features to enable on the guest operating system.
 Applicable only for bootable images. When `null`, the `guest_os_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.guest_os_features.new](#fn-guest_os_featuresnew) constructor.
+  - `image_encryption_key` (`list[obj]`): Encrypts the image using a customer-supplied encryption key.
+
+After you encrypt an image with a customer-supplied key, you must
+provide the same key if you use the image later (e.g. to create a
+disk from the image) When `null`, the `image_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.image_encryption_key.new](#fn-image_encryption_keynew) constructor.
   - `raw_disk` (`list[obj]`): The parameters of the raw disk image. When `null`, the `raw_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.raw_disk.new](#fn-raw_disknew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -170,6 +179,11 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceDisk URL When `null`, the `source_snapshot` field will be omitted from the resulting object.
   - `guest_os_features` (`list[obj]`): A list of features to enable on the guest operating system.
 Applicable only for bootable images. When `null`, the `guest_os_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.guest_os_features.new](#fn-guest_os_featuresnew) constructor.
+  - `image_encryption_key` (`list[obj]`): Encrypts the image using a customer-supplied encryption key.
+
+After you encrypt an image with a customer-supplied key, you must
+provide the same key if you use the image later (e.g. to create a
+disk from the image) When `null`, the `image_encryption_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.image_encryption_key.new](#fn-image_encryption_keynew) constructor.
   - `raw_disk` (`list[obj]`): The parameters of the raw disk image. When `null`, the `raw_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.raw_disk.new](#fn-raw_disknew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -260,6 +274,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `guest_os_features` field.
+
+
+### fn withImageEncryptionKey
+
+```ts
+withImageEncryptionKey()
+```
+
+`google.list[obj].withImageEncryptionKey` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the image_encryption_key field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withImageEncryptionKeyMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `image_encryption_key` field.
+
+
+### fn withImageEncryptionKeyMixin
+
+```ts
+withImageEncryptionKeyMixin()
+```
+
+`google.list[obj].withImageEncryptionKeyMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the image_encryption_key field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withImageEncryptionKey](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `image_encryption_key` field.
 
 
 ### fn withLabels
@@ -468,6 +519,33 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `guest_os_features` sub block.
+
+
+## obj image_encryption_key
+
+
+
+### fn image_encryption_key.new
+
+```ts
+new()
+```
+
+
+`google.compute_image.image_encryption_key.new` constructs a new object with attributes and blocks configured for the `image_encryption_key`
+Terraform sub block.
+
+
+
+**Args**:
+  - `kms_key_self_link` (`string`): The self link of the encryption key that is stored in Google Cloud
+KMS. When `null`, the `kms_key_self_link` field will be omitted from the resulting object.
+  - `kms_key_service_account` (`string`): The service account being used for the encryption request for the
+given KMS key. If absent, the Compute Engine default service
+account is used. When `null`, the `kms_key_service_account` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `image_encryption_key` sub block.
 
 
 ## obj raw_disk

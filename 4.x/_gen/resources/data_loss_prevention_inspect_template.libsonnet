@@ -74,11 +74,13 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       },
     },
     info_types:: {
-      '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.info_types.new` constructs a new object with attributes and blocks configured for the `info_types`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed\nat https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.\n\n**Returns**:\n  - An attribute object that represents the `info_types` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.info_types.new` constructs a new object with attributes and blocks configured for the `info_types`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed\nat https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.\n  - `version` (`string`): Version of the information type to use. By default, the version is set to stable When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `info_types` sub block.\n', args=[]),
       new(
-        name
+        name,
+        version=null
       ):: std.prune(a={
         name: name,
+        version: version,
       }),
     },
     limits:: {

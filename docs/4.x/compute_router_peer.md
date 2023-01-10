@@ -31,6 +31,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRegion()`](#fn-withregion)
 * [`fn withRouter()`](#fn-withrouter)
+* [`fn withRouterApplianceInstance()`](#fn-withrouterapplianceinstance)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj advertised_ip_ranges`](#obj-advertised_ip_ranges)
@@ -107,6 +108,10 @@ Only IPv4 is supported.
   - `region` (`string`): Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
   - `router` (`string`): The name of the Cloud Router in which this BgpPeer will be configured.
+  - `router_appliance_instance` (`string`): The URI of the VM instance that is used as third-party router appliances
+such as Next Gen Firewalls, Virtual Routers, or Router Appliances.
+The VM instance must be located in zones contained in the same region as
+this Cloud Router. The VM instance is the peer side of the BGP session. When `null`, the `router_appliance_instance` field will be omitted from the resulting object.
   - `advertised_ip_ranges` (`list[obj]`): User-specified list of individual IP ranges to advertise in
 custom mode. This field can only be populated if advertiseMode
 is &#39;CUSTOM&#39; and is advertised to all peers of the router. These IP
@@ -175,6 +180,10 @@ Only IPv4 is supported.
   - `region` (`string`): Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
   - `router` (`string`): The name of the Cloud Router in which this BgpPeer will be configured.
+  - `router_appliance_instance` (`string`): The URI of the VM instance that is used as third-party router appliances
+such as Next Gen Firewalls, Virtual Routers, or Router Appliances.
+The VM instance must be located in zones contained in the same region as
+this Cloud Router. The VM instance is the peer side of the BGP session. When `null`, the `router_appliance_instance` field will be omitted from the resulting object.
   - `advertised_ip_ranges` (`list[obj]`): User-specified list of individual IP ranges to advertise in
 custom mode. This field can only be populated if advertiseMode
 is &#39;CUSTOM&#39; and is advertised to all peers of the router. These IP
@@ -451,6 +460,22 @@ Terraform resource block to set or update the router field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `router` field.
+
+
+### fn withRouterApplianceInstance
+
+```ts
+withRouterApplianceInstance()
+```
+
+`google.string.withRouterApplianceInstance` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the router_appliance_instance field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `router_appliance_instance` field.
 
 
 ### fn withTimeouts
