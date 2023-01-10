@@ -212,6 +212,8 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-node_poolnode_configshielded_instance_confignew)
     * [`obj node_pool.node_config.workload_metadata_config`](#obj-node_poolnode_configworkload_metadata_config)
       * [`fn new()`](#fn-node_poolnode_configworkload_metadata_confignew)
+  * [`obj node_pool.placement_policy`](#obj-node_poolplacement_policy)
+    * [`fn new()`](#fn-node_poolplacement_policynew)
   * [`obj node_pool.upgrade_settings`](#obj-node_poolupgrade_settings)
     * [`fn new()`](#fn-node_poolupgrade_settingsnew)
     * [`obj node_pool.upgrade_settings.blue_green_settings`](#obj-node_poolupgrade_settingsblue_green_settings)
@@ -3083,6 +3085,7 @@ Terraform sub block.
   - `management` (`list[obj]`): Node management configuration, wherein auto-repair and auto-upgrade is configured. When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.management.new](#fn-node_poolmanagementnew) constructor.
   - `network_config` (`list[obj]`): Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.network_config.new](#fn-node_poolnetwork_confignew) constructor.
   - `node_config` (`list[obj]`): The configuration of the nodepool When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.new](#fn-node_poolnode_confignew) constructor.
+  - `placement_policy` (`list[obj]`): Specifies the node placement policy When `null`, the `placement_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.placement_policy.new](#fn-node_poolplacement_policynew) constructor.
   - `upgrade_settings` (`list[obj]`): Specify node upgrade settings to change how many nodes GKE attempts to upgrade at once. The number of nodes upgraded simultaneously is the sum of max_surge and max_unavailable. The maximum number of nodes upgraded simultaneously is limited to 20. When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.upgrade_settings.new](#fn-node_poolupgrade_settingsnew) constructor.
 
 **Returns**:
@@ -3328,6 +3331,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `workload_metadata_config` sub block.
+
+
+## obj node_pool.placement_policy
+
+
+
+### fn node_pool.placement_policy.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_pool.placement_policy.new` constructs a new object with attributes and blocks configured for the `placement_policy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `type` (`string`): Type defines the type of placement policy
+
+**Returns**:
+  - An attribute object that represents the `placement_policy` sub block.
 
 
 ## obj node_pool.upgrade_settings

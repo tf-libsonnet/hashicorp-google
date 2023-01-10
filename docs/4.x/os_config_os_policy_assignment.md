@@ -25,6 +25,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRollout()`](#fn-withrollout)
 * [`fn withRolloutMixin()`](#fn-withrolloutmixin)
+* [`fn withSkipAwaitRollout()`](#fn-withskipawaitrollout)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj instance_filter`](#obj-instance_filter)
@@ -153,6 +154,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): The location for the resource
   - `name` (`string`): Resource name.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
+  - `skip_await_rollout` (`bool`): Set to true to skip awaiting rollout during resource creation and update. When `null`, the `skip_await_rollout` field will be omitted from the resulting object.
   - `instance_filter` (`list[obj]`): Required. Filter to select VMs. When `null`, the `instance_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.instance_filter.new](#fn-instance_filternew) constructor.
   - `os_policies` (`list[obj]`): Required. List of OS policies to be applied to the VMs. When `null`, the `os_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.new](#fn-os_policiesnew) constructor.
   - `rollout` (`list[obj]`): Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted. When `null`, the `rollout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.rollout.new](#fn-rolloutnew) constructor.
@@ -184,6 +186,7 @@ injecting into a complete block.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Resource name.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
+  - `skip_await_rollout` (`bool`): Set to true to skip awaiting rollout during resource creation and update. When `null`, the `skip_await_rollout` field will be omitted from the resulting object.
   - `instance_filter` (`list[obj]`): Required. Filter to select VMs. When `null`, the `instance_filter` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.instance_filter.new](#fn-instance_filternew) constructor.
   - `os_policies` (`list[obj]`): Required. List of OS policies to be applied to the VMs. When `null`, the `os_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.new](#fn-os_policiesnew) constructor.
   - `rollout` (`list[obj]`): Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted. When `null`, the `rollout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.rollout.new](#fn-rolloutnew) constructor.
@@ -366,6 +369,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `rollout` field.
+
+
+### fn withSkipAwaitRollout
+
+```ts
+withSkipAwaitRollout()
+```
+
+`google.bool.withSkipAwaitRollout` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the skip_await_rollout field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `skip_await_rollout` field.
 
 
 ### fn withTimeouts

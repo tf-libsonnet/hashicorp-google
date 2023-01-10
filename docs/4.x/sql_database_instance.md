@@ -591,6 +591,7 @@ For Postgres instances, ensure that settings.backup_configuration.point_in_time_
 is set to true. Defaults to ZONAL. When `null`, the `availability_type` field will be omitted from the resulting object.
   - `collation` (`string`): The name of server instance collation. When `null`, the `collation` field will be omitted from the resulting object.
   - `connector_enforcement` (`string`): Specifies if connections must use Cloud SQL connectors. When `null`, the `connector_enforcement` field will be omitted from the resulting object.
+  - `deletion_protection_enabled` (`bool`): Configuration to protect against accidental instance deletion. When `null`, the `deletion_protection_enabled` field will be omitted from the resulting object.
   - `disk_autoresize` (`bool`): Enables auto-resizing of the storage size. Defaults to true. When `null`, the `disk_autoresize` field will be omitted from the resulting object.
   - `disk_autoresize_limit` (`number`): The maximum size, in GB, to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit. When `null`, the `disk_autoresize_limit` field will be omitted from the resulting object.
   - `disk_size` (`number`): The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. The minimum value is 10GB. When `null`, the `disk_size` field will be omitted from the resulting object.
@@ -913,7 +914,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `bucket` (`string`): The name of the destination bucket (e.g., gs://mybucket).
+  - `bucket` (`string`): The name of the destination bucket (e.g., gs://mybucket). When `null`, the `bucket` field will be omitted from the resulting object.
   - `retention_interval` (`string`): How long to keep generated audit files. A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.. When `null`, the `retention_interval` field will be omitted from the resulting object.
   - `upload_interval` (`string`): How often to upload generated audit files. A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `upload_interval` field will be omitted from the resulting object.
 

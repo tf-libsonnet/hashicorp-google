@@ -31,6 +31,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withNodeConfigMixin()`](#fn-withnodeconfigmixin)
 * [`fn withNodeCount()`](#fn-withnodecount)
 * [`fn withNodeLocations()`](#fn-withnodelocations)
+* [`fn withPlacementPolicy()`](#fn-withplacementpolicy)
+* [`fn withPlacementPolicyMixin()`](#fn-withplacementpolicymixin)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -55,6 +57,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-node_configshielded_instance_confignew)
   * [`obj node_config.workload_metadata_config`](#obj-node_configworkload_metadata_config)
     * [`fn new()`](#fn-node_configworkload_metadata_confignew)
+* [`obj placement_policy`](#obj-placement_policy)
+  * [`fn new()`](#fn-placement_policynew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 * [`obj upgrade_settings`](#obj-upgrade_settings)
@@ -107,6 +111,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `management` (`list[obj]`): Node management configuration, wherein auto-repair and auto-upgrade is configured. When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.management.new](#fn-managementnew) constructor.
   - `network_config` (`list[obj]`): Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.network_config.new](#fn-network_confignew) constructor.
   - `node_config` (`list[obj]`): The configuration of the nodepool When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.new](#fn-node_confignew) constructor.
+  - `placement_policy` (`list[obj]`): Specifies the node placement policy When `null`, the `placement_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.placement_policy.new](#fn-placement_policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
   - `upgrade_settings` (`list[obj]`): Specify node upgrade settings to change how many nodes GKE attempts to upgrade at once. The number of nodes upgraded simultaneously is the sum of max_surge and max_unavailable. The maximum number of nodes upgraded simultaneously is limited to 20. When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.upgrade_settings.new](#fn-upgrade_settingsnew) constructor.
 
@@ -146,6 +151,7 @@ injecting into a complete block.
   - `management` (`list[obj]`): Node management configuration, wherein auto-repair and auto-upgrade is configured. When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.management.new](#fn-managementnew) constructor.
   - `network_config` (`list[obj]`): Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.network_config.new](#fn-network_confignew) constructor.
   - `node_config` (`list[obj]`): The configuration of the nodepool When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.new](#fn-node_confignew) constructor.
+  - `placement_policy` (`list[obj]`): Specifies the node placement policy When `null`, the `placement_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.placement_policy.new](#fn-placement_policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
   - `upgrade_settings` (`list[obj]`): Specify node upgrade settings to change how many nodes GKE attempts to upgrade at once. The number of nodes upgraded simultaneously is the sum of max_surge and max_unavailable. The maximum number of nodes upgraded simultaneously is limited to 20. When `null`, the `upgrade_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.upgrade_settings.new](#fn-upgrade_settingsnew) constructor.
 
@@ -427,6 +433,43 @@ Terraform resource block to set or update the node_locations field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list`): The value to set for the `node_locations` field.
+
+
+### fn withPlacementPolicy
+
+```ts
+withPlacementPolicy()
+```
+
+`google.list[obj].withPlacementPolicy` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the placement_policy field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withPlacementPolicyMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `placement_policy` field.
+
+
+### fn withPlacementPolicyMixin
+
+```ts
+withPlacementPolicyMixin()
+```
+
+`google.list[obj].withPlacementPolicyMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the placement_policy field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withPlacementPolicy](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `placement_policy` field.
 
 
 ### fn withProject
@@ -773,6 +816,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `workload_metadata_config` sub block.
+
+
+## obj placement_policy
+
+
+
+### fn placement_policy.new
+
+```ts
+new()
+```
+
+
+`google.container_node_pool.placement_policy.new` constructs a new object with attributes and blocks configured for the `placement_policy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `type` (`string`): Type defines the type of placement policy
+
+**Returns**:
+  - An attribute object that represents the `placement_policy` sub block.
 
 
 ## obj timeouts

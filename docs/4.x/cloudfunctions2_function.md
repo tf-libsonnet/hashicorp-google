@@ -556,6 +556,7 @@ Terraform sub block.
 
 **Args**:
   - `all_traffic_on_latest_revision` (`bool`): Whether 100% of traffic is routed to the latest revision. Defaults to true. When `null`, the `all_traffic_on_latest_revision` field will be omitted from the resulting object.
+  - `available_cpu` (`string`): The number of CPUs used in a single container instance. Default value is calculated from available memory. When `null`, the `available_cpu` field will be omitted from the resulting object.
   - `available_memory` (`string`): The amount of memory available for a function.
 Defaults to 256M. Supported units are k, M, G, Mi, Gi. If no unit is
 supplied the value is interpreted as bytes. When `null`, the `available_memory` field will be omitted from the resulting object.
@@ -563,6 +564,7 @@ supplied the value is interpreted as bytes. When `null`, the `available_memory` 
   - `ingress_settings` (`string`): Available ingress settings. Defaults to &#34;ALLOW_ALL&#34; if unspecified. Default value: &#34;ALLOW_ALL&#34; Possible values: [&#34;ALLOW_ALL&#34;, &#34;ALLOW_INTERNAL_ONLY&#34;, &#34;ALLOW_INTERNAL_AND_GCLB&#34;] When `null`, the `ingress_settings` field will be omitted from the resulting object.
   - `max_instance_count` (`number`): The limit on the maximum number of function instances that may coexist at a
 given time. When `null`, the `max_instance_count` field will be omitted from the resulting object.
+  - `max_instance_request_concurrency` (`number`): Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1. When `null`, the `max_instance_request_concurrency` field will be omitted from the resulting object.
   - `min_instance_count` (`number`): The limit on the minimum number of function instances that may coexist at a
 given time. When `null`, the `min_instance_count` field will be omitted from the resulting object.
   - `service` (`string`): Name of the service associated with a Function. When `null`, the `service` field will be omitted from the resulting object.
