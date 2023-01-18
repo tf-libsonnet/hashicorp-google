@@ -298,6 +298,7 @@ project.
 * [datastore_index](datastore_index.md)
 * [datastream_connection_profile](datastream_connection_profile.md)
 * [datastream_private_connection](datastream_private_connection.md)
+* [datastream_stream](datastream_stream.md)
 * [deployment_manager_deployment](deployment_manager_deployment.md)
 * [dialogflow_agent](dialogflow_agent.md)
 * [dialogflow_cx_agent](dialogflow_cx_agent.md)

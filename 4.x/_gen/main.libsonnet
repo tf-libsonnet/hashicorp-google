@@ -288,6 +288,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   datastore_index: (import 'resources/datastore_index.libsonnet'),
   datastream_connection_profile: (import 'resources/datastream_connection_profile.libsonnet'),
   datastream_private_connection: (import 'resources/datastream_private_connection.libsonnet'),
+  datastream_stream: (import 'resources/datastream_stream.libsonnet'),
   deployment_manager_deployment: (import 'resources/deployment_manager_deployment.libsonnet'),
   dialogflow_agent: (import 'resources/dialogflow_agent.libsonnet'),
   dialogflow_cx_agent: (import 'resources/dialogflow_cx_agent.libsonnet'),

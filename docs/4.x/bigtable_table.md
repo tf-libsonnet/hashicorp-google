@@ -60,7 +60,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `deletion_protection` (`string`): A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value. When `null`, the `deletion_protection` field will be omitted from the resulting object.
   - `instance_name` (`string`): The name of the Bigtable instance.
-  - `name` (`string`): The name of the table.
+  - `name` (`string`): The name of the table. Must be 1-50 characters and must only contain hyphens, underscores, periods, letters and numbers.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `split_keys` (`list`): A list of predefined keys to split the table on. !&gt; Warning: Modifying the split_keys of an existing table will cause Terraform to delete/recreate the entire google_bigtable_table resource. When `null`, the `split_keys` field will be omitted from the resulting object.
   - `column_family` (`list[obj]`): A group of columns within a table which share a common configuration. This can be specified multiple times. When `null`, the `column_family` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_table.column_family.new](#fn-column_familynew) constructor.
@@ -90,7 +90,7 @@ injecting into a complete block.
 **Args**:
   - `deletion_protection` (`string`): A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value. When `null`, the `deletion_protection` field will be omitted from the resulting object.
   - `instance_name` (`string`): The name of the Bigtable instance.
-  - `name` (`string`): The name of the table.
+  - `name` (`string`): The name of the table. Must be 1-50 characters and must only contain hyphens, underscores, periods, letters and numbers.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `split_keys` (`list`): A list of predefined keys to split the table on. !&gt; Warning: Modifying the split_keys of an existing table will cause Terraform to delete/recreate the entire google_bigtable_table resource. When `null`, the `split_keys` field will be omitted from the resulting object.
   - `column_family` (`list[obj]`): A group of columns within a table which share a common configuration. This can be specified multiple times. When `null`, the `column_family` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_table.column_family.new](#fn-column_familynew) constructor.

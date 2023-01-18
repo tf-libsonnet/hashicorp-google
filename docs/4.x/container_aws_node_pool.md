@@ -34,6 +34,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-autoscalingnew)
 * [`obj config`](#obj-config)
   * [`fn new()`](#fn-confignew)
+  * [`obj config.autoscaling_metrics_collection`](#obj-configautoscaling_metrics_collection)
+    * [`fn new()`](#fn-configautoscaling_metrics_collectionnew)
   * [`obj config.config_encryption`](#obj-configconfig_encryption)
     * [`fn new()`](#fn-configconfig_encryptionnew)
   * [`obj config.proxy_config`](#obj-configproxy_config)
@@ -433,6 +435,7 @@ Terraform sub block.
   - `labels` (`obj`): Optional. The initial labels assigned to nodes of this node pool. An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
   - `security_group_ids` (`list`): Optional. The IDs of additional security groups to add to nodes in this pool. The manager will automatically create security groups with minimum rules needed for a functioning cluster. When `null`, the `security_group_ids` field will be omitted from the resulting object.
   - `tags` (`obj`): Optional. Key/value metadata to assign to each underlying AWS resource. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.&#43;-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters. When `null`, the `tags` field will be omitted from the resulting object.
+  - `autoscaling_metrics_collection` (`list[obj]`): Optional. Configuration related to CloudWatch metrics collection on the Auto Scaling group of the node pool. When unspecified, metrics collection is disabled. When `null`, the `autoscaling_metrics_collection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.config.autoscaling_metrics_collection.new](#fn-configautoscaling_metrics_collectionnew) constructor.
   - `config_encryption` (`list[obj]`): The ARN of the AWS KMS key used to encrypt node pool configuration. When `null`, the `config_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.config.config_encryption.new](#fn-configconfig_encryptionnew) constructor.
   - `proxy_config` (`list[obj]`): Proxy configuration for outbound HTTP(S) traffic. When `null`, the `proxy_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.config.proxy_config.new](#fn-configproxy_confignew) constructor.
   - `root_volume` (`list[obj]`): Optional. Template for the root volume provisioned for node pool nodes. Volumes will be provisioned in the availability zone assigned to the node pool subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type. When `null`, the `root_volume` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.config.root_volume.new](#fn-configroot_volumenew) constructor.
@@ -441,6 +444,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `config` sub block.
+
+
+## obj config.autoscaling_metrics_collection
+
+
+
+### fn config.autoscaling_metrics_collection.new
+
+```ts
+new()
+```
+
+
+`google.container_aws_node_pool.config.autoscaling_metrics_collection.new` constructs a new object with attributes and blocks configured for the `autoscaling_metrics_collection`
+Terraform sub block.
+
+
+
+**Args**:
+  - `granularity` (`string`): The frequency at which EC2 Auto Scaling sends aggregated data to AWS CloudWatch. The only valid value is &#34;1Minute&#34;.
+  - `metrics` (`list`): The metrics to enable. For a list of valid metrics, see https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html. If you specify granularity and don&#39;t specify any metrics, all metrics are enabled. When `null`, the `metrics` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `autoscaling_metrics_collection` sub block.
 
 
 ## obj config.config_encryption

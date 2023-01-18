@@ -51,6 +51,10 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-node_configgcfs_confignew)
   * [`obj node_config.gvnic`](#obj-node_configgvnic)
     * [`fn new()`](#fn-node_configgvnicnew)
+  * [`obj node_config.kubelet_config`](#obj-node_configkubelet_config)
+    * [`fn new()`](#fn-node_configkubelet_confignew)
+  * [`obj node_config.linux_node_config`](#obj-node_configlinux_node_config)
+    * [`fn new()`](#fn-node_configlinux_node_confignew)
   * [`obj node_config.reservation_affinity`](#obj-node_configreservation_affinity)
     * [`fn new()`](#fn-node_configreservation_affinitynew)
   * [`obj node_config.shielded_instance_config`](#obj-node_configshielded_instance_config)
@@ -692,6 +696,8 @@ Terraform sub block.
   - `taint` (`list`): List of Kubernetes taints to be applied to each node. When `null`, the `taint` field will be omitted from the resulting object.
   - `gcfs_config` (`list[obj]`): GCFS configuration for this node. When `null`, the `gcfs_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.gcfs_config.new](#fn-node_configgcfs_confignew) constructor.
   - `gvnic` (`list[obj]`): Enable or disable gvnic in the node pool. When `null`, the `gvnic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.gvnic.new](#fn-node_configgvnicnew) constructor.
+  - `kubelet_config` (`list[obj]`): Node kubelet configs. When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.kubelet_config.new](#fn-node_configkubelet_confignew) constructor.
+  - `linux_node_config` (`list[obj]`): Parameters that can be configured on Linux nodes. When `null`, the `linux_node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.linux_node_config.new](#fn-node_configlinux_node_confignew) constructor.
   - `reservation_affinity` (`list[obj]`): The reservation affinity configuration for the node pool. When `null`, the `reservation_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.reservation_affinity.new](#fn-node_configreservation_affinitynew) constructor.
   - `shielded_instance_config` (`list[obj]`): Shielded Instance options. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.shielded_instance_config.new](#fn-node_configshielded_instance_confignew) constructor.
   - `workload_metadata_config` (`list[obj]`): The workload metadata configuration for this node. When `null`, the `workload_metadata_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.workload_metadata_config.new](#fn-node_configworkload_metadata_confignew) constructor.
@@ -744,6 +750,54 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `gvnic` sub block.
+
+
+## obj node_config.kubelet_config
+
+
+
+### fn node_config.kubelet_config.new
+
+```ts
+new()
+```
+
+
+`google.container_node_pool.node_config.kubelet_config.new` constructs a new object with attributes and blocks configured for the `kubelet_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `cpu_cfs_quota` (`bool`): Enable CPU CFS quota enforcement for containers that specify CPU limits. When `null`, the `cpu_cfs_quota` field will be omitted from the resulting object.
+  - `cpu_cfs_quota_period` (`string`): Set the CPU CFS quota period value &#39;cpu.cfs_period_us&#39;. When `null`, the `cpu_cfs_quota_period` field will be omitted from the resulting object.
+  - `cpu_manager_policy` (`string`): Control the CPU management policy on the node.
+
+**Returns**:
+  - An attribute object that represents the `kubelet_config` sub block.
+
+
+## obj node_config.linux_node_config
+
+
+
+### fn node_config.linux_node_config.new
+
+```ts
+new()
+```
+
+
+`google.container_node_pool.node_config.linux_node_config.new` constructs a new object with attributes and blocks configured for the `linux_node_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `sysctls` (`obj`): The Linux kernel parameters to be applied to the nodes and all pods running on the nodes.
+
+**Returns**:
+  - An attribute object that represents the `linux_node_config` sub block.
 
 
 ## obj node_config.reservation_affinity

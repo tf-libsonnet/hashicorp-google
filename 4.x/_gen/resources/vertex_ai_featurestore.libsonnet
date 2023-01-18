@@ -58,12 +58,24 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts: timeouts,
   }),
   online_serving_config:: {
-    '#new':: d.fn(help='\n`google.vertex_ai_featurestore.online_serving_config.new` constructs a new object with attributes and blocks configured for the `online_serving_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `fixed_node_count` (`number`): The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.\n\n**Returns**:\n  - An attribute object that represents the `online_serving_config` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.vertex_ai_featurestore.online_serving_config.new` constructs a new object with attributes and blocks configured for the `online_serving_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `fixed_node_count` (`number`): The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating. When `null`, the `fixed_node_count` field will be omitted from the resulting object.\n  - `scaling` (`list[obj]`): Online serving scaling configuration. Only one of fixedNodeCount and scaling can be set. Setting one will reset the other. When `null`, the `scaling` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.online_serving_config.scaling.new](#fn-online_serving_configscalingnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `online_serving_config` sub block.\n', args=[]),
     new(
-      fixed_node_count
+      fixed_node_count=null,
+      scaling=null
     ):: std.prune(a={
       fixed_node_count: fixed_node_count,
+      scaling: scaling,
     }),
+    scaling:: {
+      '#new':: d.fn(help='\n`google.vertex_ai_featurestore.online_serving_config.scaling.new` constructs a new object with attributes and blocks configured for the `scaling`\nTerraform sub block.\n\n\n\n**Args**:\n  - `max_node_count` (`number`): The maximum number of nodes to scale up to. Must be greater than minNodeCount, and less than or equal to 10 times of &#39;minNodeCount&#39;.\n  - `min_node_count` (`number`): The minimum number of nodes to scale down to. Must be greater than or equal to 1.\n\n**Returns**:\n  - An attribute object that represents the `scaling` sub block.\n', args=[]),
+      new(
+        max_node_count,
+        min_node_count
+      ):: std.prune(a={
+        max_node_count: max_node_count,
+        min_node_count: min_node_count,
+      }),
+    },
   },
   timeouts:: {
     '#new':: d.fn(help='\n`google.vertex_ai_featurestore.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.\n  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.\n  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `timeouts` sub block.\n', args=[]),
