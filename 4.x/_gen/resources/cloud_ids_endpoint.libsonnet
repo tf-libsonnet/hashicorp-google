@@ -2,7 +2,7 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='cloud_ids_endpoint', url='', help='`cloud_ids_endpoint` represents the `google_cloud_ids_endpoint` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
-  '#new':: d.fn(help="\n`google.cloud_ids_endpoint.new` injects a new `google_cloud_ids_endpoint` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.cloud_ids_endpoint.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.cloud_ids_endpoint` using the reference:\n\n    $._ref.google_cloud_ids_endpoint.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_cloud_ids_endpoint.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `description` (`string`): An optional description of the endpoint. When `null`, the `description` field will be omitted from the resulting object.\n  - `location` (`string`): The location for the endpoint.\n  - `name` (`string`): Name of the endpoint in the format projects/{project_id}/locations/{locationId}/endpoints/{endpointId}.\n  - `network` (`string`): Name of the VPC network that is connected to the IDS endpoint. This can either contain the VPC network name itself (like \u0026#34;src-net\u0026#34;) or the full URL to the network (like \u0026#34;projects/{project_id}/global/networks/src-net\u0026#34;).\n  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.\n  - `severity` (`string`): The minimum alert severity level that is reported by the endpoint. Possible values: [\u0026#34;INFORMATIONAL\u0026#34;, \u0026#34;LOW\u0026#34;, \u0026#34;MEDIUM\u0026#34;, \u0026#34;HIGH\u0026#34;, \u0026#34;CRITICAL\u0026#34;]\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_ids_endpoint.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`google.cloud_ids_endpoint.new` injects a new `google_cloud_ids_endpoint` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.cloud_ids_endpoint.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.cloud_ids_endpoint` using the reference:\n\n    $._ref.google_cloud_ids_endpoint.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_cloud_ids_endpoint.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `description` (`string`): An optional description of the endpoint. When `null`, the `description` field will be omitted from the resulting object.\n  - `location` (`string`): The location for the endpoint.\n  - `name` (`string`): Name of the endpoint in the format projects/{project_id}/locations/{locationId}/endpoints/{endpointId}.\n  - `network` (`string`): Name of the VPC network that is connected to the IDS endpoint. This can either contain the VPC network name itself (like \u0026#34;src-net\u0026#34;) or the full URL to the network (like \u0026#34;projects/{project_id}/global/networks/src-net\u0026#34;).\n  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.\n  - `severity` (`string`): The minimum alert severity level that is reported by the endpoint. Possible values: [\u0026#34;INFORMATIONAL\u0026#34;, \u0026#34;LOW\u0026#34;, \u0026#34;MEDIUM\u0026#34;, \u0026#34;HIGH\u0026#34;, \u0026#34;CRITICAL\u0026#34;]\n  - `threat_exceptions` (`list`): Configuration for threat IDs excluded from generating alerts. Limit: 99 IDs. When `null`, the `threat_exceptions` field will be omitted from the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_ids_endpoint.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     location,
@@ -11,6 +11,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     severity,
     description=null,
     project=null,
+    threat_exceptions=null,
     timeouts=null,
     _meta={}
   ):: tf.withResource(
@@ -23,11 +24,12 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       network=network,
       project=project,
       severity=severity,
+      threat_exceptions=threat_exceptions,
       timeouts=timeouts
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`google.cloud_ids_endpoint.newAttrs` constructs a new object with attributes and blocks configured for the `cloud_ids_endpoint`\nTerraform resource.\n\nUnlike [google.cloud_ids_endpoint.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `description` (`string`): An optional description of the endpoint. When `null`, the `description` field will be omitted from the resulting object.\n  - `location` (`string`): The location for the endpoint.\n  - `name` (`string`): Name of the endpoint in the format projects/{project_id}/locations/{locationId}/endpoints/{endpointId}.\n  - `network` (`string`): Name of the VPC network that is connected to the IDS endpoint. This can either contain the VPC network name itself (like &#34;src-net&#34;) or the full URL to the network (like &#34;projects/{project_id}/global/networks/src-net&#34;).\n  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.\n  - `severity` (`string`): The minimum alert severity level that is reported by the endpoint. Possible values: [&#34;INFORMATIONAL&#34;, &#34;LOW&#34;, &#34;MEDIUM&#34;, &#34;HIGH&#34;, &#34;CRITICAL&#34;]\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_ids_endpoint.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloud_ids_endpoint` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`google.cloud_ids_endpoint.newAttrs` constructs a new object with attributes and blocks configured for the `cloud_ids_endpoint`\nTerraform resource.\n\nUnlike [google.cloud_ids_endpoint.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `description` (`string`): An optional description of the endpoint. When `null`, the `description` field will be omitted from the resulting object.\n  - `location` (`string`): The location for the endpoint.\n  - `name` (`string`): Name of the endpoint in the format projects/{project_id}/locations/{locationId}/endpoints/{endpointId}.\n  - `network` (`string`): Name of the VPC network that is connected to the IDS endpoint. This can either contain the VPC network name itself (like &#34;src-net&#34;) or the full URL to the network (like &#34;projects/{project_id}/global/networks/src-net&#34;).\n  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.\n  - `severity` (`string`): The minimum alert severity level that is reported by the endpoint. Possible values: [&#34;INFORMATIONAL&#34;, &#34;LOW&#34;, &#34;MEDIUM&#34;, &#34;HIGH&#34;, &#34;CRITICAL&#34;]\n  - `threat_exceptions` (`list`): Configuration for threat IDs excluded from generating alerts. Limit: 99 IDs. When `null`, the `threat_exceptions` field will be omitted from the resulting object.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_ids_endpoint.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloud_ids_endpoint` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     location,
     name,
@@ -35,6 +37,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     severity,
     description=null,
     project=null,
+    threat_exceptions=null,
     timeouts=null
   ):: std.prune(a={
     description: description,
@@ -43,16 +46,19 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     network: network,
     project: project,
     severity: severity,
+    threat_exceptions: threat_exceptions,
     timeouts: timeouts,
   }),
   timeouts:: {
-    '#new':: d.fn(help='\n`google.cloud_ids_endpoint.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.\n  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `timeouts` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.cloud_ids_endpoint.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.\n  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.\n  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `timeouts` sub block.\n', args=[]),
     new(
       create=null,
-      delete=null
+      delete=null,
+      update=null
     ):: std.prune(a={
       create: create,
       delete: delete,
+      update: update,
     }),
   },
   '#withDescription':: d.fn(help='`google.string.withDescription` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the description field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `description` field.\n', args=[]),
@@ -111,6 +117,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       google_cloud_ids_endpoint+: {
         [resourceLabel]+: {
           severity: value,
+        },
+      },
+    },
+  },
+  '#withThreatExceptions':: d.fn(help='`google.list.withThreatExceptions` constructs a mixin object that can be merged into the `list`\nTerraform resource block to set or update the threat_exceptions field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list`): The value to set for the `threat_exceptions` field.\n', args=[]),
+  withThreatExceptions(resourceLabel, value): {
+    resource+: {
+      google_cloud_ids_endpoint+: {
+        [resourceLabel]+: {
+          threat_exceptions: value,
         },
       },
     },

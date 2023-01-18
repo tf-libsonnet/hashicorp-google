@@ -60,7 +60,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `display_name` (`string`): Display name.
   - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
-  - `location` (`string`): The name of the location this repository is located in.
+  - `location` (`string`): The name of the location this private connection is located in.
   - `private_connection_id` (`string`): The private connectivity identifier.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_private_connection.timeouts.new](#fn-timeoutsnew) constructor.
@@ -91,7 +91,7 @@ injecting into a complete block.
 **Args**:
   - `display_name` (`string`): Display name.
   - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
-  - `location` (`string`): The name of the location this repository is located in.
+  - `location` (`string`): The name of the location this private connection is located in.
   - `private_connection_id` (`string`): The private connectivity identifier.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_private_connection.timeouts.new](#fn-timeoutsnew) constructor.

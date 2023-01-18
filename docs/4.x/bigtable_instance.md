@@ -61,7 +61,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `display_name` (`string`): The human-readable display name of the Bigtable instance. Defaults to the instance name. When `null`, the `display_name` field will be omitted from the resulting object.
   - `instance_type` (`string`): The instance type to create. One of &#34;DEVELOPMENT&#34; or &#34;PRODUCTION&#34;. Defaults to &#34;PRODUCTION&#34;. When `null`, the `instance_type` field will be omitted from the resulting object.
   - `labels` (`obj`): A mapping of labels to assign to the resource. When `null`, the `labels` field will be omitted from the resulting object.
-  - `name` (`string`): The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
+  - `name` (`string`): The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance. Must be 6-33 characters and must only contain hyphens, lowercase letters and numbers.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `cluster` (`list[obj]`): A block of cluster configuration options. This can be specified at least once. When `null`, the `cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.new](#fn-clusternew) constructor.
 
@@ -91,7 +91,7 @@ injecting into a complete block.
   - `display_name` (`string`): The human-readable display name of the Bigtable instance. Defaults to the instance name. When `null`, the `display_name` field will be omitted from the resulting object.
   - `instance_type` (`string`): The instance type to create. One of &#34;DEVELOPMENT&#34; or &#34;PRODUCTION&#34;. Defaults to &#34;PRODUCTION&#34;. When `null`, the `instance_type` field will be omitted from the resulting object.
   - `labels` (`obj`): A mapping of labels to assign to the resource. When `null`, the `labels` field will be omitted from the resulting object.
-  - `name` (`string`): The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
+  - `name` (`string`): The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance. Must be 6-33 characters and must only contain hyphens, lowercase letters and numbers.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `cluster` (`list[obj]`): A block of cluster configuration options. This can be specified at least once. When `null`, the `cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.new](#fn-clusternew) constructor.
 
@@ -249,9 +249,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `cluster_id` (`string`): The ID of the Cloud Bigtable cluster.
+  - `cluster_id` (`string`): The ID of the Cloud Bigtable cluster. Must be 6-30 characters and must only contain hyphens, lowercase letters and numbers.
   - `kms_key_name` (`string`): Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the cloudkms.cryptoKeyEncrypterDecrypter role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key} When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `num_nodes` (`number`): The number of nodes in your Cloud Bigtable cluster. Required, with a minimum of 1 for a PRODUCTION instance. Must be left unset for a DEVELOPMENT instance. When `null`, the `num_nodes` field will be omitted from the resulting object.
+  - `num_nodes` (`number`): The number of nodes in your Cloud Bigtable cluster. Required, with a minimum of 1 for each cluster in an instance. When `null`, the `num_nodes` field will be omitted from the resulting object.
   - `storage_type` (`string`): The storage type to use. One of &#34;SSD&#34; or &#34;HDD&#34;. Defaults to &#34;SSD&#34;. When `null`, the `storage_type` field will be omitted from the resulting object.
   - `zone` (`string`): The zone to create the Cloud Bigtable cluster in. Each cluster must have a different zone in the same region. Zones that support Bigtable instances are noted on the Cloud Bigtable locations page. When `null`, the `zone` field will be omitted from the resulting object.
   - `autoscaling_config` (`list[obj]`): A list of Autoscaling configurations. Only one element is used and allowed. When `null`, the `autoscaling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.autoscaling_config.new](#fn-clusterautoscaling_confignew) constructor.

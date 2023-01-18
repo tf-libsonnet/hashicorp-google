@@ -30,6 +30,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-encryption_specnew)
 * [`obj online_serving_config`](#obj-online_serving_config)
   * [`fn new()`](#fn-online_serving_confignew)
+  * [`obj online_serving_config.scaling`](#obj-online_serving_configscaling)
+    * [`fn new()`](#fn-online_serving_configscalingnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -336,10 +338,35 @@ Terraform sub block.
 
 
 **Args**:
-  - `fixed_node_count` (`number`): The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.
+  - `fixed_node_count` (`number`): The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating. When `null`, the `fixed_node_count` field will be omitted from the resulting object.
+  - `scaling` (`list[obj]`): Online serving scaling configuration. Only one of fixedNodeCount and scaling can be set. Setting one will reset the other. When `null`, the `scaling` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore.online_serving_config.scaling.new](#fn-online_serving_configscalingnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `online_serving_config` sub block.
+
+
+## obj online_serving_config.scaling
+
+
+
+### fn online_serving_config.scaling.new
+
+```ts
+new()
+```
+
+
+`google.vertex_ai_featurestore.online_serving_config.scaling.new` constructs a new object with attributes and blocks configured for the `scaling`
+Terraform sub block.
+
+
+
+**Args**:
+  - `max_node_count` (`number`): The maximum number of nodes to scale up to. Must be greater than minNodeCount, and less than or equal to 10 times of &#39;minNodeCount&#39;.
+  - `min_node_count` (`number`): The minimum number of nodes to scale down to. Must be greater than or equal to 1.
+
+**Returns**:
+  - An attribute object that represents the `scaling` sub block.
 
 
 ## obj timeouts

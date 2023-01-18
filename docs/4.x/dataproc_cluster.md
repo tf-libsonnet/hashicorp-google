@@ -36,6 +36,10 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-cluster_configendpoint_confignew)
   * [`obj cluster_config.gce_cluster_config`](#obj-cluster_configgce_cluster_config)
     * [`fn new()`](#fn-cluster_configgce_cluster_confignew)
+    * [`obj cluster_config.gce_cluster_config.node_group_affinity`](#obj-cluster_configgce_cluster_confignode_group_affinity)
+      * [`fn new()`](#fn-cluster_configgce_cluster_confignode_group_affinitynew)
+    * [`obj cluster_config.gce_cluster_config.reservation_affinity`](#obj-cluster_configgce_cluster_configreservation_affinity)
+      * [`fn new()`](#fn-cluster_configgce_cluster_configreservation_affinitynew)
     * [`obj cluster_config.gce_cluster_config.shielded_instance_config`](#obj-cluster_configgce_cluster_configshielded_instance_config)
       * [`fn new()`](#fn-cluster_configgce_cluster_configshielded_instance_confignew)
   * [`obj cluster_config.initialization_action`](#obj-cluster_configinitialization_action)
@@ -484,10 +488,60 @@ Terraform sub block.
   - `subnetwork` (`string`): The name or self_link of the Google Compute Engine subnetwork the cluster will be part of. Conflicts with network. When `null`, the `subnetwork` field will be omitted from the resulting object.
   - `tags` (`list`): The list of instance tags applied to instances in the cluster. Tags are used to identify valid sources or targets for network firewalls. When `null`, the `tags` field will be omitted from the resulting object.
   - `zone` (`string`): The GCP zone where your data is stored and used (i.e. where the master and the worker nodes will be created in). If region is set to &#39;global&#39; (default) then zone is mandatory, otherwise GCP is able to make use of Auto Zone Placement to determine this automatically for you. Note: This setting additionally determines and restricts which computing resources are available for use with other configs such as cluster_config.master_config.machine_type and cluster_config.worker_config.machine_type. When `null`, the `zone` field will be omitted from the resulting object.
+  - `node_group_affinity` (`list[obj]`): Node Group Affinity for sole-tenant clusters. When `null`, the `node_group_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.gce_cluster_config.node_group_affinity.new](#fn-cluster_configcluster_confignode_group_affinitynew) constructor.
+  - `reservation_affinity` (`list[obj]`): Reservation Affinity for consuming Zonal reservation. When `null`, the `reservation_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.gce_cluster_config.reservation_affinity.new](#fn-cluster_configcluster_configreservation_affinitynew) constructor.
   - `shielded_instance_config` (`list[obj]`): Shielded Instance Config for clusters using Compute Engine Shielded VMs. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.gce_cluster_config.shielded_instance_config.new](#fn-cluster_configcluster_configshielded_instance_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `gce_cluster_config` sub block.
+
+
+## obj cluster_config.gce_cluster_config.node_group_affinity
+
+
+
+### fn cluster_config.gce_cluster_config.node_group_affinity.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_cluster.cluster_config.gce_cluster_config.node_group_affinity.new` constructs a new object with attributes and blocks configured for the `node_group_affinity`
+Terraform sub block.
+
+
+
+**Args**:
+  - `node_group_uri` (`string`): The URI of a sole-tenant that the cluster will be created on.
+
+**Returns**:
+  - An attribute object that represents the `node_group_affinity` sub block.
+
+
+## obj cluster_config.gce_cluster_config.reservation_affinity
+
+
+
+### fn cluster_config.gce_cluster_config.reservation_affinity.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_cluster.cluster_config.gce_cluster_config.reservation_affinity.new` constructs a new object with attributes and blocks configured for the `reservation_affinity`
+Terraform sub block.
+
+
+
+**Args**:
+  - `consume_reservation_type` (`string`): Type of reservation to consume. When `null`, the `consume_reservation_type` field will be omitted from the resulting object.
+  - `key` (`string`): Corresponds to the label key of reservation resource. When `null`, the `key` field will be omitted from the resulting object.
+  - `values` (`list`): Corresponds to the label values of reservation resource. When `null`, the `values` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `reservation_affinity` sub block.
 
 
 ## obj cluster_config.gce_cluster_config.shielded_instance_config

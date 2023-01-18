@@ -87,7 +87,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `connection_profile_id` (`string`): The connection profile identifier.
   - `display_name` (`string`): Display name.
   - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
-  - `location` (`string`): The name of the location this repository is located in.
+  - `location` (`string`): The name of the location this connection profile is located in.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `bigquery_profile` (`list[obj]`): BigQuery warehouse profile. When `null`, the `bigquery_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.bigquery_profile.new](#fn-bigquery_profilenew) constructor.
   - `forward_ssh_connectivity` (`list[obj]`): Forward SSH tunnel connectivity. When `null`, the `forward_ssh_connectivity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.forward_ssh_connectivity.new](#fn-forward_ssh_connectivitynew) constructor.
@@ -123,7 +123,7 @@ injecting into a complete block.
   - `connection_profile_id` (`string`): The connection profile identifier.
   - `display_name` (`string`): Display name.
   - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
-  - `location` (`string`): The name of the location this repository is located in.
+  - `location` (`string`): The name of the location this connection profile is located in.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `bigquery_profile` (`list[obj]`): BigQuery warehouse profile. When `null`, the `bigquery_profile` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.bigquery_profile.new](#fn-bigquery_profilenew) constructor.
   - `forward_ssh_connectivity` (`list[obj]`): Forward SSH tunnel connectivity. When `null`, the `forward_ssh_connectivity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_connection_profile.forward_ssh_connectivity.new](#fn-forward_ssh_connectivitynew) constructor.

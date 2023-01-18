@@ -31,6 +31,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withReleaseChannel()`](#fn-withreleasechannel)
 * [`fn withServiceId()`](#fn-withserviceid)
+* [`fn withTelemetryConfig()`](#fn-withtelemetryconfig)
+* [`fn withTelemetryConfigMixin()`](#fn-withtelemetryconfigmixin)
 * [`fn withTier()`](#fn-withtier)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -48,6 +50,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-network_confignew)
   * [`obj network_config.consumers`](#obj-network_configconsumers)
     * [`fn new()`](#fn-network_configconsumersnew)
+* [`obj telemetry_config`](#obj-telemetry_config)
+  * [`fn new()`](#fn-telemetry_confignew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -101,6 +105,7 @@ customer data at rest. When `null`, the `encryption_config` sub block will be om
 This specifies when the service can be restarted for maintenance purposes in UTC time.
 Maintenance window is not needed for services with the &#39;SPANNER&#39; database type. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.maintenance_window.new](#fn-maintenance_windownew) constructor.
   - `network_config` (`list[obj]`): The configuration specifying the network settings for the Dataproc Metastore service. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.network_config.new](#fn-network_confignew) constructor.
+  - `telemetry_config` (`list[obj]`): The configuration specifying telemetry settings for the Dataproc Metastore service. If unspecified defaults to JSON. When `null`, the `telemetry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.telemetry_config.new](#fn-telemetry_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -146,6 +151,7 @@ customer data at rest. When `null`, the `encryption_config` sub block will be om
 This specifies when the service can be restarted for maintenance purposes in UTC time.
 Maintenance window is not needed for services with the &#39;SPANNER&#39; database type. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.maintenance_window.new](#fn-maintenance_windownew) constructor.
   - `network_config` (`list[obj]`): The configuration specifying the network settings for the Dataproc Metastore service. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.network_config.new](#fn-network_confignew) constructor.
+  - `telemetry_config` (`list[obj]`): The configuration specifying telemetry settings for the Dataproc Metastore service. If unspecified defaults to JSON. When `null`, the `telemetry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.telemetry_config.new](#fn-telemetry_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -428,6 +434,43 @@ Terraform resource block to set or update the service_id field.
   - `value` (`string`): The value to set for the `service_id` field.
 
 
+### fn withTelemetryConfig
+
+```ts
+withTelemetryConfig()
+```
+
+`google.list[obj].withTelemetryConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the telemetry_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withTelemetryConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `telemetry_config` field.
+
+
+### fn withTelemetryConfigMixin
+
+```ts
+withTelemetryConfigMixin()
+```
+
+`google.list[obj].withTelemetryConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the telemetry_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withTelemetryConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `telemetry_config` field.
+
+
 ### fn withTier
 
 ```ts
@@ -651,6 +694,29 @@ There must be at least one IP address available in the subnet&#39;s primary rang
 
 **Returns**:
   - An attribute object that represents the `consumers` sub block.
+
+
+## obj telemetry_config
+
+
+
+### fn telemetry_config.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_metastore_service.telemetry_config.new` constructs a new object with attributes and blocks configured for the `telemetry_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `log_format` (`string`): The output format of the Dataproc Metastore service&#39;s logs. Default value: &#34;JSON&#34; Possible values: [&#34;LEGACY&#34;, &#34;JSON&#34;] When `null`, the `log_format` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `telemetry_config` sub block.
 
 
 ## obj timeouts

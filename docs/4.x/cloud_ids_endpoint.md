@@ -21,6 +21,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withNetwork()`](#fn-withnetwork)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withSeverity()`](#fn-withseverity)
+* [`fn withThreatExceptions()`](#fn-withthreatexceptions)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj timeouts`](#obj-timeouts)
@@ -61,6 +62,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `network` (`string`): Name of the VPC network that is connected to the IDS endpoint. This can either contain the VPC network name itself (like &#34;src-net&#34;) or the full URL to the network (like &#34;projects/{project_id}/global/networks/src-net&#34;).
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `severity` (`string`): The minimum alert severity level that is reported by the endpoint. Possible values: [&#34;INFORMATIONAL&#34;, &#34;LOW&#34;, &#34;MEDIUM&#34;, &#34;HIGH&#34;, &#34;CRITICAL&#34;]
+  - `threat_exceptions` (`list`): Configuration for threat IDs excluded from generating alerts. Limit: 99 IDs. When `null`, the `threat_exceptions` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_ids_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -91,6 +93,7 @@ injecting into a complete block.
   - `network` (`string`): Name of the VPC network that is connected to the IDS endpoint. This can either contain the VPC network name itself (like &#34;src-net&#34;) or the full URL to the network (like &#34;projects/{project_id}/global/networks/src-net&#34;).
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `severity` (`string`): The minimum alert severity level that is reported by the endpoint. Possible values: [&#34;INFORMATIONAL&#34;, &#34;LOW&#34;, &#34;MEDIUM&#34;, &#34;HIGH&#34;, &#34;CRITICAL&#34;]
+  - `threat_exceptions` (`list`): Configuration for threat IDs excluded from generating alerts. Limit: 99 IDs. When `null`, the `threat_exceptions` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_ids_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -193,6 +196,22 @@ Terraform resource block to set or update the severity field.
   - `value` (`string`): The value to set for the `severity` field.
 
 
+### fn withThreatExceptions
+
+```ts
+withThreatExceptions()
+```
+
+`google.list.withThreatExceptions` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the threat_exceptions field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `threat_exceptions` field.
+
+
 ### fn withTimeouts
 
 ```ts
@@ -248,6 +267,7 @@ Terraform sub block.
 **Args**:
   - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
   - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
