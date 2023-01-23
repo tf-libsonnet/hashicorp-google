@@ -39,6 +39,10 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-confignode_confignew)
   * [`obj config.private_environment_config`](#obj-configprivate_environment_config)
     * [`fn new()`](#fn-configprivate_environment_confignew)
+  * [`obj config.recovery_config`](#obj-configrecovery_config)
+    * [`fn new()`](#fn-configrecovery_confignew)
+    * [`obj config.recovery_config.scheduled_snapshots_config`](#obj-configrecovery_configscheduled_snapshots_config)
+      * [`fn new()`](#fn-configrecovery_configscheduled_snapshots_confignew)
   * [`obj config.software_config`](#obj-configsoftware_config)
     * [`fn new()`](#fn-configsoftware_confignew)
   * [`obj config.web_server_config`](#obj-configweb_server_config)
@@ -289,6 +293,7 @@ Terraform sub block.
   - `master_authorized_networks_config` (`list[obj]`): Configuration options for the master authorized networks feature. Enabled master authorized networks will disallow all external traffic to access Kubernetes master through HTTPS except traffic from the given CIDR blocks, Google Compute Engine Public IPs and Google Prod IPs. When `null`, the `master_authorized_networks_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.master_authorized_networks_config.new](#fn-configmaster_authorized_networks_confignew) constructor.
   - `node_config` (`list[obj]`): The configuration used for the Kubernetes Engine cluster. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.node_config.new](#fn-confignode_confignew) constructor.
   - `private_environment_config` (`list[obj]`): The configuration used for the Private IP Cloud Composer environment. When `null`, the `private_environment_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.private_environment_config.new](#fn-configprivate_environment_confignew) constructor.
+  - `recovery_config` (`list[obj]`): The recovery configuration settings for the Cloud Composer environment When `null`, the `recovery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.recovery_config.new](#fn-configrecovery_confignew) constructor.
   - `software_config` (`list[obj]`): The configuration settings for software inside the environment. When `null`, the `software_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.software_config.new](#fn-configsoftware_confignew) constructor.
   - `web_server_config` (`list[obj]`): The configuration settings for the Airflow web server App Engine instance. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. When `null`, the `web_server_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.web_server_config.new](#fn-configweb_server_confignew) constructor.
   - `web_server_network_access_control` (`list[obj]`): The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. When `null`, the `web_server_network_access_control` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.web_server_network_access_control.new](#fn-configweb_server_network_access_controlnew) constructor.
@@ -476,6 +481,55 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `private_environment_config` sub block.
+
+
+## obj config.recovery_config
+
+
+
+### fn config.recovery_config.new
+
+```ts
+new()
+```
+
+
+`google.composer_environment.config.recovery_config.new` constructs a new object with attributes and blocks configured for the `recovery_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `scheduled_snapshots_config` (`list[obj]`): The configuration settings for scheduled snapshots. When `null`, the `scheduled_snapshots_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.recovery_config.scheduled_snapshots_config.new](#fn-configconfigscheduled_snapshots_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `recovery_config` sub block.
+
+
+## obj config.recovery_config.scheduled_snapshots_config
+
+
+
+### fn config.recovery_config.scheduled_snapshots_config.new
+
+```ts
+new()
+```
+
+
+`google.composer_environment.config.recovery_config.scheduled_snapshots_config.new` constructs a new object with attributes and blocks configured for the `scheduled_snapshots_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket.
+  - `snapshot_creation_schedule` (`string`): Snapshot schedule, in the unix-cron format. When `null`, the `snapshot_creation_schedule` field will be omitted from the resulting object.
+  - `snapshot_location` (`string`): the URI of a bucket folder where to save the snapshot. When `null`, the `snapshot_location` field will be omitted from the resulting object.
+  - `time_zone` (`string`): A time zone for the schedule. This value is a time offset and does not take into account daylight saving time changes. Valid values are from UTC-12 to UTC&#43;12. Examples: UTC, UTC-01, UTC&#43;03. When `null`, the `time_zone` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `scheduled_snapshots_config` sub block.
 
 
 ## obj config.software_config

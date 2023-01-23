@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAnnotations()`](#fn-withannotations)
 * [`fn withBinaryAuthorization()`](#fn-withbinaryauthorization)
 * [`fn withBinaryAuthorizationMixin()`](#fn-withbinaryauthorizationmixin)
 * [`fn withClient()`](#fn-withclient)
@@ -112,6 +113,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `annotations` (`obj`): Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations When `null`, the `annotations` field will be omitted from the resulting object.
   - `client` (`string`): Arbitrary identifier for the API client. When `null`, the `client` field will be omitted from the resulting object.
   - `client_version` (`string`): Arbitrary version identifier for the API client. When `null`, the `client_version` field will be omitted from the resulting object.
   - `description` (`string`): User-provided description of the Service. This field currently has a 512-character limit. When `null`, the `description` field will be omitted from the resulting object.
@@ -148,6 +150,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `annotations` (`obj`): Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. This field follows Kubernetes annotations&#39; namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations When `null`, the `annotations` field will be omitted from the resulting object.
   - `client` (`string`): Arbitrary identifier for the API client. When `null`, the `client` field will be omitted from the resulting object.
   - `client_version` (`string`): Arbitrary version identifier for the API client. When `null`, the `client_version` field will be omitted from the resulting object.
   - `description` (`string`): User-provided description of the Service. This field currently has a 512-character limit. When `null`, the `description` field will be omitted from the resulting object.
@@ -164,6 +167,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloud_run_v2_service` resource into the root Terraform configuration.
+
+
+### fn withAnnotations
+
+```ts
+withAnnotations()
+```
+
+`google.obj.withAnnotations` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the annotations field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `annotations` field.
 
 
 ### fn withBinaryAuthorization
@@ -498,6 +517,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `annotations` (`obj`): KRM-style annotations for the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `encryption_key` (`string`): A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. For more information, go to https://cloud.google.com/run/docs/securing/using-cmek When `null`, the `encryption_key` field will be omitted from the resulting object.
   - `execution_environment` (`string`): The sandbox environment to host this Revision. Possible values: [&#34;EXECUTION_ENVIRONMENT_GEN1&#34;, &#34;EXECUTION_ENVIRONMENT_GEN2&#34;] When `null`, the `execution_environment` field will be omitted from the resulting object.
   - `labels` (`obj`): KRM-style labels for the resource. When `null`, the `labels` field will be omitted from the resulting object.

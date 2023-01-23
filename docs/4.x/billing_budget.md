@@ -465,7 +465,9 @@ All calendar times begin at 12 AM US and Canadian Pacific Time (UTC-8).
 Exactly one of &#39;calendar_period&#39;, &#39;custom_period&#39; must be provided. Possible values: [&#34;MONTH&#34;, &#34;QUARTER&#34;, &#34;YEAR&#34;, &#34;CALENDAR_PERIOD_UNSPECIFIED&#34;] When `null`, the `calendar_period` field will be omitted from the resulting object.
   - `credit_types` (`list`): Optional. If creditTypesTreatment is INCLUDE_SPECIFIED_CREDITS,
 this is a list of credit types to be subtracted from gross cost to determine the spend for threshold calculations. See a list of acceptable credit type values.
-If creditTypesTreatment is not INCLUDE_SPECIFIED_CREDITS, this field must be empty. When `null`, the `credit_types` field will be omitted from the resulting object.
+If creditTypesTreatment is not INCLUDE_SPECIFIED_CREDITS, this field must be empty.
+
+**Note:** If the field has a value in the config and needs to be removed, the field has to be an emtpy array in the config. When `null`, the `credit_types` field will be omitted from the resulting object.
   - `credit_types_treatment` (`string`): Specifies how credits should be treated when determining spend
 for threshold calculations. Default value: &#34;INCLUDE_ALL_CREDITS&#34; Possible values: [&#34;INCLUDE_ALL_CREDITS&#34;, &#34;EXCLUDE_ALL_CREDITS&#34;, &#34;INCLUDE_SPECIFIED_CREDITS&#34;] When `null`, the `credit_types_treatment` field will be omitted from the resulting object.
   - `labels` (`obj`): A single label and value pair specifying that usage from only
@@ -486,7 +488,9 @@ specifying that usage from only this set of subaccounts should
 be included in the budget. If a subaccount is set to the name of
 the parent account, usage from the parent account will be included.
 If the field is omitted, the report will include usage from the parent
-account and all subaccounts, if they exist. When `null`, the `subaccounts` field will be omitted from the resulting object.
+account and all subaccounts, if they exist.
+
+**Note:** If the field has a value in the config and needs to be removed, the field has to be an emtpy array in the config. When `null`, the `subaccounts` field will be omitted from the resulting object.
   - `custom_period` (`list[obj]`): Specifies to track usage from any start date (required) to any end date (optional).
 This time period is static, it does not recur.
 

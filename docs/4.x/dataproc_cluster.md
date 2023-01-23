@@ -30,6 +30,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-cluster_confignew)
   * [`obj cluster_config.autoscaling_config`](#obj-cluster_configautoscaling_config)
     * [`fn new()`](#fn-cluster_configautoscaling_confignew)
+  * [`obj cluster_config.dataproc_metric_config`](#obj-cluster_configdataproc_metric_config)
+    * [`fn new()`](#fn-cluster_configdataproc_metric_confignew)
+    * [`obj cluster_config.dataproc_metric_config.metrics`](#obj-cluster_configdataproc_metric_configmetrics)
+      * [`fn new()`](#fn-cluster_configdataproc_metric_configmetricsnew)
   * [`obj cluster_config.encryption_config`](#obj-cluster_configencryption_config)
     * [`fn new()`](#fn-cluster_configencryption_confignew)
   * [`obj cluster_config.endpoint_config`](#obj-cluster_configendpoint_config)
@@ -378,6 +382,7 @@ Terraform sub block.
   - `staging_bucket` (`string`): The Cloud Storage staging bucket used to stage files, such as Hadoop jars, between client machines and the cluster. Note: If you don&#39;t explicitly specify a staging_bucket then GCP will auto create / assign one for you. However, you are not guaranteed an auto generated bucket which is solely dedicated to your cluster; it may be shared with other clusters in the same region/zone also choosing to use the auto generation option. When `null`, the `staging_bucket` field will be omitted from the resulting object.
   - `temp_bucket` (`string`): The Cloud Storage temp bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. Note: If you don&#39;t explicitly specify a temp_bucket then GCP will auto create / assign one for you. When `null`, the `temp_bucket` field will be omitted from the resulting object.
   - `autoscaling_config` (`list[obj]`): The autoscaling policy config associated with the cluster. When `null`, the `autoscaling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.autoscaling_config.new](#fn-cluster_configautoscaling_confignew) constructor.
+  - `dataproc_metric_config` (`list[obj]`): The config for Dataproc metrics. When `null`, the `dataproc_metric_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.dataproc_metric_config.new](#fn-cluster_configdataproc_metric_confignew) constructor.
   - `encryption_config` (`list[obj]`): The Customer managed encryption keys settings for the cluster. When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.encryption_config.new](#fn-cluster_configencryption_confignew) constructor.
   - `endpoint_config` (`list[obj]`): The config settings for port access on the cluster. Structure defined below. When `null`, the `endpoint_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.endpoint_config.new](#fn-cluster_configendpoint_confignew) constructor.
   - `gce_cluster_config` (`list[obj]`): Common config settings for resources of Google Compute Engine cluster instances, applicable to all instances in the cluster. When `null`, the `gce_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.gce_cluster_config.new](#fn-cluster_configgce_cluster_confignew) constructor.
@@ -415,6 +420,53 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `autoscaling_config` sub block.
+
+
+## obj cluster_config.dataproc_metric_config
+
+
+
+### fn cluster_config.dataproc_metric_config.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_cluster.cluster_config.dataproc_metric_config.new` constructs a new object with attributes and blocks configured for the `dataproc_metric_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `metrics` (`list[obj]`): Metrics sources to enable. When `null`, the `metrics` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.dataproc_metric_config.metrics.new](#fn-cluster_configcluster_configmetricsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `dataproc_metric_config` sub block.
+
+
+## obj cluster_config.dataproc_metric_config.metrics
+
+
+
+### fn cluster_config.dataproc_metric_config.metrics.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_cluster.cluster_config.dataproc_metric_config.metrics.new` constructs a new object with attributes and blocks configured for the `metrics`
+Terraform sub block.
+
+
+
+**Args**:
+  - `metric_overrides` (`list`): Specify one or more [available OSS metrics] (https://cloud.google.com/dataproc/docs/guides/monitoring#available_oss_metrics) to collect. When `null`, the `metric_overrides` field will be omitted from the resulting object.
+  - `metric_source` (`string`): A source for the collection of Dataproc OSS metrics (see [available OSS metrics] (https://cloud.google.com//dataproc/docs/guides/monitoring#available_oss_metrics)).
+
+**Returns**:
+  - An attribute object that represents the `metrics` sub block.
 
 
 ## obj cluster_config.encryption_config
