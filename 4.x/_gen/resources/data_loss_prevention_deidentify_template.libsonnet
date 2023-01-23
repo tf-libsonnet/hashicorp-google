@@ -72,7 +72,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
                   wrapped_key: wrapped_key,
                 }),
               },
-              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.crypto_key.new` constructs a new object with attributes and blocks configured for the `crypto_key`\nTerraform sub block.\n\n\n\n**Args**:\n  - `kms_wrapped` (`list[obj]`): Kms wrapped key When `null`, the `kms_wrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.crypto_key.kms_wrapped.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configkms_wrappednew) constructor.\n  - `transient` (`list[obj]`): Transient crypto key When `null`, the `transient` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.crypto_key.transient.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configtransientnew) constructor.\n  - `unwrapped` (`list[obj]`): Unwrapped crypto key When `null`, the `unwrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.crypto_key.unwrapped.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configunwrappednew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `crypto_key` sub block.\n', args=[]),
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.crypto_key.new` constructs a new object with attributes and blocks configured for the `crypto_key`\nTerraform sub block.\n\n\n\n**Args**:\n  - `kms_wrapped` (`list[obj]`): KMS wrapped key.\nInclude to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt\nFor more information, see [Creating a wrapped key](https://cloud.google.com/dlp/docs/create-wrapped-key).\nNote: When you use Cloud KMS for cryptographic operations, [charges apply](https://cloud.google.com/kms/pricing). When `null`, the `kms_wrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.crypto_key.kms_wrapped.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configkms_wrappednew) constructor.\n  - `transient` (`list[obj]`): Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. When `null`, the `transient` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.crypto_key.transient.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configtransientnew) constructor.\n  - `unwrapped` (`list[obj]`): Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. When `null`, the `unwrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.crypto_key.unwrapped.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configunwrappednew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `crypto_key` sub block.\n', args=[]),
               new(
                 kms_wrapped=null,
                 transient=null,
@@ -110,11 +110,13 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
               surrogate_info_type: surrogate_info_type,
             }),
             surrogate_info_type:: {
-              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.new` constructs a new object with attributes and blocks configured for the `surrogate_info_type`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern &#39;[A-Za-z0-9$-_]{1,64}&#39;. When `null`, the `name` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `surrogate_info_type` sub block.\n', args=[]),
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.new` constructs a new object with attributes and blocks configured for the `surrogate_info_type`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern &#39;[A-Za-z0-9$-_]{1,64}&#39;. When `null`, the `name` field will be omitted from the resulting object.\n  - `version` (`string`): Optional version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `surrogate_info_type` sub block.\n', args=[]),
               new(
-                name=null
+                name=null,
+                version=null
               ):: std.prune(a={
                 name: name,
+                version: version,
               }),
             },
           },
@@ -138,7 +140,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
                   wrapped_key: wrapped_key,
                 }),
               },
-              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.new` constructs a new object with attributes and blocks configured for the `crypto_key`\nTerraform sub block.\n\n\n\n**Args**:\n  - `kms_wrapped` (`list[obj]`): Kms wrapped key When `null`, the `kms_wrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.kms_wrapped.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configkms_wrappednew) constructor.\n  - `transient` (`list[obj]`): Transient crypto key When `null`, the `transient` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.transient.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configtransientnew) constructor.\n  - `unwrapped` (`list[obj]`): Unwrapped crypto key When `null`, the `unwrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.unwrapped.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configunwrappednew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `crypto_key` sub block.\n', args=[]),
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.new` constructs a new object with attributes and blocks configured for the `crypto_key`\nTerraform sub block.\n\n\n\n**Args**:\n  - `kms_wrapped` (`list[obj]`): KMS wrapped key.\nInclude to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt\nFor more information, see [Creating a wrapped key](https://cloud.google.com/dlp/docs/create-wrapped-key).\nNote: When you use Cloud KMS for cryptographic operations, [charges apply](https://cloud.google.com/kms/pricing). When `null`, the `kms_wrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.kms_wrapped.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configkms_wrappednew) constructor.\n  - `transient` (`list[obj]`): Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. When `null`, the `transient` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.transient.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configtransientnew) constructor.\n  - `unwrapped` (`list[obj]`): Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. When `null`, the `unwrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.unwrapped.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configunwrappednew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `crypto_key` sub block.\n', args=[]),
               new(
                 kms_wrapped=null,
                 transient=null,
@@ -182,11 +184,13 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
               surrogate_info_type: surrogate_info_type,
             }),
             surrogate_info_type:: {
-              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.new` constructs a new object with attributes and blocks configured for the `surrogate_info_type`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern &#39;[A-Za-z0-9$-_]{1,64}&#39;. When `null`, the `name` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `surrogate_info_type` sub block.\n', args=[]),
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.new` constructs a new object with attributes and blocks configured for the `surrogate_info_type`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern &#39;[A-Za-z0-9$-_]{1,64}&#39;. When `null`, the `name` field will be omitted from the resulting object.\n  - `version` (`string`): Optional version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `surrogate_info_type` sub block.\n', args=[]),
               new(
-                name=null
+                name=null,
+                version=null
               ):: std.prune(a={
                 name: name,
+                version: version,
               }),
             },
           },
@@ -386,6 +390,170 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           primitive_transformation: primitive_transformation,
         }),
         primitive_transformation:: {
+          bucketing_config:: {
+            buckets:: {
+              max:: {
+                date_value:: {
+                  '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.max.date_value.new` constructs a new object with attributes and blocks configured for the `date_value`\nTerraform sub block.\n\n\n\n**Args**:\n  - `day` (`number`): Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant. When `null`, the `day` field will be omitted from the resulting object.\n  - `month` (`number`): Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day. When `null`, the `month` field will be omitted from the resulting object.\n  - `year` (`number`): Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. When `null`, the `year` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `date_value` sub block.\n', args=[]),
+                  new(
+                    day=null,
+                    month=null,
+                    year=null
+                  ):: std.prune(a={
+                    day: day,
+                    month: month,
+                    year: year,
+                  }),
+                },
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.max.new` constructs a new object with attributes and blocks configured for the `max`\nTerraform sub block.\n\n\n\n**Args**:\n  - `boolean_value` (`bool`): A boolean value. When `null`, the `boolean_value` field will be omitted from the resulting object.\n  - `day_of_week_value` (`string`): Represents a day of the week. Possible values: [&#34;MONDAY&#34;, &#34;TUESDAY&#34;, &#34;WEDNESDAY&#34;, &#34;THURSDAY&#34;, &#34;FRIDAY&#34;, &#34;SATURDAY&#34;, &#34;SUNDAY&#34;] When `null`, the `day_of_week_value` field will be omitted from the resulting object.\n  - `float_value` (`number`): A float value. When `null`, the `float_value` field will be omitted from the resulting object.\n  - `integer_value` (`string`): An integer value (int64 format) When `null`, the `integer_value` field will be omitted from the resulting object.\n  - `string_value` (`string`): A string value. When `null`, the `string_value` field will be omitted from the resulting object.\n  - `timestamp_value` (`string`): A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `timestamp_value` field will be omitted from the resulting object.\n  - `date_value` (`list[obj]`): Represents a whole or partial calendar date. When `null`, the `date_value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.max.date_value.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationbucketing_configbucketsdate_valuenew) constructor.\n  - `time_value` (`list[obj]`): Represents a time of day. When `null`, the `time_value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.max.time_value.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationbucketing_configbucketstime_valuenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `max` sub block.\n', args=[]),
+                new(
+                  boolean_value=null,
+                  date_value=null,
+                  day_of_week_value=null,
+                  float_value=null,
+                  integer_value=null,
+                  string_value=null,
+                  time_value=null,
+                  timestamp_value=null
+                ):: std.prune(a={
+                  boolean_value: boolean_value,
+                  date_value: date_value,
+                  day_of_week_value: day_of_week_value,
+                  float_value: float_value,
+                  integer_value: integer_value,
+                  string_value: string_value,
+                  time_value: time_value,
+                  timestamp_value: timestamp_value,
+                }),
+                time_value:: {
+                  '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.max.time_value.new` constructs a new object with attributes and blocks configured for the `time_value`\nTerraform sub block.\n\n\n\n**Args**:\n  - `hours` (`number`): Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value &#34;24:00:00&#34; for scenarios like business closing time. When `null`, the `hours` field will be omitted from the resulting object.\n  - `minutes` (`number`): Minutes of hour of day. Must be from 0 to 59. When `null`, the `minutes` field will be omitted from the resulting object.\n  - `nanos` (`number`): Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. When `null`, the `nanos` field will be omitted from the resulting object.\n  - `seconds` (`number`): Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds. When `null`, the `seconds` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `time_value` sub block.\n', args=[]),
+                  new(
+                    hours=null,
+                    minutes=null,
+                    nanos=null,
+                    seconds=null
+                  ):: std.prune(a={
+                    hours: hours,
+                    minutes: minutes,
+                    nanos: nanos,
+                    seconds: seconds,
+                  }),
+                },
+              },
+              min:: {
+                date_value:: {
+                  '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.min.date_value.new` constructs a new object with attributes and blocks configured for the `date_value`\nTerraform sub block.\n\n\n\n**Args**:\n  - `day` (`number`): Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant. When `null`, the `day` field will be omitted from the resulting object.\n  - `month` (`number`): Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day. When `null`, the `month` field will be omitted from the resulting object.\n  - `year` (`number`): Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. When `null`, the `year` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `date_value` sub block.\n', args=[]),
+                  new(
+                    day=null,
+                    month=null,
+                    year=null
+                  ):: std.prune(a={
+                    day: day,
+                    month: month,
+                    year: year,
+                  }),
+                },
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.min.new` constructs a new object with attributes and blocks configured for the `min`\nTerraform sub block.\n\n\n\n**Args**:\n  - `boolean_value` (`bool`): A boolean value. When `null`, the `boolean_value` field will be omitted from the resulting object.\n  - `day_of_week_value` (`string`): Represents a day of the week. Possible values: [&#34;MONDAY&#34;, &#34;TUESDAY&#34;, &#34;WEDNESDAY&#34;, &#34;THURSDAY&#34;, &#34;FRIDAY&#34;, &#34;SATURDAY&#34;, &#34;SUNDAY&#34;] When `null`, the `day_of_week_value` field will be omitted from the resulting object.\n  - `float_value` (`number`): A float value. When `null`, the `float_value` field will be omitted from the resulting object.\n  - `integer_value` (`string`): An integer value (int64 format) When `null`, the `integer_value` field will be omitted from the resulting object.\n  - `string_value` (`string`): A string value. When `null`, the `string_value` field will be omitted from the resulting object.\n  - `timestamp_value` (`string`): A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `timestamp_value` field will be omitted from the resulting object.\n  - `date_value` (`list[obj]`): Represents a whole or partial calendar date. When `null`, the `date_value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.min.date_value.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationbucketing_configbucketsdate_valuenew) constructor.\n  - `time_value` (`list[obj]`): Represents a time of day. When `null`, the `time_value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.min.time_value.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationbucketing_configbucketstime_valuenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `min` sub block.\n', args=[]),
+                new(
+                  boolean_value=null,
+                  date_value=null,
+                  day_of_week_value=null,
+                  float_value=null,
+                  integer_value=null,
+                  string_value=null,
+                  time_value=null,
+                  timestamp_value=null
+                ):: std.prune(a={
+                  boolean_value: boolean_value,
+                  date_value: date_value,
+                  day_of_week_value: day_of_week_value,
+                  float_value: float_value,
+                  integer_value: integer_value,
+                  string_value: string_value,
+                  time_value: time_value,
+                  timestamp_value: timestamp_value,
+                }),
+                time_value:: {
+                  '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.min.time_value.new` constructs a new object with attributes and blocks configured for the `time_value`\nTerraform sub block.\n\n\n\n**Args**:\n  - `hours` (`number`): Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value &#34;24:00:00&#34; for scenarios like business closing time. When `null`, the `hours` field will be omitted from the resulting object.\n  - `minutes` (`number`): Minutes of hour of day. Must be from 0 to 59. When `null`, the `minutes` field will be omitted from the resulting object.\n  - `nanos` (`number`): Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. When `null`, the `nanos` field will be omitted from the resulting object.\n  - `seconds` (`number`): Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds. When `null`, the `seconds` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `time_value` sub block.\n', args=[]),
+                  new(
+                    hours=null,
+                    minutes=null,
+                    nanos=null,
+                    seconds=null
+                  ):: std.prune(a={
+                    hours: hours,
+                    minutes: minutes,
+                    nanos: nanos,
+                    seconds: seconds,
+                  }),
+                },
+              },
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.new` constructs a new object with attributes and blocks configured for the `buckets`\nTerraform sub block.\n\n\n\n**Args**:\n  - `max` (`list[obj]`): Upper bound of the range, exclusive; type must match min.\nThe &#39;max&#39; block must only contain one argument. See the &#39;bucketing_config&#39; block description for more information about choosing a data type. When `null`, the `max` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.max.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationbucketing_configmaxnew) constructor.\n  - `min` (`list[obj]`): Lower bound of the range, inclusive. Type should be the same as max if used.\nThe &#39;min&#39; block must only contain one argument. See the &#39;bucketing_config&#39; block description for more information about choosing a data type. When `null`, the `min` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.min.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationbucketing_configminnew) constructor.\n  - `replacement_value` (`list[obj]`): Replacement value for this bucket.\nThe &#39;replacement_value&#39; block must only contain one argument. When `null`, the `replacement_value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.replacement_value.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationbucketing_configreplacement_valuenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `buckets` sub block.\n', args=[]),
+              new(
+                max=null,
+                min=null,
+                replacement_value=null
+              ):: std.prune(a={
+                max: max,
+                min: min,
+                replacement_value: replacement_value,
+              }),
+              replacement_value:: {
+                date_value:: {
+                  '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.replacement_value.date_value.new` constructs a new object with attributes and blocks configured for the `date_value`\nTerraform sub block.\n\n\n\n**Args**:\n  - `day` (`number`): Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant. When `null`, the `day` field will be omitted from the resulting object.\n  - `month` (`number`): Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day. When `null`, the `month` field will be omitted from the resulting object.\n  - `year` (`number`): Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. When `null`, the `year` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `date_value` sub block.\n', args=[]),
+                  new(
+                    day=null,
+                    month=null,
+                    year=null
+                  ):: std.prune(a={
+                    day: day,
+                    month: month,
+                    year: year,
+                  }),
+                },
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.replacement_value.new` constructs a new object with attributes and blocks configured for the `replacement_value`\nTerraform sub block.\n\n\n\n**Args**:\n  - `boolean_value` (`bool`): A boolean value. When `null`, the `boolean_value` field will be omitted from the resulting object.\n  - `day_of_week_value` (`string`): Represents a day of the week. Possible values: [&#34;MONDAY&#34;, &#34;TUESDAY&#34;, &#34;WEDNESDAY&#34;, &#34;THURSDAY&#34;, &#34;FRIDAY&#34;, &#34;SATURDAY&#34;, &#34;SUNDAY&#34;] When `null`, the `day_of_week_value` field will be omitted from the resulting object.\n  - `float_value` (`number`): A float value. When `null`, the `float_value` field will be omitted from the resulting object.\n  - `integer_value` (`string`): An integer value (int64 format) When `null`, the `integer_value` field will be omitted from the resulting object.\n  - `string_value` (`string`): A string value. When `null`, the `string_value` field will be omitted from the resulting object.\n  - `timestamp_value` (`string`): A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `timestamp_value` field will be omitted from the resulting object.\n  - `date_value` (`list[obj]`): Represents a whole or partial calendar date. When `null`, the `date_value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.replacement_value.date_value.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationbucketing_configbucketsdate_valuenew) constructor.\n  - `time_value` (`list[obj]`): Represents a time of day. When `null`, the `time_value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.replacement_value.time_value.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationbucketing_configbucketstime_valuenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `replacement_value` sub block.\n', args=[]),
+                new(
+                  boolean_value=null,
+                  date_value=null,
+                  day_of_week_value=null,
+                  float_value=null,
+                  integer_value=null,
+                  string_value=null,
+                  time_value=null,
+                  timestamp_value=null
+                ):: std.prune(a={
+                  boolean_value: boolean_value,
+                  date_value: date_value,
+                  day_of_week_value: day_of_week_value,
+                  float_value: float_value,
+                  integer_value: integer_value,
+                  string_value: string_value,
+                  time_value: time_value,
+                  timestamp_value: timestamp_value,
+                }),
+                time_value:: {
+                  '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.replacement_value.time_value.new` constructs a new object with attributes and blocks configured for the `time_value`\nTerraform sub block.\n\n\n\n**Args**:\n  - `hours` (`number`): Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value &#34;24:00:00&#34; for scenarios like business closing time. When `null`, the `hours` field will be omitted from the resulting object.\n  - `minutes` (`number`): Minutes of hour of day. Must be from 0 to 59. When `null`, the `minutes` field will be omitted from the resulting object.\n  - `nanos` (`number`): Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. When `null`, the `nanos` field will be omitted from the resulting object.\n  - `seconds` (`number`): Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds. When `null`, the `seconds` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `time_value` sub block.\n', args=[]),
+                  new(
+                    hours=null,
+                    minutes=null,
+                    nanos=null,
+                    seconds=null
+                  ):: std.prune(a={
+                    hours: hours,
+                    minutes: minutes,
+                    nanos: nanos,
+                    seconds: seconds,
+                  }),
+                },
+              },
+            },
+            '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.new` constructs a new object with attributes and blocks configured for the `bucketing_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `buckets` (`list[obj]`): Set of buckets. Ranges must be non-overlapping.\nBucket is represented as a range, along with replacement values. When `null`, the `buckets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.buckets.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationbucketsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `bucketing_config` sub block.\n', args=[]),
+            new(
+              buckets=null
+            ):: std.prune(a={
+              buckets: buckets,
+            }),
+          },
           character_mask_config:: {
             characters_to_ignore:: {
               '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.character_mask_config.characters_to_ignore.new` constructs a new object with attributes and blocks configured for the `characters_to_ignore`\nTerraform sub block.\n\n\n\n**Args**:\n  - `characters_to_skip` (`string`): Characters to not transform when masking. When `null`, the `characters_to_skip` field will be omitted from the resulting object.\n  - `common_characters_to_ignore` (`string`): Common characters to not transform when masking. Useful to avoid removing punctuation. Possible values: [&#34;NUMERIC&#34;, &#34;ALPHA_UPPER_CASE&#34;, &#34;ALPHA_LOWER_CASE&#34;, &#34;PUNCTUATION&#34;, &#34;WHITESPACE&#34;] When `null`, the `common_characters_to_ignore` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `characters_to_ignore` sub block.\n', args=[]),
@@ -410,15 +578,387 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
               reverse_order: reverse_order,
             }),
           },
-          '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.new` constructs a new object with attributes and blocks configured for the `primitive_transformation`\nTerraform sub block.\n\n\n\n**Args**:\n  - `character_mask_config` (`list[obj]`): Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. This can be used on data of any type (numbers, longs, and so on) and when de-identifying structured data we&#39;ll attempt to preserve the original data&#39;s type. (This allows you to take a long like 123 and modify it to a string like **3). When `null`, the `character_mask_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.character_mask_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationscharacter_mask_confignew) constructor.\n  - `redact_config` (`list[obj]`): Redact a given value. For example, if used with an InfoTypeTransformation transforming PHONE_NUMBER, and input &#39;My phone number is 206-555-0123&#39;, the output would be &#39;My phone number is &#39;. When `null`, the `redact_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.redact_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsredact_confignew) constructor.\n  - `replace_config` (`list[obj]`): Replace with a specified value. When `null`, the `replace_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.replace_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsreplace_confignew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `primitive_transformation` sub block.\n', args=[]),
+          crypto_deterministic_config:: {
+            context:: {
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.context.new` constructs a new object with attributes and blocks configured for the `context`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name describing the field. When `null`, the `name` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `context` sub block.\n', args=[]),
+              new(
+                name=null
+              ):: std.prune(a={
+                name: name,
+              }),
+            },
+            crypto_key:: {
+              kms_wrapped:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.crypto_key.kms_wrapped.new` constructs a new object with attributes and blocks configured for the `kms_wrapped`\nTerraform sub block.\n\n\n\n**Args**:\n  - `crypto_key_name` (`string`): The resource name of the KMS CryptoKey to use for unwrapping.\n  - `wrapped_key` (`string`): The wrapped data crypto key.\n\nA base64-encoded string.\n\n**Returns**:\n  - An attribute object that represents the `kms_wrapped` sub block.\n', args=[]),
+                new(
+                  crypto_key_name,
+                  wrapped_key
+                ):: std.prune(a={
+                  crypto_key_name: crypto_key_name,
+                  wrapped_key: wrapped_key,
+                }),
+              },
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.crypto_key.new` constructs a new object with attributes and blocks configured for the `crypto_key`\nTerraform sub block.\n\n\n\n**Args**:\n  - `kms_wrapped` (`list[obj]`): KMS wrapped key.\nInclude to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt\nFor more information, see [Creating a wrapped key](https://cloud.google.com/dlp/docs/create-wrapped-key).\nNote: When you use Cloud KMS for cryptographic operations, [charges apply](https://cloud.google.com/kms/pricing). When `null`, the `kms_wrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.crypto_key.kms_wrapped.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_deterministic_configkms_wrappednew) constructor.\n  - `transient` (`list[obj]`): Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. When `null`, the `transient` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.crypto_key.transient.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_deterministic_configtransientnew) constructor.\n  - `unwrapped` (`list[obj]`): Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. When `null`, the `unwrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.crypto_key.unwrapped.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_deterministic_configunwrappednew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `crypto_key` sub block.\n', args=[]),
+              new(
+                kms_wrapped=null,
+                transient=null,
+                unwrapped=null
+              ):: std.prune(a={
+                kms_wrapped: kms_wrapped,
+                transient: transient,
+                unwrapped: unwrapped,
+              }),
+              transient:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.crypto_key.transient.new` constructs a new object with attributes and blocks configured for the `transient`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate &#39;TransientCryptoKey&#39; protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).\n\n**Returns**:\n  - An attribute object that represents the `transient` sub block.\n', args=[]),
+                new(
+                  name
+                ):: std.prune(a={
+                  name: name,
+                }),
+              },
+              unwrapped:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.crypto_key.unwrapped.new` constructs a new object with attributes and blocks configured for the `unwrapped`\nTerraform sub block.\n\n\n\n**Args**:\n  - `key` (`string`): A 128/192/256 bit key.\n\nA base64-encoded string.\n\n**Returns**:\n  - An attribute object that represents the `unwrapped` sub block.\n', args=[]),
+                new(
+                  key
+                ):: std.prune(a={
+                  key: key,
+                }),
+              },
+            },
+            '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.new` constructs a new object with attributes and blocks configured for the `crypto_deterministic_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `context` (`list[obj]`): A context may be used for higher security and maintaining referential integrity such that the same identifier in two different contexts will be given a distinct surrogate. The context is appended to plaintext value being encrypted. On decryption the provided context is validated against the value used during encryption. If a context was provided during encryption, same context must be provided during decryption as well.\n\nIf the context is not set, plaintext would be used as is for encryption. If the context is set but:\n\n1. there is no record present when transforming a given value or\n2. the field is not present when transforming a given value,\n\nplaintext would be used as is for encryption.\n\nNote that case (1) is expected when an InfoTypeTransformation is applied to both structured and unstructured ContentItems. When `null`, the `context` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.context.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcontextnew) constructor.\n  - `crypto_key` (`list[obj]`): The key used by the encryption function. For deterministic encryption using AES-SIV, the provided key is internally expanded to 64 bytes prior to use. When `null`, the `crypto_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.crypto_key.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_keynew) constructor.\n  - `surrogate_info_type` (`list[obj]`): The custom info type to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom info type followed by the number of characters comprising the surrogate. The following scheme defines the format: {info type name}({surrogate character count}):{surrogate}\n\nFor example, if the name of custom info type is &#39;MY\\_TOKEN\\_INFO\\_TYPE&#39; and the surrogate is &#39;abc&#39;, the full replacement value will be: &#39;MY\\_TOKEN\\_INFO\\_TYPE(3):abc&#39;\n\nThis annotation identifies the surrogate when inspecting content using the custom info type &#39;Surrogate&#39;. This facilitates reversal of the surrogate when it occurs in free text.\n\nNote: For record transformations where the entire cell in a table is being transformed, surrogates are not mandatory. Surrogates are used to denote the location of the token and are necessary for re-identification in free form text.\n\nIn order for inspection to work properly, the name of this info type must not occur naturally anywhere in your data; otherwise, inspection may either\n\n*   reverse a surrogate that does not correspond to an actual identifier\n*   be unable to parse the surrogate and result in an error\n\nTherefore, choose your custom info type name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\\_TOKEN\\_TYPE. When `null`, the `surrogate_info_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationsurrogate_info_typenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `crypto_deterministic_config` sub block.\n', args=[]),
+            new(
+              context=null,
+              crypto_key=null,
+              surrogate_info_type=null
+            ):: std.prune(a={
+              context: context,
+              crypto_key: crypto_key,
+              surrogate_info_type: surrogate_info_type,
+            }),
+            surrogate_info_type:: {
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.new` constructs a new object with attributes and blocks configured for the `surrogate_info_type`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern &#39;[A-Za-z0-9$-_]{1,64}&#39;. When `null`, the `name` field will be omitted from the resulting object.\n  - `version` (`string`): Optional version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `surrogate_info_type` sub block.\n', args=[]),
+              new(
+                name=null,
+                version=null
+              ):: std.prune(a={
+                name: name,
+                version: version,
+              }),
+            },
+          },
+          crypto_hash_config:: {
+            crypto_key:: {
+              kms_wrapped:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config.crypto_key.kms_wrapped.new` constructs a new object with attributes and blocks configured for the `kms_wrapped`\nTerraform sub block.\n\n\n\n**Args**:\n  - `crypto_key_name` (`string`): The resource name of the KMS CryptoKey to use for unwrapping.\n  - `wrapped_key` (`string`): The wrapped data crypto key.\n\nA base64-encoded string.\n\n**Returns**:\n  - An attribute object that represents the `kms_wrapped` sub block.\n', args=[]),
+                new(
+                  crypto_key_name,
+                  wrapped_key
+                ):: std.prune(a={
+                  crypto_key_name: crypto_key_name,
+                  wrapped_key: wrapped_key,
+                }),
+              },
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config.crypto_key.new` constructs a new object with attributes and blocks configured for the `crypto_key`\nTerraform sub block.\n\n\n\n**Args**:\n  - `kms_wrapped` (`list[obj]`): KMS wrapped key.\nInclude to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt\nFor more information, see [Creating a wrapped key](https://cloud.google.com/dlp/docs/create-wrapped-key).\nNote: When you use Cloud KMS for cryptographic operations, [charges apply](https://cloud.google.com/kms/pricing). When `null`, the `kms_wrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config.crypto_key.kms_wrapped.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_hash_configkms_wrappednew) constructor.\n  - `transient` (`list[obj]`): Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. When `null`, the `transient` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config.crypto_key.transient.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_hash_configtransientnew) constructor.\n  - `unwrapped` (`list[obj]`): Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. When `null`, the `unwrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config.crypto_key.unwrapped.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_hash_configunwrappednew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `crypto_key` sub block.\n', args=[]),
+              new(
+                kms_wrapped=null,
+                transient=null,
+                unwrapped=null
+              ):: std.prune(a={
+                kms_wrapped: kms_wrapped,
+                transient: transient,
+                unwrapped: unwrapped,
+              }),
+              transient:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config.crypto_key.transient.new` constructs a new object with attributes and blocks configured for the `transient`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate &#39;TransientCryptoKey&#39; protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).\n\n**Returns**:\n  - An attribute object that represents the `transient` sub block.\n', args=[]),
+                new(
+                  name
+                ):: std.prune(a={
+                  name: name,
+                }),
+              },
+              unwrapped:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config.crypto_key.unwrapped.new` constructs a new object with attributes and blocks configured for the `unwrapped`\nTerraform sub block.\n\n\n\n**Args**:\n  - `key` (`string`): A 128/192/256 bit key.\n\nA base64-encoded string.\n\n**Returns**:\n  - An attribute object that represents the `unwrapped` sub block.\n', args=[]),
+                new(
+                  key
+                ):: std.prune(a={
+                  key: key,
+                }),
+              },
+            },
+            '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config.new` constructs a new object with attributes and blocks configured for the `crypto_hash_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `crypto_key` (`list[obj]`): The key used by the encryption function. When `null`, the `crypto_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config.crypto_key.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_keynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `crypto_hash_config` sub block.\n', args=[]),
+            new(
+              crypto_key=null
+            ):: std.prune(a={
+              crypto_key: crypto_key,
+            }),
+          },
+          crypto_replace_ffx_fpe_config:: {
+            context:: {
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.context.new` constructs a new object with attributes and blocks configured for the `context`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name describing the field. When `null`, the `name` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `context` sub block.\n', args=[]),
+              new(
+                name=null
+              ):: std.prune(a={
+                name: name,
+              }),
+            },
+            crypto_key:: {
+              kms_wrapped:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.kms_wrapped.new` constructs a new object with attributes and blocks configured for the `kms_wrapped`\nTerraform sub block.\n\n\n\n**Args**:\n  - `crypto_key_name` (`string`): The resource name of the KMS CryptoKey to use for unwrapping.\n  - `wrapped_key` (`string`): The wrapped data crypto key.\n\nA base64-encoded string.\n\n**Returns**:\n  - An attribute object that represents the `kms_wrapped` sub block.\n', args=[]),
+                new(
+                  crypto_key_name,
+                  wrapped_key
+                ):: std.prune(a={
+                  crypto_key_name: crypto_key_name,
+                  wrapped_key: wrapped_key,
+                }),
+              },
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.new` constructs a new object with attributes and blocks configured for the `crypto_key`\nTerraform sub block.\n\n\n\n**Args**:\n  - `kms_wrapped` (`list[obj]`): KMS wrapped key.\nInclude to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt\nFor more information, see [Creating a wrapped key](https://cloud.google.com/dlp/docs/create-wrapped-key).\nNote: When you use Cloud KMS for cryptographic operations, [charges apply](https://cloud.google.com/kms/pricing). When `null`, the `kms_wrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.kms_wrapped.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_replace_ffx_fpe_configkms_wrappednew) constructor.\n  - `transient` (`list[obj]`): Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. When `null`, the `transient` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.transient.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_replace_ffx_fpe_configtransientnew) constructor.\n  - `unwrapped` (`list[obj]`): Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. When `null`, the `unwrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.unwrapped.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_replace_ffx_fpe_configunwrappednew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `crypto_key` sub block.\n', args=[]),
+              new(
+                kms_wrapped=null,
+                transient=null,
+                unwrapped=null
+              ):: std.prune(a={
+                kms_wrapped: kms_wrapped,
+                transient: transient,
+                unwrapped: unwrapped,
+              }),
+              transient:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.transient.new` constructs a new object with attributes and blocks configured for the `transient`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate &#39;TransientCryptoKey&#39; protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).\n\n**Returns**:\n  - An attribute object that represents the `transient` sub block.\n', args=[]),
+                new(
+                  name
+                ):: std.prune(a={
+                  name: name,
+                }),
+              },
+              unwrapped:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.unwrapped.new` constructs a new object with attributes and blocks configured for the `unwrapped`\nTerraform sub block.\n\n\n\n**Args**:\n  - `key` (`string`): A 128/192/256 bit key.\n\nA base64-encoded string.\n\n**Returns**:\n  - An attribute object that represents the `unwrapped` sub block.\n', args=[]),
+                new(
+                  key
+                ):: std.prune(a={
+                  key: key,
+                }),
+              },
+            },
+            '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.new` constructs a new object with attributes and blocks configured for the `crypto_replace_ffx_fpe_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `common_alphabet` (`string`): Common alphabets. Possible values: [&#34;FFX_COMMON_NATIVE_ALPHABET_UNSPECIFIED&#34;, &#34;NUMERIC&#34;, &#34;HEXADECIMAL&#34;, &#34;UPPER_CASE_ALPHA_NUMERIC&#34;, &#34;ALPHA_NUMERIC&#34;] When `null`, the `common_alphabet` field will be omitted from the resulting object.\n  - `custom_alphabet` (`string`): This is supported by mapping these to the alphanumeric characters that the FFX mode natively supports. This happens before/after encryption/decryption. Each character listed must appear only once. Number of characters must be in the range \\[2, 95\\]. This must be encoded as ASCII. The order of characters does not matter. The full list of allowed characters is:\n\n&#39;&#39;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ~&#39;!@#$%^&amp;*()_-&#43;={[}]|:;&#34;&#39;&lt;,&gt;.?/&#39;&#39; When `null`, the `custom_alphabet` field will be omitted from the resulting object.\n  - `radix` (`number`): The native way to select the alphabet. Must be in the range \\[2, 95\\]. When `null`, the `radix` field will be omitted from the resulting object.\n  - `context` (`list[obj]`): The &#39;tweak&#39;, a context may be used for higher security since the same identifier in two different contexts won&#39;t be given the same surrogate. If the context is not set, a default tweak will be used.\n\nIf the context is set but:\n\n1.  there is no record present when transforming a given value or\n2.  the field is not present when transforming a given value,\n\na default tweak will be used.\n\nNote that case (1) is expected when an &#39;InfoTypeTransformation&#39; is applied to both structured and non-structured &#39;ContentItem&#39;s. Currently, the referenced field may be of value type integer or string.\n\nThe tweak is constructed as a sequence of bytes in big endian byte order such that:\n\n*   a 64 bit integer is encoded followed by a single byte of value 1\n*   a string is encoded in UTF-8 format followed by a single byte of value 2 When `null`, the `context` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.context.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcontextnew) constructor.\n  - `crypto_key` (`list[obj]`): The key used by the encryption algorithm. When `null`, the `crypto_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.crypto_key.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_keynew) constructor.\n  - `surrogate_info_type` (`list[obj]`): The custom infoType to annotate the surrogate with. This annotation will be applied to the surrogate by prefixing it with the name of the custom infoType followed by the number of characters comprising the surrogate. The following scheme defines the format: info\\_type\\_name(surrogate\\_character\\_count):surrogate\n\nFor example, if the name of custom infoType is &#39;MY\\_TOKEN\\_INFO\\_TYPE&#39; and the surrogate is &#39;abc&#39;, the full replacement value will be: &#39;MY\\_TOKEN\\_INFO\\_TYPE(3):abc&#39;\n\nThis annotation identifies the surrogate when inspecting content using the custom infoType [&#39;SurrogateType&#39;](https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#surrogatetype). This facilitates reversal of the surrogate when it occurs in free text.\n\nIn order for inspection to work properly, the name of this infoType must not occur naturally anywhere in your data; otherwise, inspection may find a surrogate that does not correspond to an actual identifier. Therefore, choose your custom infoType name carefully after considering what your data looks like. One way to select a name that has a high chance of yielding reliable detection is to include one or more unicode characters that are highly improbable to exist in your data. For example, assuming your data is entered from a regular ASCII keyboard, the symbol with the hex code point 29DD might be used like so: ⧝MY\\_TOKEN\\_TYPE When `null`, the `surrogate_info_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationsurrogate_info_typenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `crypto_replace_ffx_fpe_config` sub block.\n', args=[]),
+            new(
+              common_alphabet=null,
+              context=null,
+              crypto_key=null,
+              custom_alphabet=null,
+              radix=null,
+              surrogate_info_type=null
+            ):: std.prune(a={
+              common_alphabet: common_alphabet,
+              context: context,
+              crypto_key: crypto_key,
+              custom_alphabet: custom_alphabet,
+              radix: radix,
+              surrogate_info_type: surrogate_info_type,
+            }),
+            surrogate_info_type:: {
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.new` constructs a new object with attributes and blocks configured for the `surrogate_info_type`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern &#39;[A-Za-z0-9$-_]{1,64}&#39;. When `null`, the `name` field will be omitted from the resulting object.\n  - `version` (`string`): Optional version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `surrogate_info_type` sub block.\n', args=[]),
+              new(
+                name=null,
+                version=null
+              ):: std.prune(a={
+                name: name,
+                version: version,
+              }),
+            },
+          },
+          date_shift_config:: {
+            context:: {
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.context.new` constructs a new object with attributes and blocks configured for the `context`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name describing the field. When `null`, the `name` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `context` sub block.\n', args=[]),
+              new(
+                name=null
+              ):: std.prune(a={
+                name: name,
+              }),
+            },
+            crypto_key:: {
+              kms_wrapped:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.crypto_key.kms_wrapped.new` constructs a new object with attributes and blocks configured for the `kms_wrapped`\nTerraform sub block.\n\n\n\n**Args**:\n  - `crypto_key_name` (`string`): The resource name of the KMS CryptoKey to use for unwrapping.\n  - `wrapped_key` (`string`): The wrapped data crypto key.\n\nA base64-encoded string.\n\n**Returns**:\n  - An attribute object that represents the `kms_wrapped` sub block.\n', args=[]),
+                new(
+                  crypto_key_name,
+                  wrapped_key
+                ):: std.prune(a={
+                  crypto_key_name: crypto_key_name,
+                  wrapped_key: wrapped_key,
+                }),
+              },
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.crypto_key.new` constructs a new object with attributes and blocks configured for the `crypto_key`\nTerraform sub block.\n\n\n\n**Args**:\n  - `kms_wrapped` (`list[obj]`): KMS wrapped key.\nInclude to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt\nFor more information, see [Creating a wrapped key](https://cloud.google.com/dlp/docs/create-wrapped-key).\nNote: When you use Cloud KMS for cryptographic operations, [charges apply](https://cloud.google.com/kms/pricing). When `null`, the `kms_wrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.crypto_key.kms_wrapped.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationdate_shift_configkms_wrappednew) constructor.\n  - `transient` (`list[obj]`): Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. When `null`, the `transient` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.crypto_key.transient.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationdate_shift_configtransientnew) constructor.\n  - `unwrapped` (`list[obj]`): Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. When `null`, the `unwrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.crypto_key.unwrapped.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationdate_shift_configunwrappednew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `crypto_key` sub block.\n', args=[]),
+              new(
+                kms_wrapped=null,
+                transient=null,
+                unwrapped=null
+              ):: std.prune(a={
+                kms_wrapped: kms_wrapped,
+                transient: transient,
+                unwrapped: unwrapped,
+              }),
+              transient:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.crypto_key.transient.new` constructs a new object with attributes and blocks configured for the `transient`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate &#39;TransientCryptoKey&#39; protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).\n\n**Returns**:\n  - An attribute object that represents the `transient` sub block.\n', args=[]),
+                new(
+                  name
+                ):: std.prune(a={
+                  name: name,
+                }),
+              },
+              unwrapped:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.crypto_key.unwrapped.new` constructs a new object with attributes and blocks configured for the `unwrapped`\nTerraform sub block.\n\n\n\n**Args**:\n  - `key` (`string`): A 128/192/256 bit key.\n\nA base64-encoded string.\n\n**Returns**:\n  - An attribute object that represents the `unwrapped` sub block.\n', args=[]),
+                new(
+                  key
+                ):: std.prune(a={
+                  key: key,
+                }),
+              },
+            },
+            '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.new` constructs a new object with attributes and blocks configured for the `date_shift_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `lower_bound_days` (`number`): For example, -5 means shift date to at most 5 days back in the past.\n  - `upper_bound_days` (`number`): Range of shift in days. Actual shift will be selected at random within this range (inclusive ends). Negative means shift to earlier in time. Must not be more than 365250 days (1000 years) each direction.\n\nFor example, 3 means shift date to at most 3 days into the future.\n  - `context` (`list[obj]`): Points to the field that contains the context, for example, an entity id.\nIf set, must also set cryptoKey. If set, shift will be consistent for the given context. When `null`, the `context` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.context.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcontextnew) constructor.\n  - `crypto_key` (`list[obj]`): Causes the shift to be computed based on this key and the context. This results in the same shift for the same context and cryptoKey. If set, must also set context. Can only be applied to table items. When `null`, the `crypto_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.crypto_key.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_keynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `date_shift_config` sub block.\n', args=[]),
+            new(
+              lower_bound_days,
+              upper_bound_days,
+              context=null,
+              crypto_key=null
+            ):: std.prune(a={
+              context: context,
+              crypto_key: crypto_key,
+              lower_bound_days: lower_bound_days,
+              upper_bound_days: upper_bound_days,
+            }),
+          },
+          fixed_size_bucketing_config:: {
+            lower_bound:: {
+              date_value:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.lower_bound.date_value.new` constructs a new object with attributes and blocks configured for the `date_value`\nTerraform sub block.\n\n\n\n**Args**:\n  - `day` (`number`): Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant. When `null`, the `day` field will be omitted from the resulting object.\n  - `month` (`number`): Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day. When `null`, the `month` field will be omitted from the resulting object.\n  - `year` (`number`): Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. When `null`, the `year` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `date_value` sub block.\n', args=[]),
+                new(
+                  day=null,
+                  month=null,
+                  year=null
+                ):: std.prune(a={
+                  day: day,
+                  month: month,
+                  year: year,
+                }),
+              },
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.lower_bound.new` constructs a new object with attributes and blocks configured for the `lower_bound`\nTerraform sub block.\n\n\n\n**Args**:\n  - `boolean_value` (`bool`): A boolean value. When `null`, the `boolean_value` field will be omitted from the resulting object.\n  - `day_of_week_value` (`string`): Represents a day of the week. Possible values: [&#34;MONDAY&#34;, &#34;TUESDAY&#34;, &#34;WEDNESDAY&#34;, &#34;THURSDAY&#34;, &#34;FRIDAY&#34;, &#34;SATURDAY&#34;, &#34;SUNDAY&#34;] When `null`, the `day_of_week_value` field will be omitted from the resulting object.\n  - `float_value` (`number`): A float value. When `null`, the `float_value` field will be omitted from the resulting object.\n  - `integer_value` (`string`): An integer value (int64 format) When `null`, the `integer_value` field will be omitted from the resulting object.\n  - `string_value` (`string`): A string value. When `null`, the `string_value` field will be omitted from the resulting object.\n  - `timestamp_value` (`string`): A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `timestamp_value` field will be omitted from the resulting object.\n  - `date_value` (`list[obj]`): Represents a whole or partial calendar date. When `null`, the `date_value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.lower_bound.date_value.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationfixed_size_bucketing_configdate_valuenew) constructor.\n  - `time_value` (`list[obj]`): Represents a time of day. When `null`, the `time_value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.lower_bound.time_value.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationfixed_size_bucketing_configtime_valuenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `lower_bound` sub block.\n', args=[]),
+              new(
+                boolean_value=null,
+                date_value=null,
+                day_of_week_value=null,
+                float_value=null,
+                integer_value=null,
+                string_value=null,
+                time_value=null,
+                timestamp_value=null
+              ):: std.prune(a={
+                boolean_value: boolean_value,
+                date_value: date_value,
+                day_of_week_value: day_of_week_value,
+                float_value: float_value,
+                integer_value: integer_value,
+                string_value: string_value,
+                time_value: time_value,
+                timestamp_value: timestamp_value,
+              }),
+              time_value:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.lower_bound.time_value.new` constructs a new object with attributes and blocks configured for the `time_value`\nTerraform sub block.\n\n\n\n**Args**:\n  - `hours` (`number`): Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value &#34;24:00:00&#34; for scenarios like business closing time. When `null`, the `hours` field will be omitted from the resulting object.\n  - `minutes` (`number`): Minutes of hour of day. Must be from 0 to 59. When `null`, the `minutes` field will be omitted from the resulting object.\n  - `nanos` (`number`): Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. When `null`, the `nanos` field will be omitted from the resulting object.\n  - `seconds` (`number`): Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds. When `null`, the `seconds` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `time_value` sub block.\n', args=[]),
+                new(
+                  hours=null,
+                  minutes=null,
+                  nanos=null,
+                  seconds=null
+                ):: std.prune(a={
+                  hours: hours,
+                  minutes: minutes,
+                  nanos: nanos,
+                  seconds: seconds,
+                }),
+              },
+            },
+            '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.new` constructs a new object with attributes and blocks configured for the `fixed_size_bucketing_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `bucket_size` (`number`): Size of each bucket (except for minimum and maximum buckets).\nSo if lower_bound = 10, upper_bound = 89, and bucketSize = 10, then the following buckets would be used: -10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-89, 89&#43;.\nPrecision up to 2 decimals works.\n  - `lower_bound` (`list[obj]`): Lower bound value of buckets.\nAll values less than lower_bound are grouped together into a single bucket; for example if lower_bound = 10, then all values less than 10 are replaced with the value &#34;-10&#34;.\nThe &#39;lower_bound&#39; block must only contain one argument. See the &#39;fixed_size_bucketing_config&#39; block description for more information about choosing a data type. When `null`, the `lower_bound` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.lower_bound.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationlower_boundnew) constructor.\n  - `upper_bound` (`list[obj]`): Upper bound value of buckets.\nAll values greater than upper_bound are grouped together into a single bucket; for example if upper_bound = 89, then all values greater than 89 are replaced with the value &#34;89&#43;&#34;.\nThe &#39;upper_bound&#39; block must only contain one argument. See the &#39;fixed_size_bucketing_config&#39; block description for more information about choosing a data type. When `null`, the `upper_bound` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.upper_bound.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationupper_boundnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `fixed_size_bucketing_config` sub block.\n', args=[]),
+            new(
+              bucket_size,
+              lower_bound=null,
+              upper_bound=null
+            ):: std.prune(a={
+              bucket_size: bucket_size,
+              lower_bound: lower_bound,
+              upper_bound: upper_bound,
+            }),
+            upper_bound:: {
+              date_value:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.upper_bound.date_value.new` constructs a new object with attributes and blocks configured for the `date_value`\nTerraform sub block.\n\n\n\n**Args**:\n  - `day` (`number`): Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn&#39;t significant. When `null`, the `day` field will be omitted from the resulting object.\n  - `month` (`number`): Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day. When `null`, the `month` field will be omitted from the resulting object.\n  - `year` (`number`): Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. When `null`, the `year` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `date_value` sub block.\n', args=[]),
+                new(
+                  day=null,
+                  month=null,
+                  year=null
+                ):: std.prune(a={
+                  day: day,
+                  month: month,
+                  year: year,
+                }),
+              },
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.upper_bound.new` constructs a new object with attributes and blocks configured for the `upper_bound`\nTerraform sub block.\n\n\n\n**Args**:\n  - `boolean_value` (`bool`): A boolean value. When `null`, the `boolean_value` field will be omitted from the resulting object.\n  - `day_of_week_value` (`string`): Represents a day of the week. Possible values: [&#34;MONDAY&#34;, &#34;TUESDAY&#34;, &#34;WEDNESDAY&#34;, &#34;THURSDAY&#34;, &#34;FRIDAY&#34;, &#34;SATURDAY&#34;, &#34;SUNDAY&#34;] When `null`, the `day_of_week_value` field will be omitted from the resulting object.\n  - `float_value` (`number`): A float value. When `null`, the `float_value` field will be omitted from the resulting object.\n  - `integer_value` (`string`): An integer value (int64 format) When `null`, the `integer_value` field will be omitted from the resulting object.\n  - `string_value` (`string`): A string value. When `null`, the `string_value` field will be omitted from the resulting object.\n  - `timestamp_value` (`string`): A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `timestamp_value` field will be omitted from the resulting object.\n  - `date_value` (`list[obj]`): Represents a whole or partial calendar date. When `null`, the `date_value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.upper_bound.date_value.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationfixed_size_bucketing_configdate_valuenew) constructor.\n  - `time_value` (`list[obj]`): Represents a time of day. When `null`, the `time_value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.upper_bound.time_value.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationfixed_size_bucketing_configtime_valuenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `upper_bound` sub block.\n', args=[]),
+              new(
+                boolean_value=null,
+                date_value=null,
+                day_of_week_value=null,
+                float_value=null,
+                integer_value=null,
+                string_value=null,
+                time_value=null,
+                timestamp_value=null
+              ):: std.prune(a={
+                boolean_value: boolean_value,
+                date_value: date_value,
+                day_of_week_value: day_of_week_value,
+                float_value: float_value,
+                integer_value: integer_value,
+                string_value: string_value,
+                time_value: time_value,
+                timestamp_value: timestamp_value,
+              }),
+              time_value:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.upper_bound.time_value.new` constructs a new object with attributes and blocks configured for the `time_value`\nTerraform sub block.\n\n\n\n**Args**:\n  - `hours` (`number`): Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value &#34;24:00:00&#34; for scenarios like business closing time. When `null`, the `hours` field will be omitted from the resulting object.\n  - `minutes` (`number`): Minutes of hour of day. Must be from 0 to 59. When `null`, the `minutes` field will be omitted from the resulting object.\n  - `nanos` (`number`): Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999. When `null`, the `nanos` field will be omitted from the resulting object.\n  - `seconds` (`number`): Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds. When `null`, the `seconds` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `time_value` sub block.\n', args=[]),
+                new(
+                  hours=null,
+                  minutes=null,
+                  nanos=null,
+                  seconds=null
+                ):: std.prune(a={
+                  hours: hours,
+                  minutes: minutes,
+                  nanos: nanos,
+                  seconds: seconds,
+                }),
+              },
+            },
+          },
+          '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.new` constructs a new object with attributes and blocks configured for the `primitive_transformation`\nTerraform sub block.\n\n\n\n**Args**:\n  - `bucketing_config` (`list[obj]`): Generalization function that buckets values based on ranges. The ranges and replacement values are dynamically provided by the user for custom behavior, such as 1-30 -&gt; LOW 31-65 -&gt; MEDIUM 66-100 -&gt; HIGH\nThis can be used on data of type: number, long, string, timestamp.\nIf the provided value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing.\nSee https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. When `null`, the `bucketing_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.bucketing_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsbucketing_confignew) constructor.\n  - `character_mask_config` (`list[obj]`): Partially mask a string by replacing a given number of characters with a fixed character. Masking can start from the beginning or end of the string. This can be used on data of any type (numbers, longs, and so on) and when de-identifying structured data we&#39;ll attempt to preserve the original data&#39;s type. (This allows you to take a long like 123 and modify it to a string like **3). When `null`, the `character_mask_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.character_mask_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationscharacter_mask_confignew) constructor.\n  - `crypto_deterministic_config` (`list[obj]`): Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC [https://tools.ietf.org/html/rfc5297](https://tools.ietf.org/html/rfc5297). When `null`, the `crypto_deterministic_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationscrypto_deterministic_confignew) constructor.\n  - `crypto_hash_config` (`list[obj]`): Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes.\nOutputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=).\nCurrently, only string and integer values can be hashed.\nSee https://cloud.google.com/dlp/docs/pseudonymization to learn more. When `null`, the `crypto_hash_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationscrypto_hash_confignew) constructor.\n  - `crypto_replace_ffx_fpe_config` (`list[obj]`): Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the &#39;content.reidentify&#39; API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See [https://cloud.google.com/dlp/docs/pseudonymization](https://cloud.google.com/dlp/docs/pseudonymization) to learn more.\n\nNote: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity. When `null`, the `crypto_replace_ffx_fpe_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationscrypto_replace_ffx_fpe_confignew) constructor.\n  - `date_shift_config` (`list[obj]`): Shifts dates by random number of days, with option to be consistent for the same context. See https://cloud.google.com/dlp/docs/concepts-date-shifting to learn more. When `null`, the `date_shift_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsdate_shift_confignew) constructor.\n  - `fixed_size_bucketing_config` (`list[obj]`): Buckets values based on fixed size ranges. The Bucketing transformation can provide all of this functionality, but requires more configuration. This message is provided as a convenience to the user for simple bucketing strategies.\n\nThe transformed value will be a hyphenated string of {lower_bound}-{upper_bound}. For example, if lower_bound = 10 and upper_bound = 20, all values that are within this bucket will be replaced with &#34;10-20&#34;.\n\nThis can be used on data of type: double, long.\n\nIf the bound Value type differs from the type of data being transformed, we will first attempt converting the type of the data to be transformed to match the type of the bound before comparing.\n\nSee https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. When `null`, the `fixed_size_bucketing_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.fixed_size_bucketing_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsfixed_size_bucketing_confignew) constructor.\n  - `redact_config` (`list[obj]`): Redact a given value. For example, if used with an InfoTypeTransformation transforming PHONE_NUMBER, and input &#39;My phone number is 206-555-0123&#39;, the output would be &#39;My phone number is &#39;. When `null`, the `redact_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.redact_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsredact_confignew) constructor.\n  - `replace_config` (`list[obj]`): Replace with a specified value. When `null`, the `replace_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.replace_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsreplace_confignew) constructor.\n  - `replace_dictionary_config` (`list[obj]`): Replace with a value randomly drawn (with replacement) from a dictionary. When `null`, the `replace_dictionary_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.replace_dictionary_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsreplace_dictionary_confignew) constructor.\n  - `time_part_config` (`list[obj]`): For use with Date, Timestamp, and TimeOfDay, extract or preserve a portion of the value. When `null`, the `time_part_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.time_part_config.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationstime_part_confignew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `primitive_transformation` sub block.\n', args=[]),
           new(
+            bucketing_config=null,
             character_mask_config=null,
+            crypto_deterministic_config=null,
+            crypto_hash_config=null,
+            crypto_replace_ffx_fpe_config=null,
+            date_shift_config=null,
+            fixed_size_bucketing_config=null,
             redact_config=null,
-            replace_config=null
+            replace_config=null,
+            replace_dictionary_config=null,
+            time_part_config=null
           ):: std.prune(a={
+            bucketing_config: bucketing_config,
             character_mask_config: character_mask_config,
+            crypto_deterministic_config: crypto_deterministic_config,
+            crypto_hash_config: crypto_hash_config,
+            crypto_replace_ffx_fpe_config: crypto_replace_ffx_fpe_config,
+            date_shift_config: date_shift_config,
+            fixed_size_bucketing_config: fixed_size_bucketing_config,
             redact_config: redact_config,
             replace_config: replace_config,
+            replace_dictionary_config: replace_dictionary_config,
+            time_part_config: time_part_config,
           }),
           redact_config:: {
             '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.redact_config.new` constructs a new object with attributes and blocks configured for the `redact_config`\nTerraform sub block.\n\n\n\n**Returns**:\n  - An attribute object that represents the `redact_config` sub block.\n', args=[]),
@@ -481,6 +1021,30 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
                 }),
               },
             },
+          },
+          replace_dictionary_config:: {
+            '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.replace_dictionary_config.new` constructs a new object with attributes and blocks configured for the `replace_dictionary_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `word_list` (`list[obj]`): A list of words to select from for random replacement. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries. When `null`, the `word_list` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.replace_dictionary_config.word_list.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationword_listnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `replace_dictionary_config` sub block.\n', args=[]),
+            new(
+              word_list=null
+            ):: std.prune(a={
+              word_list: word_list,
+            }),
+            word_list:: {
+              '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.replace_dictionary_config.word_list.new` constructs a new object with attributes and blocks configured for the `word_list`\nTerraform sub block.\n\n\n\n**Args**:\n  - `words` (`list`): Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.\n\n**Returns**:\n  - An attribute object that represents the `word_list` sub block.\n', args=[]),
+              new(
+                words
+              ):: std.prune(a={
+                words: words,
+              }),
+            },
+          },
+          time_part_config:: {
+            '#new':: d.fn(help='\n`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.time_part_config.new` constructs a new object with attributes and blocks configured for the `time_part_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `part_to_extract` (`string`): The part of the time to keep. Possible values: [&#34;YEAR&#34;, &#34;MONTH&#34;, &#34;DAY_OF_MONTH&#34;, &#34;DAY_OF_WEEK&#34;, &#34;WEEK_OF_YEAR&#34;, &#34;HOUR_OF_DAY&#34;] When `null`, the `part_to_extract` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `time_part_config` sub block.\n', args=[]),
+            new(
+              part_to_extract=null
+            ):: std.prune(a={
+              part_to_extract: part_to_extract,
+            }),
           },
         },
       },

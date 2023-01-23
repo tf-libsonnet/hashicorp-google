@@ -29,6 +29,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withCustomRequestHeaders()`](#fn-withcustomrequestheaders)
 * [`fn withCustomResponseHeaders()`](#fn-withcustomresponseheaders)
 * [`fn withDescription()`](#fn-withdescription)
+* [`fn withEdgeSecurityPolicy()`](#fn-withedgesecuritypolicy)
 * [`fn withEnableCdn()`](#fn-withenablecdn)
 * [`fn withHealthChecks()`](#fn-withhealthchecks)
 * [`fn withIap()`](#fn-withiap)
@@ -124,6 +125,7 @@ requests. When `null`, the `custom_request_headers` field will be omitted from t
   - `custom_response_headers` (`list`): Headers that the HTTP/S load balancer should add to proxied
 responses. When `null`, the `custom_response_headers` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `edge_security_policy` (`string`): The resource URL for the edge security policy associated with this backend service. When `null`, the `edge_security_policy` field will be omitted from the resulting object.
   - `enable_cdn` (`bool`): If true, enable Cloud CDN for this BackendService. When `null`, the `enable_cdn` field will be omitted from the resulting object.
   - `health_checks` (`list`): The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
 for health checking this BackendService. Currently at most one health
@@ -257,6 +259,7 @@ requests. When `null`, the `custom_request_headers` field will be omitted from t
   - `custom_response_headers` (`list`): Headers that the HTTP/S load balancer should add to proxied
 responses. When `null`, the `custom_response_headers` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `edge_security_policy` (`string`): The resource URL for the edge security policy associated with this backend service. When `null`, the `edge_security_policy` field will be omitted from the resulting object.
   - `enable_cdn` (`bool`): If true, enable Cloud CDN for this BackendService. When `null`, the `enable_cdn` field will be omitted from the resulting object.
   - `health_checks` (`list`): The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
 for health checking this BackendService. Currently at most one health
@@ -600,6 +603,22 @@ Terraform resource block to set or update the description field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `description` field.
+
+
+### fn withEdgeSecurityPolicy
+
+```ts
+withEdgeSecurityPolicy()
+```
+
+`google.string.withEdgeSecurityPolicy` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the edge_security_policy field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `edge_security_policy` field.
 
 
 ### fn withEnableCdn
