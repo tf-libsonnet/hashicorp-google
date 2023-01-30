@@ -211,13 +211,15 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     },
   },
   git_file_source:: {
-    '#new':: d.fn(help='\n`google.cloudbuild_trigger.git_file_source.new` constructs a new object with attributes and blocks configured for the `git_file_source`\nTerraform sub block.\n\n\n\n**Args**:\n  - `path` (`string`): The path of the file, with the repo root as the root of the path.\n  - `repo_type` (`string`): The type of the repo, since it may not be explicit from the repo field (e.g from a URL). \nValues can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: [&#34;UNKNOWN&#34;, &#34;CLOUD_SOURCE_REPOSITORIES&#34;, &#34;GITHUB&#34;, &#34;BITBUCKET_SERVER&#34;]\n  - `revision` (`string`): The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the \nfilename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions \nIf unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path. When `null`, the `revision` field will be omitted from the resulting object.\n  - `uri` (`string`): The URI of the repo (optional). If unspecified, the repo from which the trigger \ninvocation originated is assumed to be the repo from which to read the specified path. When `null`, the `uri` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `git_file_source` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.cloudbuild_trigger.git_file_source.new` constructs a new object with attributes and blocks configured for the `git_file_source`\nTerraform sub block.\n\n\n\n**Args**:\n  - `github_enterprise_config` (`string`): The full resource name of the github enterprise config.\nFormat: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}. When `null`, the `github_enterprise_config` field will be omitted from the resulting object.\n  - `path` (`string`): The path of the file, with the repo root as the root of the path.\n  - `repo_type` (`string`): The type of the repo, since it may not be explicit from the repo field (e.g from a URL). \nValues can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: [&#34;UNKNOWN&#34;, &#34;CLOUD_SOURCE_REPOSITORIES&#34;, &#34;GITHUB&#34;, &#34;BITBUCKET_SERVER&#34;]\n  - `revision` (`string`): The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the \nfilename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions \nIf unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path. When `null`, the `revision` field will be omitted from the resulting object.\n  - `uri` (`string`): The URI of the repo (optional). If unspecified, the repo from which the trigger \ninvocation originated is assumed to be the repo from which to read the specified path. When `null`, the `uri` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `git_file_source` sub block.\n', args=[]),
     new(
       path,
       repo_type,
+      github_enterprise_config=null,
       revision=null,
       uri=null
     ):: std.prune(a={
+      github_enterprise_config: github_enterprise_config,
       path: path,
       repo_type: repo_type,
       revision: revision,
@@ -376,12 +378,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   source_to_build:: {
-    '#new':: d.fn(help='\n`google.cloudbuild_trigger.source_to_build.new` constructs a new object with attributes and blocks configured for the `source_to_build`\nTerraform sub block.\n\n\n\n**Args**:\n  - `ref` (`string`): The branch or tag to use. Must start with &#34;refs/&#34; (required).\n  - `repo_type` (`string`): The type of the repo, since it may not be explicit from the repo field (e.g from a URL).\nValues can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: [&#34;UNKNOWN&#34;, &#34;CLOUD_SOURCE_REPOSITORIES&#34;, &#34;GITHUB&#34;, &#34;BITBUCKET_SERVER&#34;]\n  - `uri` (`string`): The URI of the repo (required).\n\n**Returns**:\n  - An attribute object that represents the `source_to_build` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.cloudbuild_trigger.source_to_build.new` constructs a new object with attributes and blocks configured for the `source_to_build`\nTerraform sub block.\n\n\n\n**Args**:\n  - `github_enterprise_config` (`string`): The full resource name of the github enterprise config.\nFormat: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}. When `null`, the `github_enterprise_config` field will be omitted from the resulting object.\n  - `ref` (`string`): The branch or tag to use. Must start with &#34;refs/&#34; (required).\n  - `repo_type` (`string`): The type of the repo, since it may not be explicit from the repo field (e.g from a URL).\nValues can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: [&#34;UNKNOWN&#34;, &#34;CLOUD_SOURCE_REPOSITORIES&#34;, &#34;GITHUB&#34;, &#34;BITBUCKET_SERVER&#34;]\n  - `uri` (`string`): The URI of the repo (required).\n\n**Returns**:\n  - An attribute object that represents the `source_to_build` sub block.\n', args=[]),
     new(
       ref,
       repo_type,
-      uri
+      uri,
+      github_enterprise_config=null
     ):: std.prune(a={
+      github_enterprise_config: github_enterprise_config,
       ref: ref,
       repo_type: repo_type,
       uri: uri,

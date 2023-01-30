@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAnnotations()`](#fn-withannotations)
 * [`fn withAuthorization()`](#fn-withauthorization)
 * [`fn withAuthorizationMixin()`](#fn-withauthorizationmixin)
+* [`fn withDeletionPolicy()`](#fn-withdeletionpolicy)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDistribution()`](#fn-withdistribution)
 * [`fn withFleet()`](#fn-withfleet)
@@ -86,6 +87,7 @@ values combined is limited to 256k. Key can have 2 segments: prefix (optional)
 and name (required), separated by a slash (/). Prefix must be a DNS subdomain.
 Name must be 63 characters or less, begin and end with alphanumerics,
 with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `deletion_policy` (`string`): Policy to determine what flags to send on delete. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `description` (`string`): A human readable description of this attached cluster. Cannot be longer
 than 255 UTF-8 encoded bytes. When `null`, the `description` field will be omitted from the resulting object.
   - `distribution` (`string`): The Kubernetes distribution of the underlying attached cluster. Supported values:
@@ -139,6 +141,7 @@ values combined is limited to 256k. Key can have 2 segments: prefix (optional)
 and name (required), separated by a slash (/). Prefix must be a DNS subdomain.
 Name must be 63 characters or less, begin and end with alphanumerics,
 with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `deletion_policy` (`string`): Policy to determine what flags to send on delete. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `description` (`string`): A human readable description of this attached cluster. Cannot be longer
 than 255 UTF-8 encoded bytes. When `null`, the `description` field will be omitted from the resulting object.
   - `distribution` (`string`): The Kubernetes distribution of the underlying attached cluster. Supported values:
@@ -219,6 +222,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `authorization` field.
+
+
+### fn withDeletionPolicy
+
+```ts
+withDeletionPolicy()
+```
+
+`google.string.withDeletionPolicy` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the deletion_policy field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `deletion_policy` field.
 
 
 ### fn withDescription

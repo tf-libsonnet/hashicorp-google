@@ -1357,6 +1357,8 @@ Terraform sub block.
 
 
 **Args**:
+  - `github_enterprise_config` (`string`): The full resource name of the github enterprise config.
+Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}. When `null`, the `github_enterprise_config` field will be omitted from the resulting object.
   - `path` (`string`): The path of the file, with the repo root as the root of the path.
   - `repo_type` (`string`): The type of the repo, since it may not be explicit from the repo field (e.g from a URL). 
 Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: [&#34;UNKNOWN&#34;, &#34;CLOUD_SOURCE_REPOSITORIES&#34;, &#34;GITHUB&#34;, &#34;BITBUCKET_SERVER&#34;]
@@ -1489,6 +1491,8 @@ Terraform sub block.
 
 
 **Args**:
+  - `github_enterprise_config` (`string`): The full resource name of the github enterprise config.
+Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}. When `null`, the `github_enterprise_config` field will be omitted from the resulting object.
   - `ref` (`string`): The branch or tag to use. Must start with &#34;refs/&#34; (required).
   - `repo_type` (`string`): The type of the repo, since it may not be explicit from the repo field (e.g from a URL).
 Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: [&#34;UNKNOWN&#34;, &#34;CLOUD_SOURCE_REPOSITORIES&#34;, &#34;GITHUB&#34;, &#34;BITBUCKET_SERVER&#34;]

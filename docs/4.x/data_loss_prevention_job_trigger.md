@@ -31,6 +31,10 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-inspect_jobactionsnew)
     * [`obj inspect_job.actions.pub_sub`](#obj-inspect_jobactionspub_sub)
       * [`fn new()`](#fn-inspect_jobactionspub_subnew)
+    * [`obj inspect_job.actions.publish_findings_to_cloud_data_catalog`](#obj-inspect_jobactionspublish_findings_to_cloud_data_catalog)
+      * [`fn new()`](#fn-inspect_jobactionspublish_findings_to_cloud_data_catalognew)
+    * [`obj inspect_job.actions.publish_summary_to_cscc`](#obj-inspect_jobactionspublish_summary_to_cscc)
+      * [`fn new()`](#fn-inspect_jobactionspublish_summary_to_csccnew)
     * [`obj inspect_job.actions.save_findings`](#obj-inspect_jobactionssave_findings)
       * [`fn new()`](#fn-inspect_jobactionssave_findingsnew)
       * [`obj inspect_job.actions.save_findings.output_config`](#obj-inspect_jobactionssave_findingsoutput_config)
@@ -358,7 +362,9 @@ Terraform sub block.
 
 **Args**:
   - `pub_sub` (`list[obj]`): Publish a message into a given Pub/Sub topic when the job completes. When `null`, the `pub_sub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.pub_sub.new](#fn-inspect_jobinspect_jobpub_subnew) constructor.
-  - `save_findings` (`list[obj]`): Schedule for triggered jobs When `null`, the `save_findings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.save_findings.new](#fn-inspect_jobinspect_jobsave_findingsnew) constructor.
+  - `publish_findings_to_cloud_data_catalog` (`list[obj]`): Publish findings of a DlpJob to Data Catalog. When `null`, the `publish_findings_to_cloud_data_catalog` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.publish_findings_to_cloud_data_catalog.new](#fn-inspect_jobinspect_jobpublish_findings_to_cloud_data_catalognew) constructor.
+  - `publish_summary_to_cscc` (`list[obj]`): Publish the result summary of a DlpJob to the Cloud Security Command Center. When `null`, the `publish_summary_to_cscc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.publish_summary_to_cscc.new](#fn-inspect_jobinspect_jobpublish_summary_to_csccnew) constructor.
+  - `save_findings` (`list[obj]`): If set, the detailed findings will be persisted to the specified OutputStorageConfig. Only a single instance of this action can be specified. Compatible with: Inspect, Risk When `null`, the `save_findings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.save_findings.new](#fn-inspect_jobinspect_jobsave_findingsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `actions` sub block.
@@ -385,6 +391,46 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `pub_sub` sub block.
+
+
+## obj inspect_job.actions.publish_findings_to_cloud_data_catalog
+
+
+
+### fn inspect_job.actions.publish_findings_to_cloud_data_catalog.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_job_trigger.inspect_job.actions.publish_findings_to_cloud_data_catalog.new` constructs a new object with attributes and blocks configured for the `publish_findings_to_cloud_data_catalog`
+Terraform sub block.
+
+
+
+**Returns**:
+  - An attribute object that represents the `publish_findings_to_cloud_data_catalog` sub block.
+
+
+## obj inspect_job.actions.publish_summary_to_cscc
+
+
+
+### fn inspect_job.actions.publish_summary_to_cscc.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_job_trigger.inspect_job.actions.publish_summary_to_cscc.new` constructs a new object with attributes and blocks configured for the `publish_summary_to_cscc`
+Terraform sub block.
+
+
+
+**Returns**:
+  - An attribute object that represents the `publish_summary_to_cscc` sub block.
 
 
 ## obj inspect_job.actions.save_findings

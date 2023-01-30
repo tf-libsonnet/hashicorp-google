@@ -35,6 +35,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withSubnetwork()`](#fn-withsubnetwork)
 * [`fn withSubnetworkMixin()`](#fn-withsubnetworkmixin)
 * [`fn withTcpEstablishedIdleTimeoutSec()`](#fn-withtcpestablishedidletimeoutsec)
+* [`fn withTcpTimeWaitTimeoutSec()`](#fn-withtcptimewaittimeoutsec)
 * [`fn withTcpTransitoryIdleTimeoutSec()`](#fn-withtcptransitoryidletimeoutsec)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -116,6 +117,8 @@ ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
 other RouterNat section in any Router for this network in this region. Possible values: [&#34;ALL_SUBNETWORKS_ALL_IP_RANGES&#34;, &#34;ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES&#34;, &#34;LIST_OF_SUBNETWORKS&#34;]
   - `tcp_established_idle_timeout_sec` (`number`): Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set. When `null`, the `tcp_established_idle_timeout_sec` field will be omitted from the resulting object.
+  - `tcp_time_wait_timeout_sec` (`number`): Timeout (in seconds) for TCP connections that are in TIME_WAIT state.
+Defaults to 120s if not set. When `null`, the `tcp_time_wait_timeout_sec` field will be omitted from the resulting object.
   - `tcp_transitory_idle_timeout_sec` (`number`): Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set. When `null`, the `tcp_transitory_idle_timeout_sec` field will be omitted from the resulting object.
   - `udp_idle_timeout_sec` (`number`): Timeout (in seconds) for UDP connections. Defaults to 30s if not set. When `null`, the `udp_idle_timeout_sec` field will be omitted from the resulting object.
@@ -184,6 +187,8 @@ ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any
 other RouterNat section in any Router for this network in this region. Possible values: [&#34;ALL_SUBNETWORKS_ALL_IP_RANGES&#34;, &#34;ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES&#34;, &#34;LIST_OF_SUBNETWORKS&#34;]
   - `tcp_established_idle_timeout_sec` (`number`): Timeout (in seconds) for TCP established connections.
 Defaults to 1200s if not set. When `null`, the `tcp_established_idle_timeout_sec` field will be omitted from the resulting object.
+  - `tcp_time_wait_timeout_sec` (`number`): Timeout (in seconds) for TCP connections that are in TIME_WAIT state.
+Defaults to 120s if not set. When `null`, the `tcp_time_wait_timeout_sec` field will be omitted from the resulting object.
   - `tcp_transitory_idle_timeout_sec` (`number`): Timeout (in seconds) for TCP transitory connections.
 Defaults to 30s if not set. When `null`, the `tcp_transitory_idle_timeout_sec` field will be omitted from the resulting object.
   - `udp_idle_timeout_sec` (`number`): Timeout (in seconds) for UDP connections. Defaults to 30s if not set. When `null`, the `udp_idle_timeout_sec` field will be omitted from the resulting object.
@@ -530,6 +535,22 @@ Terraform resource block to set or update the tcp_established_idle_timeout_sec f
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`number`): The value to set for the `tcp_established_idle_timeout_sec` field.
+
+
+### fn withTcpTimeWaitTimeoutSec
+
+```ts
+withTcpTimeWaitTimeoutSec()
+```
+
+`google.number.withTcpTimeWaitTimeoutSec` constructs a mixin object that can be merged into the `number`
+Terraform resource block to set or update the tcp_time_wait_timeout_sec field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`number`): The value to set for the `tcp_time_wait_timeout_sec` field.
 
 
 ### fn withTcpTransitoryIdleTimeoutSec

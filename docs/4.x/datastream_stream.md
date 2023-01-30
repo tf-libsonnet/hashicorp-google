@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withBackfillAllMixin()`](#fn-withbackfillallmixin)
 * [`fn withBackfillNone()`](#fn-withbackfillnone)
 * [`fn withBackfillNoneMixin()`](#fn-withbackfillnonemixin)
+* [`fn withCustomerManagedEncryptionKey()`](#fn-withcustomermanagedencryptionkey)
 * [`fn withDesiredState()`](#fn-withdesiredstate)
 * [`fn withDestinationConfig()`](#fn-withdestinationconfig)
 * [`fn withDestinationConfigMixin()`](#fn-withdestinationconfigmixin)
@@ -111,6 +112,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `customer_managed_encryption_key` (`string`): A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data
+will be encrypted using an internal Stream-specific encryption key provisioned through KMS. When `null`, the `customer_managed_encryption_key` field will be omitted from the resulting object.
   - `desired_state` (`string`): Desired state of the Stream. Set this field to &#39;RUNNING&#39; to start the stream, and &#39;PAUSED&#39; to pause the stream. When `null`, the `desired_state` field will be omitted from the resulting object.
   - `display_name` (`string`): Display name.
   - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
@@ -145,6 +148,8 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `customer_managed_encryption_key` (`string`): A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data
+will be encrypted using an internal Stream-specific encryption key provisioned through KMS. When `null`, the `customer_managed_encryption_key` field will be omitted from the resulting object.
   - `desired_state` (`string`): Desired state of the Stream. Set this field to &#39;RUNNING&#39; to start the stream, and &#39;PAUSED&#39; to pause the stream. When `null`, the `desired_state` field will be omitted from the resulting object.
   - `display_name` (`string`): Display name.
   - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
@@ -233,6 +238,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `backfill_none` field.
+
+
+### fn withCustomerManagedEncryptionKey
+
+```ts
+withCustomerManagedEncryptionKey()
+```
+
+`google.string.withCustomerManagedEncryptionKey` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the customer_managed_encryption_key field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `customer_managed_encryption_key` field.
 
 
 ### fn withDesiredState
@@ -702,6 +723,10 @@ Terraform sub block.
 **Args**:
   - `dataset_id_prefix` (`string`): If supplied, every created dataset will have its name prefixed by the provided value.
 The prefix and name will be separated by an underscore. i.e. _. When `null`, the `dataset_id_prefix` field will be omitted from the resulting object.
+  - `kms_key_name` (`string`): Describes the Cloud KMS encryption key that will be used to protect destination BigQuery
+table. The BigQuery Service Account associated with your project requires access to this
+encryption key. i.e. projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{cryptoKey}.
+See https://cloud.google.com/bigquery/docs/customer-managed-encryption for more information. When `null`, the `kms_key_name` field will be omitted from the resulting object.
   - `location` (`string`): The geographic location where the dataset should reside.
 See https://cloud.google.com/bigquery/docs/locations for supported locations.
 
