@@ -835,7 +835,7 @@ Terraform sub block.
 - ONE_HOUR:	Snapshot every 1 hour.
 - SIX_HOURS:	Snapshot every 6 hours.
 - TWELVE_HOURS:	Snapshot every 12 hours.
-- TWENTY_FOUR_HOURS:	Snapshot every 24 horus. Possible values: [&#34;ONE_HOUR&#34;, &#34;SIX_HOURS&#34;, &#34;TWELVE_HOURS&#34;, &#34;TWENTY_FOUR_HOURS&#34;] When `null`, the `rdb_snapshot_period` field will be omitted from the resulting object.
+- TWENTY_FOUR_HOURS:	Snapshot every 24 hours. Possible values: [&#34;ONE_HOUR&#34;, &#34;SIX_HOURS&#34;, &#34;TWELVE_HOURS&#34;, &#34;TWENTY_FOUR_HOURS&#34;] When `null`, the `rdb_snapshot_period` field will be omitted from the resulting object.
   - `rdb_snapshot_start_time` (`string`): Optional. Date and time that the first snapshot was/will be attempted,
 and to which future snapshots will be aligned. If not provided,
 the current time will be used.

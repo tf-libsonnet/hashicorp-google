@@ -104,6 +104,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-addons_confignew)
   * [`obj addons_config.cloudrun_config`](#obj-addons_configcloudrun_config)
     * [`fn new()`](#fn-addons_configcloudrun_confignew)
+  * [`obj addons_config.config_connector_config`](#obj-addons_configconfig_connector_config)
+    * [`fn new()`](#fn-addons_configconfig_connector_confignew)
   * [`obj addons_config.dns_cache_config`](#obj-addons_configdns_cache_config)
     * [`fn new()`](#fn-addons_configdns_cache_confignew)
   * [`obj addons_config.gce_persistent_disk_csi_driver_config`](#obj-addons_configgce_persistent_disk_csi_driver_config)
@@ -1948,6 +1950,7 @@ Terraform sub block.
 
 **Args**:
   - `cloudrun_config` (`list[obj]`): The status of the CloudRun addon. It is disabled by default. Set disabled = false to enable. When `null`, the `cloudrun_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.addons_config.cloudrun_config.new](#fn-addons_configcloudrun_confignew) constructor.
+  - `config_connector_config` (`list[obj]`): The of the Config Connector addon. When `null`, the `config_connector_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.addons_config.config_connector_config.new](#fn-addons_configconfig_connector_confignew) constructor.
   - `dns_cache_config` (`list[obj]`): The status of the NodeLocal DNSCache addon. It is disabled by default. Set enabled = true to enable. When `null`, the `dns_cache_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.addons_config.dns_cache_config.new](#fn-addons_configdns_cache_confignew) constructor.
   - `gce_persistent_disk_csi_driver_config` (`list[obj]`): Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to enabled; set disabled = true to disable. When `null`, the `gce_persistent_disk_csi_driver_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.addons_config.gce_persistent_disk_csi_driver_config.new](#fn-addons_configgce_persistent_disk_csi_driver_confignew) constructor.
   - `gcp_filestore_csi_driver_config` (`list[obj]`): The status of the Filestore CSI driver addon, which allows the usage of filestore instance as volumes. Defaults to disabled; set enabled = true to enable. When `null`, the `gcp_filestore_csi_driver_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.addons_config.gcp_filestore_csi_driver_config.new](#fn-addons_configgcp_filestore_csi_driver_confignew) constructor.
@@ -1982,6 +1985,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `cloudrun_config` sub block.
+
+
+## obj addons_config.config_connector_config
+
+
+
+### fn addons_config.config_connector_config.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.addons_config.config_connector_config.new` constructs a new object with attributes and blocks configured for the `config_connector_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Set the `enabled` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `config_connector_config` sub block.
 
 
 ## obj addons_config.dns_cache_config

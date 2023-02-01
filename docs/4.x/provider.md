@@ -101,6 +101,7 @@ the `src` and/or `version` parameters are set.
   - `gke_backup_custom_endpoint` (`string`): Set the `gke_backup_custom_endpoint` field on the resulting provider block. When `null`, the `gke_backup_custom_endpoint` field will be omitted from the resulting object.
   - `gke_hub_custom_endpoint` (`string`): Set the `gke_hub_custom_endpoint` field on the resulting provider block. When `null`, the `gke_hub_custom_endpoint` field will be omitted from the resulting object.
   - `healthcare_custom_endpoint` (`string`): Set the `healthcare_custom_endpoint` field on the resulting provider block. When `null`, the `healthcare_custom_endpoint` field will be omitted from the resulting object.
+  - `iam2_custom_endpoint` (`string`): Set the `iam2_custom_endpoint` field on the resulting provider block. When `null`, the `iam2_custom_endpoint` field will be omitted from the resulting object.
   - `iam_beta_custom_endpoint` (`string`): Set the `iam_beta_custom_endpoint` field on the resulting provider block. When `null`, the `iam_beta_custom_endpoint` field will be omitted from the resulting object.
   - `iam_credentials_custom_endpoint` (`string`): Set the `iam_credentials_custom_endpoint` field on the resulting provider block. When `null`, the `iam_credentials_custom_endpoint` field will be omitted from the resulting object.
   - `iam_custom_endpoint` (`string`): Set the `iam_custom_endpoint` field on the resulting provider block. When `null`, the `iam_custom_endpoint` field will be omitted from the resulting object.
@@ -144,6 +145,7 @@ the `src` and/or `version` parameters are set.
   - `storage_custom_endpoint` (`string`): Set the `storage_custom_endpoint` field on the resulting provider block. When `null`, the `storage_custom_endpoint` field will be omitted from the resulting object.
   - `storage_transfer_custom_endpoint` (`string`): Set the `storage_transfer_custom_endpoint` field on the resulting provider block. When `null`, the `storage_transfer_custom_endpoint` field will be omitted from the resulting object.
   - `tags_custom_endpoint` (`string`): Set the `tags_custom_endpoint` field on the resulting provider block. When `null`, the `tags_custom_endpoint` field will be omitted from the resulting object.
+  - `tags_location_custom_endpoint` (`string`): Set the `tags_location_custom_endpoint` field on the resulting provider block. When `null`, the `tags_location_custom_endpoint` field will be omitted from the resulting object.
   - `tpu_custom_endpoint` (`string`): Set the `tpu_custom_endpoint` field on the resulting provider block. When `null`, the `tpu_custom_endpoint` field will be omitted from the resulting object.
   - `user_project_override` (`bool`): Set the `user_project_override` field on the resulting provider block. When `null`, the `user_project_override` field will be omitted from the resulting object.
   - `vertex_ai_custom_endpoint` (`string`): Set the `vertex_ai_custom_endpoint` field on the resulting provider block. When `null`, the `vertex_ai_custom_endpoint` field will be omitted from the resulting object.
@@ -248,6 +250,7 @@ injecting into a complete block.
   - `gke_backup_custom_endpoint` (`string`): Set the `gke_backup_custom_endpoint` field on the resulting object. When `null`, the `gke_backup_custom_endpoint` field will be omitted from the resulting object.
   - `gke_hub_custom_endpoint` (`string`): Set the `gke_hub_custom_endpoint` field on the resulting object. When `null`, the `gke_hub_custom_endpoint` field will be omitted from the resulting object.
   - `healthcare_custom_endpoint` (`string`): Set the `healthcare_custom_endpoint` field on the resulting object. When `null`, the `healthcare_custom_endpoint` field will be omitted from the resulting object.
+  - `iam2_custom_endpoint` (`string`): Set the `iam2_custom_endpoint` field on the resulting object. When `null`, the `iam2_custom_endpoint` field will be omitted from the resulting object.
   - `iam_beta_custom_endpoint` (`string`): Set the `iam_beta_custom_endpoint` field on the resulting object. When `null`, the `iam_beta_custom_endpoint` field will be omitted from the resulting object.
   - `iam_credentials_custom_endpoint` (`string`): Set the `iam_credentials_custom_endpoint` field on the resulting object. When `null`, the `iam_credentials_custom_endpoint` field will be omitted from the resulting object.
   - `iam_custom_endpoint` (`string`): Set the `iam_custom_endpoint` field on the resulting object. When `null`, the `iam_custom_endpoint` field will be omitted from the resulting object.
@@ -291,6 +294,7 @@ injecting into a complete block.
   - `storage_custom_endpoint` (`string`): Set the `storage_custom_endpoint` field on the resulting object. When `null`, the `storage_custom_endpoint` field will be omitted from the resulting object.
   - `storage_transfer_custom_endpoint` (`string`): Set the `storage_transfer_custom_endpoint` field on the resulting object. When `null`, the `storage_transfer_custom_endpoint` field will be omitted from the resulting object.
   - `tags_custom_endpoint` (`string`): Set the `tags_custom_endpoint` field on the resulting object. When `null`, the `tags_custom_endpoint` field will be omitted from the resulting object.
+  - `tags_location_custom_endpoint` (`string`): Set the `tags_location_custom_endpoint` field on the resulting object. When `null`, the `tags_location_custom_endpoint` field will be omitted from the resulting object.
   - `tpu_custom_endpoint` (`string`): Set the `tpu_custom_endpoint` field on the resulting object. When `null`, the `tpu_custom_endpoint` field will be omitted from the resulting object.
   - `user_project_override` (`bool`): Set the `user_project_override` field on the resulting object. When `null`, the `user_project_override` field will be omitted from the resulting object.
   - `vertex_ai_custom_endpoint` (`string`): Set the `vertex_ai_custom_endpoint` field on the resulting object. When `null`, the `vertex_ai_custom_endpoint` field will be omitted from the resulting object.

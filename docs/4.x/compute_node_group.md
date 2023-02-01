@@ -25,6 +25,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withNodeTemplate()`](#fn-withnodetemplate)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withShareSettings()`](#fn-withsharesettings)
+* [`fn withShareSettingsMixin()`](#fn-withsharesettingsmixin)
 * [`fn withSize()`](#fn-withsize)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -33,6 +35,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-autoscaling_policynew)
 * [`obj maintenance_window`](#obj-maintenance_window)
   * [`fn new()`](#fn-maintenance_windownew)
+* [`obj share_settings`](#obj-share_settings)
+  * [`fn new()`](#fn-share_settingsnew)
+  * [`obj share_settings.project_map`](#obj-share_settingsproject_map)
+    * [`fn new()`](#fn-share_settingsproject_mapnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -76,6 +82,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `autoscaling_policy` (`list[obj]`): If you use sole-tenant nodes for your workloads, you can use the node
 group autoscaler to automatically manage the sizes of your node groups. When `null`, the `autoscaling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.autoscaling_policy.new](#fn-autoscaling_policynew) constructor.
   - `maintenance_window` (`list[obj]`): contains properties for the timeframe of maintenance When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.maintenance_window.new](#fn-maintenance_windownew) constructor.
+  - `share_settings` (`list[obj]`): Share settings for the node group. When `null`, the `share_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.share_settings.new](#fn-share_settingsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -111,6 +118,7 @@ injecting into a complete block.
   - `autoscaling_policy` (`list[obj]`): If you use sole-tenant nodes for your workloads, you can use the node
 group autoscaler to automatically manage the sizes of your node groups. When `null`, the `autoscaling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.autoscaling_policy.new](#fn-autoscaling_policynew) constructor.
   - `maintenance_window` (`list[obj]`): contains properties for the timeframe of maintenance When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.maintenance_window.new](#fn-maintenance_windownew) constructor.
+  - `share_settings` (`list[obj]`): Share settings for the node group. When `null`, the `share_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.share_settings.new](#fn-share_settingsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -287,6 +295,43 @@ Terraform resource block to set or update the project field.
   - `value` (`string`): The value to set for the `project` field.
 
 
+### fn withShareSettings
+
+```ts
+withShareSettings()
+```
+
+`google.list[obj].withShareSettings` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the share_settings field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withShareSettingsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `share_settings` field.
+
+
+### fn withShareSettingsMixin
+
+```ts
+withShareSettingsMixin()
+```
+
+`google.list[obj].withShareSettingsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the share_settings field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withShareSettings](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `share_settings` field.
+
+
 ### fn withSize
 
 ```ts
@@ -408,6 +453,53 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `maintenance_window` sub block.
+
+
+## obj share_settings
+
+
+
+### fn share_settings.new
+
+```ts
+new()
+```
+
+
+`google.compute_node_group.share_settings.new` constructs a new object with attributes and blocks configured for the `share_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `share_type` (`string`): Node group sharing type. Possible values: [&#34;ORGANIZATION&#34;, &#34;SPECIFIC_PROJECTS&#34;, &#34;LOCAL&#34;]
+  - `project_map` (`list[obj]`): A map of project id and project config. This is only valid when shareType&#39;s value is SPECIFIC_PROJECTS. When `null`, the `project_map` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.share_settings.project_map.new](#fn-share_settingsproject_mapnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `share_settings` sub block.
+
+
+## obj share_settings.project_map
+
+
+
+### fn share_settings.project_map.new
+
+```ts
+new()
+```
+
+
+`google.compute_node_group.share_settings.project_map.new` constructs a new object with attributes and blocks configured for the `project_map`
+Terraform sub block.
+
+
+
+**Args**:
+  - `project_id` (`string`): The project id/number should be the same as the key of this project config in the project map.
+
+**Returns**:
+  - An attribute object that represents the `project_map` sub block.
 
 
 ## obj timeouts

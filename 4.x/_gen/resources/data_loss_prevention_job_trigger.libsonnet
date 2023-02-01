@@ -4,12 +4,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   '#':: d.pkg(name='data_loss_prevention_job_trigger', url='', help='`data_loss_prevention_job_trigger` represents the `google_data_loss_prevention_job_trigger` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   inspect_job:: {
     actions:: {
-      '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.actions.new` constructs a new object with attributes and blocks configured for the `actions`\nTerraform sub block.\n\n\n\n**Args**:\n  - `pub_sub` (`list[obj]`): Publish a message into a given Pub/Sub topic when the job completes. When `null`, the `pub_sub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.pub_sub.new](#fn-inspect_jobinspect_jobpub_subnew) constructor.\n  - `save_findings` (`list[obj]`): Schedule for triggered jobs When `null`, the `save_findings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.save_findings.new](#fn-inspect_jobinspect_jobsave_findingsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `actions` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.actions.new` constructs a new object with attributes and blocks configured for the `actions`\nTerraform sub block.\n\n\n\n**Args**:\n  - `pub_sub` (`list[obj]`): Publish a message into a given Pub/Sub topic when the job completes. When `null`, the `pub_sub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.pub_sub.new](#fn-inspect_jobinspect_jobpub_subnew) constructor.\n  - `publish_findings_to_cloud_data_catalog` (`list[obj]`): Publish findings of a DlpJob to Data Catalog. When `null`, the `publish_findings_to_cloud_data_catalog` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.publish_findings_to_cloud_data_catalog.new](#fn-inspect_jobinspect_jobpublish_findings_to_cloud_data_catalognew) constructor.\n  - `publish_summary_to_cscc` (`list[obj]`): Publish the result summary of a DlpJob to the Cloud Security Command Center. When `null`, the `publish_summary_to_cscc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.publish_summary_to_cscc.new](#fn-inspect_jobinspect_jobpublish_summary_to_csccnew) constructor.\n  - `save_findings` (`list[obj]`): If set, the detailed findings will be persisted to the specified OutputStorageConfig. Only a single instance of this action can be specified. Compatible with: Inspect, Risk When `null`, the `save_findings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.save_findings.new](#fn-inspect_jobinspect_jobsave_findingsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `actions` sub block.\n', args=[]),
       new(
         pub_sub=null,
+        publish_findings_to_cloud_data_catalog=null,
+        publish_summary_to_cscc=null,
         save_findings=null
       ):: std.prune(a={
         pub_sub: pub_sub,
+        publish_findings_to_cloud_data_catalog: publish_findings_to_cloud_data_catalog,
+        publish_summary_to_cscc: publish_summary_to_cscc,
         save_findings: save_findings,
       }),
       pub_sub:: {
@@ -19,6 +23,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         ):: std.prune(a={
           topic: topic,
         }),
+      },
+      publish_findings_to_cloud_data_catalog:: {
+        '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.actions.publish_findings_to_cloud_data_catalog.new` constructs a new object with attributes and blocks configured for the `publish_findings_to_cloud_data_catalog`\nTerraform sub block.\n\n\n\n**Returns**:\n  - An attribute object that represents the `publish_findings_to_cloud_data_catalog` sub block.\n', args=[]),
+        new(
+
+        ):: std.prune(a={}),
+      },
+      publish_summary_to_cscc:: {
+        '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.actions.publish_summary_to_cscc.new` constructs a new object with attributes and blocks configured for the `publish_summary_to_cscc`\nTerraform sub block.\n\n\n\n**Returns**:\n  - An attribute object that represents the `publish_summary_to_cscc` sub block.\n', args=[]),
+        new(
+
+        ):: std.prune(a={}),
       },
       save_findings:: {
         '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.actions.save_findings.new` constructs a new object with attributes and blocks configured for the `save_findings`\nTerraform sub block.\n\n\n\n**Args**:\n  - `output_config` (`list[obj]`): Information on where to store output When `null`, the `output_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.save_findings.output_config.new](#fn-inspect_jobinspect_jobactionsoutput_confignew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `save_findings` sub block.\n', args=[]),
