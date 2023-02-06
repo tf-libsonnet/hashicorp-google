@@ -103,6 +103,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   redis_instance: (import 'redis_instance.libsonnet'),
   secret_manager_secret: (import 'secret_manager_secret.libsonnet'),
   secret_manager_secret_version: (import 'secret_manager_secret_version.libsonnet'),
+  secret_manager_secret_version_access: (import 'secret_manager_secret_version_access.libsonnet'),
   service_account: (import 'service_account.libsonnet'),
   service_account_access_token: (import 'service_account_access_token.libsonnet'),
   service_account_id_token: (import 'service_account_id_token.libsonnet'),

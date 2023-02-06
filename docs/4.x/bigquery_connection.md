@@ -93,7 +93,7 @@ Azure allowed regions are azure-eastus2 When `null`, the `location` field will b
   - `azure` (`list[obj]`): Container for connection properties specific to Azure. When `null`, the `azure` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.azure.new](#fn-azurenew) constructor.
   - `cloud_resource` (`list[obj]`): Container for connection properties for delegation of access to GCP resources. When `null`, the `cloud_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_resource.new](#fn-cloud_resourcenew) constructor.
   - `cloud_spanner` (`list[obj]`): Connection properties specific to Cloud Spanner When `null`, the `cloud_spanner` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_spanner.new](#fn-cloud_spannernew) constructor.
-  - `cloud_sql` (`list[obj]`): A nested object resource When `null`, the `cloud_sql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.new](#fn-cloud_sqlnew) constructor.
+  - `cloud_sql` (`list[obj]`): Connection properties specific to the Cloud SQL. When `null`, the `cloud_sql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.new](#fn-cloud_sqlnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -133,7 +133,7 @@ Azure allowed regions are azure-eastus2 When `null`, the `location` field will b
   - `azure` (`list[obj]`): Container for connection properties specific to Azure. When `null`, the `azure` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.azure.new](#fn-azurenew) constructor.
   - `cloud_resource` (`list[obj]`): Container for connection properties for delegation of access to GCP resources. When `null`, the `cloud_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_resource.new](#fn-cloud_resourcenew) constructor.
   - `cloud_spanner` (`list[obj]`): Connection properties specific to Cloud Spanner When `null`, the `cloud_spanner` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_spanner.new](#fn-cloud_spannernew) constructor.
-  - `cloud_sql` (`list[obj]`): A nested object resource When `null`, the `cloud_sql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.new](#fn-cloud_sqlnew) constructor.
+  - `cloud_sql` (`list[obj]`): Connection properties specific to the Cloud SQL. When `null`, the `cloud_sql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.new](#fn-cloud_sqlnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -505,6 +505,7 @@ Terraform sub block.
 
 **Args**:
   - `customer_tenant_id` (`string`): The id of customer&#39;s directory that host the data.
+  - `federated_application_client_id` (`string`): The Azure Application (client) ID where the federated credentials will be hosted. When `null`, the `federated_application_client_id` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `azure` sub block.
@@ -549,6 +550,7 @@ Terraform sub block.
 **Args**:
   - `database` (`string`): Cloud Spanner database in the form &#39;project/instance/database&#39;
   - `use_parallelism` (`bool`): If parallelism should be used when reading from Cloud Spanner When `null`, the `use_parallelism` field will be omitted from the resulting object.
+  - `use_serverless_analytics` (`bool`): If the serverless analytics service should be used to read data from Cloud Spanner. useParallelism must be set when using serverless analytics When `null`, the `use_serverless_analytics` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `cloud_spanner` sub block.

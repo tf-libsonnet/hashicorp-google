@@ -108,6 +108,7 @@ permalink: /data/
 * [redis_instance](redis_instance.md)
 * [secret_manager_secret](secret_manager_secret.md)
 * [secret_manager_secret_version](secret_manager_secret_version.md)
+* [secret_manager_secret_version_access](secret_manager_secret_version_access.md)
 * [service_account](service_account.md)
 * [service_account_access_token](service_account_access_token.md)
 * [service_account_id_token](service_account_id_token.md)
