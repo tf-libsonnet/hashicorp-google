@@ -35,6 +35,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withIap()`](#fn-withiap)
 * [`fn withIapMixin()`](#fn-withiapmixin)
 * [`fn withLoadBalancingScheme()`](#fn-withloadbalancingscheme)
+* [`fn withLocalityLbPolicies()`](#fn-withlocalitylbpolicies)
+* [`fn withLocalityLbPoliciesMixin()`](#fn-withlocalitylbpoliciesmixin)
 * [`fn withLocalityLbPolicy()`](#fn-withlocalitylbpolicy)
 * [`fn withLogConfig()`](#fn-withlogconfig)
 * [`fn withLogConfigMixin()`](#fn-withlogconfigmixin)
@@ -69,6 +71,12 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-consistent_hashhttp_cookiettlnew)
 * [`obj iap`](#obj-iap)
   * [`fn new()`](#fn-iapnew)
+* [`obj locality_lb_policies`](#obj-locality_lb_policies)
+  * [`fn new()`](#fn-locality_lb_policiesnew)
+  * [`obj locality_lb_policies.custom_policy`](#obj-locality_lb_policiescustom_policy)
+    * [`fn new()`](#fn-locality_lb_policiescustom_policynew)
+  * [`obj locality_lb_policies.policy`](#obj-locality_lb_policiespolicy)
+    * [`fn new()`](#fn-locality_lb_policiespolicynew)
 * [`obj log_config`](#obj-log_config)
   * [`fn new()`](#fn-log_confignew)
 * [`obj outlier_detection`](#obj-outlier_detection)
@@ -212,6 +220,13 @@ hashing. This field only applies if the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
 set to MAGLEV or RING_HASH. When `null`, the `consistent_hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.new](#fn-consistent_hashnew) constructor.
   - `iap` (`list[obj]`): Settings for enabling Cloud Identity Aware Proxy When `null`, the `iap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.iap.new](#fn-iapnew) constructor.
+  - `locality_lb_policies` (`list[obj]`): A list of locality load balancing policies to be used in order of
+preference. Either the policy or the customPolicy field should be set.
+Overrides any value set in the localityLbPolicy field.
+
+localityLbPolicies is only supported when the BackendService is referenced
+by a URL Map that is referenced by a target gRPC proxy that has the
+validateForProxyless field set to true. When `null`, the `locality_lb_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.locality_lb_policies.new](#fn-locality_lb_policiesnew) constructor.
   - `log_config` (`list[obj]`): This field denotes the logging options for the load balancer traffic served by this backend service.
 If logging is enabled, logs will be exported to Stackdriver. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.log_config.new](#fn-log_confignew) constructor.
   - `outlier_detection` (`list[obj]`): Settings controlling eviction of unhealthy hosts from the load balancing pool.
@@ -346,6 +361,13 @@ hashing. This field only applies if the load_balancing_scheme is set to
 INTERNAL_SELF_MANAGED. This field is only applicable when locality_lb_policy is
 set to MAGLEV or RING_HASH. When `null`, the `consistent_hash` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.consistent_hash.new](#fn-consistent_hashnew) constructor.
   - `iap` (`list[obj]`): Settings for enabling Cloud Identity Aware Proxy When `null`, the `iap` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.iap.new](#fn-iapnew) constructor.
+  - `locality_lb_policies` (`list[obj]`): A list of locality load balancing policies to be used in order of
+preference. Either the policy or the customPolicy field should be set.
+Overrides any value set in the localityLbPolicy field.
+
+localityLbPolicies is only supported when the BackendService is referenced
+by a URL Map that is referenced by a target gRPC proxy that has the
+validateForProxyless field set to true. When `null`, the `locality_lb_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.locality_lb_policies.new](#fn-locality_lb_policiesnew) constructor.
   - `log_config` (`list[obj]`): This field denotes the logging options for the load balancer traffic served by this backend service.
 If logging is enabled, logs will be exported to Stackdriver. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.log_config.new](#fn-log_confignew) constructor.
   - `outlier_detection` (`list[obj]`): Settings controlling eviction of unhealthy hosts from the load balancing pool.
@@ -704,6 +726,43 @@ Terraform resource block to set or update the load_balancing_scheme field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `load_balancing_scheme` field.
+
+
+### fn withLocalityLbPolicies
+
+```ts
+withLocalityLbPolicies()
+```
+
+`google.list[obj].withLocalityLbPolicies` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the locality_lb_policies field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withLocalityLbPoliciesMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `locality_lb_policies` field.
+
+
+### fn withLocalityLbPoliciesMixin
+
+```ts
+withLocalityLbPoliciesMixin()
+```
+
+`google.list[obj].withLocalityLbPoliciesMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the locality_lb_policies field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withLocalityLbPolicies](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `locality_lb_policies` field.
 
 
 ### fn withLocalityLbPolicy
@@ -1331,6 +1390,121 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `iap` sub block.
+
+
+## obj locality_lb_policies
+
+
+
+### fn locality_lb_policies.new
+
+```ts
+new()
+```
+
+
+`google.compute_backend_service.locality_lb_policies.new` constructs a new object with attributes and blocks configured for the `locality_lb_policies`
+Terraform sub block.
+
+
+
+**Args**:
+  - `custom_policy` (`list[obj]`): The configuration for a custom policy implemented by the user and
+deployed with the client. When `null`, the `custom_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.locality_lb_policies.custom_policy.new](#fn-locality_lb_policiescustom_policynew) constructor.
+  - `policy` (`list[obj]`): The configuration for a built-in load balancing policy. When `null`, the `policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.locality_lb_policies.policy.new](#fn-locality_lb_policiespolicynew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `locality_lb_policies` sub block.
+
+
+## obj locality_lb_policies.custom_policy
+
+
+
+### fn locality_lb_policies.custom_policy.new
+
+```ts
+new()
+```
+
+
+`google.compute_backend_service.locality_lb_policies.custom_policy.new` constructs a new object with attributes and blocks configured for the `custom_policy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `data` (`string`): An optional, arbitrary JSON object with configuration data, understood
+by a locally installed custom policy implementation. When `null`, the `data` field will be omitted from the resulting object.
+  - `name` (`string`): Identifies the custom policy.
+
+The value should match the type the custom implementation is registered
+with on the gRPC clients. It should follow protocol buffer
+message naming conventions and include the full path (e.g.
+myorg.CustomLbPolicy). The maximum length is 256 characters.
+
+Note that specifying the same custom policy more than once for a
+backend is not a valid configuration and will be rejected.
+
+**Returns**:
+  - An attribute object that represents the `custom_policy` sub block.
+
+
+## obj locality_lb_policies.policy
+
+
+
+### fn locality_lb_policies.policy.new
+
+```ts
+new()
+```
+
+
+`google.compute_backend_service.locality_lb_policies.policy.new` constructs a new object with attributes and blocks configured for the `policy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): The name of a locality load balancer policy to be used. The value
+should be one of the predefined ones as supported by localityLbPolicy,
+although at the moment only ROUND_ROBIN is supported.
+
+This field should only be populated when the customPolicy field is not
+used.
+
+Note that specifying the same policy more than once for a backend is
+not a valid configuration and will be rejected.
+
+The possible values are:
+
+* &#39;ROUND_ROBIN&#39;: This is a simple policy in which each healthy backend
+                is selected in round robin order.
+
+* &#39;LEAST_REQUEST&#39;: An O(1) algorithm which selects two random healthy
+                  hosts and picks the host which has fewer active requests.
+
+* &#39;RING_HASH&#39;: The ring/modulo hash load balancer implements consistent
+              hashing to backends. The algorithm has the property that the
+              addition/removal of a host from a set of N hosts only affects
+              1/N of the requests.
+
+* &#39;RANDOM&#39;: The load balancer selects a random healthy host.
+
+* &#39;ORIGINAL_DESTINATION&#39;: Backend host is selected based on the client
+                          connection metadata, i.e., connections are opened
+                          to the same address as the destination address of
+                          the incoming connection before the connection
+                          was redirected to the load balancer.
+
+* &#39;MAGLEV&#39;: used as a drop in replacement for the ring hash load balancer.
+            Maglev is not as stable as ring hash but has faster table lookup
+            build times and host selection times. For more information about
+            Maglev, refer to https://ai.google/research/pubs/pub44824 Possible values: [&#34;ROUND_ROBIN&#34;, &#34;LEAST_REQUEST&#34;, &#34;RING_HASH&#34;, &#34;RANDOM&#34;, &#34;ORIGINAL_DESTINATION&#34;, &#34;MAGLEV&#34;]
+
+**Returns**:
+  - An attribute object that represents the `policy` sub block.
 
 
 ## obj log_config
