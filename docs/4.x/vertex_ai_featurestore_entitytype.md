@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withDescription()`](#fn-withdescription)
 * [`fn withFeaturestore()`](#fn-withfeaturestore)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withMonitoringConfig()`](#fn-withmonitoringconfig)
@@ -64,6 +65,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `description` (`string`): Optional. Description of the EntityType. When `null`, the `description` field will be omitted from the resulting object.
   - `featurestore` (`string`): The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
   - `labels` (`obj`): A set of key/value label pairs to assign to this EntityType. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number. When `null`, the `name` field will be omitted from the resulting object.
@@ -94,6 +96,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `description` (`string`): Optional. Description of the EntityType. When `null`, the `description` field will be omitted from the resulting object.
   - `featurestore` (`string`): The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
   - `labels` (`obj`): A set of key/value label pairs to assign to this EntityType. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number. When `null`, the `name` field will be omitted from the resulting object.
@@ -104,6 +107,22 @@ If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] spe
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `vertex_ai_featurestore_entitytype` resource into the root Terraform configuration.
+
+
+### fn withDescription
+
+```ts
+withDescription()
+```
+
+`google.string.withDescription` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the description field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `description` field.
 
 
 ### fn withFeaturestore

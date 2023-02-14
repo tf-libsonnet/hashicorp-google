@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withInterface()`](#fn-withinterface)
 * [`fn withInterfaceMixin()`](#fn-withinterfacemixin)
+* [`fn withLabels()`](#fn-withlabels)
 * [`fn withName()`](#fn-withname)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRedundancyType()`](#fn-withredundancytype)
@@ -58,6 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels for the external VPN gateway resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
@@ -93,6 +95,7 @@ injecting into a complete block.
 
 **Args**:
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels for the external VPN gateway resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035.  Specifically, the name must be 1-63 characters long and
@@ -160,6 +163,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `interface` field.
+
+
+### fn withLabels
+
+```ts
+withLabels()
+```
+
+`google.obj.withLabels` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the labels field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `labels` field.
 
 
 ### fn withName

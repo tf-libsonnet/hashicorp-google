@@ -49,12 +49,98 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         mysql_databases: mysql_databases,
       }),
     },
-    '#new':: d.fn(help='\n`google.datastream_stream.backfill_all.new` constructs a new object with attributes and blocks configured for the `backfill_all`\nTerraform sub block.\n\n\n\n**Args**:\n  - `mysql_excluded_objects` (`list[obj]`): MySQL data source objects to avoid backfilling. When `null`, the `mysql_excluded_objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.backfill_all.mysql_excluded_objects.new](#fn-backfill_allmysql_excluded_objectsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `backfill_all` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.datastream_stream.backfill_all.new` constructs a new object with attributes and blocks configured for the `backfill_all`\nTerraform sub block.\n\n\n\n**Args**:\n  - `mysql_excluded_objects` (`list[obj]`): MySQL data source objects to avoid backfilling. When `null`, the `mysql_excluded_objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.backfill_all.mysql_excluded_objects.new](#fn-backfill_allmysql_excluded_objectsnew) constructor.\n  - `oracle_excluded_objects` (`list[obj]`): PostgreSQL data source objects to avoid backfilling. When `null`, the `oracle_excluded_objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.backfill_all.oracle_excluded_objects.new](#fn-backfill_alloracle_excluded_objectsnew) constructor.\n  - `postgresql_excluded_objects` (`list[obj]`): PostgreSQL data source objects to avoid backfilling. When `null`, the `postgresql_excluded_objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.backfill_all.postgresql_excluded_objects.new](#fn-backfill_allpostgresql_excluded_objectsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `backfill_all` sub block.\n', args=[]),
     new(
-      mysql_excluded_objects=null
+      mysql_excluded_objects=null,
+      oracle_excluded_objects=null,
+      postgresql_excluded_objects=null
     ):: std.prune(a={
       mysql_excluded_objects: mysql_excluded_objects,
+      oracle_excluded_objects: oracle_excluded_objects,
+      postgresql_excluded_objects: postgresql_excluded_objects,
     }),
+    oracle_excluded_objects:: {
+      '#new':: d.fn(help='\n`google.datastream_stream.backfill_all.oracle_excluded_objects.new` constructs a new object with attributes and blocks configured for the `oracle_excluded_objects`\nTerraform sub block.\n\n\n\n**Args**:\n  - `oracle_schemas` (`list[obj]`): Oracle schemas/databases in the database server When `null`, the `oracle_schemas` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.backfill_all.oracle_excluded_objects.oracle_schemas.new](#fn-backfill_allbackfill_alloracle_schemasnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `oracle_excluded_objects` sub block.\n', args=[]),
+      new(
+        oracle_schemas=null
+      ):: std.prune(a={
+        oracle_schemas: oracle_schemas,
+      }),
+      oracle_schemas:: {
+        '#new':: d.fn(help='\n`google.datastream_stream.backfill_all.oracle_excluded_objects.oracle_schemas.new` constructs a new object with attributes and blocks configured for the `oracle_schemas`\nTerraform sub block.\n\n\n\n**Args**:\n  - `schema` (`string`): Schema name.\n  - `oracle_tables` (`list[obj]`): Tables in the database. When `null`, the `oracle_tables` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.backfill_all.oracle_excluded_objects.oracle_schemas.oracle_tables.new](#fn-backfill_allbackfill_alloracle_excluded_objectsoracle_tablesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `oracle_schemas` sub block.\n', args=[]),
+        new(
+          schema,
+          oracle_tables=null
+        ):: std.prune(a={
+          oracle_tables: oracle_tables,
+          schema: schema,
+        }),
+        oracle_tables:: {
+          '#new':: d.fn(help='\n`google.datastream_stream.backfill_all.oracle_excluded_objects.oracle_schemas.oracle_tables.new` constructs a new object with attributes and blocks configured for the `oracle_tables`\nTerraform sub block.\n\n\n\n**Args**:\n  - `table` (`string`): Table name.\n  - `oracle_columns` (`list[obj]`): Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything. When `null`, the `oracle_columns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.backfill_all.oracle_excluded_objects.oracle_schemas.oracle_tables.oracle_columns.new](#fn-backfill_allbackfill_alloracle_excluded_objectsoracle_schemasoracle_columnsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `oracle_tables` sub block.\n', args=[]),
+          new(
+            table,
+            oracle_columns=null
+          ):: std.prune(a={
+            oracle_columns: oracle_columns,
+            table: table,
+          }),
+          oracle_columns:: {
+            '#new':: d.fn(help='\n`google.datastream_stream.backfill_all.oracle_excluded_objects.oracle_schemas.oracle_tables.oracle_columns.new` constructs a new object with attributes and blocks configured for the `oracle_columns`\nTerraform sub block.\n\n\n\n**Args**:\n  - `column` (`string`): Column name. When `null`, the `column` field will be omitted from the resulting object.\n  - `data_type` (`string`): The Oracle data type. Full data types list can be found here:\nhttps://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html When `null`, the `data_type` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `oracle_columns` sub block.\n', args=[]),
+            new(
+              column=null,
+              data_type=null
+            ):: std.prune(a={
+              column: column,
+              data_type: data_type,
+            }),
+          },
+        },
+      },
+    },
+    postgresql_excluded_objects:: {
+      '#new':: d.fn(help='\n`google.datastream_stream.backfill_all.postgresql_excluded_objects.new` constructs a new object with attributes and blocks configured for the `postgresql_excluded_objects`\nTerraform sub block.\n\n\n\n**Args**:\n  - `postgresql_schemas` (`list[obj]`): PostgreSQL schemas on the server When `null`, the `postgresql_schemas` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.backfill_all.postgresql_excluded_objects.postgresql_schemas.new](#fn-backfill_allbackfill_allpostgresql_schemasnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `postgresql_excluded_objects` sub block.\n', args=[]),
+      new(
+        postgresql_schemas=null
+      ):: std.prune(a={
+        postgresql_schemas: postgresql_schemas,
+      }),
+      postgresql_schemas:: {
+        '#new':: d.fn(help='\n`google.datastream_stream.backfill_all.postgresql_excluded_objects.postgresql_schemas.new` constructs a new object with attributes and blocks configured for the `postgresql_schemas`\nTerraform sub block.\n\n\n\n**Args**:\n  - `schema` (`string`): Database name.\n  - `postgresql_tables` (`list[obj]`): Tables in the schema. When `null`, the `postgresql_tables` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.backfill_all.postgresql_excluded_objects.postgresql_schemas.postgresql_tables.new](#fn-backfill_allbackfill_allpostgresql_excluded_objectspostgresql_tablesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `postgresql_schemas` sub block.\n', args=[]),
+        new(
+          schema,
+          postgresql_tables=null
+        ):: std.prune(a={
+          postgresql_tables: postgresql_tables,
+          schema: schema,
+        }),
+        postgresql_tables:: {
+          '#new':: d.fn(help='\n`google.datastream_stream.backfill_all.postgresql_excluded_objects.postgresql_schemas.postgresql_tables.new` constructs a new object with attributes and blocks configured for the `postgresql_tables`\nTerraform sub block.\n\n\n\n**Args**:\n  - `table` (`string`): Table name.\n  - `postgresql_columns` (`list[obj]`): PostgreSQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything. When `null`, the `postgresql_columns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.backfill_all.postgresql_excluded_objects.postgresql_schemas.postgresql_tables.postgresql_columns.new](#fn-backfill_allbackfill_allpostgresql_excluded_objectspostgresql_schemaspostgresql_columnsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `postgresql_tables` sub block.\n', args=[]),
+          new(
+            table,
+            postgresql_columns=null
+          ):: std.prune(a={
+            postgresql_columns: postgresql_columns,
+            table: table,
+          }),
+          postgresql_columns:: {
+            '#new':: d.fn(help='\n`google.datastream_stream.backfill_all.postgresql_excluded_objects.postgresql_schemas.postgresql_tables.postgresql_columns.new` constructs a new object with attributes and blocks configured for the `postgresql_columns`\nTerraform sub block.\n\n\n\n**Args**:\n  - `column` (`string`): Column name. When `null`, the `column` field will be omitted from the resulting object.\n  - `data_type` (`string`): The PostgreSQL data type. Full data types list can be found here:\nhttps://www.postgresql.org/docs/current/datatype.html When `null`, the `data_type` field will be omitted from the resulting object.\n  - `nullable` (`bool`): Whether or not the column can accept a null value. When `null`, the `nullable` field will be omitted from the resulting object.\n  - `ordinal_position` (`number`): The ordinal position of the column in the table. When `null`, the `ordinal_position` field will be omitted from the resulting object.\n  - `primary_key` (`bool`): Whether or not the column represents a primary key. When `null`, the `primary_key` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `postgresql_columns` sub block.\n', args=[]),
+            new(
+              column=null,
+              data_type=null,
+              nullable=null,
+              ordinal_position=null,
+              primary_key=null
+            ):: std.prune(a={
+              column: column,
+              data_type: data_type,
+              nullable: nullable,
+              ordinal_position: ordinal_position,
+              primary_key: primary_key,
+            }),
+          },
+        },
+      },
+    },
   },
   backfill_none:: {
     '#new':: d.fn(help='\n`google.datastream_stream.backfill_none.new` constructs a new object with attributes and blocks configured for the `backfill_none`\nTerraform sub block.\n\n\n\n**Returns**:\n  - An attribute object that represents the `backfill_none` sub block.\n', args=[]),
@@ -314,14 +400,228 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         max_concurrent_cdc_tasks: max_concurrent_cdc_tasks,
       }),
     },
-    '#new':: d.fn(help='\n`google.datastream_stream.source_config.new` constructs a new object with attributes and blocks configured for the `source_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `source_connection_profile` (`string`): Source connection profile resource. Format: projects/{project}/locations/{location}/connectionProfiles/{name}\n  - `mysql_source_config` (`list[obj]`): MySQL data source configuration. When `null`, the `mysql_source_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.mysql_source_config.new](#fn-source_configmysql_source_confignew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `source_config` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.datastream_stream.source_config.new` constructs a new object with attributes and blocks configured for the `source_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `source_connection_profile` (`string`): Source connection profile resource. Format: projects/{project}/locations/{location}/connectionProfiles/{name}\n  - `mysql_source_config` (`list[obj]`): MySQL data source configuration. When `null`, the `mysql_source_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.mysql_source_config.new](#fn-source_configmysql_source_confignew) constructor.\n  - `oracle_source_config` (`list[obj]`): MySQL data source configuration. When `null`, the `oracle_source_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.oracle_source_config.new](#fn-source_configoracle_source_confignew) constructor.\n  - `postgresql_source_config` (`list[obj]`): PostgreSQL data source configuration. When `null`, the `postgresql_source_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.postgresql_source_config.new](#fn-source_configpostgresql_source_confignew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `source_config` sub block.\n', args=[]),
     new(
       source_connection_profile,
-      mysql_source_config=null
+      mysql_source_config=null,
+      oracle_source_config=null,
+      postgresql_source_config=null
     ):: std.prune(a={
       mysql_source_config: mysql_source_config,
+      oracle_source_config: oracle_source_config,
+      postgresql_source_config: postgresql_source_config,
       source_connection_profile: source_connection_profile,
     }),
+    oracle_source_config:: {
+      drop_large_objects:: {
+        '#new':: d.fn(help='\n`google.datastream_stream.source_config.oracle_source_config.drop_large_objects.new` constructs a new object with attributes and blocks configured for the `drop_large_objects`\nTerraform sub block.\n\n\n\n**Returns**:\n  - An attribute object that represents the `drop_large_objects` sub block.\n', args=[]),
+        new(
+
+        ):: std.prune(a={}),
+      },
+      exclude_objects:: {
+        '#new':: d.fn(help='\n`google.datastream_stream.source_config.oracle_source_config.exclude_objects.new` constructs a new object with attributes and blocks configured for the `exclude_objects`\nTerraform sub block.\n\n\n\n**Args**:\n  - `oracle_schemas` (`list[obj]`): Oracle schemas/databases in the database server When `null`, the `oracle_schemas` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.oracle_source_config.exclude_objects.oracle_schemas.new](#fn-source_configsource_configoracle_source_configoracle_schemasnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `exclude_objects` sub block.\n', args=[]),
+        new(
+          oracle_schemas=null
+        ):: std.prune(a={
+          oracle_schemas: oracle_schemas,
+        }),
+        oracle_schemas:: {
+          '#new':: d.fn(help='\n`google.datastream_stream.source_config.oracle_source_config.exclude_objects.oracle_schemas.new` constructs a new object with attributes and blocks configured for the `oracle_schemas`\nTerraform sub block.\n\n\n\n**Args**:\n  - `schema` (`string`): Schema name.\n  - `oracle_tables` (`list[obj]`): Tables in the database. When `null`, the `oracle_tables` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.oracle_source_config.exclude_objects.oracle_schemas.oracle_tables.new](#fn-source_configsource_configoracle_source_configexclude_objectsoracle_tablesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `oracle_schemas` sub block.\n', args=[]),
+          new(
+            schema,
+            oracle_tables=null
+          ):: std.prune(a={
+            oracle_tables: oracle_tables,
+            schema: schema,
+          }),
+          oracle_tables:: {
+            '#new':: d.fn(help='\n`google.datastream_stream.source_config.oracle_source_config.exclude_objects.oracle_schemas.oracle_tables.new` constructs a new object with attributes and blocks configured for the `oracle_tables`\nTerraform sub block.\n\n\n\n**Args**:\n  - `table` (`string`): Table name.\n  - `oracle_columns` (`list[obj]`): Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything. When `null`, the `oracle_columns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.oracle_source_config.exclude_objects.oracle_schemas.oracle_tables.oracle_columns.new](#fn-source_configsource_configoracle_source_configexclude_objectsoracle_schemasoracle_columnsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `oracle_tables` sub block.\n', args=[]),
+            new(
+              table,
+              oracle_columns=null
+            ):: std.prune(a={
+              oracle_columns: oracle_columns,
+              table: table,
+            }),
+            oracle_columns:: {
+              '#new':: d.fn(help='\n`google.datastream_stream.source_config.oracle_source_config.exclude_objects.oracle_schemas.oracle_tables.oracle_columns.new` constructs a new object with attributes and blocks configured for the `oracle_columns`\nTerraform sub block.\n\n\n\n**Args**:\n  - `column` (`string`): Column name. When `null`, the `column` field will be omitted from the resulting object.\n  - `data_type` (`string`): The Oracle data type. Full data types list can be found here:\nhttps://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html When `null`, the `data_type` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `oracle_columns` sub block.\n', args=[]),
+              new(
+                column=null,
+                data_type=null
+              ):: std.prune(a={
+                column: column,
+                data_type: data_type,
+              }),
+            },
+          },
+        },
+      },
+      include_objects:: {
+        '#new':: d.fn(help='\n`google.datastream_stream.source_config.oracle_source_config.include_objects.new` constructs a new object with attributes and blocks configured for the `include_objects`\nTerraform sub block.\n\n\n\n**Args**:\n  - `oracle_schemas` (`list[obj]`): Oracle schemas/databases in the database server When `null`, the `oracle_schemas` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.oracle_source_config.include_objects.oracle_schemas.new](#fn-source_configsource_configoracle_source_configoracle_schemasnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `include_objects` sub block.\n', args=[]),
+        new(
+          oracle_schemas=null
+        ):: std.prune(a={
+          oracle_schemas: oracle_schemas,
+        }),
+        oracle_schemas:: {
+          '#new':: d.fn(help='\n`google.datastream_stream.source_config.oracle_source_config.include_objects.oracle_schemas.new` constructs a new object with attributes and blocks configured for the `oracle_schemas`\nTerraform sub block.\n\n\n\n**Args**:\n  - `schema` (`string`): Schema name.\n  - `oracle_tables` (`list[obj]`): Tables in the database. When `null`, the `oracle_tables` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.oracle_source_config.include_objects.oracle_schemas.oracle_tables.new](#fn-source_configsource_configoracle_source_configinclude_objectsoracle_tablesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `oracle_schemas` sub block.\n', args=[]),
+          new(
+            schema,
+            oracle_tables=null
+          ):: std.prune(a={
+            oracle_tables: oracle_tables,
+            schema: schema,
+          }),
+          oracle_tables:: {
+            '#new':: d.fn(help='\n`google.datastream_stream.source_config.oracle_source_config.include_objects.oracle_schemas.oracle_tables.new` constructs a new object with attributes and blocks configured for the `oracle_tables`\nTerraform sub block.\n\n\n\n**Args**:\n  - `table` (`string`): Table name.\n  - `oracle_columns` (`list[obj]`): Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything. When `null`, the `oracle_columns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.oracle_source_config.include_objects.oracle_schemas.oracle_tables.oracle_columns.new](#fn-source_configsource_configoracle_source_configinclude_objectsoracle_schemasoracle_columnsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `oracle_tables` sub block.\n', args=[]),
+            new(
+              table,
+              oracle_columns=null
+            ):: std.prune(a={
+              oracle_columns: oracle_columns,
+              table: table,
+            }),
+            oracle_columns:: {
+              '#new':: d.fn(help='\n`google.datastream_stream.source_config.oracle_source_config.include_objects.oracle_schemas.oracle_tables.oracle_columns.new` constructs a new object with attributes and blocks configured for the `oracle_columns`\nTerraform sub block.\n\n\n\n**Args**:\n  - `column` (`string`): Column name. When `null`, the `column` field will be omitted from the resulting object.\n  - `data_type` (`string`): The Oracle data type. Full data types list can be found here:\nhttps://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html When `null`, the `data_type` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `oracle_columns` sub block.\n', args=[]),
+              new(
+                column=null,
+                data_type=null
+              ):: std.prune(a={
+                column: column,
+                data_type: data_type,
+              }),
+            },
+          },
+        },
+      },
+      '#new':: d.fn(help='\n`google.datastream_stream.source_config.oracle_source_config.new` constructs a new object with attributes and blocks configured for the `oracle_source_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `max_concurrent_backfill_tasks` (`number`): Maximum number of concurrent backfill tasks. The number should be non negative.\nIf not set (or set to 0), the system&#39;s default value will be used. When `null`, the `max_concurrent_backfill_tasks` field will be omitted from the resulting object.\n  - `max_concurrent_cdc_tasks` (`number`): Maximum number of concurrent CDC tasks. The number should be non negative.\nIf not set (or set to 0), the system&#39;s default value will be used. When `null`, the `max_concurrent_cdc_tasks` field will be omitted from the resulting object.\n  - `drop_large_objects` (`list[obj]`): Configuration to drop large object values. When `null`, the `drop_large_objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.oracle_source_config.drop_large_objects.new](#fn-source_configsource_configdrop_large_objectsnew) constructor.\n  - `exclude_objects` (`list[obj]`): Oracle objects to exclude from the stream. When `null`, the `exclude_objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.oracle_source_config.exclude_objects.new](#fn-source_configsource_configexclude_objectsnew) constructor.\n  - `include_objects` (`list[obj]`): Oracle objects to retrieve from the source. When `null`, the `include_objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.oracle_source_config.include_objects.new](#fn-source_configsource_configinclude_objectsnew) constructor.\n  - `stream_large_objects` (`list[obj]`): Configuration to drop large object values. When `null`, the `stream_large_objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.oracle_source_config.stream_large_objects.new](#fn-source_configsource_configstream_large_objectsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `oracle_source_config` sub block.\n', args=[]),
+      new(
+        drop_large_objects=null,
+        exclude_objects=null,
+        include_objects=null,
+        max_concurrent_backfill_tasks=null,
+        max_concurrent_cdc_tasks=null,
+        stream_large_objects=null
+      ):: std.prune(a={
+        drop_large_objects: drop_large_objects,
+        exclude_objects: exclude_objects,
+        include_objects: include_objects,
+        max_concurrent_backfill_tasks: max_concurrent_backfill_tasks,
+        max_concurrent_cdc_tasks: max_concurrent_cdc_tasks,
+        stream_large_objects: stream_large_objects,
+      }),
+      stream_large_objects:: {
+        '#new':: d.fn(help='\n`google.datastream_stream.source_config.oracle_source_config.stream_large_objects.new` constructs a new object with attributes and blocks configured for the `stream_large_objects`\nTerraform sub block.\n\n\n\n**Returns**:\n  - An attribute object that represents the `stream_large_objects` sub block.\n', args=[]),
+        new(
+
+        ):: std.prune(a={}),
+      },
+    },
+    postgresql_source_config:: {
+      exclude_objects:: {
+        '#new':: d.fn(help='\n`google.datastream_stream.source_config.postgresql_source_config.exclude_objects.new` constructs a new object with attributes and blocks configured for the `exclude_objects`\nTerraform sub block.\n\n\n\n**Args**:\n  - `postgresql_schemas` (`list[obj]`): PostgreSQL schemas on the server When `null`, the `postgresql_schemas` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.postgresql_source_config.exclude_objects.postgresql_schemas.new](#fn-source_configsource_configpostgresql_source_configpostgresql_schemasnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `exclude_objects` sub block.\n', args=[]),
+        new(
+          postgresql_schemas=null
+        ):: std.prune(a={
+          postgresql_schemas: postgresql_schemas,
+        }),
+        postgresql_schemas:: {
+          '#new':: d.fn(help='\n`google.datastream_stream.source_config.postgresql_source_config.exclude_objects.postgresql_schemas.new` constructs a new object with attributes and blocks configured for the `postgresql_schemas`\nTerraform sub block.\n\n\n\n**Args**:\n  - `schema` (`string`): Database name.\n  - `postgresql_tables` (`list[obj]`): Tables in the schema. When `null`, the `postgresql_tables` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.postgresql_source_config.exclude_objects.postgresql_schemas.postgresql_tables.new](#fn-source_configsource_configpostgresql_source_configexclude_objectspostgresql_tablesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `postgresql_schemas` sub block.\n', args=[]),
+          new(
+            schema,
+            postgresql_tables=null
+          ):: std.prune(a={
+            postgresql_tables: postgresql_tables,
+            schema: schema,
+          }),
+          postgresql_tables:: {
+            '#new':: d.fn(help='\n`google.datastream_stream.source_config.postgresql_source_config.exclude_objects.postgresql_schemas.postgresql_tables.new` constructs a new object with attributes and blocks configured for the `postgresql_tables`\nTerraform sub block.\n\n\n\n**Args**:\n  - `table` (`string`): Table name.\n  - `postgresql_columns` (`list[obj]`): PostgreSQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything. When `null`, the `postgresql_columns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.postgresql_source_config.exclude_objects.postgresql_schemas.postgresql_tables.postgresql_columns.new](#fn-source_configsource_configpostgresql_source_configexclude_objectspostgresql_schemaspostgresql_columnsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `postgresql_tables` sub block.\n', args=[]),
+            new(
+              table,
+              postgresql_columns=null
+            ):: std.prune(a={
+              postgresql_columns: postgresql_columns,
+              table: table,
+            }),
+            postgresql_columns:: {
+              '#new':: d.fn(help='\n`google.datastream_stream.source_config.postgresql_source_config.exclude_objects.postgresql_schemas.postgresql_tables.postgresql_columns.new` constructs a new object with attributes and blocks configured for the `postgresql_columns`\nTerraform sub block.\n\n\n\n**Args**:\n  - `column` (`string`): Column name. When `null`, the `column` field will be omitted from the resulting object.\n  - `data_type` (`string`): The PostgreSQL data type. Full data types list can be found here:\nhttps://www.postgresql.org/docs/current/datatype.html When `null`, the `data_type` field will be omitted from the resulting object.\n  - `nullable` (`bool`): Whether or not the column can accept a null value. When `null`, the `nullable` field will be omitted from the resulting object.\n  - `ordinal_position` (`number`): The ordinal position of the column in the table. When `null`, the `ordinal_position` field will be omitted from the resulting object.\n  - `primary_key` (`bool`): Whether or not the column represents a primary key. When `null`, the `primary_key` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `postgresql_columns` sub block.\n', args=[]),
+              new(
+                column=null,
+                data_type=null,
+                nullable=null,
+                ordinal_position=null,
+                primary_key=null
+              ):: std.prune(a={
+                column: column,
+                data_type: data_type,
+                nullable: nullable,
+                ordinal_position: ordinal_position,
+                primary_key: primary_key,
+              }),
+            },
+          },
+        },
+      },
+      include_objects:: {
+        '#new':: d.fn(help='\n`google.datastream_stream.source_config.postgresql_source_config.include_objects.new` constructs a new object with attributes and blocks configured for the `include_objects`\nTerraform sub block.\n\n\n\n**Args**:\n  - `postgresql_schemas` (`list[obj]`): PostgreSQL schemas on the server When `null`, the `postgresql_schemas` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.postgresql_source_config.include_objects.postgresql_schemas.new](#fn-source_configsource_configpostgresql_source_configpostgresql_schemasnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `include_objects` sub block.\n', args=[]),
+        new(
+          postgresql_schemas=null
+        ):: std.prune(a={
+          postgresql_schemas: postgresql_schemas,
+        }),
+        postgresql_schemas:: {
+          '#new':: d.fn(help='\n`google.datastream_stream.source_config.postgresql_source_config.include_objects.postgresql_schemas.new` constructs a new object with attributes and blocks configured for the `postgresql_schemas`\nTerraform sub block.\n\n\n\n**Args**:\n  - `schema` (`string`): Database name.\n  - `postgresql_tables` (`list[obj]`): Tables in the schema. When `null`, the `postgresql_tables` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.postgresql_source_config.include_objects.postgresql_schemas.postgresql_tables.new](#fn-source_configsource_configpostgresql_source_configinclude_objectspostgresql_tablesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `postgresql_schemas` sub block.\n', args=[]),
+          new(
+            schema,
+            postgresql_tables=null
+          ):: std.prune(a={
+            postgresql_tables: postgresql_tables,
+            schema: schema,
+          }),
+          postgresql_tables:: {
+            '#new':: d.fn(help='\n`google.datastream_stream.source_config.postgresql_source_config.include_objects.postgresql_schemas.postgresql_tables.new` constructs a new object with attributes and blocks configured for the `postgresql_tables`\nTerraform sub block.\n\n\n\n**Args**:\n  - `table` (`string`): Table name.\n  - `postgresql_columns` (`list[obj]`): PostgreSQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything. When `null`, the `postgresql_columns` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.postgresql_source_config.include_objects.postgresql_schemas.postgresql_tables.postgresql_columns.new](#fn-source_configsource_configpostgresql_source_configinclude_objectspostgresql_schemaspostgresql_columnsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `postgresql_tables` sub block.\n', args=[]),
+            new(
+              table,
+              postgresql_columns=null
+            ):: std.prune(a={
+              postgresql_columns: postgresql_columns,
+              table: table,
+            }),
+            postgresql_columns:: {
+              '#new':: d.fn(help='\n`google.datastream_stream.source_config.postgresql_source_config.include_objects.postgresql_schemas.postgresql_tables.postgresql_columns.new` constructs a new object with attributes and blocks configured for the `postgresql_columns`\nTerraform sub block.\n\n\n\n**Args**:\n  - `column` (`string`): Column name. When `null`, the `column` field will be omitted from the resulting object.\n  - `data_type` (`string`): The PostgreSQL data type. Full data types list can be found here:\nhttps://www.postgresql.org/docs/current/datatype.html When `null`, the `data_type` field will be omitted from the resulting object.\n  - `nullable` (`bool`): Whether or not the column can accept a null value. When `null`, the `nullable` field will be omitted from the resulting object.\n  - `ordinal_position` (`number`): The ordinal position of the column in the table. When `null`, the `ordinal_position` field will be omitted from the resulting object.\n  - `primary_key` (`bool`): Whether or not the column represents a primary key. When `null`, the `primary_key` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `postgresql_columns` sub block.\n', args=[]),
+              new(
+                column=null,
+                data_type=null,
+                nullable=null,
+                ordinal_position=null,
+                primary_key=null
+              ):: std.prune(a={
+                column: column,
+                data_type: data_type,
+                nullable: nullable,
+                ordinal_position: ordinal_position,
+                primary_key: primary_key,
+              }),
+            },
+          },
+        },
+      },
+      '#new':: d.fn(help='\n`google.datastream_stream.source_config.postgresql_source_config.new` constructs a new object with attributes and blocks configured for the `postgresql_source_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `max_concurrent_backfill_tasks` (`number`): Maximum number of concurrent backfill tasks. The number should be non\nnegative. If not set (or set to 0), the system&#39;s default value will be used. When `null`, the `max_concurrent_backfill_tasks` field will be omitted from the resulting object.\n  - `publication` (`string`): The name of the publication that includes the set of all tables\nthat are defined in the stream&#39;s include_objects.\n  - `replication_slot` (`string`): The name of the logical replication slot that&#39;s configured with\nthe pgoutput plugin.\n  - `exclude_objects` (`list[obj]`): PostgreSQL objects to exclude from the stream. When `null`, the `exclude_objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.postgresql_source_config.exclude_objects.new](#fn-source_configsource_configexclude_objectsnew) constructor.\n  - `include_objects` (`list[obj]`): PostgreSQL objects to retrieve from the source. When `null`, the `include_objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.postgresql_source_config.include_objects.new](#fn-source_configsource_configinclude_objectsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `postgresql_source_config` sub block.\n', args=[]),
+      new(
+        publication,
+        replication_slot,
+        exclude_objects=null,
+        include_objects=null,
+        max_concurrent_backfill_tasks=null
+      ):: std.prune(a={
+        exclude_objects: exclude_objects,
+        include_objects: include_objects,
+        max_concurrent_backfill_tasks: max_concurrent_backfill_tasks,
+        publication: publication,
+        replication_slot: replication_slot,
+      }),
+    },
   },
   timeouts:: {
     '#new':: d.fn(help='\n`google.datastream_stream.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.\n  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.\n  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `timeouts` sub block.\n', args=[]),
