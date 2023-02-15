@@ -39,6 +39,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withRegion()`](#fn-withregion)
 * [`fn withReservationAffinity()`](#fn-withreservationaffinity)
 * [`fn withReservationAffinityMixin()`](#fn-withreservationaffinitymixin)
+* [`fn withResourcePolicies()`](#fn-withresourcepolicies)
 * [`fn withScheduling()`](#fn-withscheduling)
 * [`fn withSchedulingMixin()`](#fn-withschedulingmixin)
 * [`fn withServiceAccount()`](#fn-withserviceaccount)
@@ -126,6 +127,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name_prefix` (`string`): Creates a unique name beginning with the specified prefix. Conflicts with name. When `null`, the `name_prefix` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): An instance template is a global resource that is not bound to a zone or a region. However, you can still specify some regional resources in an instance template, which restricts the template to the region where that resource resides. For example, a custom subnetwork resource is tied to a specific region. Defaults to the region of the Provider if no value is given. When `null`, the `region` field will be omitted from the resulting object.
+  - `resource_policies` (`list`): A list of self_links of resource policies to attach to the instance. Currently a max of 1 resource policy is supported. When `null`, the `resource_policies` field will be omitted from the resulting object.
   - `tags` (`list`): Tags to attach to the instance. When `null`, the `tags` field will be omitted from the resulting object.
   - `advanced_machine_features` (`list[obj]`): Controls for advanced machine-related behavior features. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.advanced_machine_features.new](#fn-advanced_machine_featuresnew) constructor.
   - `confidential_instance_config` (`list[obj]`): The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail to create. When `null`, the `confidential_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.confidential_instance_config.new](#fn-confidential_instance_confignew) constructor.
@@ -172,6 +174,7 @@ injecting into a complete block.
   - `name_prefix` (`string`): Creates a unique name beginning with the specified prefix. Conflicts with name. When `null`, the `name_prefix` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): An instance template is a global resource that is not bound to a zone or a region. However, you can still specify some regional resources in an instance template, which restricts the template to the region where that resource resides. For example, a custom subnetwork resource is tied to a specific region. Defaults to the region of the Provider if no value is given. When `null`, the `region` field will be omitted from the resulting object.
+  - `resource_policies` (`list`): A list of self_links of resource policies to attach to the instance. Currently a max of 1 resource policy is supported. When `null`, the `resource_policies` field will be omitted from the resulting object.
   - `tags` (`list`): Tags to attach to the instance. When `null`, the `tags` field will be omitted from the resulting object.
   - `advanced_machine_features` (`list[obj]`): Controls for advanced machine-related behavior features. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.advanced_machine_features.new](#fn-advanced_machine_featuresnew) constructor.
   - `confidential_instance_config` (`list[obj]`): The Confidential VM config being used by the instance. on_host_maintenance has to be set to TERMINATE or this will fail to create. When `null`, the `confidential_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.confidential_instance_config.new](#fn-confidential_instance_confignew) constructor.
@@ -600,6 +603,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `reservation_affinity` field.
+
+
+### fn withResourcePolicies
+
+```ts
+withResourcePolicies()
+```
+
+`google.list.withResourcePolicies` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the resource_policies field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `resource_policies` field.
 
 
 ### fn withScheduling

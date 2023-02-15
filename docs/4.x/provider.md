@@ -39,6 +39,7 @@ the `src` and/or `version` parameters are set.
   - `access_context_manager_custom_endpoint` (`string`): Set the `access_context_manager_custom_endpoint` field on the resulting provider block. When `null`, the `access_context_manager_custom_endpoint` field will be omitted from the resulting object.
   - `access_token` (`string`): Set the `access_token` field on the resulting provider block. When `null`, the `access_token` field will be omitted from the resulting object.
   - `active_directory_custom_endpoint` (`string`): Set the `active_directory_custom_endpoint` field on the resulting provider block. When `null`, the `active_directory_custom_endpoint` field will be omitted from the resulting object.
+  - `alloydb_custom_endpoint` (`string`): Set the `alloydb_custom_endpoint` field on the resulting provider block. When `null`, the `alloydb_custom_endpoint` field will be omitted from the resulting object.
   - `apigee_custom_endpoint` (`string`): Set the `apigee_custom_endpoint` field on the resulting provider block. When `null`, the `apigee_custom_endpoint` field will be omitted from the resulting object.
   - `apikeys_custom_endpoint` (`string`): Set the `apikeys_custom_endpoint` field on the resulting provider block. When `null`, the `apikeys_custom_endpoint` field will be omitted from the resulting object.
   - `app_engine_custom_endpoint` (`string`): Set the `app_engine_custom_endpoint` field on the resulting provider block. When `null`, the `app_engine_custom_endpoint` field will be omitted from the resulting object.
@@ -188,6 +189,7 @@ injecting into a complete block.
   - `access_context_manager_custom_endpoint` (`string`): Set the `access_context_manager_custom_endpoint` field on the resulting object. When `null`, the `access_context_manager_custom_endpoint` field will be omitted from the resulting object.
   - `access_token` (`string`): Set the `access_token` field on the resulting object. When `null`, the `access_token` field will be omitted from the resulting object.
   - `active_directory_custom_endpoint` (`string`): Set the `active_directory_custom_endpoint` field on the resulting object. When `null`, the `active_directory_custom_endpoint` field will be omitted from the resulting object.
+  - `alloydb_custom_endpoint` (`string`): Set the `alloydb_custom_endpoint` field on the resulting object. When `null`, the `alloydb_custom_endpoint` field will be omitted from the resulting object.
   - `apigee_custom_endpoint` (`string`): Set the `apigee_custom_endpoint` field on the resulting object. When `null`, the `apigee_custom_endpoint` field will be omitted from the resulting object.
   - `apikeys_custom_endpoint` (`string`): Set the `apikeys_custom_endpoint` field on the resulting object. When `null`, the `apikeys_custom_endpoint` field will be omitted from the resulting object.
   - `app_engine_custom_endpoint` (`string`): Set the `app_engine_custom_endpoint` field on the resulting object. When `null`, the `app_engine_custom_endpoint` field will be omitted from the resulting object.

@@ -75,8 +75,11 @@ they want from the google defined ULA prefix fd20::/20. The input must be a
 valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will 
 fail if the speficied /48 is already in used by another resource. 
 If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. When `null`, the `internal_ipv6_range` field will be omitted from the resulting object.
-  - `mtu` (`number`): Maximum Transmission Unit in bytes. The minimum value for this field is 1460
-and the maximum value is 1500 bytes. When `null`, the `mtu` field will be omitted from the resulting object.
+  - `mtu` (`number`): Maximum Transmission Unit in bytes. The default value is 1460 bytes. 
+The minimum value for this field is 1300 and the maximum value is 8896 bytes (jumbo frames).
+Note that packets larger than 1500 bytes (standard Ethernet) can be subject to TCP-MSS clamping or dropped
+with an ICMP &#39;Fragmentation-Needed&#39; message if the packets are routed to the Internet or other VPCs 
+with varying MTUs. When `null`, the `mtu` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -131,8 +134,11 @@ they want from the google defined ULA prefix fd20::/20. The input must be a
 valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will 
 fail if the speficied /48 is already in used by another resource. 
 If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. When `null`, the `internal_ipv6_range` field will be omitted from the resulting object.
-  - `mtu` (`number`): Maximum Transmission Unit in bytes. The minimum value for this field is 1460
-and the maximum value is 1500 bytes. When `null`, the `mtu` field will be omitted from the resulting object.
+  - `mtu` (`number`): Maximum Transmission Unit in bytes. The default value is 1460 bytes. 
+The minimum value for this field is 1300 and the maximum value is 8896 bytes (jumbo frames).
+Note that packets larger than 1500 bytes (standard Ethernet) can be subject to TCP-MSS clamping or dropped
+with an ICMP &#39;Fragmentation-Needed&#39; message if the packets are routed to the Internet or other VPCs 
+with varying MTUs. When `null`, the `mtu` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
