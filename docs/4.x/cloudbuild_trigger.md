@@ -17,6 +17,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withApprovalConfig()`](#fn-withapprovalconfig)
 * [`fn withApprovalConfigMixin()`](#fn-withapprovalconfigmixin)
+* [`fn withBitbucketServerTriggerConfig()`](#fn-withbitbucketservertriggerconfig)
+* [`fn withBitbucketServerTriggerConfigMixin()`](#fn-withbitbucketservertriggerconfigmixin)
 * [`fn withBuild()`](#fn-withbuild)
 * [`fn withBuildMixin()`](#fn-withbuildmixin)
 * [`fn withDescription()`](#fn-withdescription)
@@ -48,6 +50,12 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withWebhookConfigMixin()`](#fn-withwebhookconfigmixin)
 * [`obj approval_config`](#obj-approval_config)
   * [`fn new()`](#fn-approval_confignew)
+* [`obj bitbucket_server_trigger_config`](#obj-bitbucket_server_trigger_config)
+  * [`fn new()`](#fn-bitbucket_server_trigger_confignew)
+  * [`obj bitbucket_server_trigger_config.pull_request`](#obj-bitbucket_server_trigger_configpull_request)
+    * [`fn new()`](#fn-bitbucket_server_trigger_configpull_requestnew)
+  * [`obj bitbucket_server_trigger_config.push`](#obj-bitbucket_server_trigger_configpush)
+    * [`fn new()`](#fn-bitbucket_server_trigger_configpushnew)
 * [`obj build`](#obj-build)
   * [`fn new()`](#fn-buildnew)
   * [`obj build.artifacts`](#obj-buildartifacts)
@@ -167,6 +175,7 @@ Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL} When `null`,
   - `approval_config` (`list[obj]`): Configuration for manual approval to start a build invocation of this BuildTrigger. 
 Builds created by this trigger will require approval before they execute. 
 Any user with a Cloud Build Approver role for the project can approve a build. When `null`, the `approval_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.approval_config.new](#fn-approval_confignew) constructor.
+  - `bitbucket_server_trigger_config` (`list[obj]`): BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received. When `null`, the `bitbucket_server_trigger_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.bitbucket_server_trigger_config.new](#fn-bitbucket_server_trigger_confignew) constructor.
   - `build` (`list[obj]`): Contents of the build template. Either a filename or build template must be provided. When `null`, the `build` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.new](#fn-buildnew) constructor.
   - `git_file_source` (`list[obj]`): The file source describing the local or remote Build template. When `null`, the `git_file_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.git_file_source.new](#fn-git_file_sourcenew) constructor.
   - `github` (`list[obj]`): Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
@@ -262,6 +271,7 @@ Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL} When `null`,
   - `approval_config` (`list[obj]`): Configuration for manual approval to start a build invocation of this BuildTrigger. 
 Builds created by this trigger will require approval before they execute. 
 Any user with a Cloud Build Approver role for the project can approve a build. When `null`, the `approval_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.approval_config.new](#fn-approval_confignew) constructor.
+  - `bitbucket_server_trigger_config` (`list[obj]`): BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received. When `null`, the `bitbucket_server_trigger_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.bitbucket_server_trigger_config.new](#fn-bitbucket_server_trigger_confignew) constructor.
   - `build` (`list[obj]`): Contents of the build template. Either a filename or build template must be provided. When `null`, the `build` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.new](#fn-buildnew) constructor.
   - `git_file_source` (`list[obj]`): The file source describing the local or remote Build template. When `null`, the `git_file_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.git_file_source.new](#fn-git_file_sourcenew) constructor.
   - `github` (`list[obj]`): Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
@@ -329,6 +339,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `approval_config` field.
+
+
+### fn withBitbucketServerTriggerConfig
+
+```ts
+withBitbucketServerTriggerConfig()
+```
+
+`google.list[obj].withBitbucketServerTriggerConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the bitbucket_server_trigger_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withBitbucketServerTriggerConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `bitbucket_server_trigger_config` field.
+
+
+### fn withBitbucketServerTriggerConfigMixin
+
+```ts
+withBitbucketServerTriggerConfigMixin()
+```
+
+`google.list[obj].withBitbucketServerTriggerConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the bitbucket_server_trigger_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withBitbucketServerTriggerConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `bitbucket_server_trigger_config` field.
 
 
 ### fn withBuild
@@ -856,6 +903,85 @@ and will need to be explicitly approved to start. When `null`, the `approval_req
 
 **Returns**:
   - An attribute object that represents the `approval_config` sub block.
+
+
+## obj bitbucket_server_trigger_config
+
+
+
+### fn bitbucket_server_trigger_config.new
+
+```ts
+new()
+```
+
+
+`google.cloudbuild_trigger.bitbucket_server_trigger_config.new` constructs a new object with attributes and blocks configured for the `bitbucket_server_trigger_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `bitbucket_server_config_resource` (`string`): The Bitbucket server config resource that this trigger config maps to.
+  - `project_key` (`string`): Key of the project that the repo is in. For example: The key for https://mybitbucket.server/projects/TEST/repos/test-repo is &#34;TEST&#34;.
+  - `repo_slug` (`string`): Slug of the repository. A repository slug is a URL-friendly version of a repository name, automatically generated by Bitbucket for use in the URL.
+For example, if the repository name is &#39;test repo&#39;, in the URL it would become &#39;test-repo&#39; as in https://mybitbucket.server/projects/TEST/repos/test-repo.
+  - `pull_request` (`list[obj]`): Filter to match changes in pull requests. When `null`, the `pull_request` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.bitbucket_server_trigger_config.pull_request.new](#fn-bitbucket_server_trigger_configpull_requestnew) constructor.
+  - `push` (`list[obj]`): Filter to match changes in refs like branches, tags. When `null`, the `push` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.bitbucket_server_trigger_config.push.new](#fn-bitbucket_server_trigger_configpushnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `bitbucket_server_trigger_config` sub block.
+
+
+## obj bitbucket_server_trigger_config.pull_request
+
+
+
+### fn bitbucket_server_trigger_config.pull_request.new
+
+```ts
+new()
+```
+
+
+`google.cloudbuild_trigger.bitbucket_server_trigger_config.pull_request.new` constructs a new object with attributes and blocks configured for the `pull_request`
+Terraform sub block.
+
+
+
+**Args**:
+  - `branch` (`string`): Regex of branches to match.
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
+  - `comment_control` (`string`): Configure builds to run whether a repository owner or collaborator need to comment /gcbrun. Possible values: [&#34;COMMENTS_DISABLED&#34;, &#34;COMMENTS_ENABLED&#34;, &#34;COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY&#34;] When `null`, the `comment_control` field will be omitted from the resulting object.
+  - `invert_regex` (`bool`): If true, branches that do NOT match the git_ref will trigger a build. When `null`, the `invert_regex` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `pull_request` sub block.
+
+
+## obj bitbucket_server_trigger_config.push
+
+
+
+### fn bitbucket_server_trigger_config.push.new
+
+```ts
+new()
+```
+
+
+`google.cloudbuild_trigger.bitbucket_server_trigger_config.push.new` constructs a new object with attributes and blocks configured for the `push`
+Terraform sub block.
+
+
+
+**Args**:
+  - `branch` (`string`): Regex of branches to match.  Specify only one of branch or tag. When `null`, the `branch` field will be omitted from the resulting object.
+  - `invert_regex` (`bool`): When true, only trigger a build if the revision regex does NOT match the gitRef regex. When `null`, the `invert_regex` field will be omitted from the resulting object.
+  - `tag` (`string`): Regex of tags to match.  Specify only one of branch or tag. When `null`, the `tag` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `push` sub block.
 
 
 ## obj build
@@ -1389,6 +1515,8 @@ Terraform sub block.
 
 
 **Args**:
+  - `enterprise_config_resource_name` (`string`): The resource name of the github enterprise config that should be applied to this installation.
+For example: &#34;projects/{$projectId}/locations/{$locationId}/githubEnterpriseConfigs/{$configId}&#34; When `null`, the `enterprise_config_resource_name` field will be omitted from the resulting object.
   - `name` (`string`): Name of the repository. For example: The name for
 https://github.com/googlecloudplatform/cloud-builders is &#34;cloud-builders&#34;. When `null`, the `name` field will be omitted from the resulting object.
   - `owner` (`string`): Owner of the repository. For example: The owner for
