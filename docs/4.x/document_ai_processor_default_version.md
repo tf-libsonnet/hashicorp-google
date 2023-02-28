@@ -52,7 +52,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `processor` (`string`): The processor to set the version on.
-  - `version` (`string`): The version to set
+  - `version` (`string`): The version to set. Using &#39;stable&#39; or &#39;rc&#39; will cause the API to return the latest version in that release channel.
+Apply &#39;lifecycle.ignore_changes&#39; to the &#39;version&#39; field to suppress this diff.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.document_ai_processor_default_version.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -78,7 +79,8 @@ injecting into a complete block.
 
 **Args**:
   - `processor` (`string`): The processor to set the version on.
-  - `version` (`string`): The version to set
+  - `version` (`string`): The version to set. Using &#39;stable&#39; or &#39;rc&#39; will cause the API to return the latest version in that release channel.
+Apply &#39;lifecycle.ignore_changes&#39; to the &#39;version&#39; field to suppress this diff.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.document_ai_processor_default_version.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
