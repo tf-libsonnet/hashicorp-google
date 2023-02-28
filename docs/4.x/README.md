@@ -131,6 +131,7 @@ project.
 * [cloud_tasks_queue_iam_binding](cloud_tasks_queue_iam_binding.md)
 * [cloud_tasks_queue_iam_member](cloud_tasks_queue_iam_member.md)
 * [cloud_tasks_queue_iam_policy](cloud_tasks_queue_iam_policy.md)
+* [cloudbuild_bitbucket_server_config](cloudbuild_bitbucket_server_config.md)
 * [cloudbuild_trigger](cloudbuild_trigger.md)
 * [cloudbuild_worker_pool](cloudbuild_worker_pool.md)
 * [clouddeploy_delivery_pipeline](clouddeploy_delivery_pipeline.md)

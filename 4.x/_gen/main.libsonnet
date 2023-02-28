@@ -122,6 +122,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   cloud_tasks_queue_iam_binding: (import 'resources/cloud_tasks_queue_iam_binding.libsonnet'),
   cloud_tasks_queue_iam_member: (import 'resources/cloud_tasks_queue_iam_member.libsonnet'),
   cloud_tasks_queue_iam_policy: (import 'resources/cloud_tasks_queue_iam_policy.libsonnet'),
+  cloudbuild_bitbucket_server_config: (import 'resources/cloudbuild_bitbucket_server_config.libsonnet'),
   cloudbuild_trigger: (import 'resources/cloudbuild_trigger.libsonnet'),
   cloudbuild_worker_pool: (import 'resources/cloudbuild_worker_pool.libsonnet'),
   clouddeploy_delivery_pipeline: (import 'resources/clouddeploy_delivery_pipeline.libsonnet'),

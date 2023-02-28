@@ -143,15 +143,17 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       }),
     },
     kubelet_config:: {
-      '#new':: d.fn(help='\n`google.container_node_pool.node_config.kubelet_config.new` constructs a new object with attributes and blocks configured for the `kubelet_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `cpu_cfs_quota` (`bool`): Enable CPU CFS quota enforcement for containers that specify CPU limits. When `null`, the `cpu_cfs_quota` field will be omitted from the resulting object.\n  - `cpu_cfs_quota_period` (`string`): Set the CPU CFS quota period value &#39;cpu.cfs_period_us&#39;. When `null`, the `cpu_cfs_quota_period` field will be omitted from the resulting object.\n  - `cpu_manager_policy` (`string`): Control the CPU management policy on the node.\n\n**Returns**:\n  - An attribute object that represents the `kubelet_config` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.container_node_pool.node_config.kubelet_config.new` constructs a new object with attributes and blocks configured for the `kubelet_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `cpu_cfs_quota` (`bool`): Enable CPU CFS quota enforcement for containers that specify CPU limits. When `null`, the `cpu_cfs_quota` field will be omitted from the resulting object.\n  - `cpu_cfs_quota_period` (`string`): Set the CPU CFS quota period value &#39;cpu.cfs_period_us&#39;. When `null`, the `cpu_cfs_quota_period` field will be omitted from the resulting object.\n  - `cpu_manager_policy` (`string`): Control the CPU management policy on the node.\n  - `pod_pids_limit` (`number`): Controls the maximum number of processes allowed to run in a pod. When `null`, the `pod_pids_limit` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `kubelet_config` sub block.\n', args=[]),
       new(
         cpu_manager_policy,
         cpu_cfs_quota=null,
-        cpu_cfs_quota_period=null
+        cpu_cfs_quota_period=null,
+        pod_pids_limit=null
       ):: std.prune(a={
         cpu_cfs_quota: cpu_cfs_quota,
         cpu_cfs_quota_period: cpu_cfs_quota_period,
         cpu_manager_policy: cpu_manager_policy,
+        pod_pids_limit: pod_pids_limit,
       }),
     },
     linux_node_config:: {

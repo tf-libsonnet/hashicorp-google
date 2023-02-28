@@ -3041,6 +3041,7 @@ Terraform sub block.
   - `cpu_cfs_quota` (`bool`): Enable CPU CFS quota enforcement for containers that specify CPU limits. When `null`, the `cpu_cfs_quota` field will be omitted from the resulting object.
   - `cpu_cfs_quota_period` (`string`): Set the CPU CFS quota period value &#39;cpu.cfs_period_us&#39;. When `null`, the `cpu_cfs_quota_period` field will be omitted from the resulting object.
   - `cpu_manager_policy` (`string`): Control the CPU management policy on the node.
+  - `pod_pids_limit` (`number`): Controls the maximum number of processes allowed to run in a pod. When `null`, the `pod_pids_limit` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `kubelet_config` sub block.
@@ -3367,6 +3368,7 @@ Terraform sub block.
   - `cpu_cfs_quota` (`bool`): Enable CPU CFS quota enforcement for containers that specify CPU limits. When `null`, the `cpu_cfs_quota` field will be omitted from the resulting object.
   - `cpu_cfs_quota_period` (`string`): Set the CPU CFS quota period value &#39;cpu.cfs_period_us&#39;. When `null`, the `cpu_cfs_quota_period` field will be omitted from the resulting object.
   - `cpu_manager_policy` (`string`): Control the CPU management policy on the node.
+  - `pod_pids_limit` (`number`): Controls the maximum number of processes allowed to run in a pod. When `null`, the `pod_pids_limit` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `kubelet_config` sub block.
