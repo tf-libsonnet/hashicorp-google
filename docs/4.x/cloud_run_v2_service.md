@@ -47,6 +47,8 @@ This package contains functions and utilities for setting up the resource using 
           * [`fn new()`](#fn-templatecontainersenvvalue_sourcesecret_key_refnew)
     * [`obj template.containers.liveness_probe`](#obj-templatecontainersliveness_probe)
       * [`fn new()`](#fn-templatecontainersliveness_probenew)
+      * [`obj template.containers.liveness_probe.grpc`](#obj-templatecontainersliveness_probegrpc)
+        * [`fn new()`](#fn-templatecontainersliveness_probegrpcnew)
       * [`obj template.containers.liveness_probe.http_get`](#obj-templatecontainersliveness_probehttp_get)
         * [`fn new()`](#fn-templatecontainersliveness_probehttp_getnew)
         * [`obj template.containers.liveness_probe.http_get.http_headers`](#obj-templatecontainersliveness_probehttp_gethttp_headers)
@@ -59,6 +61,8 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-templatecontainersresourcesnew)
     * [`obj template.containers.startup_probe`](#obj-templatecontainersstartup_probe)
       * [`fn new()`](#fn-templatecontainersstartup_probenew)
+      * [`obj template.containers.startup_probe.grpc`](#obj-templatecontainersstartup_probegrpc)
+        * [`fn new()`](#fn-templatecontainersstartup_probegrpcnew)
       * [`obj template.containers.startup_probe.http_get`](#obj-templatecontainersstartup_probehttp_get)
         * [`fn new()`](#fn-templatecontainersstartup_probehttp_getnew)
         * [`obj template.containers.startup_probe.http_get.http_headers`](#obj-templatecontainersstartup_probehttp_gethttp_headers)
@@ -664,11 +668,38 @@ Terraform sub block.
   - `initial_delay_seconds` (`number`): Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes When `null`, the `initial_delay_seconds` field will be omitted from the resulting object.
   - `period_seconds` (`number`): How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or equal than timeoutSeconds When `null`, the `period_seconds` field will be omitted from the resulting object.
   - `timeout_seconds` (`number`): Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes When `null`, the `timeout_seconds` field will be omitted from the resulting object.
+  - `grpc` (`list[obj]`): GRPC specifies an action involving a GRPC port. When `null`, the `grpc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.template.containers.liveness_probe.grpc.new](#fn-templatetemplatecontainersgrpcnew) constructor.
   - `http_get` (`list[obj]`): HTTPGet specifies the http request to perform. When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.template.containers.liveness_probe.http_get.new](#fn-templatetemplatecontainershttp_getnew) constructor.
   - `tcp_socket` (`list[obj]`): TCPSocket specifies an action involving a TCP port. This field is not supported in liveness probe currently. When `null`, the `tcp_socket` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.template.containers.liveness_probe.tcp_socket.new](#fn-templatetemplatecontainerstcp_socketnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `liveness_probe` sub block.
+
+
+## obj template.containers.liveness_probe.grpc
+
+
+
+### fn template.containers.liveness_probe.grpc.new
+
+```ts
+new()
+```
+
+
+`google.cloud_run_v2_service.template.containers.liveness_probe.grpc.new` constructs a new object with attributes and blocks configured for the `grpc`
+Terraform sub block.
+
+
+
+**Args**:
+  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
+  - `service` (`string`): The name of the service to place in the gRPC HealthCheckRequest
+(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
+If this is not specified, the default behavior is defined by gRPC. When `null`, the `service` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `grpc` sub block.
 
 
 ## obj template.containers.liveness_probe.http_get
@@ -811,11 +842,38 @@ Terraform sub block.
   - `initial_delay_seconds` (`number`): Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes When `null`, the `initial_delay_seconds` field will be omitted from the resulting object.
   - `period_seconds` (`number`): How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or equal than timeoutSeconds When `null`, the `period_seconds` field will be omitted from the resulting object.
   - `timeout_seconds` (`number`): Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes When `null`, the `timeout_seconds` field will be omitted from the resulting object.
+  - `grpc` (`list[obj]`): GRPC specifies an action involving a GRPC port. When `null`, the `grpc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.template.containers.startup_probe.grpc.new](#fn-templatetemplatecontainersgrpcnew) constructor.
   - `http_get` (`list[obj]`): HTTPGet specifies the http request to perform. Exactly one of HTTPGet or TCPSocket must be specified. When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.template.containers.startup_probe.http_get.new](#fn-templatetemplatecontainershttp_getnew) constructor.
   - `tcp_socket` (`list[obj]`): TCPSocket specifies an action involving a TCP port. Exactly one of HTTPGet or TCPSocket must be specified. When `null`, the `tcp_socket` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.template.containers.startup_probe.tcp_socket.new](#fn-templatetemplatecontainerstcp_socketnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `startup_probe` sub block.
+
+
+## obj template.containers.startup_probe.grpc
+
+
+
+### fn template.containers.startup_probe.grpc.new
+
+```ts
+new()
+```
+
+
+`google.cloud_run_v2_service.template.containers.startup_probe.grpc.new` constructs a new object with attributes and blocks configured for the `grpc`
+Terraform sub block.
+
+
+
+**Args**:
+  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
+  - `service` (`string`): The name of the service to place in the gRPC HealthCheckRequest
+(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
+If this is not specified, the default behavior is defined by gRPC. When `null`, the `service` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `grpc` sub block.
 
 
 ## obj template.containers.startup_probe.http_get

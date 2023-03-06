@@ -353,7 +353,7 @@ Terraform sub block.
 The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour.
 
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `backup_window` field will be omitted from the resulting object.
-  - `enabled` (`bool`): Whether automated automated backups are enabled. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `enabled` (`bool`): Whether automated backups are enabled. When `null`, the `enabled` field will be omitted from the resulting object.
   - `labels` (`obj`): Labels to apply to backups created using this configuration. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location where the backup will be stored. Currently, the only supported option is to store the backup in the same region as the cluster. When `null`, the `location` field will be omitted from the resulting object.
   - `quantity_based_retention` (`list[obj]`): Quantity-based Backup retention policy to retain recent backups. When `null`, the `quantity_based_retention` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.automated_backup_policy.quantity_based_retention.new](#fn-automated_backup_policyquantity_based_retentionnew) constructor.
