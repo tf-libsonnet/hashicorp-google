@@ -19,6 +19,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAuthorization()`](#fn-withauthorization)
 * [`fn withAuthorizationMixin()`](#fn-withauthorizationmixin)
 * [`fn withAzureRegion()`](#fn-withazureregion)
+* [`fn withAzureServicesAuthentication()`](#fn-withazureservicesauthentication)
+* [`fn withAzureServicesAuthenticationMixin()`](#fn-withazureservicesauthenticationmixin)
 * [`fn withClient()`](#fn-withclient)
 * [`fn withControlPlane()`](#fn-withcontrolplane)
 * [`fn withControlPlaneMixin()`](#fn-withcontrolplanemixin)
@@ -37,6 +39,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-authorizationnew)
   * [`obj authorization.admin_users`](#obj-authorizationadmin_users)
     * [`fn new()`](#fn-authorizationadmin_usersnew)
+* [`obj azure_services_authentication`](#obj-azure_services_authentication)
+  * [`fn new()`](#fn-azure_services_authenticationnew)
 * [`obj control_plane`](#obj-control_plane)
   * [`fn new()`](#fn-control_planenew)
   * [`obj control_plane.database_encryption`](#obj-control_planedatabase_encryption)
@@ -89,13 +93,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `annotations` (`obj`): Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
   - `azure_region` (`string`): The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
-  - `client` (`string`): Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+  - `client` (`string`): Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names. When `null`, the `client` field will be omitted from the resulting object.
   - `description` (`string`): Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes. When `null`, the `description` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): The name of this resource.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `resource_group_id` (`string`): The ARM ID of the resource group where the cluster resources are deployed. For example: `/subscriptions/*/resourceGroups/*`
   - `authorization` (`list[obj]`): Configuration related to the cluster RBAC settings. When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.authorization.new](#fn-authorizationnew) constructor.
+  - `azure_services_authentication` (`list[obj]`): Azure authentication configuration for management of Azure resources When `null`, the `azure_services_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.azure_services_authentication.new](#fn-azure_services_authenticationnew) constructor.
   - `control_plane` (`list[obj]`): Configuration related to the cluster control plane. When `null`, the `control_plane` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.control_plane.new](#fn-control_planenew) constructor.
   - `fleet` (`list[obj]`): Fleet configuration. When `null`, the `fleet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.fleet.new](#fn-fleetnew) constructor.
   - `networking` (`list[obj]`): Cluster-wide networking configuration. When `null`, the `networking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.networking.new](#fn-networkingnew) constructor.
@@ -125,13 +130,14 @@ injecting into a complete block.
 **Args**:
   - `annotations` (`obj`): Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
   - `azure_region` (`string`): The Azure region where the cluster runs. Each Google Cloud region supports a subset of nearby Azure regions. You can call to list all supported Azure regions within a given Google Cloud region.
-  - `client` (`string`): Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names.
+  - `client` (`string`): Name of the AzureClient. The `AzureClient` resource must reside on the same GCP project and region as the `AzureCluster`. `AzureClient` names are formatted as `projects/&lt;project-number&gt;/locations/&lt;region&gt;/azureClients/&lt;client-id&gt;`. See Resource Names (https:cloud.google.com/apis/design/resource_names) for more details on Google Cloud resource names. When `null`, the `client` field will be omitted from the resulting object.
   - `description` (`string`): Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes. When `null`, the `description` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): The name of this resource.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `resource_group_id` (`string`): The ARM ID of the resource group where the cluster resources are deployed. For example: `/subscriptions/*/resourceGroups/*`
   - `authorization` (`list[obj]`): Configuration related to the cluster RBAC settings. When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.authorization.new](#fn-authorizationnew) constructor.
+  - `azure_services_authentication` (`list[obj]`): Azure authentication configuration for management of Azure resources When `null`, the `azure_services_authentication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.azure_services_authentication.new](#fn-azure_services_authenticationnew) constructor.
   - `control_plane` (`list[obj]`): Configuration related to the cluster control plane. When `null`, the `control_plane` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.control_plane.new](#fn-control_planenew) constructor.
   - `fleet` (`list[obj]`): Fleet configuration. When `null`, the `fleet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.fleet.new](#fn-fleetnew) constructor.
   - `networking` (`list[obj]`): Cluster-wide networking configuration. When `null`, the `networking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.networking.new](#fn-networkingnew) constructor.
@@ -208,6 +214,43 @@ Terraform resource block to set or update the azure_region field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `azure_region` field.
+
+
+### fn withAzureServicesAuthentication
+
+```ts
+withAzureServicesAuthentication()
+```
+
+`google.list[obj].withAzureServicesAuthentication` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the azure_services_authentication field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withAzureServicesAuthenticationMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `azure_services_authentication` field.
+
+
+### fn withAzureServicesAuthenticationMixin
+
+```ts
+withAzureServicesAuthenticationMixin()
+```
+
+`google.list[obj].withAzureServicesAuthenticationMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the azure_services_authentication field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withAzureServicesAuthentication](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `azure_services_authentication` field.
 
 
 ### fn withClient
@@ -497,6 +540,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `admin_users` sub block.
+
+
+## obj azure_services_authentication
+
+
+
+### fn azure_services_authentication.new
+
+```ts
+new()
+```
+
+
+`google.container_azure_cluster.azure_services_authentication.new` constructs a new object with attributes and blocks configured for the `azure_services_authentication`
+Terraform sub block.
+
+
+
+**Args**:
+  - `application_id` (`string`): The Azure Active Directory Application ID for Authentication configuration.
+  - `tenant_id` (`string`): The Azure Active Directory Tenant ID for Authentication configuration.
+
+**Returns**:
+  - An attribute object that represents the `azure_services_authentication` sub block.
 
 
 ## obj control_plane

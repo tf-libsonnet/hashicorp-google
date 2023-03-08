@@ -431,6 +431,8 @@ Terraform sub block.
 
 
 **Args**:
+  - `sink_agent_pool_name` (`string`): Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used. When `null`, the `sink_agent_pool_name` field will be omitted from the resulting object.
+  - `source_agent_pool_name` (`string`): Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used. When `null`, the `source_agent_pool_name` field will be omitted from the resulting object.
   - `aws_s3_data_source` (`list[obj]`): An AWS S3 data source. When `null`, the `aws_s3_data_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.transfer_spec.aws_s3_data_source.new](#fn-transfer_specaws_s3_data_sourcenew) constructor.
   - `azure_blob_storage_data_source` (`list[obj]`): An Azure Blob Storage data source. When `null`, the `azure_blob_storage_data_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.transfer_spec.azure_blob_storage_data_source.new](#fn-transfer_specazure_blob_storage_data_sourcenew) constructor.
   - `gcs_data_sink` (`list[obj]`): A Google Cloud Storage data sink. When `null`, the `gcs_data_sink` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.transfer_spec.gcs_data_sink.new](#fn-transfer_specgcs_data_sinknew) constructor.

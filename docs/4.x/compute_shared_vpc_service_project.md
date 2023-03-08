@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withDeletionPolicy()`](#fn-withdeletionpolicy)
 * [`fn withHostProject()`](#fn-withhostproject)
 * [`fn withServiceProject()`](#fn-withserviceproject)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -51,6 +52,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `deletion_policy` (`string`): The deletion policy for the shared VPC service. Setting ABANDON allows the resource
+				to be abandoned rather than deleted. Possible values are: &#34;ABANDON&#34;. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `host_project` (`string`): The ID of a host project to associate.
   - `service_project` (`string`): The ID of the project that will serve as a Shared VPC service project.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_shared_vpc_service_project.timeouts.new](#fn-timeoutsnew) constructor.
@@ -77,12 +80,30 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `deletion_policy` (`string`): The deletion policy for the shared VPC service. Setting ABANDON allows the resource
+				to be abandoned rather than deleted. Possible values are: &#34;ABANDON&#34;. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `host_project` (`string`): The ID of a host project to associate.
   - `service_project` (`string`): The ID of the project that will serve as a Shared VPC service project.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_shared_vpc_service_project.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_shared_vpc_service_project` resource into the root Terraform configuration.
+
+
+### fn withDeletionPolicy
+
+```ts
+withDeletionPolicy()
+```
+
+`google.string.withDeletionPolicy` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the deletion_policy field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `deletion_policy` field.
 
 
 ### fn withHostProject
