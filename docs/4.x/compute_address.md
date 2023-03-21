@@ -79,23 +79,24 @@ IPSEC_INTERCONNECT purposes. When `null`, the `network` field will be omitted fr
 specified, it is assumed to be PREMIUM. Possible values: [&#34;PREMIUM&#34;, &#34;STANDARD&#34;] When `null`, the `network_tier` field will be omitted from the resulting object.
   - `prefix_length` (`number`): The prefix length if the resource represents an IP range. When `null`, the `prefix_length` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `purpose` (`string`): The purpose of this resource, which can be one of the following values:
+  - `purpose` (`string`): The purpose of this resource, which can be one of the following values.
 
 * GCE_ENDPOINT for addresses that are used by VM instances, alias IP
-  ranges, internal load balancers, and similar resources.
+ranges, load balancers, and similar resources.
 
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple
-  internal load balancers.
+internal load balancers.
 
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
 
-* IPSEC_INTERCONNECT for addresses created from a private IP range
-  that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
-  Interconnect configuration. These addresses are regional resources.
+* IPSEC_INTERCONNECT for addresses created from a private IP range that
+are reserved for a VLAN attachment in an HA VPN over Cloud Interconnect
+configuration. These addresses are regional resources.
 
-* PRIVATE_SERVICE_CONNECT for a private network address that is used
-to configure Private Service Connect. Only global internal addresses
-can use this purpose.
+* PRIVATE_SERVICE_CONNECT for a private network address that is used to
+configure Private Service Connect. Only global internal addresses can use
+this purpose.
+
 
 This should only be set when using an Internal address. When `null`, the `purpose` field will be omitted from the resulting object.
   - `region` (`string`): The Region in which the created address should reside.
@@ -147,23 +148,24 @@ IPSEC_INTERCONNECT purposes. When `null`, the `network` field will be omitted fr
 specified, it is assumed to be PREMIUM. Possible values: [&#34;PREMIUM&#34;, &#34;STANDARD&#34;] When `null`, the `network_tier` field will be omitted from the resulting object.
   - `prefix_length` (`number`): The prefix length if the resource represents an IP range. When `null`, the `prefix_length` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `purpose` (`string`): The purpose of this resource, which can be one of the following values:
+  - `purpose` (`string`): The purpose of this resource, which can be one of the following values.
 
 * GCE_ENDPOINT for addresses that are used by VM instances, alias IP
-  ranges, internal load balancers, and similar resources.
+ranges, load balancers, and similar resources.
 
 * SHARED_LOADBALANCER_VIP for an address that can be used by multiple
-  internal load balancers.
+internal load balancers.
 
 * VPC_PEERING for addresses that are reserved for VPC peer networks.
 
-* IPSEC_INTERCONNECT for addresses created from a private IP range
-  that are reserved for a VLAN attachment in an IPsec-encrypted Cloud
-  Interconnect configuration. These addresses are regional resources.
+* IPSEC_INTERCONNECT for addresses created from a private IP range that
+are reserved for a VLAN attachment in an HA VPN over Cloud Interconnect
+configuration. These addresses are regional resources.
 
-* PRIVATE_SERVICE_CONNECT for a private network address that is used
-to configure Private Service Connect. Only global internal addresses
-can use this purpose.
+* PRIVATE_SERVICE_CONNECT for a private network address that is used to
+configure Private Service Connect. Only global internal addresses can use
+this purpose.
+
 
 This should only be set when using an Internal address. When `null`, the `purpose` field will be omitted from the resulting object.
   - `region` (`string`): The Region in which the created address should reside.

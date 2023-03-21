@@ -62,10 +62,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
-  - `encrypted_interconnect_router` (`bool`): Field to indicate if a router is dedicated to use with encrypted
-Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
-
-Not currently available publicly. When `null`, the `encrypted_interconnect_router` field will be omitted from the resulting object.
+  - `encrypted_interconnect_router` (`bool`): Indicates if a router is dedicated for use with encrypted VLAN
+attachments (interconnectAttachments). When `null`, the `encrypted_interconnect_router` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39;
@@ -101,10 +99,8 @@ injecting into a complete block.
 
 **Args**:
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
-  - `encrypted_interconnect_router` (`bool`): Field to indicate if a router is dedicated to use with encrypted
-Interconnect Attachment (IPsec-encrypted Cloud Interconnect feature).
-
-Not currently available publicly. When `null`, the `encrypted_interconnect_router` field will be omitted from the resulting object.
+  - `encrypted_interconnect_router` (`bool`): Indicates if a router is dedicated for use with encrypted VLAN
+attachments (interconnectAttachments). When `null`, the `encrypted_interconnect_router` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39;
@@ -319,11 +315,16 @@ This enum field has the one valid value: ALL_SUBNETS When `null`, the `advertise
 private ASN, either 16-bit or 32-bit. The value will be fixed for
 this router resource. All VPN tunnels that link to this router
 will have the same local ASN.
-  - `keepalive_interval` (`number`): The interval in seconds between BGP keepalive messages that are sent to the peer.
-Hold time is three times the interval at which keepalive messages are sent, and the hold time is the
-maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer.
-BGP will use the smaller of either the local hold time value or the peer&#39;s hold time value as the hold time for
-the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20. When `null`, the `keepalive_interval` field will be omitted from the resulting object.
+  - `keepalive_interval` (`number`): The interval in seconds between BGP keepalive messages that are sent
+to the peer. Hold time is three times the interval at which keepalive
+messages are sent, and the hold time is the maximum number of seconds
+allowed to elapse between successive keepalive messages that BGP
+receives from a peer.
+
+BGP will use the smaller of either the local hold time value or the
+peer&#39;s hold time value as the hold time for the BGP connection
+between the two peers. If set, this value must be between 20 and 60.
+The default is 20. When `null`, the `keepalive_interval` field will be omitted from the resulting object.
   - `advertised_ip_ranges` (`list[obj]`): User-specified list of individual IP ranges to advertise in
 custom mode. This field can only be populated if advertiseMode
 is CUSTOM and is advertised to all peers of the router. These IP
