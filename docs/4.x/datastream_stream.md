@@ -928,7 +928,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `dataset_id` (`string`): Dataset ID in the format projects/{project}/datasets/{dataset_id}
+  - `dataset_id` (`string`): Dataset ID in the format projects/{project}/datasets/{dataset_id} or
+{project}:{dataset_id}
 
 **Returns**:
   - An attribute object that represents the `single_target_dataset` sub block.

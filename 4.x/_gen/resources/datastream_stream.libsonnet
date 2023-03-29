@@ -161,7 +161,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         source_hierarchy_datasets: source_hierarchy_datasets,
       }),
       single_target_dataset:: {
-        '#new':: d.fn(help='\n`google.datastream_stream.destination_config.bigquery_destination_config.single_target_dataset.new` constructs a new object with attributes and blocks configured for the `single_target_dataset`\nTerraform sub block.\n\n\n\n**Args**:\n  - `dataset_id` (`string`): Dataset ID in the format projects/{project}/datasets/{dataset_id}\n\n**Returns**:\n  - An attribute object that represents the `single_target_dataset` sub block.\n', args=[]),
+        '#new':: d.fn(help='\n`google.datastream_stream.destination_config.bigquery_destination_config.single_target_dataset.new` constructs a new object with attributes and blocks configured for the `single_target_dataset`\nTerraform sub block.\n\n\n\n**Args**:\n  - `dataset_id` (`string`): Dataset ID in the format projects/{project}/datasets/{dataset_id} or\n{project}:{dataset_id}\n\n**Returns**:\n  - An attribute object that represents the `single_target_dataset` sub block.\n', args=[]),
         new(
           dataset_id
         ):: std.prune(a={

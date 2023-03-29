@@ -174,20 +174,36 @@ The possible values are:
             build times and host selection times. For more information about
             Maglev, refer to https://ai.google/research/pubs/pub44824
 
+* &#39;WEIGHTED_MAGLEV&#39;: Per-instance weighted Load Balancing via health check
+                     reported weights. If set, the Backend Service must
+                     configure a non legacy HTTP-based Health Check, and
+                     health check replies are expected to contain
+                     non-standard HTTP response header field
+                     X-Load-Balancing-Endpoint-Weight to specify the
+                     per-instance weights. If set, Load Balancing is weight
+                     based on the per-instance weights reported in the last
+                     processed health check replies, as long as every
+                     instance either reported a valid weight or had
+                     UNAVAILABLE_WEIGHT. Otherwise, Load Balancing remains
+                     equal-weight.
+
 
 This field is applicable to either:
 
 * A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2,
   and loadBalancingScheme set to INTERNAL_MANAGED.
 * A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+* A regional backend service with loadBalancingScheme set to EXTERNAL (External Network
+  Load Balancing). Only MAGLEV and WEIGHTED_MAGLEV values are possible for External
+  Network Load Balancing. The default is MAGLEV.
 
 
-If session_affinity is not NONE, and this field is not set to MAGLEV or RING_HASH,
-session affinity settings will not take effect.
+If session_affinity is not NONE, and this field is not set to MAGLEV, WEIGHTED_MAGLEV,
+or RING_HASH, session affinity settings will not take effect.
 
 Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced
 by a URL map that is bound to target gRPC proxy that has validate_for_proxyless
-field set to true. Possible values: [&#34;ROUND_ROBIN&#34;, &#34;LEAST_REQUEST&#34;, &#34;RING_HASH&#34;, &#34;RANDOM&#34;, &#34;ORIGINAL_DESTINATION&#34;, &#34;MAGLEV&#34;] When `null`, the `locality_lb_policy` field will be omitted from the resulting object.
+field set to true. Possible values: [&#34;ROUND_ROBIN&#34;, &#34;LEAST_REQUEST&#34;, &#34;RING_HASH&#34;, &#34;RANDOM&#34;, &#34;ORIGINAL_DESTINATION&#34;, &#34;MAGLEV&#34;, &#34;WEIGHTED_MAGLEV&#34;] When `null`, the `locality_lb_policy` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -315,20 +331,36 @@ The possible values are:
             build times and host selection times. For more information about
             Maglev, refer to https://ai.google/research/pubs/pub44824
 
+* &#39;WEIGHTED_MAGLEV&#39;: Per-instance weighted Load Balancing via health check
+                     reported weights. If set, the Backend Service must
+                     configure a non legacy HTTP-based Health Check, and
+                     health check replies are expected to contain
+                     non-standard HTTP response header field
+                     X-Load-Balancing-Endpoint-Weight to specify the
+                     per-instance weights. If set, Load Balancing is weight
+                     based on the per-instance weights reported in the last
+                     processed health check replies, as long as every
+                     instance either reported a valid weight or had
+                     UNAVAILABLE_WEIGHT. Otherwise, Load Balancing remains
+                     equal-weight.
+
 
 This field is applicable to either:
 
 * A regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2,
   and loadBalancingScheme set to INTERNAL_MANAGED.
 * A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+* A regional backend service with loadBalancingScheme set to EXTERNAL (External Network
+  Load Balancing). Only MAGLEV and WEIGHTED_MAGLEV values are possible for External
+  Network Load Balancing. The default is MAGLEV.
 
 
-If session_affinity is not NONE, and this field is not set to MAGLEV or RING_HASH,
-session affinity settings will not take effect.
+If session_affinity is not NONE, and this field is not set to MAGLEV, WEIGHTED_MAGLEV,
+or RING_HASH, session affinity settings will not take effect.
 
 Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced
 by a URL map that is bound to target gRPC proxy that has validate_for_proxyless
-field set to true. Possible values: [&#34;ROUND_ROBIN&#34;, &#34;LEAST_REQUEST&#34;, &#34;RING_HASH&#34;, &#34;RANDOM&#34;, &#34;ORIGINAL_DESTINATION&#34;, &#34;MAGLEV&#34;] When `null`, the `locality_lb_policy` field will be omitted from the resulting object.
+field set to true. Possible values: [&#34;ROUND_ROBIN&#34;, &#34;LEAST_REQUEST&#34;, &#34;RING_HASH&#34;, &#34;RANDOM&#34;, &#34;ORIGINAL_DESTINATION&#34;, &#34;MAGLEV&#34;, &#34;WEIGHTED_MAGLEV&#34;] When `null`, the `locality_lb_policy` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match

@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withCmekSettings()`](#fn-withcmeksettings)
 * [`fn withCmekSettingsMixin()`](#fn-withcmeksettingsmixin)
 * [`fn withDescription()`](#fn-withdescription)
+* [`fn withEnableAnalytics()`](#fn-withenableanalytics)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRetentionDays()`](#fn-withretentiondays)
@@ -56,6 +57,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `bucket_id` (`string`): The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.
   - `description` (`string`): An optional description for this bucket. When `null`, the `description` field will be omitted from the resulting object.
+  - `enable_analytics` (`bool`): Enable log analytics for the bucket. Cannot be disabled once enabled. When `null`, the `enable_analytics` field will be omitted from the resulting object.
   - `location` (`string`): The location of the bucket.
   - `project` (`string`): The parent project that contains the logging bucket.
   - `retention_days` (`number`): Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. When `null`, the `retention_days` field will be omitted from the resulting object.
@@ -85,6 +87,7 @@ injecting into a complete block.
 **Args**:
   - `bucket_id` (`string`): The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.
   - `description` (`string`): An optional description for this bucket. When `null`, the `description` field will be omitted from the resulting object.
+  - `enable_analytics` (`bool`): Enable log analytics for the bucket. Cannot be disabled once enabled. When `null`, the `enable_analytics` field will be omitted from the resulting object.
   - `location` (`string`): The location of the bucket.
   - `project` (`string`): The parent project that contains the logging bucket.
   - `retention_days` (`number`): Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. When `null`, the `retention_days` field will be omitted from the resulting object.
@@ -161,6 +164,22 @@ Terraform resource block to set or update the description field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `description` field.
+
+
+### fn withEnableAnalytics
+
+```ts
+withEnableAnalytics()
+```
+
+`google.bool.withEnableAnalytics` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the enable_analytics field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `enable_analytics` field.
 
 
 ### fn withLocation

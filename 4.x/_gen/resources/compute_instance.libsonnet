@@ -314,11 +314,13 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     },
   },
   scratch_disk:: {
-    '#new':: d.fn(help='\n`google.compute_instance.scratch_disk.new` constructs a new object with attributes and blocks configured for the `scratch_disk`\nTerraform sub block.\n\n\n\n**Args**:\n  - `interface` (`string`): The disk interface used for attaching this disk. One of SCSI or NVME.\n\n**Returns**:\n  - An attribute object that represents the `scratch_disk` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.compute_instance.scratch_disk.new` constructs a new object with attributes and blocks configured for the `scratch_disk`\nTerraform sub block.\n\n\n\n**Args**:\n  - `interface` (`string`): The disk interface used for attaching this disk. One of SCSI or NVME.\n  - `size` (`number`): The size of the disk in gigabytes. One of 375 or 3000. When `null`, the `size` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `scratch_disk` sub block.\n', args=[]),
     new(
-      interface
+      interface,
+      size=null
     ):: std.prune(a={
       interface: interface,
+      size: size,
     }),
   },
   service_account:: {

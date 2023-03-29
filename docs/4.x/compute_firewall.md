@@ -79,7 +79,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 you create the resource. When `null`, the `description` field will be omitted from the resulting object.
   - `destination_ranges` (`list`): If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
-must be expressed in CIDR format. Only IPv4 is supported. When `null`, the `destination_ranges` field will be omitted from the resulting object.
+must be expressed in CIDR format. IPv4 or IPv6 ranges are supported. When `null`, the `destination_ranges` field will be omitted from the resulting object.
   - `direction` (`string`): Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
@@ -112,8 +112,8 @@ sourceTags may be set. If both properties are set, the firewall will
 apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
-apply. Only IPv4 is supported. For INGRESS traffic, one of &#39;source_ranges&#39;,
-&#39;source_tags&#39; or &#39;source_service_accounts&#39; is required. When `null`, the `source_ranges` field will be omitted from the resulting object.
+apply. IPv4 or IPv6 ranges are supported. For INGRESS traffic, one of
+&#39;source_ranges&#39;, &#39;source_tags&#39; or &#39;source_service_accounts&#39; is required. When `null`, the `source_ranges` field will be omitted from the resulting object.
   - `source_service_accounts` (`list`): If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
 list. Source service accounts cannot be used to control traffic to an
@@ -181,7 +181,7 @@ injecting into a complete block.
 you create the resource. When `null`, the `description` field will be omitted from the resulting object.
   - `destination_ranges` (`list`): If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
-must be expressed in CIDR format. Only IPv4 is supported. When `null`, the `destination_ranges` field will be omitted from the resulting object.
+must be expressed in CIDR format. IPv4 or IPv6 ranges are supported. When `null`, the `destination_ranges` field will be omitted from the resulting object.
   - `direction` (`string`): Direction of traffic to which this firewall applies; default is
 INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
@@ -214,8 +214,8 @@ sourceTags may be set. If both properties are set, the firewall will
 apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
-apply. Only IPv4 is supported. For INGRESS traffic, one of &#39;source_ranges&#39;,
-&#39;source_tags&#39; or &#39;source_service_accounts&#39; is required. When `null`, the `source_ranges` field will be omitted from the resulting object.
+apply. IPv4 or IPv6 ranges are supported. For INGRESS traffic, one of
+&#39;source_ranges&#39;, &#39;source_tags&#39; or &#39;source_service_accounts&#39; is required. When `null`, the `source_ranges` field will be omitted from the resulting object.
   - `source_service_accounts` (`list`): If source service accounts are specified, the firewall will apply only
 to traffic originating from an instance with a service account in this
 list. Source service accounts cannot be used to control traffic to an

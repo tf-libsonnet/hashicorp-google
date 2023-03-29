@@ -641,7 +641,7 @@ Terraform sub block.
 **Args**:
   - `request_headers_to_add` (`list[obj]`): Describes a header to add.
 
-You may add a maximum of 5 request headers. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.header_action.request_headers_to_add.new](#fn-origin_override_actionorigin_override_actionrequest_headers_to_addnew) constructor.
+You may add a maximum of 25 request headers. When `null`, the `request_headers_to_add` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_services_edge_cache_origin.origin_override_action.header_action.request_headers_to_add.new](#fn-origin_override_actionorigin_override_actionrequest_headers_to_addnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `header_action` sub block.
