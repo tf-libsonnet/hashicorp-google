@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAccess()`](#fn-withaccess)
 * [`fn withAccessMixin()`](#fn-withaccessmixin)
 * [`fn withDatasetId()`](#fn-withdatasetid)
+* [`fn withDefaultCollation()`](#fn-withdefaultcollation)
 * [`fn withDefaultEncryptionConfiguration()`](#fn-withdefaultencryptionconfiguration)
 * [`fn withDefaultEncryptionConfigurationMixin()`](#fn-withdefaultencryptionconfigurationmixin)
 * [`fn withDefaultPartitionExpirationMs()`](#fn-withdefaultpartitionexpirationms)
@@ -25,6 +26,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDeleteContentsOnDestroy()`](#fn-withdeletecontentsondestroy)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withFriendlyName()`](#fn-withfriendlyname)
+* [`fn withIsCaseInsensitive()`](#fn-withiscaseinsensitive)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMaxTimeTravelHours()`](#fn-withmaxtimetravelhours)
@@ -78,6 +80,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `dataset_id` (`string`): A unique ID for this dataset, without the project name. The ID
 must contain only letters (a-z, A-Z), numbers (0-9), or
 underscores (_). The maximum length is 1,024 characters.
+  - `default_collation` (`string`): Defines the default collation specification of future tables created
+in the dataset. If a table is created in this dataset without table-level
+default collation, then the table inherits the dataset default collation,
+which is applied to the string fields that do not have explicit collation
+specified. A change to this field affects only tables created afterwards,
+and does not alter the existing tables.
+
+The following values are supported:
+- &#39;und:ci&#39;: undetermined locale, case insensitive.
+- &#39;&#39;: empty string. Default to case-sensitive behavior. When `null`, the `default_collation` field will be omitted from the resulting object.
   - `default_partition_expiration_ms` (`number`): The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
 
@@ -111,6 +123,9 @@ dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present. When `null`, the `delete_contents_on_destroy` field will be omitted from the resulting object.
   - `description` (`string`): A user-friendly description of the dataset When `null`, the `description` field will be omitted from the resulting object.
   - `friendly_name` (`string`): A descriptive name for the dataset When `null`, the `friendly_name` field will be omitted from the resulting object.
+  - `is_case_insensitive` (`bool`): TRUE if the dataset and its table names are case-insensitive, otherwise FALSE.
+By default, this is FALSE, which means the dataset and its table names are
+case-sensitive. This field does not affect routine references. When `null`, the `is_case_insensitive` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels associated with this dataset. You can use these to
 organize and group your datasets When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The geographic location where the dataset should reside.
@@ -158,6 +173,16 @@ injecting into a complete block.
   - `dataset_id` (`string`): A unique ID for this dataset, without the project name. The ID
 must contain only letters (a-z, A-Z), numbers (0-9), or
 underscores (_). The maximum length is 1,024 characters.
+  - `default_collation` (`string`): Defines the default collation specification of future tables created
+in the dataset. If a table is created in this dataset without table-level
+default collation, then the table inherits the dataset default collation,
+which is applied to the string fields that do not have explicit collation
+specified. A change to this field affects only tables created afterwards,
+and does not alter the existing tables.
+
+The following values are supported:
+- &#39;und:ci&#39;: undetermined locale, case insensitive.
+- &#39;&#39;: empty string. Default to case-sensitive behavior. When `null`, the `default_collation` field will be omitted from the resulting object.
   - `default_partition_expiration_ms` (`number`): The default partition expiration for all partitioned tables in
 the dataset, in milliseconds.
 
@@ -191,6 +216,9 @@ dataset when destroying the resource; otherwise,
 destroying the resource will fail if tables are present. When `null`, the `delete_contents_on_destroy` field will be omitted from the resulting object.
   - `description` (`string`): A user-friendly description of the dataset When `null`, the `description` field will be omitted from the resulting object.
   - `friendly_name` (`string`): A descriptive name for the dataset When `null`, the `friendly_name` field will be omitted from the resulting object.
+  - `is_case_insensitive` (`bool`): TRUE if the dataset and its table names are case-insensitive, otherwise FALSE.
+By default, this is FALSE, which means the dataset and its table names are
+case-sensitive. This field does not affect routine references. When `null`, the `is_case_insensitive` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels associated with this dataset. You can use these to
 organize and group your datasets When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The geographic location where the dataset should reside.
@@ -268,6 +296,22 @@ Terraform resource block to set or update the dataset_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `dataset_id` field.
+
+
+### fn withDefaultCollation
+
+```ts
+withDefaultCollation()
+```
+
+`google.string.withDefaultCollation` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the default_collation field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `default_collation` field.
 
 
 ### fn withDefaultEncryptionConfiguration
@@ -385,6 +429,22 @@ Terraform resource block to set or update the friendly_name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `friendly_name` field.
+
+
+### fn withIsCaseInsensitive
+
+```ts
+withIsCaseInsensitive()
+```
+
+`google.bool.withIsCaseInsensitive` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the is_case_insensitive field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `is_case_insensitive` field.
 
 
 ### fn withLabels

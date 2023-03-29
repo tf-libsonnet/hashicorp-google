@@ -1254,6 +1254,7 @@ Terraform sub block.
 
 **Args**:
   - `interface` (`string`): The disk interface used for attaching this disk. One of SCSI or NVME.
+  - `size` (`number`): The size of the disk in gigabytes. One of 375 or 3000. When `null`, the `size` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `scratch_disk` sub block.

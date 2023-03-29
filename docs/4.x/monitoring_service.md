@@ -68,7 +68,7 @@ length of 63 characters, and must be less than 128 bytes in size. Up to 64
 label entries may be stored. For labels which do not have a semantic value,
 the empty string may be supplied for the label value. When `null`, the `user_labels` field will be omitted from the resulting object.
   - `basic_service` (`list[obj]`): A well-known service type, defined by its service type and service labels.
-Valid values are described at
+Valid values of service types and services labels are described at
 https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-svc-w-basic-sli When `null`, the `basic_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_service.basic_service.new](#fn-basic_servicenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_service.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -105,7 +105,7 @@ length of 63 characters, and must be less than 128 bytes in size. Up to 64
 label entries may be stored. For labels which do not have a semantic value,
 the empty string may be supplied for the label value. When `null`, the `user_labels` field will be omitted from the resulting object.
   - `basic_service` (`list[obj]`): A well-known service type, defined by its service type and service labels.
-Valid values are described at
+Valid values of service types and services labels are described at
 https://cloud.google.com/stackdriver/docs/solutions/slo-monitoring/api/api-structures#basic-svc-w-basic-sli When `null`, the `basic_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_service.basic_service.new](#fn-basic_servicenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_service.timeouts.new](#fn-timeoutsnew) constructor.
 

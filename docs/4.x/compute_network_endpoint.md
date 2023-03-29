@@ -62,7 +62,9 @@ The instance must be in the same zone of network endpoint group. When `null`, th
 to a VM in GCE (either the primary IP or as part of an aliased IP
 range).
   - `network_endpoint_group` (`string`): The network endpoint group this endpoint is part of.
-  - `port` (`number`): Port number of network endpoint. When `null`, the `port` field will be omitted from the resulting object.
+  - `port` (`number`): Port number of network endpoint.
+**Note** &#39;port&#39; is required unless the Network Endpoint Group is created
+with the type of &#39;GCE_VM_IP&#39; When `null`, the `port` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `zone` (`string`): Zone where the containing network endpoint group is located. When `null`, the `zone` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
@@ -96,7 +98,9 @@ The instance must be in the same zone of network endpoint group. When `null`, th
 to a VM in GCE (either the primary IP or as part of an aliased IP
 range).
   - `network_endpoint_group` (`string`): The network endpoint group this endpoint is part of.
-  - `port` (`number`): Port number of network endpoint. When `null`, the `port` field will be omitted from the resulting object.
+  - `port` (`number`): Port number of network endpoint.
+**Note** &#39;port&#39; is required unless the Network Endpoint Group is created
+with the type of &#39;GCE_VM_IP&#39; When `null`, the `port` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `zone` (`string`): Zone where the containing network endpoint group is located. When `null`, the `zone` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_endpoint.timeouts.new](#fn-timeoutsnew) constructor.

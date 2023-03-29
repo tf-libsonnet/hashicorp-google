@@ -853,7 +853,7 @@ Terraform sub block.
   - `boot` (`bool`): Indicates that this is a boot disk. When `null`, the `boot` field will be omitted from the resulting object.
   - `device_name` (`string`): A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance. If not specified, the server chooses a default device name to apply to this disk. When `null`, the `device_name` field will be omitted from the resulting object.
   - `disk_name` (`string`): Name of the disk. When not provided, this defaults to the name of the instance. When `null`, the `disk_name` field will be omitted from the resulting object.
-  - `disk_size_gb` (`number`): The size of the image in gigabytes. If not specified, it will inherit the size of its base image. For SCRATCH disks, the size must be exactly 375GB. When `null`, the `disk_size_gb` field will be omitted from the resulting object.
+  - `disk_size_gb` (`number`): The size of the image in gigabytes. If not specified, it will inherit the size of its base image. For SCRATCH disks, the size must be one of 375 or 3000 GB, with a default of 375 GB. When `null`, the `disk_size_gb` field will be omitted from the resulting object.
   - `disk_type` (`string`): The Google Compute Engine disk type. Such as &#34;pd-ssd&#34;, &#34;local-ssd&#34;, &#34;pd-balanced&#34; or &#34;pd-standard&#34;. When `null`, the `disk_type` field will be omitted from the resulting object.
   - `interface` (`string`): Specifies the disk interface to use for attaching this disk. When `null`, the `interface` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs to assign to disks, When `null`, the `labels` field will be omitted from the resulting object.

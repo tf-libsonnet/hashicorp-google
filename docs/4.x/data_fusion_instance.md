@@ -15,6 +15,8 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAccelerators()`](#fn-withaccelerators)
+* [`fn withAcceleratorsMixin()`](#fn-withacceleratorsmixin)
 * [`fn withCryptoKeyConfig()`](#fn-withcryptokeyconfig)
 * [`fn withCryptoKeyConfigMixin()`](#fn-withcryptokeyconfigmixin)
 * [`fn withDataprocServiceAccount()`](#fn-withdataprocserviceaccount)
@@ -38,6 +40,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withType()`](#fn-withtype)
 * [`fn withVersion()`](#fn-withversion)
 * [`fn withZone()`](#fn-withzone)
+* [`obj accelerators`](#obj-accelerators)
+  * [`fn new()`](#fn-acceleratorsnew)
 * [`obj crypto_key_config`](#obj-crypto_key_config)
   * [`fn new()`](#fn-crypto_key_confignew)
 * [`obj event_publish_config`](#obj-event_publish_config)
@@ -103,6 +107,10 @@ with restrictive capabilities. This is to help enterprises design and develop th
 pipelines at low cost. Possible values: [&#34;BASIC&#34;, &#34;ENTERPRISE&#34;, &#34;DEVELOPER&#34;]
   - `version` (`string`): Current version of the Data Fusion. When `null`, the `version` field will be omitted from the resulting object.
   - `zone` (`string`): Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances use this field. When `null`, the `zone` field will be omitted from the resulting object.
+  - `accelerators` (`list[obj]`): List of accelerators enabled for this CDF instance.
+
+If accelerators are enabled it is possible a permadiff will be created with the Options field. 
+Users will need to either manually update their state file to include these diffed options, or include the field in a [lifecycle ignore changes block](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes). When `null`, the `accelerators` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.accelerators.new](#fn-acceleratorsnew) constructor.
   - `crypto_key_config` (`list[obj]`): The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK) feature. When `null`, the `crypto_key_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.crypto_key_config.new](#fn-crypto_key_confignew) constructor.
   - `event_publish_config` (`list[obj]`): Option to enable and pass metadata for event publishing. When `null`, the `event_publish_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.event_publish_config.new](#fn-event_publish_confignew) constructor.
   - `network_config` (`list[obj]`): Network configuration options. These are required when a private Data Fusion instance is to be created. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.network_config.new](#fn-network_confignew) constructor.
@@ -157,6 +165,10 @@ with restrictive capabilities. This is to help enterprises design and develop th
 pipelines at low cost. Possible values: [&#34;BASIC&#34;, &#34;ENTERPRISE&#34;, &#34;DEVELOPER&#34;]
   - `version` (`string`): Current version of the Data Fusion. When `null`, the `version` field will be omitted from the resulting object.
   - `zone` (`string`): Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances use this field. When `null`, the `zone` field will be omitted from the resulting object.
+  - `accelerators` (`list[obj]`): List of accelerators enabled for this CDF instance.
+
+If accelerators are enabled it is possible a permadiff will be created with the Options field. 
+Users will need to either manually update their state file to include these diffed options, or include the field in a [lifecycle ignore changes block](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes). When `null`, the `accelerators` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.accelerators.new](#fn-acceleratorsnew) constructor.
   - `crypto_key_config` (`list[obj]`): The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK) feature. When `null`, the `crypto_key_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.crypto_key_config.new](#fn-crypto_key_confignew) constructor.
   - `event_publish_config` (`list[obj]`): Option to enable and pass metadata for event publishing. When `null`, the `event_publish_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.event_publish_config.new](#fn-event_publish_confignew) constructor.
   - `network_config` (`list[obj]`): Network configuration options. These are required when a private Data Fusion instance is to be created. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.network_config.new](#fn-network_confignew) constructor.
@@ -164,6 +176,43 @@ pipelines at low cost. Possible values: [&#34;BASIC&#34;, &#34;ENTERPRISE&#34;, 
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_fusion_instance` resource into the root Terraform configuration.
+
+
+### fn withAccelerators
+
+```ts
+withAccelerators()
+```
+
+`google.list[obj].withAccelerators` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the accelerators field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withAcceleratorsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `accelerators` field.
+
+
+### fn withAcceleratorsMixin
+
+```ts
+withAcceleratorsMixin()
+```
+
+`google.list[obj].withAcceleratorsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the accelerators field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withAccelerators](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `accelerators` field.
 
 
 ### fn withCryptoKeyConfig
@@ -551,6 +600,30 @@ Terraform resource block to set or update the zone field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `zone` field.
+
+
+## obj accelerators
+
+
+
+### fn accelerators.new
+
+```ts
+new()
+```
+
+
+`google.data_fusion_instance.accelerators.new` constructs a new object with attributes and blocks configured for the `accelerators`
+Terraform sub block.
+
+
+
+**Args**:
+  - `accelerator_type` (`string`): The type of an accelator for a CDF instance. Possible values: [&#34;CDC&#34;, &#34;HEALTHCARE&#34;, &#34;CCAI_INSIGHTS&#34;]
+  - `state` (`string`): The type of an accelator for a CDF instance. Possible values: [&#34;ENABLED&#34;, &#34;DISABLED&#34;]
+
+**Returns**:
+  - An attribute object that represents the `accelerators` sub block.
 
 
 ## obj crypto_key_config

@@ -54,6 +54,8 @@ This package contains functions and utilities for setting up the resource using 
         * [`fn new()`](#fn-configx509_configkey_usageextended_key_usagenew)
       * [`obj config.x509_config.key_usage.unknown_extended_key_usages`](#obj-configx509_configkey_usageunknown_extended_key_usages)
         * [`fn new()`](#fn-configx509_configkey_usageunknown_extended_key_usagesnew)
+    * [`obj config.x509_config.name_constraints`](#obj-configx509_configname_constraints)
+      * [`fn new()`](#fn-configx509_configname_constraintsnew)
     * [`obj config.x509_config.policy_ids`](#obj-configx509_configpolicy_ids)
       * [`fn new()`](#fn-configx509_configpolicy_idsnew)
 * [`obj timeouts`](#obj-timeouts)
@@ -526,6 +528,7 @@ Terraform sub block.
   - `additional_extensions` (`list[obj]`): Specifies an X.509 extension, which may be used in different parts of X.509 objects like certificates, CSRs, and CRLs. When `null`, the `additional_extensions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate.config.x509_config.additional_extensions.new](#fn-configconfigadditional_extensionsnew) constructor.
   - `ca_options` (`list[obj]`): Describes values that are relevant in a CA certificate. When `null`, the `ca_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate.config.x509_config.ca_options.new](#fn-configconfigca_optionsnew) constructor.
   - `key_usage` (`list[obj]`): Indicates the intended use for keys that correspond to a certificate. When `null`, the `key_usage` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate.config.x509_config.key_usage.new](#fn-configconfigkey_usagenew) constructor.
+  - `name_constraints` (`list[obj]`): Describes the X.509 name constraints extension. When `null`, the `name_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate.config.x509_config.name_constraints.new](#fn-configconfigname_constraintsnew) constructor.
   - `policy_ids` (`list[obj]`): Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4. When `null`, the `policy_ids` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.privateca_certificate.config.x509_config.policy_ids.new](#fn-configconfigpolicy_idsnew) constructor.
 
 **Returns**:
@@ -716,6 +719,61 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `unknown_extended_key_usages` sub block.
+
+
+## obj config.x509_config.name_constraints
+
+
+
+### fn config.x509_config.name_constraints.new
+
+```ts
+new()
+```
+
+
+`google.privateca_certificate.config.x509_config.name_constraints.new` constructs a new object with attributes and blocks configured for the `name_constraints`
+Terraform sub block.
+
+
+
+**Args**:
+  - `critical` (`bool`): Indicates whether or not the name constraints are marked critical.
+  - `excluded_dns_names` (`list`): Contains excluded DNS names. Any DNS name that can be
+constructed by simply adding zero or more labels to
+the left-hand side of the name satisfies the name constraint.
+For example, &#39;example.com&#39;, &#39;www.example.com&#39;, &#39;www.sub.example.com&#39;
+would satisfy &#39;example.com&#39; while &#39;example1.com&#39; does not. When `null`, the `excluded_dns_names` field will be omitted from the resulting object.
+  - `excluded_email_addresses` (`list`): Contains the excluded email addresses. The value can be a particular
+email address, a hostname to indicate all email addresses on that host or
+a domain with a leading period (e.g. &#39;.example.com&#39;) to indicate
+all email addresses in that domain. When `null`, the `excluded_email_addresses` field will be omitted from the resulting object.
+  - `excluded_ip_ranges` (`list`): Contains the excluded IP ranges. For IPv4 addresses, the ranges
+are expressed using CIDR notation as specified in RFC 4632.
+For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
+addresses. When `null`, the `excluded_ip_ranges` field will be omitted from the resulting object.
+  - `excluded_uris` (`list`): Contains the excluded URIs that apply to the host part of the name.
+The value can be a hostname or a domain with a
+leading period (like &#39;.example.com&#39;) When `null`, the `excluded_uris` field will be omitted from the resulting object.
+  - `permitted_dns_names` (`list`): Contains permitted DNS names. Any DNS name that can be
+constructed by simply adding zero or more labels to
+the left-hand side of the name satisfies the name constraint.
+For example, &#39;example.com&#39;, &#39;www.example.com&#39;, &#39;www.sub.example.com&#39;
+would satisfy &#39;example.com&#39; while &#39;example1.com&#39; does not. When `null`, the `permitted_dns_names` field will be omitted from the resulting object.
+  - `permitted_email_addresses` (`list`): Contains the permitted email addresses. The value can be a particular
+email address, a hostname to indicate all email addresses on that host or
+a domain with a leading period (e.g. &#39;.example.com&#39;) to indicate
+all email addresses in that domain. When `null`, the `permitted_email_addresses` field will be omitted from the resulting object.
+  - `permitted_ip_ranges` (`list`): Contains the permitted IP ranges. For IPv4 addresses, the ranges
+are expressed using CIDR notation as specified in RFC 4632.
+For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
+addresses. When `null`, the `permitted_ip_ranges` field will be omitted from the resulting object.
+  - `permitted_uris` (`list`): Contains the permitted URIs that apply to the host part of the name.
+The value can be a hostname or a domain with a
+leading period (like &#39;.example.com&#39;) When `null`, the `permitted_uris` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `name_constraints` sub block.
 
 
 ## obj config.x509_config.policy_ids
