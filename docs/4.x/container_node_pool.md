@@ -47,6 +47,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-network_confignew)
 * [`obj node_config`](#obj-node_config)
   * [`fn new()`](#fn-node_confignew)
+  * [`obj node_config.advanced_machine_features`](#obj-node_configadvanced_machine_features)
+    * [`fn new()`](#fn-node_configadvanced_machine_featuresnew)
   * [`obj node_config.gcfs_config`](#obj-node_configgcfs_config)
     * [`fn new()`](#fn-node_configgcfs_confignew)
   * [`obj node_config.gvnic`](#obj-node_configgvnic)
@@ -696,6 +698,7 @@ Terraform sub block.
   - `spot` (`bool`): Whether the nodes are created as spot VM instances. When `null`, the `spot` field will be omitted from the resulting object.
   - `tags` (`list`): The list of instance tags applied to all nodes. When `null`, the `tags` field will be omitted from the resulting object.
   - `taint` (`list`): List of Kubernetes taints to be applied to each node. When `null`, the `taint` field will be omitted from the resulting object.
+  - `advanced_machine_features` (`list[obj]`): Specifies options for controlling advanced machine features. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.advanced_machine_features.new](#fn-node_configadvanced_machine_featuresnew) constructor.
   - `gcfs_config` (`list[obj]`): GCFS configuration for this node. When `null`, the `gcfs_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.gcfs_config.new](#fn-node_configgcfs_confignew) constructor.
   - `gvnic` (`list[obj]`): Enable or disable gvnic in the node pool. When `null`, the `gvnic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.gvnic.new](#fn-node_configgvnicnew) constructor.
   - `kubelet_config` (`list[obj]`): Node kubelet configs. When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.kubelet_config.new](#fn-node_configkubelet_confignew) constructor.
@@ -707,6 +710,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `node_config` sub block.
+
+
+## obj node_config.advanced_machine_features
+
+
+
+### fn node_config.advanced_machine_features.new
+
+```ts
+new()
+```
+
+
+`google.container_node_pool.node_config.advanced_machine_features.new` constructs a new object with attributes and blocks configured for the `advanced_machine_features`
+Terraform sub block.
+
+
+
+**Args**:
+  - `threads_per_core` (`number`): The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
+
+**Returns**:
+  - An attribute object that represents the `advanced_machine_features` sub block.
 
 
 ## obj node_config.gcfs_config

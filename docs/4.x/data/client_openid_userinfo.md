@@ -6,7 +6,10 @@ permalink: /data/client_openid_userinfo/
 
 `client_openid_userinfo` represents the `google_client_openid_userinfo` Terraform data source.
 
+Get OpenID userinfo about the credentials used with the Google provider, specifically the email.
+This datasource enables you to export the email of the account you&#39;ve authenticated the provider with; this can be used alongside data.google_client_config&#39;s access_token to perform OpenID Connect authentication with GKE and configure an RBAC role for the email used.
 
+~&gt; This resource will only work as expected if the provider is configured to use the https://www.googleapis.com/auth/userinfo.email scope! You will receive an error otherwise. The provider uses this scope by default.
 
 This package contains functions and utilities for setting up the data source using Jsonnet code.
 

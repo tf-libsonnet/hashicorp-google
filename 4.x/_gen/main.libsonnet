@@ -32,6 +32,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   apigee_flowhook: (import 'resources/apigee_flowhook.libsonnet'),
   apigee_instance: (import 'resources/apigee_instance.libsonnet'),
   apigee_instance_attachment: (import 'resources/apigee_instance_attachment.libsonnet'),
+  apigee_keystores_aliases_key_cert_file: (import 'resources/apigee_keystores_aliases_key_cert_file.libsonnet'),
   apigee_nat_address: (import 'resources/apigee_nat_address.libsonnet'),
   apigee_organization: (import 'resources/apigee_organization.libsonnet'),
   apigee_sharedflow: (import 'resources/apigee_sharedflow.libsonnet'),

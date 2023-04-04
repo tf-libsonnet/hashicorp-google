@@ -105,7 +105,7 @@ is also set.
 (For legacy support, if &#39;template.metadata.name&#39; is unset in state while
 this field is set to false, the revision name will still autogenerate.) When `null`, the `autogenerate_revision_name` field will be omitted from the resulting object.
   - `location` (`string`): The location of the cloud run instance. eg us-central1
-  - `name` (`string`): Name must be unique within a namespace, within a Cloud Run region.
+  - `name` (`string`): Name must be unique within a Google Cloud project and region.
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
 More info: http://kubernetes.io/docs/user-guide/identifiers#names
@@ -154,7 +154,7 @@ is also set.
 (For legacy support, if &#39;template.metadata.name&#39; is unset in state while
 this field is set to false, the revision name will still autogenerate.) When `null`, the `autogenerate_revision_name` field will be omitted from the resulting object.
   - `location` (`string`): The location of the cloud run instance. eg us-central1
-  - `name` (`string`): Name must be unique within a namespace, within a Cloud Run region.
+  - `name` (`string`): Name must be unique within a Google Cloud project and region.
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
 More info: http://kubernetes.io/docs/user-guide/identifiers#names
@@ -421,8 +421,7 @@ Cloud Run (fully managed) uses the following annotation keys to configure featur
   for the Service. For example, &#39;&#34;run.googleapis.com/ingress&#34; = &#34;all&#34;&#39;. When `null`, the `annotations` field will be omitted from the resulting object.
   - `labels` (`obj`): Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
-and routes.
-More info: http://kubernetes.io/docs/user-guide/labels When `null`, the `labels` field will be omitted from the resulting object.
+and routes. When `null`, the `labels` field will be omitted from the resulting object.
   - `namespace` (`string`): In Cloud Run the namespace must be equal to either the
 project ID or project number. When `null`, the `namespace` field will be omitted from the resulting object.
 
@@ -478,20 +477,16 @@ Terraform sub block.
 
 **Args**:
   - `annotations` (`obj`): Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
+may be set by external tools to store and retrieve arbitrary metadata.
 
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field. When `null`, the `annotations` field will be omitted from the resulting object.
   - `labels` (`obj`): Map of string keys and values that can be used to organize and categorize
-(scope and select) objects. May match selectors of replication controllers
-and routes.
-More info: http://kubernetes.io/docs/user-guide/labels When `null`, the `labels` field will be omitted from the resulting object.
-  - `name` (`string`): Name must be unique within a namespace, within a Cloud Run region.
+(scope and select) objects. When `null`, the `labels` field will be omitted from the resulting object.
+  - `name` (`string`): Name must be unique within a Google Cloud project and region.
 Is required when creating resources. Name is primarily intended
-for creation idempotence and configuration definition. Cannot be updated.
-More info: http://kubernetes.io/docs/user-guide/identifiers#names When `null`, the `name` field will be omitted from the resulting object.
+for creation idempotence and configuration definition. Cannot be updated. When `null`, the `name` field will be omitted from the resulting object.
   - `namespace` (`string`): In Cloud Run the namespace must be equal to either the
 project ID or project number. It will default to the resource&#39;s project. When `null`, the `namespace` field will be omitted from the resulting object.
 
@@ -529,9 +524,7 @@ will use the project&#39;s default service account. When `null`, the `service_ac
   - `timeout_seconds` (`number`): TimeoutSeconds holds the max duration the instance is allowed for responding to a request. When `null`, the `timeout_seconds` field will be omitted from the resulting object.
   - `containers` (`list[obj]`): Container defines the unit of execution for this Revision.
 In the context of a Revision, we disallow a number of the fields of
-this Container, including: name, ports, and volumeMounts.
-The runtime contract is documented here:
-https://github.com/knative/serving/blob/main/docs/runtime-contract.md When `null`, the `containers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.new](#fn-templatetemplatecontainersnew) constructor.
+this Container, including: name, ports, and volumeMounts. When `null`, the `containers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.new](#fn-templatetemplatecontainersnew) constructor.
   - `volumes` (`list[obj]`): Volume represents a named volume in a container. When `null`, the `volumes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.volumes.new](#fn-templatetemplatevolumesnew) constructor.
 
 **Returns**:
@@ -556,26 +549,11 @@ Terraform sub block.
 
 **Args**:
   - `args` (`list`): Arguments to the entrypoint.
-The docker image&#39;s CMD is used if this is not provided.
-Variable references $(VAR_NAME) are expanded using the container&#39;s
-environment. If a variable cannot be resolved, the reference in the input
-string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-regardless of whether the variable exists or not.
-More info:
-https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell When `null`, the `args` field will be omitted from the resulting object.
+The docker image&#39;s CMD is used if this is not provided. When `null`, the `args` field will be omitted from the resulting object.
   - `command` (`list`): Entrypoint array. Not executed within a shell.
-The docker image&#39;s ENTRYPOINT is used if this is not provided.
-Variable references $(VAR_NAME) are expanded using the container&#39;s
-environment. If a variable cannot be resolved, the reference in the input
-string will be unchanged. The $(VAR_NAME) syntax can be escaped with a
-double $$, ie: $$(VAR_NAME). Escaped references will never be expanded,
-regardless of whether the variable exists or not.
-More info:
-https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell When `null`, the `command` field will be omitted from the resulting object.
+The docker image&#39;s ENTRYPOINT is used if this is not provided. When `null`, the `command` field will be omitted from the resulting object.
   - `image` (`string`): Docker image name. This is most often a reference to a container located
 in the container registry, such as gcr.io/cloudrun/hello
-More info: https://kubernetes.io/docs/concepts/containers/images
   - `working_dir` (`string`): Container&#39;s working directory.
 If not specified, the container runtime&#39;s default will be used, which
 might be configured in the container image. When `null`, the `working_dir` field will be omitted from the resulting object.
@@ -585,12 +563,8 @@ All invalid keys will be reported as an event when the container is starting.
 When a key exists in multiple sources, the value associated with the last source will
 take precedence. Values defined by an Env with a duplicate key will take
 precedence. When `null`, the `env_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.new](#fn-templatetemplatespecenv_fromnew) constructor.
-  - `ports` (`list[obj]`): List of open ports in the container.
-More Info:
-https://cloud.google.com/run/docs/reference/rest/v1/RevisionSpec#ContainerPort When `null`, the `ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.ports.new](#fn-templatetemplatespecportsnew) constructor.
-  - `resources` (`list[obj]`): Compute Resources required by this container. Used to set values such as max memory
-More info:
-https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.resources.new](#fn-templatetemplatespecresourcesnew) constructor.
+  - `ports` (`list[obj]`): List of open ports in the container. When `null`, the `ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.ports.new](#fn-templatetemplatespecportsnew) constructor.
+  - `resources` (`list[obj]`): Compute Resources required by this container. Used to set values such as max memory When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.resources.new](#fn-templatetemplatespecresourcesnew) constructor.
   - `volume_mounts` (`list[obj]`): Volume to mount into the container&#39;s filesystem.
 Only supports SecretVolumeSources. When `null`, the `volume_mounts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.volume_mounts.new](#fn-templatetemplatespecvolume_mountsnew) constructor.
 
@@ -616,14 +590,7 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): Name of the environment variable. When `null`, the `name` field will be omitted from the resulting object.
-  - `value` (`string`): Variable references $(VAR_NAME) are expanded
-using the previous defined environment variables in the container and
-any route environment variables. If a variable cannot be resolved,
-the reference in the input string will be unchanged. The $(VAR_NAME)
-syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped
-references will never be expanded, regardless of whether the variable
-exists or not.
-Defaults to &#34;&#34;. When `null`, the `value` field will be omitted from the resulting object.
+  - `value` (`string`): Defaults to &#34;&#34;. When `null`, the `value` field will be omitted from the resulting object.
   - `value_from` (`list[obj]`): Source for the environment variable&#39;s value. Only supports secret_key_ref. When `null`, the `value_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env.value_from.new](#fn-templatetemplatespeccontainersvalue_fromnew) constructor.
 
 **Returns**:
@@ -749,8 +716,6 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): Name of the referent.
-More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 
 **Returns**:
   - An attribute object that represents the `local_object_reference` sub block.
@@ -798,8 +763,6 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): Name of the referent.
-More info:
-https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 
 **Returns**:
   - An attribute object that represents the `local_object_reference` sub block.

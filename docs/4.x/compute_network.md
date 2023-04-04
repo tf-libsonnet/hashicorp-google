@@ -22,6 +22,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withInternalIpv6Range()`](#fn-withinternalipv6range)
 * [`fn withMtu()`](#fn-withmtu)
 * [`fn withName()`](#fn-withname)
+* [`fn withNetworkFirewallPolicyEnforcementOrder()`](#fn-withnetworkfirewallpolicyenforcementorder)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRoutingMode()`](#fn-withroutingmode)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -87,6 +88,7 @@ the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
+  - `network_firewall_policy_enforcement_order` (`string`): Set the order that Firewall Rules and Firewall Policies are evaluated. Needs to be either &#39;AFTER_CLASSIC_FIREWALL&#39; or &#39;BEFORE_CLASSIC_FIREWALL&#39; Default &#39;AFTER_CLASSIC_FIREWALL&#39; Default value: &#34;AFTER_CLASSIC_FIREWALL&#34; Possible values: [&#34;BEFORE_CLASSIC_FIREWALL&#34;, &#34;AFTER_CLASSIC_FIREWALL&#34;] When `null`, the `network_firewall_policy_enforcement_order` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `routing_mode` (`string`): The network-wide routing mode to use. If set to &#39;REGIONAL&#39;, this
 network&#39;s cloud routers will only advertise routes with subnetworks
@@ -146,6 +148,7 @@ the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
+  - `network_firewall_policy_enforcement_order` (`string`): Set the order that Firewall Rules and Firewall Policies are evaluated. Needs to be either &#39;AFTER_CLASSIC_FIREWALL&#39; or &#39;BEFORE_CLASSIC_FIREWALL&#39; Default &#39;AFTER_CLASSIC_FIREWALL&#39; Default value: &#34;AFTER_CLASSIC_FIREWALL&#34; Possible values: [&#34;BEFORE_CLASSIC_FIREWALL&#34;, &#34;AFTER_CLASSIC_FIREWALL&#34;] When `null`, the `network_firewall_policy_enforcement_order` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `routing_mode` (`string`): The network-wide routing mode to use. If set to &#39;REGIONAL&#39;, this
 network&#39;s cloud routers will only advertise routes with subnetworks
@@ -268,6 +271,22 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withNetworkFirewallPolicyEnforcementOrder
+
+```ts
+withNetworkFirewallPolicyEnforcementOrder()
+```
+
+`google.string.withNetworkFirewallPolicyEnforcementOrder` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the network_firewall_policy_enforcement_order field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `network_firewall_policy_enforcement_order` field.
 
 
 ### fn withProject

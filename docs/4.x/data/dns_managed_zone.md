@@ -6,7 +6,7 @@ permalink: /data/dns_managed_zone/
 
 `dns_managed_zone` represents the `google_dns_managed_zone` Terraform data source.
 
-
+Provides access to a zone&#39;s attributes within Google Cloud DNS
 
 This package contains functions and utilities for setting up the data source using Jsonnet code.
 
@@ -47,8 +47,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `name` (`string`): Set the `name` field on the resulting data source block.
-  - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
+  - `name` (`string`): A unique name for the resource.
+  - `project` (`string`): The ID of the project for the Google Cloud. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -72,8 +72,8 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `name` (`string`): Set the `name` field on the resulting object.
-  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `name` (`string`): A unique name for the resource.
+  - `project` (`string`): The ID of the project for the Google Cloud. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `dns_managed_zone` data source into the root Terraform configuration.
