@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `concurrency_mode` (`string`): The concurrency control mode to use for this database. Possible values: [&#34;OPTIMISTIC&#34;, &#34;PESSIMISTIC&#34;, &#34;OPTIMISTIC_WITH_ENTITY_GROUPS&#34;] When `null`, the `concurrency_mode` field will be omitted from the resulting object.
   - `location_id` (`string`): The location of the database. Available databases are listed at
 https://cloud.google.com/firestore/docs/locations.
-  - `name` (`string`): Required. The ID to use for the database, which will become the final
+  - `name` (`string`): The ID to use for the database, which will become the final
 component of the database&#39;s resource name. This value should be 4-63
 characters. Valid characters are /[a-z][0-9]-/ with first character
 a letter and the last a letter or a number. Must not be
@@ -97,7 +97,7 @@ injecting into a complete block.
   - `concurrency_mode` (`string`): The concurrency control mode to use for this database. Possible values: [&#34;OPTIMISTIC&#34;, &#34;PESSIMISTIC&#34;, &#34;OPTIMISTIC_WITH_ENTITY_GROUPS&#34;] When `null`, the `concurrency_mode` field will be omitted from the resulting object.
   - `location_id` (`string`): The location of the database. Available databases are listed at
 https://cloud.google.com/firestore/docs/locations.
-  - `name` (`string`): Required. The ID to use for the database, which will become the final
+  - `name` (`string`): The ID to use for the database, which will become the final
 component of the database&#39;s resource name. This value should be 4-63
 characters. Valid characters are /[a-z][0-9]-/ with first character
 a letter and the last a letter or a number. Must not be

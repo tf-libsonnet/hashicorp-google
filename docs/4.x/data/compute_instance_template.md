@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the data source usi
 * [`fn withMostRecent()`](#fn-withmostrecent)
 * [`fn withName()`](#fn-withname)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withSelfLinkUnique()`](#fn-withselflinkunique)
 
 ## Fields
 
@@ -53,6 +54,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `most_recent` (`bool`): Set the `most_recent` field on the resulting data source block. When `null`, the `most_recent` field will be omitted from the resulting object.
   - `name` (`string`): The name of the instance template. If you leave this blank, Terraform will auto-generate a unique name. When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
+  - `self_link_unique` (`string`): Set the `self_link_unique` field on the resulting data source block. When `null`, the `self_link_unique` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new data source into the root Terraform configuration.
@@ -80,6 +82,7 @@ injecting into a complete block.
   - `most_recent` (`bool`): Set the `most_recent` field on the resulting object. When `null`, the `most_recent` field will be omitted from the resulting object.
   - `name` (`string`): The name of the instance template. If you leave this blank, Terraform will auto-generate a unique name. When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
+  - `self_link_unique` (`string`): Set the `self_link_unique` field on the resulting object. When `null`, the `self_link_unique` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `compute_instance_template` data source into the root Terraform configuration.
@@ -147,3 +150,19 @@ Terraform data source block to set or update the project field.
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `project` field.
+
+
+### fn withSelfLinkUnique
+
+```ts
+withSelfLinkUnique()
+```
+
+`google.string.withSelfLinkUnique` constructs a mixin object that can be merged into the `string`
+Terraform data source block to set or update the self_link_unique field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `self_link_unique` field.

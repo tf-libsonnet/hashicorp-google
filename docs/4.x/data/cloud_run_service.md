@@ -49,7 +49,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
   - `location` (`string`): The location of the cloud run instance. eg us-central1
-  - `name` (`string`): Name must be unique within a namespace, within a Cloud Run region.
+  - `name` (`string`): Name must be unique within a Google Cloud project and region.
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
 More info: http://kubernetes.io/docs/user-guide/identifiers#names
@@ -78,7 +78,7 @@ injecting into a complete block.
 
 **Args**:
   - `location` (`string`): The location of the cloud run instance. eg us-central1
-  - `name` (`string`): Name must be unique within a namespace, within a Cloud Run region.
+  - `name` (`string`): Name must be unique within a Google Cloud project and region.
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
 More info: http://kubernetes.io/docs/user-guide/identifiers#names

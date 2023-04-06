@@ -64,7 +64,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 IPv4 is supported. An address may only be specified for INTERNAL
 address types. The IP address must be inside the specified subnetwork,
 if any. Set by the API if undefined. When `null`, the `address` field will be omitted from the resulting object.
-  - `address_type` (`string`): The type of address to reserve. Default value: &#34;EXTERNAL&#34; Possible values: [&#34;INTERNAL&#34;, &#34;EXTERNAL&#34;] When `null`, the `address_type` field will be omitted from the resulting object.
+  - `address_type` (`string`): The type of address to reserve.
+Note: if you set this argument&#39;s value as &#39;INTERNAL&#39; you need to leave the &#39;network_tier&#39; argument unset in that resource block. Default value: &#34;EXTERNAL&#34; Possible values: [&#34;INTERNAL&#34;, &#34;EXTERNAL&#34;] When `null`, the `address_type` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
@@ -76,7 +77,8 @@ except the last character, which cannot be a dash.
 can only be used with INTERNAL type with the VPC_PEERING and
 IPSEC_INTERCONNECT purposes. When `null`, the `network` field will be omitted from the resulting object.
   - `network_tier` (`string`): The networking tier used for configuring this address. If this field is not
-specified, it is assumed to be PREMIUM. Possible values: [&#34;PREMIUM&#34;, &#34;STANDARD&#34;] When `null`, the `network_tier` field will be omitted from the resulting object.
+specified, it is assumed to be PREMIUM.
+This argument should not be used when configuring Internal addresses, because [network tier cannot be set for internal traffic; it&#39;s always Premium](https://cloud.google.com/network-tiers/docs/overview). Possible values: [&#34;PREMIUM&#34;, &#34;STANDARD&#34;] When `null`, the `network_tier` field will be omitted from the resulting object.
   - `prefix_length` (`number`): The prefix length if the resource represents an IP range. When `null`, the `prefix_length` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `purpose` (`string`): The purpose of this resource, which can be one of the following values.
@@ -133,7 +135,8 @@ injecting into a complete block.
 IPv4 is supported. An address may only be specified for INTERNAL
 address types. The IP address must be inside the specified subnetwork,
 if any. Set by the API if undefined. When `null`, the `address` field will be omitted from the resulting object.
-  - `address_type` (`string`): The type of address to reserve. Default value: &#34;EXTERNAL&#34; Possible values: [&#34;INTERNAL&#34;, &#34;EXTERNAL&#34;] When `null`, the `address_type` field will be omitted from the resulting object.
+  - `address_type` (`string`): The type of address to reserve.
+Note: if you set this argument&#39;s value as &#39;INTERNAL&#39; you need to leave the &#39;network_tier&#39; argument unset in that resource block. Default value: &#34;EXTERNAL&#34; Possible values: [&#34;INTERNAL&#34;, &#34;EXTERNAL&#34;] When `null`, the `address_type` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
@@ -145,7 +148,8 @@ except the last character, which cannot be a dash.
 can only be used with INTERNAL type with the VPC_PEERING and
 IPSEC_INTERCONNECT purposes. When `null`, the `network` field will be omitted from the resulting object.
   - `network_tier` (`string`): The networking tier used for configuring this address. If this field is not
-specified, it is assumed to be PREMIUM. Possible values: [&#34;PREMIUM&#34;, &#34;STANDARD&#34;] When `null`, the `network_tier` field will be omitted from the resulting object.
+specified, it is assumed to be PREMIUM.
+This argument should not be used when configuring Internal addresses, because [network tier cannot be set for internal traffic; it&#39;s always Premium](https://cloud.google.com/network-tiers/docs/overview). Possible values: [&#34;PREMIUM&#34;, &#34;STANDARD&#34;] When `null`, the `network_tier` field will be omitted from the resulting object.
   - `prefix_length` (`number`): The prefix length if the resource represents an IP range. When `null`, the `prefix_length` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `purpose` (`string`): The purpose of this resource, which can be one of the following values.
