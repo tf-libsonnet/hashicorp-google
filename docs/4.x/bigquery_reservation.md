@@ -15,7 +15,10 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAutoscale()`](#fn-withautoscale)
+* [`fn withAutoscaleMixin()`](#fn-withautoscalemixin)
 * [`fn withConcurrency()`](#fn-withconcurrency)
+* [`fn withEdition()`](#fn-withedition)
 * [`fn withIgnoreIdleSlots()`](#fn-withignoreidleslots)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMultiRegionAuxiliary()`](#fn-withmultiregionauxiliary)
@@ -24,6 +27,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withSlotCapacity()`](#fn-withslotcapacity)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj autoscale`](#obj-autoscale)
+  * [`fn new()`](#fn-autoscalenew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -57,6 +62,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `concurrency` (`number`): Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size. When `null`, the `concurrency` field will be omitted from the resulting object.
+  - `edition` (`string`): The edition type. Valid values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS When `null`, the `edition` field will be omitted from the resulting object.
   - `ignore_idle_slots` (`bool`): If false, any query using this reservation will use idle slots from other reservations within
 the same admin project. If true, a query using this reservation will execute with the slot
 capacity specified above at most. When `null`, the `ignore_idle_slots` field will be omitted from the resulting object.
@@ -68,6 +74,7 @@ If set to true, this reservation is placed in the organization&#39;s secondary r
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `slot_capacity` (`number`): Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+  - `autoscale` (`list[obj]`): The configuration parameters for the auto scaling feature. When `null`, the `autoscale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_reservation.autoscale.new](#fn-autoscalenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_reservation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -93,6 +100,7 @@ injecting into a complete block.
 
 **Args**:
   - `concurrency` (`number`): Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size. When `null`, the `concurrency` field will be omitted from the resulting object.
+  - `edition` (`string`): The edition type. Valid values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS When `null`, the `edition` field will be omitted from the resulting object.
   - `ignore_idle_slots` (`bool`): If false, any query using this reservation will use idle slots from other reservations within
 the same admin project. If true, a query using this reservation will execute with the slot
 capacity specified above at most. When `null`, the `ignore_idle_slots` field will be omitted from the resulting object.
@@ -104,10 +112,48 @@ If set to true, this reservation is placed in the organization&#39;s secondary r
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `slot_capacity` (`number`): Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the
 unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
+  - `autoscale` (`list[obj]`): The configuration parameters for the auto scaling feature. When `null`, the `autoscale` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_reservation.autoscale.new](#fn-autoscalenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_reservation.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigquery_reservation` resource into the root Terraform configuration.
+
+
+### fn withAutoscale
+
+```ts
+withAutoscale()
+```
+
+`google.list[obj].withAutoscale` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the autoscale field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withAutoscaleMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `autoscale` field.
+
+
+### fn withAutoscaleMixin
+
+```ts
+withAutoscaleMixin()
+```
+
+`google.list[obj].withAutoscaleMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the autoscale field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withAutoscale](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `autoscale` field.
 
 
 ### fn withConcurrency
@@ -124,6 +170,22 @@ Terraform resource block to set or update the concurrency field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`number`): The value to set for the `concurrency` field.
+
+
+### fn withEdition
+
+```ts
+withEdition()
+```
+
+`google.string.withEdition` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the edition field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `edition` field.
 
 
 ### fn withIgnoreIdleSlots
@@ -256,6 +318,29 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj autoscale
+
+
+
+### fn autoscale.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_reservation.autoscale.new` constructs a new object with attributes and blocks configured for the `autoscale`
+Terraform sub block.
+
+
+
+**Args**:
+  - `max_slots` (`number`): Number of slots to be scaled when needed. When `null`, the `max_slots` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `autoscale` sub block.
 
 
 ## obj timeouts

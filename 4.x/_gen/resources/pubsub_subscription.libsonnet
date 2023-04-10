@@ -27,7 +27,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   expiration_policy:: {
-    '#new':: d.fn(help='\n`google.pubsub_subscription.expiration_policy.new` constructs a new object with attributes and blocks configured for the `expiration_policy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `ttl` (`string`): Specifies the &#34;time-to-live&#34; duration for an associated resource. The\nresource expires if it is not active for a period of ttl.\nIf ttl is not set, the associated resource never expires.\nA duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.\nExample - &#34;3.5s&#34;.\n\n**Returns**:\n  - An attribute object that represents the `expiration_policy` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.pubsub_subscription.expiration_policy.new` constructs a new object with attributes and blocks configured for the `expiration_policy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `ttl` (`string`): Specifies the &#34;time-to-live&#34; duration for an associated resource. The\nresource expires if it is not active for a period of ttl.\nIf ttl is set to &#34;&#34;, the associated resource never expires.\nA duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;.\nExample - &#34;3.5s&#34;.\n\n**Returns**:\n  - An attribute object that represents the `expiration_policy` sub block.\n', args=[]),
     new(
       ttl
     ):: std.prune(a={

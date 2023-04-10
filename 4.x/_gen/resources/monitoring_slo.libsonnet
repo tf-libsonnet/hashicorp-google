@@ -108,7 +108,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         range: range,
       }),
       range:: {
-        '#new':: d.fn(help='\n`google.monitoring_slo.request_based_sli.distribution_cut.range.new` constructs a new object with attributes and blocks configured for the `range`\nTerraform sub block.\n\n\n\n**Args**:\n  - `max` (`number`): max value for the range (inclusive). If not given,\nwill be set to &#34;infinity&#34;, defining an open range\n&#34;&gt;= range.min&#34; When `null`, the `max` field will be omitted from the resulting object.\n  - `min` (`number`): Min value for the range (inclusive). If not given,\nwill be set to &#34;-infinity&#34;, defining an open range\n&#34;&lt; range.max&#34; When `null`, the `min` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `range` sub block.\n', args=[]),
+        '#new':: d.fn(help='\n`google.monitoring_slo.request_based_sli.distribution_cut.range.new` constructs a new object with attributes and blocks configured for the `range`\nTerraform sub block.\n\n\n\n**Args**:\n  - `max` (`number`): max value for the range (inclusive). If not given,\nwill be set to 0 When `null`, the `max` field will be omitted from the resulting object.\n  - `min` (`number`): Min value for the range (inclusive). If not given,\nwill be set to 0 When `null`, the `min` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `range` sub block.\n', args=[]),
         new(
           max=null,
           min=null
@@ -206,7 +206,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
             range: range,
           }),
           range:: {
-            '#new':: d.fn(help='\n`google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.performance.distribution_cut.range.new` constructs a new object with attributes and blocks configured for the `range`\nTerraform sub block.\n\n\n\n**Args**:\n  - `max` (`number`): max value for the range (inclusive). If not given,\nwill be set to &#34;infinity&#34;, defining an open range\n&#34;&gt;= range.min&#34; When `null`, the `max` field will be omitted from the resulting object.\n  - `min` (`number`): Min value for the range (inclusive). If not given,\nwill be set to &#34;-infinity&#34;, defining an open range\n&#34;&lt; range.max&#34; When `null`, the `min` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `range` sub block.\n', args=[]),
+            '#new':: d.fn(help='\n`google.monitoring_slo.windows_based_sli.good_total_ratio_threshold.performance.distribution_cut.range.new` constructs a new object with attributes and blocks configured for the `range`\nTerraform sub block.\n\n\n\n**Args**:\n  - `max` (`number`): max value for the range (inclusive). If not given,\nwill be set to 0 When `null`, the `max` field will be omitted from the resulting object.\n  - `min` (`number`): Min value for the range (inclusive). If not given,\nwill be set to 0 When `null`, the `min` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `range` sub block.\n', args=[]),
             new(
               max=null,
               min=null

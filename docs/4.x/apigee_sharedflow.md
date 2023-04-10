@@ -56,8 +56,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `config_bundle` (`string`): A path to the config bundle zip you want to upload. Must be defined if content is not.
   - `detect_md5hash` (`string`): A hash of local config bundle in string, user needs to use a Terraform Hash function of their choice. A change in hash will trigger an update. When `null`, the `detect_md5hash` field will be omitted from the resulting object.
   - `name` (`string`): The ID of the shared flow.
-  - `org_id` (`string`): The Apigee Organization associated with the Apigee instance,
-in the format &#39;organizations/{{org_name}}&#39;.
+  - `org_id` (`string`): The Apigee Organization name associated with the Apigee instance.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_sharedflow.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -85,8 +84,7 @@ injecting into a complete block.
   - `config_bundle` (`string`): A path to the config bundle zip you want to upload. Must be defined if content is not.
   - `detect_md5hash` (`string`): A hash of local config bundle in string, user needs to use a Terraform Hash function of their choice. A change in hash will trigger an update. When `null`, the `detect_md5hash` field will be omitted from the resulting object.
   - `name` (`string`): The ID of the shared flow.
-  - `org_id` (`string`): The Apigee Organization associated with the Apigee instance,
-in the format &#39;organizations/{{org_name}}&#39;.
+  - `org_id` (`string`): The Apigee Organization name associated with the Apigee instance.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_sharedflow.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
