@@ -666,11 +666,9 @@ Terraform sub block.
 
 **Args**:
   - `max` (`number`): max value for the range (inclusive). If not given,
-will be set to &#34;infinity&#34;, defining an open range
-&#34;&gt;= range.min&#34; When `null`, the `max` field will be omitted from the resulting object.
+will be set to 0 When `null`, the `max` field will be omitted from the resulting object.
   - `min` (`number`): Min value for the range (inclusive). If not given,
-will be set to &#34;-infinity&#34;, defining an open range
-&#34;&lt; range.max&#34; When `null`, the `min` field will be omitted from the resulting object.
+will be set to 0 When `null`, the `min` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `range` sub block.
@@ -996,11 +994,9 @@ Terraform sub block.
 
 **Args**:
   - `max` (`number`): max value for the range (inclusive). If not given,
-will be set to &#34;infinity&#34;, defining an open range
-&#34;&gt;= range.min&#34; When `null`, the `max` field will be omitted from the resulting object.
+will be set to 0 When `null`, the `max` field will be omitted from the resulting object.
   - `min` (`number`): Min value for the range (inclusive). If not given,
-will be set to &#34;-infinity&#34;, defining an open range
-&#34;&lt; range.max&#34; When `null`, the `min` field will be omitted from the resulting object.
+will be set to 0 When `null`, the `min` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `range` sub block.

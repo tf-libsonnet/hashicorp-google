@@ -42,6 +42,8 @@ project.
 * [apigee_instance](apigee_instance.md)
 * [apigee_instance_attachment](apigee_instance_attachment.md)
 * [apigee_keystores_aliases_key_cert_file](apigee_keystores_aliases_key_cert_file.md)
+* [apigee_keystores_aliases_pkcs12](apigee_keystores_aliases_pkcs12.md)
+* [apigee_keystores_aliases_self_signed_cert](apigee_keystores_aliases_self_signed_cert.md)
 * [apigee_nat_address](apigee_nat_address.md)
 * [apigee_organization](apigee_organization.md)
 * [apigee_sharedflow](apigee_sharedflow.md)

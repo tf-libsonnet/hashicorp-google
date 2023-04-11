@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withBucketOptions()`](#fn-withbucketoptions)
 * [`fn withBucketOptionsMixin()`](#fn-withbucketoptionsmixin)
 * [`fn withDescription()`](#fn-withdescription)
+* [`fn withDisabled()`](#fn-withdisabled)
 * [`fn withFilter()`](#fn-withfilter)
 * [`fn withLabelExtractors()`](#fn-withlabelextractors)
 * [`fn withMetricDescriptor()`](#fn-withmetricdescriptor)
@@ -76,6 +77,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 are supported. The bucket has to be in the same project as the metric. When `null`, the `bucket_name` field will be omitted from the resulting object.
   - `description` (`string`): A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters. When `null`, the `description` field will be omitted from the resulting object.
+  - `disabled` (`bool`): If set to True, then this metric is disabled and it does not generate any points. When `null`, the `disabled` field will be omitted from the resulting object.
   - `filter` (`string`): An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
   - `label_extractors` (`obj`): A map from a label key string to an extractor expression which is used to extract data from a log
@@ -129,6 +131,7 @@ injecting into a complete block.
 are supported. The bucket has to be in the same project as the metric. When `null`, the `bucket_name` field will be omitted from the resulting object.
   - `description` (`string`): A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters. When `null`, the `description` field will be omitted from the resulting object.
+  - `disabled` (`bool`): If set to True, then this metric is disabled and it does not generate any points. When `null`, the `disabled` field will be omitted from the resulting object.
   - `filter` (`string`): An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
   - `label_extractors` (`obj`): A map from a label key string to an extractor expression which is used to extract data from a log
@@ -227,6 +230,22 @@ Terraform resource block to set or update the description field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `description` field.
+
+
+### fn withDisabled
+
+```ts
+withDisabled()
+```
+
+`google.bool.withDisabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the disabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `disabled` field.
 
 
 ### fn withFilter

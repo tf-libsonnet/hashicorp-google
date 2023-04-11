@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withCapacityCommitmentId()`](#fn-withcapacitycommitmentid)
+* [`fn withEdition()`](#fn-withedition)
 * [`fn withEnforceSingleAdminProjectPerOrg()`](#fn-withenforcesingleadminprojectperorg)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withPlan()`](#fn-withplan)
@@ -60,12 +61,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 empty. This field must only contain lower case alphanumeric characters or dashes. The first and last character
 cannot be a dash. Max length is 64 characters. NOTE: this ID won&#39;t be kept if the capacity commitment is split
 or merged. When `null`, the `capacity_commitment_id` field will be omitted from the resulting object.
+  - `edition` (`string`): The edition type. Valid values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS When `null`, the `edition` field will be omitted from the resulting object.
   - `enforce_single_admin_project_per_org` (`string`): If true, fail the request if another project in the organization has a capacity commitment. When `null`, the `enforce_single_admin_project_per_org` field will be omitted from the resulting object.
   - `location` (`string`): The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US. When `null`, the `location` field will be omitted from the resulting object.
-  - `plan` (`string`): Capacity commitment plan. Valid values are FLEX, TRIAL, MONTHLY, ANNUAL
+  - `plan` (`string`): Capacity commitment plan. Valid values are at https://cloud.google.com/bigquery/docs/reference/reservations/rpc/google.cloud.bigquery.reservation.v1#commitmentplan
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `renewal_plan` (`string`): The plan this capacity commitment is converted to after commitmentEndTime passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL and TRIAL commitments. When `null`, the `renewal_plan` field will be omitted from the resulting object.
+  - `renewal_plan` (`string`): The plan this capacity commitment is converted to after commitmentEndTime passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable some commitment plans. When `null`, the `renewal_plan` field will be omitted from the resulting object.
   - `slot_count` (`number`): Number of slots in this commitment.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_capacity_commitment.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -95,12 +97,13 @@ injecting into a complete block.
 empty. This field must only contain lower case alphanumeric characters or dashes. The first and last character
 cannot be a dash. Max length is 64 characters. NOTE: this ID won&#39;t be kept if the capacity commitment is split
 or merged. When `null`, the `capacity_commitment_id` field will be omitted from the resulting object.
+  - `edition` (`string`): The edition type. Valid values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS When `null`, the `edition` field will be omitted from the resulting object.
   - `enforce_single_admin_project_per_org` (`string`): If true, fail the request if another project in the organization has a capacity commitment. When `null`, the `enforce_single_admin_project_per_org` field will be omitted from the resulting object.
   - `location` (`string`): The geographic location where the transfer config should reside.
 Examples: US, EU, asia-northeast1. The default value is US. When `null`, the `location` field will be omitted from the resulting object.
-  - `plan` (`string`): Capacity commitment plan. Valid values are FLEX, TRIAL, MONTHLY, ANNUAL
+  - `plan` (`string`): Capacity commitment plan. Valid values are at https://cloud.google.com/bigquery/docs/reference/reservations/rpc/google.cloud.bigquery.reservation.v1#commitmentplan
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `renewal_plan` (`string`): The plan this capacity commitment is converted to after commitmentEndTime passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL and TRIAL commitments. When `null`, the `renewal_plan` field will be omitted from the resulting object.
+  - `renewal_plan` (`string`): The plan this capacity commitment is converted to after commitmentEndTime passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable some commitment plans. When `null`, the `renewal_plan` field will be omitted from the resulting object.
   - `slot_count` (`number`): Number of slots in this commitment.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_capacity_commitment.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -122,6 +125,22 @@ Terraform resource block to set or update the capacity_commitment_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `capacity_commitment_id` field.
+
+
+### fn withEdition
+
+```ts
+withEdition()
+```
+
+`google.string.withEdition` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the edition field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `edition` field.
 
 
 ### fn withEnforceSingleAdminProjectPerOrg

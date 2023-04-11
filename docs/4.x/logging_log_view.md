@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): Describes this view. When `null`, the `description` field will be omitted from the resulting object.
   - `filter` (`string`): Filter that restricts which log entries in a bucket are visible in this view. Filters are restricted to be a logical AND of ==/!= of any of the following: - originating project/folder/organization/billing account. - resource type - log id For example: SOURCE(&#34;projects/myproject&#34;) AND resource.type = &#34;gce_instance&#34; AND LOG_ID(&#34;stdout&#34;) When `null`, the `filter` field will be omitted from the resulting object.
   - `location` (`string`): The location of the resource. The supported locations are: global, us-central1, us-east1, us-west1, asia-east1, europe-west1. When `null`, the `location` field will be omitted from the resulting object.
-  - `name` (`string`): The resource name of the view. For example: `projects/my-project/locations/global/buckets/my-bucket/views/my-view`
+  - `name` (`string`): The resource name of the view. For example: \&#39;projects/my-project/locations/global/buckets/my-bucket/views/my-view\&#39;
   - `parent` (`string`): The parent of the resource. When `null`, the `parent` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_log_view.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -89,7 +89,7 @@ injecting into a complete block.
   - `description` (`string`): Describes this view. When `null`, the `description` field will be omitted from the resulting object.
   - `filter` (`string`): Filter that restricts which log entries in a bucket are visible in this view. Filters are restricted to be a logical AND of ==/!= of any of the following: - originating project/folder/organization/billing account. - resource type - log id For example: SOURCE(&#34;projects/myproject&#34;) AND resource.type = &#34;gce_instance&#34; AND LOG_ID(&#34;stdout&#34;) When `null`, the `filter` field will be omitted from the resulting object.
   - `location` (`string`): The location of the resource. The supported locations are: global, us-central1, us-east1, us-west1, asia-east1, europe-west1. When `null`, the `location` field will be omitted from the resulting object.
-  - `name` (`string`): The resource name of the view. For example: `projects/my-project/locations/global/buckets/my-bucket/views/my-view`
+  - `name` (`string`): The resource name of the view. For example: \&#39;projects/my-project/locations/global/buckets/my-bucket/views/my-view\&#39;
   - `parent` (`string`): The parent of the resource. When `null`, the `parent` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_log_view.timeouts.new](#fn-timeoutsnew) constructor.
 
