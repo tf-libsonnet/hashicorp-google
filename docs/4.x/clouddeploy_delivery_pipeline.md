@@ -30,6 +30,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-serial_pipelinenew)
   * [`obj serial_pipeline.stages`](#obj-serial_pipelinestages)
     * [`fn new()`](#fn-serial_pipelinestagesnew)
+    * [`obj serial_pipeline.stages.strategy`](#obj-serial_pipelinestagesstrategy)
+      * [`fn new()`](#fn-serial_pipelinestagesstrategynew)
+      * [`obj serial_pipeline.stages.strategy.standard`](#obj-serial_pipelinestagesstrategystandard)
+        * [`fn new()`](#fn-serial_pipelinestagesstrategystandardnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -335,9 +339,56 @@ Terraform sub block.
 **Args**:
   - `profiles` (`list`): Skaffold profiles to use when rendering the manifest for this stage&#39;s `Target`. When `null`, the `profiles` field will be omitted from the resulting object.
   - `target_id` (`string`): The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`. When `null`, the `target_id` field will be omitted from the resulting object.
+  - `strategy` (`list[obj]`): Optional. The strategy to use for a `Rollout` to this stage. When `null`, the `strategy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.new](#fn-serial_pipelineserial_pipelinestrategynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `stages` sub block.
+
+
+## obj serial_pipeline.stages.strategy
+
+
+
+### fn serial_pipeline.stages.strategy.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.new` constructs a new object with attributes and blocks configured for the `strategy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `standard` (`list[obj]`): Standard deployment strategy executes a single deploy and allows verifying the deployment. When `null`, the `standard` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.new](#fn-serial_pipelineserial_pipelinestagesstandardnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `strategy` sub block.
+
+
+## obj serial_pipeline.stages.strategy.standard
+
+
+
+### fn serial_pipeline.stages.strategy.standard.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.new` constructs a new object with attributes and blocks configured for the `standard`
+Terraform sub block.
+
+
+
+**Args**:
+  - `verify` (`bool`): Whether to verify a deployment. When `null`, the `verify` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `standard` sub block.
 
 
 ## obj timeouts

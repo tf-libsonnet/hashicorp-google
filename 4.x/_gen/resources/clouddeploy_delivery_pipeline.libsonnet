@@ -61,14 +61,32 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       stages: stages,
     }),
     stages:: {
-      '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.new` constructs a new object with attributes and blocks configured for the `stages`\nTerraform sub block.\n\n\n\n**Args**:\n  - `profiles` (`list`): Skaffold profiles to use when rendering the manifest for this stage&#39;s `Target`. When `null`, the `profiles` field will be omitted from the resulting object.\n  - `target_id` (`string`): The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`. When `null`, the `target_id` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `stages` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.new` constructs a new object with attributes and blocks configured for the `stages`\nTerraform sub block.\n\n\n\n**Args**:\n  - `profiles` (`list`): Skaffold profiles to use when rendering the manifest for this stage&#39;s `Target`. When `null`, the `profiles` field will be omitted from the resulting object.\n  - `target_id` (`string`): The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`. When `null`, the `target_id` field will be omitted from the resulting object.\n  - `strategy` (`list[obj]`): Optional. The strategy to use for a `Rollout` to this stage. When `null`, the `strategy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.new](#fn-serial_pipelineserial_pipelinestrategynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `stages` sub block.\n', args=[]),
       new(
         profiles=null,
+        strategy=null,
         target_id=null
       ):: std.prune(a={
         profiles: profiles,
+        strategy: strategy,
         target_id: target_id,
       }),
+      strategy:: {
+        '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.new` constructs a new object with attributes and blocks configured for the `strategy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `standard` (`list[obj]`): Standard deployment strategy executes a single deploy and allows verifying the deployment. When `null`, the `standard` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.new](#fn-serial_pipelineserial_pipelinestagesstandardnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `strategy` sub block.\n', args=[]),
+        new(
+          standard=null
+        ):: std.prune(a={
+          standard: standard,
+        }),
+        standard:: {
+          '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.new` constructs a new object with attributes and blocks configured for the `standard`\nTerraform sub block.\n\n\n\n**Args**:\n  - `verify` (`bool`): Whether to verify a deployment. When `null`, the `verify` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `standard` sub block.\n', args=[]),
+          new(
+            verify=null
+          ):: std.prune(a={
+            verify: verify,
+          }),
+        },
+      },
     },
   },
   timeouts:: {

@@ -154,6 +154,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-gateway_api_confignew)
 * [`obj ip_allocation_policy`](#obj-ip_allocation_policy)
   * [`fn new()`](#fn-ip_allocation_policynew)
+  * [`obj ip_allocation_policy.pod_cidr_overprovision_config`](#obj-ip_allocation_policypod_cidr_overprovision_config)
+    * [`fn new()`](#fn-ip_allocation_policypod_cidr_overprovision_confignew)
 * [`obj logging_config`](#obj-logging_config)
   * [`fn new()`](#fn-logging_confignew)
 * [`obj maintenance_policy`](#obj-maintenance_policy)
@@ -212,6 +214,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-node_poolmanagementnew)
   * [`obj node_pool.network_config`](#obj-node_poolnetwork_config)
     * [`fn new()`](#fn-node_poolnetwork_confignew)
+    * [`obj node_pool.network_config.pod_cidr_overprovision_config`](#obj-node_poolnetwork_configpod_cidr_overprovision_config)
+      * [`fn new()`](#fn-node_poolnetwork_configpod_cidr_overprovision_confignew)
   * [`obj node_pool.node_config`](#obj-node_poolnode_config)
     * [`fn new()`](#fn-node_poolnode_confignew)
     * [`obj node_pool.node_config.advanced_machine_features`](#obj-node_poolnode_configadvanced_machine_features)
@@ -2602,9 +2606,33 @@ Terraform sub block.
   - `services_ipv4_cidr_block` (`string`): The IP address range of the services IPs in this cluster. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use. When `null`, the `services_ipv4_cidr_block` field will be omitted from the resulting object.
   - `services_secondary_range_name` (`string`): The name of the existing secondary range in the cluster&#39;s subnetwork to use for service ClusterIPs. Alternatively, services_ipv4_cidr_block can be used to automatically create a GKE-managed one. When `null`, the `services_secondary_range_name` field will be omitted from the resulting object.
   - `stack_type` (`string`): The IP Stack type of the cluster. Choose between IPV4 and IPV4_IPV6. Default type is IPV4 Only if not set When `null`, the `stack_type` field will be omitted from the resulting object.
+  - `pod_cidr_overprovision_config` (`list[obj]`): Configuration for cluster level pod cidr overprovision. Default is disabled=false. When `null`, the `pod_cidr_overprovision_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.ip_allocation_policy.pod_cidr_overprovision_config.new](#fn-ip_allocation_policypod_cidr_overprovision_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ip_allocation_policy` sub block.
+
+
+## obj ip_allocation_policy.pod_cidr_overprovision_config
+
+
+
+### fn ip_allocation_policy.pod_cidr_overprovision_config.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.ip_allocation_policy.pod_cidr_overprovision_config.new` constructs a new object with attributes and blocks configured for the `pod_cidr_overprovision_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `disabled` (`bool`): Set the `disabled` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `pod_cidr_overprovision_config` sub block.
 
 
 ## obj logging_config
@@ -3334,9 +3362,33 @@ Terraform sub block.
   - `enable_private_nodes` (`bool`): Whether nodes have internal IP addresses only. When `null`, the `enable_private_nodes` field will be omitted from the resulting object.
   - `pod_ipv4_cidr_block` (`string`): The IP address range for pod IPs in this node pool. Only applicable if create_pod_range is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. /14) to have a range chosen with a specific netmask. Set to a CIDR notation (e.g. 10.96.0.0/14) to pick a specific range to use. When `null`, the `pod_ipv4_cidr_block` field will be omitted from the resulting object.
   - `pod_range` (`string`): The ID of the secondary range for pod IPs. If create_pod_range is true, this ID is used for the new range. If create_pod_range is false, uses an existing secondary range with this ID. When `null`, the `pod_range` field will be omitted from the resulting object.
+  - `pod_cidr_overprovision_config` (`list[obj]`): Configuration for node-pool level pod cidr overprovision. If not set, the cluster level setting will be inherited When `null`, the `pod_cidr_overprovision_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.network_config.pod_cidr_overprovision_config.new](#fn-node_poolnode_poolpod_cidr_overprovision_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `network_config` sub block.
+
+
+## obj node_pool.network_config.pod_cidr_overprovision_config
+
+
+
+### fn node_pool.network_config.pod_cidr_overprovision_config.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_pool.network_config.pod_cidr_overprovision_config.new` constructs a new object with attributes and blocks configured for the `pod_cidr_overprovision_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `disabled` (`bool`): Set the `disabled` field on the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `pod_cidr_overprovision_config` sub block.
 
 
 ## obj node_pool.node_config
