@@ -78,7 +78,7 @@ supported asset types. When `null`, the `asset_types` field will be omitted from
 destination pubsub topic. It also specifies the project for API 
 enablement check, quota, and billing. If not specified, the resource&#39;s
 project will be used. When `null`, the `billing_project` field will be omitted from the resulting object.
-  - `content_type` (`string`): Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: [&#34;CONTENT_TYPE_UNSPECIFIED&#34;, &#34;RESOURCE&#34;, &#34;IAM_POLICY&#34;, &#34;ORG_POLICY&#34;, &#34;ACCESS_POLICY&#34;] When `null`, the `content_type` field will be omitted from the resulting object.
+  - `content_type` (`string`): Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: [&#34;CONTENT_TYPE_UNSPECIFIED&#34;, &#34;RESOURCE&#34;, &#34;IAM_POLICY&#34;, &#34;ORG_POLICY&#34;, &#34;OS_INVENTORY&#34;, &#34;ACCESS_POLICY&#34;] When `null`, the `content_type` field will be omitted from the resulting object.
   - `feed_id` (`string`): This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `condition` (`list[obj]`): A condition which determines whether an asset update should be published. If specified, an asset
@@ -124,7 +124,7 @@ supported asset types. When `null`, the `asset_types` field will be omitted from
 destination pubsub topic. It also specifies the project for API 
 enablement check, quota, and billing. If not specified, the resource&#39;s
 project will be used. When `null`, the `billing_project` field will be omitted from the resulting object.
-  - `content_type` (`string`): Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: [&#34;CONTENT_TYPE_UNSPECIFIED&#34;, &#34;RESOURCE&#34;, &#34;IAM_POLICY&#34;, &#34;ORG_POLICY&#34;, &#34;ACCESS_POLICY&#34;] When `null`, the `content_type` field will be omitted from the resulting object.
+  - `content_type` (`string`): Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: [&#34;CONTENT_TYPE_UNSPECIFIED&#34;, &#34;RESOURCE&#34;, &#34;IAM_POLICY&#34;, &#34;ORG_POLICY&#34;, &#34;OS_INVENTORY&#34;, &#34;ACCESS_POLICY&#34;] When `null`, the `content_type` field will be omitted from the resulting object.
   - `feed_id` (`string`): This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `condition` (`list[obj]`): A condition which determines whether an asset update should be published. If specified, an asset

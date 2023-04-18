@@ -479,6 +479,7 @@ project.
 * [logging_folder_bucket_config](logging_folder_bucket_config.md)
 * [logging_folder_exclusion](logging_folder_exclusion.md)
 * [logging_folder_sink](logging_folder_sink.md)
+* [logging_linked_dataset](logging_linked_dataset.md)
 * [logging_log_view](logging_log_view.md)
 * [logging_metric](logging_metric.md)
 * [logging_organization_bucket_config](logging_organization_bucket_config.md)

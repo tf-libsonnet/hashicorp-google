@@ -469,6 +469,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   logging_folder_bucket_config: (import 'resources/logging_folder_bucket_config.libsonnet'),
   logging_folder_exclusion: (import 'resources/logging_folder_exclusion.libsonnet'),
   logging_folder_sink: (import 'resources/logging_folder_sink.libsonnet'),
+  logging_linked_dataset: (import 'resources/logging_linked_dataset.libsonnet'),
   logging_log_view: (import 'resources/logging_log_view.libsonnet'),
   logging_metric: (import 'resources/logging_metric.libsonnet'),
   logging_organization_bucket_config: (import 'resources/logging_organization_bucket_config.libsonnet'),
