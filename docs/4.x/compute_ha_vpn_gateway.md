@@ -70,7 +70,7 @@ character, which cannot be a dash.
   - `network` (`string`): The network this VPN gateway is accepting traffic for.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region this gateway should sit in. When `null`, the `region` field will be omitted from the resulting object.
-  - `stack_type` (`string`): The stack type for this VPN gateway to identify the IP protocols that are enbaled.
+  - `stack_type` (`string`): The stack type for this VPN gateway to identify the IP protocols that are enabled.
 If not specified, IPV4_ONLY will be used. Default value: &#34;IPV4_ONLY&#34; Possible values: [&#34;IPV4_ONLY&#34;, &#34;IPV4_IPV6&#34;] When `null`, the `stack_type` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_ha_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
   - `vpn_interfaces` (`list[obj]`): A list of interfaces on this VPN gateway. When `null`, the `vpn_interfaces` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_ha_vpn_gateway.vpn_interfaces.new](#fn-vpn_interfacesnew) constructor.
@@ -108,7 +108,7 @@ character, which cannot be a dash.
   - `network` (`string`): The network this VPN gateway is accepting traffic for.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region this gateway should sit in. When `null`, the `region` field will be omitted from the resulting object.
-  - `stack_type` (`string`): The stack type for this VPN gateway to identify the IP protocols that are enbaled.
+  - `stack_type` (`string`): The stack type for this VPN gateway to identify the IP protocols that are enabled.
 If not specified, IPV4_ONLY will be used. Default value: &#34;IPV4_ONLY&#34; Possible values: [&#34;IPV4_ONLY&#34;, &#34;IPV4_IPV6&#34;] When `null`, the `stack_type` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_ha_vpn_gateway.timeouts.new](#fn-timeoutsnew) constructor.
   - `vpn_interfaces` (`list[obj]`): A list of interfaces on this VPN gateway. When `null`, the `vpn_interfaces` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_ha_vpn_gateway.vpn_interfaces.new](#fn-vpn_interfacesnew) constructor.
