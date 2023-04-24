@@ -55,7 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): User-assigned description of the TagKey. Must not exceed 256 characters. When `null`, the `description` field will be omitted from the resulting object.
-  - `parent` (`string`): Input only. The resource name of the new TagKey&#39;s parent. Must be of the form organizations/{org_id}.
+  - `parent` (`string`): Input only. The resource name of the new TagKey&#39;s parent. Must be of the form organizations/{org_id} or projects/{project_id_or_number}.
   - `purpose` (`string`): Optional. A purpose cannot be changed once set.
 
 A purpose denotes that this Tag is intended for use in policies of a specific policy engine, and will involve that policy engine in management operations involving this Tag. Possible values: [&#34;GCE_FIREWALL&#34;] When `null`, the `purpose` field will be omitted from the resulting object.
@@ -90,7 +90,7 @@ injecting into a complete block.
 
 **Args**:
   - `description` (`string`): User-assigned description of the TagKey. Must not exceed 256 characters. When `null`, the `description` field will be omitted from the resulting object.
-  - `parent` (`string`): Input only. The resource name of the new TagKey&#39;s parent. Must be of the form organizations/{org_id}.
+  - `parent` (`string`): Input only. The resource name of the new TagKey&#39;s parent. Must be of the form organizations/{org_id} or projects/{project_id_or_number}.
   - `purpose` (`string`): Optional. A purpose cannot be changed once set.
 
 A purpose denotes that this Tag is intended for use in policies of a specific policy engine, and will involve that policy engine in management operations involving this Tag. Possible values: [&#34;GCE_FIREWALL&#34;] When `null`, the `purpose` field will be omitted from the resulting object.

@@ -75,8 +75,7 @@ this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. When `
   - `quic_override` (`string`): Specifies the QUIC override policy for this resource. This determines
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
-specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ENABLE&#34;, &#34;DISABLE&#34;] When `null`, the `quic_override` field will be omitted from the resulting object.
+specified, Google manages whether QUIC is used. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ENABLE&#34;, &#34;DISABLE&#34;] When `null`, the `quic_override` field will be omitted from the resulting object.
   - `ssl_certificates` (`list`): A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one SSL
 certificate must be specified. When `null`, the `ssl_certificates` field will be omitted from the resulting object.
@@ -126,8 +125,7 @@ this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. When `
   - `quic_override` (`string`): Specifies the QUIC override policy for this resource. This determines
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
-specified, uses the QUIC policy with no user overrides, which is
-equivalent to DISABLE. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ENABLE&#34;, &#34;DISABLE&#34;] When `null`, the `quic_override` field will be omitted from the resulting object.
+specified, Google manages whether QUIC is used. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ENABLE&#34;, &#34;DISABLE&#34;] When `null`, the `quic_override` field will be omitted from the resulting object.
   - `ssl_certificates` (`list`): A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one SSL
 certificate must be specified. When `null`, the `ssl_certificates` field will be omitted from the resulting object.

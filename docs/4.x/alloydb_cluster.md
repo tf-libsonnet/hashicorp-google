@@ -74,7 +74,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `cluster_id` (`string`): The ID of the alloydb cluster.
   - `display_name` (`string`): User-settable and human-readable display name for the Cluster. When `null`, the `display_name` field will be omitted from the resulting object.
   - `labels` (`obj`): User-defined labels for the alloydb cluster. When `null`, the `labels` field will be omitted from the resulting object.
-  - `location` (`string`): The location where the alloydb cluster should reside. When `null`, the `location` field will be omitted from the resulting object.
+  - `location` (`string`): The location where the alloydb cluster should reside.
   - `network` (`string`): The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
 
 &#34;projects/{projectNumber}/global/networks/{network_id}&#34;.
@@ -110,7 +110,7 @@ injecting into a complete block.
   - `cluster_id` (`string`): The ID of the alloydb cluster.
   - `display_name` (`string`): User-settable and human-readable display name for the Cluster. When `null`, the `display_name` field will be omitted from the resulting object.
   - `labels` (`obj`): User-defined labels for the alloydb cluster. When `null`, the `labels` field will be omitted from the resulting object.
-  - `location` (`string`): The location where the alloydb cluster should reside. When `null`, the `location` field will be omitted from the resulting object.
+  - `location` (`string`): The location where the alloydb cluster should reside.
   - `network` (`string`): The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
 
 &#34;projects/{projectNumber}/global/networks/{network_id}&#34;.

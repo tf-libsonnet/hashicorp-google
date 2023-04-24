@@ -415,10 +415,19 @@ info: http://kubernetes.io/docs/user-guide/annotations
 If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
 or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
 
-Cloud Run (fully managed) uses the following annotation keys to configure features on a Service:
+Annotations with &#39;run.googleapis.com/&#39; and &#39;autoscaling.knative.dev&#39; are restricted. Use the following annotation
+keys to configure features on a Service:
 
+- &#39;run.googleapis.com/binary-authorization-breakglass&#39; sets the [Binary Authorization breakglass](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--breakglass).
+- &#39;run.googleapis.com/binary-authorization&#39; sets the [Binary Authorization](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--binary-authorization).
+- &#39;run.googleapis.com/client-name&#39; sets the client name calling the Cloud Run API.
+- &#39;run.googleapis.com/custom-audiences&#39; sets the [custom audiences](https://cloud.google.com/sdk/gcloud/reference/alpha/run/deploy#--add-custom-audiences)
+  that can be used in the audience field of ID token for authenticated requests.
+- &#39;run.googleapis.com/description&#39; sets a user defined description for the Service.
 - &#39;run.googleapis.com/ingress&#39; sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
-  for the Service. For example, &#39;&#34;run.googleapis.com/ingress&#34; = &#34;all&#34;&#39;. When `null`, the `annotations` field will be omitted from the resulting object.
+  for the Service. For example, &#39;&#34;run.googleapis.com/ingress&#34; = &#34;all&#34;&#39;.
+- &#39;run.googleapis.com/launch-stage&#39; sets the [launch stage](https://cloud.google.com/run/docs/troubleshooting#launch-stage-validation)
+  when a preview feature is used. For example, &#39;&#34;run.googleapis.com/launch-stage&#34;: &#34;BETA&#34;&#39; When `null`, the `annotations` field will be omitted from the resulting object.
   - `labels` (`obj`): Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
 and routes. When `null`, the `labels` field will be omitted from the resulting object.
@@ -477,11 +486,46 @@ Terraform sub block.
 
 **Args**:
   - `annotations` (`obj`): Annotations is a key value map stored with a resource that
-may be set by external tools to store and retrieve arbitrary metadata.
+may be set by external tools to store and retrieve arbitrary metadata. More
+info: http://kubernetes.io/docs/user-guide/annotations
 
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
-or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field. When `null`, the `annotations` field will be omitted from the resulting object.
+or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+
+Annotations with &#39;run.googleapis.com/&#39; and &#39;autoscaling.knative.dev&#39; are restricted. Use the following annotation
+keys to configure features on a Revision template:
+
+- &#39;autoscaling.knative.dev/maxScale&#39; sets the [maximum number of container
+  instances](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--max-instances) of the Revision to run.
+- &#39;autoscaling.knative.dev/minScale&#39; sets the [minimum number of container
+  instances](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--min-instances) of the Revision to run.
+- &#39;run.googleapis.com/client-name&#39; sets the client name calling the Cloud Run API.
+- &#39;run.googleapis.com/cloudsql-instances&#39; sets the [Cloud SQL
+  instances](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--add-cloudsql-instances) the Revision connects to.
+- &#39;run.googleapis.com/cpu-throttling&#39; sets whether to throttle the CPU when the container is not actively serving
+  requests. See https://cloud.google.com/sdk/gcloud/reference/run/deploy#--[no-]cpu-throttling.
+- &#39;run.googleapis.com/encryption-key-shutdown-hours&#39; sets the number of hours to wait before an automatic shutdown
+  server after CMEK key revocation is detected.
+- &#39;run.googleapis.com/encryption-key&#39; sets the [CMEK key](https://cloud.google.com/run/docs/securing/using-cmek)
+  reference to encrypt the container with.
+- &#39;run.googleapis.com/execution-environment&#39; sets the [execution
+  environment](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--execution-environment)
+  where the application will run.
+- &#39;run.googleapis.com/post-key-revocation-action-type&#39; sets the
+  [action type](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--post-key-revocation-action-type)
+  after CMEK key revocation.
+- &#39;run.googleapis.com/secrets&#39; sets a list of key-value pairs to set as
+  [secrets](https://cloud.google.com/run/docs/configuring/secrets#yaml).
+- &#39;run.googleapis.com/sessionAffinity&#39; sets whether to enable
+  [session affinity](https://cloud.google.com/sdk/gcloud/reference/beta/run/deploy#--[no-]session-affinity)
+  for connections to the Revision.
+- &#39;run.googleapis.com/startup-cpu-boost&#39; sets whether to allocate extra CPU to containers on startup.
+  See https://cloud.google.com/sdk/gcloud/reference/run/deploy#--[no-]cpu-boost.
+- &#39;run.googleapis.com/vpc-access-connector&#39; sets a [VPC connector](https://cloud.google.com/run/docs/configuring/connecting-vpc#terraform_1)
+  for the Revision.
+- &#39;run.googleapis.com/vpc-access-egress&#39; sets the outbound traffic to send through the VPC connector for this resource.
+  See https://cloud.google.com/sdk/gcloud/reference/run/deploy#--vpc-egress. When `null`, the `annotations` field will be omitted from the resulting object.
   - `labels` (`obj`): Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name must be unique within a Google Cloud project and region.

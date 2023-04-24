@@ -59,7 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `cluster_name` (`string`): The full resource name of the backup source cluster (e.g., projects/{project}/locations/{location}/clusters/{clusterId}).
   - `description` (`string`): User-provided description of the backup. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): User-defined labels for the alloydb backup. When `null`, the `labels` field will be omitted from the resulting object.
-  - `location` (`string`): The location where the alloydb backup should reside. When `null`, the `location` field will be omitted from the resulting object.
+  - `location` (`string`): The location where the alloydb backup should reside.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_backup.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -89,7 +89,7 @@ injecting into a complete block.
   - `cluster_name` (`string`): The full resource name of the backup source cluster (e.g., projects/{project}/locations/{location}/clusters/{clusterId}).
   - `description` (`string`): User-provided description of the backup. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): User-defined labels for the alloydb backup. When `null`, the `labels` field will be omitted from the resulting object.
-  - `location` (`string`): The location where the alloydb backup should reside. When `null`, the `location` field will be omitted from the resulting object.
+  - `location` (`string`): The location where the alloydb backup should reside.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_backup.timeouts.new](#fn-timeoutsnew) constructor.
 
