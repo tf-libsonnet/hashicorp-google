@@ -62,14 +62,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     workforce_pool_id: workforce_pool_id,
   }),
   oidc:: {
-    '#new':: d.fn(help='\n`google.iam_workforce_pool_provider.oidc.new` constructs a new object with attributes and blocks configured for the `oidc`\nTerraform sub block.\n\n\n\n**Args**:\n  - `client_id` (`string`): The client ID. Must match the audience claim of the JWT issued by the identity provider.\n  - `issuer_uri` (`string`): The OIDC issuer URI. Must be a valid URI using the &#39;https&#39; scheme.\n\n**Returns**:\n  - An attribute object that represents the `oidc` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.iam_workforce_pool_provider.oidc.new` constructs a new object with attributes and blocks configured for the `oidc`\nTerraform sub block.\n\n\n\n**Args**:\n  - `client_id` (`string`): The client ID. Must match the audience claim of the JWT issued by the identity provider.\n  - `issuer_uri` (`string`): The OIDC issuer URI. Must be a valid URI using the &#39;https&#39; scheme.\n  - `web_sso_config` (`list[obj]`): Configuration for web single sign-on for the OIDC provider. Here, web sign-in refers to console sign-in and gcloud sign-in through the browser. When `null`, the `web_sso_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool_provider.oidc.web_sso_config.new](#fn-oidcweb_sso_confignew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `oidc` sub block.\n', args=[]),
     new(
       client_id,
-      issuer_uri
+      issuer_uri,
+      web_sso_config=null
     ):: std.prune(a={
       client_id: client_id,
       issuer_uri: issuer_uri,
+      web_sso_config: web_sso_config,
     }),
+    web_sso_config:: {
+      '#new':: d.fn(help='\n`google.iam_workforce_pool_provider.oidc.web_sso_config.new` constructs a new object with attributes and blocks configured for the `web_sso_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `assertion_claims_behavior` (`string`): The behavior for how OIDC Claims are included in the &#39;assertion&#39; object used for attribute mapping and attribute condition.\n* ONLY_ID_TOKEN_CLAIMS: Only include ID Token Claims. Possible values: [&#34;ONLY_ID_TOKEN_CLAIMS&#34;]\n  - `response_type` (`string`): The Response Type to request for in the OIDC Authorization Request for web sign-in.\n* ID_TOKEN: The &#39;response_type=id_token&#39; selection uses the Implicit Flow for web sign-in. Possible values: [&#34;ID_TOKEN&#34;]\n\n**Returns**:\n  - An attribute object that represents the `web_sso_config` sub block.\n', args=[]),
+      new(
+        assertion_claims_behavior,
+        response_type
+      ):: std.prune(a={
+        assertion_claims_behavior: assertion_claims_behavior,
+        response_type: response_type,
+      }),
+    },
   },
   saml:: {
     '#new':: d.fn(help='\n`google.iam_workforce_pool_provider.saml.new` constructs a new object with attributes and blocks configured for the `saml`\nTerraform sub block.\n\n\n\n**Args**:\n  - `idp_metadata_xml` (`string`): SAML Identity provider configuration metadata xml doc.\nThe xml document should comply with [SAML 2.0 specification](https://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf).\nThe max size of the acceptable xml document will be bounded to 128k characters.\n\nThe metadata xml document should satisfy the following constraints:\n1) Must contain an Identity Provider Entity ID.\n2) Must contain at least one non-expired signing key certificate.\n3) For each signing key: \n  a) Valid from should be no more than 7 days from now. \n  b) Valid to should be no more than 10 years in the future. \n4) Up to 3 IdP signing keys are allowed in the metadata xml.\n\nWhen updating the provider&#39;s metadata xml, at least one non-expired signing key\nmust overlap with the existing metadata. This requirement is skipped if there are\nno non-expired signing keys present in the existing metadata.\n\n**Returns**:\n  - An attribute object that represents the `saml` sub block.\n', args=[]),

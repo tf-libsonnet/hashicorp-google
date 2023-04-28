@@ -4,13 +4,69 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   '#':: d.pkg(name='data_loss_prevention_job_trigger', url='', help='`data_loss_prevention_job_trigger` represents the `google_data_loss_prevention_job_trigger` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   inspect_job:: {
     actions:: {
-      '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.actions.new` constructs a new object with attributes and blocks configured for the `actions`\nTerraform sub block.\n\n\n\n**Args**:\n  - `pub_sub` (`list[obj]`): Publish a message into a given Pub/Sub topic when the job completes. When `null`, the `pub_sub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.pub_sub.new](#fn-inspect_jobinspect_jobpub_subnew) constructor.\n  - `publish_findings_to_cloud_data_catalog` (`list[obj]`): Publish findings of a DlpJob to Data Catalog. When `null`, the `publish_findings_to_cloud_data_catalog` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.publish_findings_to_cloud_data_catalog.new](#fn-inspect_jobinspect_jobpublish_findings_to_cloud_data_catalognew) constructor.\n  - `publish_summary_to_cscc` (`list[obj]`): Publish the result summary of a DlpJob to the Cloud Security Command Center. When `null`, the `publish_summary_to_cscc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.publish_summary_to_cscc.new](#fn-inspect_jobinspect_jobpublish_summary_to_csccnew) constructor.\n  - `save_findings` (`list[obj]`): If set, the detailed findings will be persisted to the specified OutputStorageConfig. Only a single instance of this action can be specified. Compatible with: Inspect, Risk When `null`, the `save_findings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.save_findings.new](#fn-inspect_jobinspect_jobsave_findingsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `actions` sub block.\n', args=[]),
+      deidentify:: {
+        '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.actions.deidentify.new` constructs a new object with attributes and blocks configured for the `deidentify`\nTerraform sub block.\n\n\n\n**Args**:\n  - `cloud_storage_output` (`string`): User settable Cloud Storage bucket and folders to store de-identified files.\n\nThis field must be set for cloud storage deidentification.\n\nThe output Cloud Storage bucket must be different from the input bucket.\n\nDe-identified files will overwrite files in the output path.\n\nForm of: gs://bucket/folder/ or gs://bucket\n  - `file_types_to_transform` (`list`): List of user-specified file type groups to transform. If specified, only the files with these filetypes will be transformed.\n\nIf empty, all supported files will be transformed. Supported types may be automatically added over time. \n\nIf a file type is set in this field that isn&#39;t supported by the Deidentify action then the job will fail and will not be successfully created/started. Possible values: [&#34;IMAGE&#34;, &#34;TEXT_FILE&#34;, &#34;CSV&#34;, &#34;TSV&#34;] When `null`, the `file_types_to_transform` field will be omitted from the resulting object.\n  - `transformation_config` (`list[obj]`): User specified deidentify templates and configs for structured, unstructured, and image files. When `null`, the `transformation_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.deidentify.transformation_config.new](#fn-inspect_jobinspect_jobactionstransformation_confignew) constructor.\n  - `transformation_details_storage_config` (`list[obj]`): Config for storing transformation details. When `null`, the `transformation_details_storage_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.deidentify.transformation_details_storage_config.new](#fn-inspect_jobinspect_jobactionstransformation_details_storage_confignew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `deidentify` sub block.\n', args=[]),
+        new(
+          cloud_storage_output,
+          file_types_to_transform=null,
+          transformation_config=null,
+          transformation_details_storage_config=null
+        ):: std.prune(a={
+          cloud_storage_output: cloud_storage_output,
+          file_types_to_transform: file_types_to_transform,
+          transformation_config: transformation_config,
+          transformation_details_storage_config: transformation_details_storage_config,
+        }),
+        transformation_config:: {
+          '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.actions.deidentify.transformation_config.new` constructs a new object with attributes and blocks configured for the `transformation_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `deidentify_template` (`string`): If this template is specified, it will serve as the default de-identify template. When `null`, the `deidentify_template` field will be omitted from the resulting object.\n  - `image_redact_template` (`string`): If this template is specified, it will serve as the de-identify template for images. When `null`, the `image_redact_template` field will be omitted from the resulting object.\n  - `structured_deidentify_template` (`string`): If this template is specified, it will serve as the de-identify template for structured content such as delimited files and tables. When `null`, the `structured_deidentify_template` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `transformation_config` sub block.\n', args=[]),
+          new(
+            deidentify_template=null,
+            image_redact_template=null,
+            structured_deidentify_template=null
+          ):: std.prune(a={
+            deidentify_template: deidentify_template,
+            image_redact_template: image_redact_template,
+            structured_deidentify_template: structured_deidentify_template,
+          }),
+        },
+        transformation_details_storage_config:: {
+          '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.actions.deidentify.transformation_details_storage_config.new` constructs a new object with attributes and blocks configured for the `transformation_details_storage_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `table` (`list[obj]`): The BigQuery table in which to store the output. When `null`, the `table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.deidentify.transformation_details_storage_config.table.new](#fn-inspect_jobinspect_jobactionsdeidentifytablenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `transformation_details_storage_config` sub block.\n', args=[]),
+          new(
+            table=null
+          ):: std.prune(a={
+            table: table,
+          }),
+          table:: {
+            '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.actions.deidentify.transformation_details_storage_config.table.new` constructs a new object with attributes and blocks configured for the `table`\nTerraform sub block.\n\n\n\n**Args**:\n  - `dataset_id` (`string`): The ID of the dataset containing this table.\n  - `project_id` (`string`): The ID of the project containing this table.\n  - `table_id` (`string`): The ID of the table. The ID must contain only letters (a-z,\nA-Z), numbers (0-9), or underscores (_). The maximum length\nis 1,024 characters. When `null`, the `table_id` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `table` sub block.\n', args=[]),
+            new(
+              dataset_id,
+              project_id,
+              table_id=null
+            ):: std.prune(a={
+              dataset_id: dataset_id,
+              project_id: project_id,
+              table_id: table_id,
+            }),
+          },
+        },
+      },
+      job_notification_emails:: {
+        '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.actions.job_notification_emails.new` constructs a new object with attributes and blocks configured for the `job_notification_emails`\nTerraform sub block.\n\n\n\n**Returns**:\n  - An attribute object that represents the `job_notification_emails` sub block.\n', args=[]),
+        new(
+
+        ):: std.prune(a={}),
+      },
+      '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.actions.new` constructs a new object with attributes and blocks configured for the `actions`\nTerraform sub block.\n\n\n\n**Args**:\n  - `deidentify` (`list[obj]`): Create a de-identified copy of the requested table or files. When `null`, the `deidentify` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.deidentify.new](#fn-inspect_jobinspect_jobdeidentifynew) constructor.\n  - `job_notification_emails` (`list[obj]`): Sends an email when the job completes. The email goes to IAM project owners and technical Essential Contacts. When `null`, the `job_notification_emails` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.job_notification_emails.new](#fn-inspect_jobinspect_jobjob_notification_emailsnew) constructor.\n  - `pub_sub` (`list[obj]`): Publish a message into a given Pub/Sub topic when the job completes. When `null`, the `pub_sub` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.pub_sub.new](#fn-inspect_jobinspect_jobpub_subnew) constructor.\n  - `publish_findings_to_cloud_data_catalog` (`list[obj]`): Publish findings of a DlpJob to Data Catalog. When `null`, the `publish_findings_to_cloud_data_catalog` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.publish_findings_to_cloud_data_catalog.new](#fn-inspect_jobinspect_jobpublish_findings_to_cloud_data_catalognew) constructor.\n  - `publish_summary_to_cscc` (`list[obj]`): Publish the result summary of a DlpJob to the Cloud Security Command Center. When `null`, the `publish_summary_to_cscc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.publish_summary_to_cscc.new](#fn-inspect_jobinspect_jobpublish_summary_to_csccnew) constructor.\n  - `save_findings` (`list[obj]`): If set, the detailed findings will be persisted to the specified OutputStorageConfig. Only a single instance of this action can be specified. Compatible with: Inspect, Risk When `null`, the `save_findings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.save_findings.new](#fn-inspect_jobinspect_jobsave_findingsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `actions` sub block.\n', args=[]),
       new(
+        deidentify=null,
+        job_notification_emails=null,
         pub_sub=null,
         publish_findings_to_cloud_data_catalog=null,
         publish_summary_to_cscc=null,
         save_findings=null
       ):: std.prune(a={
+        deidentify: deidentify,
+        job_notification_emails: job_notification_emails,
         pub_sub: pub_sub,
         publish_findings_to_cloud_data_catalog: publish_findings_to_cloud_data_catalog,
         publish_summary_to_cscc: publish_summary_to_cscc,
@@ -182,16 +238,48 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           }),
         },
       },
-      '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.storage_config.new` constructs a new object with attributes and blocks configured for the `storage_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `big_query_options` (`list[obj]`): Options defining BigQuery table and row identifiers. When `null`, the `big_query_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.big_query_options.new](#fn-inspect_jobinspect_jobbig_query_optionsnew) constructor.\n  - `cloud_storage_options` (`list[obj]`): Options defining a file or a set of files within a Google Cloud Storage bucket. When `null`, the `cloud_storage_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.cloud_storage_options.new](#fn-inspect_jobinspect_jobcloud_storage_optionsnew) constructor.\n  - `datastore_options` (`list[obj]`): Options defining a data set within Google Cloud Datastore. When `null`, the `datastore_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.datastore_options.new](#fn-inspect_jobinspect_jobdatastore_optionsnew) constructor.\n  - `timespan_config` (`list[obj]`): Information on where to inspect When `null`, the `timespan_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.timespan_config.new](#fn-inspect_jobinspect_jobtimespan_confignew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `storage_config` sub block.\n', args=[]),
+      hybrid_options:: {
+        '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.storage_config.hybrid_options.new` constructs a new object with attributes and blocks configured for the `hybrid_options`\nTerraform sub block.\n\n\n\n**Args**:\n  - `description` (`string`): A short description of where the data is coming from. Will be stored once in the job. 256 max length. When `null`, the `description` field will be omitted from the resulting object.\n  - `labels` (`obj`): To organize findings, these labels will be added to each finding.\n\nLabel keys must be between 1 and 63 characters long and must conform to the following regular expression: &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39;.\n\nLabel values must be between 0 and 63 characters long and must conform to the regular expression &#39;([a-z]([-a-z0-9]*[a-z0-9])?)?&#39;.\n\nNo more than 10 labels can be associated with a given finding.\n\nExamples:\n* &#39;&#34;environment&#34; : &#34;production&#34;&#39;\n* &#39;&#34;pipeline&#34; : &#34;etl&#34;&#39; When `null`, the `labels` field will be omitted from the resulting object.\n  - `required_finding_label_keys` (`list`): These are labels that each inspection request must include within their &#39;finding_labels&#39; map. Request\nmay contain others, but any missing one of these will be rejected.\n\nLabel keys must be between 1 and 63 characters long and must conform to the following regular expression: &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39;.\n\nNo more than 10 keys can be required. When `null`, the `required_finding_label_keys` field will be omitted from the resulting object.\n  - `table_options` (`list[obj]`): If the container is a table, additional information to make findings meaningful such as the columns that are primary keys. When `null`, the `table_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.hybrid_options.table_options.new](#fn-inspect_jobinspect_jobstorage_configtable_optionsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `hybrid_options` sub block.\n', args=[]),
+        new(
+          description=null,
+          labels=null,
+          required_finding_label_keys=null,
+          table_options=null
+        ):: std.prune(a={
+          description: description,
+          labels: labels,
+          required_finding_label_keys: required_finding_label_keys,
+          table_options: table_options,
+        }),
+        table_options:: {
+          identifying_fields:: {
+            '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.storage_config.hybrid_options.table_options.identifying_fields.new` constructs a new object with attributes and blocks configured for the `identifying_fields`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name describing the field.\n\n**Returns**:\n  - An attribute object that represents the `identifying_fields` sub block.\n', args=[]),
+            new(
+              name
+            ):: std.prune(a={
+              name: name,
+            }),
+          },
+          '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.storage_config.hybrid_options.table_options.new` constructs a new object with attributes and blocks configured for the `table_options`\nTerraform sub block.\n\n\n\n**Args**:\n  - `identifying_fields` (`list[obj]`): The columns that are the primary keys for table objects included in ContentItem. A copy of this\ncell&#39;s value will stored alongside alongside each finding so that the finding can be traced to\nthe specific row it came from. No more than 3 may be provided. When `null`, the `identifying_fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.hybrid_options.table_options.identifying_fields.new](#fn-inspect_jobinspect_jobstorage_confighybrid_optionsidentifying_fieldsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `table_options` sub block.\n', args=[]),
+          new(
+            identifying_fields=null
+          ):: std.prune(a={
+            identifying_fields: identifying_fields,
+          }),
+        },
+      },
+      '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.inspect_job.storage_config.new` constructs a new object with attributes and blocks configured for the `storage_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `big_query_options` (`list[obj]`): Options defining BigQuery table and row identifiers. When `null`, the `big_query_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.big_query_options.new](#fn-inspect_jobinspect_jobbig_query_optionsnew) constructor.\n  - `cloud_storage_options` (`list[obj]`): Options defining a file or a set of files within a Google Cloud Storage bucket. When `null`, the `cloud_storage_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.cloud_storage_options.new](#fn-inspect_jobinspect_jobcloud_storage_optionsnew) constructor.\n  - `datastore_options` (`list[obj]`): Options defining a data set within Google Cloud Datastore. When `null`, the `datastore_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.datastore_options.new](#fn-inspect_jobinspect_jobdatastore_optionsnew) constructor.\n  - `hybrid_options` (`list[obj]`): Configuration to control jobs where the content being inspected is outside of Google Cloud Platform. When `null`, the `hybrid_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.hybrid_options.new](#fn-inspect_jobinspect_jobhybrid_optionsnew) constructor.\n  - `timespan_config` (`list[obj]`): Information on where to inspect When `null`, the `timespan_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.timespan_config.new](#fn-inspect_jobinspect_jobtimespan_confignew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `storage_config` sub block.\n', args=[]),
       new(
         big_query_options=null,
         cloud_storage_options=null,
         datastore_options=null,
+        hybrid_options=null,
         timespan_config=null
       ):: std.prune(a={
         big_query_options: big_query_options,
         cloud_storage_options: cloud_storage_options,
         datastore_options: datastore_options,
+        hybrid_options: hybrid_options,
         timespan_config: timespan_config,
       }),
       timespan_config:: {
@@ -274,10 +362,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   triggers:: {
-    '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.triggers.new` constructs a new object with attributes and blocks configured for the `triggers`\nTerraform sub block.\n\n\n\n**Args**:\n  - `schedule` (`list[obj]`): Schedule for triggered jobs When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.triggers.schedule.new](#fn-triggersschedulenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `triggers` sub block.\n', args=[]),
+    manual:: {
+      '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.triggers.manual.new` constructs a new object with attributes and blocks configured for the `manual`\nTerraform sub block.\n\n\n\n**Returns**:\n  - An attribute object that represents the `manual` sub block.\n', args=[]),
+      new(
+
+      ):: std.prune(a={}),
+    },
+    '#new':: d.fn(help='\n`google.data_loss_prevention_job_trigger.triggers.new` constructs a new object with attributes and blocks configured for the `triggers`\nTerraform sub block.\n\n\n\n**Args**:\n  - `manual` (`list[obj]`): For use with hybrid jobs. Jobs must be manually created and finished. When `null`, the `manual` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.triggers.manual.new](#fn-triggersmanualnew) constructor.\n  - `schedule` (`list[obj]`): Schedule for triggered jobs When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.triggers.schedule.new](#fn-triggersschedulenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `triggers` sub block.\n', args=[]),
     new(
+      manual=null,
       schedule=null
     ):: std.prune(a={
+      manual: manual,
       schedule: schedule,
     }),
     schedule:: {

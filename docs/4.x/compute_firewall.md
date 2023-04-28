@@ -81,9 +81,7 @@ you create the resource. When `null`, the `description` field will be omitted fr
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. IPv4 or IPv6 ranges are supported. When `null`, the `destination_ranges` field will be omitted from the resulting object.
   - `direction` (`string`): Direction of traffic to which this firewall applies; default is
-INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
-destinationRanges; For EGRESS traffic, it is NOT supported to specify
-&#39;source_ranges&#39; OR &#39;source_tags&#39;. For INGRESS traffic, one of &#39;source_ranges&#39;,
+INGRESS. Note: For INGRESS traffic, one of &#39;source_ranges&#39;,
 &#39;source_tags&#39; or &#39;source_service_accounts&#39; is required. Possible values: [&#34;INGRESS&#34;, &#34;EGRESS&#34;] When `null`, the `direction` field will be omitted from the resulting object.
   - `disabled` (`bool`): Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is
@@ -183,9 +181,7 @@ you create the resource. When `null`, the `description` field will be omitted fr
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. IPv4 or IPv6 ranges are supported. When `null`, the `destination_ranges` field will be omitted from the resulting object.
   - `direction` (`string`): Direction of traffic to which this firewall applies; default is
-INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
-destinationRanges; For EGRESS traffic, it is NOT supported to specify
-&#39;source_ranges&#39; OR &#39;source_tags&#39;. For INGRESS traffic, one of &#39;source_ranges&#39;,
+INGRESS. Note: For INGRESS traffic, one of &#39;source_ranges&#39;,
 &#39;source_tags&#39; or &#39;source_service_accounts&#39; is required. Possible values: [&#34;INGRESS&#34;, &#34;EGRESS&#34;] When `null`, the `direction` field will be omitted from the resulting object.
   - `disabled` (`bool`): Denotes whether the firewall rule is disabled, i.e not applied to the
 network it is associated with. When set to true, the firewall rule is

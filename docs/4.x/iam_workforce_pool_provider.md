@@ -31,6 +31,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withWorkforcePoolId()`](#fn-withworkforcepoolid)
 * [`obj oidc`](#obj-oidc)
   * [`fn new()`](#fn-oidcnew)
+  * [`obj oidc.web_sso_config`](#obj-oidcweb_sso_config)
+    * [`fn new()`](#fn-oidcweb_sso_confignew)
 * [`obj saml`](#obj-saml)
   * [`fn new()`](#fn-samlnew)
 * [`obj timeouts`](#obj-timeouts)
@@ -520,9 +522,36 @@ Terraform sub block.
 **Args**:
   - `client_id` (`string`): The client ID. Must match the audience claim of the JWT issued by the identity provider.
   - `issuer_uri` (`string`): The OIDC issuer URI. Must be a valid URI using the &#39;https&#39; scheme.
+  - `web_sso_config` (`list[obj]`): Configuration for web single sign-on for the OIDC provider. Here, web sign-in refers to console sign-in and gcloud sign-in through the browser. When `null`, the `web_sso_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool_provider.oidc.web_sso_config.new](#fn-oidcweb_sso_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `oidc` sub block.
+
+
+## obj oidc.web_sso_config
+
+
+
+### fn oidc.web_sso_config.new
+
+```ts
+new()
+```
+
+
+`google.iam_workforce_pool_provider.oidc.web_sso_config.new` constructs a new object with attributes and blocks configured for the `web_sso_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `assertion_claims_behavior` (`string`): The behavior for how OIDC Claims are included in the &#39;assertion&#39; object used for attribute mapping and attribute condition.
+* ONLY_ID_TOKEN_CLAIMS: Only include ID Token Claims. Possible values: [&#34;ONLY_ID_TOKEN_CLAIMS&#34;]
+  - `response_type` (`string`): The Response Type to request for in the OIDC Authorization Request for web sign-in.
+* ID_TOKEN: The &#39;response_type=id_token&#39; selection uses the Implicit Flow for web sign-in. Possible values: [&#34;ID_TOKEN&#34;]
+
+**Returns**:
+  - An attribute object that represents the `web_sso_config` sub block.
 
 
 ## obj saml

@@ -53,7 +53,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `config_bundle` (`string`): A path to the config bundle zip you want to upload. Must be defined if content is not.
+  - `config_bundle` (`string`): Path to the config zip bundle
   - `detect_md5hash` (`string`): A hash of local config bundle in string, user needs to use a Terraform Hash function of their choice. A change in hash will trigger an update. When `null`, the `detect_md5hash` field will be omitted from the resulting object.
   - `name` (`string`): The ID of the shared flow.
   - `org_id` (`string`): The Apigee Organization name associated with the Apigee instance.
@@ -81,7 +81,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `config_bundle` (`string`): A path to the config bundle zip you want to upload. Must be defined if content is not.
+  - `config_bundle` (`string`): Path to the config zip bundle
   - `detect_md5hash` (`string`): A hash of local config bundle in string, user needs to use a Terraform Hash function of their choice. A change in hash will trigger an update. When `null`, the `detect_md5hash` field will be omitted from the resulting object.
   - `name` (`string`): The ID of the shared flow.
   - `org_id` (`string`): The Apigee Organization name associated with the Apigee instance.
