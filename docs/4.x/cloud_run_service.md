@@ -53,10 +53,28 @@ This package contains functions and utilities for setting up the resource using 
           * [`fn new()`](#fn-templatespeccontainersenv_fromsecret_refnew)
           * [`obj template.spec.containers.env_from.secret_ref.local_object_reference`](#obj-templatespeccontainersenv_fromsecret_reflocal_object_reference)
             * [`fn new()`](#fn-templatespeccontainersenv_fromsecret_reflocal_object_referencenew)
+      * [`obj template.spec.containers.liveness_probe`](#obj-templatespeccontainersliveness_probe)
+        * [`fn new()`](#fn-templatespeccontainersliveness_probenew)
+        * [`obj template.spec.containers.liveness_probe.grpc`](#obj-templatespeccontainersliveness_probegrpc)
+          * [`fn new()`](#fn-templatespeccontainersliveness_probegrpcnew)
+        * [`obj template.spec.containers.liveness_probe.http_get`](#obj-templatespeccontainersliveness_probehttp_get)
+          * [`fn new()`](#fn-templatespeccontainersliveness_probehttp_getnew)
+          * [`obj template.spec.containers.liveness_probe.http_get.http_headers`](#obj-templatespeccontainersliveness_probehttp_gethttp_headers)
+            * [`fn new()`](#fn-templatespeccontainersliveness_probehttp_gethttp_headersnew)
       * [`obj template.spec.containers.ports`](#obj-templatespeccontainersports)
         * [`fn new()`](#fn-templatespeccontainersportsnew)
       * [`obj template.spec.containers.resources`](#obj-templatespeccontainersresources)
         * [`fn new()`](#fn-templatespeccontainersresourcesnew)
+      * [`obj template.spec.containers.startup_probe`](#obj-templatespeccontainersstartup_probe)
+        * [`fn new()`](#fn-templatespeccontainersstartup_probenew)
+        * [`obj template.spec.containers.startup_probe.grpc`](#obj-templatespeccontainersstartup_probegrpc)
+          * [`fn new()`](#fn-templatespeccontainersstartup_probegrpcnew)
+        * [`obj template.spec.containers.startup_probe.http_get`](#obj-templatespeccontainersstartup_probehttp_get)
+          * [`fn new()`](#fn-templatespeccontainersstartup_probehttp_getnew)
+          * [`obj template.spec.containers.startup_probe.http_get.http_headers`](#obj-templatespeccontainersstartup_probehttp_gethttp_headers)
+            * [`fn new()`](#fn-templatespeccontainersstartup_probehttp_gethttp_headersnew)
+        * [`obj template.spec.containers.startup_probe.tcp_socket`](#obj-templatespeccontainersstartup_probetcp_socket)
+          * [`fn new()`](#fn-templatespeccontainersstartup_probetcp_socketnew)
       * [`obj template.spec.containers.volume_mounts`](#obj-templatespeccontainersvolume_mounts)
         * [`fn new()`](#fn-templatespeccontainersvolume_mountsnew)
     * [`obj template.spec.volumes`](#obj-templatespecvolumes)
@@ -607,8 +625,12 @@ All invalid keys will be reported as an event when the container is starting.
 When a key exists in multiple sources, the value associated with the last source will
 take precedence. Values defined by an Env with a duplicate key will take
 precedence. When `null`, the `env_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.new](#fn-templatetemplatespecenv_fromnew) constructor.
+  - `liveness_probe` (`list[obj]`): Periodic probe of container liveness. Container will be restarted if the probe fails. When `null`, the `liveness_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.liveness_probe.new](#fn-templatetemplatespecliveness_probenew) constructor.
   - `ports` (`list[obj]`): List of open ports in the container. When `null`, the `ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.ports.new](#fn-templatetemplatespecportsnew) constructor.
   - `resources` (`list[obj]`): Compute Resources required by this container. Used to set values such as max memory When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.resources.new](#fn-templatetemplatespecresourcesnew) constructor.
+  - `startup_probe` (`list[obj]`): Startup probe of application within the container.
+All other probes are disabled if a startup probe is provided, until it
+succeeds. Container will not be added to service endpoints if the probe fails. When `null`, the `startup_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.startup_probe.new](#fn-templatetemplatespecstartup_probenew) constructor.
   - `volume_mounts` (`list[obj]`): Volume to mount into the container&#39;s filesystem.
 Only supports SecretVolumeSources. When `null`, the `volume_mounts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.volume_mounts.new](#fn-templatetemplatespecvolume_mountsnew) constructor.
 
@@ -683,10 +705,10 @@ Terraform sub block.
 **Args**:
   - `key` (`string`): A Cloud Secret Manager secret version. Must be &#39;latest&#39; for the latest
 version or an integer for a specific version.
-  - `name` (`string`): The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. 
-If the secret is in another project, you must define an alias. 
-An alias definition has the form: :projects/{project-id|project-number}/secrets/. 
-If multiple alias definitions are needed, they must be separated by commas. 
+  - `name` (`string`): The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project.
+If the secret is in another project, you must define an alias.
+An alias definition has the form: :projects/{project-id|project-number}/secrets/.
+If multiple alias definitions are needed, they must be separated by commas.
 The alias definitions must be set on the run.googleapis.com/secrets annotation.
 
 **Returns**:
@@ -812,6 +834,117 @@ Terraform sub block.
   - An attribute object that represents the `local_object_reference` sub block.
 
 
+## obj template.spec.containers.liveness_probe
+
+
+
+### fn template.spec.containers.liveness_probe.new
+
+```ts
+new()
+```
+
+
+`google.cloud_run_service.template.spec.containers.liveness_probe.new` constructs a new object with attributes and blocks configured for the `liveness_probe`
+Terraform sub block.
+
+
+
+**Args**:
+  - `failure_threshold` (`number`): Minimum consecutive failures for the probe to be considered failed after
+having succeeded. Defaults to 3. Minimum value is 1. When `null`, the `failure_threshold` field will be omitted from the resulting object.
+  - `initial_delay_seconds` (`number`): Number of seconds after the container has started before the probe is
+initiated.
+Defaults to 0 seconds. Minimum value is 0. Maximum value is 3600. When `null`, the `initial_delay_seconds` field will be omitted from the resulting object.
+  - `period_seconds` (`number`): How often (in seconds) to perform the probe.
+Default to 10 seconds. Minimum value is 1. Maximum value is 3600. When `null`, the `period_seconds` field will be omitted from the resulting object.
+  - `timeout_seconds` (`number`): Number of seconds after which the probe times out.
+Defaults to 1 second. Minimum value is 1. Maximum value is 3600.
+Must be smaller than period_seconds. When `null`, the `timeout_seconds` field will be omitted from the resulting object.
+  - `grpc` (`list[obj]`): GRPC specifies an action involving a GRPC port. When `null`, the `grpc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.liveness_probe.grpc.new](#fn-templatetemplatespeccontainersgrpcnew) constructor.
+  - `http_get` (`list[obj]`): HttpGet specifies the http request to perform. When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.liveness_probe.http_get.new](#fn-templatetemplatespeccontainershttp_getnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `liveness_probe` sub block.
+
+
+## obj template.spec.containers.liveness_probe.grpc
+
+
+
+### fn template.spec.containers.liveness_probe.grpc.new
+
+```ts
+new()
+```
+
+
+`google.cloud_run_service.template.spec.containers.liveness_probe.grpc.new` constructs a new object with attributes and blocks configured for the `grpc`
+Terraform sub block.
+
+
+
+**Args**:
+  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.
+If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
+  - `service` (`string`): The name of the service to place in the gRPC HealthCheckRequest
+(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
+If this is not specified, the default behavior is defined by gRPC. When `null`, the `service` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `grpc` sub block.
+
+
+## obj template.spec.containers.liveness_probe.http_get
+
+
+
+### fn template.spec.containers.liveness_probe.http_get.new
+
+```ts
+new()
+```
+
+
+`google.cloud_run_service.template.spec.containers.liveness_probe.http_get.new` constructs a new object with attributes and blocks configured for the `http_get`
+Terraform sub block.
+
+
+
+**Args**:
+  - `path` (`string`): Path to access on the HTTP server. If set, it should not be empty string. When `null`, the `path` field will be omitted from the resulting object.
+  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.
+If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
+  - `http_headers` (`list[obj]`): Custom headers to set in the request. HTTP allows repeated headers. When `null`, the `http_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.liveness_probe.http_get.http_headers.new](#fn-templatetemplatespeccontainersliveness_probehttp_headersnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `http_get` sub block.
+
+
+## obj template.spec.containers.liveness_probe.http_get.http_headers
+
+
+
+### fn template.spec.containers.liveness_probe.http_get.http_headers.new
+
+```ts
+new()
+```
+
+
+`google.cloud_run_service.template.spec.containers.liveness_probe.http_get.http_headers.new` constructs a new object with attributes and blocks configured for the `http_headers`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): The header field name.
+  - `value` (`string`): The header field value. When `null`, the `value` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `http_headers` sub block.
+
+
 ## obj template.spec.containers.ports
 
 
@@ -865,6 +998,142 @@ https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachi
 
 **Returns**:
   - An attribute object that represents the `resources` sub block.
+
+
+## obj template.spec.containers.startup_probe
+
+
+
+### fn template.spec.containers.startup_probe.new
+
+```ts
+new()
+```
+
+
+`google.cloud_run_service.template.spec.containers.startup_probe.new` constructs a new object with attributes and blocks configured for the `startup_probe`
+Terraform sub block.
+
+
+
+**Args**:
+  - `failure_threshold` (`number`): Minimum consecutive failures for the probe to be considered failed after
+having succeeded. Defaults to 3. Minimum value is 1. When `null`, the `failure_threshold` field will be omitted from the resulting object.
+  - `initial_delay_seconds` (`number`): Number of seconds after the container has started before the probe is
+initiated.
+Defaults to 0 seconds. Minimum value is 0. Maximum value is 240. When `null`, the `initial_delay_seconds` field will be omitted from the resulting object.
+  - `period_seconds` (`number`): How often (in seconds) to perform the probe.
+Default to 10 seconds. Minimum value is 1. Maximum value is 240. When `null`, the `period_seconds` field will be omitted from the resulting object.
+  - `timeout_seconds` (`number`): Number of seconds after which the probe times out.
+Defaults to 1 second. Minimum value is 1. Maximum value is 3600.
+Must be smaller than periodSeconds. When `null`, the `timeout_seconds` field will be omitted from the resulting object.
+  - `grpc` (`list[obj]`): GRPC specifies an action involving a GRPC port. When `null`, the `grpc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.startup_probe.grpc.new](#fn-templatetemplatespeccontainersgrpcnew) constructor.
+  - `http_get` (`list[obj]`): HttpGet specifies the http request to perform. When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.startup_probe.http_get.new](#fn-templatetemplatespeccontainershttp_getnew) constructor.
+  - `tcp_socket` (`list[obj]`): TcpSocket specifies an action involving a TCP port. When `null`, the `tcp_socket` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.startup_probe.tcp_socket.new](#fn-templatetemplatespeccontainerstcp_socketnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `startup_probe` sub block.
+
+
+## obj template.spec.containers.startup_probe.grpc
+
+
+
+### fn template.spec.containers.startup_probe.grpc.new
+
+```ts
+new()
+```
+
+
+`google.cloud_run_service.template.spec.containers.startup_probe.grpc.new` constructs a new object with attributes and blocks configured for the `grpc`
+Terraform sub block.
+
+
+
+**Args**:
+  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.
+If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
+  - `service` (`string`): The name of the service to place in the gRPC HealthCheckRequest
+(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
+If this is not specified, the default behavior is defined by gRPC. When `null`, the `service` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `grpc` sub block.
+
+
+## obj template.spec.containers.startup_probe.http_get
+
+
+
+### fn template.spec.containers.startup_probe.http_get.new
+
+```ts
+new()
+```
+
+
+`google.cloud_run_service.template.spec.containers.startup_probe.http_get.new` constructs a new object with attributes and blocks configured for the `http_get`
+Terraform sub block.
+
+
+
+**Args**:
+  - `path` (`string`): Path to access on the HTTP server. If set, it should not be empty string. When `null`, the `path` field will be omitted from the resulting object.
+  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.
+If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
+  - `http_headers` (`list[obj]`): Custom headers to set in the request. HTTP allows repeated headers. When `null`, the `http_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.startup_probe.http_get.http_headers.new](#fn-templatetemplatespeccontainersstartup_probehttp_headersnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `http_get` sub block.
+
+
+## obj template.spec.containers.startup_probe.http_get.http_headers
+
+
+
+### fn template.spec.containers.startup_probe.http_get.http_headers.new
+
+```ts
+new()
+```
+
+
+`google.cloud_run_service.template.spec.containers.startup_probe.http_get.http_headers.new` constructs a new object with attributes and blocks configured for the `http_headers`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): The header field name.
+  - `value` (`string`): The header field value. When `null`, the `value` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `http_headers` sub block.
+
+
+## obj template.spec.containers.startup_probe.tcp_socket
+
+
+
+### fn template.spec.containers.startup_probe.tcp_socket.new
+
+```ts
+new()
+```
+
+
+`google.cloud_run_service.template.spec.containers.startup_probe.tcp_socket.new` constructs a new object with attributes and blocks configured for the `tcp_socket`
+Terraform sub block.
+
+
+
+**Args**:
+  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.
+If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `tcp_socket` sub block.
 
 
 ## obj template.spec.containers.volume_mounts

@@ -77,7 +77,7 @@ in length.
 If not provided, a random string starting with &#39;tf-&#39; will be selected. When `null`, the `name` field will be omitted from the resulting object.
   - `num_nodes` (`number`): The number of nodes allocated to this instance. Exactly one of either node_count or processing_units
 must be present in terraform. When `null`, the `num_nodes` field will be omitted from the resulting object.
-  - `processing_units` (`number`): The number of processing units allocated to this instance. Exactly one of processing_units 
+  - `processing_units` (`number`): The number of processing units allocated to this instance. Exactly one of processing_units
 or node_count must be present in terraform. When `null`, the `processing_units` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_instance.timeouts.new](#fn-timeoutsnew) constructor.
@@ -124,7 +124,7 @@ in length.
 If not provided, a random string starting with &#39;tf-&#39; will be selected. When `null`, the `name` field will be omitted from the resulting object.
   - `num_nodes` (`number`): The number of nodes allocated to this instance. Exactly one of either node_count or processing_units
 must be present in terraform. When `null`, the `num_nodes` field will be omitted from the resulting object.
-  - `processing_units` (`number`): The number of processing units allocated to this instance. Exactly one of processing_units 
+  - `processing_units` (`number`): The number of processing units allocated to this instance. Exactly one of processing_units
 or node_count must be present in terraform. When `null`, the `processing_units` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_instance.timeouts.new](#fn-timeoutsnew) constructor.

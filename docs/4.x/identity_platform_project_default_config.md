@@ -250,8 +250,8 @@ Terraform sub block.
 
 **Args**:
   - `enabled` (`bool`): Whether email auth is enabled for the project or not. When `null`, the `enabled` field will be omitted from the resulting object.
-  - `password_required` (`bool`): Whether a password is required for email auth or not. If true, both an email and 
-password must be provided to sign in. If false, a user may sign in via either 
+  - `password_required` (`bool`): Whether a password is required for email auth or not. If true, both an email and
+password must be provided to sign in. If false, a user may sign in via either
 email/password or email link. When `null`, the `password_required` field will be omitted from the resulting object.
 
 **Returns**:

@@ -604,7 +604,7 @@ Terraform sub block.
   - `is_ca` (`bool`): When true, the &#34;CA&#34; in Basic Constraints extension will be set to true. When `null`, the `is_ca` field will be omitted from the resulting object.
   - `max_issuer_path_length` (`number`): Refers to the &#34;path length constraint&#34; in Basic Constraints extension. For a CA certificate, this value describes the depth of
 subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. When `null`, the `max_issuer_path_length` field will be omitted from the resulting object.
-  - `non_ca` (`bool`): When true, the &#34;CA&#34; in Basic Constraints extension will be set to false. 
+  - `non_ca` (`bool`): When true, the &#34;CA&#34; in Basic Constraints extension will be set to false.
 If both &#39;is_ca&#39; and &#39;non_ca&#39; are unset, the extension will be omitted from the CA certificate. When `null`, the `non_ca` field will be omitted from the resulting object.
   - `zero_max_issuer_path_length` (`bool`): When true, the &#34;path length constraint&#34; in Basic Constraints extension will be set to 0.
 if both &#39;max_issuer_path_length&#39; and &#39;zero_max_issuer_path_length&#39; are unset,

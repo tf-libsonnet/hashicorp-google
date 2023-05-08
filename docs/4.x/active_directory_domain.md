@@ -56,17 +56,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `admin` (`string`): The name of delegated administrator account used to perform Active Directory operations. 
+  - `admin` (`string`): The name of delegated administrator account used to perform Active Directory operations.
 If not specified, setupadmin will be used. When `null`, the `admin` field will be omitted from the resulting object.
   - `authorized_networks` (`list`): The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
 If CIDR subnets overlap between networks, domain creation will fail. When `null`, the `authorized_networks` field will be omitted from the resulting object.
-  - `domain_name` (`string`): The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions, 
+  - `domain_name` (`string`): The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
   - `labels` (`obj`): Resource labels that can contain user-provided metadata When `null`, the `labels` field will be omitted from the resulting object.
-  - `locations` (`list`): Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/] 
+  - `locations` (`list`): Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `reserved_ip_range` (`string`): The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. 
+  - `reserved_ip_range` (`string`): The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
 Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.active_directory_domain.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -92,17 +92,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `admin` (`string`): The name of delegated administrator account used to perform Active Directory operations. 
+  - `admin` (`string`): The name of delegated administrator account used to perform Active Directory operations.
 If not specified, setupadmin will be used. When `null`, the `admin` field will be omitted from the resulting object.
   - `authorized_networks` (`list`): The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks.
 If CIDR subnets overlap between networks, domain creation will fail. When `null`, the `authorized_networks` field will be omitted from the resulting object.
-  - `domain_name` (`string`): The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions, 
+  - `domain_name` (`string`): The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
   - `labels` (`obj`): Resource labels that can contain user-provided metadata When `null`, the `labels` field will be omitted from the resulting object.
-  - `locations` (`list`): Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/] 
+  - `locations` (`list`): Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `reserved_ip_range` (`string`): The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger. 
+  - `reserved_ip_range` (`string`): The CIDR range of internal addresses that are reserved for this domain. Reserved networks must be /24 or larger.
 Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.active_directory_domain.timeouts.new](#fn-timeoutsnew) constructor.
 

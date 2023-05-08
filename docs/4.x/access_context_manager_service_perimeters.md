@@ -326,9 +326,9 @@ restrictions. Must contain a list of services. For example, if
 &#39;storage.googleapis.com&#39; is specified, access to the storage
 buckets inside the perimeter must meet the perimeter&#39;s access
 restrictions. When `null`, the `restricted_services` field will be omitted from the resulting object.
-  - `egress_policies` (`list[obj]`): List of EgressPolicies to apply to the perimeter. A perimeter may 
+  - `egress_policies` (`list[obj]`): List of EgressPolicies to apply to the perimeter. A perimeter may
 have multiple EgressPolicies, each of which is evaluated separately.
-Access is granted if any EgressPolicy grants it. Must be empty for 
+Access is granted if any EgressPolicy grants it. Must be empty for
 a perimeter bridge. When `null`, the `egress_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.spec.egress_policies.new](#fn-service_perimetersservice_perimetersegress_policiesnew) constructor.
   - `ingress_policies` (`list[obj]`): List of &#39;IngressPolicies&#39; to apply to the perimeter. A perimeter may
 have multiple &#39;IngressPolicies&#39;, each of which is evaluated
@@ -359,7 +359,7 @@ Terraform sub block.
 
 **Args**:
   - `egress_from` (`list[obj]`): Defines conditions on the source of a request causing this &#39;EgressPolicy&#39; to apply. When `null`, the `egress_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.spec.egress_policies.egress_from.new](#fn-service_perimetersservice_perimetersspecegress_fromnew) constructor.
-  - `egress_to` (`list[obj]`): Defines the conditions on the &#39;ApiOperation&#39; and destination resources that 
+  - `egress_to` (`list[obj]`): Defines the conditions on the &#39;ApiOperation&#39; and destination resources that
 cause this &#39;EgressPolicy&#39; to apply. When `null`, the `egress_to` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.spec.egress_policies.egress_to.new](#fn-service_perimetersservice_perimetersspecegress_tonew) constructor.
 
 **Returns**:
@@ -383,11 +383,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `identities` (`list`): A list of identities that are allowed access through this &#39;EgressPolicy&#39;. 
-Should be in the format of email address. The email address should 
+  - `identities` (`list`): A list of identities that are allowed access through this &#39;EgressPolicy&#39;.
+Should be in the format of email address. The email address should
 represent individual user or service account only. When `null`, the `identities` field will be omitted from the resulting object.
-  - `identity_type` (`string`): Specifies the type of identities that are allowed access to outside the 
-perimeter. If left unspecified, then members of &#39;identities&#39; field will 
+  - `identity_type` (`string`): Specifies the type of identities that are allowed access to outside the
+perimeter. If left unspecified, then members of &#39;identities&#39; field will
 be allowed access. Possible values: [&#34;IDENTITY_TYPE_UNSPECIFIED&#34;, &#34;ANY_IDENTITY&#34;, &#34;ANY_USER_ACCOUNT&#34;, &#34;ANY_SERVICE_ACCOUNT&#34;] When `null`, the `identity_type` field will be omitted from the resulting object.
 
 **Returns**:
@@ -414,12 +414,12 @@ Terraform sub block.
   - `external_resources` (`list`): A list of external resources that are allowed to be accessed. A request
 matches if it contains an external resource in this list (Example:
 s3://bucket/path). Currently &#39;*&#39; is not allowed. When `null`, the `external_resources` field will be omitted from the resulting object.
-  - `resources` (`list`): A list of resources, currently only projects in the form 
-&#39;projects/&lt;projectnumber&gt;&#39;, that match this to stanza. A request matches 
-if it contains a resource in this list. If * is specified for resources, 
-then this &#39;EgressTo&#39; rule will authorize access to all resources outside 
+  - `resources` (`list`): A list of resources, currently only projects in the form
+&#39;projects/&lt;projectnumber&gt;&#39;, that match this to stanza. A request matches
+if it contains a resource in this list. If * is specified for resources,
+then this &#39;EgressTo&#39; rule will authorize access to all resources outside
 the perimeter. When `null`, the `resources` field will be omitted from the resulting object.
-  - `operations` (`list[obj]`): A list of &#39;ApiOperations&#39; that this egress rule applies to. A request matches 
+  - `operations` (`list[obj]`): A list of &#39;ApiOperations&#39; that this egress rule applies to. A request matches
 if it contains an operation/service in this list. When `null`, the `operations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.spec.egress_policies.egress_to.operations.new](#fn-service_perimetersservice_perimetersspecegress_policiesoperationsnew) constructor.
 
 **Returns**:
@@ -443,12 +443,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `service_name` (`string`): The name of the API whose methods or permissions the &#39;IngressPolicy&#39; or 
-&#39;EgressPolicy&#39; want to allow. A single &#39;ApiOperation&#39; with serviceName 
+  - `service_name` (`string`): The name of the API whose methods or permissions the &#39;IngressPolicy&#39; or
+&#39;EgressPolicy&#39; want to allow. A single &#39;ApiOperation&#39; with serviceName
 field set to &#39;*&#39; will allow all methods AND permissions for all services. When `null`, the `service_name` field will be omitted from the resulting object.
-  - `method_selectors` (`list[obj]`): API methods or permissions to allow. Method or permission must belong 
-to the service specified by &#39;serviceName&#39; field. A single MethodSelector 
-entry with &#39;*&#39; specified for the &#39;method&#39; field will allow all methods 
+  - `method_selectors` (`list[obj]`): API methods or permissions to allow. Method or permission must belong
+to the service specified by &#39;serviceName&#39; field. A single MethodSelector
+entry with &#39;*&#39; specified for the &#39;method&#39; field will allow all methods
 AND permissions for the service specified in &#39;serviceName&#39;. When `null`, the `method_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.spec.egress_policies.egress_to.operations.method_selectors.new](#fn-service_perimetersservice_perimetersspecegress_policiesegress_tomethod_selectorsnew) constructor.
 
 **Returns**:
@@ -472,10 +472,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `method` (`string`): Value for &#39;method&#39; should be a valid method name for the corresponding 
-&#39;serviceName&#39; in &#39;ApiOperation&#39;. If &#39;*&#39; used as value for method, 
+  - `method` (`string`): Value for &#39;method&#39; should be a valid method name for the corresponding
+&#39;serviceName&#39; in &#39;ApiOperation&#39;. If &#39;*&#39; used as value for method,
 then ALL methods and permissions are allowed. When `null`, the `method` field will be omitted from the resulting object.
-  - `permission` (`string`): Value for permission should be a valid Cloud IAM permission for the 
+  - `permission` (`string`): Value for permission should be a valid Cloud IAM permission for the
 corresponding &#39;serviceName&#39; in &#39;ApiOperation&#39;. When `null`, the `permission` field will be omitted from the resulting object.
 
 **Returns**:
@@ -526,10 +526,10 @@ Terraform sub block.
 
 **Args**:
   - `identities` (`list`): A list of identities that are allowed access through this ingress policy.
-Should be in the format of email address. The email address should represent 
+Should be in the format of email address. The email address should represent
 individual user or service account only. When `null`, the `identities` field will be omitted from the resulting object.
-  - `identity_type` (`string`): Specifies the type of identities that are allowed access from outside the 
-perimeter. If left unspecified, then members of &#39;identities&#39; field will be 
+  - `identity_type` (`string`): Specifies the type of identities that are allowed access from outside the
+perimeter. If left unspecified, then members of &#39;identities&#39; field will be
 allowed access. Possible values: [&#34;IDENTITY_TYPE_UNSPECIFIED&#34;, &#34;ANY_IDENTITY&#34;, &#34;ANY_USER_ACCOUNT&#34;, &#34;ANY_SERVICE_ACCOUNT&#34;] When `null`, the `identity_type` field will be omitted from the resulting object.
   - `sources` (`list[obj]`): Sources that this &#39;IngressPolicy&#39; authorizes access from. When `null`, the `sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.spec.ingress_policies.ingress_from.sources.new](#fn-service_perimetersservice_perimetersspecingress_policiessourcesnew) constructor.
 
@@ -554,19 +554,19 @@ Terraform sub block.
 
 
 **Args**:
-  - `access_level` (`string`): An &#39;AccessLevel&#39; resource name that allow resources within the 
-&#39;ServicePerimeters&#39; to be accessed from the internet. &#39;AccessLevels&#39; listed 
+  - `access_level` (`string`): An &#39;AccessLevel&#39; resource name that allow resources within the
+&#39;ServicePerimeters&#39; to be accessed from the internet. &#39;AccessLevels&#39; listed
 must be in the same policy as this &#39;ServicePerimeter&#39;. Referencing a nonexistent
-&#39;AccessLevel&#39; will cause an error. If no &#39;AccessLevel&#39; names are listed, 
-resources within the perimeter can only be accessed via Google Cloud calls 
-with request origins within the perimeter. 
-Example &#39;accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.&#39; 
+&#39;AccessLevel&#39; will cause an error. If no &#39;AccessLevel&#39; names are listed,
+resources within the perimeter can only be accessed via Google Cloud calls
+with request origins within the perimeter.
+Example &#39;accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.&#39;
 If * is specified, then all IngressSources will be allowed. When `null`, the `access_level` field will be omitted from the resulting object.
-  - `resource` (`string`): A Google Cloud resource that is allowed to ingress the perimeter. 
-Requests from these resources will be allowed to access perimeter data. 
-Currently only projects are allowed. Format &#39;projects/{project_number}&#39; 
-The project may be in any Google Cloud organization, not just the 
-organization that the perimeter is defined in. &#39;*&#39; is not allowed, the case 
+  - `resource` (`string`): A Google Cloud resource that is allowed to ingress the perimeter.
+Requests from these resources will be allowed to access perimeter data.
+Currently only projects are allowed. Format &#39;projects/{project_number}&#39;
+The project may be in any Google Cloud organization, not just the
+organization that the perimeter is defined in. &#39;*&#39; is not allowed, the case
 of allowing all Google Cloud resources only is not supported. When `null`, the `resource` field will be omitted from the resulting object.
 
 **Returns**:
@@ -590,15 +590,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `resources` (`list`): A list of resources, currently only projects in the form 
+  - `resources` (`list`): A list of resources, currently only projects in the form
 &#39;projects/&lt;projectnumber&gt;&#39;, protected by this &#39;ServicePerimeter&#39;
 that are allowed to be accessed by sources defined in the
 corresponding &#39;IngressFrom&#39;. A request matches if it contains
 a resource in this list. If &#39;*&#39; is specified for resources,
-then this &#39;IngressTo&#39; rule will authorize access to all 
+then this &#39;IngressTo&#39; rule will authorize access to all
 resources inside the perimeter, provided that the request
 also matches the &#39;operations&#39; field. When `null`, the `resources` field will be omitted from the resulting object.
-  - `operations` (`list[obj]`): A list of &#39;ApiOperations&#39; the sources specified in corresponding &#39;IngressFrom&#39; 
+  - `operations` (`list[obj]`): A list of &#39;ApiOperations&#39; the sources specified in corresponding &#39;IngressFrom&#39;
 are allowed to perform in this &#39;ServicePerimeter&#39;. When `null`, the `operations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.spec.ingress_policies.ingress_to.operations.new](#fn-service_perimetersservice_perimetersspecingress_policiesoperationsnew) constructor.
 
 **Returns**:
@@ -622,12 +622,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `service_name` (`string`): The name of the API whose methods or permissions the &#39;IngressPolicy&#39; or 
-&#39;EgressPolicy&#39; want to allow. A single &#39;ApiOperation&#39; with &#39;serviceName&#39; 
+  - `service_name` (`string`): The name of the API whose methods or permissions the &#39;IngressPolicy&#39; or
+&#39;EgressPolicy&#39; want to allow. A single &#39;ApiOperation&#39; with &#39;serviceName&#39;
 field set to &#39;*&#39; will allow all methods AND permissions for all services. When `null`, the `service_name` field will be omitted from the resulting object.
-  - `method_selectors` (`list[obj]`): API methods or permissions to allow. Method or permission must belong to 
-the service specified by serviceName field. A single &#39;MethodSelector&#39; entry 
-with &#39;*&#39; specified for the method field will allow all methods AND 
+  - `method_selectors` (`list[obj]`): API methods or permissions to allow. Method or permission must belong to
+the service specified by serviceName field. A single &#39;MethodSelector&#39; entry
+with &#39;*&#39; specified for the method field will allow all methods AND
 permissions for the service specified in &#39;serviceName&#39;. When `null`, the `method_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.spec.ingress_policies.ingress_to.operations.method_selectors.new](#fn-service_perimetersservice_perimetersspecingress_policiesingress_tomethod_selectorsnew) constructor.
 
 **Returns**:
@@ -651,10 +651,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `method` (`string`): Value for method should be a valid method name for the corresponding 
-serviceName in &#39;ApiOperation&#39;. If &#39;*&#39; used as value for &#39;method&#39;, then 
+  - `method` (`string`): Value for method should be a valid method name for the corresponding
+serviceName in &#39;ApiOperation&#39;. If &#39;*&#39; used as value for &#39;method&#39;, then
 ALL methods and permissions are allowed. When `null`, the `method` field will be omitted from the resulting object.
-  - `permission` (`string`): Value for permission should be a valid Cloud IAM permission for the 
+  - `permission` (`string`): Value for permission should be a valid Cloud IAM permission for the
 corresponding &#39;serviceName&#39; in &#39;ApiOperation&#39;. When `null`, the `permission` field will be omitted from the resulting object.
 
 **Returns**:
@@ -722,9 +722,9 @@ restrictions. Must contain a list of services. For example, if
 &#39;storage.googleapis.com&#39; is specified, access to the storage
 buckets inside the perimeter must meet the perimeter&#39;s access
 restrictions. When `null`, the `restricted_services` field will be omitted from the resulting object.
-  - `egress_policies` (`list[obj]`): List of EgressPolicies to apply to the perimeter. A perimeter may 
+  - `egress_policies` (`list[obj]`): List of EgressPolicies to apply to the perimeter. A perimeter may
 have multiple EgressPolicies, each of which is evaluated separately.
-Access is granted if any EgressPolicy grants it. Must be empty for 
+Access is granted if any EgressPolicy grants it. Must be empty for
 a perimeter bridge. When `null`, the `egress_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.status.egress_policies.new](#fn-service_perimetersservice_perimetersegress_policiesnew) constructor.
   - `ingress_policies` (`list[obj]`): List of &#39;IngressPolicies&#39; to apply to the perimeter. A perimeter may
 have multiple &#39;IngressPolicies&#39;, each of which is evaluated
@@ -755,7 +755,7 @@ Terraform sub block.
 
 **Args**:
   - `egress_from` (`list[obj]`): Defines conditions on the source of a request causing this &#39;EgressPolicy&#39; to apply. When `null`, the `egress_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.status.egress_policies.egress_from.new](#fn-service_perimetersservice_perimetersstatusegress_fromnew) constructor.
-  - `egress_to` (`list[obj]`): Defines the conditions on the &#39;ApiOperation&#39; and destination resources that 
+  - `egress_to` (`list[obj]`): Defines the conditions on the &#39;ApiOperation&#39; and destination resources that
 cause this &#39;EgressPolicy&#39; to apply. When `null`, the `egress_to` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.status.egress_policies.egress_to.new](#fn-service_perimetersservice_perimetersstatusegress_tonew) constructor.
 
 **Returns**:
@@ -779,11 +779,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `identities` (`list`): A list of identities that are allowed access through this &#39;EgressPolicy&#39;. 
-Should be in the format of email address. The email address should 
+  - `identities` (`list`): A list of identities that are allowed access through this &#39;EgressPolicy&#39;.
+Should be in the format of email address. The email address should
 represent individual user or service account only. When `null`, the `identities` field will be omitted from the resulting object.
-  - `identity_type` (`string`): Specifies the type of identities that are allowed access to outside the 
-perimeter. If left unspecified, then members of &#39;identities&#39; field will 
+  - `identity_type` (`string`): Specifies the type of identities that are allowed access to outside the
+perimeter. If left unspecified, then members of &#39;identities&#39; field will
 be allowed access. Possible values: [&#34;IDENTITY_TYPE_UNSPECIFIED&#34;, &#34;ANY_IDENTITY&#34;, &#34;ANY_USER_ACCOUNT&#34;, &#34;ANY_SERVICE_ACCOUNT&#34;] When `null`, the `identity_type` field will be omitted from the resulting object.
 
 **Returns**:
@@ -810,12 +810,12 @@ Terraform sub block.
   - `external_resources` (`list`): A list of external resources that are allowed to be accessed. A request
 matches if it contains an external resource in this list (Example:
 s3://bucket/path). Currently &#39;*&#39; is not allowed. When `null`, the `external_resources` field will be omitted from the resulting object.
-  - `resources` (`list`): A list of resources, currently only projects in the form 
-&#39;projects/&lt;projectnumber&gt;&#39;, that match this to stanza. A request matches 
-if it contains a resource in this list. If * is specified for resources, 
-then this &#39;EgressTo&#39; rule will authorize access to all resources outside 
+  - `resources` (`list`): A list of resources, currently only projects in the form
+&#39;projects/&lt;projectnumber&gt;&#39;, that match this to stanza. A request matches
+if it contains a resource in this list. If * is specified for resources,
+then this &#39;EgressTo&#39; rule will authorize access to all resources outside
 the perimeter. When `null`, the `resources` field will be omitted from the resulting object.
-  - `operations` (`list[obj]`): A list of &#39;ApiOperations&#39; that this egress rule applies to. A request matches 
+  - `operations` (`list[obj]`): A list of &#39;ApiOperations&#39; that this egress rule applies to. A request matches
 if it contains an operation/service in this list. When `null`, the `operations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.status.egress_policies.egress_to.operations.new](#fn-service_perimetersservice_perimetersstatusegress_policiesoperationsnew) constructor.
 
 **Returns**:
@@ -839,12 +839,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `service_name` (`string`): The name of the API whose methods or permissions the &#39;IngressPolicy&#39; or 
-&#39;EgressPolicy&#39; want to allow. A single &#39;ApiOperation&#39; with serviceName 
+  - `service_name` (`string`): The name of the API whose methods or permissions the &#39;IngressPolicy&#39; or
+&#39;EgressPolicy&#39; want to allow. A single &#39;ApiOperation&#39; with serviceName
 field set to &#39;*&#39; will allow all methods AND permissions for all services. When `null`, the `service_name` field will be omitted from the resulting object.
-  - `method_selectors` (`list[obj]`): API methods or permissions to allow. Method or permission must belong 
-to the service specified by &#39;serviceName&#39; field. A single MethodSelector 
-entry with &#39;*&#39; specified for the &#39;method&#39; field will allow all methods 
+  - `method_selectors` (`list[obj]`): API methods or permissions to allow. Method or permission must belong
+to the service specified by &#39;serviceName&#39; field. A single MethodSelector
+entry with &#39;*&#39; specified for the &#39;method&#39; field will allow all methods
 AND permissions for the service specified in &#39;serviceName&#39;. When `null`, the `method_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.status.egress_policies.egress_to.operations.method_selectors.new](#fn-service_perimetersservice_perimetersstatusegress_policiesegress_tomethod_selectorsnew) constructor.
 
 **Returns**:
@@ -868,10 +868,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `method` (`string`): Value for &#39;method&#39; should be a valid method name for the corresponding 
-&#39;serviceName&#39; in &#39;ApiOperation&#39;. If &#39;*&#39; used as value for method, 
+  - `method` (`string`): Value for &#39;method&#39; should be a valid method name for the corresponding
+&#39;serviceName&#39; in &#39;ApiOperation&#39;. If &#39;*&#39; used as value for method,
 then ALL methods and permissions are allowed. When `null`, the `method` field will be omitted from the resulting object.
-  - `permission` (`string`): Value for permission should be a valid Cloud IAM permission for the 
+  - `permission` (`string`): Value for permission should be a valid Cloud IAM permission for the
 corresponding &#39;serviceName&#39; in &#39;ApiOperation&#39;. When `null`, the `permission` field will be omitted from the resulting object.
 
 **Returns**:
@@ -922,10 +922,10 @@ Terraform sub block.
 
 **Args**:
   - `identities` (`list`): A list of identities that are allowed access through this ingress policy.
-Should be in the format of email address. The email address should represent 
+Should be in the format of email address. The email address should represent
 individual user or service account only. When `null`, the `identities` field will be omitted from the resulting object.
-  - `identity_type` (`string`): Specifies the type of identities that are allowed access from outside the 
-perimeter. If left unspecified, then members of &#39;identities&#39; field will be 
+  - `identity_type` (`string`): Specifies the type of identities that are allowed access from outside the
+perimeter. If left unspecified, then members of &#39;identities&#39; field will be
 allowed access. Possible values: [&#34;IDENTITY_TYPE_UNSPECIFIED&#34;, &#34;ANY_IDENTITY&#34;, &#34;ANY_USER_ACCOUNT&#34;, &#34;ANY_SERVICE_ACCOUNT&#34;] When `null`, the `identity_type` field will be omitted from the resulting object.
   - `sources` (`list[obj]`): Sources that this &#39;IngressPolicy&#39; authorizes access from. When `null`, the `sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.status.ingress_policies.ingress_from.sources.new](#fn-service_perimetersservice_perimetersstatusingress_policiessourcesnew) constructor.
 
@@ -950,19 +950,19 @@ Terraform sub block.
 
 
 **Args**:
-  - `access_level` (`string`): An &#39;AccessLevel&#39; resource name that allow resources within the 
-&#39;ServicePerimeters&#39; to be accessed from the internet. &#39;AccessLevels&#39; listed 
+  - `access_level` (`string`): An &#39;AccessLevel&#39; resource name that allow resources within the
+&#39;ServicePerimeters&#39; to be accessed from the internet. &#39;AccessLevels&#39; listed
 must be in the same policy as this &#39;ServicePerimeter&#39;. Referencing a nonexistent
-&#39;AccessLevel&#39; will cause an error. If no &#39;AccessLevel&#39; names are listed, 
-resources within the perimeter can only be accessed via Google Cloud calls 
-with request origins within the perimeter. 
-Example &#39;accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.&#39; 
+&#39;AccessLevel&#39; will cause an error. If no &#39;AccessLevel&#39; names are listed,
+resources within the perimeter can only be accessed via Google Cloud calls
+with request origins within the perimeter.
+Example &#39;accessPolicies/MY_POLICY/accessLevels/MY_LEVEL.&#39;
 If * is specified, then all IngressSources will be allowed. When `null`, the `access_level` field will be omitted from the resulting object.
-  - `resource` (`string`): A Google Cloud resource that is allowed to ingress the perimeter. 
-Requests from these resources will be allowed to access perimeter data. 
-Currently only projects are allowed. Format &#39;projects/{project_number}&#39; 
-The project may be in any Google Cloud organization, not just the 
-organization that the perimeter is defined in. &#39;*&#39; is not allowed, the case 
+  - `resource` (`string`): A Google Cloud resource that is allowed to ingress the perimeter.
+Requests from these resources will be allowed to access perimeter data.
+Currently only projects are allowed. Format &#39;projects/{project_number}&#39;
+The project may be in any Google Cloud organization, not just the
+organization that the perimeter is defined in. &#39;*&#39; is not allowed, the case
 of allowing all Google Cloud resources only is not supported. When `null`, the `resource` field will be omitted from the resulting object.
 
 **Returns**:
@@ -986,15 +986,15 @@ Terraform sub block.
 
 
 **Args**:
-  - `resources` (`list`): A list of resources, currently only projects in the form 
+  - `resources` (`list`): A list of resources, currently only projects in the form
 &#39;projects/&lt;projectnumber&gt;&#39;, protected by this &#39;ServicePerimeter&#39;
 that are allowed to be accessed by sources defined in the
 corresponding &#39;IngressFrom&#39;. A request matches if it contains
 a resource in this list. If &#39;*&#39; is specified for resources,
-then this &#39;IngressTo&#39; rule will authorize access to all 
+then this &#39;IngressTo&#39; rule will authorize access to all
 resources inside the perimeter, provided that the request
 also matches the &#39;operations&#39; field. When `null`, the `resources` field will be omitted from the resulting object.
-  - `operations` (`list[obj]`): A list of &#39;ApiOperations&#39; the sources specified in corresponding &#39;IngressFrom&#39; 
+  - `operations` (`list[obj]`): A list of &#39;ApiOperations&#39; the sources specified in corresponding &#39;IngressFrom&#39;
 are allowed to perform in this &#39;ServicePerimeter&#39;. When `null`, the `operations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.status.ingress_policies.ingress_to.operations.new](#fn-service_perimetersservice_perimetersstatusingress_policiesoperationsnew) constructor.
 
 **Returns**:
@@ -1018,12 +1018,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `service_name` (`string`): The name of the API whose methods or permissions the &#39;IngressPolicy&#39; or 
-&#39;EgressPolicy&#39; want to allow. A single &#39;ApiOperation&#39; with &#39;serviceName&#39; 
+  - `service_name` (`string`): The name of the API whose methods or permissions the &#39;IngressPolicy&#39; or
+&#39;EgressPolicy&#39; want to allow. A single &#39;ApiOperation&#39; with &#39;serviceName&#39;
 field set to &#39;*&#39; will allow all methods AND permissions for all services. When `null`, the `service_name` field will be omitted from the resulting object.
-  - `method_selectors` (`list[obj]`): API methods or permissions to allow. Method or permission must belong to 
-the service specified by serviceName field. A single &#39;MethodSelector&#39; entry 
-with &#39;*&#39; specified for the method field will allow all methods AND 
+  - `method_selectors` (`list[obj]`): API methods or permissions to allow. Method or permission must belong to
+the service specified by serviceName field. A single &#39;MethodSelector&#39; entry
+with &#39;*&#39; specified for the method field will allow all methods AND
 permissions for the service specified in &#39;serviceName&#39;. When `null`, the `method_selectors` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeters.service_perimeters.status.ingress_policies.ingress_to.operations.method_selectors.new](#fn-service_perimetersservice_perimetersstatusingress_policiesingress_tomethod_selectorsnew) constructor.
 
 **Returns**:
@@ -1047,10 +1047,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `method` (`string`): Value for method should be a valid method name for the corresponding 
-serviceName in &#39;ApiOperation&#39;. If &#39;*&#39; used as value for &#39;method&#39;, then 
+  - `method` (`string`): Value for method should be a valid method name for the corresponding
+serviceName in &#39;ApiOperation&#39;. If &#39;*&#39; used as value for &#39;method&#39;, then
 ALL methods and permissions are allowed. When `null`, the `method` field will be omitted from the resulting object.
-  - `permission` (`string`): Value for permission should be a valid Cloud IAM permission for the 
+  - `permission` (`string`): Value for permission should be a valid Cloud IAM permission for the
 corresponding &#39;serviceName&#39; in &#39;ApiOperation&#39;. When `null`, the `permission` field will be omitted from the resulting object.
 
 **Returns**:

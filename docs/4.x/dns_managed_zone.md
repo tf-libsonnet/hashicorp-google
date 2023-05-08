@@ -713,8 +713,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `gke_cluster_name` (`string`): The resource name of the cluster to bind this ManagedZone to.  
-This should be specified in the format like  
+  - `gke_cluster_name` (`string`): The resource name of the cluster to bind this ManagedZone to.
+This should be specified in the format like
 &#39;projects/*/locations/*/clusters/*&#39;
 
 **Returns**:

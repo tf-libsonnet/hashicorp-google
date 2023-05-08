@@ -87,7 +87,7 @@ The allowed duration for this deadline is:
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
 * **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34; When `null`, the `attempt_deadline` field will be omitted from the resulting object.
-  - `description` (`string`): A human-readable description for the job. 
+  - `description` (`string`): A human-readable description for the job.
 This string must not contain more than 500 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): The name of the job.
   - `paused` (`bool`): Sets the job to a paused state. Jobs default to being enabled when this property is not set. When `null`, the `paused` field will be omitted from the resulting object.
@@ -97,16 +97,16 @@ This string must not contain more than 500 characters. When `null`, the `descrip
   - `time_zone` (`string`): Specifies the time zone to be used in interpreting schedule.
 The value of this field must be a time zone name from the tz database. When `null`, the `time_zone` field will be omitted from the resulting object.
   - `app_engine_http_target` (`list[obj]`): App Engine HTTP target.
-If the job providers a App Engine HTTP target the cron will 
+If the job providers a App Engine HTTP target the cron will
 send a request to the service instance When `null`, the `app_engine_http_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.app_engine_http_target.new](#fn-app_engine_http_targetnew) constructor.
   - `http_target` (`list[obj]`): HTTP target.
-If the job providers a http_target the cron will 
+If the job providers a http_target the cron will
 send a request to the targeted url When `null`, the `http_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.new](#fn-http_targetnew) constructor.
   - `pubsub_target` (`list[obj]`): Pub/Sub target
 If the job providers a Pub/Sub target the cron will publish
 a message to the provided topic When `null`, the `pubsub_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.pubsub_target.new](#fn-pubsub_targetnew) constructor.
-  - `retry_config` (`list[obj]`): By default, if a job does not complete successfully, 
-meaning that an acknowledgement is not received from the handler, 
+  - `retry_config` (`list[obj]`): By default, if a job does not complete successfully,
+meaning that an acknowledgement is not received from the handler,
 then it will be retried with exponential backoff according to the settings When `null`, the `retry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.retry_config.new](#fn-retry_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -140,7 +140,7 @@ The allowed duration for this deadline is:
 * For App Engine HTTP targets, between 15 seconds and 24 hours.
 * **Note**: For PubSub targets, this field is ignored - setting it will introduce an unresolvable diff.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34; When `null`, the `attempt_deadline` field will be omitted from the resulting object.
-  - `description` (`string`): A human-readable description for the job. 
+  - `description` (`string`): A human-readable description for the job.
 This string must not contain more than 500 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `name` (`string`): The name of the job.
   - `paused` (`bool`): Sets the job to a paused state. Jobs default to being enabled when this property is not set. When `null`, the `paused` field will be omitted from the resulting object.
@@ -150,16 +150,16 @@ This string must not contain more than 500 characters. When `null`, the `descrip
   - `time_zone` (`string`): Specifies the time zone to be used in interpreting schedule.
 The value of this field must be a time zone name from the tz database. When `null`, the `time_zone` field will be omitted from the resulting object.
   - `app_engine_http_target` (`list[obj]`): App Engine HTTP target.
-If the job providers a App Engine HTTP target the cron will 
+If the job providers a App Engine HTTP target the cron will
 send a request to the service instance When `null`, the `app_engine_http_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.app_engine_http_target.new](#fn-app_engine_http_targetnew) constructor.
   - `http_target` (`list[obj]`): HTTP target.
-If the job providers a http_target the cron will 
+If the job providers a http_target the cron will
 send a request to the targeted url When `null`, the `http_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.http_target.new](#fn-http_targetnew) constructor.
   - `pubsub_target` (`list[obj]`): Pub/Sub target
 If the job providers a Pub/Sub target the cron will publish
 a message to the provided topic When `null`, the `pubsub_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.pubsub_target.new](#fn-pubsub_targetnew) constructor.
-  - `retry_config` (`list[obj]`): By default, if a job does not complete successfully, 
-meaning that an acknowledgement is not received from the handler, 
+  - `retry_config` (`list[obj]`): By default, if a job does not complete successfully,
+meaning that an acknowledgement is not received from the handler,
 then it will be retried with exponential backoff according to the settings When `null`, the `retry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.retry_config.new](#fn-retry_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -496,19 +496,19 @@ Terraform sub block.
 
 
 **Args**:
-  - `body` (`string`): HTTP request body. 
-A request body is allowed only if the HTTP method is POST or PUT. 
+  - `body` (`string`): HTTP request body.
+A request body is allowed only if the HTTP method is POST or PUT.
 It will result in invalid argument error to set a body on a job with an incompatible HttpMethod.
 
 A base64-encoded string. When `null`, the `body` field will be omitted from the resulting object.
   - `headers` (`obj`): HTTP request headers.
-This map contains the header field names and values. 
+This map contains the header field names and values.
 Headers can be set when the job is created. When `null`, the `headers` field will be omitted from the resulting object.
   - `http_method` (`string`): Which HTTP method to use for the request. When `null`, the `http_method` field will be omitted from the resulting object.
   - `relative_uri` (`string`): The relative URI.
-The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative URL. 
-It can contain a path, query string arguments, and \# fragments. 
-If the relative URL is empty, then the root path &#34;/&#34; will be used. 
+The relative URL must begin with &#34;/&#34; and must be a valid HTTP relative URL.
+It can contain a path, query string arguments, and \# fragments.
+If the relative URL is empty, then the root path &#34;/&#34; will be used.
 No spaces are allowed, and the maximum length allowed is 2083 characters
   - `app_engine_routing` (`list[obj]`): App Engine Routing setting for the job. When `null`, the `app_engine_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_scheduler_job.app_engine_http_target.app_engine_routing.new](#fn-app_engine_http_targetapp_engine_routingnew) constructor.
 
@@ -561,12 +561,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `body` (`string`): HTTP request body. 
-A request body is allowed only if the HTTP method is POST, PUT, or PATCH. 
+  - `body` (`string`): HTTP request body.
+A request body is allowed only if the HTTP method is POST, PUT, or PATCH.
 It is an error to set body on a job with an incompatible HttpMethod.
 
 A base64-encoded string. When `null`, the `body` field will be omitted from the resulting object.
-  - `headers` (`obj`): This map contains the header field names and values. 
+  - `headers` (`obj`): This map contains the header field names and values.
 Repeated headers are not supported, but a header value can contain commas. When `null`, the `headers` field will be omitted from the resulting object.
   - `http_method` (`string`): Which HTTP method to use for the request. When `null`, the `http_method` field will be omitted from the resulting object.
   - `uri` (`string`): The full URI path that the request will be sent to.
@@ -683,15 +683,15 @@ Terraform sub block.
   - `max_backoff_duration` (`string`): The maximum amount of time to wait before retrying a job after it fails.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. When `null`, the `max_backoff_duration` field will be omitted from the resulting object.
   - `max_doublings` (`number`): The time between retries will double maxDoublings times.
-A job&#39;s retry interval starts at minBackoffDuration, 
-then doubles maxDoublings times, then increases linearly, 
+A job&#39;s retry interval starts at minBackoffDuration,
+then doubles maxDoublings times, then increases linearly,
 and finally retries retries at intervals of maxBackoffDuration up to retryCount times. When `null`, the `max_doublings` field will be omitted from the resulting object.
-  - `max_retry_duration` (`string`): The time limit for retrying a failed job, measured from time when an execution was first attempted. 
+  - `max_retry_duration` (`string`): The time limit for retrying a failed job, measured from time when an execution was first attempted.
 If specified with retryCount, the job will be retried until both limits are reached.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. When `null`, the `max_retry_duration` field will be omitted from the resulting object.
   - `min_backoff_duration` (`string`): The minimum amount of time to wait before retrying a job after it fails.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. When `null`, the `min_backoff_duration` field will be omitted from the resulting object.
-  - `retry_count` (`number`): The number of attempts that the system will make to run a 
+  - `retry_count` (`number`): The number of attempts that the system will make to run a
 job using the exponential backoff procedure described by maxDoublings.
 Values greater than 5 and negative values are not allowed. When `null`, the `retry_count` field will be omitted from the resulting object.
 

@@ -65,9 +65,9 @@ a value of &#39;UTF8&#39; at creation time. When `null`, the `charset` field wil
 and Postgres&#39; [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
 for more details and supported values. Postgres databases only support
 a value of &#39;en_US.UTF8&#39; at creation time. When `null`, the `collation` field will be omitted from the resulting object.
-  - `deletion_policy` (`string`): The deletion policy for the database. Setting ABANDON allows the resource 
-to be abandoned rather than deleted. This is useful for Postgres, where databases cannot be 
-deleted from the API if there are users other than cloudsqlsuperuser with access. Possible 
+  - `deletion_policy` (`string`): The deletion policy for the database. Setting ABANDON allows the resource
+to be abandoned rather than deleted. This is useful for Postgres, where databases cannot be
+deleted from the API if there are users other than cloudsqlsuperuser with access. Possible
 values are: &#34;ABANDON&#34;, &#34;DELETE&#34;. Defaults to &#34;DELETE&#34;. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `instance` (`string`): The name of the Cloud SQL instance. This does not include the project
 ID.
@@ -108,9 +108,9 @@ a value of &#39;UTF8&#39; at creation time. When `null`, the `charset` field wil
 and Postgres&#39; [Collation Support](https://www.postgresql.org/docs/9.6/static/collation.html)
 for more details and supported values. Postgres databases only support
 a value of &#39;en_US.UTF8&#39; at creation time. When `null`, the `collation` field will be omitted from the resulting object.
-  - `deletion_policy` (`string`): The deletion policy for the database. Setting ABANDON allows the resource 
-to be abandoned rather than deleted. This is useful for Postgres, where databases cannot be 
-deleted from the API if there are users other than cloudsqlsuperuser with access. Possible 
+  - `deletion_policy` (`string`): The deletion policy for the database. Setting ABANDON allows the resource
+to be abandoned rather than deleted. This is useful for Postgres, where databases cannot be
+deleted from the API if there are users other than cloudsqlsuperuser with access. Possible
 values are: &#34;ABANDON&#34;, &#34;DELETE&#34;. Defaults to &#34;DELETE&#34;. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `instance` (`string`): The name of the Cloud SQL instance. This does not include the project
 ID.

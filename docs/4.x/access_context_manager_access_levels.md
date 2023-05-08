@@ -214,7 +214,7 @@ with a letter and only include alphanumeric and &#39;_&#39;.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
   - `title` (`string`): Human readable title. Must be unique within the Policy.
   - `basic` (`list[obj]`): A set of predefined conditions for the access level and a combining function. When `null`, the `basic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.basic.new](#fn-access_levelsbasicnew) constructor.
-  - `custom` (`list[obj]`): Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request. 
+  - `custom` (`list[obj]`): Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
 See CEL spec at: https://github.com/google/cel-spec. When `null`, the `custom` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.custom.new](#fn-access_levelscustomnew) constructor.
 
 **Returns**:
@@ -379,7 +379,7 @@ Terraform sub block.
 
 **Args**:
   - `expr` (`list[obj]`): Represents a textual expression in the Common Expression Language (CEL) syntax. CEL is a C-like expression language.
-This page details the objects and attributes that are used to the build the CEL expressions for 
+This page details the objects and attributes that are used to the build the CEL expressions for
 custom access levels - https://cloud.google.com/access-context-manager/docs/custom-access-level-spec. When `null`, the `expr` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.custom.expr.new](#fn-access_levelsaccess_levelsexprnew) constructor.
 
 **Returns**:

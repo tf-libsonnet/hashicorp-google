@@ -141,7 +141,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   },
   private_visibility_config:: {
     gke_clusters:: {
-      '#new':: d.fn(help='\n`google.dns_managed_zone.private_visibility_config.gke_clusters.new` constructs a new object with attributes and blocks configured for the `gke_clusters`\nTerraform sub block.\n\n\n\n**Args**:\n  - `gke_cluster_name` (`string`): The resource name of the cluster to bind this ManagedZone to.  \nThis should be specified in the format like  \n&#39;projects/*/locations/*/clusters/*&#39;\n\n**Returns**:\n  - An attribute object that represents the `gke_clusters` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.dns_managed_zone.private_visibility_config.gke_clusters.new` constructs a new object with attributes and blocks configured for the `gke_clusters`\nTerraform sub block.\n\n\n\n**Args**:\n  - `gke_cluster_name` (`string`): The resource name of the cluster to bind this ManagedZone to.\nThis should be specified in the format like\n&#39;projects/*/locations/*/clusters/*&#39;\n\n**Returns**:\n  - An attribute object that represents the `gke_clusters` sub block.\n', args=[]),
       new(
         gke_cluster_name
       ):: std.prune(a={

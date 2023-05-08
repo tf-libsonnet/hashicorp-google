@@ -65,9 +65,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `auto_renew` (`bool`): Specifies whether to enable automatic renewal for the commitment. 
-The default value is false if not specified. 
-If the field is set to true, the commitment will be automatically renewed for either 
+  - `auto_renew` (`bool`): Specifies whether to enable automatic renewal for the commitment.
+The default value is false if not specified.
+If the field is set to true, the commitment will be automatically renewed for either
 one or three years according to the terms of the existing commitment. When `null`, the `auto_renew` field will be omitted from the resulting object.
   - `category` (`string`): The category of the commitment. Category MACHINE specifies commitments composed of
 machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE
@@ -83,12 +83,12 @@ character, which cannot be a dash.
 The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years). Possible values: [&#34;TWELVE_MONTH&#34;, &#34;THIRTY_SIX_MONTH&#34;]
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where this commitment may be used. When `null`, the `region` field will be omitted from the resulting object.
-  - `type` (`string`): The type of commitment, which affects the discount rate and the eligible resources. 
+  - `type` (`string`): The type of commitment, which affects the discount rate and the eligible resources.
 Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized
 machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to
 accelerator optimized machines. Possible values: [&#34;MEMORY_OPTIMIZED&#34;, &#34;ACCELERATOR_OPTIMIZED&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `license_resource` (`list[obj]`): The license specification required as part of a license commitment. When `null`, the `license_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_commitment.license_resource.new](#fn-license_resourcenew) constructor.
-  - `resources` (`list[obj]`): A list of commitment amounts for particular resources. 
+  - `resources` (`list[obj]`): A list of commitment amounts for particular resources.
 Note that VCPU and MEMORY resource commitments must occur together. When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_commitment.resources.new](#fn-resourcesnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_commitment.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -114,9 +114,9 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `auto_renew` (`bool`): Specifies whether to enable automatic renewal for the commitment. 
-The default value is false if not specified. 
-If the field is set to true, the commitment will be automatically renewed for either 
+  - `auto_renew` (`bool`): Specifies whether to enable automatic renewal for the commitment.
+The default value is false if not specified.
+If the field is set to true, the commitment will be automatically renewed for either
 one or three years according to the terms of the existing commitment. When `null`, the `auto_renew` field will be omitted from the resulting object.
   - `category` (`string`): The category of the commitment. Category MACHINE specifies commitments composed of
 machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE
@@ -132,12 +132,12 @@ character, which cannot be a dash.
 The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years). Possible values: [&#34;TWELVE_MONTH&#34;, &#34;THIRTY_SIX_MONTH&#34;]
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where this commitment may be used. When `null`, the `region` field will be omitted from the resulting object.
-  - `type` (`string`): The type of commitment, which affects the discount rate and the eligible resources. 
+  - `type` (`string`): The type of commitment, which affects the discount rate and the eligible resources.
 Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized
 machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to
 accelerator optimized machines. Possible values: [&#34;MEMORY_OPTIMIZED&#34;, &#34;ACCELERATOR_OPTIMIZED&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `license_resource` (`list[obj]`): The license specification required as part of a license commitment. When `null`, the `license_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_commitment.license_resource.new](#fn-license_resourcenew) constructor.
-  - `resources` (`list[obj]`): A list of commitment amounts for particular resources. 
+  - `resources` (`list[obj]`): A list of commitment amounts for particular resources.
 Note that VCPU and MEMORY resource commitments must occur together. When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_commitment.resources.new](#fn-resourcesnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_commitment.timeouts.new](#fn-timeoutsnew) constructor.
 

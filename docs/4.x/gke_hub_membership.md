@@ -281,7 +281,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `issuer` (`string`): A JSON Web Token (JWT) issuer URI. &#39;issuer&#39; must start with &#39;https://&#39; and // be a valid 
+  - `issuer` (`string`): A JSON Web Token (JWT) issuer URI. &#39;issuer&#39; must start with &#39;https://&#39; and // be a valid
 with length &lt;2000 characters. For example: &#39;https://container.googleapis.com/v1/projects/my-project/locations/us-west1/clusters/my-cluster&#39; (must be &#39;locations&#39; rather than &#39;zones&#39;). If the cluster is provisioned with Terraform, this is &#39;&#34;https://container.googleapis.com/v1/${google_container_cluster.my-cluster.id}&#34;&#39;.
 
 **Returns**:

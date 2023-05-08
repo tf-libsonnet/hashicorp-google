@@ -103,13 +103,13 @@ of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 - DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
-with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration 
+with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
 pipelines at low cost. Possible values: [&#34;BASIC&#34;, &#34;ENTERPRISE&#34;, &#34;DEVELOPER&#34;]
   - `version` (`string`): Current version of the Data Fusion. When `null`, the `version` field will be omitted from the resulting object.
   - `zone` (`string`): Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances use this field. When `null`, the `zone` field will be omitted from the resulting object.
   - `accelerators` (`list[obj]`): List of accelerators enabled for this CDF instance.
 
-If accelerators are enabled it is possible a permadiff will be created with the Options field. 
+If accelerators are enabled it is possible a permadiff will be created with the Options field.
 Users will need to either manually update their state file to include these diffed options, or include the field in a [lifecycle ignore changes block](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes). When `null`, the `accelerators` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.accelerators.new](#fn-acceleratorsnew) constructor.
   - `crypto_key_config` (`list[obj]`): The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK) feature. When `null`, the `crypto_key_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.crypto_key_config.new](#fn-crypto_key_confignew) constructor.
   - `event_publish_config` (`list[obj]`): Option to enable and pass metadata for event publishing. When `null`, the `event_publish_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.event_publish_config.new](#fn-event_publish_confignew) constructor.
@@ -161,13 +161,13 @@ of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 - DEVELOPER: Developer Data Fusion instance. In Developer type, the user will have all features available but
-with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration 
+with restrictive capabilities. This is to help enterprises design and develop their data ingestion and integration
 pipelines at low cost. Possible values: [&#34;BASIC&#34;, &#34;ENTERPRISE&#34;, &#34;DEVELOPER&#34;]
   - `version` (`string`): Current version of the Data Fusion. When `null`, the `version` field will be omitted from the resulting object.
   - `zone` (`string`): Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances use this field. When `null`, the `zone` field will be omitted from the resulting object.
   - `accelerators` (`list[obj]`): List of accelerators enabled for this CDF instance.
 
-If accelerators are enabled it is possible a permadiff will be created with the Options field. 
+If accelerators are enabled it is possible a permadiff will be created with the Options field.
 Users will need to either manually update their state file to include these diffed options, or include the field in a [lifecycle ignore changes block](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes). When `null`, the `accelerators` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.accelerators.new](#fn-acceleratorsnew) constructor.
   - `crypto_key_config` (`list[obj]`): The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK) feature. When `null`, the `crypto_key_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.crypto_key_config.new](#fn-crypto_key_confignew) constructor.
   - `event_publish_config` (`list[obj]`): Option to enable and pass metadata for event publishing. When `null`, the `event_publish_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_fusion_instance.event_publish_config.new](#fn-event_publish_confignew) constructor.

@@ -622,8 +622,8 @@ See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encr
 If absent, the Compute Engine Service Agent service account is used. When `null`, the `kms_key_service_account` field will be omitted from the resulting object.
   - `raw_key` (`string`): Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource. When `null`, the `raw_key` field will be omitted from the resulting object.
-  - `rsa_encrypted_key` (`string`): Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit 
-customer-supplied encryption key to either encrypt or decrypt 
+  - `rsa_encrypted_key` (`string`): Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit
+customer-supplied encryption key to either encrypt or decrypt
 this resource. You can provide either the rawKey or the rsaEncryptedKey. When `null`, the `rsa_encrypted_key` field will be omitted from the resulting object.
 
 **Returns**:

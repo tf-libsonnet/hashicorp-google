@@ -64,8 +64,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `alias` (`string`): Alias for the key/certificate pair. Values must match the regular expression [\w\s-.]{1,255}. 
-This must be provided for all formats except selfsignedcert; self-signed certs may specify the alias in either 
+  - `alias` (`string`): Alias for the key/certificate pair. Values must match the regular expression [\w\s-.]{1,255}.
+This must be provided for all formats except selfsignedcert; self-signed certs may specify the alias in either
 this parameter or the JSON body.
   - `cert_validity_in_days` (`number`): Validity duration of certificate, in days. Accepts positive non-zero value. Defaults to 365. When `null`, the `cert_validity_in_days` field will be omitted from the resulting object.
   - `environment` (`string`): The Apigee environment name
@@ -99,8 +99,8 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `alias` (`string`): Alias for the key/certificate pair. Values must match the regular expression [\w\s-.]{1,255}. 
-This must be provided for all formats except selfsignedcert; self-signed certs may specify the alias in either 
+  - `alias` (`string`): Alias for the key/certificate pair. Values must match the regular expression [\w\s-.]{1,255}.
+This must be provided for all formats except selfsignedcert; self-signed certs may specify the alias in either
 this parameter or the JSON body.
   - `cert_validity_in_days` (`number`): Validity duration of certificate, in days. Accepts positive non-zero value. Defaults to 365. When `null`, the `cert_validity_in_days` field will be omitted from the resulting object.
   - `environment` (`string`): The Apigee environment name

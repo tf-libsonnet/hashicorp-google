@@ -436,9 +436,9 @@ Terraform sub block.
   - `branch_name` (`string`): Regex matching branches to build. When `null`, the `branch_name` field will be omitted from the resulting object.
   - `commit_sha` (`string`): Regex matching tags to build. When `null`, the `commit_sha` field will be omitted from the resulting object.
   - `dir` (`string`): Directory, relative to the source root, in which to run the build. When `null`, the `dir` field will be omitted from the resulting object.
-  - `invert_regex` (`bool`): Only trigger a build if the revision regex does 
+  - `invert_regex` (`bool`): Only trigger a build if the revision regex does
 NOT match the revision regex. When `null`, the `invert_regex` field will be omitted from the resulting object.
-  - `project_id` (`string`): ID of the project that owns the Cloud Source Repository. If omitted, the 
+  - `project_id` (`string`): ID of the project that owns the Cloud Source Repository. If omitted, the
 project ID requesting the build is assumed. When `null`, the `project_id` field will be omitted from the resulting object.
   - `repo_name` (`string`): Name of the Cloud Source Repository. When `null`, the `repo_name` field will be omitted from the resulting object.
   - `tag_name` (`string`): Regex matching tags to build. When `null`, the `tag_name` field will be omitted from the resulting object.
@@ -465,7 +465,7 @@ Terraform sub block.
 
 **Args**:
   - `bucket` (`string`): Google Cloud Storage bucket containing the source When `null`, the `bucket` field will be omitted from the resulting object.
-  - `generation` (`number`): Google Cloud Storage generation for the object. If the generation 
+  - `generation` (`number`): Google Cloud Storage generation for the object. If the generation
 is omitted, the latest generation will be used. When `null`, the `generation` field will be omitted from the resulting object.
   - `object` (`string`): Google Cloud Storage object containing the source. When `null`, the `object` field will be omitted from the resulting object.
 

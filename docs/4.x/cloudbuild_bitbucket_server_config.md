@@ -71,9 +71,9 @@ Changing this field will result in deleting/ recreating the resource.
   - `host_uri` (`string`): Immutable. The URI of the Bitbucket Server host. Once this field has been set, it cannot be changed.
 If you need to change it, please create another BitbucketServerConfig.
   - `location` (`string`): The location of this bitbucket server config.
-  - `peered_network` (`string`): The network to be used when reaching out to the Bitbucket Server instance. The VPC network must be enabled for private service connection. 
-This should be set if the Bitbucket Server instance is hosted on-premises and not reachable by public internet. If this field is left empty, 
-no network peering will occur and calls to the Bitbucket Server instance will be made over the public internet. Must be in the format 
+  - `peered_network` (`string`): The network to be used when reaching out to the Bitbucket Server instance. The VPC network must be enabled for private service connection.
+This should be set if the Bitbucket Server instance is hosted on-premises and not reachable by public internet. If this field is left empty,
+no network peering will occur and calls to the Bitbucket Server instance will be made over the public internet. Must be in the format
 projects/{project}/global/networks/{network}, where {project} is a project number or id and {network} is the name of a VPC network in the project. When `null`, the `peered_network` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `ssl_ca` (`string`): SSL certificate to use for requests to Bitbucket Server. The format should be PEM format but the extension can be one of .pem, .cer, or .crt. When `null`, the `ssl_ca` field will be omitted from the resulting object.
@@ -110,9 +110,9 @@ Changing this field will result in deleting/ recreating the resource.
   - `host_uri` (`string`): Immutable. The URI of the Bitbucket Server host. Once this field has been set, it cannot be changed.
 If you need to change it, please create another BitbucketServerConfig.
   - `location` (`string`): The location of this bitbucket server config.
-  - `peered_network` (`string`): The network to be used when reaching out to the Bitbucket Server instance. The VPC network must be enabled for private service connection. 
-This should be set if the Bitbucket Server instance is hosted on-premises and not reachable by public internet. If this field is left empty, 
-no network peering will occur and calls to the Bitbucket Server instance will be made over the public internet. Must be in the format 
+  - `peered_network` (`string`): The network to be used when reaching out to the Bitbucket Server instance. The VPC network must be enabled for private service connection.
+This should be set if the Bitbucket Server instance is hosted on-premises and not reachable by public internet. If this field is left empty,
+no network peering will occur and calls to the Bitbucket Server instance will be made over the public internet. Must be in the format
 projects/{project}/global/networks/{network}, where {project} is a project number or id and {network} is the name of a VPC network in the project. When `null`, the `peered_network` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `ssl_ca` (`string`): SSL certificate to use for requests to Bitbucket Server. The format should be PEM format but the extension can be one of .pem, .cer, or .crt. When `null`, the `ssl_ca` field will be omitted from the resulting object.

@@ -64,7 +64,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `action` (`string`): The Action to perform when the client connection triggers the rule. Can currently be either &#34;allow&#34; or &#34;deny()&#34; where valid values for status are 403, 404, and 502.
+  - `action` (`string`): The Action to perform when the client connection triggers the rule. Valid actions are &#34;allow&#34;, &#34;deny&#34; and &#34;goto_next&#34;.
   - `description` (`string`): An optional description for this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `direction` (`string`): The direction in which this rule applies. Possible values: INGRESS, EGRESS
   - `disabled` (`bool`): Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled. When `null`, the `disabled` field will be omitted from the resulting object.
@@ -98,7 +98,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `action` (`string`): The Action to perform when the client connection triggers the rule. Can currently be either &#34;allow&#34; or &#34;deny()&#34; where valid values for status are 403, 404, and 502.
+  - `action` (`string`): The Action to perform when the client connection triggers the rule. Valid actions are &#34;allow&#34;, &#34;deny&#34; and &#34;goto_next&#34;.
   - `description` (`string`): An optional description for this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `direction` (`string`): The direction in which this rule applies. Possible values: INGRESS, EGRESS
   - `disabled` (`bool`): Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled. When `null`, the `disabled` field will be omitted from the resulting object.
@@ -348,8 +348,16 @@ Terraform sub block.
 
 
 **Args**:
+  - `dest_address_groups` (`list`): Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10. Destination address groups is only supported in Egress rules. When `null`, the `dest_address_groups` field will be omitted from the resulting object.
+  - `dest_fqdns` (`list`): Domain names that will be used to match against the resolved domain name of destination of traffic. Can only be specified if DIRECTION is egress. When `null`, the `dest_fqdns` field will be omitted from the resulting object.
   - `dest_ip_ranges` (`list`): CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256. When `null`, the `dest_ip_ranges` field will be omitted from the resulting object.
+  - `dest_region_codes` (`list`): The Unicode country codes whose IP addresses will be used to match against the source of traffic. Can only be specified if DIRECTION is egress. When `null`, the `dest_region_codes` field will be omitted from the resulting object.
+  - `dest_threat_intelligences` (`list`): Name of the Google Cloud Threat Intelligence list. When `null`, the `dest_threat_intelligences` field will be omitted from the resulting object.
+  - `src_address_groups` (`list`): Address groups which should be matched against the traffic source. Maximum number of source address groups is 10. Source address groups is only supported in Ingress rules. When `null`, the `src_address_groups` field will be omitted from the resulting object.
+  - `src_fqdns` (`list`): Domain names that will be used to match against the resolved domain name of source of traffic. Can only be specified if DIRECTION is ingress. When `null`, the `src_fqdns` field will be omitted from the resulting object.
   - `src_ip_ranges` (`list`): CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256. When `null`, the `src_ip_ranges` field will be omitted from the resulting object.
+  - `src_region_codes` (`list`): The Unicode country codes whose IP addresses will be used to match against the source of traffic. Can only be specified if DIRECTION is ingress. When `null`, the `src_region_codes` field will be omitted from the resulting object.
+  - `src_threat_intelligences` (`list`): Name of the Google Cloud Threat Intelligence list. When `null`, the `src_threat_intelligences` field will be omitted from the resulting object.
   - `layer4_configs` (`list[obj]`): Pairs of IP protocols and ports that the rule should match. When `null`, the `layer4_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_firewall_policy_rule.match.layer4_configs.new](#fn-matchlayer4_configsnew) constructor.
 
 **Returns**:
