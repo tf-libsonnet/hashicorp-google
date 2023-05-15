@@ -22,6 +22,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withNetwork()`](#fn-withnetwork)
 * [`fn withPeerNetwork()`](#fn-withpeernetwork)
+* [`fn withStackType()`](#fn-withstacktype)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj timeouts`](#obj-timeouts)
@@ -63,6 +64,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Name of the peering.
   - `network` (`string`): The primary network of the peering.
   - `peer_network` (`string`): The peer network in the peering. The peer network may belong to a different project.
+  - `stack_type` (`string`): Which IP version(s) of traffic and routes are allowed to be imported or exported between peer networks. The default value is IPV4_ONLY. Possible values: [&#34;IPV4_ONLY&#34;, &#34;IPV4_IPV6&#34;] When `null`, the `stack_type` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -94,6 +96,7 @@ injecting into a complete block.
   - `name` (`string`): Name of the peering.
   - `network` (`string`): The primary network of the peering.
   - `peer_network` (`string`): The peer network in the peering. The peer network may belong to a different project.
+  - `stack_type` (`string`): Which IP version(s) of traffic and routes are allowed to be imported or exported between peer networks. The default value is IPV4_ONLY. Possible values: [&#34;IPV4_ONLY&#34;, &#34;IPV4_IPV6&#34;] When `null`, the `stack_type` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_peering.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -210,6 +213,22 @@ Terraform resource block to set or update the peer_network field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `peer_network` field.
+
+
+### fn withStackType
+
+```ts
+withStackType()
+```
+
+`google.string.withStackType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the stack_type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `stack_type` field.
 
 
 ### fn withTimeouts
