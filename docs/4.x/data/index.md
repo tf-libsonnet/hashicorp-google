@@ -75,6 +75,7 @@ permalink: /data/
 * [container_registry_image](container_registry_image.md)
 * [container_registry_repository](container_registry_repository.md)
 * [dataproc_metastore_service](dataproc_metastore_service.md)
+* [datastream_static_ips](datastream_static_ips.md)
 * [dns_keys](dns_keys.md)
 * [dns_managed_zone](dns_managed_zone.md)
 * [dns_record_set](dns_record_set.md)

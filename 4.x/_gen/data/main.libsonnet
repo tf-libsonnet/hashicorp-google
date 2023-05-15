@@ -70,6 +70,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   container_registry_image: (import 'container_registry_image.libsonnet'),
   container_registry_repository: (import 'container_registry_repository.libsonnet'),
   dataproc_metastore_service: (import 'dataproc_metastore_service.libsonnet'),
+  datastream_static_ips: (import 'datastream_static_ips.libsonnet'),
   dns_keys: (import 'dns_keys.libsonnet'),
   dns_managed_zone: (import 'dns_managed_zone.libsonnet'),
   dns_record_set: (import 'dns_record_set.libsonnet'),

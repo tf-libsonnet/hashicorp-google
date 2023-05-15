@@ -377,6 +377,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   firebaserules_ruleset: (import 'resources/firebaserules_ruleset.libsonnet'),
   firestore_database: (import 'resources/firestore_database.libsonnet'),
   firestore_document: (import 'resources/firestore_document.libsonnet'),
+  firestore_field: (import 'resources/firestore_field.libsonnet'),
   firestore_index: (import 'resources/firestore_index.libsonnet'),
   folder: (import 'resources/folder.libsonnet'),
   folder_access_approval_settings: (import 'resources/folder_access_approval_settings.libsonnet'),
