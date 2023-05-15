@@ -123,7 +123,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): User-provided description of the Service. This field currently has a 512-character limit. When `null`, the `description` field will be omitted from the resulting object.
   - `ingress` (`string`): Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active. Possible values: [&#34;INGRESS_TRAFFIC_ALL&#34;, &#34;INGRESS_TRAFFIC_INTERNAL_ONLY&#34;, &#34;INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER&#34;] When `null`, the `ingress` field will be omitted from the resulting object.
   - `labels` (`obj`): Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google&#39;s billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run will populate some labels with &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. Those labels are read-only, and user changes will not be preserved. When `null`, the `labels` field will be omitted from the resulting object.
-  - `launch_stage` (`string`): The launch stage as defined by Google Cloud Platform Launch Stages. Cloud Run supports ALPHA, BETA, and GA. If no value is specified, GA is assumed. Possible values: [&#34;UNIMPLEMENTED&#34;, &#34;PRELAUNCH&#34;, &#34;EARLY_ACCESS&#34;, &#34;ALPHA&#34;, &#34;BETA&#34;, &#34;GA&#34;, &#34;DEPRECATED&#34;] When `null`, the `launch_stage` field will be omitted from the resulting object.
+  - `launch_stage` (`string`): The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA.
+If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features.
+
+For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: [&#34;UNIMPLEMENTED&#34;, &#34;PRELAUNCH&#34;, &#34;EARLY_ACCESS&#34;, &#34;ALPHA&#34;, &#34;BETA&#34;, &#34;GA&#34;, &#34;DEPRECATED&#34;] When `null`, the `launch_stage` field will be omitted from the resulting object.
   - `location` (`string`): The location of the cloud run service When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): Name of the Service.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -160,7 +163,10 @@ injecting into a complete block.
   - `description` (`string`): User-provided description of the Service. This field currently has a 512-character limit. When `null`, the `description` field will be omitted from the resulting object.
   - `ingress` (`string`): Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active. Possible values: [&#34;INGRESS_TRAFFIC_ALL&#34;, &#34;INGRESS_TRAFFIC_INTERNAL_ONLY&#34;, &#34;INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER&#34;] When `null`, the `ingress` field will be omitted from the resulting object.
   - `labels` (`obj`): Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google&#39;s billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run will populate some labels with &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. Those labels are read-only, and user changes will not be preserved. When `null`, the `labels` field will be omitted from the resulting object.
-  - `launch_stage` (`string`): The launch stage as defined by Google Cloud Platform Launch Stages. Cloud Run supports ALPHA, BETA, and GA. If no value is specified, GA is assumed. Possible values: [&#34;UNIMPLEMENTED&#34;, &#34;PRELAUNCH&#34;, &#34;EARLY_ACCESS&#34;, &#34;ALPHA&#34;, &#34;BETA&#34;, &#34;GA&#34;, &#34;DEPRECATED&#34;] When `null`, the `launch_stage` field will be omitted from the resulting object.
+  - `launch_stage` (`string`): The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA.
+If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features.
+
+For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: [&#34;UNIMPLEMENTED&#34;, &#34;PRELAUNCH&#34;, &#34;EARLY_ACCESS&#34;, &#34;ALPHA&#34;, &#34;BETA&#34;, &#34;GA&#34;, &#34;DEPRECATED&#34;] When `null`, the `launch_stage` field will be omitted from the resulting object.
   - `location` (`string`): The location of the cloud run service When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): Name of the Service.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
@@ -528,6 +534,7 @@ Terraform sub block.
   - `max_instance_request_concurrency` (`number`): Sets the maximum number of requests that each serving instance can receive. When `null`, the `max_instance_request_concurrency` field will be omitted from the resulting object.
   - `revision` (`string`): The unique name for the revision. If this field is omitted, it will be automatically generated based on the Service name. When `null`, the `revision` field will be omitted from the resulting object.
   - `service_account` (`string`): Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project&#39;s default service account. When `null`, the `service_account` field will be omitted from the resulting object.
+  - `session_affinity` (`bool`): Enables session affinity. For more information, go to https://cloud.google.com/run/docs/configuring/session-affinity When `null`, the `session_affinity` field will be omitted from the resulting object.
   - `timeout` (`string`): Max allowed time for an instance to respond to a request.
 
 A duration in seconds with up to nine fractional digits, ending with &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `timeout` field will be omitted from the resulting object.
@@ -693,7 +700,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
+  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.
+If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
   - `service` (`string`): The name of the service to place in the gRPC HealthCheckRequest
 (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
 If this is not specified, the default behavior is defined by gRPC. When `null`, the `service` field will be omitted from the resulting object.
@@ -720,6 +728,8 @@ Terraform sub block.
 
 **Args**:
   - `path` (`string`): Path to access on the HTTP server. Defaults to &#39;/&#39;. When `null`, the `path` field will be omitted from the resulting object.
+  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.
+If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
   - `http_headers` (`list[obj]`): Custom headers to set in the request. HTTP allows repeated headers. When `null`, the `http_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.template.containers.liveness_probe.http_get.http_headers.new](#fn-templatetemplatecontainersliveness_probehttp_headersnew) constructor.
 
 **Returns**:
@@ -816,6 +826,7 @@ Terraform sub block.
 **Args**:
   - `cpu_idle` (`bool`): Determines whether CPU should be throttled or not outside of requests. When `null`, the `cpu_idle` field will be omitted from the resulting object.
   - `limits` (`obj`): Only memory and CPU are supported. Note: The only supported values for CPU are &#39;1&#39;, &#39;2&#39;, &#39;4&#39;, and &#39;8&#39;. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go When `null`, the `limits` field will be omitted from the resulting object.
+  - `startup_cpu_boost` (`bool`): Determines whether CPU should be boosted on startup of a new container instance above the requested CPU threshold, this can help reduce cold-start latency. When `null`, the `startup_cpu_boost` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `resources` sub block.
@@ -867,7 +878,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
+  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.
+If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
   - `service` (`string`): The name of the service to place in the gRPC HealthCheckRequest
 (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
 If this is not specified, the default behavior is defined by gRPC. When `null`, the `service` field will be omitted from the resulting object.
@@ -894,6 +906,8 @@ Terraform sub block.
 
 **Args**:
   - `path` (`string`): Path to access on the HTTP server. Defaults to &#39;/&#39;. When `null`, the `path` field will be omitted from the resulting object.
+  - `port` (`number`): Port number to access on the container. Must be in the range 1 to 65535.
+If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
   - `http_headers` (`list[obj]`): Custom headers to set in the request. HTTP allows repeated headers. When `null`, the `http_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.template.containers.startup_probe.http_get.http_headers.new](#fn-templatetemplatecontainersstartup_probehttp_headersnew) constructor.
 
 **Returns**:
@@ -941,7 +955,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `port` (`number`): Port number to access on the container. Must be in the range 1 to 65535. If not specified, defaults to 8080. When `null`, the `port` field will be omitted from the resulting object.
+  - `port` (`number`): Port number to access on the container. Must be in the range 1 to 65535.
+If not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `tcp_socket` sub block.

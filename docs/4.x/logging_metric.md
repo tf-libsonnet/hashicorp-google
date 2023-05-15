@@ -518,8 +518,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `display_name` (`string`): A concise name for the metric, which can be displayed in user interfaces. Use sentence case 
-without an ending period, for example &#34;Request count&#34;. This field is optional but it is 
+  - `display_name` (`string`): A concise name for the metric, which can be displayed in user interfaces. Use sentence case
+without an ending period, for example &#34;Request count&#34;. This field is optional but it is
 recommended to be set for any metrics associated with user-visible concepts, such as Quota. When `null`, the `display_name` field will be omitted from the resulting object.
   - `metric_kind` (`string`): Whether the metric records instantaneous values, changes to a value, etc.
 Some combinations of metricKind and valueType might not be supported.

@@ -648,8 +648,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `chain_name` (`string`): Creates the new snapshot in the snapshot chain labeled with the 
-specified name. The chain name must be 1-63 characters long and comply 
+  - `chain_name` (`string`): Creates the new snapshot in the snapshot chain labeled with the
+specified name. The chain name must be 1-63 characters long and comply
 with RFC1035. When `null`, the `chain_name` field will be omitted from the resulting object.
   - `guest_flush` (`bool`): Whether to perform a &#39;guest aware&#39; snapshot. When `null`, the `guest_flush` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key-value pairs. When `null`, the `labels` field will be omitted from the resulting object.

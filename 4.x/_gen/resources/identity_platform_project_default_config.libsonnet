@@ -35,7 +35,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       }),
     },
     email:: {
-      '#new':: d.fn(help='\n`google.identity_platform_project_default_config.sign_in.email.new` constructs a new object with attributes and blocks configured for the `email`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Whether email auth is enabled for the project or not. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `password_required` (`bool`): Whether a password is required for email auth or not. If true, both an email and \npassword must be provided to sign in. If false, a user may sign in via either \nemail/password or email link. When `null`, the `password_required` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `email` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.identity_platform_project_default_config.sign_in.email.new` constructs a new object with attributes and blocks configured for the `email`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Whether email auth is enabled for the project or not. When `null`, the `enabled` field will be omitted from the resulting object.\n  - `password_required` (`bool`): Whether a password is required for email auth or not. If true, both an email and\npassword must be provided to sign in. If false, a user may sign in via either\nemail/password or email link. When `null`, the `password_required` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `email` sub block.\n', args=[]),
       new(
         enabled=null,
         password_required=null

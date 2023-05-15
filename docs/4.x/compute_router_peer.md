@@ -23,11 +23,14 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withBfd()`](#fn-withbfd)
 * [`fn withBfdMixin()`](#fn-withbfdmixin)
 * [`fn withEnable()`](#fn-withenable)
+* [`fn withEnableIpv6()`](#fn-withenableipv6)
 * [`fn withInterface()`](#fn-withinterface)
 * [`fn withIpAddress()`](#fn-withipaddress)
+* [`fn withIpv6NexthopAddress()`](#fn-withipv6nexthopaddress)
 * [`fn withName()`](#fn-withname)
 * [`fn withPeerAsn()`](#fn-withpeerasn)
 * [`fn withPeerIpAddress()`](#fn-withpeeripaddress)
+* [`fn withPeerIpv6NexthopAddress()`](#fn-withpeeripv6nexthopaddress)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRegion()`](#fn-withregion)
 * [`fn withRouter()`](#fn-withrouter)
@@ -91,9 +94,14 @@ length, the routes with the lowest priority value win. When `null`, the `adverti
 with the peer is terminated and all associated routing information is removed.
 If set to true, the peer connection can be established with routing information.
 The default is true. When `null`, the `enable` field will be omitted from the resulting object.
+  - `enable_ipv6` (`bool`): Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default. When `null`, the `enable_ipv6` field will be omitted from the resulting object.
   - `interface` (`string`): Name of the interface the BGP peer is associated with.
   - `ip_address` (`string`): IP address of the interface inside Google Cloud Platform.
 Only IPv4 is supported. When `null`, the `ip_address` field will be omitted from the resulting object.
+  - `ipv6_nexthop_address` (`string`): IPv6 address of the interface inside Google Cloud Platform.
+The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
+If you do not specify the next hop addresses, Google Cloud automatically
+assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you. When `null`, the `ipv6_nexthop_address` field will be omitted from the resulting object.
   - `name` (`string`): Name of this BGP peer. The name must be 1-63 characters long,
 and comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which
@@ -104,6 +112,10 @@ except the last character, which cannot be a dash.
 Each BGP interface may use a different value.
   - `peer_ip_address` (`string`): IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported.
+  - `peer_ipv6_nexthop_address` (`string`): IPv6 address of the BGP interface outside Google Cloud Platform.
+The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
+If you do not specify the next hop addresses, Google Cloud automatically
+assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you. When `null`, the `peer_ipv6_nexthop_address` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
@@ -163,9 +175,14 @@ length, the routes with the lowest priority value win. When `null`, the `adverti
 with the peer is terminated and all associated routing information is removed.
 If set to true, the peer connection can be established with routing information.
 The default is true. When `null`, the `enable` field will be omitted from the resulting object.
+  - `enable_ipv6` (`bool`): Enable IPv6 traffic over BGP Peer. If not specified, it is disabled by default. When `null`, the `enable_ipv6` field will be omitted from the resulting object.
   - `interface` (`string`): Name of the interface the BGP peer is associated with.
   - `ip_address` (`string`): IP address of the interface inside Google Cloud Platform.
 Only IPv4 is supported. When `null`, the `ip_address` field will be omitted from the resulting object.
+  - `ipv6_nexthop_address` (`string`): IPv6 address of the interface inside Google Cloud Platform.
+The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
+If you do not specify the next hop addresses, Google Cloud automatically
+assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you. When `null`, the `ipv6_nexthop_address` field will be omitted from the resulting object.
   - `name` (`string`): Name of this BGP peer. The name must be 1-63 characters long,
 and comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which
@@ -176,6 +193,10 @@ except the last character, which cannot be a dash.
 Each BGP interface may use a different value.
   - `peer_ip_address` (`string`): IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported.
+  - `peer_ipv6_nexthop_address` (`string`): IPv6 address of the BGP interface outside Google Cloud Platform.
+The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
+If you do not specify the next hop addresses, Google Cloud automatically
+assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you. When `null`, the `peer_ipv6_nexthop_address` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
@@ -334,6 +355,22 @@ Terraform resource block to set or update the enable field.
   - `value` (`bool`): The value to set for the `enable` field.
 
 
+### fn withEnableIpv6
+
+```ts
+withEnableIpv6()
+```
+
+`google.bool.withEnableIpv6` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the enable_ipv6 field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `enable_ipv6` field.
+
+
 ### fn withInterface
 
 ```ts
@@ -364,6 +401,22 @@ Terraform resource block to set or update the ip_address field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `ip_address` field.
+
+
+### fn withIpv6NexthopAddress
+
+```ts
+withIpv6NexthopAddress()
+```
+
+`google.string.withIpv6NexthopAddress` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the ipv6_nexthop_address field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `ipv6_nexthop_address` field.
 
 
 ### fn withName
@@ -412,6 +465,22 @@ Terraform resource block to set or update the peer_ip_address field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `peer_ip_address` field.
+
+
+### fn withPeerIpv6NexthopAddress
+
+```ts
+withPeerIpv6NexthopAddress()
+```
+
+`google.string.withPeerIpv6NexthopAddress` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the peer_ipv6_nexthop_address field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `peer_ipv6_nexthop_address` field.
 
 
 ### fn withProject

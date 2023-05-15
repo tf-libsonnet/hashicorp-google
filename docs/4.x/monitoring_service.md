@@ -267,9 +267,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `service_labels` (`obj`): Labels that specify the resource that emits the monitoring data 
+  - `service_labels` (`obj`): Labels that specify the resource that emits the monitoring data
 which is used for SLO reporting of this &#39;Service&#39;. When `null`, the `service_labels` field will be omitted from the resulting object.
-  - `service_type` (`string`): The type of service that this basic service defines, e.g. 
+  - `service_type` (`string`): The type of service that this basic service defines, e.g.
 APP_ENGINE service type When `null`, the `service_type` field will be omitted from the resulting object.
 
 **Returns**:

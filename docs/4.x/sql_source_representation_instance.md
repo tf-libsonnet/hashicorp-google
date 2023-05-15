@@ -64,7 +64,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `ca_certificate` (`string`): The CA certificate on the external server. Include only if SSL/TLS is used on the external server. When `null`, the `ca_certificate` field will be omitted from the resulting object.
   - `client_certificate` (`string`): The client certificate on the external server. Required only for server-client authentication. Include only if SSL/TLS is used on the external server. When `null`, the `client_certificate` field will be omitted from the resulting object.
   - `client_key` (`string`): The private key file for the client certificate on the external server. Required only for server-client authentication. Include only if SSL/TLS is used on the external server. When `null`, the `client_key` field will be omitted from the resulting object.
-  - `database_version` (`string`): The MySQL version running on your source database server. Possible values: [&#34;MYSQL_5_5&#34;, &#34;MYSQL_5_6&#34;, &#34;MYSQL_5_7&#34;, &#34;MYSQL_8_0&#34;]
+  - `database_version` (`string`): The MySQL version running on your source database server. Possible values: [&#34;MYSQL_5_6&#34;, &#34;MYSQL_5_7&#34;, &#34;MYSQL_8_0&#34;, &#34;POSTGRES_9_6&#34;, &#34;POSTGRES_10&#34;, &#34;POSTGRES_11&#34;, &#34;POSTGRES_12&#34;, &#34;POSTGRES_13&#34;, &#34;POSTGRES_14&#34;]
   - `dump_file_path` (`string`): A file in the bucket that contains the data from the external server. When `null`, the `dump_file_path` field will be omitted from the resulting object.
   - `host` (`string`): The externally accessible IPv4 address for the source database server.
   - `name` (`string`): The name of the source representation instance. Use any valid Cloud SQL instance name.
@@ -102,7 +102,7 @@ injecting into a complete block.
   - `ca_certificate` (`string`): The CA certificate on the external server. Include only if SSL/TLS is used on the external server. When `null`, the `ca_certificate` field will be omitted from the resulting object.
   - `client_certificate` (`string`): The client certificate on the external server. Required only for server-client authentication. Include only if SSL/TLS is used on the external server. When `null`, the `client_certificate` field will be omitted from the resulting object.
   - `client_key` (`string`): The private key file for the client certificate on the external server. Required only for server-client authentication. Include only if SSL/TLS is used on the external server. When `null`, the `client_key` field will be omitted from the resulting object.
-  - `database_version` (`string`): The MySQL version running on your source database server. Possible values: [&#34;MYSQL_5_5&#34;, &#34;MYSQL_5_6&#34;, &#34;MYSQL_5_7&#34;, &#34;MYSQL_8_0&#34;]
+  - `database_version` (`string`): The MySQL version running on your source database server. Possible values: [&#34;MYSQL_5_6&#34;, &#34;MYSQL_5_7&#34;, &#34;MYSQL_8_0&#34;, &#34;POSTGRES_9_6&#34;, &#34;POSTGRES_10&#34;, &#34;POSTGRES_11&#34;, &#34;POSTGRES_12&#34;, &#34;POSTGRES_13&#34;, &#34;POSTGRES_14&#34;]
   - `dump_file_path` (`string`): A file in the bucket that contains the data from the external server. When `null`, the `dump_file_path` field will be omitted from the resulting object.
   - `host` (`string`): The externally accessible IPv4 address for the source database server.
   - `name` (`string`): The name of the source representation instance. Use any valid Cloud SQL instance name.

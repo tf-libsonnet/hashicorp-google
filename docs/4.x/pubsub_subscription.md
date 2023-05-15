@@ -111,9 +111,9 @@ is true if the message was published multiple times by a publisher client. These
   - `enable_message_ordering` (`bool`): If &#39;true&#39;, messages published with the same orderingKey in PubsubMessage will be delivered to
 the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
 may be delivered in any order. When `null`, the `enable_message_ordering` field will be omitted from the resulting object.
-  - `filter` (`string`): The subscription only delivers the messages that match the filter. 
+  - `filter` (`string`): The subscription only delivers the messages that match the filter.
 Pub/Sub automatically acknowledges the messages that don&#39;t match the filter. You can filter messages
-by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription, 
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
 you can&#39;t modify the filter. When `null`, the `filter` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs to assign to this Subscription. When `null`, the `labels` field will be omitted from the resulting object.
   - `message_retention_duration` (`string`): How long to retain unacknowledged messages in the subscription&#39;s
@@ -155,7 +155,7 @@ configure it. An empty pushConfig signifies that the subscriber will
 pull and ack messages using API methods. When `null`, the `push_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.push_config.new](#fn-push_confignew) constructor.
   - `retry_policy` (`list[obj]`): A policy that specifies how Pub/Sub retries message delivery for this subscription.
 
-If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. 
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
 RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.retry_policy.new](#fn-retry_policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -211,9 +211,9 @@ is true if the message was published multiple times by a publisher client. These
   - `enable_message_ordering` (`bool`): If &#39;true&#39;, messages published with the same orderingKey in PubsubMessage will be delivered to
 the subscribers in the order in which they are received by the Pub/Sub system. Otherwise, they
 may be delivered in any order. When `null`, the `enable_message_ordering` field will be omitted from the resulting object.
-  - `filter` (`string`): The subscription only delivers the messages that match the filter. 
+  - `filter` (`string`): The subscription only delivers the messages that match the filter.
 Pub/Sub automatically acknowledges the messages that don&#39;t match the filter. You can filter messages
-by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription, 
+by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
 you can&#39;t modify the filter. When `null`, the `filter` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs to assign to this Subscription. When `null`, the `labels` field will be omitted from the resulting object.
   - `message_retention_duration` (`string`): How long to retain unacknowledged messages in the subscription&#39;s
@@ -255,7 +255,7 @@ configure it. An empty pushConfig signifies that the subscriber will
 pull and ack messages using API methods. When `null`, the `push_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.push_config.new](#fn-push_confignew) constructor.
   - `retry_policy` (`list[obj]`): A policy that specifies how Pub/Sub retries message delivery for this subscription.
 
-If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers. 
+If not set, the default retry policy is applied. This generally implies that messages will be retried as soon as possible for healthy subscribers.
 RetryPolicy will be triggered on NACKs or acknowledgement deadline exceeded events for a given message When `null`, the `retry_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.retry_policy.new](#fn-retry_policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -693,7 +693,7 @@ Terraform sub block.
 Format is &#39;projects/{project}/topics/{topic}&#39;.
 
 The Cloud Pub/Sub service account associated with the enclosing subscription&#39;s
-parent project (i.e., 
+parent project (i.e.,
 service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com) must have
 permission to Publish() to this topic.
 
@@ -703,7 +703,7 @@ since messages published to a topic with no subscriptions are lost. When `null`,
   - `max_delivery_attempts` (`number`): The maximum number of delivery attempts for any message. The value must be
 between 5 and 100.
 
-The number of delivery attempts is defined as 1 &#43; (the sum of number of 
+The number of delivery attempts is defined as 1 &#43; (the sum of number of
 NACKs and number of times the acknowledgement deadline has been exceeded for the message).
 
 A NACK is any call to ModifyAckDeadline with a 0 deadline. Note that
@@ -843,7 +843,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `maximum_backoff` (`string`): The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds. 
+  - `maximum_backoff` (`string`): The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `maximum_backoff` field will be omitted from the resulting object.
   - `minimum_backoff` (`string`): The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `minimum_backoff` field will be omitted from the resulting object.

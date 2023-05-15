@@ -105,7 +105,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
               secret_key_ref: secret_key_ref,
             }),
             secret_key_ref:: {
-              '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.env.value_from.secret_key_ref.new` constructs a new object with attributes and blocks configured for the `secret_key_ref`\nTerraform sub block.\n\n\n\n**Args**:\n  - `key` (`string`): A Cloud Secret Manager secret version. Must be &#39;latest&#39; for the latest\nversion or an integer for a specific version.\n  - `name` (`string`): The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. \nIf the secret is in another project, you must define an alias. \nAn alias definition has the form: :projects/{project-id|project-number}/secrets/. \nIf multiple alias definitions are needed, they must be separated by commas. \nThe alias definitions must be set on the run.googleapis.com/secrets annotation.\n\n**Returns**:\n  - An attribute object that represents the `secret_key_ref` sub block.\n', args=[]),
+              '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.env.value_from.secret_key_ref.new` constructs a new object with attributes and blocks configured for the `secret_key_ref`\nTerraform sub block.\n\n\n\n**Args**:\n  - `key` (`string`): A Cloud Secret Manager secret version. Must be &#39;latest&#39; for the latest\nversion or an integer for a specific version.\n  - `name` (`string`): The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project.\nIf the secret is in another project, you must define an alias.\nAn alias definition has the form: :projects/{project-id|project-number}/secrets/.\nIf multiple alias definitions are needed, they must be separated by commas.\nThe alias definitions must be set on the run.googleapis.com/secrets annotation.\n\n**Returns**:\n  - An attribute object that represents the `secret_key_ref` sub block.\n', args=[]),
               new(
                 key,
                 name
@@ -164,15 +164,67 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
             }),
           },
         },
-        '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.new` constructs a new object with attributes and blocks configured for the `containers`\nTerraform sub block.\n\n\n\n**Args**:\n  - `args` (`list`): Arguments to the entrypoint.\nThe docker image&#39;s CMD is used if this is not provided. When `null`, the `args` field will be omitted from the resulting object.\n  - `command` (`list`): Entrypoint array. Not executed within a shell.\nThe docker image&#39;s ENTRYPOINT is used if this is not provided. When `null`, the `command` field will be omitted from the resulting object.\n  - `image` (`string`): Docker image name. This is most often a reference to a container located\nin the container registry, such as gcr.io/cloudrun/hello\n  - `working_dir` (`string`): Container&#39;s working directory.\nIf not specified, the container runtime&#39;s default will be used, which\nmight be configured in the container image. When `null`, the `working_dir` field will be omitted from the resulting object.\n  - `env` (`list[obj]`): List of environment variables to set in the container. When `null`, the `env` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env.new](#fn-templatetemplatespecenvnew) constructor.\n  - `env_from` (`list[obj]`): List of sources to populate environment variables in the container.\nAll invalid keys will be reported as an event when the container is starting.\nWhen a key exists in multiple sources, the value associated with the last source will\ntake precedence. Values defined by an Env with a duplicate key will take\nprecedence. When `null`, the `env_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.new](#fn-templatetemplatespecenv_fromnew) constructor.\n  - `ports` (`list[obj]`): List of open ports in the container. When `null`, the `ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.ports.new](#fn-templatetemplatespecportsnew) constructor.\n  - `resources` (`list[obj]`): Compute Resources required by this container. Used to set values such as max memory When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.resources.new](#fn-templatetemplatespecresourcesnew) constructor.\n  - `volume_mounts` (`list[obj]`): Volume to mount into the container&#39;s filesystem.\nOnly supports SecretVolumeSources. When `null`, the `volume_mounts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.volume_mounts.new](#fn-templatetemplatespecvolume_mountsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `containers` sub block.\n', args=[]),
+        liveness_probe:: {
+          grpc:: {
+            '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.liveness_probe.grpc.new` constructs a new object with attributes and blocks configured for the `grpc`\nTerraform sub block.\n\n\n\n**Args**:\n  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.\nIf not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.\n  - `service` (`string`): The name of the service to place in the gRPC HealthCheckRequest\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\nIf this is not specified, the default behavior is defined by gRPC. When `null`, the `service` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `grpc` sub block.\n', args=[]),
+            new(
+              port=null,
+              service=null
+            ):: std.prune(a={
+              port: port,
+              service: service,
+            }),
+          },
+          http_get:: {
+            http_headers:: {
+              '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.liveness_probe.http_get.http_headers.new` constructs a new object with attributes and blocks configured for the `http_headers`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): The header field name.\n  - `value` (`string`): The header field value. When `null`, the `value` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `http_headers` sub block.\n', args=[]),
+              new(
+                name,
+                value=null
+              ):: std.prune(a={
+                name: name,
+                value: value,
+              }),
+            },
+            '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.liveness_probe.http_get.new` constructs a new object with attributes and blocks configured for the `http_get`\nTerraform sub block.\n\n\n\n**Args**:\n  - `path` (`string`): Path to access on the HTTP server. If set, it should not be empty string. When `null`, the `path` field will be omitted from the resulting object.\n  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.\nIf not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.\n  - `http_headers` (`list[obj]`): Custom headers to set in the request. HTTP allows repeated headers. When `null`, the `http_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.liveness_probe.http_get.http_headers.new](#fn-templatetemplatespeccontainersliveness_probehttp_headersnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `http_get` sub block.\n', args=[]),
+            new(
+              http_headers=null,
+              path=null,
+              port=null
+            ):: std.prune(a={
+              http_headers: http_headers,
+              path: path,
+              port: port,
+            }),
+          },
+          '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.liveness_probe.new` constructs a new object with attributes and blocks configured for the `liveness_probe`\nTerraform sub block.\n\n\n\n**Args**:\n  - `failure_threshold` (`number`): Minimum consecutive failures for the probe to be considered failed after\nhaving succeeded. Defaults to 3. Minimum value is 1. When `null`, the `failure_threshold` field will be omitted from the resulting object.\n  - `initial_delay_seconds` (`number`): Number of seconds after the container has started before the probe is\ninitiated.\nDefaults to 0 seconds. Minimum value is 0. Maximum value is 3600. When `null`, the `initial_delay_seconds` field will be omitted from the resulting object.\n  - `period_seconds` (`number`): How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1. Maximum value is 3600. When `null`, the `period_seconds` field will be omitted from the resulting object.\n  - `timeout_seconds` (`number`): Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1. Maximum value is 3600.\nMust be smaller than period_seconds. When `null`, the `timeout_seconds` field will be omitted from the resulting object.\n  - `grpc` (`list[obj]`): GRPC specifies an action involving a GRPC port. When `null`, the `grpc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.liveness_probe.grpc.new](#fn-templatetemplatespeccontainersgrpcnew) constructor.\n  - `http_get` (`list[obj]`): HttpGet specifies the http request to perform. When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.liveness_probe.http_get.new](#fn-templatetemplatespeccontainershttp_getnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `liveness_probe` sub block.\n', args=[]),
+          new(
+            failure_threshold=null,
+            grpc=null,
+            http_get=null,
+            initial_delay_seconds=null,
+            period_seconds=null,
+            timeout_seconds=null
+          ):: std.prune(a={
+            failure_threshold: failure_threshold,
+            grpc: grpc,
+            http_get: http_get,
+            initial_delay_seconds: initial_delay_seconds,
+            period_seconds: period_seconds,
+            timeout_seconds: timeout_seconds,
+          }),
+        },
+        '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.new` constructs a new object with attributes and blocks configured for the `containers`\nTerraform sub block.\n\n\n\n**Args**:\n  - `args` (`list`): Arguments to the entrypoint.\nThe docker image&#39;s CMD is used if this is not provided. When `null`, the `args` field will be omitted from the resulting object.\n  - `command` (`list`): Entrypoint array. Not executed within a shell.\nThe docker image&#39;s ENTRYPOINT is used if this is not provided. When `null`, the `command` field will be omitted from the resulting object.\n  - `image` (`string`): Docker image name. This is most often a reference to a container located\nin the container registry, such as gcr.io/cloudrun/hello\n  - `working_dir` (`string`): Container&#39;s working directory.\nIf not specified, the container runtime&#39;s default will be used, which\nmight be configured in the container image. When `null`, the `working_dir` field will be omitted from the resulting object.\n  - `env` (`list[obj]`): List of environment variables to set in the container. When `null`, the `env` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env.new](#fn-templatetemplatespecenvnew) constructor.\n  - `env_from` (`list[obj]`): List of sources to populate environment variables in the container.\nAll invalid keys will be reported as an event when the container is starting.\nWhen a key exists in multiple sources, the value associated with the last source will\ntake precedence. Values defined by an Env with a duplicate key will take\nprecedence. When `null`, the `env_from` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.env_from.new](#fn-templatetemplatespecenv_fromnew) constructor.\n  - `liveness_probe` (`list[obj]`): Periodic probe of container liveness. Container will be restarted if the probe fails. When `null`, the `liveness_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.liveness_probe.new](#fn-templatetemplatespecliveness_probenew) constructor.\n  - `ports` (`list[obj]`): List of open ports in the container. When `null`, the `ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.ports.new](#fn-templatetemplatespecportsnew) constructor.\n  - `resources` (`list[obj]`): Compute Resources required by this container. Used to set values such as max memory When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.resources.new](#fn-templatetemplatespecresourcesnew) constructor.\n  - `startup_probe` (`list[obj]`): Startup probe of application within the container.\nAll other probes are disabled if a startup probe is provided, until it\nsucceeds. Container will not be added to service endpoints if the probe fails. When `null`, the `startup_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.startup_probe.new](#fn-templatetemplatespecstartup_probenew) constructor.\n  - `volume_mounts` (`list[obj]`): Volume to mount into the container&#39;s filesystem.\nOnly supports SecretVolumeSources. When `null`, the `volume_mounts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.volume_mounts.new](#fn-templatetemplatespecvolume_mountsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `containers` sub block.\n', args=[]),
         new(
           image,
           args=null,
           command=null,
           env=null,
           env_from=null,
+          liveness_probe=null,
           ports=null,
           resources=null,
+          startup_probe=null,
           volume_mounts=null,
           working_dir=null
         ):: std.prune(a={
@@ -181,8 +233,10 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           env: env,
           env_from: env_from,
           image: image,
+          liveness_probe: liveness_probe,
           ports: ports,
           resources: resources,
+          startup_probe: startup_probe,
           volume_mounts: volume_mounts,
           working_dir: working_dir,
         }),
@@ -207,6 +261,66 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
             limits: limits,
             requests: requests,
           }),
+        },
+        startup_probe:: {
+          grpc:: {
+            '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.startup_probe.grpc.new` constructs a new object with attributes and blocks configured for the `grpc`\nTerraform sub block.\n\n\n\n**Args**:\n  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.\nIf not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.\n  - `service` (`string`): The name of the service to place in the gRPC HealthCheckRequest\n(see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).\nIf this is not specified, the default behavior is defined by gRPC. When `null`, the `service` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `grpc` sub block.\n', args=[]),
+            new(
+              port=null,
+              service=null
+            ):: std.prune(a={
+              port: port,
+              service: service,
+            }),
+          },
+          http_get:: {
+            http_headers:: {
+              '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.startup_probe.http_get.http_headers.new` constructs a new object with attributes and blocks configured for the `http_headers`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): The header field name.\n  - `value` (`string`): The header field value. When `null`, the `value` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `http_headers` sub block.\n', args=[]),
+              new(
+                name,
+                value=null
+              ):: std.prune(a={
+                name: name,
+                value: value,
+              }),
+            },
+            '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.startup_probe.http_get.new` constructs a new object with attributes and blocks configured for the `http_get`\nTerraform sub block.\n\n\n\n**Args**:\n  - `path` (`string`): Path to access on the HTTP server. If set, it should not be empty string. When `null`, the `path` field will be omitted from the resulting object.\n  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.\nIf not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.\n  - `http_headers` (`list[obj]`): Custom headers to set in the request. HTTP allows repeated headers. When `null`, the `http_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.startup_probe.http_get.http_headers.new](#fn-templatetemplatespeccontainersstartup_probehttp_headersnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `http_get` sub block.\n', args=[]),
+            new(
+              http_headers=null,
+              path=null,
+              port=null
+            ):: std.prune(a={
+              http_headers: http_headers,
+              path: path,
+              port: port,
+            }),
+          },
+          '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.startup_probe.new` constructs a new object with attributes and blocks configured for the `startup_probe`\nTerraform sub block.\n\n\n\n**Args**:\n  - `failure_threshold` (`number`): Minimum consecutive failures for the probe to be considered failed after\nhaving succeeded. Defaults to 3. Minimum value is 1. When `null`, the `failure_threshold` field will be omitted from the resulting object.\n  - `initial_delay_seconds` (`number`): Number of seconds after the container has started before the probe is\ninitiated.\nDefaults to 0 seconds. Minimum value is 0. Maximum value is 240. When `null`, the `initial_delay_seconds` field will be omitted from the resulting object.\n  - `period_seconds` (`number`): How often (in seconds) to perform the probe.\nDefault to 10 seconds. Minimum value is 1. Maximum value is 240. When `null`, the `period_seconds` field will be omitted from the resulting object.\n  - `timeout_seconds` (`number`): Number of seconds after which the probe times out.\nDefaults to 1 second. Minimum value is 1. Maximum value is 3600.\nMust be smaller than periodSeconds. When `null`, the `timeout_seconds` field will be omitted from the resulting object.\n  - `grpc` (`list[obj]`): GRPC specifies an action involving a GRPC port. When `null`, the `grpc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.startup_probe.grpc.new](#fn-templatetemplatespeccontainersgrpcnew) constructor.\n  - `http_get` (`list[obj]`): HttpGet specifies the http request to perform. When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.startup_probe.http_get.new](#fn-templatetemplatespeccontainershttp_getnew) constructor.\n  - `tcp_socket` (`list[obj]`): TcpSocket specifies an action involving a TCP port. When `null`, the `tcp_socket` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.startup_probe.tcp_socket.new](#fn-templatetemplatespeccontainerstcp_socketnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `startup_probe` sub block.\n', args=[]),
+          new(
+            failure_threshold=null,
+            grpc=null,
+            http_get=null,
+            initial_delay_seconds=null,
+            period_seconds=null,
+            tcp_socket=null,
+            timeout_seconds=null
+          ):: std.prune(a={
+            failure_threshold: failure_threshold,
+            grpc: grpc,
+            http_get: http_get,
+            initial_delay_seconds: initial_delay_seconds,
+            period_seconds: period_seconds,
+            tcp_socket: tcp_socket,
+            timeout_seconds: timeout_seconds,
+          }),
+          tcp_socket:: {
+            '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.startup_probe.tcp_socket.new` constructs a new object with attributes and blocks configured for the `tcp_socket`\nTerraform sub block.\n\n\n\n**Args**:\n  - `port` (`number`): Port number to access on the container. Number must be in the range 1 to 65535.\nIf not specified, defaults to the same value as container.ports[0].containerPort. When `null`, the `port` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `tcp_socket` sub block.\n', args=[]),
+            new(
+              port=null
+            ):: std.prune(a={
+              port: port,
+            }),
+          },
         },
         volume_mounts:: {
           '#new':: d.fn(help='\n`google.cloud_run_service.template.spec.containers.volume_mounts.new` constructs a new object with attributes and blocks configured for the `volume_mounts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `mount_path` (`string`): Path within the container at which the volume should be mounted.  Must\nnot contain &#39;:&#39;.\n  - `name` (`string`): This must match the Name of a Volume.\n\n**Returns**:\n  - An attribute object that represents the `volume_mounts` sub block.\n', args=[]),

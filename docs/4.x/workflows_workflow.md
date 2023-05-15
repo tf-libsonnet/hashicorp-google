@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withCryptoKeyName()`](#fn-withcryptokeyname)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withName()`](#fn-withname)
@@ -57,6 +58,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `crypto_key_name` (`string`): The KMS key used to encrypt workflow and execution data.
+
+Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} When `null`, the `crypto_key_name` field will be omitted from the resulting object.
   - `description` (`string`): Description of the workflow provided by the user. Must be at most 1000 unicode characters long. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs to assign to this Workflow. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the Workflow. When `null`, the `name` field will be omitted from the resulting object.
@@ -65,8 +69,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `region` (`string`): The region of the workflow. When `null`, the `region` field will be omitted from the resulting object.
   - `service_account` (`string`): Name of the service account associated with the latest workflow version. This service
 account represents the identity of the workflow and determines what permissions the workflow has.
-
-Format: projects/{project}/serviceAccounts/{account}. When `null`, the `service_account` field will be omitted from the resulting object.
+Format: projects/{project}/serviceAccounts/{account} or {account}.
+Using - as a wildcard for the {project} or not providing one at all will infer the project from the account.
+The {account} value can be the email address or the unique_id of the service account.
+If not provided, workflow will use the project&#39;s default service account.
+Modifying this field for an existing workflow results in a new workflow revision. When `null`, the `service_account` field will be omitted from the resulting object.
   - `source_contents` (`string`): Workflow code to be executed. The size limit is 32KB. When `null`, the `source_contents` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.workflows_workflow.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -92,6 +99,9 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `crypto_key_name` (`string`): The KMS key used to encrypt workflow and execution data.
+
+Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey} When `null`, the `crypto_key_name` field will be omitted from the resulting object.
   - `description` (`string`): Description of the workflow provided by the user. Must be at most 1000 unicode characters long. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs to assign to this Workflow. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the Workflow. When `null`, the `name` field will be omitted from the resulting object.
@@ -100,13 +110,32 @@ injecting into a complete block.
   - `region` (`string`): The region of the workflow. When `null`, the `region` field will be omitted from the resulting object.
   - `service_account` (`string`): Name of the service account associated with the latest workflow version. This service
 account represents the identity of the workflow and determines what permissions the workflow has.
-
-Format: projects/{project}/serviceAccounts/{account}. When `null`, the `service_account` field will be omitted from the resulting object.
+Format: projects/{project}/serviceAccounts/{account} or {account}.
+Using - as a wildcard for the {project} or not providing one at all will infer the project from the account.
+The {account} value can be the email address or the unique_id of the service account.
+If not provided, workflow will use the project&#39;s default service account.
+Modifying this field for an existing workflow results in a new workflow revision. When `null`, the `service_account` field will be omitted from the resulting object.
   - `source_contents` (`string`): Workflow code to be executed. The size limit is 32KB. When `null`, the `source_contents` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.workflows_workflow.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `workflows_workflow` resource into the root Terraform configuration.
+
+
+### fn withCryptoKeyName
+
+```ts
+withCryptoKeyName()
+```
+
+`google.string.withCryptoKeyName` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the crypto_key_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `crypto_key_name` field.
 
 
 ### fn withDescription

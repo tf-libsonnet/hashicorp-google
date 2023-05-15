@@ -132,7 +132,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): Human-readable description of the trigger. When `null`, the `description` field will be omitted from the resulting object.
   - `disabled` (`bool`): Whether the trigger is disabled or not. If true, the trigger will never result in a build. When `null`, the `disabled` field will be omitted from the resulting object.
-  - `filename` (`string`): Path, from the source root, to a file whose contents is used for the template. 
+  - `filename` (`string`): Path, from the source root, to a file whose contents is used for the template.
 Either a filename or build template must be provided. Set this only when using trigger_template or github.
 When using Pub/Sub, Webhook or Manual set the file name using git_file_source instead. When `null`, the `filename` field will be omitted from the resulting object.
   - `filter` (`string`): A Common Expression Language string. Used only with Pub/Sub and Webhook. When `null`, the `filter` field will be omitted from the resulting object.
@@ -172,8 +172,8 @@ If no service account is set, then the standard Cloud Build service account
 Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL} When `null`, the `service_account` field will be omitted from the resulting object.
   - `substitutions` (`obj`): Substitutions data for Build resource. When `null`, the `substitutions` field will be omitted from the resulting object.
   - `tags` (`list`): Tags for annotation of a BuildTrigger When `null`, the `tags` field will be omitted from the resulting object.
-  - `approval_config` (`list[obj]`): Configuration for manual approval to start a build invocation of this BuildTrigger. 
-Builds created by this trigger will require approval before they execute. 
+  - `approval_config` (`list[obj]`): Configuration for manual approval to start a build invocation of this BuildTrigger.
+Builds created by this trigger will require approval before they execute.
 Any user with a Cloud Build Approver role for the project can approve a build. When `null`, the `approval_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.approval_config.new](#fn-approval_confignew) constructor.
   - `bitbucket_server_trigger_config` (`list[obj]`): BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received. When `null`, the `bitbucket_server_trigger_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.bitbucket_server_trigger_config.new](#fn-bitbucket_server_trigger_confignew) constructor.
   - `build` (`list[obj]`): Contents of the build template. Either a filename or build template must be provided. When `null`, the `build` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.new](#fn-buildnew) constructor.
@@ -181,13 +181,13 @@ Any user with a Cloud Build Approver role for the project can approve a build. W
   - `github` (`list[obj]`): Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; or &#39;webhook_config&#39; must be provided. When `null`, the `github` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.github.new](#fn-githubnew) constructor.
-  - `pubsub_config` (`list[obj]`): PubsubConfig describes the configuration of a trigger that creates 
+  - `pubsub_config` (`list[obj]`): PubsubConfig describes the configuration of a trigger that creates
 a build whenever a Pub/Sub message is published.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; &#39;webhook_config&#39; or &#39;source_to_build&#39; must be provided. When `null`, the `pubsub_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.pubsub_config.new](#fn-pubsub_confignew) constructor.
-  - `source_to_build` (`list[obj]`): The repo and ref of the repository from which to build. 
-This field is used only for those triggers that do not respond to SCM events. 
-Triggers that respond to such events build source at whatever commit caused the event. 
+  - `source_to_build` (`list[obj]`): The repo and ref of the repository from which to build.
+This field is used only for those triggers that do not respond to SCM events.
+Triggers that respond to such events build source at whatever commit caused the event.
 This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; &#39;webhook_config&#39; or &#39;source_to_build&#39; must be provided. When `null`, the `source_to_build` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.source_to_build.new](#fn-source_to_buildnew) constructor.
@@ -199,7 +199,7 @@ expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39;, &#39;webhook_config&#39; or &#39;source_to_build&#39; must be provided. When `null`, the `trigger_template` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.trigger_template.new](#fn-trigger_templatenew) constructor.
-  - `webhook_config` (`list[obj]`): WebhookConfig describes the configuration of a trigger that creates 
+  - `webhook_config` (`list[obj]`): WebhookConfig describes the configuration of a trigger that creates
 a build whenever a webhook is sent to a trigger&#39;s webhook URL.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; &#39;webhook_config&#39; or &#39;source_to_build&#39; must be provided. When `null`, the `webhook_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.webhook_config.new](#fn-webhook_confignew) constructor.
@@ -228,7 +228,7 @@ injecting into a complete block.
 **Args**:
   - `description` (`string`): Human-readable description of the trigger. When `null`, the `description` field will be omitted from the resulting object.
   - `disabled` (`bool`): Whether the trigger is disabled or not. If true, the trigger will never result in a build. When `null`, the `disabled` field will be omitted from the resulting object.
-  - `filename` (`string`): Path, from the source root, to a file whose contents is used for the template. 
+  - `filename` (`string`): Path, from the source root, to a file whose contents is used for the template.
 Either a filename or build template must be provided. Set this only when using trigger_template or github.
 When using Pub/Sub, Webhook or Manual set the file name using git_file_source instead. When `null`, the `filename` field will be omitted from the resulting object.
   - `filter` (`string`): A Common Expression Language string. Used only with Pub/Sub and Webhook. When `null`, the `filter` field will be omitted from the resulting object.
@@ -268,8 +268,8 @@ If no service account is set, then the standard Cloud Build service account
 Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL} When `null`, the `service_account` field will be omitted from the resulting object.
   - `substitutions` (`obj`): Substitutions data for Build resource. When `null`, the `substitutions` field will be omitted from the resulting object.
   - `tags` (`list`): Tags for annotation of a BuildTrigger When `null`, the `tags` field will be omitted from the resulting object.
-  - `approval_config` (`list[obj]`): Configuration for manual approval to start a build invocation of this BuildTrigger. 
-Builds created by this trigger will require approval before they execute. 
+  - `approval_config` (`list[obj]`): Configuration for manual approval to start a build invocation of this BuildTrigger.
+Builds created by this trigger will require approval before they execute.
 Any user with a Cloud Build Approver role for the project can approve a build. When `null`, the `approval_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.approval_config.new](#fn-approval_confignew) constructor.
   - `bitbucket_server_trigger_config` (`list[obj]`): BitbucketServerTriggerConfig describes the configuration of a trigger that creates a build whenever a Bitbucket Server event is received. When `null`, the `bitbucket_server_trigger_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.bitbucket_server_trigger_config.new](#fn-bitbucket_server_trigger_confignew) constructor.
   - `build` (`list[obj]`): Contents of the build template. Either a filename or build template must be provided. When `null`, the `build` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.new](#fn-buildnew) constructor.
@@ -277,13 +277,13 @@ Any user with a Cloud Build Approver role for the project can approve a build. W
   - `github` (`list[obj]`): Describes the configuration of a trigger that creates a build whenever a GitHub event is received.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; or &#39;webhook_config&#39; must be provided. When `null`, the `github` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.github.new](#fn-githubnew) constructor.
-  - `pubsub_config` (`list[obj]`): PubsubConfig describes the configuration of a trigger that creates 
+  - `pubsub_config` (`list[obj]`): PubsubConfig describes the configuration of a trigger that creates
 a build whenever a Pub/Sub message is published.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; &#39;webhook_config&#39; or &#39;source_to_build&#39; must be provided. When `null`, the `pubsub_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.pubsub_config.new](#fn-pubsub_confignew) constructor.
-  - `source_to_build` (`list[obj]`): The repo and ref of the repository from which to build. 
-This field is used only for those triggers that do not respond to SCM events. 
-Triggers that respond to such events build source at whatever commit caused the event. 
+  - `source_to_build` (`list[obj]`): The repo and ref of the repository from which to build.
+This field is used only for those triggers that do not respond to SCM events.
+Triggers that respond to such events build source at whatever commit caused the event.
 This field is currently only used by Webhook, Pub/Sub, Manual, and Cron triggers.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; &#39;webhook_config&#39; or &#39;source_to_build&#39; must be provided. When `null`, the `source_to_build` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.source_to_build.new](#fn-source_to_buildnew) constructor.
@@ -295,7 +295,7 @@ expressions. Any branch or tag change that matches that regular
 expression will trigger a build.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39;, &#39;webhook_config&#39; or &#39;source_to_build&#39; must be provided. When `null`, the `trigger_template` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.trigger_template.new](#fn-trigger_templatenew) constructor.
-  - `webhook_config` (`list[obj]`): WebhookConfig describes the configuration of a trigger that creates 
+  - `webhook_config` (`list[obj]`): WebhookConfig describes the configuration of a trigger that creates
 a build whenever a webhook is sent to a trigger&#39;s webhook URL.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; &#39;webhook_config&#39; or &#39;source_to_build&#39; must be provided. When `null`, the `webhook_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.webhook_config.new](#fn-webhook_confignew) constructor.
@@ -898,7 +898,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `approval_required` (`bool`): Whether or not approval is needed. If this is set on a build, it will become pending when run, 
+  - `approval_required` (`bool`): Whether or not approval is needed. If this is set on a build, it will become pending when run,
 and will need to be explicitly approved to start. When `null`, the `approval_required` field will be omitted from the resulting object.
 
 **Returns**:
@@ -1005,9 +1005,9 @@ Terraform sub block.
 The images are pushed using the builder service account&#39;s credentials.
 The digests of the pushed images will be stored in the Build resource&#39;s results field.
 If any of the images fail to be pushed, the build status is marked FAILURE. When `null`, the `images` field will be omitted from the resulting object.
-  - `logs_bucket` (`string`): Google Cloud Storage bucket where logs should be written. 
+  - `logs_bucket` (`string`): Google Cloud Storage bucket where logs should be written.
 Logs file names will be of the format ${logsBucket}/log-${build_id}.txt. When `null`, the `logs_bucket` field will be omitted from the resulting object.
-  - `queue_ttl` (`string`): TTL in queue for this build. If provided and the build is enqueued longer than this value, 
+  - `queue_ttl` (`string`): TTL in queue for this build. If provided and the build is enqueued longer than this value,
 the build will expire and the build status will be EXPIRED.
 The TTL starts ticking from createTime.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `queue_ttl` field will be omitted from the resulting object.
@@ -1251,8 +1251,8 @@ Terraform sub block.
 **Args**:
   - `kms_key_name` (`string`): Cloud KMS key name to use to decrypt these envs.
   - `secret_env` (`obj`): Map of environment variable name to its encrypted value.
-Secret environment variables must be unique across all of a build&#39;s secrets, 
-and must be used by at least one build step. Values can be at most 64 KB in size. 
+Secret environment variables must be unique across all of a build&#39;s secrets,
+and must be used by at least one build step. Values can be at most 64 KB in size.
 There can be at most 100 secret values across all of a build&#39;s secrets. When `null`, the `secret_env` field will be omitted from the resulting object.
 
 **Returns**:
@@ -1301,19 +1301,19 @@ Terraform sub block.
 
 **Args**:
   - `branch_name` (`string`): Regex matching branches to build. Exactly one a of branch name, tag, or commit SHA must be provided.
-The syntax of the regular expressions accepted is the syntax accepted by RE2 and 
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
 described at https://github.com/google/re2/wiki/Syntax When `null`, the `branch_name` field will be omitted from the resulting object.
   - `commit_sha` (`string`): Explicit commit SHA to build. Exactly one a of branch name, tag, or commit SHA must be provided. When `null`, the `commit_sha` field will be omitted from the resulting object.
   - `dir` (`string`): Directory, relative to the source root, in which to run the build.
-This must be a relative path. If a step&#39;s dir is specified and is an absolute path, 
+This must be a relative path. If a step&#39;s dir is specified and is an absolute path,
 this value is ignored for that step&#39;s execution. When `null`, the `dir` field will be omitted from the resulting object.
   - `invert_regex` (`bool`): Only trigger a build if the revision regex does NOT match the revision regex. When `null`, the `invert_regex` field will be omitted from the resulting object.
-  - `project_id` (`string`): ID of the project that owns the Cloud Source Repository. 
+  - `project_id` (`string`): ID of the project that owns the Cloud Source Repository.
 If omitted, the project ID requesting the build is assumed. When `null`, the `project_id` field will be omitted from the resulting object.
   - `repo_name` (`string`): Name of the Cloud Source Repository.
   - `substitutions` (`obj`): Substitutions to use in a triggered build. Should only be used with triggers.run When `null`, the `substitutions` field will be omitted from the resulting object.
   - `tag_name` (`string`): Regex matching tags to build. Exactly one a of branch name, tag, or commit SHA must be provided.
-The syntax of the regular expressions accepted is the syntax accepted by RE2 and 
+The syntax of the regular expressions accepted is the syntax accepted by RE2 and
 described at https://github.com/google/re2/wiki/Syntax When `null`, the `tag_name` field will be omitted from the resulting object.
 
 **Returns**:
@@ -1338,7 +1338,7 @@ Terraform sub block.
 
 **Args**:
   - `bucket` (`string`): Google Cloud Storage bucket containing the source.
-  - `generation` (`string`): Google Cloud Storage generation for the object. 
+  - `generation` (`string`): Google Cloud Storage generation for the object.
 If the generation is omitted, the latest generation will be used When `null`, the `generation` field will be omitted from the resulting object.
   - `object` (`string`): Google Cloud Storage object containing the source.
 This object must be a gzipped archive file (.tar.gz) containing source to build.
@@ -1396,7 +1396,7 @@ run directly. If not, the host will attempt to pull the image first, using
 the builder service account&#39;s credentials if necessary.
 
 The Docker daemon&#39;s cache will already have the latest versions of all of
-the officially supported build steps (see https://github.com/GoogleCloudPlatform/cloud-builders 
+the officially supported build steps (see https://github.com/GoogleCloudPlatform/cloud-builders
 for images and examples).
 The Docker daemon will also have cached many of the layers for some popular
 images, like &#34;ubuntu&#34;, &#34;debian&#34;, but they will be refreshed at the time
@@ -1405,7 +1405,7 @@ you attempt to use them.
 If you built an image in a previous build step, it will be stored in the
 host&#39;s Docker daemon&#39;s cache and is available to use as the name for a
 later build step.
-  - `script` (`string`): A shell script to be executed in the step. 
+  - `script` (`string`): A shell script to be executed in the step.
 When script is provided, the user cannot specify the entrypoint or args. When `null`, the `script` field will be omitted from the resulting object.
   - `secret_env` (`list`): A list of environment variables which are encrypted using
 a Cloud Key
@@ -1486,12 +1486,12 @@ Terraform sub block.
   - `github_enterprise_config` (`string`): The full resource name of the github enterprise config.
 Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}. When `null`, the `github_enterprise_config` field will be omitted from the resulting object.
   - `path` (`string`): The path of the file, with the repo root as the root of the path.
-  - `repo_type` (`string`): The type of the repo, since it may not be explicit from the repo field (e.g from a URL). 
+  - `repo_type` (`string`): The type of the repo, since it may not be explicit from the repo field (e.g from a URL).
 Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: [&#34;UNKNOWN&#34;, &#34;CLOUD_SOURCE_REPOSITORIES&#34;, &#34;GITHUB&#34;, &#34;BITBUCKET_SERVER&#34;]
-  - `revision` (`string`): The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the 
-filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions 
+  - `revision` (`string`): The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the
+filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions
 If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path. When `null`, the `revision` field will be omitted from the resulting object.
-  - `uri` (`string`): The URI of the repo (optional). If unspecified, the repo from which the trigger 
+  - `uri` (`string`): The URI of the repo (optional). If unspecified, the repo from which the trigger
 invocation originated is assumed to be the repo from which to read the specified path. When `null`, the `uri` field will be omitted from the resulting object.
 
 **Returns**:
