@@ -517,7 +517,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `end_date` (`list[obj]`): Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed.
+  - `end_date` (`list[obj]`): Optional. The end date of the time period. Budgets with elapsed end date won&#39;t be processed. 
 If unset, specifies to track all usage incurred since the startDate. When `null`, the `end_date` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.end_date.new](#fn-budget_filterbudget_filterend_datenew) constructor.
   - `start_date` (`list[obj]`): A start date is required. The start date must be after January 1, 2017. When `null`, the `start_date` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.billing_budget.budget_filter.custom_period.start_date.new](#fn-budget_filterbudget_filterstart_datenew) constructor.
 

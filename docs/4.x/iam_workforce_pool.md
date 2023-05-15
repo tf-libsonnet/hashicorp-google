@@ -63,7 +63,7 @@ or use existing tokens to access resources. If the pool is re-enabled, existing 
   - `location` (`string`): The location for the resource.
   - `parent` (`string`): Immutable. The resource name of the parent. Format: &#39;organizations/{org-id}&#39;.
   - `session_duration` (`string`): Duration that the Google Cloud access tokens, console sign-in sessions,
-and &#39;gcloud&#39; sign-in sessions from this pool are valid.
+and &#39;gcloud&#39; sign-in sessions from this pool are valid.  
 Must be greater than 15 minutes (900s) and less than 12 hours (43200s).
 If &#39;sessionDuration&#39; is not configured, minted credentials have a default duration of one hour (3600s).
 A duration in seconds with up to nine fractional digits, ending with &#39;&#39;s&#39;&#39;. Example: &#34;&#39;3.5s&#39;&#34;. When `null`, the `session_duration` field will be omitted from the resulting object.
@@ -101,7 +101,7 @@ or use existing tokens to access resources. If the pool is re-enabled, existing 
   - `location` (`string`): The location for the resource.
   - `parent` (`string`): Immutable. The resource name of the parent. Format: &#39;organizations/{org-id}&#39;.
   - `session_duration` (`string`): Duration that the Google Cloud access tokens, console sign-in sessions,
-and &#39;gcloud&#39; sign-in sessions from this pool are valid.
+and &#39;gcloud&#39; sign-in sessions from this pool are valid.  
 Must be greater than 15 minutes (900s) and less than 12 hours (43200s).
 If &#39;sessionDuration&#39; is not configured, minted credentials have a default duration of one hour (3600s).
 A duration in seconds with up to nine fractional digits, ending with &#39;&#39;s&#39;&#39;. Example: &#34;&#39;3.5s&#39;&#34;. When `null`, the `session_duration` field will be omitted from the resulting object.

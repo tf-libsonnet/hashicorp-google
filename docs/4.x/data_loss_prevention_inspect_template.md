@@ -38,8 +38,6 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-inspect_configcustom_info_typesregexnew)
     * [`obj inspect_config.custom_info_types.stored_type`](#obj-inspect_configcustom_info_typesstored_type)
       * [`fn new()`](#fn-inspect_configcustom_info_typesstored_typenew)
-    * [`obj inspect_config.custom_info_types.surrogate_type`](#obj-inspect_configcustom_info_typessurrogate_type)
-      * [`fn new()`](#fn-inspect_configcustom_info_typessurrogate_typenew)
   * [`obj inspect_config.info_types`](#obj-inspect_configinfo_types)
     * [`fn new()`](#fn-inspect_configinfo_typesnew)
   * [`obj inspect_config.limits`](#obj-inspect_configlimits)
@@ -62,12 +60,6 @@ This package contains functions and utilities for setting up the resource using 
             * [`fn new()`](#fn-inspect_configrule_setrulesexclusion_ruledictionarycloud_storage_pathnew)
           * [`obj inspect_config.rule_set.rules.exclusion_rule.dictionary.word_list`](#obj-inspect_configrule_setrulesexclusion_ruledictionaryword_list)
             * [`fn new()`](#fn-inspect_configrule_setrulesexclusion_ruledictionaryword_listnew)
-        * [`obj inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword`](#obj-inspect_configrule_setrulesexclusion_ruleexclude_by_hotword)
-          * [`fn new()`](#fn-inspect_configrule_setrulesexclusion_ruleexclude_by_hotwordnew)
-          * [`obj inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.hotword_regex`](#obj-inspect_configrule_setrulesexclusion_ruleexclude_by_hotwordhotword_regex)
-            * [`fn new()`](#fn-inspect_configrule_setrulesexclusion_ruleexclude_by_hotwordhotword_regexnew)
-          * [`obj inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.proximity`](#obj-inspect_configrule_setrulesexclusion_ruleexclude_by_hotwordproximity)
-            * [`fn new()`](#fn-inspect_configrule_setrulesexclusion_ruleexclude_by_hotwordproximitynew)
         * [`obj inspect_config.rule_set.rules.exclusion_rule.exclude_info_types`](#obj-inspect_configrule_setrulesexclusion_ruleexclude_info_types)
           * [`fn new()`](#fn-inspect_configrule_setrulesexclusion_ruleexclude_info_typesnew)
           * [`obj inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types`](#obj-inspect_configrule_setrulesexclusion_ruleexclude_info_typesinfo_types)
@@ -345,7 +337,6 @@ one detected by the system. If built-in info type is not specified in &#39;info_
 treated as a custom info type. When `null`, the `info_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.info_type.new](#fn-inspect_configinspect_configinfo_typenew) constructor.
   - `regex` (`list[obj]`): Regular expression which defines the rule. When `null`, the `regex` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.regex.new](#fn-inspect_configinspect_configregexnew) constructor.
   - `stored_type` (`list[obj]`): A reference to a StoredInfoType to use with scanning. When `null`, the `stored_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.stored_type.new](#fn-inspect_configinspect_configstored_typenew) constructor.
-  - `surrogate_type` (`list[obj]`): Message for detecting output from deidentification transformations that support reversing. When `null`, the `surrogate_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.surrogate_type.new](#fn-inspect_configinspect_configsurrogate_typenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `custom_info_types` sub block.
@@ -441,7 +432,6 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names
 listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
-  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `info_type` sub block.
@@ -494,26 +484,6 @@ or &#39;projects/project-id/storedInfoTypes/432452342&#39;.
 
 **Returns**:
   - An attribute object that represents the `stored_type` sub block.
-
-
-## obj inspect_config.custom_info_types.surrogate_type
-
-
-
-### fn inspect_config.custom_info_types.surrogate_type.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.surrogate_type.new` constructs a new object with attributes and blocks configured for the `surrogate_type`
-Terraform sub block.
-
-
-
-**Returns**:
-  - An attribute object that represents the `surrogate_type` sub block.
 
 
 ## obj inspect_config.info_types
@@ -611,7 +581,6 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
-  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `info_type` sub block.
@@ -660,7 +629,6 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
-  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `info_types` sub block.
@@ -709,8 +677,6 @@ Terraform sub block.
 **Args**:
   - `matching_type` (`string`): How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType Possible values: [&#34;MATCHING_TYPE_FULL_MATCH&#34;, &#34;MATCHING_TYPE_PARTIAL_MATCH&#34;, &#34;MATCHING_TYPE_INVERSE_MATCH&#34;]
   - `dictionary` (`list[obj]`): Dictionary which defines the rule. When `null`, the `dictionary` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.dictionary.new](#fn-inspect_configinspect_configrule_setrulesdictionarynew) constructor.
-  - `exclude_by_hotword` (`list[obj]`): Drop if the hotword rule is contained in the proximate context.
-For tabular data, the context includes the column name. When `null`, the `exclude_by_hotword` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.new](#fn-inspect_configinspect_configrule_setrulesexclude_by_hotwordnew) constructor.
   - `exclude_info_types` (`list[obj]`): Set of infoTypes for which findings would affect this rule. When `null`, the `exclude_info_types` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.new](#fn-inspect_configinspect_configrule_setrulesexclude_info_typesnew) constructor.
   - `regex` (`list[obj]`): Regular expression which defines the rule. When `null`, the `regex` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.regex.new](#fn-inspect_configinspect_configrule_setrulesregexnew) constructor.
 
@@ -789,84 +755,6 @@ phrase and every phrase must contain at least 2 characters that are letters or d
   - An attribute object that represents the `word_list` sub block.
 
 
-## obj inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword
-
-
-
-### fn inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.new` constructs a new object with attributes and blocks configured for the `exclude_by_hotword`
-Terraform sub block.
-
-
-
-**Args**:
-  - `hotword_regex` (`list[obj]`): Regular expression pattern defining what qualifies as a hotword. When `null`, the `hotword_regex` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.hotword_regex.new](#fn-inspect_configinspect_configrule_setrulesexclusion_rulehotword_regexnew) constructor.
-  - `proximity` (`list[obj]`): Proximity of the finding within which the entire hotword must reside. The total length of the window cannot
-exceed 1000 characters. Note that the finding itself will be included in the window, so that hotwords may be
-used to match substrings of the finding itself. For example, the certainty of a phone number regex
-&#39;(\d{3}) \d{3}-\d{4}&#39; could be adjusted upwards if the area code is known to be the local area code of a company
-office using the hotword regex &#39;(xxx)&#39;, where &#39;xxx&#39; is the area code in question. When `null`, the `proximity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.proximity.new](#fn-inspect_configinspect_configrule_setrulesexclusion_ruleproximitynew) constructor.
-
-**Returns**:
-  - An attribute object that represents the `exclude_by_hotword` sub block.
-
-
-## obj inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.hotword_regex
-
-
-
-### fn inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.hotword_regex.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.hotword_regex.new` constructs a new object with attributes and blocks configured for the `hotword_regex`
-Terraform sub block.
-
-
-
-**Args**:
-  - `group_indexes` (`list`): The index of the submatch to extract as findings. When not specified,
-the entire match is returned. No more than 3 may be included. When `null`, the `group_indexes` field will be omitted from the resulting object.
-  - `pattern` (`string`): Pattern defining the regular expression. Its syntax
-(https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
-
-**Returns**:
-  - An attribute object that represents the `hotword_regex` sub block.
-
-
-## obj inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.proximity
-
-
-
-### fn inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.proximity.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_by_hotword.proximity.new` constructs a new object with attributes and blocks configured for the `proximity`
-Terraform sub block.
-
-
-
-**Args**:
-  - `window_after` (`number`): Number of characters after the finding to consider. When `null`, the `window_after` field will be omitted from the resulting object.
-  - `window_before` (`number`): Number of characters before the finding to consider. When `null`, the `window_before` field will be omitted from the resulting object.
-
-**Returns**:
-  - An attribute object that represents the `proximity` sub block.
-
-
 ## obj inspect_config.rule_set.rules.exclusion_rule.exclude_info_types
 
 
@@ -909,7 +797,6 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
-  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `info_types` sub block.

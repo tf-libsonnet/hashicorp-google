@@ -18,15 +18,11 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withBackupId()`](#fn-withbackupid)
 * [`fn withClusterName()`](#fn-withclustername)
 * [`fn withDescription()`](#fn-withdescription)
-* [`fn withEncryptionConfig()`](#fn-withencryptionconfig)
-* [`fn withEncryptionConfigMixin()`](#fn-withencryptionconfigmixin)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
-* [`obj encryption_config`](#obj-encryption_config)
-  * [`fn new()`](#fn-encryption_confignew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -65,7 +61,6 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `labels` (`obj`): User-defined labels for the alloydb backup. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location where the alloydb backup should reside.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `encryption_config` (`list[obj]`): EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_backup.encryption_config.new](#fn-encryption_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_backup.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -96,7 +91,6 @@ injecting into a complete block.
   - `labels` (`obj`): User-defined labels for the alloydb backup. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location where the alloydb backup should reside.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `encryption_config` (`list[obj]`): EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_backup.encryption_config.new](#fn-encryption_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_backup.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -149,43 +143,6 @@ Terraform resource block to set or update the description field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `description` field.
-
-
-### fn withEncryptionConfig
-
-```ts
-withEncryptionConfig()
-```
-
-`google.list[obj].withEncryptionConfig` constructs a mixin object that can be merged into the `list[obj]`
-Terraform resource block to set or update the encryption_config field.
-
-This function will replace the array with the passed in `value`. If you wish to instead append the
-passed in value to the existing array, use the [google.list[obj].withEncryptionConfigMixin](TODO) function.
-
-
-**Args**:
-  - `resourceLabel` (`string`): The name label of the block to update.
-  - `value` (`list[obj]`): The value to set for the `encryption_config` field.
-
-
-### fn withEncryptionConfigMixin
-
-```ts
-withEncryptionConfigMixin()
-```
-
-`google.list[obj].withEncryptionConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
-Terraform resource block to set or update the encryption_config field.
-
-This function will append the passed in array or object to the existing array. If you wish
-to instead replace the array with the passed in `value`, use the [google.list[obj].withEncryptionConfig](TODO)
-function.
-
-
-**Args**:
-  - `resourceLabel` (`string`): The name label of the block to update.
-  - `value` (`list[obj]`): The value to set for the `encryption_config` field.
 
 
 ### fn withLabels
@@ -270,29 +227,6 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
-
-
-## obj encryption_config
-
-
-
-### fn encryption_config.new
-
-```ts
-new()
-```
-
-
-`google.alloydb_backup.encryption_config.new` constructs a new object with attributes and blocks configured for the `encryption_config`
-Terraform sub block.
-
-
-
-**Args**:
-  - `kms_key_name` (`string`): The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME]. When `null`, the `kms_key_name` field will be omitted from the resulting object.
-
-**Returns**:
-  - An attribute object that represents the `encryption_config` sub block.
 
 
 ## obj timeouts

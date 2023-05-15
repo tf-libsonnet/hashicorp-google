@@ -65,11 +65,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `chain_name` (`string`): Creates the new snapshot in the snapshot chain labeled with the
-specified name. The chain name must be 1-63 characters long and
-comply with RFC1035. This is an uncommon option only for advanced
-service owners who needs to create separate snapshot chains, for
-example, for chargeback tracking.  When you describe your snapshot
+  - `chain_name` (`string`): Creates the new snapshot in the snapshot chain labeled with the 
+specified name. The chain name must be 1-63 characters long and 
+comply with RFC1035. This is an uncommon option only for advanced 
+service owners who needs to create separate snapshot chains, for 
+example, for chargeback tracking.  When you describe your snapshot 
 resource, this field is visible only if it has a non-empty value. When `null`, the `chain_name` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): Labels to apply to this Snapshot. When `null`, the `labels` field will be omitted from the resulting object.
@@ -124,11 +124,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `chain_name` (`string`): Creates the new snapshot in the snapshot chain labeled with the
-specified name. The chain name must be 1-63 characters long and
-comply with RFC1035. This is an uncommon option only for advanced
-service owners who needs to create separate snapshot chains, for
-example, for chargeback tracking.  When you describe your snapshot
+  - `chain_name` (`string`): Creates the new snapshot in the snapshot chain labeled with the 
+specified name. The chain name must be 1-63 characters long and 
+comply with RFC1035. This is an uncommon option only for advanced 
+service owners who needs to create separate snapshot chains, for 
+example, for chargeback tracking.  When you describe your snapshot 
 resource, this field is visible only if it has a non-empty value. When `null`, the `chain_name` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): Labels to apply to this Snapshot. When `null`, the `labels` field will be omitted from the resulting object.

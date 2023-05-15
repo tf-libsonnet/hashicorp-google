@@ -24,20 +24,6 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj deidentify_config`](#obj-deidentify_config)
   * [`fn new()`](#fn-deidentify_confignew)
-  * [`obj deidentify_config.image_transformations`](#obj-deidentify_configimage_transformations)
-    * [`fn new()`](#fn-deidentify_configimage_transformationsnew)
-    * [`obj deidentify_config.image_transformations.transforms`](#obj-deidentify_configimage_transformationstransforms)
-      * [`fn new()`](#fn-deidentify_configimage_transformationstransformsnew)
-      * [`obj deidentify_config.image_transformations.transforms.all_info_types`](#obj-deidentify_configimage_transformationstransformsall_info_types)
-        * [`fn new()`](#fn-deidentify_configimage_transformationstransformsall_info_typesnew)
-      * [`obj deidentify_config.image_transformations.transforms.all_text`](#obj-deidentify_configimage_transformationstransformsall_text)
-        * [`fn new()`](#fn-deidentify_configimage_transformationstransformsall_textnew)
-      * [`obj deidentify_config.image_transformations.transforms.redaction_color`](#obj-deidentify_configimage_transformationstransformsredaction_color)
-        * [`fn new()`](#fn-deidentify_configimage_transformationstransformsredaction_colornew)
-      * [`obj deidentify_config.image_transformations.transforms.selected_info_types`](#obj-deidentify_configimage_transformationstransformsselected_info_types)
-        * [`fn new()`](#fn-deidentify_configimage_transformationstransformsselected_info_typesnew)
-        * [`obj deidentify_config.image_transformations.transforms.selected_info_types.info_types`](#obj-deidentify_configimage_transformationstransformsselected_info_typesinfo_types)
-          * [`fn new()`](#fn-deidentify_configimage_transformationstransformsselected_info_typesinfo_typesnew)
   * [`obj deidentify_config.info_type_transformations`](#obj-deidentify_configinfo_type_transformations)
     * [`fn new()`](#fn-deidentify_configinfo_type_transformationsnew)
     * [`obj deidentify_config.info_type_transformations.transformations`](#obj-deidentify_configinfo_type_transformationstransformations)
@@ -86,10 +72,6 @@ This package contains functions and utilities for setting up the resource using 
               * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationreplace_confignew_valuedate_valuenew)
             * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.replace_config.new_value.time_value`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationreplace_confignew_valuetime_value)
               * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationreplace_confignew_valuetime_valuenew)
-        * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.replace_dictionary_config`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationreplace_dictionary_config)
-          * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationreplace_dictionary_confignew)
-          * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.replace_dictionary_config.word_list`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationreplace_dictionary_configword_list)
-            * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationreplace_dictionary_configword_listnew)
   * [`obj deidentify_config.record_transformations`](#obj-deidentify_configrecord_transformations)
     * [`fn new()`](#fn-deidentify_configrecord_transformationsnew)
     * [`obj deidentify_config.record_transformations.field_transformations`](#obj-deidentify_configrecord_transformationsfield_transformations)
@@ -456,174 +438,11 @@ Terraform sub block.
 
 
 **Args**:
-  - `image_transformations` (`list[obj]`): Treat the dataset as an image and redact. When `null`, the `image_transformations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.new](#fn-deidentify_configimage_transformationsnew) constructor.
   - `info_type_transformations` (`list[obj]`): Treat the dataset as free-form text and apply the same free text transformation everywhere When `null`, the `info_type_transformations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.new](#fn-deidentify_configinfo_type_transformationsnew) constructor.
   - `record_transformations` (`list[obj]`): Treat the dataset as structured. Transformations can be applied to specific locations within structured datasets, such as transforming a column within a table. When `null`, the `record_transformations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.new](#fn-deidentify_configrecord_transformationsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `deidentify_config` sub block.
-
-
-## obj deidentify_config.image_transformations
-
-
-
-### fn deidentify_config.image_transformations.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.new` constructs a new object with attributes and blocks configured for the `image_transformations`
-Terraform sub block.
-
-
-
-**Args**:
-  - `transforms` (`list[obj]`): For determination of how redaction of images should occur. When `null`, the `transforms` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.new](#fn-deidentify_configdeidentify_configtransformsnew) constructor.
-
-**Returns**:
-  - An attribute object that represents the `image_transformations` sub block.
-
-
-## obj deidentify_config.image_transformations.transforms
-
-
-
-### fn deidentify_config.image_transformations.transforms.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.new` constructs a new object with attributes and blocks configured for the `transforms`
-Terraform sub block.
-
-
-
-**Args**:
-  - `all_info_types` (`list[obj]`): Apply transformation to all findings not specified in other ImageTransformation&#39;s selectedInfoTypes. When `null`, the `all_info_types` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.all_info_types.new](#fn-deidentify_configdeidentify_configimage_transformationsall_info_typesnew) constructor.
-  - `all_text` (`list[obj]`): Apply transformation to all text that doesn&#39;t match an infoType. When `null`, the `all_text` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.all_text.new](#fn-deidentify_configdeidentify_configimage_transformationsall_textnew) constructor.
-  - `redaction_color` (`list[obj]`): The color to use when redacting content from an image. If not specified, the default is black. When `null`, the `redaction_color` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.redaction_color.new](#fn-deidentify_configdeidentify_configimage_transformationsredaction_colornew) constructor.
-  - `selected_info_types` (`list[obj]`): Apply transformation to the selected infoTypes. When `null`, the `selected_info_types` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.selected_info_types.new](#fn-deidentify_configdeidentify_configimage_transformationsselected_info_typesnew) constructor.
-
-**Returns**:
-  - An attribute object that represents the `transforms` sub block.
-
-
-## obj deidentify_config.image_transformations.transforms.all_info_types
-
-
-
-### fn deidentify_config.image_transformations.transforms.all_info_types.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.all_info_types.new` constructs a new object with attributes and blocks configured for the `all_info_types`
-Terraform sub block.
-
-
-
-**Returns**:
-  - An attribute object that represents the `all_info_types` sub block.
-
-
-## obj deidentify_config.image_transformations.transforms.all_text
-
-
-
-### fn deidentify_config.image_transformations.transforms.all_text.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.all_text.new` constructs a new object with attributes and blocks configured for the `all_text`
-Terraform sub block.
-
-
-
-**Returns**:
-  - An attribute object that represents the `all_text` sub block.
-
-
-## obj deidentify_config.image_transformations.transforms.redaction_color
-
-
-
-### fn deidentify_config.image_transformations.transforms.redaction_color.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.redaction_color.new` constructs a new object with attributes and blocks configured for the `redaction_color`
-Terraform sub block.
-
-
-
-**Args**:
-  - `blue` (`number`): The amount of blue in the color as a value in the interval [0, 1]. When `null`, the `blue` field will be omitted from the resulting object.
-  - `green` (`number`): The amount of green in the color as a value in the interval [0, 1]. When `null`, the `green` field will be omitted from the resulting object.
-  - `red` (`number`): The amount of red in the color as a value in the interval [0, 1]. When `null`, the `red` field will be omitted from the resulting object.
-
-**Returns**:
-  - An attribute object that represents the `redaction_color` sub block.
-
-
-## obj deidentify_config.image_transformations.transforms.selected_info_types
-
-
-
-### fn deidentify_config.image_transformations.transforms.selected_info_types.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.selected_info_types.new` constructs a new object with attributes and blocks configured for the `selected_info_types`
-Terraform sub block.
-
-
-
-**Args**:
-  - `info_types` (`list[obj]`): InfoTypes to apply the transformation to. Leaving this empty will apply the transformation to apply to
-all findings that correspond to infoTypes that were requested in InspectConfig. When `null`, the `info_types` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.selected_info_types.info_types.new](#fn-deidentify_configdeidentify_configimage_transformationstransformsinfo_typesnew) constructor.
-
-**Returns**:
-  - An attribute object that represents the `selected_info_types` sub block.
-
-
-## obj deidentify_config.image_transformations.transforms.selected_info_types.info_types
-
-
-
-### fn deidentify_config.image_transformations.transforms.selected_info_types.info_types.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.selected_info_types.info_types.new` constructs a new object with attributes and blocks configured for the `info_types`
-Terraform sub block.
-
-
-
-**Args**:
-  - `name` (`string`): Name of the information type.
-  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
-
-**Returns**:
-  - An attribute object that represents the `info_types` sub block.
 
 
 ## obj deidentify_config.info_type_transformations
@@ -693,7 +512,6 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): Name of the information type.
-  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `info_types` sub block.
@@ -724,7 +542,6 @@ Masking can start from the beginning or end of the string. When `null`, the `cha
 
 Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity. When `null`, the `crypto_replace_ffx_fpe_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationscrypto_replace_ffx_fpe_confignew) constructor.
   - `replace_config` (`list[obj]`): Replace each input value with a given value. When `null`, the `replace_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.replace_config.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsreplace_confignew) constructor.
-  - `replace_dictionary_config` (`list[obj]`): Replace with a value randomly drawn (with replacement) from a dictionary. When `null`, the `replace_dictionary_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.replace_dictionary_config.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsreplace_dictionary_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `primitive_transformation` sub block.
@@ -1283,52 +1100,6 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `time_value` sub block.
-
-
-## obj deidentify_config.info_type_transformations.transformations.primitive_transformation.replace_dictionary_config
-
-
-
-### fn deidentify_config.info_type_transformations.transformations.primitive_transformation.replace_dictionary_config.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.replace_dictionary_config.new` constructs a new object with attributes and blocks configured for the `replace_dictionary_config`
-Terraform sub block.
-
-
-
-**Args**:
-  - `word_list` (`list[obj]`): A list of words to select from for random replacement. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries. When `null`, the `word_list` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.replace_dictionary_config.word_list.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationword_listnew) constructor.
-
-**Returns**:
-  - An attribute object that represents the `replace_dictionary_config` sub block.
-
-
-## obj deidentify_config.info_type_transformations.transformations.primitive_transformation.replace_dictionary_config.word_list
-
-
-
-### fn deidentify_config.info_type_transformations.transformations.primitive_transformation.replace_dictionary_config.word_list.new
-
-```ts
-new()
-```
-
-
-`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.replace_dictionary_config.word_list.new` constructs a new object with attributes and blocks configured for the `word_list`
-Terraform sub block.
-
-
-
-**Args**:
-  - `words` (`list`): Words or phrases defining the dictionary. The dictionary must contain at least one phrase and every phrase must contain at least 2 characters that are letters or digits.
-
-**Returns**:
-  - An attribute object that represents the `word_list` sub block.
 
 
 ## obj deidentify_config.record_transformations

@@ -69,8 +69,8 @@ An object containing a list of &#34;key&#34;: value pairs.
 Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
   - `map` (`string`): A map entry that is inputted into the cetrificate map
   - `matcher` (`string`): A predefined matcher for particular cases, other than SNI selection When `null`, the `matcher` field will be omitted from the resulting object.
-  - `name` (`string`): A user-defined name of the Certificate Map Entry. Certificate Map Entry
-names must be unique globally and match pattern
+  - `name` (`string`): A user-defined name of the Certificate Map Entry. Certificate Map Entry 
+names must be unique globally and match pattern 
 &#39;projects/*/locations/*/certificateMaps/*/certificateMapEntries/*&#39;
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate_map_entry.timeouts.new](#fn-timeoutsnew) constructor.
@@ -109,8 +109,8 @@ An object containing a list of &#34;key&#34;: value pairs.
 Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
   - `map` (`string`): A map entry that is inputted into the cetrificate map
   - `matcher` (`string`): A predefined matcher for particular cases, other than SNI selection When `null`, the `matcher` field will be omitted from the resulting object.
-  - `name` (`string`): A user-defined name of the Certificate Map Entry. Certificate Map Entry
-names must be unique globally and match pattern
+  - `name` (`string`): A user-defined name of the Certificate Map Entry. Certificate Map Entry 
+names must be unique globally and match pattern 
 &#39;projects/*/locations/*/certificateMaps/*/certificateMapEntries/*&#39;
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate_map_entry.timeouts.new](#fn-timeoutsnew) constructor.

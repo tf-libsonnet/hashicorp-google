@@ -69,17 +69,17 @@ the user can explicitly connect subnetwork resources. When `null`, the `auto_cre
 immediately after network creation. Defaults to &#39;false&#39;. When `null`, the `delete_default_routes_on_create` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. The resource must be
 recreated to modify this field. When `null`, the `description` field will be omitted from the resulting object.
-  - `enable_ula_internal_ipv6` (`bool`): Enable ULA internal ipv6 on this network. Enabling this feature will assign
+  - `enable_ula_internal_ipv6` (`bool`): Enable ULA internal ipv6 on this network. Enabling this feature will assign 
 a /48 from google defined ULA prefix fd20::/20. When `null`, the `enable_ula_internal_ipv6` field will be omitted from the resulting object.
-  - `internal_ipv6_range` (`string`): When enabling ula internal ipv6, caller optionally can specify the /48 range
-they want from the google defined ULA prefix fd20::/20. The input must be a
-valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will
-fail if the speficied /48 is already in used by another resource.
+  - `internal_ipv6_range` (`string`): When enabling ula internal ipv6, caller optionally can specify the /48 range 
+they want from the google defined ULA prefix fd20::/20. The input must be a 
+valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will 
+fail if the speficied /48 is already in used by another resource. 
 If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. When `null`, the `internal_ipv6_range` field will be omitted from the resulting object.
-  - `mtu` (`number`): Maximum Transmission Unit in bytes. The default value is 1460 bytes.
+  - `mtu` (`number`): Maximum Transmission Unit in bytes. The default value is 1460 bytes. 
 The minimum value for this field is 1300 and the maximum value is 8896 bytes (jumbo frames).
 Note that packets larger than 1500 bytes (standard Ethernet) can be subject to TCP-MSS clamping or dropped
-with an ICMP &#39;Fragmentation-Needed&#39; message if the packets are routed to the Internet or other VPCs
+with an ICMP &#39;Fragmentation-Needed&#39; message if the packets are routed to the Internet or other VPCs 
 with varying MTUs. When `null`, the `mtu` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -88,7 +88,7 @@ the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  - `network_firewall_policy_enforcement_order` (`string`): Set the order that Firewall Rules and Firewall Policies are evaluated. Default value: &#34;AFTER_CLASSIC_FIREWALL&#34; Possible values: [&#34;BEFORE_CLASSIC_FIREWALL&#34;, &#34;AFTER_CLASSIC_FIREWALL&#34;] When `null`, the `network_firewall_policy_enforcement_order` field will be omitted from the resulting object.
+  - `network_firewall_policy_enforcement_order` (`string`): Set the order that Firewall Rules and Firewall Policies are evaluated. Needs to be either &#39;AFTER_CLASSIC_FIREWALL&#39; or &#39;BEFORE_CLASSIC_FIREWALL&#39; Default &#39;AFTER_CLASSIC_FIREWALL&#39; Default value: &#34;AFTER_CLASSIC_FIREWALL&#34; Possible values: [&#34;BEFORE_CLASSIC_FIREWALL&#34;, &#34;AFTER_CLASSIC_FIREWALL&#34;] When `null`, the `network_firewall_policy_enforcement_order` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `routing_mode` (`string`): The network-wide routing mode to use. If set to &#39;REGIONAL&#39;, this
 network&#39;s cloud routers will only advertise routes with subnetworks
@@ -129,17 +129,17 @@ the user can explicitly connect subnetwork resources. When `null`, the `auto_cre
 immediately after network creation. Defaults to &#39;false&#39;. When `null`, the `delete_default_routes_on_create` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. The resource must be
 recreated to modify this field. When `null`, the `description` field will be omitted from the resulting object.
-  - `enable_ula_internal_ipv6` (`bool`): Enable ULA internal ipv6 on this network. Enabling this feature will assign
+  - `enable_ula_internal_ipv6` (`bool`): Enable ULA internal ipv6 on this network. Enabling this feature will assign 
 a /48 from google defined ULA prefix fd20::/20. When `null`, the `enable_ula_internal_ipv6` field will be omitted from the resulting object.
-  - `internal_ipv6_range` (`string`): When enabling ula internal ipv6, caller optionally can specify the /48 range
-they want from the google defined ULA prefix fd20::/20. The input must be a
-valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will
-fail if the speficied /48 is already in used by another resource.
+  - `internal_ipv6_range` (`string`): When enabling ula internal ipv6, caller optionally can specify the /48 range 
+they want from the google defined ULA prefix fd20::/20. The input must be a 
+valid /48 ULA IPv6 address and must be within the fd20::/20. Operation will 
+fail if the speficied /48 is already in used by another resource. 
 If the field is not speficied, then a /48 range will be randomly allocated from fd20::/20 and returned via this field. When `null`, the `internal_ipv6_range` field will be omitted from the resulting object.
-  - `mtu` (`number`): Maximum Transmission Unit in bytes. The default value is 1460 bytes.
+  - `mtu` (`number`): Maximum Transmission Unit in bytes. The default value is 1460 bytes. 
 The minimum value for this field is 1300 and the maximum value is 8896 bytes (jumbo frames).
 Note that packets larger than 1500 bytes (standard Ethernet) can be subject to TCP-MSS clamping or dropped
-with an ICMP &#39;Fragmentation-Needed&#39; message if the packets are routed to the Internet or other VPCs
+with an ICMP &#39;Fragmentation-Needed&#39; message if the packets are routed to the Internet or other VPCs 
 with varying MTUs. When `null`, the `mtu` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -148,7 +148,7 @@ the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  - `network_firewall_policy_enforcement_order` (`string`): Set the order that Firewall Rules and Firewall Policies are evaluated. Default value: &#34;AFTER_CLASSIC_FIREWALL&#34; Possible values: [&#34;BEFORE_CLASSIC_FIREWALL&#34;, &#34;AFTER_CLASSIC_FIREWALL&#34;] When `null`, the `network_firewall_policy_enforcement_order` field will be omitted from the resulting object.
+  - `network_firewall_policy_enforcement_order` (`string`): Set the order that Firewall Rules and Firewall Policies are evaluated. Needs to be either &#39;AFTER_CLASSIC_FIREWALL&#39; or &#39;BEFORE_CLASSIC_FIREWALL&#39; Default &#39;AFTER_CLASSIC_FIREWALL&#39; Default value: &#34;AFTER_CLASSIC_FIREWALL&#34; Possible values: [&#34;BEFORE_CLASSIC_FIREWALL&#34;, &#34;AFTER_CLASSIC_FIREWALL&#34;] When `null`, the `network_firewall_policy_enforcement_order` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `routing_mode` (`string`): The network-wide routing mode to use. If set to &#39;REGIONAL&#39;, this
 network&#39;s cloud routers will only advertise routes with subnetworks

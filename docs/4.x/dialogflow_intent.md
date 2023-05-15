@@ -67,7 +67,7 @@ Note: The action name must not contain whitespaces. When `null`, the `action` fi
 (i.e. default platform). Possible values: [&#34;FACEBOOK&#34;, &#34;SLACK&#34;, &#34;TELEGRAM&#34;, &#34;KIK&#34;, &#34;SKYPE&#34;, &#34;LINE&#34;, &#34;VIBER&#34;, &#34;ACTIONS_ON_GOOGLE&#34;, &#34;GOOGLE_HANGOUTS&#34;] When `null`, the `default_response_platforms` field will be omitted from the resulting object.
   - `display_name` (`string`): The name of this intent to be displayed on the console.
   - `events` (`list`): The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
-the contexts must be present in the active user session for an event to trigger this intent. See the
+the contexts must be present in the active user session for an event to trigger this intent. See the 
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details. When `null`, the `events` field will be omitted from the resulting object.
   - `input_context_names` (`list`): The list of context names required for this intent to be triggered.
 Format: projects/&lt;Project ID&gt;/agent/sessions/-/contexts/&lt;Context ID&gt;. When `null`, the `input_context_names` field will be omitted from the resulting object.
@@ -117,7 +117,7 @@ Note: The action name must not contain whitespaces. When `null`, the `action` fi
 (i.e. default platform). Possible values: [&#34;FACEBOOK&#34;, &#34;SLACK&#34;, &#34;TELEGRAM&#34;, &#34;KIK&#34;, &#34;SKYPE&#34;, &#34;LINE&#34;, &#34;VIBER&#34;, &#34;ACTIONS_ON_GOOGLE&#34;, &#34;GOOGLE_HANGOUTS&#34;] When `null`, the `default_response_platforms` field will be omitted from the resulting object.
   - `display_name` (`string`): The name of this intent to be displayed on the console.
   - `events` (`list`): The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
-the contexts must be present in the active user session for an event to trigger this intent. See the
+the contexts must be present in the active user session for an event to trigger this intent. See the 
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details. When `null`, the `events` field will be omitted from the resulting object.
   - `input_context_names` (`list`): The list of context names required for this intent to be triggered.
 Format: projects/&lt;Project ID&gt;/agent/sessions/-/contexts/&lt;Context ID&gt;. When `null`, the `input_context_names` field will be omitted from the resulting object.

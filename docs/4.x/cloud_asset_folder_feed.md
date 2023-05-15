@@ -65,7 +65,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `asset_names` (`list`): A list of the full names of the assets to receive updates. You must specify either or both of
+  - `asset_names` (`list`): A list of the full names of the assets to receive updates. You must specify either or both of 
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info. When `null`, the `asset_names` field will be omitted from the resulting object.
@@ -75,7 +75,7 @@ the feed. For example: &#34;compute.googleapis.com/Disk&#34;
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types. When `null`, the `asset_types` field will be omitted from the resulting object.
   - `billing_project` (`string`): The project whose identity will be used when sending messages to the
-destination pubsub topic. It also specifies the project for API
+destination pubsub topic. It also specifies the project for API 
 enablement check, quota, and billing.
   - `content_type` (`string`): Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: [&#34;CONTENT_TYPE_UNSPECIFIED&#34;, &#34;RESOURCE&#34;, &#34;IAM_POLICY&#34;, &#34;ORG_POLICY&#34;, &#34;OS_INVENTORY&#34;, &#34;ACCESS_POLICY&#34;] When `null`, the `content_type` field will be omitted from the resulting object.
   - `feed_id` (`string`): This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
@@ -110,7 +110,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `asset_names` (`list`): A list of the full names of the assets to receive updates. You must specify either or both of
+  - `asset_names` (`list`): A list of the full names of the assets to receive updates. You must specify either or both of 
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info. When `null`, the `asset_names` field will be omitted from the resulting object.
@@ -120,7 +120,7 @@ the feed. For example: &#34;compute.googleapis.com/Disk&#34;
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types. When `null`, the `asset_types` field will be omitted from the resulting object.
   - `billing_project` (`string`): The project whose identity will be used when sending messages to the
-destination pubsub topic. It also specifies the project for API
+destination pubsub topic. It also specifies the project for API 
 enablement check, quota, and billing.
   - `content_type` (`string`): Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: [&#34;CONTENT_TYPE_UNSPECIFIED&#34;, &#34;RESOURCE&#34;, &#34;IAM_POLICY&#34;, &#34;ORG_POLICY&#34;, &#34;OS_INVENTORY&#34;, &#34;ACCESS_POLICY&#34;] When `null`, the `content_type` field will be omitted from the resulting object.
   - `feed_id` (`string`): This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
@@ -363,7 +363,7 @@ Terraform sub block.
   - `description` (`string`): Description of the expression. This is a longer text which describes the expression,
 e.g. when hovered over it in a UI. When `null`, the `description` field will be omitted from the resulting object.
   - `expression` (`string`): Textual representation of an expression in Common Expression Language syntax.
-  - `location` (`string`): String indicating the location of the expression for error reporting, e.g. a file
+  - `location` (`string`): String indicating the location of the expression for error reporting, e.g. a file 
 name and a position in the file. When `null`, the `location` field will be omitted from the resulting object.
   - `title` (`string`): Title for the expression, i.e. a short string describing its purpose.
 This can be used e.g. in UIs which allow to enter the expression. When `null`, the `title` field will be omitted from the resulting object.

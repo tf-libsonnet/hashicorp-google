@@ -58,7 +58,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `certificate_map` (`string`): A reference to the CertificateMap resource uri that identifies a certificate map
+  - `certificate_map` (`string`): A reference to the CertificateMap resource uri that identifies a certificate map 
 associated with the given target proxy. This field can only be set for global target proxies.
 Accepted format is &#39;//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}&#39;. When `null`, the `certificate_map` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
@@ -108,7 +108,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `certificate_map` (`string`): A reference to the CertificateMap resource uri that identifies a certificate map
+  - `certificate_map` (`string`): A reference to the CertificateMap resource uri that identifies a certificate map 
 associated with the given target proxy. This field can only be set for global target proxies.
 Accepted format is &#39;//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}&#39;. When `null`, the `certificate_map` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.

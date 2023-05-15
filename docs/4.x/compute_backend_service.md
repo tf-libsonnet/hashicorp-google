@@ -57,8 +57,6 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-backendnew)
 * [`obj cdn_policy`](#obj-cdn_policy)
   * [`fn new()`](#fn-cdn_policynew)
-  * [`obj cdn_policy.bypass_cache_on_request_headers`](#obj-cdn_policybypass_cache_on_request_headers)
-    * [`fn new()`](#fn-cdn_policybypass_cache_on_request_headersnew)
   * [`obj cdn_policy.cache_key_policy`](#obj-cdn_policycache_key_policy)
     * [`fn new()`](#fn-cdn_policycache_key_policynew)
   * [`obj cdn_policy.negative_caching_policy`](#obj-cdn_policynegative_caching_policy)
@@ -1201,37 +1199,12 @@ internally behave as though all responses from this backend had a
 &#34;Cache-Control: public, max-age=[TTL]&#34; header, regardless of any
 existing Cache-Control header. The actual headers served in
 responses will not be altered. When `null`, the `signed_url_cache_max_age_sec` field will be omitted from the resulting object.
-  - `bypass_cache_on_request_headers` (`list[obj]`): Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified.
-The cache is bypassed for all cdnPolicy.cacheMode settings. When `null`, the `bypass_cache_on_request_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.bypass_cache_on_request_headers.new](#fn-cdn_policybypass_cache_on_request_headersnew) constructor.
   - `cache_key_policy` (`list[obj]`): The CacheKeyPolicy for this CdnPolicy. When `null`, the `cache_key_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.cache_key_policy.new](#fn-cdn_policycache_key_policynew) constructor.
   - `negative_caching_policy` (`list[obj]`): Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 Omitting the policy and leaving negativeCaching enabled will use Cloud CDN&#39;s default cache TTLs. When `null`, the `negative_caching_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.cdn_policy.negative_caching_policy.new](#fn-cdn_policynegative_caching_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `cdn_policy` sub block.
-
-
-## obj cdn_policy.bypass_cache_on_request_headers
-
-
-
-### fn cdn_policy.bypass_cache_on_request_headers.new
-
-```ts
-new()
-```
-
-
-`google.compute_backend_service.cdn_policy.bypass_cache_on_request_headers.new` constructs a new object with attributes and blocks configured for the `bypass_cache_on_request_headers`
-Terraform sub block.
-
-
-
-**Args**:
-  - `header_name` (`string`): The header field name to match on when bypassing cache. Values are case-insensitive.
-
-**Returns**:
-  - An attribute object that represents the `bypass_cache_on_request_headers` sub block.
 
 
 ## obj cdn_policy.cache_key_policy
