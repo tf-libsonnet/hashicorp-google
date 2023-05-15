@@ -50,6 +50,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-loaddestination_encryption_configurationnew)
   * [`obj load.destination_table`](#obj-loaddestination_table)
     * [`fn new()`](#fn-loaddestination_tablenew)
+  * [`obj load.parquet_options`](#obj-loadparquet_options)
+    * [`fn new()`](#fn-loadparquet_optionsnew)
   * [`obj load.time_partitioning`](#obj-loadtime_partitioning)
     * [`fn new()`](#fn-loadtime_partitioningnew)
 * [`obj query`](#obj-query)
@@ -693,6 +695,7 @@ Each action is atomic and only occurs if BigQuery is able to complete the job su
 Creation, truncation and append actions occur as one atomic update upon job completion. Default value: &#34;WRITE_EMPTY&#34; Possible values: [&#34;WRITE_TRUNCATE&#34;, &#34;WRITE_APPEND&#34;, &#34;WRITE_EMPTY&#34;] When `null`, the `write_disposition` field will be omitted from the resulting object.
   - `destination_encryption_configuration` (`list[obj]`): Custom encryption configuration (e.g., Cloud KMS keys) When `null`, the `destination_encryption_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.load.destination_encryption_configuration.new](#fn-loaddestination_encryption_configurationnew) constructor.
   - `destination_table` (`list[obj]`): The destination table to load the data into. When `null`, the `destination_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.load.destination_table.new](#fn-loaddestination_tablenew) constructor.
+  - `parquet_options` (`list[obj]`): Parquet Options for load and make external tables. When `null`, the `parquet_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.load.parquet_options.new](#fn-loadparquet_optionsnew) constructor.
   - `time_partitioning` (`list[obj]`): Time-based partitioning specification for the destination table. When `null`, the `time_partitioning` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_job.load.time_partitioning.new](#fn-loadtime_partitioningnew) constructor.
 
 **Returns**:
@@ -747,6 +750,30 @@ or of the form &#39;projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_
 
 **Returns**:
   - An attribute object that represents the `destination_table` sub block.
+
+
+## obj load.parquet_options
+
+
+
+### fn load.parquet_options.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_job.load.parquet_options.new` constructs a new object with attributes and blocks configured for the `parquet_options`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enable_list_inference` (`bool`): If sourceFormat is set to PARQUET, indicates whether to use schema inference specifically for Parquet LIST logical type. When `null`, the `enable_list_inference` field will be omitted from the resulting object.
+  - `enum_as_string` (`bool`): If sourceFormat is set to PARQUET, indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default. When `null`, the `enum_as_string` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `parquet_options` sub block.
 
 
 ## obj load.time_partitioning
