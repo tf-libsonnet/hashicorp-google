@@ -84,9 +84,10 @@ The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where this commitment may be used. When `null`, the `region` field will be omitted from the resulting object.
   - `type` (`string`): The type of commitment, which affects the discount rate and the eligible resources.
-Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized
-machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to
-accelerator optimized machines. Possible values: [&#34;MEMORY_OPTIMIZED&#34;, &#34;ACCELERATOR_OPTIMIZED&#34;] When `null`, the `type` field will be omitted from the resulting object.
+The type could be one of the following value: &#39;MEMORY_OPTIMIZED&#39;, &#39;ACCELERATOR_OPTIMIZED&#39;, 
+&#39;GENERAL_PURPOSE_N1&#39;, &#39;GENERAL_PURPOSE_N2&#39;, &#39;GENERAL_PURPOSE_N2D&#39;, &#39;GENERAL_PURPOSE_E2&#39;,
+&#39;GENERAL_PURPOSE_T2D&#39;, &#39;GENERAL_PURPOSE_C3&#39;, &#39;COMPUTE_OPTIMIZED_C2&#39;, &#39;COMPUTE_OPTIMIZED_C2D&#39; and
+&#39;GRAPHICS_OPTIMIZED_G2&#39; When `null`, the `type` field will be omitted from the resulting object.
   - `license_resource` (`list[obj]`): The license specification required as part of a license commitment. When `null`, the `license_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_commitment.license_resource.new](#fn-license_resourcenew) constructor.
   - `resources` (`list[obj]`): A list of commitment amounts for particular resources.
 Note that VCPU and MEMORY resource commitments must occur together. When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_commitment.resources.new](#fn-resourcesnew) constructor.
@@ -133,9 +134,10 @@ The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where this commitment may be used. When `null`, the `region` field will be omitted from the resulting object.
   - `type` (`string`): The type of commitment, which affects the discount rate and the eligible resources.
-Type MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized
-machines. Type ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to
-accelerator optimized machines. Possible values: [&#34;MEMORY_OPTIMIZED&#34;, &#34;ACCELERATOR_OPTIMIZED&#34;] When `null`, the `type` field will be omitted from the resulting object.
+The type could be one of the following value: &#39;MEMORY_OPTIMIZED&#39;, &#39;ACCELERATOR_OPTIMIZED&#39;, 
+&#39;GENERAL_PURPOSE_N1&#39;, &#39;GENERAL_PURPOSE_N2&#39;, &#39;GENERAL_PURPOSE_N2D&#39;, &#39;GENERAL_PURPOSE_E2&#39;,
+&#39;GENERAL_PURPOSE_T2D&#39;, &#39;GENERAL_PURPOSE_C3&#39;, &#39;COMPUTE_OPTIMIZED_C2&#39;, &#39;COMPUTE_OPTIMIZED_C2D&#39; and
+&#39;GRAPHICS_OPTIMIZED_G2&#39; When `null`, the `type` field will be omitted from the resulting object.
   - `license_resource` (`list[obj]`): The license specification required as part of a license commitment. When `null`, the `license_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_commitment.license_resource.new](#fn-license_resourcenew) constructor.
   - `resources` (`list[obj]`): A list of commitment amounts for particular resources.
 Note that VCPU and MEMORY resource commitments must occur together. When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_commitment.resources.new](#fn-resourcesnew) constructor.

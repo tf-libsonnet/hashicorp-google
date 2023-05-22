@@ -465,6 +465,7 @@ Terraform sub block.
 
 **Args**:
   - `bucket_name` (`string`): S3 Bucket name.
+  - `path` (`string`): S3 Bucket path in bucket to transfer. When `null`, the `path` field will be omitted from the resulting object.
   - `role_arn` (`string`): The Amazon Resource Name (ARN) of the role to support temporary credentials via &#39;AssumeRoleWithWebIdentity&#39;. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a &#39;AssumeRoleWithWebIdentity&#39; call for the provided role using the [GoogleServiceAccount][] for this project. When `null`, the `role_arn` field will be omitted from the resulting object.
   - `aws_access_key` (`list[obj]`): AWS credentials block. When `null`, the `aws_access_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.transfer_spec.aws_s3_data_source.aws_access_key.new](#fn-transfer_spectransfer_specaws_access_keynew) constructor.
 

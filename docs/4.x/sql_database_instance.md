@@ -45,6 +45,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-settingsnew)
   * [`obj settings.active_directory_config`](#obj-settingsactive_directory_config)
     * [`fn new()`](#fn-settingsactive_directory_confignew)
+  * [`obj settings.advanced_machine_features`](#obj-settingsadvanced_machine_features)
+    * [`fn new()`](#fn-settingsadvanced_machine_featuresnew)
   * [`obj settings.backup_configuration`](#obj-settingsbackup_configuration)
     * [`fn new()`](#fn-settingsbackup_configurationnew)
     * [`obj settings.backup_configuration.backup_retention_settings`](#obj-settingsbackup_configurationbackup_retention_settings)
@@ -621,6 +623,7 @@ is set to true. Defaults to ZONAL. When `null`, the `availability_type` field wi
   - `time_zone` (`string`): The time_zone to be used by the database engine (supported only for SQL Server), in SQL Server timezone format. When `null`, the `time_zone` field will be omitted from the resulting object.
   - `user_labels` (`obj`): A set of key/value user label pairs to assign to the instance. When `null`, the `user_labels` field will be omitted from the resulting object.
   - `active_directory_config` (`list[obj]`): Set the `active_directory_config` field on the resulting object. When `null`, the `active_directory_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.active_directory_config.new](#fn-settingsactive_directory_confignew) constructor.
+  - `advanced_machine_features` (`list[obj]`): Set the `advanced_machine_features` field on the resulting object. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.advanced_machine_features.new](#fn-settingsadvanced_machine_featuresnew) constructor.
   - `backup_configuration` (`list[obj]`): Set the `backup_configuration` field on the resulting object. When `null`, the `backup_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.backup_configuration.new](#fn-settingsbackup_configurationnew) constructor.
   - `database_flags` (`list[obj]`): Set the `database_flags` field on the resulting object. When `null`, the `database_flags` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.database_flags.new](#fn-settingsdatabase_flagsnew) constructor.
   - `deny_maintenance_period` (`list[obj]`): Set the `deny_maintenance_period` field on the resulting object. When `null`, the `deny_maintenance_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.deny_maintenance_period.new](#fn-settingsdeny_maintenance_periodnew) constructor.
@@ -656,6 +659,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `active_directory_config` sub block.
+
+
+## obj settings.advanced_machine_features
+
+
+
+### fn settings.advanced_machine_features.new
+
+```ts
+new()
+```
+
+
+`google.sql_database_instance.settings.advanced_machine_features.new` constructs a new object with attributes and blocks configured for the `advanced_machine_features`
+Terraform sub block.
+
+
+
+**Args**:
+  - `threads_per_core` (`number`): The number of threads per physical core. Can be 1 or 2. When `null`, the `threads_per_core` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `advanced_machine_features` sub block.
 
 
 ## obj settings.backup_configuration

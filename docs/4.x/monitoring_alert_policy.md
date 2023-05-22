@@ -31,6 +31,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withUserLabels()`](#fn-withuserlabels)
 * [`obj alert_strategy`](#obj-alert_strategy)
   * [`fn new()`](#fn-alert_strategynew)
+  * [`obj alert_strategy.notification_channel_strategy`](#obj-alert_strategynotification_channel_strategy)
+    * [`fn new()`](#fn-alert_strategynotification_channel_strategynew)
   * [`obj alert_strategy.notification_rate_limit`](#obj-alert_strategynotification_rate_limit)
     * [`fn new()`](#fn-alert_strategynotification_rate_limitnew)
 * [`obj conditions`](#obj-conditions)
@@ -53,6 +55,8 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-conditionscondition_thresholdaggregationsnew)
     * [`obj conditions.condition_threshold.denominator_aggregations`](#obj-conditionscondition_thresholddenominator_aggregations)
       * [`fn new()`](#fn-conditionscondition_thresholddenominator_aggregationsnew)
+    * [`obj conditions.condition_threshold.forecast_options`](#obj-conditionscondition_thresholdforecast_options)
+      * [`fn new()`](#fn-conditionscondition_thresholdforecast_optionsnew)
     * [`obj conditions.condition_threshold.trigger`](#obj-conditionscondition_thresholdtrigger)
       * [`fn new()`](#fn-conditionscondition_thresholdtriggernew)
 * [`obj documentation`](#obj-documentation)
@@ -440,11 +444,40 @@ Terraform sub block.
 
 **Args**:
   - `auto_close` (`string`): If an alert policy that was active has no data for this long, any open incidents will close. When `null`, the `auto_close` field will be omitted from the resulting object.
+  - `notification_channel_strategy` (`list[obj]`): Control over how the notification channels in &#39;notification_channels&#39;
+are notified when this alert fires, on a per-channel basis. When `null`, the `notification_channel_strategy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.alert_strategy.notification_channel_strategy.new](#fn-alert_strategynotification_channel_strategynew) constructor.
   - `notification_rate_limit` (`list[obj]`): Required for alert policies with a LogMatch condition.
 This limit is not implemented for alert policies that are not log-based. When `null`, the `notification_rate_limit` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.alert_strategy.notification_rate_limit.new](#fn-alert_strategynotification_rate_limitnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `alert_strategy` sub block.
+
+
+## obj alert_strategy.notification_channel_strategy
+
+
+
+### fn alert_strategy.notification_channel_strategy.new
+
+```ts
+new()
+```
+
+
+`google.monitoring_alert_policy.alert_strategy.notification_channel_strategy.new` constructs a new object with attributes and blocks configured for the `notification_channel_strategy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `notification_channel_names` (`list`): The notification channels that these settings apply to. Each of these
+correspond to the name field in one of the NotificationChannel objects
+referenced in the notification_channels field of this AlertPolicy. The format is
+&#39;projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID]&#39; When `null`, the `notification_channel_names` field will be omitted from the resulting object.
+  - `renotify_interval` (`string`): The frequency at which to send reminder notifications for open incidents. When `null`, the `renotify_interval` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `notification_channel_strategy` sub block.
 
 
 ## obj alert_strategy.notification_rate_limit
@@ -889,6 +922,12 @@ labels.This field is similar to the one in
 the MetricService.ListTimeSeries request. It
 is advisable to use the ListTimeSeries
 method when debugging this field. When `null`, the `denominator_aggregations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_threshold.denominator_aggregations.new](#fn-conditionsconditionsdenominator_aggregationsnew) constructor.
+  - `forecast_options` (`list[obj]`): When this field is present, the &#39;MetricThreshold&#39;
+condition forecasts whether the time series is
+predicted to violate the threshold within the
+&#39;forecastHorizon&#39;. When this field is not set, the
+&#39;MetricThreshold&#39; tests the current value of the
+timeseries against the threshold. When `null`, the `forecast_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_threshold.forecast_options.new](#fn-conditionsconditionsforecast_optionsnew) constructor.
   - `trigger` (`list[obj]`): The number/percent of time series for which
 the comparison must hold in order for the
 condition to trigger. If unspecified, then
@@ -1090,6 +1129,34 @@ returned. Possible values: [&#34;ALIGN_NONE&#34;, &#34;ALIGN_DELTA&#34;, &#34;AL
 
 **Returns**:
   - An attribute object that represents the `denominator_aggregations` sub block.
+
+
+## obj conditions.condition_threshold.forecast_options
+
+
+
+### fn conditions.condition_threshold.forecast_options.new
+
+```ts
+new()
+```
+
+
+`google.monitoring_alert_policy.conditions.condition_threshold.forecast_options.new` constructs a new object with attributes and blocks configured for the `forecast_options`
+Terraform sub block.
+
+
+
+**Args**:
+  - `forecast_horizon` (`string`): The length of time into the future to forecast
+whether a timeseries will violate the threshold.
+If the predicted value is found to violate the
+threshold, and the violation is observed in all
+forecasts made for the Configured &#39;duration&#39;,
+then the timeseries is considered to be failing.
+
+**Returns**:
+  - An attribute object that represents the `forecast_options` sub block.
 
 
 ## obj conditions.condition_threshold.trigger
