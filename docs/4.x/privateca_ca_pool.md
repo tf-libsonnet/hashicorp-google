@@ -831,6 +831,9 @@ Terraform sub block.
 
 
 **Args**:
+  - `encoding_format` (`string`): Specifies the encoding format of each CertificateAuthority&#39;s CA
+certificate and CRLs. If this is omitted, CA certificates and CRLs
+will be published in PEM. Possible values: [&#34;PEM&#34;, &#34;DER&#34;] When `null`, the `encoding_format` field will be omitted from the resulting object.
   - `publish_ca_cert` (`bool`): When true, publishes each CertificateAuthority&#39;s CA certificate and includes its URL in the &#34;Authority Information Access&#34;
 X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding
 X.509 extension will not be written in issued certificates.

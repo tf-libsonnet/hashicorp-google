@@ -109,8 +109,8 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceImage URL
 * The rawDisk.source URL
 * The sourceDisk URL When `null`, the `source_snapshot` field will be omitted from the resulting object.
-  - `storage_locations` (`list`): Cloud Storage bucket storage location of the image 
-(regional or multi-regional). 
+  - `storage_locations` (`list`): Cloud Storage bucket storage location of the image
+(regional or multi-regional).
 Reference link: https://cloud.google.com/compute/docs/reference/rest/v1/images When `null`, the `storage_locations` field will be omitted from the resulting object.
   - `guest_os_features` (`list[obj]`): A list of features to enable on the guest operating system.
 Applicable only for bootable images. When `null`, the `guest_os_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.guest_os_features.new](#fn-guest_os_featuresnew) constructor.
@@ -181,8 +181,8 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceImage URL
 * The rawDisk.source URL
 * The sourceDisk URL When `null`, the `source_snapshot` field will be omitted from the resulting object.
-  - `storage_locations` (`list`): Cloud Storage bucket storage location of the image 
-(regional or multi-regional). 
+  - `storage_locations` (`list`): Cloud Storage bucket storage location of the image
+(regional or multi-regional).
 Reference link: https://cloud.google.com/compute/docs/reference/rest/v1/images When `null`, the `storage_locations` field will be omitted from the resulting object.
   - `guest_os_features` (`list[obj]`): A list of features to enable on the guest operating system.
 Applicable only for bootable images. When `null`, the `guest_os_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.guest_os_features.new](#fn-guest_os_featuresnew) constructor.

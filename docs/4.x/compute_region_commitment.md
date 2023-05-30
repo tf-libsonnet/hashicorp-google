@@ -84,7 +84,7 @@ The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where this commitment may be used. When `null`, the `region` field will be omitted from the resulting object.
   - `type` (`string`): The type of commitment, which affects the discount rate and the eligible resources.
-The type could be one of the following value: &#39;MEMORY_OPTIMIZED&#39;, &#39;ACCELERATOR_OPTIMIZED&#39;, 
+The type could be one of the following value: &#39;MEMORY_OPTIMIZED&#39;, &#39;ACCELERATOR_OPTIMIZED&#39;,
 &#39;GENERAL_PURPOSE_N1&#39;, &#39;GENERAL_PURPOSE_N2&#39;, &#39;GENERAL_PURPOSE_N2D&#39;, &#39;GENERAL_PURPOSE_E2&#39;,
 &#39;GENERAL_PURPOSE_T2D&#39;, &#39;GENERAL_PURPOSE_C3&#39;, &#39;COMPUTE_OPTIMIZED_C2&#39;, &#39;COMPUTE_OPTIMIZED_C2D&#39; and
 &#39;GRAPHICS_OPTIMIZED_G2&#39; When `null`, the `type` field will be omitted from the resulting object.
@@ -134,7 +134,7 @@ The currently supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where this commitment may be used. When `null`, the `region` field will be omitted from the resulting object.
   - `type` (`string`): The type of commitment, which affects the discount rate and the eligible resources.
-The type could be one of the following value: &#39;MEMORY_OPTIMIZED&#39;, &#39;ACCELERATOR_OPTIMIZED&#39;, 
+The type could be one of the following value: &#39;MEMORY_OPTIMIZED&#39;, &#39;ACCELERATOR_OPTIMIZED&#39;,
 &#39;GENERAL_PURPOSE_N1&#39;, &#39;GENERAL_PURPOSE_N2&#39;, &#39;GENERAL_PURPOSE_N2D&#39;, &#39;GENERAL_PURPOSE_E2&#39;,
 &#39;GENERAL_PURPOSE_T2D&#39;, &#39;GENERAL_PURPOSE_C3&#39;, &#39;COMPUTE_OPTIMIZED_C2&#39;, &#39;COMPUTE_OPTIMIZED_C2D&#39; and
 &#39;GRAPHICS_OPTIMIZED_G2&#39; When `null`, the `type` field will be omitted from the resulting object.

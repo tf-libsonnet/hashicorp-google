@@ -276,11 +276,13 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts: timeouts,
   }),
   publishing_options:: {
-    '#new':: d.fn(help='\n`google.privateca_ca_pool.publishing_options.new` constructs a new object with attributes and blocks configured for the `publishing_options`\nTerraform sub block.\n\n\n\n**Args**:\n  - `publish_ca_cert` (`bool`): When true, publishes each CertificateAuthority&#39;s CA certificate and includes its URL in the &#34;Authority Information Access&#34;\nX.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding\nX.509 extension will not be written in issued certificates.\n  - `publish_crl` (`bool`): When true, publishes each CertificateAuthority&#39;s CRL and includes its URL in the &#34;CRL Distribution Points&#34; X.509 extension\nin all issued Certificates. If this is false, CRLs will not be published and the corresponding X.509 extension will not\nbe written in issued certificates. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are\nalso rebuilt shortly after a certificate is revoked.\n\n**Returns**:\n  - An attribute object that represents the `publishing_options` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.privateca_ca_pool.publishing_options.new` constructs a new object with attributes and blocks configured for the `publishing_options`\nTerraform sub block.\n\n\n\n**Args**:\n  - `encoding_format` (`string`): Specifies the encoding format of each CertificateAuthority&#39;s CA\ncertificate and CRLs. If this is omitted, CA certificates and CRLs\nwill be published in PEM. Possible values: [&#34;PEM&#34;, &#34;DER&#34;] When `null`, the `encoding_format` field will be omitted from the resulting object.\n  - `publish_ca_cert` (`bool`): When true, publishes each CertificateAuthority&#39;s CA certificate and includes its URL in the &#34;Authority Information Access&#34;\nX.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding\nX.509 extension will not be written in issued certificates.\n  - `publish_crl` (`bool`): When true, publishes each CertificateAuthority&#39;s CRL and includes its URL in the &#34;CRL Distribution Points&#34; X.509 extension\nin all issued Certificates. If this is false, CRLs will not be published and the corresponding X.509 extension will not\nbe written in issued certificates. CRLs will expire 7 days from their creation. However, we will rebuild daily. CRLs are\nalso rebuilt shortly after a certificate is revoked.\n\n**Returns**:\n  - An attribute object that represents the `publishing_options` sub block.\n', args=[]),
     new(
       publish_ca_cert,
-      publish_crl
+      publish_crl,
+      encoding_format=null
     ):: std.prune(a={
+      encoding_format: encoding_format,
       publish_ca_cert: publish_ca_cert,
       publish_crl: publish_crl,
     }),
