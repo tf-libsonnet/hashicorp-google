@@ -584,9 +584,7 @@ service. The service account represents the identity of the running revision,
 and determines what permissions the revision has. If not provided, the revision
 will use the project&#39;s default service account. When `null`, the `service_account_name` field will be omitted from the resulting object.
   - `timeout_seconds` (`number`): TimeoutSeconds holds the max duration the instance is allowed for responding to a request. When `null`, the `timeout_seconds` field will be omitted from the resulting object.
-  - `containers` (`list[obj]`): Container defines the unit of execution for this Revision.
-In the context of a Revision, we disallow a number of the fields of
-this Container, including: name, ports, and volumeMounts. When `null`, the `containers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.new](#fn-templatetemplatecontainersnew) constructor.
+  - `containers` (`list[obj]`): Containers defines the unit of execution for this Revision. When `null`, the `containers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.containers.new](#fn-templatetemplatecontainersnew) constructor.
   - `volumes` (`list[obj]`): Volume represents a named volume in a container. When `null`, the `volumes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.template.spec.volumes.new](#fn-templatetemplatevolumesnew) constructor.
 
 **Returns**:
@@ -616,6 +614,7 @@ The docker image&#39;s CMD is used if this is not provided. When `null`, the `ar
 The docker image&#39;s ENTRYPOINT is used if this is not provided. When `null`, the `command` field will be omitted from the resulting object.
   - `image` (`string`): Docker image name. This is most often a reference to a container located
 in the container registry, such as gcr.io/cloudrun/hello
+  - `name` (`string`): Name of the container When `null`, the `name` field will be omitted from the resulting object.
   - `working_dir` (`string`): Container&#39;s working directory.
 If not specified, the container runtime&#39;s default will be used, which
 might be configured in the container image. When `null`, the `working_dir` field will be omitted from the resulting object.

@@ -17,6 +17,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withAllPorts()`](#fn-withallports)
 * [`fn withAllowGlobalAccess()`](#fn-withallowglobalaccess)
+* [`fn withAllowPscGlobalAccess()`](#fn-withallowpscglobalaccess)
 * [`fn withBackendService()`](#fn-withbackendservice)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withIpAddress()`](#fn-withipaddress)
@@ -95,6 +96,7 @@ regions.
 
 Otherwise only allows access from clients in the same region as the
 internal load balancer. When `null`, the `allow_global_access` field will be omitted from the resulting object.
+  - `allow_psc_global_access` (`bool`): This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed from another region. When `null`, the `allow_psc_global_access` field will be omitted from the resulting object.
   - `backend_service` (`string`): Identifies the backend service to which the forwarding rule sends traffic.
 
 Required for Internal TCP/UDP Load Balancing and Network Load Balancing;
@@ -327,6 +329,7 @@ regions.
 
 Otherwise only allows access from clients in the same region as the
 internal load balancer. When `null`, the `allow_global_access` field will be omitted from the resulting object.
+  - `allow_psc_global_access` (`bool`): This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed from another region. When `null`, the `allow_psc_global_access` field will be omitted from the resulting object.
   - `backend_service` (`string`): Identifies the backend service to which the forwarding rule sends traffic.
 
 Required for Internal TCP/UDP Load Balancing and Network Load Balancing;
@@ -549,6 +552,22 @@ Terraform resource block to set or update the allow_global_access field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `allow_global_access` field.
+
+
+### fn withAllowPscGlobalAccess
+
+```ts
+withAllowPscGlobalAccess()
+```
+
+`google.bool.withAllowPscGlobalAccess` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the allow_psc_global_access field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `allow_psc_global_access` field.
 
 
 ### fn withBackendService

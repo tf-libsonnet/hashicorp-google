@@ -1103,6 +1103,8 @@ Terraform sub block.
 
 
 **Args**:
+  - `max_concurrent_backfill_tasks` (`number`): Maximum number of concurrent backfill tasks. The number should be non negative.
+If not set (or set to 0), the system&#39;s default value will be used. When `null`, the `max_concurrent_backfill_tasks` field will be omitted from the resulting object.
   - `max_concurrent_cdc_tasks` (`number`): Maximum number of concurrent CDC tasks. The number should be non negative.
 If not set (or set to 0), the system&#39;s default value will be used. When `null`, the `max_concurrent_cdc_tasks` field will be omitted from the resulting object.
   - `exclude_objects` (`list[obj]`): MySQL objects to exclude from the stream. When `null`, the `exclude_objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.datastream_stream.source_config.mysql_source_config.exclude_objects.new](#fn-source_configsource_configexclude_objectsnew) constructor.

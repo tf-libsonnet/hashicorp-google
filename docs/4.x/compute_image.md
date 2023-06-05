@@ -31,6 +31,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withSourceDisk()`](#fn-withsourcedisk)
 * [`fn withSourceImage()`](#fn-withsourceimage)
 * [`fn withSourceSnapshot()`](#fn-withsourcesnapshot)
+* [`fn withStorageLocations()`](#fn-withstoragelocations)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj guest_os_features`](#obj-guest_os_features)
@@ -108,6 +109,9 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceImage URL
 * The rawDisk.source URL
 * The sourceDisk URL When `null`, the `source_snapshot` field will be omitted from the resulting object.
+  - `storage_locations` (`list`): Cloud Storage bucket storage location of the image
+(regional or multi-regional).
+Reference link: https://cloud.google.com/compute/docs/reference/rest/v1/images When `null`, the `storage_locations` field will be omitted from the resulting object.
   - `guest_os_features` (`list[obj]`): A list of features to enable on the guest operating system.
 Applicable only for bootable images. When `null`, the `guest_os_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.guest_os_features.new](#fn-guest_os_featuresnew) constructor.
   - `image_encryption_key` (`list[obj]`): Encrypts the image using a customer-supplied encryption key.
@@ -177,6 +181,9 @@ In order to create an image, you must provide the full or partial URL of one of 
 * The sourceImage URL
 * The rawDisk.source URL
 * The sourceDisk URL When `null`, the `source_snapshot` field will be omitted from the resulting object.
+  - `storage_locations` (`list`): Cloud Storage bucket storage location of the image
+(regional or multi-regional).
+Reference link: https://cloud.google.com/compute/docs/reference/rest/v1/images When `null`, the `storage_locations` field will be omitted from the resulting object.
   - `guest_os_features` (`list[obj]`): A list of features to enable on the guest operating system.
 Applicable only for bootable images. When `null`, the `guest_os_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_image.guest_os_features.new](#fn-guest_os_featuresnew) constructor.
   - `image_encryption_key` (`list[obj]`): Encrypts the image using a customer-supplied encryption key.
@@ -460,6 +467,22 @@ Terraform resource block to set or update the source_snapshot field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `source_snapshot` field.
+
+
+### fn withStorageLocations
+
+```ts
+withStorageLocations()
+```
+
+`google.list.withStorageLocations` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the storage_locations field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `storage_locations` field.
 
 
 ### fn withTimeouts

@@ -38,6 +38,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withNetworkInterface()`](#fn-withnetworkinterface)
 * [`fn withNetworkInterfaceMixin()`](#fn-withnetworkinterfacemixin)
+* [`fn withNetworkPerformanceConfig()`](#fn-withnetworkperformanceconfig)
+* [`fn withNetworkPerformanceConfigMixin()`](#fn-withnetworkperformanceconfigmixin)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withReservationAffinity()`](#fn-withreservationaffinity)
 * [`fn withReservationAffinityMixin()`](#fn-withreservationaffinitymixin)
@@ -65,6 +67,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-network_interfacenew)
   * [`obj network_interface.ipv6_access_config`](#obj-network_interfaceipv6_access_config)
     * [`fn new()`](#fn-network_interfaceipv6_access_confignew)
+* [`obj network_performance_config`](#obj-network_performance_config)
+  * [`fn new()`](#fn-network_performance_confignew)
 * [`obj reservation_affinity`](#obj-reservation_affinity)
   * [`fn new()`](#fn-reservation_affinitynew)
   * [`obj reservation_affinity.specific_reservation`](#obj-reservation_affinityspecific_reservation)
@@ -133,6 +137,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `boot_disk` (`list[obj]`): The boot disk for the instance. When `null`, the `boot_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.boot_disk.new](#fn-boot_disknew) constructor.
   - `confidential_instance_config` (`list[obj]`): The Confidential VM config being used by the instance.  on_host_maintenance has to be set to TERMINATE or this will fail to create. When `null`, the `confidential_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.confidential_instance_config.new](#fn-confidential_instance_confignew) constructor.
   - `network_interface` (`list[obj]`): The networks attached to the instance. When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.network_interface.new](#fn-network_interfacenew) constructor.
+  - `network_performance_config` (`list[obj]`): Configures network performance settings for the instance. If not specified, the instance will be created with its default network performance configuration. When `null`, the `network_performance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.network_performance_config.new](#fn-network_performance_confignew) constructor.
   - `reservation_affinity` (`list[obj]`): Specifies the reservations that this instance can consume from. When `null`, the `reservation_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.reservation_affinity.new](#fn-reservation_affinitynew) constructor.
   - `scheduling` (`list[obj]`): The scheduling strategy being used by the instance. When `null`, the `scheduling` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.scheduling.new](#fn-schedulingnew) constructor.
   - `shielded_instance_config` (`list[obj]`): The shielded vm config being used by the instance. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.shielded_instance_config.new](#fn-shielded_instance_confignew) constructor.
@@ -186,6 +191,7 @@ injecting into a complete block.
   - `boot_disk` (`list[obj]`): The boot disk for the instance. When `null`, the `boot_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.boot_disk.new](#fn-boot_disknew) constructor.
   - `confidential_instance_config` (`list[obj]`): The Confidential VM config being used by the instance.  on_host_maintenance has to be set to TERMINATE or this will fail to create. When `null`, the `confidential_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.confidential_instance_config.new](#fn-confidential_instance_confignew) constructor.
   - `network_interface` (`list[obj]`): The networks attached to the instance. When `null`, the `network_interface` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.network_interface.new](#fn-network_interfacenew) constructor.
+  - `network_performance_config` (`list[obj]`): Configures network performance settings for the instance. If not specified, the instance will be created with its default network performance configuration. When `null`, the `network_performance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.network_performance_config.new](#fn-network_performance_confignew) constructor.
   - `reservation_affinity` (`list[obj]`): Specifies the reservations that this instance can consume from. When `null`, the `reservation_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.reservation_affinity.new](#fn-reservation_affinitynew) constructor.
   - `scheduling` (`list[obj]`): The scheduling strategy being used by the instance. When `null`, the `scheduling` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.scheduling.new](#fn-schedulingnew) constructor.
   - `shielded_instance_config` (`list[obj]`): The shielded vm config being used by the instance. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_from_template.shielded_instance_config.new](#fn-shielded_instance_confignew) constructor.
@@ -581,6 +587,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `network_interface` field.
+
+
+### fn withNetworkPerformanceConfig
+
+```ts
+withNetworkPerformanceConfig()
+```
+
+`google.list[obj].withNetworkPerformanceConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the network_performance_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withNetworkPerformanceConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `network_performance_config` field.
+
+
+### fn withNetworkPerformanceConfigMixin
+
+```ts
+withNetworkPerformanceConfigMixin()
+```
+
+`google.list[obj].withNetworkPerformanceConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the network_performance_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withNetworkPerformanceConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `network_performance_config` field.
 
 
 ### fn withProject
@@ -999,6 +1042,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `ipv6_access_config` sub block.
+
+
+## obj network_performance_config
+
+
+
+### fn network_performance_config.new
+
+```ts
+new()
+```
+
+
+`google.compute_instance_from_template.network_performance_config.new` constructs a new object with attributes and blocks configured for the `network_performance_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `total_egress_bandwidth_tier` (`string`): The egress bandwidth tier to enable. Possible values:TIER_1, DEFAULT
+
+**Returns**:
+  - An attribute object that represents the `network_performance_config` sub block.
 
 
 ## obj reservation_affinity

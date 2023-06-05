@@ -117,14 +117,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           secret_access_key: secret_access_key,
         }),
       },
-      '#new':: d.fn(help='\n`google.storage_transfer_job.transfer_spec.aws_s3_data_source.new` constructs a new object with attributes and blocks configured for the `aws_s3_data_source`\nTerraform sub block.\n\n\n\n**Args**:\n  - `bucket_name` (`string`): S3 Bucket name.\n  - `role_arn` (`string`): The Amazon Resource Name (ARN) of the role to support temporary credentials via &#39;AssumeRoleWithWebIdentity&#39;. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a &#39;AssumeRoleWithWebIdentity&#39; call for the provided role using the [GoogleServiceAccount][] for this project. When `null`, the `role_arn` field will be omitted from the resulting object.\n  - `aws_access_key` (`list[obj]`): AWS credentials block. When `null`, the `aws_access_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.transfer_spec.aws_s3_data_source.aws_access_key.new](#fn-transfer_spectransfer_specaws_access_keynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `aws_s3_data_source` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.storage_transfer_job.transfer_spec.aws_s3_data_source.new` constructs a new object with attributes and blocks configured for the `aws_s3_data_source`\nTerraform sub block.\n\n\n\n**Args**:\n  - `bucket_name` (`string`): S3 Bucket name.\n  - `path` (`string`): S3 Bucket path in bucket to transfer. When `null`, the `path` field will be omitted from the resulting object.\n  - `role_arn` (`string`): The Amazon Resource Name (ARN) of the role to support temporary credentials via &#39;AssumeRoleWithWebIdentity&#39;. For more information about ARNs, see [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns). When a role ARN is provided, Transfer Service fetches temporary credentials for the session using a &#39;AssumeRoleWithWebIdentity&#39; call for the provided role using the [GoogleServiceAccount][] for this project. When `null`, the `role_arn` field will be omitted from the resulting object.\n  - `aws_access_key` (`list[obj]`): AWS credentials block. When `null`, the `aws_access_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.transfer_spec.aws_s3_data_source.aws_access_key.new](#fn-transfer_spectransfer_specaws_access_keynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `aws_s3_data_source` sub block.\n', args=[]),
       new(
         bucket_name,
         aws_access_key=null,
+        path=null,
         role_arn=null
       ):: std.prune(a={
         aws_access_key: aws_access_key,
         bucket_name: bucket_name,
+        path: path,
         role_arn: role_arn,
       }),
     },
