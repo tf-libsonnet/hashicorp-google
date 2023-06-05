@@ -117,8 +117,12 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-inspect_jobstorage_confignew)
     * [`obj inspect_job.storage_config.big_query_options`](#obj-inspect_jobstorage_configbig_query_options)
       * [`fn new()`](#fn-inspect_jobstorage_configbig_query_optionsnew)
+      * [`obj inspect_job.storage_config.big_query_options.excluded_fields`](#obj-inspect_jobstorage_configbig_query_optionsexcluded_fields)
+        * [`fn new()`](#fn-inspect_jobstorage_configbig_query_optionsexcluded_fieldsnew)
       * [`obj inspect_job.storage_config.big_query_options.identifying_fields`](#obj-inspect_jobstorage_configbig_query_optionsidentifying_fields)
         * [`fn new()`](#fn-inspect_jobstorage_configbig_query_optionsidentifying_fieldsnew)
+      * [`obj inspect_job.storage_config.big_query_options.included_fields`](#obj-inspect_jobstorage_configbig_query_optionsincluded_fields)
+        * [`fn new()`](#fn-inspect_jobstorage_configbig_query_optionsincluded_fieldsnew)
       * [`obj inspect_job.storage_config.big_query_options.table_reference`](#obj-inspect_jobstorage_configbig_query_optionstable_reference)
         * [`fn new()`](#fn-inspect_jobstorage_configbig_query_optionstable_referencenew)
     * [`obj inspect_job.storage_config.cloud_storage_options`](#obj-inspect_jobstorage_configcloud_storage_options)
@@ -1565,12 +1569,38 @@ Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. Defaults 
 rowsLimit and rowsLimitPercent can be specified. Cannot be used in conjunction with TimespanConfig. When `null`, the `rows_limit_percent` field will be omitted from the resulting object.
   - `sample_method` (`string`): How to sample rows if not all rows are scanned. Meaningful only when used in conjunction with either
 rowsLimit or rowsLimitPercent. If not specified, rows are scanned in the order BigQuery reads them. Default value: &#34;TOP&#34; Possible values: [&#34;TOP&#34;, &#34;RANDOM_START&#34;] When `null`, the `sample_method` field will be omitted from the resulting object.
+  - `excluded_fields` (`list[obj]`): References to fields excluded from scanning.
+This allows you to skip inspection of entire columns which you know have no findings. When `null`, the `excluded_fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.big_query_options.excluded_fields.new](#fn-inspect_jobinspect_jobstorage_configexcluded_fieldsnew) constructor.
   - `identifying_fields` (`list[obj]`): Specifies the BigQuery fields that will be returned with findings.
 If not specified, no identifying fields will be returned for findings. When `null`, the `identifying_fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.big_query_options.identifying_fields.new](#fn-inspect_jobinspect_jobstorage_configidentifying_fieldsnew) constructor.
+  - `included_fields` (`list[obj]`): Limit scanning only to these fields. When `null`, the `included_fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.big_query_options.included_fields.new](#fn-inspect_jobinspect_jobstorage_configincluded_fieldsnew) constructor.
   - `table_reference` (`list[obj]`): Set of files to scan. When `null`, the `table_reference` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.big_query_options.table_reference.new](#fn-inspect_jobinspect_jobstorage_configtable_referencenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `big_query_options` sub block.
+
+
+## obj inspect_job.storage_config.big_query_options.excluded_fields
+
+
+
+### fn inspect_job.storage_config.big_query_options.excluded_fields.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_job_trigger.inspect_job.storage_config.big_query_options.excluded_fields.new` constructs a new object with attributes and blocks configured for the `excluded_fields`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): Name describing the field excluded from scanning.
+
+**Returns**:
+  - An attribute object that represents the `excluded_fields` sub block.
 
 
 ## obj inspect_job.storage_config.big_query_options.identifying_fields
@@ -1594,6 +1624,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `identifying_fields` sub block.
+
+
+## obj inspect_job.storage_config.big_query_options.included_fields
+
+
+
+### fn inspect_job.storage_config.big_query_options.included_fields.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_job_trigger.inspect_job.storage_config.big_query_options.included_fields.new` constructs a new object with attributes and blocks configured for the `included_fields`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): Name describing the field to which scanning is limited.
+
+**Returns**:
+  - An attribute object that represents the `included_fields` sub block.
 
 
 ## obj inspect_job.storage_config.big_query_options.table_reference

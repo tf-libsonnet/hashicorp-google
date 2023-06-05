@@ -87,6 +87,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   compute_subnetwork_iam_policy: (import 'compute_subnetwork_iam_policy.libsonnet'),
   compute_vpn_gateway: (import 'compute_vpn_gateway.libsonnet'),
   compute_zones: (import 'compute_zones.libsonnet'),
+  container_analysis_note_iam_policy: (import 'container_analysis_note_iam_policy.libsonnet'),
   container_attached_install_manifest: (import 'container_attached_install_manifest.libsonnet'),
   container_attached_versions: (import 'container_attached_versions.libsonnet'),
   container_aws_versions: (import 'container_aws_versions.libsonnet'),

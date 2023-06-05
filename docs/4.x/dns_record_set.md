@@ -347,7 +347,7 @@ Terraform sub block.
 **Args**:
   - `ip_address` (`string`): The frontend IP address of the load balancer.
   - `ip_protocol` (`string`): The configured IP protocol of the load balancer. This value is case-sensitive. Possible values: [&#34;tcp&#34;, &#34;udp&#34;]
-  - `load_balancer_type` (`string`): The type of load balancer. This value is case-sensitive. Possible values: [&#34;regionalL4ilb&#34;]
+  - `load_balancer_type` (`string`): The type of load balancer. This value is case-sensitive. Possible values: [&#34;regionalL4ilb&#34;, &#34;regionalL7ilb]
   - `network_url` (`string`): The fully qualified url of the network in which the load balancer belongs. This should be formatted like `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`.
   - `port` (`string`): The configured port of the load balancer.
   - `project` (`string`): The ID of the project in which the load balancer belongs.
@@ -450,7 +450,7 @@ Terraform sub block.
 **Args**:
   - `ip_address` (`string`): The frontend IP address of the load balancer.
   - `ip_protocol` (`string`): The configured IP protocol of the load balancer. This value is case-sensitive. Possible values: [&#34;tcp&#34;, &#34;udp&#34;]
-  - `load_balancer_type` (`string`): The type of load balancer. This value is case-sensitive. Possible values: [&#34;regionalL4ilb&#34;]
+  - `load_balancer_type` (`string`): The type of load balancer. This value is case-sensitive. Possible values: [&#34;regionalL4ilb&#34;, &#34;regionalL7ilb]
   - `network_url` (`string`): The fully qualified url of the network in which the load balancer belongs. This should be formatted like `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`.
   - `port` (`string`): The configured port of the load balancer.
   - `project` (`string`): The ID of the project in which the load balancer belongs.
@@ -502,7 +502,7 @@ Terraform sub block.
 **Args**:
   - `ip_address` (`string`): The frontend IP address of the load balancer.
   - `ip_protocol` (`string`): The configured IP protocol of the load balancer. This value is case-sensitive. Possible values: [&#34;tcp&#34;, &#34;udp&#34;]
-  - `load_balancer_type` (`string`): The type of load balancer. This value is case-sensitive. Possible values: [&#34;regionalL4ilb&#34;]
+  - `load_balancer_type` (`string`): The type of load balancer. This value is case-sensitive. Possible values: [&#34;regionalL4ilb&#34;, &#34;regionalL7ilb]
   - `network_url` (`string`): The fully qualified url of the network in which the load balancer belongs. This should be formatted like `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`.
   - `port` (`string`): The configured port of the load balancer.
   - `project` (`string`): The ID of the project in which the load balancer belongs.
@@ -579,7 +579,7 @@ Terraform sub block.
 **Args**:
   - `ip_address` (`string`): The frontend IP address of the load balancer.
   - `ip_protocol` (`string`): The configured IP protocol of the load balancer. This value is case-sensitive. Possible values: [&#34;tcp&#34;, &#34;udp&#34;]
-  - `load_balancer_type` (`string`): The type of load balancer. This value is case-sensitive. Possible values: [&#34;regionalL4ilb&#34;]
+  - `load_balancer_type` (`string`): The type of load balancer. This value is case-sensitive. Possible values: [&#34;regionalL4ilb&#34;, &#34;regionalL7ilb]
   - `network_url` (`string`): The fully qualified url of the network in which the load balancer belongs. This should be formatted like `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`.
   - `port` (`string`): The configured port of the load balancer.
   - `project` (`string`): The ID of the project in which the load balancer belongs.
