@@ -70,7 +70,8 @@ Format: &#39;&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing
   - `name` (`string`): The resource name for the CryptoKey.
   - `purpose` (`string`): The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
-for possible inputs. Default value: &#34;ENCRYPT_DECRYPT&#34; Possible values: [&#34;ENCRYPT_DECRYPT&#34;, &#34;ASYMMETRIC_SIGN&#34;, &#34;ASYMMETRIC_DECRYPT&#34;, &#34;MAC&#34;] When `null`, the `purpose` field will be omitted from the resulting object.
+for possible inputs.
+Default value is &#34;ENCRYPT_DECRYPT&#34;. When `null`, the `purpose` field will be omitted from the resulting object.
   - `rotation_period` (`string`): Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the
@@ -111,7 +112,8 @@ Format: &#39;&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing
   - `name` (`string`): The resource name for the CryptoKey.
   - `purpose` (`string`): The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
-for possible inputs. Default value: &#34;ENCRYPT_DECRYPT&#34; Possible values: [&#34;ENCRYPT_DECRYPT&#34;, &#34;ASYMMETRIC_SIGN&#34;, &#34;ASYMMETRIC_DECRYPT&#34;, &#34;MAC&#34;] When `null`, the `purpose` field will be omitted from the resulting object.
+for possible inputs.
+Default value is &#34;ENCRYPT_DECRYPT&#34;. When `null`, the `purpose` field will be omitted from the resulting object.
   - `rotation_period` (`string`): Every time this period passes, generate a new CryptoKeyVersion and set it as the primary.
 The first rotation will take place after the specified period. The rotation period has
 the format of a decimal number with up to 9 fractional digits, followed by the

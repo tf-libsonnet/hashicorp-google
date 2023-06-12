@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withInspectConfig()`](#fn-withinspectconfig)
 * [`fn withInspectConfigMixin()`](#fn-withinspectconfigmixin)
 * [`fn withParent()`](#fn-withparent)
+* [`fn withTemplateId()`](#fn-withtemplateid)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj inspect_config`](#obj-inspect_config)
@@ -122,6 +123,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 * &#39;projects/{{project}}/locations/{{location}}&#39;
 * &#39;organizations/{{organization_id}}&#39;
 * &#39;organizations/{{organization_id}}/locations/{{location}}&#39;
+  - `template_id` (`string`): The template id can contain uppercase and lowercase letters, numbers, and hyphens;
+that is, it must match the regular expression: [a-zA-Z\d-_]&#43;. The maximum length is
+100 characters. Can be empty to allow the system to generate one. When `null`, the `template_id` field will be omitted from the resulting object.
   - `inspect_config` (`list[obj]`): The core content of the template. When `null`, the `inspect_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.new](#fn-inspect_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -155,6 +159,9 @@ injecting into a complete block.
 * &#39;projects/{{project}}/locations/{{location}}&#39;
 * &#39;organizations/{{organization_id}}&#39;
 * &#39;organizations/{{organization_id}}/locations/{{location}}&#39;
+  - `template_id` (`string`): The template id can contain uppercase and lowercase letters, numbers, and hyphens;
+that is, it must match the regular expression: [a-zA-Z\d-_]&#43;. The maximum length is
+100 characters. Can be empty to allow the system to generate one. When `null`, the `template_id` field will be omitted from the resulting object.
   - `inspect_config` (`list[obj]`): The core content of the template. When `null`, the `inspect_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.new](#fn-inspect_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -245,6 +252,22 @@ Terraform resource block to set or update the parent field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `parent` field.
+
+
+### fn withTemplateId
+
+```ts
+withTemplateId()
+```
+
+`google.string.withTemplateId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the template_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `template_id` field.
 
 
 ### fn withTimeouts
