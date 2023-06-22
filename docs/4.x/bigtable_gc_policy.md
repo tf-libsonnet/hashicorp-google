@@ -26,10 +26,14 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withMode()`](#fn-withmode)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withTable()`](#fn-withtable)
+* [`fn withTimeouts()`](#fn-withtimeouts)
+* [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj max_age`](#obj-max_age)
   * [`fn new()`](#fn-max_agenew)
 * [`obj max_version`](#obj-max_version)
   * [`fn new()`](#fn-max_versionnew)
+* [`obj timeouts`](#obj-timeouts)
+  * [`fn new()`](#fn-timeoutsnew)
 
 ## Fields
 
@@ -71,6 +75,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `table` (`string`): The name of the table.
   - `max_age` (`list[obj]`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all cells older than the given age. When `null`, the `max_age` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.max_age.new](#fn-max_agenew) constructor.
   - `max_version` (`list[obj]`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all versions of a cell except for the most recent. When `null`, the `max_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.max_version.new](#fn-max_versionnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -105,6 +110,7 @@ injecting into a complete block.
   - `table` (`string`): The name of the table.
   - `max_age` (`list[obj]`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all cells older than the given age. When `null`, the `max_age` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.max_age.new](#fn-max_agenew) constructor.
   - `max_version` (`list[obj]`): NOTE: &#39;gc_rules&#39; is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all versions of a cell except for the most recent. When `null`, the `max_version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.max_version.new](#fn-max_versionnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_gc_policy.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigtable_gc_policy` resource into the root Terraform configuration.
@@ -296,6 +302,42 @@ Terraform resource block to set or update the table field.
   - `value` (`string`): The value to set for the `table` field.
 
 
+### fn withTimeouts
+
+```ts
+withTimeouts()
+```
+
+`google.obj.withTimeouts` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the timeouts field.
+
+This function will replace the map with the passed in `value`. If you wish to instead merge the
+passed in value to the existing map, use the [google.obj.withTimeoutsMixin](TODO) function.
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withTimeoutsMixin
+
+```ts
+withTimeoutsMixin()
+```
+
+`google.obj.withTimeoutsMixin` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the timeouts field.
+
+This function will merge the passed in value to the existing map. If you wish
+to instead replace the entire map with the passed in `value`, use the [google.obj.withTimeouts](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `timeouts` field.
+
+
 ## obj max_age
 
 
@@ -341,3 +383,27 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `max_version` sub block.
+
+
+## obj timeouts
+
+
+
+### fn timeouts.new
+
+```ts
+new()
+```
+
+
+`google.bigtable_gc_policy.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
+  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `timeouts` sub block.

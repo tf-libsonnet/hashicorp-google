@@ -35,24 +35,34 @@ This package contains functions and utilities for setting up the resource using 
         * [`fn new()`](#fn-inspect_configcustom_info_typesdictionaryword_listnew)
     * [`obj inspect_config.custom_info_types.info_type`](#obj-inspect_configcustom_info_typesinfo_type)
       * [`fn new()`](#fn-inspect_configcustom_info_typesinfo_typenew)
+      * [`obj inspect_config.custom_info_types.info_type.sensitivity_score`](#obj-inspect_configcustom_info_typesinfo_typesensitivity_score)
+        * [`fn new()`](#fn-inspect_configcustom_info_typesinfo_typesensitivity_scorenew)
     * [`obj inspect_config.custom_info_types.regex`](#obj-inspect_configcustom_info_typesregex)
       * [`fn new()`](#fn-inspect_configcustom_info_typesregexnew)
+    * [`obj inspect_config.custom_info_types.sensitivity_score`](#obj-inspect_configcustom_info_typessensitivity_score)
+      * [`fn new()`](#fn-inspect_configcustom_info_typessensitivity_scorenew)
     * [`obj inspect_config.custom_info_types.stored_type`](#obj-inspect_configcustom_info_typesstored_type)
       * [`fn new()`](#fn-inspect_configcustom_info_typesstored_typenew)
     * [`obj inspect_config.custom_info_types.surrogate_type`](#obj-inspect_configcustom_info_typessurrogate_type)
       * [`fn new()`](#fn-inspect_configcustom_info_typessurrogate_typenew)
   * [`obj inspect_config.info_types`](#obj-inspect_configinfo_types)
     * [`fn new()`](#fn-inspect_configinfo_typesnew)
+    * [`obj inspect_config.info_types.sensitivity_score`](#obj-inspect_configinfo_typessensitivity_score)
+      * [`fn new()`](#fn-inspect_configinfo_typessensitivity_scorenew)
   * [`obj inspect_config.limits`](#obj-inspect_configlimits)
     * [`fn new()`](#fn-inspect_configlimitsnew)
     * [`obj inspect_config.limits.max_findings_per_info_type`](#obj-inspect_configlimitsmax_findings_per_info_type)
       * [`fn new()`](#fn-inspect_configlimitsmax_findings_per_info_typenew)
       * [`obj inspect_config.limits.max_findings_per_info_type.info_type`](#obj-inspect_configlimitsmax_findings_per_info_typeinfo_type)
         * [`fn new()`](#fn-inspect_configlimitsmax_findings_per_info_typeinfo_typenew)
+        * [`obj inspect_config.limits.max_findings_per_info_type.info_type.sensitivity_score`](#obj-inspect_configlimitsmax_findings_per_info_typeinfo_typesensitivity_score)
+          * [`fn new()`](#fn-inspect_configlimitsmax_findings_per_info_typeinfo_typesensitivity_scorenew)
   * [`obj inspect_config.rule_set`](#obj-inspect_configrule_set)
     * [`fn new()`](#fn-inspect_configrule_setnew)
     * [`obj inspect_config.rule_set.info_types`](#obj-inspect_configrule_setinfo_types)
       * [`fn new()`](#fn-inspect_configrule_setinfo_typesnew)
+      * [`obj inspect_config.rule_set.info_types.sensitivity_score`](#obj-inspect_configrule_setinfo_typessensitivity_score)
+        * [`fn new()`](#fn-inspect_configrule_setinfo_typessensitivity_scorenew)
     * [`obj inspect_config.rule_set.rules`](#obj-inspect_configrule_setrules)
       * [`fn new()`](#fn-inspect_configrule_setrulesnew)
       * [`obj inspect_config.rule_set.rules.exclusion_rule`](#obj-inspect_configrule_setrulesexclusion_rule)
@@ -73,6 +83,8 @@ This package contains functions and utilities for setting up the resource using 
           * [`fn new()`](#fn-inspect_configrule_setrulesexclusion_ruleexclude_info_typesnew)
           * [`obj inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types`](#obj-inspect_configrule_setrulesexclusion_ruleexclude_info_typesinfo_types)
             * [`fn new()`](#fn-inspect_configrule_setrulesexclusion_ruleexclude_info_typesinfo_typesnew)
+            * [`obj inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.sensitivity_score`](#obj-inspect_configrule_setrulesexclusion_ruleexclude_info_typesinfo_typessensitivity_score)
+              * [`fn new()`](#fn-inspect_configrule_setrulesexclusion_ruleexclude_info_typesinfo_typessensitivity_scorenew)
         * [`obj inspect_config.rule_set.rules.exclusion_rule.regex`](#obj-inspect_configrule_setrulesexclusion_ruleregex)
           * [`fn new()`](#fn-inspect_configrule_setrulesexclusion_ruleregexnew)
       * [`obj inspect_config.rule_set.rules.hotword_rule`](#obj-inspect_configrule_setruleshotword_rule)
@@ -367,6 +379,7 @@ infoTypes and that infoType is specified in &#39;info_types&#39; field. Specifyi
 one detected by the system. If built-in info type is not specified in &#39;info_types&#39; list then the name is
 treated as a custom info type. When `null`, the `info_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.info_type.new](#fn-inspect_configinspect_configinfo_typenew) constructor.
   - `regex` (`list[obj]`): Regular expression which defines the rule. When `null`, the `regex` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.regex.new](#fn-inspect_configinspect_configregexnew) constructor.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.sensitivity_score.new](#fn-inspect_configinspect_configsensitivity_scorenew) constructor.
   - `stored_type` (`list[obj]`): A reference to a StoredInfoType to use with scanning. When `null`, the `stored_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.stored_type.new](#fn-inspect_configinspect_configstored_typenew) constructor.
   - `surrogate_type` (`list[obj]`): Message for detecting output from deidentification transformations that support reversing. When `null`, the `surrogate_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.surrogate_type.new](#fn-inspect_configinspect_configsurrogate_typenew) constructor.
 
@@ -465,9 +478,33 @@ Terraform sub block.
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names
 listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.info_type.sensitivity_score.new](#fn-inspect_configinspect_configcustom_info_typessensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_type` sub block.
+
+
+## obj inspect_config.custom_info_types.info_type.sensitivity_score
+
+
+
+### fn inspect_config.custom_info_types.info_type.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.info_type.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj inspect_config.custom_info_types.regex
@@ -493,6 +530,29 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 **Returns**:
   - An attribute object that represents the `regex` sub block.
+
+
+## obj inspect_config.custom_info_types.sensitivity_score
+
+
+
+### fn inspect_config.custom_info_types.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj inspect_config.custom_info_types.stored_type
@@ -559,9 +619,33 @@ Terraform sub block.
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   - `version` (`string`): Version of the information type to use. By default, the version is set to stable When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.info_types.sensitivity_score.new](#fn-inspect_configinspect_configsensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_types` sub block.
+
+
+## obj inspect_config.info_types.sensitivity_score
+
+
+
+### fn inspect_config.info_types.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_inspect_template.inspect_config.info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj inspect_config.limits
@@ -635,9 +719,33 @@ Terraform sub block.
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.limits.max_findings_per_info_type.info_type.sensitivity_score.new](#fn-inspect_configinspect_configlimitsmax_findings_per_info_typesensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_type` sub block.
+
+
+## obj inspect_config.limits.max_findings_per_info_type.info_type.sensitivity_score
+
+
+
+### fn inspect_config.limits.max_findings_per_info_type.info_type.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_inspect_template.inspect_config.limits.max_findings_per_info_type.info_type.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj inspect_config.rule_set
@@ -684,9 +792,33 @@ Terraform sub block.
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.info_types.sensitivity_score.new](#fn-inspect_configinspect_configrule_setsensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_types` sub block.
+
+
+## obj inspect_config.rule_set.info_types.sensitivity_score
+
+
+
+### fn inspect_config.rule_set.info_types.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_inspect_template.inspect_config.rule_set.info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj inspect_config.rule_set.rules
@@ -933,9 +1065,33 @@ Terraform sub block.
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.sensitivity_score.new](#fn-inspect_configinspect_configrule_setrulesexclusion_ruleexclude_info_typessensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_types` sub block.
+
+
+## obj inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.sensitivity_score
+
+
+
+### fn inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj inspect_config.rule_set.rules.exclusion_rule.regex

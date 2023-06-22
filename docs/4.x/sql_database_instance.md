@@ -101,7 +101,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `database_version` (`string`): The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6, POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, POSTGRES_14, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions.
+  - `database_version` (`string`): The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6, POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, POSTGRES_14, POSTGRES_15, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions.
   - `deletion_protection` (`bool`): Used to block Terraform from deleting a SQL Instance. Defaults to true. When `null`, the `deletion_protection` field will be omitted from the resulting object.
   - `encryption_key_name` (`string`): Set the `encryption_key_name` field on the resulting resource block. When `null`, the `encryption_key_name` field will be omitted from the resulting object.
   - `instance_type` (`string`): The type of the instance. The valid values are:- &#39;SQL_INSTANCE_TYPE_UNSPECIFIED&#39;, &#39;CLOUD_SQL_INSTANCE&#39;, &#39;ON_PREMISES_INSTANCE&#39; and &#39;READ_REPLICA_INSTANCE&#39;. When `null`, the `instance_type` field will be omitted from the resulting object.
@@ -139,7 +139,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `database_version` (`string`): The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6, POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, POSTGRES_14, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions.
+  - `database_version` (`string`): The MySQL, PostgreSQL or SQL Server (beta) version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6, POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, POSTGRES_14, POSTGRES_15, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. Database Version Policies includes an up-to-date reference of supported versions.
   - `deletion_protection` (`bool`): Used to block Terraform from deleting a SQL Instance. Defaults to true. When `null`, the `deletion_protection` field will be omitted from the resulting object.
   - `encryption_key_name` (`string`): Set the `encryption_key_name` field on the resulting object. When `null`, the `encryption_key_name` field will be omitted from the resulting object.
   - `instance_type` (`string`): The type of the instance. The valid values are:- &#39;SQL_INSTANCE_TYPE_UNSPECIFIED&#39;, &#39;CLOUD_SQL_INSTANCE&#39;, &#39;ON_PREMISES_INSTANCE&#39; and &#39;READ_REPLICA_INSTANCE&#39;. When `null`, the `instance_type` field will be omitted from the resulting object.

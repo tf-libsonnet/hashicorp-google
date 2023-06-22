@@ -39,12 +39,16 @@ This package contains functions and utilities for setting up the resource using 
         * [`fn new()`](#fn-deidentify_configimage_transformationstransformsselected_info_typesnew)
         * [`obj deidentify_config.image_transformations.transforms.selected_info_types.info_types`](#obj-deidentify_configimage_transformationstransformsselected_info_typesinfo_types)
           * [`fn new()`](#fn-deidentify_configimage_transformationstransformsselected_info_typesinfo_typesnew)
+          * [`obj deidentify_config.image_transformations.transforms.selected_info_types.info_types.sensitivity_score`](#obj-deidentify_configimage_transformationstransformsselected_info_typesinfo_typessensitivity_score)
+            * [`fn new()`](#fn-deidentify_configimage_transformationstransformsselected_info_typesinfo_typessensitivity_scorenew)
   * [`obj deidentify_config.info_type_transformations`](#obj-deidentify_configinfo_type_transformations)
     * [`fn new()`](#fn-deidentify_configinfo_type_transformationsnew)
     * [`obj deidentify_config.info_type_transformations.transformations`](#obj-deidentify_configinfo_type_transformationstransformations)
       * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsnew)
       * [`obj deidentify_config.info_type_transformations.transformations.info_types`](#obj-deidentify_configinfo_type_transformationstransformationsinfo_types)
         * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsinfo_typesnew)
+        * [`obj deidentify_config.info_type_transformations.transformations.info_types.sensitivity_score`](#obj-deidentify_configinfo_type_transformationstransformationsinfo_typessensitivity_score)
+          * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsinfo_typessensitivity_scorenew)
       * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformation)
         * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationnew)
         * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.bucketing_config`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationbucketing_config)
@@ -87,6 +91,18 @@ This package contains functions and utilities for setting up the resource using 
               * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configcrypto_keyunwrappednew)
           * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configsurrogate_info_type)
             * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configsurrogate_info_typenew)
+            * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configsurrogate_info_typesensitivity_score)
+              * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configsurrogate_info_typesensitivity_scorenew)
+        * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_config)
+          * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_confignew)
+          * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_configcrypto_key)
+            * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_configcrypto_keynew)
+            * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.kms_wrapped`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_configcrypto_keykms_wrapped)
+              * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_configcrypto_keykms_wrappednew)
+            * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.transient`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_configcrypto_keytransient)
+              * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_configcrypto_keytransientnew)
+            * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.unwrapped`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_configcrypto_keyunwrapped)
+              * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_configcrypto_keyunwrappednew)
         * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_config)
           * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_confignew)
           * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.context`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configcontext)
@@ -101,6 +117,8 @@ This package contains functions and utilities for setting up the resource using 
               * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configcrypto_keyunwrappednew)
           * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configsurrogate_info_type)
             * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configsurrogate_info_typenew)
+            * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configsurrogate_info_typesensitivity_score)
+              * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configsurrogate_info_typesensitivity_scorenew)
         * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.date_shift_config`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationdate_shift_config)
           * [`fn new()`](#fn-deidentify_configinfo_type_transformationstransformationsprimitive_transformationdate_shift_confignew)
           * [`obj deidentify_config.info_type_transformations.transformations.primitive_transformation.date_shift_config.context`](#obj-deidentify_configinfo_type_transformationstransformationsprimitive_transformationdate_shift_configcontext)
@@ -163,6 +181,8 @@ This package contains functions and utilities for setting up the resource using 
           * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsnew)
           * [`obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.info_types`](#obj-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsinfo_types)
             * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsinfo_typesnew)
+            * [`obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.info_types.sensitivity_score`](#obj-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsinfo_typessensitivity_score)
+              * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsinfo_typessensitivity_scorenew)
           * [`obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation`](#obj-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformation)
             * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationnew)
             * [`obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.bucketing_config`](#obj-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationbucketing_config)
@@ -205,6 +225,8 @@ This package contains functions and utilities for setting up the resource using 
                   * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configcrypto_keyunwrappednew)
               * [`obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type`](#obj-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configsurrogate_info_type)
                 * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configsurrogate_info_typenew)
+                * [`obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score`](#obj-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configsurrogate_info_typesensitivity_score)
+                  * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configsurrogate_info_typesensitivity_scorenew)
             * [`obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_hash_config`](#obj-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_config)
               * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_confignew)
               * [`obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key`](#obj-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_configcrypto_key)
@@ -229,6 +251,8 @@ This package contains functions and utilities for setting up the resource using 
                   * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configcrypto_keyunwrappednew)
               * [`obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type`](#obj-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configsurrogate_info_type)
                 * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configsurrogate_info_typenew)
+                * [`obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score`](#obj-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configsurrogate_info_typesensitivity_score)
+                  * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configsurrogate_info_typesensitivity_scorenew)
             * [`obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.date_shift_config`](#obj-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationdate_shift_config)
               * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationdate_shift_confignew)
               * [`obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.date_shift_config.context`](#obj-deidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationdate_shift_configcontext)
@@ -307,6 +331,8 @@ This package contains functions and utilities for setting up the resource using 
               * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_deterministic_configcrypto_keyunwrappednew)
           * [`obj deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type`](#obj-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_deterministic_configsurrogate_info_type)
             * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_deterministic_configsurrogate_info_typenew)
+            * [`obj deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score`](#obj-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_deterministic_configsurrogate_info_typesensitivity_score)
+              * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_deterministic_configsurrogate_info_typesensitivity_scorenew)
         * [`obj deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config`](#obj-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_hash_config)
           * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_hash_confignew)
           * [`obj deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config.crypto_key`](#obj-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_hash_configcrypto_key)
@@ -331,6 +357,8 @@ This package contains functions and utilities for setting up the resource using 
               * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_replace_ffx_fpe_configcrypto_keyunwrappednew)
           * [`obj deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type`](#obj-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_replace_ffx_fpe_configsurrogate_info_type)
             * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_replace_ffx_fpe_configsurrogate_info_typenew)
+            * [`obj deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score`](#obj-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_replace_ffx_fpe_configsurrogate_info_typesensitivity_score)
+              * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_replace_ffx_fpe_configsurrogate_info_typesensitivity_scorenew)
         * [`obj deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config`](#obj-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationdate_shift_config)
           * [`fn new()`](#fn-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationdate_shift_confignew)
           * [`obj deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config.context`](#obj-deidentify_configrecord_transformationsfield_transformationsprimitive_transformationdate_shift_configcontext)
@@ -796,9 +824,33 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type.
   - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.selected_info_types.info_types.sensitivity_score.new](#fn-deidentify_configdeidentify_configimage_transformationstransformsselected_info_typessensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_types` sub block.
+
+
+## obj deidentify_config.image_transformations.transforms.selected_info_types.info_types.sensitivity_score
+
+
+
+### fn deidentify_config.image_transformations.transforms.selected_info_types.info_types.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.image_transformations.transforms.selected_info_types.info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj deidentify_config.info_type_transformations
@@ -869,9 +921,33 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type.
   - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.info_types.sensitivity_score.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationssensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_types` sub block.
+
+
+## obj deidentify_config.info_type_transformations.transformations.info_types.sensitivity_score
+
+
+
+### fn deidentify_config.info_type_transformations.transformations.info_types.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj deidentify_config.info_type_transformations.transformations.primitive_transformation
@@ -899,6 +975,10 @@ See https://cloud.google.com/dlp/docs/concepts-bucketing to learn more. When `nu
   - `character_mask_config` (`list[obj]`): Partially mask a string by replacing a given number of characters with a fixed character.
 Masking can start from the beginning or end of the string. When `null`, the `character_mask_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.character_mask_config.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationscharacter_mask_confignew) constructor.
   - `crypto_deterministic_config` (`list[obj]`): Pseudonymization method that generates deterministic encryption for the given input. Outputs a base64 encoded representation of the encrypted output. Uses AES-SIV based on the RFC [https://tools.ietf.org/html/rfc5297](https://tools.ietf.org/html/rfc5297). When `null`, the `crypto_deterministic_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationscrypto_deterministic_confignew) constructor.
+  - `crypto_hash_config` (`list[obj]`): Pseudonymization method that generates surrogates via cryptographic hashing. Uses SHA-256. The key size must be either 32 or 64 bytes.
+Outputs a base64 encoded representation of the hashed output (for example, L7k0BHmF1ha5U3NfGykjro4xWi1MPVQPjhMAZbSV9mM=).
+Currently, only string and integer values can be hashed.
+See https://cloud.google.com/dlp/docs/pseudonymization to learn more. When `null`, the `crypto_hash_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationscrypto_hash_confignew) constructor.
   - `crypto_replace_ffx_fpe_config` (`list[obj]`): Replaces an identifier with a surrogate using Format Preserving Encryption (FPE) with the FFX mode of operation; however when used in the &#39;content.reidentify&#39; API method, it serves the opposite function by reversing the surrogate back into the original identifier. The identifier must be encoded as ASCII. For a given crypto key and context, the same identifier will be replaced with the same surrogate. Identifiers must be at least two characters long. In the case that the identifier is the empty string, it will be skipped. See [https://cloud.google.com/dlp/docs/pseudonymization](https://cloud.google.com/dlp/docs/pseudonymization) to learn more.
 
 Note: We recommend using CryptoDeterministicConfig for all use cases which do not require preserving the input alphabet space and size, plus warrant referential integrity. When `null`, the `crypto_replace_ffx_fpe_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationscrypto_replace_ffx_fpe_confignew) constructor.
@@ -1457,9 +1537,158 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern &#39;[A-Za-z0-9$-_]{1,64}&#39;. When `null`, the `name` field will be omitted from the resulting object.
   - `version` (`string`): Optional version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configsensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `surrogate_info_type` sub block.
+
+
+## obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score
+
+
+
+### fn deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
+
+
+## obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config
+
+
+
+### fn deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.new` constructs a new object with attributes and blocks configured for the `crypto_hash_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `crypto_key` (`list[obj]`): The key used by the encryption function. When `null`, the `crypto_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_keynew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `crypto_hash_config` sub block.
+
+
+## obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key
+
+
+
+### fn deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.new` constructs a new object with attributes and blocks configured for the `crypto_key`
+Terraform sub block.
+
+
+
+**Args**:
+  - `kms_wrapped` (`list[obj]`): KMS wrapped key.
+Include to use an existing data crypto key wrapped by KMS. The wrapped key must be a 128-, 192-, or 256-bit key. Authorization requires the following IAM permissions when sending a request to perform a crypto transformation using a KMS-wrapped crypto key: dlp.kms.encrypt
+For more information, see [Creating a wrapped key](https://cloud.google.com/dlp/docs/create-wrapped-key).
+Note: When you use Cloud KMS for cryptographic operations, [charges apply](https://cloud.google.com/kms/pricing). When `null`, the `kms_wrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.kms_wrapped.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_configkms_wrappednew) constructor.
+  - `transient` (`list[obj]`): Transient crypto key. Use this to have a random data crypto key generated. It will be discarded after the request finishes. When `null`, the `transient` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.transient.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_configtransientnew) constructor.
+  - `unwrapped` (`list[obj]`): Unwrapped crypto key. Using raw keys is prone to security risks due to accidentally leaking the key. Choose another type of key if possible. When `null`, the `unwrapped` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.unwrapped.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_hash_configunwrappednew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `crypto_key` sub block.
+
+
+## obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.kms_wrapped
+
+
+
+### fn deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.kms_wrapped.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.kms_wrapped.new` constructs a new object with attributes and blocks configured for the `kms_wrapped`
+Terraform sub block.
+
+
+
+**Args**:
+  - `crypto_key_name` (`string`): The resource name of the KMS CryptoKey to use for unwrapping.
+  - `wrapped_key` (`string`): The wrapped data crypto key.
+
+A base64-encoded string.
+
+**Returns**:
+  - An attribute object that represents the `kms_wrapped` sub block.
+
+
+## obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.transient
+
+
+
+### fn deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.transient.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.transient.new` constructs a new object with attributes and blocks configured for the `transient`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): Name of the key. This is an arbitrary string used to differentiate different keys. A unique key is generated per name: two separate &#39;TransientCryptoKey&#39; protos share the same generated key if their names are the same. When the data crypto key is generated, this name is not used in any way (repeating the api call will result in a different key being generated).
+
+**Returns**:
+  - An attribute object that represents the `transient` sub block.
+
+
+## obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.unwrapped
+
+
+
+### fn deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.unwrapped.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_hash_config.crypto_key.unwrapped.new` constructs a new object with attributes and blocks configured for the `unwrapped`
+Terraform sub block.
+
+
+
+**Args**:
+  - `key` (`string`): A 128/192/256 bit key.
+
+A base64-encoded string.
+
+**Returns**:
+  - An attribute object that represents the `unwrapped` sub block.
 
 
 ## obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config
@@ -1656,9 +1885,33 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern &#39;[A-Za-z0-9$-_]{1,64}&#39;. When `null`, the `name` field will be omitted from the resulting object.
   - `version` (`string`): Optional version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score.new](#fn-deidentify_configdeidentify_configinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configsensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `surrogate_info_type` sub block.
+
+
+## obj deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score
+
+
+
+### fn deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj deidentify_config.info_type_transformations.transformations.primitive_transformation.date_shift_config
@@ -2436,9 +2689,33 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type.
   - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.info_types.sensitivity_score.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationssensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_types` sub block.
+
+
+## obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.info_types.sensitivity_score
+
+
+
+### fn deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.info_types.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation
@@ -3035,9 +3312,33 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern &#39;[A-Za-z0-9$-_]{1,64}&#39;.
   - `version` (`string`): Optional version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_deterministic_configsensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `surrogate_info_type` sub block.
+
+
+## obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score
+
+
+
+### fn deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_hash_config
@@ -3359,9 +3660,33 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern &#39;[A-Za-z0-9$-_]{1,64}&#39;.
   - `version` (`string`): Optional version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsinfo_type_transformationstransformationsprimitive_transformationcrypto_replace_ffx_fpe_configsensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `surrogate_info_type` sub block.
+
+
+## obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score
+
+
+
+### fn deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj deidentify_config.record_transformations.field_transformations.info_type_transformations.transformations.primitive_transformation.date_shift_config
@@ -4408,9 +4733,33 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern &#39;[A-Za-z0-9$-_]{1,64}&#39;. When `null`, the `name` field will be omitted from the resulting object.
   - `version` (`string`): Optional version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_deterministic_configsensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `surrogate_info_type` sub block.
+
+
+## obj deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score
+
+
+
+### fn deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_deterministic_config.surrogate_info_type.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_hash_config
@@ -4732,9 +5081,33 @@ Terraform sub block.
 **Args**:
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern &#39;[A-Za-z0-9$-_]{1,64}&#39;. When `null`, the `name` field will be omitted from the resulting object.
   - `version` (`string`): Optional version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score.new](#fn-deidentify_configdeidentify_configrecord_transformationsfield_transformationsprimitive_transformationcrypto_replace_ffx_fpe_configsensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `surrogate_info_type` sub block.
+
+
+## obj deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score
+
+
+
+### fn deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_deidentify_template.deidentify_config.record_transformations.field_transformations.primitive_transformation.crypto_replace_ffx_fpe_config.surrogate_info_type.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj deidentify_config.record_transformations.field_transformations.primitive_transformation.date_shift_config

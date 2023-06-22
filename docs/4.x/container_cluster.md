@@ -204,6 +204,10 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-node_configreservation_affinitynew)
   * [`obj node_config.shielded_instance_config`](#obj-node_configshielded_instance_config)
     * [`fn new()`](#fn-node_configshielded_instance_confignew)
+  * [`obj node_config.sole_tenant_config`](#obj-node_configsole_tenant_config)
+    * [`fn new()`](#fn-node_configsole_tenant_confignew)
+    * [`obj node_config.sole_tenant_config.node_affinity`](#obj-node_configsole_tenant_confignode_affinity)
+      * [`fn new()`](#fn-node_configsole_tenant_confignode_affinitynew)
   * [`obj node_config.workload_metadata_config`](#obj-node_configworkload_metadata_config)
     * [`fn new()`](#fn-node_configworkload_metadata_confignew)
 * [`obj node_pool`](#obj-node_pool)
@@ -236,6 +240,10 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-node_poolnode_configreservation_affinitynew)
     * [`obj node_pool.node_config.shielded_instance_config`](#obj-node_poolnode_configshielded_instance_config)
       * [`fn new()`](#fn-node_poolnode_configshielded_instance_confignew)
+    * [`obj node_pool.node_config.sole_tenant_config`](#obj-node_poolnode_configsole_tenant_config)
+      * [`fn new()`](#fn-node_poolnode_configsole_tenant_confignew)
+      * [`obj node_pool.node_config.sole_tenant_config.node_affinity`](#obj-node_poolnode_configsole_tenant_confignode_affinity)
+        * [`fn new()`](#fn-node_poolnode_configsole_tenant_confignode_affinitynew)
     * [`obj node_pool.node_config.workload_metadata_config`](#obj-node_poolnode_configworkload_metadata_config)
       * [`fn new()`](#fn-node_poolnode_configworkload_metadata_confignew)
   * [`obj node_pool.placement_policy`](#obj-node_poolplacement_policy)
@@ -3013,6 +3021,7 @@ Terraform sub block.
   - `local_nvme_ssd_block_config` (`list[obj]`): Parameters for raw-block local NVMe SSDs. When `null`, the `local_nvme_ssd_block_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.local_nvme_ssd_block_config.new](#fn-node_configlocal_nvme_ssd_block_confignew) constructor.
   - `reservation_affinity` (`list[obj]`): The reservation affinity configuration for the node pool. When `null`, the `reservation_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.reservation_affinity.new](#fn-node_configreservation_affinitynew) constructor.
   - `shielded_instance_config` (`list[obj]`): Shielded Instance options. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.shielded_instance_config.new](#fn-node_configshielded_instance_confignew) constructor.
+  - `sole_tenant_config` (`list[obj]`): Node affinity options for sole tenant node pools. When `null`, the `sole_tenant_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.sole_tenant_config.new](#fn-node_configsole_tenant_confignew) constructor.
   - `workload_metadata_config` (`list[obj]`): The workload metadata configuration for this node. When `null`, the `workload_metadata_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.workload_metadata_config.new](#fn-node_configworkload_metadata_confignew) constructor.
 
 **Returns**:
@@ -3232,6 +3241,54 @@ Terraform sub block.
   - An attribute object that represents the `shielded_instance_config` sub block.
 
 
+## obj node_config.sole_tenant_config
+
+
+
+### fn node_config.sole_tenant_config.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_config.sole_tenant_config.new` constructs a new object with attributes and blocks configured for the `sole_tenant_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `node_affinity` (`list[obj]`): . When `null`, the `node_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.sole_tenant_config.node_affinity.new](#fn-node_confignode_confignode_affinitynew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `sole_tenant_config` sub block.
+
+
+## obj node_config.sole_tenant_config.node_affinity
+
+
+
+### fn node_config.sole_tenant_config.node_affinity.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_config.sole_tenant_config.node_affinity.new` constructs a new object with attributes and blocks configured for the `node_affinity`
+Terraform sub block.
+
+
+
+**Args**:
+  - `key` (`string`): .
+  - `operator` (`string`): .
+  - `values` (`list`): .
+
+**Returns**:
+  - An attribute object that represents the `node_affinity` sub block.
+
+
 ## obj node_config.workload_metadata_config
 
 
@@ -3436,6 +3493,7 @@ Terraform sub block.
   - `local_nvme_ssd_block_config` (`list[obj]`): Parameters for raw-block local NVMe SSDs. When `null`, the `local_nvme_ssd_block_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.local_nvme_ssd_block_config.new](#fn-node_poolnode_poollocal_nvme_ssd_block_confignew) constructor.
   - `reservation_affinity` (`list[obj]`): The reservation affinity configuration for the node pool. When `null`, the `reservation_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.reservation_affinity.new](#fn-node_poolnode_poolreservation_affinitynew) constructor.
   - `shielded_instance_config` (`list[obj]`): Shielded Instance options. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.shielded_instance_config.new](#fn-node_poolnode_poolshielded_instance_confignew) constructor.
+  - `sole_tenant_config` (`list[obj]`): Node affinity options for sole tenant node pools. When `null`, the `sole_tenant_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.sole_tenant_config.new](#fn-node_poolnode_poolsole_tenant_confignew) constructor.
   - `workload_metadata_config` (`list[obj]`): The workload metadata configuration for this node. When `null`, the `workload_metadata_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.workload_metadata_config.new](#fn-node_poolnode_poolworkload_metadata_confignew) constructor.
 
 **Returns**:
@@ -3653,6 +3711,54 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `shielded_instance_config` sub block.
+
+
+## obj node_pool.node_config.sole_tenant_config
+
+
+
+### fn node_pool.node_config.sole_tenant_config.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_pool.node_config.sole_tenant_config.new` constructs a new object with attributes and blocks configured for the `sole_tenant_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `node_affinity` (`list[obj]`): . When `null`, the `node_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.sole_tenant_config.node_affinity.new](#fn-node_poolnode_poolnode_confignode_affinitynew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `sole_tenant_config` sub block.
+
+
+## obj node_pool.node_config.sole_tenant_config.node_affinity
+
+
+
+### fn node_pool.node_config.sole_tenant_config.node_affinity.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_pool.node_config.sole_tenant_config.node_affinity.new` constructs a new object with attributes and blocks configured for the `node_affinity`
+Terraform sub block.
+
+
+
+**Args**:
+  - `key` (`string`): .
+  - `operator` (`string`): .
+  - `values` (`list`): .
+
+**Returns**:
+  - An attribute object that represents the `node_affinity` sub block.
 
 
 ## obj node_pool.node_config.workload_metadata_config

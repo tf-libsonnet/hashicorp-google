@@ -2611,6 +2611,15 @@ and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must
 be specified. When `null`, the `full_path_match` field will be omitted from the resulting object.
   - `ignore_case` (`bool`): Specifies that prefixMatch and fullPathMatch matches are case sensitive.
 Defaults to false. When `null`, the `ignore_case` field will be omitted from the resulting object.
+  - `path_template_match` (`string`): For satisfying the matchRule condition, the path of the request
+must match the wildcard pattern specified in pathTemplateMatch
+after removing any query parameters and anchor that may be part
+of the original URL.
+
+pathTemplateMatch must be between 1 and 255 characters
+(inclusive).  The pattern specified by pathTemplateMatch may
+have at most 5 wildcard operators and at most 5 variable
+captures in total. When `null`, the `path_template_match` field will be omitted from the resulting object.
   - `prefix_match` (`string`): For satisfying the matchRule condition, the request&#39;s path must begin with the
 specified prefixMatch. prefixMatch must begin with a /. The value must be
 between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or
@@ -3148,6 +3157,20 @@ header is replaced with contents of hostRewrite. The value must be between 1 and
   - `path_prefix_rewrite` (`string`): Prior to forwarding the request to the selected backend service, the matching
 portion of the request&#39;s path is replaced by pathPrefixRewrite. The value must
 be between 1 and 1024 characters. When `null`, the `path_prefix_rewrite` field will be omitted from the resulting object.
+  - `path_template_rewrite` (`string`): Prior to forwarding the request to the selected origin, if the
+request matched a pathTemplateMatch, the matching portion of the
+request&#39;s path is replaced re-written using the pattern specified
+by pathTemplateRewrite.
+
+pathTemplateRewrite must be between 1 and 255 characters
+(inclusive), must start with a &#39;/&#39;, and must only use variables
+captured by the route&#39;s pathTemplate matchers.
+
+pathTemplateRewrite may only be used when all of a route&#39;s
+MatchRules specify pathTemplate.
+
+Only one of pathPrefixRewrite and pathTemplateRewrite may be
+specified. When `null`, the `path_template_rewrite` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `url_rewrite` sub block.
