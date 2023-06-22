@@ -102,6 +102,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   data_catalog_taxonomy_iam_policy: (import 'data_catalog_taxonomy_iam_policy.libsonnet'),
   data_fusion_instance_iam_policy: (import 'data_fusion_instance_iam_policy.libsonnet'),
   dataplex_asset_iam_policy: (import 'dataplex_asset_iam_policy.libsonnet'),
+  dataplex_datascan_iam_policy: (import 'dataplex_datascan_iam_policy.libsonnet'),
   dataplex_lake_iam_policy: (import 'dataplex_lake_iam_policy.libsonnet'),
   dataplex_zone_iam_policy: (import 'dataplex_zone_iam_policy.libsonnet'),
   dataproc_autoscaling_policy_iam_policy: (import 'dataproc_autoscaling_policy_iam_policy.libsonnet'),

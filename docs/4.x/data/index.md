@@ -107,6 +107,7 @@ permalink: /data/
 * [data_catalog_taxonomy_iam_policy](data_catalog_taxonomy_iam_policy.md)
 * [data_fusion_instance_iam_policy](data_fusion_instance_iam_policy.md)
 * [dataplex_asset_iam_policy](dataplex_asset_iam_policy.md)
+* [dataplex_datascan_iam_policy](dataplex_datascan_iam_policy.md)
 * [dataplex_lake_iam_policy](dataplex_lake_iam_policy.md)
 * [dataplex_zone_iam_policy](dataplex_zone_iam_policy.md)
 * [dataproc_autoscaling_policy_iam_policy](dataproc_autoscaling_policy_iam_policy.md)

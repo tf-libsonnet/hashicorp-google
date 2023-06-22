@@ -104,7 +104,8 @@ are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller&#39;s project. When `null`, the `physical_block_size_bytes` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `provisioned_iops` (`number`): Indicates how many IOPS must be provisioned for the disk. When `null`, the `provisioned_iops` field will be omitted from the resulting object.
+  - `provisioned_iops` (`number`): Indicates how many IOPS must be provisioned for the disk.
+Note: Update currently only supported by hyperdisk skus, allowing for an update of IOPS every 4 hours When `null`, the `provisioned_iops` field will be omitted from the resulting object.
   - `size` (`number`): Size of the persistent disk, specified in GB. You can specify this
 field when creating a persistent disk using the &#39;image&#39; or
 &#39;snapshot&#39; parameter, or specify it alone to create an empty
@@ -208,7 +209,8 @@ are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller&#39;s project. When `null`, the `physical_block_size_bytes` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `provisioned_iops` (`number`): Indicates how many IOPS must be provisioned for the disk. When `null`, the `provisioned_iops` field will be omitted from the resulting object.
+  - `provisioned_iops` (`number`): Indicates how many IOPS must be provisioned for the disk.
+Note: Update currently only supported by hyperdisk skus, allowing for an update of IOPS every 4 hours When `null`, the `provisioned_iops` field will be omitted from the resulting object.
   - `size` (`number`): Size of the persistent disk, specified in GB. You can specify this
 field when creating a persistent disk using the &#39;image&#39; or
 &#39;snapshot&#39; parameter, or specify it alone to create an empty

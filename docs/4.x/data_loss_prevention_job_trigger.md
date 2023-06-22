@@ -23,6 +23,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withStatus()`](#fn-withstatus)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withTriggerId()`](#fn-withtriggerid)
 * [`fn withTriggers()`](#fn-withtriggers)
 * [`fn withTriggersMixin()`](#fn-withtriggersmixin)
 * [`obj inspect_job`](#obj-inspect_job)
@@ -65,24 +66,34 @@ This package contains functions and utilities for setting up the resource using 
           * [`fn new()`](#fn-inspect_jobinspect_configcustom_info_typesdictionaryword_listnew)
       * [`obj inspect_job.inspect_config.custom_info_types.info_type`](#obj-inspect_jobinspect_configcustom_info_typesinfo_type)
         * [`fn new()`](#fn-inspect_jobinspect_configcustom_info_typesinfo_typenew)
+        * [`obj inspect_job.inspect_config.custom_info_types.info_type.sensitivity_score`](#obj-inspect_jobinspect_configcustom_info_typesinfo_typesensitivity_score)
+          * [`fn new()`](#fn-inspect_jobinspect_configcustom_info_typesinfo_typesensitivity_scorenew)
       * [`obj inspect_job.inspect_config.custom_info_types.regex`](#obj-inspect_jobinspect_configcustom_info_typesregex)
         * [`fn new()`](#fn-inspect_jobinspect_configcustom_info_typesregexnew)
+      * [`obj inspect_job.inspect_config.custom_info_types.sensitivity_score`](#obj-inspect_jobinspect_configcustom_info_typessensitivity_score)
+        * [`fn new()`](#fn-inspect_jobinspect_configcustom_info_typessensitivity_scorenew)
       * [`obj inspect_job.inspect_config.custom_info_types.stored_type`](#obj-inspect_jobinspect_configcustom_info_typesstored_type)
         * [`fn new()`](#fn-inspect_jobinspect_configcustom_info_typesstored_typenew)
       * [`obj inspect_job.inspect_config.custom_info_types.surrogate_type`](#obj-inspect_jobinspect_configcustom_info_typessurrogate_type)
         * [`fn new()`](#fn-inspect_jobinspect_configcustom_info_typessurrogate_typenew)
     * [`obj inspect_job.inspect_config.info_types`](#obj-inspect_jobinspect_configinfo_types)
       * [`fn new()`](#fn-inspect_jobinspect_configinfo_typesnew)
+      * [`obj inspect_job.inspect_config.info_types.sensitivity_score`](#obj-inspect_jobinspect_configinfo_typessensitivity_score)
+        * [`fn new()`](#fn-inspect_jobinspect_configinfo_typessensitivity_scorenew)
     * [`obj inspect_job.inspect_config.limits`](#obj-inspect_jobinspect_configlimits)
       * [`fn new()`](#fn-inspect_jobinspect_configlimitsnew)
       * [`obj inspect_job.inspect_config.limits.max_findings_per_info_type`](#obj-inspect_jobinspect_configlimitsmax_findings_per_info_type)
         * [`fn new()`](#fn-inspect_jobinspect_configlimitsmax_findings_per_info_typenew)
         * [`obj inspect_job.inspect_config.limits.max_findings_per_info_type.info_type`](#obj-inspect_jobinspect_configlimitsmax_findings_per_info_typeinfo_type)
           * [`fn new()`](#fn-inspect_jobinspect_configlimitsmax_findings_per_info_typeinfo_typenew)
+          * [`obj inspect_job.inspect_config.limits.max_findings_per_info_type.info_type.sensitivity_score`](#obj-inspect_jobinspect_configlimitsmax_findings_per_info_typeinfo_typesensitivity_score)
+            * [`fn new()`](#fn-inspect_jobinspect_configlimitsmax_findings_per_info_typeinfo_typesensitivity_scorenew)
     * [`obj inspect_job.inspect_config.rule_set`](#obj-inspect_jobinspect_configrule_set)
       * [`fn new()`](#fn-inspect_jobinspect_configrule_setnew)
       * [`obj inspect_job.inspect_config.rule_set.info_types`](#obj-inspect_jobinspect_configrule_setinfo_types)
         * [`fn new()`](#fn-inspect_jobinspect_configrule_setinfo_typesnew)
+        * [`obj inspect_job.inspect_config.rule_set.info_types.sensitivity_score`](#obj-inspect_jobinspect_configrule_setinfo_typessensitivity_score)
+          * [`fn new()`](#fn-inspect_jobinspect_configrule_setinfo_typessensitivity_scorenew)
       * [`obj inspect_job.inspect_config.rule_set.rules`](#obj-inspect_jobinspect_configrule_setrules)
         * [`fn new()`](#fn-inspect_jobinspect_configrule_setrulesnew)
         * [`obj inspect_job.inspect_config.rule_set.rules.exclusion_rule`](#obj-inspect_jobinspect_configrule_setrulesexclusion_rule)
@@ -103,6 +114,8 @@ This package contains functions and utilities for setting up the resource using 
             * [`fn new()`](#fn-inspect_jobinspect_configrule_setrulesexclusion_ruleexclude_info_typesnew)
             * [`obj inspect_job.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types`](#obj-inspect_jobinspect_configrule_setrulesexclusion_ruleexclude_info_typesinfo_types)
               * [`fn new()`](#fn-inspect_jobinspect_configrule_setrulesexclusion_ruleexclude_info_typesinfo_typesnew)
+              * [`obj inspect_job.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.sensitivity_score`](#obj-inspect_jobinspect_configrule_setrulesexclusion_ruleexclude_info_typesinfo_typessensitivity_score)
+                * [`fn new()`](#fn-inspect_jobinspect_configrule_setrulesexclusion_ruleexclude_info_typesinfo_typessensitivity_scorenew)
           * [`obj inspect_job.inspect_config.rule_set.rules.exclusion_rule.regex`](#obj-inspect_jobinspect_configrule_setrulesexclusion_ruleregex)
             * [`fn new()`](#fn-inspect_jobinspect_configrule_setrulesexclusion_ruleregexnew)
         * [`obj inspect_job.inspect_config.rule_set.rules.hotword_rule`](#obj-inspect_jobinspect_configrule_setruleshotword_rule)
@@ -190,6 +203,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `parent` (`string`): The parent of the trigger, either in the format &#39;projects/{{project}}&#39;
 or &#39;projects/{{project}}/locations/{{location}}&#39;
   - `status` (`string`): Whether the trigger is currently active. Default value: &#34;HEALTHY&#34; Possible values: [&#34;PAUSED&#34;, &#34;HEALTHY&#34;, &#34;CANCELLED&#34;] When `null`, the `status` field will be omitted from the resulting object.
+  - `trigger_id` (`string`): The trigger id can contain uppercase and lowercase letters, numbers, and hyphens;
+that is, it must match the regular expression: [a-zA-Z\d-_]&#43;.
+The maximum length is 100 characters. Can be empty to allow the system to generate one. When `null`, the `trigger_id` field will be omitted from the resulting object.
   - `inspect_job` (`list[obj]`): Controls what and how to inspect for findings. When `null`, the `inspect_job` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.new](#fn-inspect_jobnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.timeouts.new](#fn-timeoutsnew) constructor.
   - `triggers` (`list[obj]`): What event needs to occur for a new job to be started. When `null`, the `triggers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.triggers.new](#fn-triggersnew) constructor.
@@ -221,6 +237,9 @@ injecting into a complete block.
   - `parent` (`string`): The parent of the trigger, either in the format &#39;projects/{{project}}&#39;
 or &#39;projects/{{project}}/locations/{{location}}&#39;
   - `status` (`string`): Whether the trigger is currently active. Default value: &#34;HEALTHY&#34; Possible values: [&#34;PAUSED&#34;, &#34;HEALTHY&#34;, &#34;CANCELLED&#34;] When `null`, the `status` field will be omitted from the resulting object.
+  - `trigger_id` (`string`): The trigger id can contain uppercase and lowercase letters, numbers, and hyphens;
+that is, it must match the regular expression: [a-zA-Z\d-_]&#43;.
+The maximum length is 100 characters. Can be empty to allow the system to generate one. When `null`, the `trigger_id` field will be omitted from the resulting object.
   - `inspect_job` (`list[obj]`): Controls what and how to inspect for findings. When `null`, the `inspect_job` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.new](#fn-inspect_jobnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.timeouts.new](#fn-timeoutsnew) constructor.
   - `triggers` (`list[obj]`): What event needs to occur for a new job to be started. When `null`, the `triggers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.triggers.new](#fn-triggersnew) constructor.
@@ -366,6 +385,22 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+### fn withTriggerId
+
+```ts
+withTriggerId()
+```
+
+`google.string.withTriggerId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the trigger_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `trigger_id` field.
+
+
 ### fn withTriggers
 
 ```ts
@@ -420,7 +455,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `inspect_template_name` (`string`): The name of the template to run when this job is triggered.
+  - `inspect_template_name` (`string`): The name of the template to run when this job is triggered. When `null`, the `inspect_template_name` field will be omitted from the resulting object.
   - `actions` (`list[obj]`): A task to execute on the completion of a job. When `null`, the `actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.actions.new](#fn-inspect_jobactionsnew) constructor.
   - `inspect_config` (`list[obj]`): The core content of the template. When `null`, the `inspect_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.inspect_config.new](#fn-inspect_jobinspect_confignew) constructor.
   - `storage_config` (`list[obj]`): Information on where to inspect When `null`, the `storage_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.new](#fn-inspect_jobstorage_confignew) constructor.
@@ -814,6 +849,7 @@ infoTypes and that infoType is specified in &#39;info_types&#39; field. Specifyi
 one detected by the system. If built-in info type is not specified in &#39;info_types&#39; list then the name is
 treated as a custom info type. When `null`, the `info_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.inspect_config.custom_info_types.info_type.new](#fn-inspect_jobinspect_jobinspect_configinfo_typenew) constructor.
   - `regex` (`list[obj]`): Regular expression which defines the rule. When `null`, the `regex` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.inspect_config.custom_info_types.regex.new](#fn-inspect_jobinspect_jobinspect_configregexnew) constructor.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.inspect_config.custom_info_types.sensitivity_score.new](#fn-inspect_jobinspect_jobinspect_configsensitivity_scorenew) constructor.
   - `stored_type` (`list[obj]`): A reference to a StoredInfoType to use with scanning. When `null`, the `stored_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.inspect_config.custom_info_types.stored_type.new](#fn-inspect_jobinspect_jobinspect_configstored_typenew) constructor.
   - `surrogate_type` (`list[obj]`): Message for detecting output from deidentification transformations that support reversing. When `null`, the `surrogate_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.inspect_config.custom_info_types.surrogate_type.new](#fn-inspect_jobinspect_jobinspect_configsurrogate_typenew) constructor.
 
@@ -912,9 +948,33 @@ Terraform sub block.
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names
 listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   - `version` (`string`): Version of the information type to use. By default, the version is set to stable. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.inspect_config.custom_info_types.info_type.sensitivity_score.new](#fn-inspect_jobinspect_jobinspect_configcustom_info_typessensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_type` sub block.
+
+
+## obj inspect_job.inspect_config.custom_info_types.info_type.sensitivity_score
+
+
+
+### fn inspect_job.inspect_config.custom_info_types.info_type.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_job_trigger.inspect_job.inspect_config.custom_info_types.info_type.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj inspect_job.inspect_config.custom_info_types.regex
@@ -940,6 +1000,29 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 **Returns**:
   - An attribute object that represents the `regex` sub block.
+
+
+## obj inspect_job.inspect_config.custom_info_types.sensitivity_score
+
+
+
+### fn inspect_job.inspect_config.custom_info_types.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_job_trigger.inspect_job.inspect_config.custom_info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj inspect_job.inspect_config.custom_info_types.stored_type
@@ -1006,9 +1089,33 @@ Terraform sub block.
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   - `version` (`string`): Version of the information type to use. By default, the version is set to stable When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.inspect_config.info_types.sensitivity_score.new](#fn-inspect_jobinspect_jobinspect_configsensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_types` sub block.
+
+
+## obj inspect_job.inspect_config.info_types.sensitivity_score
+
+
+
+### fn inspect_job.inspect_config.info_types.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_job_trigger.inspect_job.inspect_config.info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj inspect_job.inspect_config.limits
@@ -1082,9 +1189,33 @@ Terraform sub block.
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   - `version` (`string`): Version of the information type to use. By default, the version is set to stable When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.inspect_config.limits.max_findings_per_info_type.info_type.sensitivity_score.new](#fn-inspect_jobinspect_jobinspect_configlimitsmax_findings_per_info_typesensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_type` sub block.
+
+
+## obj inspect_job.inspect_config.limits.max_findings_per_info_type.info_type.sensitivity_score
+
+
+
+### fn inspect_job.inspect_config.limits.max_findings_per_info_type.info_type.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_job_trigger.inspect_job.inspect_config.limits.max_findings_per_info_type.info_type.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj inspect_job.inspect_config.rule_set
@@ -1131,9 +1262,33 @@ Terraform sub block.
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   - `version` (`string`): Version of the information type to use. By default, the version is set to stable. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.inspect_config.rule_set.info_types.sensitivity_score.new](#fn-inspect_jobinspect_jobinspect_configrule_setsensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_types` sub block.
+
+
+## obj inspect_job.inspect_config.rule_set.info_types.sensitivity_score
+
+
+
+### fn inspect_job.inspect_config.rule_set.info_types.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_job_trigger.inspect_job.inspect_config.rule_set.info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj inspect_job.inspect_config.rule_set.rules
@@ -1379,9 +1534,33 @@ Terraform sub block.
   - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed
 at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.
   - `version` (`string`): Version of the information type to use. By default, the version is set to stable. When `null`, the `version` field will be omitted from the resulting object.
+  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.sensitivity_score.new](#fn-inspect_jobinspect_jobinspect_configrule_setrulesexclusion_ruleexclude_info_typessensitivity_scorenew) constructor.
 
 **Returns**:
   - An attribute object that represents the `info_types` sub block.
+
+
+## obj inspect_job.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.sensitivity_score
+
+
+
+### fn inspect_job.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.sensitivity_score.new
+
+```ts
+new()
+```
+
+
+`google.data_loss_prevention_job_trigger.inspect_job.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`
+Terraform sub block.
+
+
+
+**Args**:
+  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `sensitivity_score` sub block.
 
 
 ## obj inspect_job.inspect_config.rule_set.rules.exclusion_rule.regex
@@ -1697,7 +1876,7 @@ then the rest of the bytes are omitted. When `null`, the `bytes_limit_per_file` 
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. When `null`, the `bytes_limit_per_file_percent` field will be omitted from the resulting object.
   - `file_types` (`list`): List of file type groups to include in the scan. If empty, all files are scanned and available data
 format processors are applied. In addition, the binary content of the selected files is always scanned as well.
-Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified. Possible values: [&#34;BINARY_FILE&#34;, &#34;TEXT_FILE&#34;, &#34;IMAGE&#34;, &#34;WORD&#34;, &#34;PDF&#34;, &#34;AVRO&#34;, &#34;CSV&#34;, &#34;TSV&#34;] When `null`, the `file_types` field will be omitted from the resulting object.
+Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified. Possible values: [&#34;BINARY_FILE&#34;, &#34;TEXT_FILE&#34;, &#34;IMAGE&#34;, &#34;WORD&#34;, &#34;PDF&#34;, &#34;AVRO&#34;, &#34;CSV&#34;, &#34;TSV&#34;, &#34;POWERPOINT&#34;, &#34;EXCEL&#34;] When `null`, the `file_types` field will be omitted from the resulting object.
   - `files_limit_percent` (`number`): Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit. When `null`, the `files_limit_percent` field will be omitted from the resulting object.
   - `sample_method` (`string`): How to sample bytes if not all bytes are scanned. Meaningful only when used in conjunction with bytesLimitPerFile.

@@ -31,22 +31,33 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         },
       },
       info_type:: {
-        '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.info_type.new` constructs a new object with attributes and blocks configured for the `info_type`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names\nlisted at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.\n  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `info_type` sub block.\n', args=[]),
+        '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.info_type.new` constructs a new object with attributes and blocks configured for the `info_type`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names\nlisted at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.\n  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.\n  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.info_type.sensitivity_score.new](#fn-inspect_configinspect_configcustom_info_typessensitivity_scorenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `info_type` sub block.\n', args=[]),
         new(
           name,
+          sensitivity_score=null,
           version=null
         ):: std.prune(a={
           name: name,
+          sensitivity_score: sensitivity_score,
           version: version,
         }),
+        sensitivity_score:: {
+          '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.info_type.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`\nTerraform sub block.\n\n\n\n**Args**:\n  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]\n\n**Returns**:\n  - An attribute object that represents the `sensitivity_score` sub block.\n', args=[]),
+          new(
+            score
+          ):: std.prune(a={
+            score: score,
+          }),
+        },
       },
-      '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.new` constructs a new object with attributes and blocks configured for the `custom_info_types`\nTerraform sub block.\n\n\n\n**Args**:\n  - `exclusion_type` (`string`): If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching. Possible values: [&#34;EXCLUSION_TYPE_EXCLUDE&#34;] When `null`, the `exclusion_type` field will be omitted from the resulting object.\n  - `likelihood` (`string`): Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria\nspecified by the rule. Default value: &#34;VERY_LIKELY&#34; Possible values: [&#34;VERY_UNLIKELY&#34;, &#34;UNLIKELY&#34;, &#34;POSSIBLE&#34;, &#34;LIKELY&#34;, &#34;VERY_LIKELY&#34;] When `null`, the `likelihood` field will be omitted from the resulting object.\n  - `dictionary` (`list[obj]`): Dictionary which defines the rule. When `null`, the `dictionary` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.dictionary.new](#fn-inspect_configinspect_configdictionarynew) constructor.\n  - `info_type` (`list[obj]`): CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing\ninfoTypes and that infoType is specified in &#39;info_types&#39; field. Specifying the latter adds findings to the\none detected by the system. If built-in info type is not specified in &#39;info_types&#39; list then the name is\ntreated as a custom info type. When `null`, the `info_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.info_type.new](#fn-inspect_configinspect_configinfo_typenew) constructor.\n  - `regex` (`list[obj]`): Regular expression which defines the rule. When `null`, the `regex` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.regex.new](#fn-inspect_configinspect_configregexnew) constructor.\n  - `stored_type` (`list[obj]`): A reference to a StoredInfoType to use with scanning. When `null`, the `stored_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.stored_type.new](#fn-inspect_configinspect_configstored_typenew) constructor.\n  - `surrogate_type` (`list[obj]`): Message for detecting output from deidentification transformations that support reversing. When `null`, the `surrogate_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.surrogate_type.new](#fn-inspect_configinspect_configsurrogate_typenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `custom_info_types` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.new` constructs a new object with attributes and blocks configured for the `custom_info_types`\nTerraform sub block.\n\n\n\n**Args**:\n  - `exclusion_type` (`string`): If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching. Possible values: [&#34;EXCLUSION_TYPE_EXCLUDE&#34;] When `null`, the `exclusion_type` field will be omitted from the resulting object.\n  - `likelihood` (`string`): Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria\nspecified by the rule. Default value: &#34;VERY_LIKELY&#34; Possible values: [&#34;VERY_UNLIKELY&#34;, &#34;UNLIKELY&#34;, &#34;POSSIBLE&#34;, &#34;LIKELY&#34;, &#34;VERY_LIKELY&#34;] When `null`, the `likelihood` field will be omitted from the resulting object.\n  - `dictionary` (`list[obj]`): Dictionary which defines the rule. When `null`, the `dictionary` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.dictionary.new](#fn-inspect_configinspect_configdictionarynew) constructor.\n  - `info_type` (`list[obj]`): CustomInfoType can either be a new infoType, or an extension of built-in infoType, when the name matches one of existing\ninfoTypes and that infoType is specified in &#39;info_types&#39; field. Specifying the latter adds findings to the\none detected by the system. If built-in info type is not specified in &#39;info_types&#39; list then the name is\ntreated as a custom info type. When `null`, the `info_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.info_type.new](#fn-inspect_configinspect_configinfo_typenew) constructor.\n  - `regex` (`list[obj]`): Regular expression which defines the rule. When `null`, the `regex` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.regex.new](#fn-inspect_configinspect_configregexnew) constructor.\n  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.sensitivity_score.new](#fn-inspect_configinspect_configsensitivity_scorenew) constructor.\n  - `stored_type` (`list[obj]`): A reference to a StoredInfoType to use with scanning. When `null`, the `stored_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.stored_type.new](#fn-inspect_configinspect_configstored_typenew) constructor.\n  - `surrogate_type` (`list[obj]`): Message for detecting output from deidentification transformations that support reversing. When `null`, the `surrogate_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.surrogate_type.new](#fn-inspect_configinspect_configsurrogate_typenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `custom_info_types` sub block.\n', args=[]),
       new(
         dictionary=null,
         exclusion_type=null,
         info_type=null,
         likelihood=null,
         regex=null,
+        sensitivity_score=null,
         stored_type=null,
         surrogate_type=null
       ):: std.prune(a={
@@ -55,6 +66,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         info_type: info_type,
         likelihood: likelihood,
         regex: regex,
+        sensitivity_score: sensitivity_score,
         stored_type: stored_type,
         surrogate_type: surrogate_type,
       }),
@@ -66,6 +78,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         ):: std.prune(a={
           group_indexes: group_indexes,
           pattern: pattern,
+        }),
+      },
+      sensitivity_score:: {
+        '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.custom_info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`\nTerraform sub block.\n\n\n\n**Args**:\n  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]\n\n**Returns**:\n  - An attribute object that represents the `sensitivity_score` sub block.\n', args=[]),
+        new(
+          score
+        ):: std.prune(a={
+          score: score,
         }),
       },
       stored_type:: {
@@ -84,26 +104,46 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       },
     },
     info_types:: {
-      '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.info_types.new` constructs a new object with attributes and blocks configured for the `info_types`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed\nat https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.\n  - `version` (`string`): Version of the information type to use. By default, the version is set to stable When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `info_types` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.info_types.new` constructs a new object with attributes and blocks configured for the `info_types`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed\nat https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.\n  - `version` (`string`): Version of the information type to use. By default, the version is set to stable When `null`, the `version` field will be omitted from the resulting object.\n  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.info_types.sensitivity_score.new](#fn-inspect_configinspect_configsensitivity_scorenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `info_types` sub block.\n', args=[]),
       new(
         name,
+        sensitivity_score=null,
         version=null
       ):: std.prune(a={
         name: name,
+        sensitivity_score: sensitivity_score,
         version: version,
       }),
+      sensitivity_score:: {
+        '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`\nTerraform sub block.\n\n\n\n**Args**:\n  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]\n\n**Returns**:\n  - An attribute object that represents the `sensitivity_score` sub block.\n', args=[]),
+        new(
+          score
+        ):: std.prune(a={
+          score: score,
+        }),
+      },
     },
     limits:: {
       max_findings_per_info_type:: {
         info_type:: {
-          '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.limits.max_findings_per_info_type.info_type.new` constructs a new object with attributes and blocks configured for the `info_type`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed\nat https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.\n  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `info_type` sub block.\n', args=[]),
+          '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.limits.max_findings_per_info_type.info_type.new` constructs a new object with attributes and blocks configured for the `info_type`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed\nat https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.\n  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.\n  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.limits.max_findings_per_info_type.info_type.sensitivity_score.new](#fn-inspect_configinspect_configlimitsmax_findings_per_info_typesensitivity_scorenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `info_type` sub block.\n', args=[]),
           new(
             name,
+            sensitivity_score=null,
             version=null
           ):: std.prune(a={
             name: name,
+            sensitivity_score: sensitivity_score,
             version: version,
           }),
+          sensitivity_score:: {
+            '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.limits.max_findings_per_info_type.info_type.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`\nTerraform sub block.\n\n\n\n**Args**:\n  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]\n\n**Returns**:\n  - An attribute object that represents the `sensitivity_score` sub block.\n', args=[]),
+            new(
+              score
+            ):: std.prune(a={
+              score: score,
+            }),
+          },
         },
         '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.limits.max_findings_per_info_type.new` constructs a new object with attributes and blocks configured for the `max_findings_per_info_type`\nTerraform sub block.\n\n\n\n**Args**:\n  - `max_findings` (`number`): Max findings limit for the given infoType.\n  - `info_type` (`list[obj]`): Type of information the findings limit applies to. Only one limit per infoType should be provided. If InfoTypeLimit does\nnot have an infoType, the DLP API applies the limit against all infoTypes that are found but not\nspecified in another InfoTypeLimit. When `null`, the `info_type` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.limits.max_findings_per_info_type.info_type.new](#fn-inspect_configinspect_configlimitsinfo_typenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `max_findings_per_info_type` sub block.\n', args=[]),
         new(
@@ -147,14 +187,24 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
     rule_set:: {
       info_types:: {
-        '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.rule_set.info_types.new` constructs a new object with attributes and blocks configured for the `info_types`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed\nat https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.\n  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `info_types` sub block.\n', args=[]),
+        '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.rule_set.info_types.new` constructs a new object with attributes and blocks configured for the `info_types`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed\nat https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.\n  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.\n  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.info_types.sensitivity_score.new](#fn-inspect_configinspect_configrule_setsensitivity_scorenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `info_types` sub block.\n', args=[]),
         new(
           name,
+          sensitivity_score=null,
           version=null
         ):: std.prune(a={
           name: name,
+          sensitivity_score: sensitivity_score,
           version: version,
         }),
+        sensitivity_score:: {
+          '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.rule_set.info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`\nTerraform sub block.\n\n\n\n**Args**:\n  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]\n\n**Returns**:\n  - An attribute object that represents the `sensitivity_score` sub block.\n', args=[]),
+          new(
+            score
+          ):: std.prune(a={
+            score: score,
+          }),
+        },
       },
       '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.rule_set.new` constructs a new object with attributes and blocks configured for the `rule_set`\nTerraform sub block.\n\n\n\n**Args**:\n  - `info_types` (`list[obj]`): List of infoTypes this rule set is applied to. When `null`, the `info_types` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.info_types.new](#fn-inspect_configinspect_configinfo_typesnew) constructor.\n  - `rules` (`list[obj]`): Set of rules to be applied to infoTypes. The rules are applied in order. When `null`, the `rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.new](#fn-inspect_configinspect_configrulesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `rule_set` sub block.\n', args=[]),
       new(
@@ -224,14 +274,24 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           },
           exclude_info_types:: {
             info_types:: {
-              '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.new` constructs a new object with attributes and blocks configured for the `info_types`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed\nat https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.\n  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `info_types` sub block.\n', args=[]),
+              '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.new` constructs a new object with attributes and blocks configured for the `info_types`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed\nat https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type.\n  - `version` (`string`): Version name for this InfoType. When `null`, the `version` field will be omitted from the resulting object.\n  - `sensitivity_score` (`list[obj]`): Optional custom sensitivity for this InfoType. This only applies to data profiling. When `null`, the `sensitivity_score` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.sensitivity_score.new](#fn-inspect_configinspect_configrule_setrulesexclusion_ruleexclude_info_typessensitivity_scorenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `info_types` sub block.\n', args=[]),
               new(
                 name,
+                sensitivity_score=null,
                 version=null
               ):: std.prune(a={
                 name: name,
+                sensitivity_score: sensitivity_score,
                 version: version,
               }),
+              sensitivity_score:: {
+                '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.sensitivity_score.new` constructs a new object with attributes and blocks configured for the `sensitivity_score`\nTerraform sub block.\n\n\n\n**Args**:\n  - `score` (`string`): The sensitivity score applied to the resource. Possible values: [&#34;SENSITIVITY_LOW&#34;, &#34;SENSITIVITY_MODERATE&#34;, &#34;SENSITIVITY_HIGH&#34;]\n\n**Returns**:\n  - An attribute object that represents the `sensitivity_score` sub block.\n', args=[]),
+                new(
+                  score
+                ):: std.prune(a={
+                  score: score,
+                }),
+              },
             },
             '#new':: d.fn(help='\n`google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.new` constructs a new object with attributes and blocks configured for the `exclude_info_types`\nTerraform sub block.\n\n\n\n**Args**:\n  - `info_types` (`list[obj]`): If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results. When `null`, the `info_types` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.rule_set.rules.exclusion_rule.exclude_info_types.info_types.new](#fn-inspect_configinspect_configrule_setrulesexclusion_ruleinfo_typesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `exclude_info_types` sub block.\n', args=[]),
             new(
@@ -318,13 +378,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       },
     },
   },
-  '#new':: d.fn(help="\n`google.data_loss_prevention_inspect_template.new` injects a new `google_data_loss_prevention_inspect_template` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.data_loss_prevention_inspect_template.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.data_loss_prevention_inspect_template` using the reference:\n\n    $._ref.google_data_loss_prevention_inspect_template.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_data_loss_prevention_inspect_template.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `description` (`string`): A description of the inspect template. When `null`, the `description` field will be omitted from the resulting object.\n  - `display_name` (`string`): User set display name of the inspect template. When `null`, the `display_name` field will be omitted from the resulting object.\n  - `parent` (`string`): The parent of the inspect template in any of the following formats:\n\n* \u0026#39;projects/{{project}}\u0026#39;\n* \u0026#39;projects/{{project}}/locations/{{location}}\u0026#39;\n* \u0026#39;organizations/{{organization_id}}\u0026#39;\n* \u0026#39;organizations/{{organization_id}}/locations/{{location}}\u0026#39;\n  - `inspect_config` (`list[obj]`): The core content of the template. When `null`, the `inspect_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.new](#fn-inspect_confignew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`google.data_loss_prevention_inspect_template.new` injects a new `google_data_loss_prevention_inspect_template` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.data_loss_prevention_inspect_template.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.data_loss_prevention_inspect_template` using the reference:\n\n    $._ref.google_data_loss_prevention_inspect_template.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_data_loss_prevention_inspect_template.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `description` (`string`): A description of the inspect template. When `null`, the `description` field will be omitted from the resulting object.\n  - `display_name` (`string`): User set display name of the inspect template. When `null`, the `display_name` field will be omitted from the resulting object.\n  - `parent` (`string`): The parent of the inspect template in any of the following formats:\n\n* \u0026#39;projects/{{project}}\u0026#39;\n* \u0026#39;projects/{{project}}/locations/{{location}}\u0026#39;\n* \u0026#39;organizations/{{organization_id}}\u0026#39;\n* \u0026#39;organizations/{{organization_id}}/locations/{{location}}\u0026#39;\n  - `template_id` (`string`): The template id can contain uppercase and lowercase letters, numbers, and hyphens;\nthat is, it must match the regular expression: [a-zA-Z\\d-_]\u0026#43;. The maximum length is\n100 characters. Can be empty to allow the system to generate one. When `null`, the `template_id` field will be omitted from the resulting object.\n  - `inspect_config` (`list[obj]`): The core content of the template. When `null`, the `inspect_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.new](#fn-inspect_confignew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     parent,
     description=null,
     display_name=null,
     inspect_config=null,
+    template_id=null,
     timeouts=null,
     _meta={}
   ):: tf.withResource(
@@ -335,22 +396,25 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       display_name=display_name,
       inspect_config=inspect_config,
       parent=parent,
+      template_id=template_id,
       timeouts=timeouts
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`google.data_loss_prevention_inspect_template.newAttrs` constructs a new object with attributes and blocks configured for the `data_loss_prevention_inspect_template`\nTerraform resource.\n\nUnlike [google.data_loss_prevention_inspect_template.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `description` (`string`): A description of the inspect template. When `null`, the `description` field will be omitted from the resulting object.\n  - `display_name` (`string`): User set display name of the inspect template. When `null`, the `display_name` field will be omitted from the resulting object.\n  - `parent` (`string`): The parent of the inspect template in any of the following formats:\n\n* &#39;projects/{{project}}&#39;\n* &#39;projects/{{project}}/locations/{{location}}&#39;\n* &#39;organizations/{{organization_id}}&#39;\n* &#39;organizations/{{organization_id}}/locations/{{location}}&#39;\n  - `inspect_config` (`list[obj]`): The core content of the template. When `null`, the `inspect_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.new](#fn-inspect_confignew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_loss_prevention_inspect_template` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`google.data_loss_prevention_inspect_template.newAttrs` constructs a new object with attributes and blocks configured for the `data_loss_prevention_inspect_template`\nTerraform resource.\n\nUnlike [google.data_loss_prevention_inspect_template.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `description` (`string`): A description of the inspect template. When `null`, the `description` field will be omitted from the resulting object.\n  - `display_name` (`string`): User set display name of the inspect template. When `null`, the `display_name` field will be omitted from the resulting object.\n  - `parent` (`string`): The parent of the inspect template in any of the following formats:\n\n* &#39;projects/{{project}}&#39;\n* &#39;projects/{{project}}/locations/{{location}}&#39;\n* &#39;organizations/{{organization_id}}&#39;\n* &#39;organizations/{{organization_id}}/locations/{{location}}&#39;\n  - `template_id` (`string`): The template id can contain uppercase and lowercase letters, numbers, and hyphens;\nthat is, it must match the regular expression: [a-zA-Z\\d-_]&#43;. The maximum length is\n100 characters. Can be empty to allow the system to generate one. When `null`, the `template_id` field will be omitted from the resulting object.\n  - `inspect_config` (`list[obj]`): The core content of the template. When `null`, the `inspect_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.inspect_config.new](#fn-inspect_confignew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_inspect_template.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `data_loss_prevention_inspect_template` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     parent,
     description=null,
     display_name=null,
     inspect_config=null,
+    template_id=null,
     timeouts=null
   ):: std.prune(a={
     description: description,
     display_name: display_name,
     inspect_config: inspect_config,
     parent: parent,
+    template_id: template_id,
     timeouts: timeouts,
   }),
   timeouts:: {
@@ -411,6 +475,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       google_data_loss_prevention_inspect_template+: {
         [resourceLabel]+: {
           parent: value,
+        },
+      },
+    },
+  },
+  '#withTemplateId':: d.fn(help='`google.string.withTemplateId` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the template_id field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `template_id` field.\n', args=[]),
+  withTemplateId(resourceLabel, value): {
+    resource+: {
+      google_data_loss_prevention_inspect_template+: {
+        [resourceLabel]+: {
+          template_id: value,
         },
       },
     },

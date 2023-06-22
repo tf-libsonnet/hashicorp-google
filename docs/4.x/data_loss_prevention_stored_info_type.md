@@ -24,6 +24,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withParent()`](#fn-withparent)
 * [`fn withRegex()`](#fn-withregex)
 * [`fn withRegexMixin()`](#fn-withregexmixin)
+* [`fn withStoredInfoTypeId()`](#fn-withstoredinfotypeid)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj dictionary`](#obj-dictionary)
@@ -86,6 +87,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 * &#39;projects/{{project}}/locations/{{location}}&#39;
 * &#39;organizations/{{organization_id}}&#39;
 * &#39;organizations/{{organization_id}}/locations/{{location}}&#39;
+  - `stored_info_type_id` (`string`): The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens;
+that is, it must match the regular expression: [a-zA-Z\d-_]&#43;. The maximum length is 100
+characters. Can be empty to allow the system to generate one. When `null`, the `stored_info_type_id` field will be omitted from the resulting object.
   - `dictionary` (`list[obj]`): Dictionary which defines the rule. When `null`, the `dictionary` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.dictionary.new](#fn-dictionarynew) constructor.
   - `large_custom_dictionary` (`list[obj]`): Dictionary which defines the rule. When `null`, the `large_custom_dictionary` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.large_custom_dictionary.new](#fn-large_custom_dictionarynew) constructor.
   - `regex` (`list[obj]`): Regular expression which defines the rule. When `null`, the `regex` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.regex.new](#fn-regexnew) constructor.
@@ -121,6 +125,9 @@ injecting into a complete block.
 * &#39;projects/{{project}}/locations/{{location}}&#39;
 * &#39;organizations/{{organization_id}}&#39;
 * &#39;organizations/{{organization_id}}/locations/{{location}}&#39;
+  - `stored_info_type_id` (`string`): The storedInfoType ID can contain uppercase and lowercase letters, numbers, and hyphens;
+that is, it must match the regular expression: [a-zA-Z\d-_]&#43;. The maximum length is 100
+characters. Can be empty to allow the system to generate one. When `null`, the `stored_info_type_id` field will be omitted from the resulting object.
   - `dictionary` (`list[obj]`): Dictionary which defines the rule. When `null`, the `dictionary` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.dictionary.new](#fn-dictionarynew) constructor.
   - `large_custom_dictionary` (`list[obj]`): Dictionary which defines the rule. When `null`, the `large_custom_dictionary` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.large_custom_dictionary.new](#fn-large_custom_dictionarynew) constructor.
   - `regex` (`list[obj]`): Regular expression which defines the rule. When `null`, the `regex` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_stored_info_type.regex.new](#fn-regexnew) constructor.
@@ -287,6 +294,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `regex` field.
+
+
+### fn withStoredInfoTypeId
+
+```ts
+withStoredInfoTypeId()
+```
+
+`google.string.withStoredInfoTypeId` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the stored_info_type_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `stored_info_type_id` field.
 
 
 ### fn withTimeouts

@@ -17,6 +17,7 @@ This package contains functions and utilities for setting up the data source usi
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withBillingAccount()`](#fn-withbillingaccount)
 * [`fn withDisplayName()`](#fn-withdisplayname)
+* [`fn withLookupProjects()`](#fn-withlookupprojects)
 * [`fn withOpen()`](#fn-withopen)
 
 ## Fields
@@ -50,6 +51,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `dataSrcLabel` (`string`): The name label of the block.
   - `billing_account` (`string`): Set the `billing_account` field on the resulting data source block. When `null`, the `billing_account` field will be omitted from the resulting object.
   - `display_name` (`string`): Set the `display_name` field on the resulting data source block. When `null`, the `display_name` field will be omitted from the resulting object.
+  - `lookup_projects` (`bool`): Set the `lookup_projects` field on the resulting data source block. When `null`, the `lookup_projects` field will be omitted from the resulting object.
   - `open` (`bool`): Set the `open` field on the resulting data source block. When `null`, the `open` field will be omitted from the resulting object.
 
 **Returns**:
@@ -76,6 +78,7 @@ injecting into a complete block.
 **Args**:
   - `billing_account` (`string`): Set the `billing_account` field on the resulting object. When `null`, the `billing_account` field will be omitted from the resulting object.
   - `display_name` (`string`): Set the `display_name` field on the resulting object. When `null`, the `display_name` field will be omitted from the resulting object.
+  - `lookup_projects` (`bool`): Set the `lookup_projects` field on the resulting object. When `null`, the `lookup_projects` field will be omitted from the resulting object.
   - `open` (`bool`): Set the `open` field on the resulting object. When `null`, the `open` field will be omitted from the resulting object.
 
 **Returns**:
@@ -112,6 +115,22 @@ Terraform data source block to set or update the display_name field.
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `display_name` field.
+
+
+### fn withLookupProjects
+
+```ts
+withLookupProjects()
+```
+
+`google.bool.withLookupProjects` constructs a mixin object that can be merged into the `bool`
+Terraform data source block to set or update the lookup_projects field.
+
+
+
+**Args**:
+  - `dataSrcLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `lookup_projects` field.
 
 
 ### fn withOpen
