@@ -128,6 +128,7 @@ permalink: /data/
 * [folders](folders.md)
 * [game_services_game_server_deployment_rollout](game_services_game_server_deployment_rollout.md)
 * [gke_backup_backup_plan_iam_policy](gke_backup_backup_plan_iam_policy.md)
+* [gke_hub_feature_iam_policy](gke_hub_feature_iam_policy.md)
 * [gke_hub_membership_iam_policy](gke_hub_membership_iam_policy.md)
 * [healthcare_consent_store_iam_policy](healthcare_consent_store_iam_policy.md)
 * [healthcare_dataset_iam_policy](healthcare_dataset_iam_policy.md)

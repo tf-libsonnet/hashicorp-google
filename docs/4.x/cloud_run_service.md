@@ -126,7 +126,7 @@ this field is set to false, the revision name will still autogenerate.) When `nu
   - `name` (`string`): Name must be unique within a Google Cloud project and region.
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
-More info: http://kubernetes.io/docs/user-guide/identifiers#names
+More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `metadata` (`list[obj]`): Metadata associated with this Service, including name, namespace, labels,
 and annotations. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.metadata.new](#fn-metadatanew) constructor.
@@ -175,7 +175,7 @@ this field is set to false, the revision name will still autogenerate.) When `nu
   - `name` (`string`): Name must be unique within a Google Cloud project and region.
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
-More info: http://kubernetes.io/docs/user-guide/identifiers#names
+More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `metadata` (`list[obj]`): Metadata associated with this Service, including name, namespace, labels,
 and annotations. When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_service.metadata.new](#fn-metadatanew) constructor.
@@ -427,7 +427,7 @@ Terraform sub block.
 **Args**:
   - `annotations` (`obj`): Annotations is a key value map stored with a resource that
 may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
+info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations
 
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
@@ -505,7 +505,7 @@ Terraform sub block.
 **Args**:
   - `annotations` (`obj`): Annotations is a key value map stored with a resource that
 may be set by external tools to store and retrieve arbitrary metadata. More
-info: http://kubernetes.io/docs/user-guide/annotations
+info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations
 
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If terraform plan shows a diff where a server-side annotation is added, you can add it to your config

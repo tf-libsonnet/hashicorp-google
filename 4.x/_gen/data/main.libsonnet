@@ -123,6 +123,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   folders: (import 'folders.libsonnet'),
   game_services_game_server_deployment_rollout: (import 'game_services_game_server_deployment_rollout.libsonnet'),
   gke_backup_backup_plan_iam_policy: (import 'gke_backup_backup_plan_iam_policy.libsonnet'),
+  gke_hub_feature_iam_policy: (import 'gke_hub_feature_iam_policy.libsonnet'),
   gke_hub_membership_iam_policy: (import 'gke_hub_membership_iam_policy.libsonnet'),
   healthcare_consent_store_iam_policy: (import 'healthcare_consent_store_iam_policy.libsonnet'),
   healthcare_dataset_iam_policy: (import 'healthcare_dataset_iam_policy.libsonnet'),

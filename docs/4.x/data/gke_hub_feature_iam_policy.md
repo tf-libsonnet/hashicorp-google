@@ -1,10 +1,10 @@
 ---
-permalink: /data/cloud_run_service/
+permalink: /data/gke_hub_feature_iam_policy/
 ---
 
-# data.cloud_run_service
+# data.gke_hub_feature_iam_policy
 
-`cloud_run_service` represents the `google_cloud_run_service` Terraform data source.
+`gke_hub_feature_iam_policy` represents the `google_gke_hub_feature_iam_policy` Terraform data source.
 
 
 
@@ -28,31 +28,28 @@ new()
 ```
 
 
-`google.data.cloud_run_service.new` injects a new `data_google_cloud_run_service` Terraform `data source`
+`google.data.gke_hub_feature_iam_policy.new` injects a new `data_google_gke_hub_feature_iam_policy` Terraform `data source`
 block into the root module document.
 
 Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
 resource. For example, if you added a new instance to the root using:
 
     # arguments omitted for brevity
-    google.data.cloud_run_service.new('some_id')
+    google.data.gke_hub_feature_iam_policy.new('some_id')
 
-You can get the reference to the `id` field of the created `google.data.cloud_run_service` using the reference:
+You can get the reference to the `id` field of the created `google.data.gke_hub_feature_iam_policy` using the reference:
 
-    $._ref.data_google_cloud_run_service.some_id.get('id')
+    $._ref.data_google_gke_hub_feature_iam_policy.some_id.get('id')
 
-This is the same as directly entering `"${ data_google_cloud_run_service.some_id.id }"` as the value.
+This is the same as directly entering `"${ data_google_gke_hub_feature_iam_policy.some_id.id }"` as the value.
 
 NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
 or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
 
 **Args**:
   - `dataSrcLabel` (`string`): The name label of the block.
-  - `location` (`string`): The location of the cloud run instance. eg us-central1
-  - `name` (`string`): Name must be unique within a Google Cloud project and region.
-Is required when creating resources. Name is primarily intended
-for creation idempotence and configuration definition. Cannot be updated.
-More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+  - `location` (`string`): Set the `location` field on the resulting data source block. When `null`, the `location` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting data source block.
   - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
@@ -66,10 +63,10 @@ newAttrs()
 ```
 
 
-`google.data.cloud_run_service.newAttrs` constructs a new object with attributes and blocks configured for the `cloud_run_service`
+`google.data.gke_hub_feature_iam_policy.newAttrs` constructs a new object with attributes and blocks configured for the `gke_hub_feature_iam_policy`
 Terraform data source.
 
-Unlike [google.data.cloud_run_service.new](#fn-new), this function will not inject the `data source`
+Unlike [google.data.gke_hub_feature_iam_policy.new](#fn-new), this function will not inject the `data source`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) function to build a complete block.
 
@@ -77,15 +74,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `location` (`string`): The location of the cloud run instance. eg us-central1
-  - `name` (`string`): Name must be unique within a Google Cloud project and region.
-Is required when creating resources. Name is primarily intended
-for creation idempotence and configuration definition. Cannot be updated.
-More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+  - `location` (`string`): Set the `location` field on the resulting object. When `null`, the `location` field will be omitted from the resulting object.
+  - `name` (`string`): Set the `name` field on the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
-  - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `cloud_run_service` data source into the root Terraform configuration.
+  - An attribute object that can be used with [tf.withData](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withdata) to construct a new `gke_hub_feature_iam_policy` data source into the root Terraform configuration.
 
 
 ### fn withLocation
