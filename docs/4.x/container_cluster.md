@@ -91,6 +91,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withResourceLabels()`](#fn-withresourcelabels)
 * [`fn withResourceUsageExportConfig()`](#fn-withresourceusageexportconfig)
 * [`fn withResourceUsageExportConfigMixin()`](#fn-withresourceusageexportconfigmixin)
+* [`fn withSecurityPostureConfig()`](#fn-withsecuritypostureconfig)
+* [`fn withSecurityPostureConfigMixin()`](#fn-withsecuritypostureconfigmixin)
 * [`fn withServiceExternalIpsConfig()`](#fn-withserviceexternalipsconfig)
 * [`fn withServiceExternalIpsConfigMixin()`](#fn-withserviceexternalipsconfigmixin)
 * [`fn withSubnetwork()`](#fn-withsubnetwork)
@@ -274,6 +276,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-resource_usage_export_confignew)
   * [`obj resource_usage_export_config.bigquery_destination`](#obj-resource_usage_export_configbigquery_destination)
     * [`fn new()`](#fn-resource_usage_export_configbigquery_destinationnew)
+* [`obj security_posture_config`](#obj-security_posture_config)
+  * [`fn new()`](#fn-security_posture_confignew)
 * [`obj service_external_ips_config`](#obj-service_external_ips_config)
   * [`fn new()`](#fn-service_external_ips_confignew)
 * [`obj timeouts`](#obj-timeouts)
@@ -364,6 +368,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `private_cluster_config` (`list[obj]`): Configuration for private clusters, clusters with private nodes. When `null`, the `private_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.private_cluster_config.new](#fn-private_cluster_confignew) constructor.
   - `release_channel` (`list[obj]`): Configuration options for the Release channel feature, which provide more control over automatic upgrades of your GKE clusters. Note that removing this field from your config will not unenroll it. Instead, use the &#34;UNSPECIFIED&#34; channel. When `null`, the `release_channel` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.release_channel.new](#fn-release_channelnew) constructor.
   - `resource_usage_export_config` (`list[obj]`): Configuration for the ResourceUsageExportConfig feature. When `null`, the `resource_usage_export_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.resource_usage_export_config.new](#fn-resource_usage_export_confignew) constructor.
+  - `security_posture_config` (`list[obj]`): Defines the config needed to enable/disable features for the Security Posture API When `null`, the `security_posture_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.security_posture_config.new](#fn-security_posture_confignew) constructor.
   - `service_external_ips_config` (`list[obj]`): If set, and enabled=true, services with external ips field will not be blocked When `null`, the `service_external_ips_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.service_external_ips_config.new](#fn-service_external_ips_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.timeouts.new](#fn-timeoutsnew) constructor.
   - `vertical_pod_autoscaling` (`list[obj]`): Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it. When `null`, the `vertical_pod_autoscaling` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.vertical_pod_autoscaling.new](#fn-vertical_pod_autoscalingnew) constructor.
@@ -443,6 +448,7 @@ injecting into a complete block.
   - `private_cluster_config` (`list[obj]`): Configuration for private clusters, clusters with private nodes. When `null`, the `private_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.private_cluster_config.new](#fn-private_cluster_confignew) constructor.
   - `release_channel` (`list[obj]`): Configuration options for the Release channel feature, which provide more control over automatic upgrades of your GKE clusters. Note that removing this field from your config will not unenroll it. Instead, use the &#34;UNSPECIFIED&#34; channel. When `null`, the `release_channel` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.release_channel.new](#fn-release_channelnew) constructor.
   - `resource_usage_export_config` (`list[obj]`): Configuration for the ResourceUsageExportConfig feature. When `null`, the `resource_usage_export_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.resource_usage_export_config.new](#fn-resource_usage_export_confignew) constructor.
+  - `security_posture_config` (`list[obj]`): Defines the config needed to enable/disable features for the Security Posture API When `null`, the `security_posture_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.security_posture_config.new](#fn-security_posture_confignew) constructor.
   - `service_external_ips_config` (`list[obj]`): If set, and enabled=true, services with external ips field will not be blocked When `null`, the `service_external_ips_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.service_external_ips_config.new](#fn-service_external_ips_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.timeouts.new](#fn-timeoutsnew) constructor.
   - `vertical_pod_autoscaling` (`list[obj]`): Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it. When `null`, the `vertical_pod_autoscaling` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.vertical_pod_autoscaling.new](#fn-vertical_pod_autoscalingnew) constructor.
@@ -1791,6 +1797,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `resource_usage_export_config` field.
+
+
+### fn withSecurityPostureConfig
+
+```ts
+withSecurityPostureConfig()
+```
+
+`google.list[obj].withSecurityPostureConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the security_posture_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withSecurityPostureConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `security_posture_config` field.
+
+
+### fn withSecurityPostureConfigMixin
+
+```ts
+withSecurityPostureConfigMixin()
+```
+
+`google.list[obj].withSecurityPostureConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the security_posture_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withSecurityPostureConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `security_posture_config` field.
 
 
 ### fn withServiceExternalIpsConfig
@@ -4122,6 +4165,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `bigquery_destination` sub block.
+
+
+## obj security_posture_config
+
+
+
+### fn security_posture_config.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.security_posture_config.new` constructs a new object with attributes and blocks configured for the `security_posture_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `mode` (`string`): Sets the mode of the Kubernetes security posture API&#39;s off-cluster features. Available options include DISABLED and BASIC. When `null`, the `mode` field will be omitted from the resulting object.
+  - `vulnerability_mode` (`string`): Sets the mode of the Kubernetes security posture API&#39;s workload vulnerability scanning. Available options include VULNERABILITY_DISABLED and VULNERABILITY_BASIC. When `null`, the `vulnerability_mode` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `security_posture_config` sub block.
 
 
 ## obj service_external_ips_config

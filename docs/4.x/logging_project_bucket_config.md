@@ -21,6 +21,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withEnableAnalytics()`](#fn-withenableanalytics)
 * [`fn withLocation()`](#fn-withlocation)
+* [`fn withLocked()`](#fn-withlocked)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRetentionDays()`](#fn-withretentiondays)
 * [`obj cmek_settings`](#obj-cmek_settings)
@@ -59,6 +60,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): An optional description for this bucket. When `null`, the `description` field will be omitted from the resulting object.
   - `enable_analytics` (`bool`): Enable log analytics for the bucket. Cannot be disabled once enabled. When `null`, the `enable_analytics` field will be omitted from the resulting object.
   - `location` (`string`): The location of the bucket.
+  - `locked` (`bool`): Whether the bucket is locked. The retention period on a locked bucket cannot be changed. Locked buckets may only be deleted if they are empty. When `null`, the `locked` field will be omitted from the resulting object.
   - `project` (`string`): The parent project that contains the logging bucket.
   - `retention_days` (`number`): Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. When `null`, the `retention_days` field will be omitted from the resulting object.
   - `cmek_settings` (`list[obj]`): The CMEK settings of the log bucket. If present, new log entries written to this log bucket are encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings, the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is allowed. When `null`, the `cmek_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_bucket_config.cmek_settings.new](#fn-cmek_settingsnew) constructor.
@@ -89,6 +91,7 @@ injecting into a complete block.
   - `description` (`string`): An optional description for this bucket. When `null`, the `description` field will be omitted from the resulting object.
   - `enable_analytics` (`bool`): Enable log analytics for the bucket. Cannot be disabled once enabled. When `null`, the `enable_analytics` field will be omitted from the resulting object.
   - `location` (`string`): The location of the bucket.
+  - `locked` (`bool`): Whether the bucket is locked. The retention period on a locked bucket cannot be changed. Locked buckets may only be deleted if they are empty. When `null`, the `locked` field will be omitted from the resulting object.
   - `project` (`string`): The parent project that contains the logging bucket.
   - `retention_days` (`number`): Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. When `null`, the `retention_days` field will be omitted from the resulting object.
   - `cmek_settings` (`list[obj]`): The CMEK settings of the log bucket. If present, new log entries written to this log bucket are encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings, the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is allowed. When `null`, the `cmek_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_bucket_config.cmek_settings.new](#fn-cmek_settingsnew) constructor.
@@ -196,6 +199,22 @@ Terraform resource block to set or update the location field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `location` field.
+
+
+### fn withLocked
+
+```ts
+withLocked()
+```
+
+`google.bool.withLocked` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the locked field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `locked` field.
 
 
 ### fn withProject

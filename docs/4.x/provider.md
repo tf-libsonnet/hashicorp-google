@@ -128,6 +128,7 @@ the `src` and/or `version` parameters are set.
   - `os_login_custom_endpoint` (`string`): Set the `os_login_custom_endpoint` field on the resulting provider block. When `null`, the `os_login_custom_endpoint` field will be omitted from the resulting object.
   - `privateca_custom_endpoint` (`string`): Set the `privateca_custom_endpoint` field on the resulting provider block. When `null`, the `privateca_custom_endpoint` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting provider block. When `null`, the `project` field will be omitted from the resulting object.
+  - `public_ca_custom_endpoint` (`string`): Set the `public_ca_custom_endpoint` field on the resulting provider block. When `null`, the `public_ca_custom_endpoint` field will be omitted from the resulting object.
   - `pubsub_custom_endpoint` (`string`): Set the `pubsub_custom_endpoint` field on the resulting provider block. When `null`, the `pubsub_custom_endpoint` field will be omitted from the resulting object.
   - `pubsub_lite_custom_endpoint` (`string`): Set the `pubsub_lite_custom_endpoint` field on the resulting provider block. When `null`, the `pubsub_lite_custom_endpoint` field will be omitted from the resulting object.
   - `recaptcha_enterprise_custom_endpoint` (`string`): Set the `recaptcha_enterprise_custom_endpoint` field on the resulting provider block. When `null`, the `recaptcha_enterprise_custom_endpoint` field will be omitted from the resulting object.
@@ -281,6 +282,7 @@ injecting into a complete block.
   - `os_login_custom_endpoint` (`string`): Set the `os_login_custom_endpoint` field on the resulting object. When `null`, the `os_login_custom_endpoint` field will be omitted from the resulting object.
   - `privateca_custom_endpoint` (`string`): Set the `privateca_custom_endpoint` field on the resulting object. When `null`, the `privateca_custom_endpoint` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `public_ca_custom_endpoint` (`string`): Set the `public_ca_custom_endpoint` field on the resulting object. When `null`, the `public_ca_custom_endpoint` field will be omitted from the resulting object.
   - `pubsub_custom_endpoint` (`string`): Set the `pubsub_custom_endpoint` field on the resulting object. When `null`, the `pubsub_custom_endpoint` field will be omitted from the resulting object.
   - `pubsub_lite_custom_endpoint` (`string`): Set the `pubsub_lite_custom_endpoint` field on the resulting object. When `null`, the `pubsub_lite_custom_endpoint` field will be omitted from the resulting object.
   - `recaptcha_enterprise_custom_endpoint` (`string`): Set the `recaptcha_enterprise_custom_endpoint` field on the resulting object. When `null`, the `recaptcha_enterprise_custom_endpoint` field will be omitted from the resulting object.

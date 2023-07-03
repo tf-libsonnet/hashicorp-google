@@ -560,6 +560,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   project_organization_policy: (import 'resources/project_organization_policy.libsonnet'),
   project_service: (import 'resources/project_service.libsonnet'),
   project_usage_export_bucket: (import 'resources/project_usage_export_bucket.libsonnet'),
+  public_ca_external_account_key: (import 'resources/public_ca_external_account_key.libsonnet'),
   pubsub_lite_reservation: (import 'resources/pubsub_lite_reservation.libsonnet'),
   pubsub_lite_subscription: (import 'resources/pubsub_lite_subscription.libsonnet'),
   pubsub_lite_topic: (import 'resources/pubsub_lite_topic.libsonnet'),

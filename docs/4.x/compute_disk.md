@@ -27,6 +27,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withPhysicalBlockSizeBytes()`](#fn-withphysicalblocksizebytes)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withProvisionedIops()`](#fn-withprovisionediops)
+* [`fn withProvisionedThroughput()`](#fn-withprovisionedthroughput)
 * [`fn withSize()`](#fn-withsize)
 * [`fn withSnapshot()`](#fn-withsnapshot)
 * [`fn withSourceDisk()`](#fn-withsourcedisk)
@@ -105,7 +106,11 @@ If an unsupported value is requested, the error message will list
 the supported values for the caller&#39;s project. When `null`, the `physical_block_size_bytes` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `provisioned_iops` (`number`): Indicates how many IOPS must be provisioned for the disk.
-Note: Update currently only supported by hyperdisk skus, allowing for an update of IOPS every 4 hours When `null`, the `provisioned_iops` field will be omitted from the resulting object.
+Note: Updating currently is only supported by hyperdisk skus without the need to delete and recreate the disk, hyperdisk
+allows for an update of IOPS every 4 hours. To update your hyperdisk more frequently, you&#39;ll need to manually delete and recreate it When `null`, the `provisioned_iops` field will be omitted from the resulting object.
+  - `provisioned_throughput` (`number`): Indicates how much Throughput must be provisioned for the disk.
+Note: Updating currently is only supported by hyperdisk skus without the need to delete and recreate the disk, hyperdisk
+allows for an update of Throughput every 4 hours. To update your hyperdisk more frequently, you&#39;ll need to manually delete and recreate it When `null`, the `provisioned_throughput` field will be omitted from the resulting object.
   - `size` (`number`): Size of the persistent disk, specified in GB. You can specify this
 field when creating a persistent disk using the &#39;image&#39; or
 &#39;snapshot&#39; parameter, or specify it alone to create an empty
@@ -210,7 +215,11 @@ If an unsupported value is requested, the error message will list
 the supported values for the caller&#39;s project. When `null`, the `physical_block_size_bytes` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `provisioned_iops` (`number`): Indicates how many IOPS must be provisioned for the disk.
-Note: Update currently only supported by hyperdisk skus, allowing for an update of IOPS every 4 hours When `null`, the `provisioned_iops` field will be omitted from the resulting object.
+Note: Updating currently is only supported by hyperdisk skus without the need to delete and recreate the disk, hyperdisk
+allows for an update of IOPS every 4 hours. To update your hyperdisk more frequently, you&#39;ll need to manually delete and recreate it When `null`, the `provisioned_iops` field will be omitted from the resulting object.
+  - `provisioned_throughput` (`number`): Indicates how much Throughput must be provisioned for the disk.
+Note: Updating currently is only supported by hyperdisk skus without the need to delete and recreate the disk, hyperdisk
+allows for an update of Throughput every 4 hours. To update your hyperdisk more frequently, you&#39;ll need to manually delete and recreate it When `null`, the `provisioned_throughput` field will be omitted from the resulting object.
   - `size` (`number`): Size of the persistent disk, specified in GB. You can specify this
 field when creating a persistent disk using the &#39;image&#39; or
 &#39;snapshot&#39; parameter, or specify it alone to create an empty
@@ -470,6 +479,22 @@ Terraform resource block to set or update the provisioned_iops field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`number`): The value to set for the `provisioned_iops` field.
+
+
+### fn withProvisionedThroughput
+
+```ts
+withProvisionedThroughput()
+```
+
+`google.number.withProvisionedThroughput` constructs a mixin object that can be merged into the `number`
+Terraform resource block to set or update the provisioned_throughput field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`number`): The value to set for the `provisioned_throughput` field.
 
 
 ### fn withSize
