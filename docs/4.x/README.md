@@ -177,6 +177,7 @@ project.
 * [compute_backend_service](compute_backend_service.md)
 * [compute_backend_service_signed_url_key](compute_backend_service_signed_url_key.md)
 * [compute_disk](compute_disk.md)
+* [compute_disk_async_replication](compute_disk_async_replication.md)
 * [compute_disk_iam_binding](compute_disk_iam_binding.md)
 * [compute_disk_iam_member](compute_disk_iam_member.md)
 * [compute_disk_iam_policy](compute_disk_iam_policy.md)

@@ -25,6 +25,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withMetadataFiltersMixin()`](#fn-withmetadatafiltersmixin)
 * [`fn withName()`](#fn-withname)
 * [`fn withNetwork()`](#fn-withnetwork)
+* [`fn withNoAutomateDnsZone()`](#fn-withnoautomatednszone)
 * [`fn withPortRange()`](#fn-withportrange)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withSourceIpRanges()`](#fn-withsourceipranges)
@@ -148,6 +149,7 @@ be used.
 
 For Private Service Connect forwarding rules that forward traffic to Google
 APIs, a network must be provided. When `null`, the `network` field will be omitted from the resulting object.
+  - `no_automate_dns_zone` (`bool`): This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field. When `null`, the `no_automate_dns_zone` field will be omitted from the resulting object.
   - `port_range` (`string`): This field can only be used:
 
 * If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
@@ -303,6 +305,7 @@ be used.
 
 For Private Service Connect forwarding rules that forward traffic to Google
 APIs, a network must be provided. When `null`, the `network` field will be omitted from the resulting object.
+  - `no_automate_dns_zone` (`bool`): This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field. When `null`, the `no_automate_dns_zone` field will be omitted from the resulting object.
   - `port_range` (`string`): This field can only be used:
 
 * If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
@@ -522,6 +525,22 @@ Terraform resource block to set or update the network field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `network` field.
+
+
+### fn withNoAutomateDnsZone
+
+```ts
+withNoAutomateDnsZone()
+```
+
+`google.bool.withNoAutomateDnsZone` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the no_automate_dns_zone field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `no_automate_dns_zone` field.
 
 
 ### fn withPortRange

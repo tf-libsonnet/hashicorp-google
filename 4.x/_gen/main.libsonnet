@@ -168,6 +168,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   compute_backend_service: (import 'resources/compute_backend_service.libsonnet'),
   compute_backend_service_signed_url_key: (import 'resources/compute_backend_service_signed_url_key.libsonnet'),
   compute_disk: (import 'resources/compute_disk.libsonnet'),
+  compute_disk_async_replication: (import 'resources/compute_disk_async_replication.libsonnet'),
   compute_disk_iam_binding: (import 'resources/compute_disk_iam_binding.libsonnet'),
   compute_disk_iam_member: (import 'resources/compute_disk_iam_member.libsonnet'),
   compute_disk_iam_policy: (import 'resources/compute_disk_iam_policy.libsonnet'),
