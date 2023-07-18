@@ -25,6 +25,14 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj spec`](#obj-spec)
   * [`fn new()`](#fn-specnew)
+  * [`obj spec.fleetobservability`](#obj-specfleetobservability)
+    * [`fn new()`](#fn-specfleetobservabilitynew)
+    * [`obj spec.fleetobservability.logging_config`](#obj-specfleetobservabilitylogging_config)
+      * [`fn new()`](#fn-specfleetobservabilitylogging_confignew)
+      * [`obj spec.fleetobservability.logging_config.default_config`](#obj-specfleetobservabilitylogging_configdefault_config)
+        * [`fn new()`](#fn-specfleetobservabilitylogging_configdefault_confignew)
+      * [`obj spec.fleetobservability.logging_config.fleet_scope_logs_config`](#obj-specfleetobservabilitylogging_configfleet_scope_logs_config)
+        * [`fn new()`](#fn-specfleetobservabilitylogging_configfleet_scope_logs_confignew)
   * [`obj spec.multiclusteringress`](#obj-specmulticlusteringress)
     * [`fn new()`](#fn-specmulticlusteringressnew)
 * [`obj timeouts`](#obj-timeouts)
@@ -253,10 +261,104 @@ Terraform sub block.
 
 
 **Args**:
+  - `fleetobservability` (`list[obj]`): Fleet Observability feature spec. When `null`, the `fleetobservability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.fleetobservability.new](#fn-specfleetobservabilitynew) constructor.
   - `multiclusteringress` (`list[obj]`): Multicluster Ingress-specific spec. When `null`, the `multiclusteringress` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.multiclusteringress.new](#fn-specmulticlusteringressnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `spec` sub block.
+
+
+## obj spec.fleetobservability
+
+
+
+### fn spec.fleetobservability.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.spec.fleetobservability.new` constructs a new object with attributes and blocks configured for the `fleetobservability`
+Terraform sub block.
+
+
+
+**Args**:
+  - `logging_config` (`list[obj]`): Specified if fleet logging feature is enabled for the entire fleet. If UNSPECIFIED, fleet logging feature is disabled for the entire fleet. When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.fleetobservability.logging_config.new](#fn-specspeclogging_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `fleetobservability` sub block.
+
+
+## obj spec.fleetobservability.logging_config
+
+
+
+### fn spec.fleetobservability.logging_config.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.spec.fleetobservability.logging_config.new` constructs a new object with attributes and blocks configured for the `logging_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `default_config` (`list[obj]`): Specified if applying the default routing config to logs not specified in other configs. When `null`, the `default_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.fleetobservability.logging_config.default_config.new](#fn-specspecfleetobservabilitydefault_confignew) constructor.
+  - `fleet_scope_logs_config` (`list[obj]`): Specified if applying the routing config to all logs for all fleet scopes. When `null`, the `fleet_scope_logs_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.fleetobservability.logging_config.fleet_scope_logs_config.new](#fn-specspecfleetobservabilityfleet_scope_logs_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `logging_config` sub block.
+
+
+## obj spec.fleetobservability.logging_config.default_config
+
+
+
+### fn spec.fleetobservability.logging_config.default_config.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.spec.fleetobservability.logging_config.default_config.new` constructs a new object with attributes and blocks configured for the `default_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `mode` (`string`): Specified if fleet logging feature is enabled. Possible values: [&#34;MODE_UNSPECIFIED&#34;, &#34;COPY&#34;, &#34;MOVE&#34;] When `null`, the `mode` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `default_config` sub block.
+
+
+## obj spec.fleetobservability.logging_config.fleet_scope_logs_config
+
+
+
+### fn spec.fleetobservability.logging_config.fleet_scope_logs_config.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.spec.fleetobservability.logging_config.fleet_scope_logs_config.new` constructs a new object with attributes and blocks configured for the `fleet_scope_logs_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `mode` (`string`): Specified if fleet logging feature is enabled. Possible values: [&#34;MODE_UNSPECIFIED&#34;, &#34;COPY&#34;, &#34;MOVE&#34;] When `null`, the `mode` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `fleet_scope_logs_config` sub block.
 
 
 ## obj spec.multiclusteringress

@@ -43,6 +43,7 @@ permalink: /data/
 * [cloud_run_v2_service_iam_policy](cloud_run_v2_service_iam_policy.md)
 * [cloud_tasks_queue_iam_policy](cloud_tasks_queue_iam_policy.md)
 * [cloudbuild_trigger](cloudbuild_trigger.md)
+* [cloudbuildv2_connection_iam_policy](cloudbuildv2_connection_iam_policy.md)
 * [cloudfunctions2_function](cloudfunctions2_function.md)
 * [cloudfunctions2_function_iam_policy](cloudfunctions2_function_iam_policy.md)
 * [cloudfunctions_function](cloudfunctions_function.md)

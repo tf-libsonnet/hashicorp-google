@@ -345,6 +345,11 @@ Required if tree-AH algorithm is used. When `null`, the `approximate_neighbors_c
   - `feature_norm_type` (`string`): Type of normalization to be carried out on each vector. The value must be one of the followings:
 * UNIT_L2_NORM: Unit L2 normalization type
 * NONE: No normalization type is specified. When `null`, the `feature_norm_type` field will be omitted from the resulting object.
+  - `shard_size` (`string`): Index data is split into equal parts to be processed. These are called &#34;shards&#34;.
+The shard size must be specified when creating an index. The value must be one of the followings:
+* SHARD_SIZE_SMALL: Small (2GB)
+* SHARD_SIZE_MEDIUM: Medium (20GB)
+* SHARD_SIZE_LARGE: Large (50GB) When `null`, the `shard_size` field will be omitted from the resulting object.
   - `algorithm_config` (`list[obj]`): The configuration with regard to the algorithms used for efficient search. When `null`, the `algorithm_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.config.algorithm_config.new](#fn-metadatametadataalgorithm_confignew) constructor.
 
 **Returns**:

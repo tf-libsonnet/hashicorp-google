@@ -876,7 +876,7 @@ Terraform sub block.
 **Args**:
   - `content` (`string`): A a file with this content. The size of the content is limited to 1024 characters. When `null`, the `content` field will be omitted from the resulting object.
   - `path` (`string`): The absolute path of the file within the VM.
-  - `state` (`string`): Desired state of the file. Possible values: [&#34;OS_POLICY_COMPLIANCE_STATE_UNSPECIFIED&#34;, &#34;COMPLIANT&#34;, &#34;NON_COMPLIANT&#34;, &#34;UNKNOWN&#34;, &#34;NO_OS_POLICIES_APPLICABLE&#34;]
+  - `state` (`string`): Desired state of the file. Possible values: [&#34;DESIRED_STATE_UNSPECIFIED&#34;, &#34;PRESENT&#34;, &#34;ABSENT&#34;, &#34;CONTENTS_MATCH&#34;]
   - `file` (`list[obj]`): A remote or local source. When `null`, the `file` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.os_config_os_policy_assignment.os_policies.resource_groups.resources.file.file.new](#fn-os_policiesos_policiesresource_groupsresourcesfilenew) constructor.
 
 **Returns**:

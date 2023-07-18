@@ -46,16 +46,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       }),
     },
     main_volume:: {
-      '#new':: d.fn(help='\n`google.container_aws_cluster.control_plane.main_volume.new` constructs a new object with attributes and blocks configured for the `main_volume`\nTerraform sub block.\n\n\n\n**Args**:\n  - `iops` (`number`): Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume. When `null`, the `iops` field will be omitted from the resulting object.\n  - `kms_key_arn` (`string`): Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used. When `null`, the `kms_key_arn` field will be omitted from the resulting object.\n  - `size_gib` (`number`): Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource. When `null`, the `size_gib` field will be omitted from the resulting object.\n  - `volume_type` (`string`): Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3 When `null`, the `volume_type` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `main_volume` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.container_aws_cluster.control_plane.main_volume.new` constructs a new object with attributes and blocks configured for the `main_volume`\nTerraform sub block.\n\n\n\n**Args**:\n  - `iops` (`number`): Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume. When `null`, the `iops` field will be omitted from the resulting object.\n  - `kms_key_arn` (`string`): Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used. When `null`, the `kms_key_arn` field will be omitted from the resulting object.\n  - `size_gib` (`number`): Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource. When `null`, the `size_gib` field will be omitted from the resulting object.\n  - `throughput` (`number`): Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3. When `null`, the `throughput` field will be omitted from the resulting object.\n  - `volume_type` (`string`): Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3 When `null`, the `volume_type` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `main_volume` sub block.\n', args=[]),
       new(
         iops=null,
         kms_key_arn=null,
         size_gib=null,
+        throughput=null,
         volume_type=null
       ):: std.prune(a={
         iops: iops,
         kms_key_arn: kms_key_arn,
         size_gib: size_gib,
+        throughput: throughput,
         volume_type: volume_type,
       }),
     },
@@ -100,16 +102,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       }),
     },
     root_volume:: {
-      '#new':: d.fn(help='\n`google.container_aws_cluster.control_plane.root_volume.new` constructs a new object with attributes and blocks configured for the `root_volume`\nTerraform sub block.\n\n\n\n**Args**:\n  - `iops` (`number`): Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume. When `null`, the `iops` field will be omitted from the resulting object.\n  - `kms_key_arn` (`string`): Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used. When `null`, the `kms_key_arn` field will be omitted from the resulting object.\n  - `size_gib` (`number`): Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource. When `null`, the `size_gib` field will be omitted from the resulting object.\n  - `volume_type` (`string`): Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3 When `null`, the `volume_type` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `root_volume` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.container_aws_cluster.control_plane.root_volume.new` constructs a new object with attributes and blocks configured for the `root_volume`\nTerraform sub block.\n\n\n\n**Args**:\n  - `iops` (`number`): Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume. When `null`, the `iops` field will be omitted from the resulting object.\n  - `kms_key_arn` (`string`): Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used. When `null`, the `kms_key_arn` field will be omitted from the resulting object.\n  - `size_gib` (`number`): Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource. When `null`, the `size_gib` field will be omitted from the resulting object.\n  - `throughput` (`number`): Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3. When `null`, the `throughput` field will be omitted from the resulting object.\n  - `volume_type` (`string`): Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3 When `null`, the `volume_type` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `root_volume` sub block.\n', args=[]),
       new(
         iops=null,
         kms_key_arn=null,
         size_gib=null,
+        throughput=null,
         volume_type=null
       ):: std.prune(a={
         iops: iops,
         kms_key_arn: kms_key_arn,
         size_gib: size_gib,
+        throughput: throughput,
         volume_type: volume_type,
       }),
     },
@@ -131,12 +135,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   networking:: {
-    '#new':: d.fn(help='\n`google.container_aws_cluster.networking.new` constructs a new object with attributes and blocks configured for the `networking`\nTerraform sub block.\n\n\n\n**Args**:\n  - `pod_address_cidr_blocks` (`list`): All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.\n  - `service_address_cidr_blocks` (`list`): All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.\n  - `vpc_id` (`string`): The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.\n\n**Returns**:\n  - An attribute object that represents the `networking` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.container_aws_cluster.networking.new` constructs a new object with attributes and blocks configured for the `networking`\nTerraform sub block.\n\n\n\n**Args**:\n  - `per_node_pool_sg_rules_disabled` (`bool`): Disable the per node pool subnet security group rules on the control plane security group. When set to true, you must also provide one or more security groups that ensure node pools are able to send requests to the control plane on TCP/443 and TCP/8132. Failure to do so may result in unavailable node pools. When `null`, the `per_node_pool_sg_rules_disabled` field will be omitted from the resulting object.\n  - `pod_address_cidr_blocks` (`list`): All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.\n  - `service_address_cidr_blocks` (`list`): All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.\n  - `vpc_id` (`string`): The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.\n\n**Returns**:\n  - An attribute object that represents the `networking` sub block.\n', args=[]),
     new(
       pod_address_cidr_blocks,
       service_address_cidr_blocks,
-      vpc_id
+      vpc_id,
+      per_node_pool_sg_rules_disabled=null
     ):: std.prune(a={
+      per_node_pool_sg_rules_disabled: per_node_pool_sg_rules_disabled,
       pod_address_cidr_blocks: pod_address_cidr_blocks,
       service_address_cidr_blocks: service_address_cidr_blocks,
       vpc_id: vpc_id,

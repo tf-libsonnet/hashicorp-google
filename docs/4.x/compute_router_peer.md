@@ -111,7 +111,7 @@ except the last character, which cannot be a dash.
   - `peer_asn` (`number`): Peer BGP Autonomous System Number (ASN).
 Each BGP interface may use a different value.
   - `peer_ip_address` (`string`): IP address of the BGP interface outside Google Cloud Platform.
-Only IPv4 is supported.
+Only IPv4 is supported. Required if &#39;ip_address&#39; is set. When `null`, the `peer_ip_address` field will be omitted from the resulting object.
   - `peer_ipv6_nexthop_address` (`string`): IPv6 address of the BGP interface outside Google Cloud Platform.
 The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
 If you do not specify the next hop addresses, Google Cloud automatically
@@ -192,7 +192,7 @@ except the last character, which cannot be a dash.
   - `peer_asn` (`number`): Peer BGP Autonomous System Number (ASN).
 Each BGP interface may use a different value.
   - `peer_ip_address` (`string`): IP address of the BGP interface outside Google Cloud Platform.
-Only IPv4 is supported.
+Only IPv4 is supported. Required if &#39;ip_address&#39; is set. When `null`, the `peer_ip_address` field will be omitted from the resulting object.
   - `peer_ipv6_nexthop_address` (`string`): IPv6 address of the BGP interface outside Google Cloud Platform.
 The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64.
 If you do not specify the next hop addresses, Google Cloud automatically

@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withChannel()`](#fn-withchannel)
 * [`fn withDestination()`](#fn-withdestination)
 * [`fn withDestinationMixin()`](#fn-withdestinationmixin)
+* [`fn withEventDataContentType()`](#fn-witheventdatacontenttype)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMatchingCriteria()`](#fn-withmatchingcriteria)
@@ -74,6 +75,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `channel` (`string`): Optional. The name of the channel associated with the trigger in `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel to receive events from Eventarc SaaS partners. When `null`, the `channel` field will be omitted from the resulting object.
+  - `event_data_content_type` (`string`): Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This is set to `application/json` if the value is not defined. When `null`, the `event_data_content_type` field will be omitted from the resulting object.
   - `labels` (`obj`): Optional. User labels attached to the triggers that can be used to group resources. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Required. The resource name of the trigger. Must be unique within the location on the project.
@@ -107,6 +109,7 @@ injecting into a complete block.
 
 **Args**:
   - `channel` (`string`): Optional. The name of the channel associated with the trigger in `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel to receive events from Eventarc SaaS partners. When `null`, the `channel` field will be omitted from the resulting object.
+  - `event_data_content_type` (`string`): Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This is set to `application/json` if the value is not defined. When `null`, the `event_data_content_type` field will be omitted from the resulting object.
   - `labels` (`obj`): Optional. User labels attached to the triggers that can be used to group resources. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Required. The resource name of the trigger. Must be unique within the location on the project.
@@ -172,6 +175,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `destination` field.
+
+
+### fn withEventDataContentType
+
+```ts
+withEventDataContentType()
+```
+
+`google.string.withEventDataContentType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the event_data_content_type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `event_data_content_type` field.
 
 
 ### fn withLabels

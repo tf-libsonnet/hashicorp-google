@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withDescription()`](#fn-withdescription)
+* [`fn withHttpKeepAliveTimeoutSec()`](#fn-withhttpkeepalivetimeoutsec)
 * [`fn withName()`](#fn-withname)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withProxyBind()`](#fn-withproxybind)
@@ -55,6 +56,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `http_keep_alive_timeout_sec` (`number`): Specifies how long to keep a connection open, after completing a response,
+while there is no matching traffic (in seconds). If an HTTP keepalive is
+not specified, a default value (610 seconds) will be used. For Global
+external HTTP(S) load balancer, the minimum allowed value is 5 seconds and
+the maximum allowed value is 1200 seconds. For Global external HTTP(S)
+load balancer (classic), this option is not available publicly. When `null`, the `http_keep_alive_timeout_sec` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -92,6 +99,12 @@ injecting into a complete block.
 
 **Args**:
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `http_keep_alive_timeout_sec` (`number`): Specifies how long to keep a connection open, after completing a response,
+while there is no matching traffic (in seconds). If an HTTP keepalive is
+not specified, a default value (610 seconds) will be used. For Global
+external HTTP(S) load balancer, the minimum allowed value is 5 seconds and
+the maximum allowed value is 1200 seconds. For Global external HTTP(S)
+load balancer (classic), this option is not available publicly. When `null`, the `http_keep_alive_timeout_sec` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
 RFC1035. Specifically, the name must be 1-63 characters long and match
@@ -124,6 +137,22 @@ Terraform resource block to set or update the description field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `description` field.
+
+
+### fn withHttpKeepAliveTimeoutSec
+
+```ts
+withHttpKeepAliveTimeoutSec()
+```
+
+`google.number.withHttpKeepAliveTimeoutSec` constructs a mixin object that can be merged into the `number`
+Terraform resource block to set or update the http_keep_alive_timeout_sec field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`number`): The value to set for the `http_keep_alive_timeout_sec` field.
 
 
 ### fn withName

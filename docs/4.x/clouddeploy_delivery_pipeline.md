@@ -30,8 +30,28 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-serial_pipelinenew)
   * [`obj serial_pipeline.stages`](#obj-serial_pipelinestages)
     * [`fn new()`](#fn-serial_pipelinestagesnew)
+    * [`obj serial_pipeline.stages.deploy_parameters`](#obj-serial_pipelinestagesdeploy_parameters)
+      * [`fn new()`](#fn-serial_pipelinestagesdeploy_parametersnew)
     * [`obj serial_pipeline.stages.strategy`](#obj-serial_pipelinestagesstrategy)
       * [`fn new()`](#fn-serial_pipelinestagesstrategynew)
+      * [`obj serial_pipeline.stages.strategy.canary`](#obj-serial_pipelinestagesstrategycanary)
+        * [`fn new()`](#fn-serial_pipelinestagesstrategycanarynew)
+        * [`obj serial_pipeline.stages.strategy.canary.canary_deployment`](#obj-serial_pipelinestagesstrategycanarycanary_deployment)
+          * [`fn new()`](#fn-serial_pipelinestagesstrategycanarycanary_deploymentnew)
+        * [`obj serial_pipeline.stages.strategy.canary.custom_canary_deployment`](#obj-serial_pipelinestagesstrategycanarycustom_canary_deployment)
+          * [`fn new()`](#fn-serial_pipelinestagesstrategycanarycustom_canary_deploymentnew)
+          * [`obj serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs`](#obj-serial_pipelinestagesstrategycanarycustom_canary_deploymentphase_configs)
+            * [`fn new()`](#fn-serial_pipelinestagesstrategycanarycustom_canary_deploymentphase_configsnew)
+        * [`obj serial_pipeline.stages.strategy.canary.runtime_config`](#obj-serial_pipelinestagesstrategycanaryruntime_config)
+          * [`fn new()`](#fn-serial_pipelinestagesstrategycanaryruntime_confignew)
+          * [`obj serial_pipeline.stages.strategy.canary.runtime_config.cloud_run`](#obj-serial_pipelinestagesstrategycanaryruntime_configcloud_run)
+            * [`fn new()`](#fn-serial_pipelinestagesstrategycanaryruntime_configcloud_runnew)
+          * [`obj serial_pipeline.stages.strategy.canary.runtime_config.kubernetes`](#obj-serial_pipelinestagesstrategycanaryruntime_configkubernetes)
+            * [`fn new()`](#fn-serial_pipelinestagesstrategycanaryruntime_configkubernetesnew)
+            * [`obj serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.gateway_service_mesh`](#obj-serial_pipelinestagesstrategycanaryruntime_configkubernetesgateway_service_mesh)
+              * [`fn new()`](#fn-serial_pipelinestagesstrategycanaryruntime_configkubernetesgateway_service_meshnew)
+            * [`obj serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.service_networking`](#obj-serial_pipelinestagesstrategycanaryruntime_configkubernetesservice_networking)
+              * [`fn new()`](#fn-serial_pipelinestagesstrategycanaryruntime_configkubernetesservice_networkingnew)
       * [`obj serial_pipeline.stages.strategy.standard`](#obj-serial_pipelinestagesstrategystandard)
         * [`fn new()`](#fn-serial_pipelinestagesstrategystandardnew)
 * [`obj timeouts`](#obj-timeouts)
@@ -339,10 +359,35 @@ Terraform sub block.
 **Args**:
   - `profiles` (`list`): Skaffold profiles to use when rendering the manifest for this stage&#39;s `Target`. When `null`, the `profiles` field will be omitted from the resulting object.
   - `target_id` (`string`): The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`. When `null`, the `target_id` field will be omitted from the resulting object.
+  - `deploy_parameters` (`list[obj]`): Optional. The deploy parameters to use for the target in this stage. When `null`, the `deploy_parameters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.deploy_parameters.new](#fn-serial_pipelineserial_pipelinedeploy_parametersnew) constructor.
   - `strategy` (`list[obj]`): Optional. The strategy to use for a `Rollout` to this stage. When `null`, the `strategy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.new](#fn-serial_pipelineserial_pipelinestrategynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `stages` sub block.
+
+
+## obj serial_pipeline.stages.deploy_parameters
+
+
+
+### fn serial_pipeline.stages.deploy_parameters.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.deploy_parameters.new` constructs a new object with attributes and blocks configured for the `deploy_parameters`
+Terraform sub block.
+
+
+
+**Args**:
+  - `match_target_labels` (`obj`): Optional. Deploy parameters are applied to targets with match labels. If unspecified, deploy parameters are applied to all targets (including child targets of a multi-target). When `null`, the `match_target_labels` field will be omitted from the resulting object.
+  - `values` (`obj`): Required. Values are deploy parameters in key-value pairs.
+
+**Returns**:
+  - An attribute object that represents the `deploy_parameters` sub block.
 
 
 ## obj serial_pipeline.stages.strategy
@@ -362,10 +407,230 @@ Terraform sub block.
 
 
 **Args**:
+  - `canary` (`list[obj]`): Canary deployment strategy provides progressive percentage based deployments to a Target. When `null`, the `canary` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.new](#fn-serial_pipelineserial_pipelinestagescanarynew) constructor.
   - `standard` (`list[obj]`): Standard deployment strategy executes a single deploy and allows verifying the deployment. When `null`, the `standard` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.new](#fn-serial_pipelineserial_pipelinestagesstandardnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `strategy` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary
+
+
+
+### fn serial_pipeline.stages.strategy.canary.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.new` constructs a new object with attributes and blocks configured for the `canary`
+Terraform sub block.
+
+
+
+**Args**:
+  - `canary_deployment` (`list[obj]`): Configures the progressive based deployment for a Target. When `null`, the `canary_deployment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.new](#fn-serial_pipelineserial_pipelinestagesstrategycanary_deploymentnew) constructor.
+  - `custom_canary_deployment` (`list[obj]`): Configures the progressive based deployment for a Target, but allows customizing at the phase level where a phase represents each of the percentage deployments. When `null`, the `custom_canary_deployment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.new](#fn-serial_pipelineserial_pipelinestagesstrategycustom_canary_deploymentnew) constructor.
+  - `runtime_config` (`list[obj]`): Optional. Runtime specific configurations for the deployment strategy. The runtime configuration is used to determine how Cloud Deploy will split traffic to enable a progressive deployment. When `null`, the `runtime_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.new](#fn-serial_pipelineserial_pipelinestagesstrategyruntime_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `canary` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary.canary_deployment
+
+
+
+### fn serial_pipeline.stages.strategy.canary.canary_deployment.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.new` constructs a new object with attributes and blocks configured for the `canary_deployment`
+Terraform sub block.
+
+
+
+**Args**:
+  - `percentages` (`list`): Required. The percentage based deployments that will occur as a part of a `Rollout`. List is expected in ascending order and each integer n is 0 &lt;= n &lt; 100.
+  - `verify` (`bool`): Whether to run verify tests after each percentage deployment. When `null`, the `verify` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `canary_deployment` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary.custom_canary_deployment
+
+
+
+### fn serial_pipeline.stages.strategy.canary.custom_canary_deployment.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.new` constructs a new object with attributes and blocks configured for the `custom_canary_deployment`
+Terraform sub block.
+
+
+
+**Args**:
+  - `phase_configs` (`list[obj]`): Required. Configuration for each phase in the canary deployment in the order executed. When `null`, the `phase_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.new](#fn-serial_pipelineserial_pipelinestagesstrategycanaryphase_configsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `custom_canary_deployment` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs
+
+
+
+### fn serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.new` constructs a new object with attributes and blocks configured for the `phase_configs`
+Terraform sub block.
+
+
+
+**Args**:
+  - `percentage` (`number`): Required. Percentage deployment for the phase.
+  - `phase_id` (`string`): Required. The ID to assign to the `Rollout` phase. This value must consist of lower-case letters, numbers, and hyphens, start with a letter and end with a letter or a number, and have a max length of 63 characters. In other words, it must match the following regex: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
+  - `profiles` (`list`): Skaffold profiles to use when rendering the manifest for this phase. These are in addition to the profiles list specified in the `DeliveryPipeline` stage. When `null`, the `profiles` field will be omitted from the resulting object.
+  - `verify` (`bool`): Whether to run verify tests after the deployment. When `null`, the `verify` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `phase_configs` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary.runtime_config
+
+
+
+### fn serial_pipeline.stages.strategy.canary.runtime_config.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.new` constructs a new object with attributes and blocks configured for the `runtime_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `cloud_run` (`list[obj]`): Cloud Run runtime configuration. When `null`, the `cloud_run` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.cloud_run.new](#fn-serial_pipelineserial_pipelinestagesstrategycanarycloud_runnew) constructor.
+  - `kubernetes` (`list[obj]`): Kubernetes runtime configuration. When `null`, the `kubernetes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.new](#fn-serial_pipelineserial_pipelinestagesstrategycanarykubernetesnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `runtime_config` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary.runtime_config.cloud_run
+
+
+
+### fn serial_pipeline.stages.strategy.canary.runtime_config.cloud_run.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.cloud_run.new` constructs a new object with attributes and blocks configured for the `cloud_run`
+Terraform sub block.
+
+
+
+**Args**:
+  - `automatic_traffic_control` (`bool`): Whether Cloud Deploy should update the traffic stanza in a Cloud Run Service on the user&#39;s behalf to facilitate traffic splitting. This is required to be true for CanaryDeployments, but optional for CustomCanaryDeployments. When `null`, the `automatic_traffic_control` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `cloud_run` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary.runtime_config.kubernetes
+
+
+
+### fn serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.new` constructs a new object with attributes and blocks configured for the `kubernetes`
+Terraform sub block.
+
+
+
+**Args**:
+  - `gateway_service_mesh` (`list[obj]`): Kubernetes Gateway API service mesh configuration. When `null`, the `gateway_service_mesh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.gateway_service_mesh.new](#fn-serial_pipelineserial_pipelinestagesstrategycanaryruntime_configgateway_service_meshnew) constructor.
+  - `service_networking` (`list[obj]`): Kubernetes Service networking configuration. When `null`, the `service_networking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.service_networking.new](#fn-serial_pipelineserial_pipelinestagesstrategycanaryruntime_configservice_networkingnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `kubernetes` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.gateway_service_mesh
+
+
+
+### fn serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.gateway_service_mesh.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.gateway_service_mesh.new` constructs a new object with attributes and blocks configured for the `gateway_service_mesh`
+Terraform sub block.
+
+
+
+**Args**:
+  - `deployment` (`string`): Required. Name of the Kubernetes Deployment whose traffic is managed by the specified HTTPRoute and Service.
+  - `http_route` (`string`): Required. Name of the Gateway API HTTPRoute.
+  - `service` (`string`): Required. Name of the Kubernetes Service.
+
+**Returns**:
+  - An attribute object that represents the `gateway_service_mesh` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.service_networking
+
+
+
+### fn serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.service_networking.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.service_networking.new` constructs a new object with attributes and blocks configured for the `service_networking`
+Terraform sub block.
+
+
+
+**Args**:
+  - `deployment` (`string`): Required. Name of the Kubernetes Deployment whose traffic is managed by the specified Service.
+  - `disable_pod_overprovisioning` (`bool`): Optional. Whether to disable Pod overprovisioning. If Pod overprovisioning is disabled then Cloud Deploy will limit the number of total Pods used for the deployment strategy to the number of Pods the Deployment has on the cluster. When `null`, the `disable_pod_overprovisioning` field will be omitted from the resulting object.
+  - `service` (`string`): Required. Name of the Kubernetes Service.
+
+**Returns**:
+  - An attribute object that represents the `service_networking` sub block.
 
 
 ## obj serial_pipeline.stages.strategy.standard

@@ -38,6 +38,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   cloud_run_v2_service_iam_policy: (import 'cloud_run_v2_service_iam_policy.libsonnet'),
   cloud_tasks_queue_iam_policy: (import 'cloud_tasks_queue_iam_policy.libsonnet'),
   cloudbuild_trigger: (import 'cloudbuild_trigger.libsonnet'),
+  cloudbuildv2_connection_iam_policy: (import 'cloudbuildv2_connection_iam_policy.libsonnet'),
   cloudfunctions2_function: (import 'cloudfunctions2_function.libsonnet'),
   cloudfunctions2_function_iam_policy: (import 'cloudfunctions2_function_iam_policy.libsonnet'),
   cloudfunctions_function: (import 'cloudfunctions_function.libsonnet'),

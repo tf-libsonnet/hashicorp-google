@@ -31,6 +31,10 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withWorkforcePoolId()`](#fn-withworkforcepoolid)
 * [`obj oidc`](#obj-oidc)
   * [`fn new()`](#fn-oidcnew)
+  * [`obj oidc.client_secret`](#obj-oidcclient_secret)
+    * [`fn new()`](#fn-oidcclient_secretnew)
+    * [`obj oidc.client_secret.value`](#obj-oidcclient_secretvalue)
+      * [`fn new()`](#fn-oidcclient_secretvaluenew)
   * [`obj oidc.web_sso_config`](#obj-oidcweb_sso_config)
     * [`fn new()`](#fn-oidcweb_sso_confignew)
 * [`obj saml`](#obj-saml)
@@ -522,10 +526,57 @@ Terraform sub block.
 **Args**:
   - `client_id` (`string`): The client ID. Must match the audience claim of the JWT issued by the identity provider.
   - `issuer_uri` (`string`): The OIDC issuer URI. Must be a valid URI using the &#39;https&#39; scheme.
+  - `client_secret` (`list[obj]`): The optional client secret. Required to enable Authorization Code flow for web sign-in. When `null`, the `client_secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool_provider.oidc.client_secret.new](#fn-oidcclient_secretnew) constructor.
   - `web_sso_config` (`list[obj]`): Configuration for web single sign-on for the OIDC provider. Here, web sign-in refers to console sign-in and gcloud sign-in through the browser. When `null`, the `web_sso_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool_provider.oidc.web_sso_config.new](#fn-oidcweb_sso_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `oidc` sub block.
+
+
+## obj oidc.client_secret
+
+
+
+### fn oidc.client_secret.new
+
+```ts
+new()
+```
+
+
+`google.iam_workforce_pool_provider.oidc.client_secret.new` constructs a new object with attributes and blocks configured for the `client_secret`
+Terraform sub block.
+
+
+
+**Args**:
+  - `value` (`list[obj]`): The value of the client secret. When `null`, the `value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool_provider.oidc.client_secret.value.new](#fn-oidcoidcvaluenew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `client_secret` sub block.
+
+
+## obj oidc.client_secret.value
+
+
+
+### fn oidc.client_secret.value.new
+
+```ts
+new()
+```
+
+
+`google.iam_workforce_pool_provider.oidc.client_secret.value.new` constructs a new object with attributes and blocks configured for the `value`
+Terraform sub block.
+
+
+
+**Args**:
+  - `plain_text` (`string`): The plain text of the client secret value.
+
+**Returns**:
+  - An attribute object that represents the `value` sub block.
 
 
 ## obj oidc.web_sso_config
@@ -546,9 +597,13 @@ Terraform sub block.
 
 **Args**:
   - `assertion_claims_behavior` (`string`): The behavior for how OIDC Claims are included in the &#39;assertion&#39; object used for attribute mapping and attribute condition.
-* ONLY_ID_TOKEN_CLAIMS: Only include ID Token Claims. Possible values: [&#34;ONLY_ID_TOKEN_CLAIMS&#34;]
+* MERGE_USER_INFO_OVER_ID_TOKEN_CLAIMS: Merge the UserInfo Endpoint Claims with ID Token Claims, preferring UserInfo Claim Values for the same Claim Name. This option is available only for the Authorization Code Flow.
+* ONLY_ID_TOKEN_CLAIMS: Only include ID Token Claims. Possible values: [&#34;MERGE_USER_INFO_OVER_ID_TOKEN_CLAIMS&#34;, &#34;ONLY_ID_TOKEN_CLAIMS&#34;]
   - `response_type` (`string`): The Response Type to request for in the OIDC Authorization Request for web sign-in.
-* ID_TOKEN: The &#39;response_type=id_token&#39; selection uses the Implicit Flow for web sign-in. Possible values: [&#34;ID_TOKEN&#34;]
+
+The &#39;CODE&#39; Response Type is recommended to avoid the Implicit Flow, for security reasons.
+* CODE: The &#39;response_type=code&#39; selection uses the Authorization Code Flow for web sign-in. Requires a configured client secret.
+* ID_TOKEN: The &#39;response_type=id_token&#39; selection uses the Implicit Flow for web sign-in. Possible values: [&#34;CODE&#34;, &#34;ID_TOKEN&#34;]
 
 **Returns**:
   - An attribute object that represents the `web_sso_config` sub block.

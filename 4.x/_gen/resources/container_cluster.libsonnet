@@ -419,9 +419,9 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         enabled: enabled,
       }),
     },
-    '#new':: d.fn(help='\n`google.container_cluster.monitoring_config.new` constructs a new object with attributes and blocks configured for the `monitoring_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enable_components` (`list`): GKE components exposing metrics. Valid values include SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, and SCHEDULER.\n  - `managed_prometheus` (`list[obj]`): Configuration for Google Cloud Managed Services for Prometheus. When `null`, the `managed_prometheus` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.monitoring_config.managed_prometheus.new](#fn-monitoring_configmanaged_prometheusnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `monitoring_config` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.container_cluster.monitoring_config.new` constructs a new object with attributes and blocks configured for the `monitoring_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enable_components` (`list`): GKE components exposing metrics. Valid values include SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, and SCHEDULER. When `null`, the `enable_components` field will be omitted from the resulting object.\n  - `managed_prometheus` (`list[obj]`): Configuration for Google Cloud Managed Services for Prometheus. When `null`, the `managed_prometheus` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.monitoring_config.managed_prometheus.new](#fn-monitoring_configmanaged_prometheusnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `monitoring_config` sub block.\n', args=[]),
     new(
-      enable_components,
+      enable_components=null,
       managed_prometheus=null
     ):: std.prune(a={
       enable_components: enable_components,

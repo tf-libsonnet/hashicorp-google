@@ -31,6 +31,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMaxTimeTravelHours()`](#fn-withmaxtimetravelhours)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withStorageBillingModel()`](#fn-withstoragebillingmodel)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj access`](#obj-access)
@@ -142,6 +143,11 @@ The default value is multi-regional location &#39;US&#39;.
 Changing this forces a new resource to be created. When `null`, the `location` field will be omitted from the resulting object.
   - `max_time_travel_hours` (`string`): Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to 7 days). When `null`, the `max_time_travel_hours` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `storage_billing_model` (`string`): Specifies the storage billing model for the dataset.
+Set this flag value to LOGICAL to use logical bytes for storage billing,
+or to PHYSICAL to use physical bytes instead.
+
+LOGICAL is the default if this flag isn&#39;t specified. When `null`, the `storage_billing_model` field will be omitted from the resulting object.
   - `access` (`list[obj]`): An array of objects that define dataset access for one or more entities. When `null`, the `access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.access.new](#fn-accessnew) constructor.
   - `default_encryption_configuration` (`list[obj]`): The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
@@ -235,6 +241,11 @@ The default value is multi-regional location &#39;US&#39;.
 Changing this forces a new resource to be created. When `null`, the `location` field will be omitted from the resulting object.
   - `max_time_travel_hours` (`string`): Defines the time travel window in hours. The value can be from 48 to 168 hours (2 to 7 days). When `null`, the `max_time_travel_hours` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `storage_billing_model` (`string`): Specifies the storage billing model for the dataset.
+Set this flag value to LOGICAL to use logical bytes for storage billing,
+or to PHYSICAL to use physical bytes instead.
+
+LOGICAL is the default if this flag isn&#39;t specified. When `null`, the `storage_billing_model` field will be omitted from the resulting object.
   - `access` (`list[obj]`): An array of objects that define dataset access for one or more entities. When `null`, the `access` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_dataset.access.new](#fn-accessnew) constructor.
   - `default_encryption_configuration` (`list[obj]`): The default encryption key for all tables in the dataset. Once this property is set,
 all newly-created partitioned tables in the dataset will have encryption key set to
@@ -509,6 +520,22 @@ Terraform resource block to set or update the project field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `project` field.
+
+
+### fn withStorageBillingModel
+
+```ts
+withStorageBillingModel()
+```
+
+`google.string.withStorageBillingModel` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the storage_billing_model field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `storage_billing_model` field.
 
 
 ### fn withTimeouts
