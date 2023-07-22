@@ -70,6 +70,7 @@ the `src` and/or `version` parameters are set.
   - `cloud_run_v2_custom_endpoint` (`string`): Set the `cloud_run_v2_custom_endpoint` field on the resulting provider block. When `null`, the `cloud_run_v2_custom_endpoint` field will be omitted from the resulting object.
   - `cloud_scheduler_custom_endpoint` (`string`): Set the `cloud_scheduler_custom_endpoint` field on the resulting provider block. When `null`, the `cloud_scheduler_custom_endpoint` field will be omitted from the resulting object.
   - `cloud_tasks_custom_endpoint` (`string`): Set the `cloud_tasks_custom_endpoint` field on the resulting provider block. When `null`, the `cloud_tasks_custom_endpoint` field will be omitted from the resulting object.
+  - `cloudbuildv2_custom_endpoint` (`string`): Set the `cloudbuildv2_custom_endpoint` field on the resulting provider block. When `null`, the `cloudbuildv2_custom_endpoint` field will be omitted from the resulting object.
   - `clouddeploy_custom_endpoint` (`string`): Set the `clouddeploy_custom_endpoint` field on the resulting provider block. When `null`, the `clouddeploy_custom_endpoint` field will be omitted from the resulting object.
   - `cloudfunctions2_custom_endpoint` (`string`): Set the `cloudfunctions2_custom_endpoint` field on the resulting provider block. When `null`, the `cloudfunctions2_custom_endpoint` field will be omitted from the resulting object.
   - `composer_custom_endpoint` (`string`): Set the `composer_custom_endpoint` field on the resulting provider block. When `null`, the `composer_custom_endpoint` field will be omitted from the resulting object.
@@ -102,6 +103,7 @@ the `src` and/or `version` parameters are set.
   - `firestore_custom_endpoint` (`string`): Set the `firestore_custom_endpoint` field on the resulting provider block. When `null`, the `firestore_custom_endpoint` field will be omitted from the resulting object.
   - `game_services_custom_endpoint` (`string`): Set the `game_services_custom_endpoint` field on the resulting provider block. When `null`, the `game_services_custom_endpoint` field will be omitted from the resulting object.
   - `gke_backup_custom_endpoint` (`string`): Set the `gke_backup_custom_endpoint` field on the resulting provider block. When `null`, the `gke_backup_custom_endpoint` field will be omitted from the resulting object.
+  - `gke_hub2_custom_endpoint` (`string`): Set the `gke_hub2_custom_endpoint` field on the resulting provider block. When `null`, the `gke_hub2_custom_endpoint` field will be omitted from the resulting object.
   - `gke_hub_custom_endpoint` (`string`): Set the `gke_hub_custom_endpoint` field on the resulting provider block. When `null`, the `gke_hub_custom_endpoint` field will be omitted from the resulting object.
   - `healthcare_custom_endpoint` (`string`): Set the `healthcare_custom_endpoint` field on the resulting provider block. When `null`, the `healthcare_custom_endpoint` field will be omitted from the resulting object.
   - `iam2_custom_endpoint` (`string`): Set the `iam2_custom_endpoint` field on the resulting provider block. When `null`, the `iam2_custom_endpoint` field will be omitted from the resulting object.
@@ -120,6 +122,7 @@ the `src` and/or `version` parameters are set.
   - `monitoring_custom_endpoint` (`string`): Set the `monitoring_custom_endpoint` field on the resulting provider block. When `null`, the `monitoring_custom_endpoint` field will be omitted from the resulting object.
   - `network_connectivity_custom_endpoint` (`string`): Set the `network_connectivity_custom_endpoint` field on the resulting provider block. When `null`, the `network_connectivity_custom_endpoint` field will be omitted from the resulting object.
   - `network_management_custom_endpoint` (`string`): Set the `network_management_custom_endpoint` field on the resulting provider block. When `null`, the `network_management_custom_endpoint` field will be omitted from the resulting object.
+  - `network_security_custom_endpoint` (`string`): Set the `network_security_custom_endpoint` field on the resulting provider block. When `null`, the `network_security_custom_endpoint` field will be omitted from the resulting object.
   - `network_services_custom_endpoint` (`string`): Set the `network_services_custom_endpoint` field on the resulting provider block. When `null`, the `network_services_custom_endpoint` field will be omitted from the resulting object.
   - `notebooks_custom_endpoint` (`string`): Set the `notebooks_custom_endpoint` field on the resulting provider block. When `null`, the `notebooks_custom_endpoint` field will be omitted from the resulting object.
   - `org_policy_custom_endpoint` (`string`): Set the `org_policy_custom_endpoint` field on the resulting provider block. When `null`, the `org_policy_custom_endpoint` field will be omitted from the resulting object.
@@ -127,6 +130,7 @@ the `src` and/or `version` parameters are set.
   - `os_login_custom_endpoint` (`string`): Set the `os_login_custom_endpoint` field on the resulting provider block. When `null`, the `os_login_custom_endpoint` field will be omitted from the resulting object.
   - `privateca_custom_endpoint` (`string`): Set the `privateca_custom_endpoint` field on the resulting provider block. When `null`, the `privateca_custom_endpoint` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting provider block. When `null`, the `project` field will be omitted from the resulting object.
+  - `public_ca_custom_endpoint` (`string`): Set the `public_ca_custom_endpoint` field on the resulting provider block. When `null`, the `public_ca_custom_endpoint` field will be omitted from the resulting object.
   - `pubsub_custom_endpoint` (`string`): Set the `pubsub_custom_endpoint` field on the resulting provider block. When `null`, the `pubsub_custom_endpoint` field will be omitted from the resulting object.
   - `pubsub_lite_custom_endpoint` (`string`): Set the `pubsub_lite_custom_endpoint` field on the resulting provider block. When `null`, the `pubsub_lite_custom_endpoint` field will be omitted from the resulting object.
   - `recaptcha_enterprise_custom_endpoint` (`string`): Set the `recaptcha_enterprise_custom_endpoint` field on the resulting provider block. When `null`, the `recaptcha_enterprise_custom_endpoint` field will be omitted from the resulting object.
@@ -222,6 +226,7 @@ injecting into a complete block.
   - `cloud_run_v2_custom_endpoint` (`string`): Set the `cloud_run_v2_custom_endpoint` field on the resulting object. When `null`, the `cloud_run_v2_custom_endpoint` field will be omitted from the resulting object.
   - `cloud_scheduler_custom_endpoint` (`string`): Set the `cloud_scheduler_custom_endpoint` field on the resulting object. When `null`, the `cloud_scheduler_custom_endpoint` field will be omitted from the resulting object.
   - `cloud_tasks_custom_endpoint` (`string`): Set the `cloud_tasks_custom_endpoint` field on the resulting object. When `null`, the `cloud_tasks_custom_endpoint` field will be omitted from the resulting object.
+  - `cloudbuildv2_custom_endpoint` (`string`): Set the `cloudbuildv2_custom_endpoint` field on the resulting object. When `null`, the `cloudbuildv2_custom_endpoint` field will be omitted from the resulting object.
   - `clouddeploy_custom_endpoint` (`string`): Set the `clouddeploy_custom_endpoint` field on the resulting object. When `null`, the `clouddeploy_custom_endpoint` field will be omitted from the resulting object.
   - `cloudfunctions2_custom_endpoint` (`string`): Set the `cloudfunctions2_custom_endpoint` field on the resulting object. When `null`, the `cloudfunctions2_custom_endpoint` field will be omitted from the resulting object.
   - `composer_custom_endpoint` (`string`): Set the `composer_custom_endpoint` field on the resulting object. When `null`, the `composer_custom_endpoint` field will be omitted from the resulting object.
@@ -254,6 +259,7 @@ injecting into a complete block.
   - `firestore_custom_endpoint` (`string`): Set the `firestore_custom_endpoint` field on the resulting object. When `null`, the `firestore_custom_endpoint` field will be omitted from the resulting object.
   - `game_services_custom_endpoint` (`string`): Set the `game_services_custom_endpoint` field on the resulting object. When `null`, the `game_services_custom_endpoint` field will be omitted from the resulting object.
   - `gke_backup_custom_endpoint` (`string`): Set the `gke_backup_custom_endpoint` field on the resulting object. When `null`, the `gke_backup_custom_endpoint` field will be omitted from the resulting object.
+  - `gke_hub2_custom_endpoint` (`string`): Set the `gke_hub2_custom_endpoint` field on the resulting object. When `null`, the `gke_hub2_custom_endpoint` field will be omitted from the resulting object.
   - `gke_hub_custom_endpoint` (`string`): Set the `gke_hub_custom_endpoint` field on the resulting object. When `null`, the `gke_hub_custom_endpoint` field will be omitted from the resulting object.
   - `healthcare_custom_endpoint` (`string`): Set the `healthcare_custom_endpoint` field on the resulting object. When `null`, the `healthcare_custom_endpoint` field will be omitted from the resulting object.
   - `iam2_custom_endpoint` (`string`): Set the `iam2_custom_endpoint` field on the resulting object. When `null`, the `iam2_custom_endpoint` field will be omitted from the resulting object.
@@ -272,6 +278,7 @@ injecting into a complete block.
   - `monitoring_custom_endpoint` (`string`): Set the `monitoring_custom_endpoint` field on the resulting object. When `null`, the `monitoring_custom_endpoint` field will be omitted from the resulting object.
   - `network_connectivity_custom_endpoint` (`string`): Set the `network_connectivity_custom_endpoint` field on the resulting object. When `null`, the `network_connectivity_custom_endpoint` field will be omitted from the resulting object.
   - `network_management_custom_endpoint` (`string`): Set the `network_management_custom_endpoint` field on the resulting object. When `null`, the `network_management_custom_endpoint` field will be omitted from the resulting object.
+  - `network_security_custom_endpoint` (`string`): Set the `network_security_custom_endpoint` field on the resulting object. When `null`, the `network_security_custom_endpoint` field will be omitted from the resulting object.
   - `network_services_custom_endpoint` (`string`): Set the `network_services_custom_endpoint` field on the resulting object. When `null`, the `network_services_custom_endpoint` field will be omitted from the resulting object.
   - `notebooks_custom_endpoint` (`string`): Set the `notebooks_custom_endpoint` field on the resulting object. When `null`, the `notebooks_custom_endpoint` field will be omitted from the resulting object.
   - `org_policy_custom_endpoint` (`string`): Set the `org_policy_custom_endpoint` field on the resulting object. When `null`, the `org_policy_custom_endpoint` field will be omitted from the resulting object.
@@ -279,6 +286,7 @@ injecting into a complete block.
   - `os_login_custom_endpoint` (`string`): Set the `os_login_custom_endpoint` field on the resulting object. When `null`, the `os_login_custom_endpoint` field will be omitted from the resulting object.
   - `privateca_custom_endpoint` (`string`): Set the `privateca_custom_endpoint` field on the resulting object. When `null`, the `privateca_custom_endpoint` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `public_ca_custom_endpoint` (`string`): Set the `public_ca_custom_endpoint` field on the resulting object. When `null`, the `public_ca_custom_endpoint` field will be omitted from the resulting object.
   - `pubsub_custom_endpoint` (`string`): Set the `pubsub_custom_endpoint` field on the resulting object. When `null`, the `pubsub_custom_endpoint` field will be omitted from the resulting object.
   - `pubsub_lite_custom_endpoint` (`string`): Set the `pubsub_lite_custom_endpoint` field on the resulting object. When `null`, the `pubsub_lite_custom_endpoint` field will be omitted from the resulting object.
   - `recaptcha_enterprise_custom_endpoint` (`string`): Set the `recaptcha_enterprise_custom_endpoint` field on the resulting object. When `null`, the `recaptcha_enterprise_custom_endpoint` field will be omitted from the resulting object.

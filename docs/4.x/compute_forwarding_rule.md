@@ -28,6 +28,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withNetwork()`](#fn-withnetwork)
 * [`fn withNetworkTier()`](#fn-withnetworktier)
+* [`fn withNoAutomateDnsZone()`](#fn-withnoautomatednszone)
 * [`fn withPortRange()`](#fn-withportrange)
 * [`fn withPorts()`](#fn-withports)
 * [`fn withProject()`](#fn-withproject)
@@ -199,6 +200,7 @@ For regional ForwardingRule, the valid values are &#39;PREMIUM&#39; and
 If this field is not specified, it is assumed to be &#39;PREMIUM&#39;.
 If &#39;IPAddress&#39; is specified, this value must be equal to the
 networkTier of the Address. Possible values: [&#34;PREMIUM&#34;, &#34;STANDARD&#34;] When `null`, the `network_tier` field will be omitted from the resulting object.
+  - `no_automate_dns_zone` (`bool`): This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field. When `null`, the `no_automate_dns_zone` field will be omitted from the resulting object.
   - `port_range` (`string`): This field can only be used:
 
 * If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
@@ -432,6 +434,7 @@ For regional ForwardingRule, the valid values are &#39;PREMIUM&#39; and
 If this field is not specified, it is assumed to be &#39;PREMIUM&#39;.
 If &#39;IPAddress&#39; is specified, this value must be equal to the
 networkTier of the Address. Possible values: [&#34;PREMIUM&#34;, &#34;STANDARD&#34;] When `null`, the `network_tier` field will be omitted from the resulting object.
+  - `no_automate_dns_zone` (`bool`): This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field. When `null`, the `no_automate_dns_zone` field will be omitted from the resulting object.
   - `port_range` (`string`): This field can only be used:
 
 * If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
@@ -728,6 +731,22 @@ Terraform resource block to set or update the network_tier field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `network_tier` field.
+
+
+### fn withNoAutomateDnsZone
+
+```ts
+withNoAutomateDnsZone()
+```
+
+`google.bool.withNoAutomateDnsZone` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the no_automate_dns_zone field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `no_automate_dns_zone` field.
 
 
 ### fn withPortRange

@@ -37,6 +37,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withPubsubConfig()`](#fn-withpubsubconfig)
 * [`fn withPubsubConfigMixin()`](#fn-withpubsubconfigmixin)
+* [`fn withRepositoryEventConfig()`](#fn-withrepositoryeventconfig)
+* [`fn withRepositoryEventConfigMixin()`](#fn-withrepositoryeventconfigmixin)
 * [`fn withServiceAccount()`](#fn-withserviceaccount)
 * [`fn withSourceToBuild()`](#fn-withsourcetobuild)
 * [`fn withSourceToBuildMixin()`](#fn-withsourcetobuildmixin)
@@ -92,6 +94,12 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-githubpushnew)
 * [`obj pubsub_config`](#obj-pubsub_config)
   * [`fn new()`](#fn-pubsub_confignew)
+* [`obj repository_event_config`](#obj-repository_event_config)
+  * [`fn new()`](#fn-repository_event_confignew)
+  * [`obj repository_event_config.pull_request`](#obj-repository_event_configpull_request)
+    * [`fn new()`](#fn-repository_event_configpull_requestnew)
+  * [`obj repository_event_config.push`](#obj-repository_event_configpush)
+    * [`fn new()`](#fn-repository_event_configpushnew)
 * [`obj source_to_build`](#obj-source_to_build)
   * [`fn new()`](#fn-source_to_buildnew)
 * [`obj timeouts`](#obj-timeouts)
@@ -185,6 +193,7 @@ One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; or 
 a build whenever a Pub/Sub message is published.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; &#39;webhook_config&#39; or &#39;source_to_build&#39; must be provided. When `null`, the `pubsub_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.pubsub_config.new](#fn-pubsub_confignew) constructor.
+  - `repository_event_config` (`list[obj]`): The configuration of a trigger that creates a build whenever an event from Repo API is received. When `null`, the `repository_event_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.repository_event_config.new](#fn-repository_event_confignew) constructor.
   - `source_to_build` (`list[obj]`): The repo and ref of the repository from which to build.
 This field is used only for those triggers that do not respond to SCM events.
 Triggers that respond to such events build source at whatever commit caused the event.
@@ -281,6 +290,7 @@ One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; or 
 a build whenever a Pub/Sub message is published.
 
 One of &#39;trigger_template&#39;, &#39;github&#39;, &#39;pubsub_config&#39; &#39;webhook_config&#39; or &#39;source_to_build&#39; must be provided. When `null`, the `pubsub_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.pubsub_config.new](#fn-pubsub_confignew) constructor.
+  - `repository_event_config` (`list[obj]`): The configuration of a trigger that creates a build whenever an event from Repo API is received. When `null`, the `repository_event_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.repository_event_config.new](#fn-repository_event_confignew) constructor.
   - `source_to_build` (`list[obj]`): The repo and ref of the repository from which to build.
 This field is used only for those triggers that do not respond to SCM events.
 Triggers that respond to such events build source at whatever commit caused the event.
@@ -684,6 +694,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `pubsub_config` field.
+
+
+### fn withRepositoryEventConfig
+
+```ts
+withRepositoryEventConfig()
+```
+
+`google.list[obj].withRepositoryEventConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the repository_event_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withRepositoryEventConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `repository_event_config` field.
+
+
+### fn withRepositoryEventConfigMixin
+
+```ts
+withRepositoryEventConfigMixin()
+```
+
+`google.list[obj].withRepositoryEventConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the repository_event_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withRepositoryEventConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `repository_event_config` field.
 
 
 ### fn withServiceAccount
@@ -1498,6 +1545,8 @@ Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. pr
   - `path` (`string`): The path of the file, with the repo root as the root of the path.
   - `repo_type` (`string`): The type of the repo, since it may not be explicit from the repo field (e.g from a URL).
 Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: [&#34;UNKNOWN&#34;, &#34;CLOUD_SOURCE_REPOSITORIES&#34;, &#34;GITHUB&#34;, &#34;BITBUCKET_SERVER&#34;]
+  - `repository` (`string`): The fully qualified resource name of the Repo API repository. The fully qualified resource name of the Repo API repository.
+If unspecified, the repo from which the trigger invocation originated is assumed to be the repo from which to read the specified path. When `null`, the `repository` field will be omitted from the resulting object.
   - `revision` (`string`): The branch, tag, arbitrary ref, or SHA version of the repo to use when resolving the
 filename (optional). This field respects the same syntax/resolution as described here: https://git-scm.com/docs/gitrevisions
 If unspecified, the revision from which the trigger invocation originated is assumed to be the revision from which to read the specified path. When `null`, the `revision` field will be omitted from the resulting object.
@@ -1612,6 +1661,90 @@ Terraform sub block.
   - An attribute object that represents the `pubsub_config` sub block.
 
 
+## obj repository_event_config
+
+
+
+### fn repository_event_config.new
+
+```ts
+new()
+```
+
+
+`google.cloudbuild_trigger.repository_event_config.new` constructs a new object with attributes and blocks configured for the `repository_event_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `repository` (`string`): The resource name of the Repo API resource. When `null`, the `repository` field will be omitted from the resulting object.
+  - `pull_request` (`list[obj]`): Contains filter properties for matching Pull Requests. When `null`, the `pull_request` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.repository_event_config.pull_request.new](#fn-repository_event_configpull_requestnew) constructor.
+  - `push` (`list[obj]`): Contains filter properties for matching git pushes. When `null`, the `push` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.repository_event_config.push.new](#fn-repository_event_configpushnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `repository_event_config` sub block.
+
+
+## obj repository_event_config.pull_request
+
+
+
+### fn repository_event_config.pull_request.new
+
+```ts
+new()
+```
+
+
+`google.cloudbuild_trigger.repository_event_config.pull_request.new` constructs a new object with attributes and blocks configured for the `pull_request`
+Terraform sub block.
+
+
+
+**Args**:
+  - `branch` (`string`): Regex of branches to match.
+
+The syntax of the regular expressions accepted is the syntax accepted by
+RE2 and described at https://github.com/google/re2/wiki/Syntax When `null`, the `branch` field will be omitted from the resulting object.
+  - `comment_control` (`string`): Configure builds to run whether a repository owner or collaborator need to comment &#39;/gcbrun&#39;. Possible values: [&#34;COMMENTS_DISABLED&#34;, &#34;COMMENTS_ENABLED&#34;, &#34;COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY&#34;] When `null`, the `comment_control` field will be omitted from the resulting object.
+  - `invert_regex` (`bool`): If true, branches that do NOT match the git_ref will trigger a build. When `null`, the `invert_regex` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `pull_request` sub block.
+
+
+## obj repository_event_config.push
+
+
+
+### fn repository_event_config.push.new
+
+```ts
+new()
+```
+
+
+`google.cloudbuild_trigger.repository_event_config.push.new` constructs a new object with attributes and blocks configured for the `push`
+Terraform sub block.
+
+
+
+**Args**:
+  - `branch` (`string`): Regex of branches to match.
+
+The syntax of the regular expressions accepted is the syntax accepted by
+RE2 and described at https://github.com/google/re2/wiki/Syntax When `null`, the `branch` field will be omitted from the resulting object.
+  - `invert_regex` (`bool`): If true, only trigger a build if the revision regex does NOT match the git_ref regex. When `null`, the `invert_regex` field will be omitted from the resulting object.
+  - `tag` (`string`): Regex of tags to match.
+
+The syntax of the regular expressions accepted is the syntax accepted by
+RE2 and described at https://github.com/google/re2/wiki/Syntax When `null`, the `tag` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `push` sub block.
+
+
 ## obj source_to_build
 
 
@@ -1634,6 +1767,8 @@ Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. pr
   - `ref` (`string`): The branch or tag to use. Must start with &#34;refs/&#34; (required).
   - `repo_type` (`string`): The type of the repo, since it may not be explicit from the repo field (e.g from a URL).
 Values can be UNKNOWN, CLOUD_SOURCE_REPOSITORIES, GITHUB, BITBUCKET_SERVER Possible values: [&#34;UNKNOWN&#34;, &#34;CLOUD_SOURCE_REPOSITORIES&#34;, &#34;GITHUB&#34;, &#34;BITBUCKET_SERVER&#34;]
+  - `repository` (`string`): The qualified resource name of the Repo API repository.
+Either uri or repository can be specified and is required. When `null`, the `repository` field will be omitted from the resulting object.
   - `uri` (`string`): The URI of the repo. When `null`, the `uri` field will be omitted from the resulting object.
 
 **Returns**:

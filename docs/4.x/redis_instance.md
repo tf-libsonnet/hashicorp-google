@@ -25,8 +25,6 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLocationId()`](#fn-withlocationid)
 * [`fn withMaintenancePolicy()`](#fn-withmaintenancepolicy)
 * [`fn withMaintenancePolicyMixin()`](#fn-withmaintenancepolicymixin)
-* [`fn withMaintenanceSchedule()`](#fn-withmaintenanceschedule)
-* [`fn withMaintenanceScheduleMixin()`](#fn-withmaintenanceschedulemixin)
 * [`fn withMemorySizeGb()`](#fn-withmemorysizegb)
 * [`fn withName()`](#fn-withname)
 * [`fn withPersistenceConfig()`](#fn-withpersistenceconfig)
@@ -49,8 +47,6 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-maintenance_policyweekly_maintenance_windownew)
     * [`obj maintenance_policy.weekly_maintenance_window.start_time`](#obj-maintenance_policyweekly_maintenance_windowstart_time)
       * [`fn new()`](#fn-maintenance_policyweekly_maintenance_windowstart_timenew)
-* [`obj maintenance_schedule`](#obj-maintenance_schedule)
-  * [`fn new()`](#fn-maintenance_schedulenew)
 * [`obj persistence_config`](#obj-persistence_config)
   * [`fn new()`](#fn-persistence_confignew)
 * [`obj timeouts`](#obj-timeouts)
@@ -142,7 +138,6 @@ range associated with the private service access connection, or &#34;auto&#34;. 
 
 - SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication Default value: &#34;DISABLED&#34; Possible values: [&#34;SERVER_AUTHENTICATION&#34;, &#34;DISABLED&#34;] When `null`, the `transit_encryption_mode` field will be omitted from the resulting object.
   - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.new](#fn-maintenance_policynew) constructor.
-  - `maintenance_schedule` (`list[obj]`): Upcoming maintenance schedule. When `null`, the `maintenance_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_schedule.new](#fn-maintenance_schedulenew) constructor.
   - `persistence_config` (`list[obj]`): Persistence configuration for an instance. When `null`, the `persistence_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.persistence_config.new](#fn-persistence_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -225,7 +220,6 @@ range associated with the private service access connection, or &#34;auto&#34;. 
 
 - SERVER_AUTHENTICATION: Client to Server traffic encryption enabled with server authentication Default value: &#34;DISABLED&#34; Possible values: [&#34;SERVER_AUTHENTICATION&#34;, &#34;DISABLED&#34;] When `null`, the `transit_encryption_mode` field will be omitted from the resulting object.
   - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_policy.new](#fn-maintenance_policynew) constructor.
-  - `maintenance_schedule` (`list[obj]`): Upcoming maintenance schedule. When `null`, the `maintenance_schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.maintenance_schedule.new](#fn-maintenance_schedulenew) constructor.
   - `persistence_config` (`list[obj]`): Persistence configuration for an instance. When `null`, the `persistence_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.persistence_config.new](#fn-persistence_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.redis_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -396,43 +390,6 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `maintenance_policy` field.
-
-
-### fn withMaintenanceSchedule
-
-```ts
-withMaintenanceSchedule()
-```
-
-`google.list[obj].withMaintenanceSchedule` constructs a mixin object that can be merged into the `list[obj]`
-Terraform resource block to set or update the maintenance_schedule field.
-
-This function will replace the array with the passed in `value`. If you wish to instead append the
-passed in value to the existing array, use the [google.list[obj].withMaintenanceScheduleMixin](TODO) function.
-
-
-**Args**:
-  - `resourceLabel` (`string`): The name label of the block to update.
-  - `value` (`list[obj]`): The value to set for the `maintenance_schedule` field.
-
-
-### fn withMaintenanceScheduleMixin
-
-```ts
-withMaintenanceScheduleMixin()
-```
-
-`google.list[obj].withMaintenanceScheduleMixin` constructs a mixin object that can be merged into the `list[obj]`
-Terraform resource block to set or update the maintenance_schedule field.
-
-This function will append the passed in array or object to the existing array. If you wish
-to instead replace the array with the passed in `value`, use the [google.list[obj].withMaintenanceSchedule](TODO)
-function.
-
-
-**Args**:
-  - `resourceLabel` (`string`): The name label of the block to update.
-  - `value` (`list[obj]`): The value to set for the `maintenance_schedule` field.
 
 
 ### fn withMemorySizeGb
@@ -787,26 +744,6 @@ An API may allow the value 60 if it allows leap-seconds. When `null`, the `secon
 
 **Returns**:
   - An attribute object that represents the `start_time` sub block.
-
-
-## obj maintenance_schedule
-
-
-
-### fn maintenance_schedule.new
-
-```ts
-new()
-```
-
-
-`google.redis_instance.maintenance_schedule.new` constructs a new object with attributes and blocks configured for the `maintenance_schedule`
-Terraform sub block.
-
-
-
-**Returns**:
-  - An attribute object that represents the `maintenance_schedule` sub block.
 
 
 ## obj persistence_config

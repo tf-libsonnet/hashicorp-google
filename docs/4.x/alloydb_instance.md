@@ -67,7 +67,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `annotations` (`obj`): Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. When `null`, the `annotations` field will be omitted from the resulting object.
-  - `availability_type` (`string`): Availability type of an Instance. Defaults to REGIONAL for both primary and read instances. Note that primary and read instances can have different availability types. Possible values: [&#34;AVAILABILITY_TYPE_UNSPECIFIED&#34;, &#34;ZONAL&#34;, &#34;REGIONAL&#34;] When `null`, the `availability_type` field will be omitted from the resulting object.
+  - `availability_type` (`string`): &#39;Availability type of an Instance. Defaults to REGIONAL for both primary and read instances.
+Note that primary and read instances can have different availability types.
+Only READ_POOL instance supports ZONAL type. Users can&#39;t specify the zone for READ_POOL instance.
+Zone is automatically chosen from the list of zones in the region specified.
+Read pool of size 1 can only have zonal availability. Read pools with node count of 2 or more
+can have regional availability (nodes are present in 2 or more zones in a region).&#39; Possible values: [&#34;AVAILABILITY_TYPE_UNSPECIFIED&#34;, &#34;ZONAL&#34;, &#34;REGIONAL&#34;] When `null`, the `availability_type` field will be omitted from the resulting object.
   - `cluster` (`string`): Identifies the alloydb cluster. Must be in the format
 &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
   - `database_flags` (`obj`): Database flags. Set at instance level. * They are copied from primary instance on read instance creation. * Read instances can set new or override existing flags that are relevant for reads, e.g. for enabling columnar cache on a read instance. Flags set on read instance may or may not be present on primary. When `null`, the `database_flags` field will be omitted from the resulting object.
@@ -103,7 +108,12 @@ injecting into a complete block.
 
 **Args**:
   - `annotations` (`obj`): Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. When `null`, the `annotations` field will be omitted from the resulting object.
-  - `availability_type` (`string`): Availability type of an Instance. Defaults to REGIONAL for both primary and read instances. Note that primary and read instances can have different availability types. Possible values: [&#34;AVAILABILITY_TYPE_UNSPECIFIED&#34;, &#34;ZONAL&#34;, &#34;REGIONAL&#34;] When `null`, the `availability_type` field will be omitted from the resulting object.
+  - `availability_type` (`string`): &#39;Availability type of an Instance. Defaults to REGIONAL for both primary and read instances.
+Note that primary and read instances can have different availability types.
+Only READ_POOL instance supports ZONAL type. Users can&#39;t specify the zone for READ_POOL instance.
+Zone is automatically chosen from the list of zones in the region specified.
+Read pool of size 1 can only have zonal availability. Read pools with node count of 2 or more
+can have regional availability (nodes are present in 2 or more zones in a region).&#39; Possible values: [&#34;AVAILABILITY_TYPE_UNSPECIFIED&#34;, &#34;ZONAL&#34;, &#34;REGIONAL&#34;] When `null`, the `availability_type` field will be omitted from the resulting object.
   - `cluster` (`string`): Identifies the alloydb cluster. Must be in the format
 &#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
   - `database_flags` (`obj`): Database flags. Set at instance level. * They are copied from primary instance on read instance creation. * Read instances can set new or override existing flags that are relevant for reads, e.g. for enabling columnar cache on a read instance. Flags set on read instance may or may not be present on primary. When `null`, the `database_flags` field will be omitted from the resulting object.

@@ -62,18 +62,36 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     workforce_pool_id: workforce_pool_id,
   }),
   oidc:: {
-    '#new':: d.fn(help='\n`google.iam_workforce_pool_provider.oidc.new` constructs a new object with attributes and blocks configured for the `oidc`\nTerraform sub block.\n\n\n\n**Args**:\n  - `client_id` (`string`): The client ID. Must match the audience claim of the JWT issued by the identity provider.\n  - `issuer_uri` (`string`): The OIDC issuer URI. Must be a valid URI using the &#39;https&#39; scheme.\n  - `web_sso_config` (`list[obj]`): Configuration for web single sign-on for the OIDC provider. Here, web sign-in refers to console sign-in and gcloud sign-in through the browser. When `null`, the `web_sso_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool_provider.oidc.web_sso_config.new](#fn-oidcweb_sso_confignew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `oidc` sub block.\n', args=[]),
+    client_secret:: {
+      '#new':: d.fn(help='\n`google.iam_workforce_pool_provider.oidc.client_secret.new` constructs a new object with attributes and blocks configured for the `client_secret`\nTerraform sub block.\n\n\n\n**Args**:\n  - `value` (`list[obj]`): The value of the client secret. When `null`, the `value` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool_provider.oidc.client_secret.value.new](#fn-oidcoidcvaluenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `client_secret` sub block.\n', args=[]),
+      new(
+        value=null
+      ):: std.prune(a={
+        value: value,
+      }),
+      value:: {
+        '#new':: d.fn(help='\n`google.iam_workforce_pool_provider.oidc.client_secret.value.new` constructs a new object with attributes and blocks configured for the `value`\nTerraform sub block.\n\n\n\n**Args**:\n  - `plain_text` (`string`): The plain text of the client secret value.\n\n**Returns**:\n  - An attribute object that represents the `value` sub block.\n', args=[]),
+        new(
+          plain_text
+        ):: std.prune(a={
+          plain_text: plain_text,
+        }),
+      },
+    },
+    '#new':: d.fn(help='\n`google.iam_workforce_pool_provider.oidc.new` constructs a new object with attributes and blocks configured for the `oidc`\nTerraform sub block.\n\n\n\n**Args**:\n  - `client_id` (`string`): The client ID. Must match the audience claim of the JWT issued by the identity provider.\n  - `issuer_uri` (`string`): The OIDC issuer URI. Must be a valid URI using the &#39;https&#39; scheme.\n  - `client_secret` (`list[obj]`): The optional client secret. Required to enable Authorization Code flow for web sign-in. When `null`, the `client_secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool_provider.oidc.client_secret.new](#fn-oidcclient_secretnew) constructor.\n  - `web_sso_config` (`list[obj]`): Configuration for web single sign-on for the OIDC provider. Here, web sign-in refers to console sign-in and gcloud sign-in through the browser. When `null`, the `web_sso_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool_provider.oidc.web_sso_config.new](#fn-oidcweb_sso_confignew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `oidc` sub block.\n', args=[]),
     new(
       client_id,
       issuer_uri,
+      client_secret=null,
       web_sso_config=null
     ):: std.prune(a={
       client_id: client_id,
+      client_secret: client_secret,
       issuer_uri: issuer_uri,
       web_sso_config: web_sso_config,
     }),
     web_sso_config:: {
-      '#new':: d.fn(help='\n`google.iam_workforce_pool_provider.oidc.web_sso_config.new` constructs a new object with attributes and blocks configured for the `web_sso_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `assertion_claims_behavior` (`string`): The behavior for how OIDC Claims are included in the &#39;assertion&#39; object used for attribute mapping and attribute condition.\n* ONLY_ID_TOKEN_CLAIMS: Only include ID Token Claims. Possible values: [&#34;ONLY_ID_TOKEN_CLAIMS&#34;]\n  - `response_type` (`string`): The Response Type to request for in the OIDC Authorization Request for web sign-in.\n* ID_TOKEN: The &#39;response_type=id_token&#39; selection uses the Implicit Flow for web sign-in. Possible values: [&#34;ID_TOKEN&#34;]\n\n**Returns**:\n  - An attribute object that represents the `web_sso_config` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.iam_workforce_pool_provider.oidc.web_sso_config.new` constructs a new object with attributes and blocks configured for the `web_sso_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `assertion_claims_behavior` (`string`): The behavior for how OIDC Claims are included in the &#39;assertion&#39; object used for attribute mapping and attribute condition.\n* MERGE_USER_INFO_OVER_ID_TOKEN_CLAIMS: Merge the UserInfo Endpoint Claims with ID Token Claims, preferring UserInfo Claim Values for the same Claim Name. This option is available only for the Authorization Code Flow.\n* ONLY_ID_TOKEN_CLAIMS: Only include ID Token Claims. Possible values: [&#34;MERGE_USER_INFO_OVER_ID_TOKEN_CLAIMS&#34;, &#34;ONLY_ID_TOKEN_CLAIMS&#34;]\n  - `response_type` (`string`): The Response Type to request for in the OIDC Authorization Request for web sign-in.\n\nThe &#39;CODE&#39; Response Type is recommended to avoid the Implicit Flow, for security reasons.\n* CODE: The &#39;response_type=code&#39; selection uses the Authorization Code Flow for web sign-in. Requires a configured client secret.\n* ID_TOKEN: The &#39;response_type=id_token&#39; selection uses the Implicit Flow for web sign-in. Possible values: [&#34;CODE&#34;, &#34;ID_TOKEN&#34;]\n\n**Returns**:\n  - An attribute object that represents the `web_sso_config` sub block.\n', args=[]),
       new(
         assertion_claims_behavior,
         response_type

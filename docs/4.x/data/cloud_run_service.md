@@ -52,7 +52,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): Name must be unique within a Google Cloud project and region.
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
-More info: http://kubernetes.io/docs/user-guide/identifiers#names
+More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
   - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:
@@ -81,7 +81,7 @@ injecting into a complete block.
   - `name` (`string`): Name must be unique within a Google Cloud project and region.
 Is required when creating resources. Name is primarily intended
 for creation idempotence and configuration definition. Cannot be updated.
-More info: http://kubernetes.io/docs/user-guide/identifiers#names
+More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
 
 **Returns**:

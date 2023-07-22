@@ -72,7 +72,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `action` (`string`): The Action to perform when the client connection triggers the rule. Can currently be either &#34;allow&#34; or &#34;deny()&#34; where valid values for status are 403, 404, and 502.
+  - `action` (`string`): The Action to perform when the client connection triggers the rule. Valid actions are &#34;allow&#34;, &#34;deny&#34; and &#34;goto_next&#34;.
   - `description` (`string`): An optional description for this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `direction` (`string`): The direction in which this rule applies. Possible values: INGRESS, EGRESS
   - `disabled` (`bool`): Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled. When `null`, the `disabled` field will be omitted from the resulting object.
@@ -109,7 +109,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `action` (`string`): The Action to perform when the client connection triggers the rule. Can currently be either &#34;allow&#34; or &#34;deny()&#34; where valid values for status are 403, 404, and 502.
+  - `action` (`string`): The Action to perform when the client connection triggers the rule. Valid actions are &#34;allow&#34;, &#34;deny&#34; and &#34;goto_next&#34;.
   - `description` (`string`): An optional description for this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `direction` (`string`): The direction in which this rule applies. Possible values: INGRESS, EGRESS
   - `disabled` (`bool`): Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled. When `null`, the `disabled` field will be omitted from the resulting object.

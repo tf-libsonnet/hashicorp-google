@@ -51,6 +51,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-settingsbackup_configurationnew)
     * [`obj settings.backup_configuration.backup_retention_settings`](#obj-settingsbackup_configurationbackup_retention_settings)
       * [`fn new()`](#fn-settingsbackup_configurationbackup_retention_settingsnew)
+  * [`obj settings.data_cache_config`](#obj-settingsdata_cache_config)
+    * [`fn new()`](#fn-settingsdata_cache_confignew)
   * [`obj settings.database_flags`](#obj-settingsdatabase_flags)
     * [`fn new()`](#fn-settingsdatabase_flagsnew)
   * [`obj settings.deny_maintenance_period`](#obj-settingsdeny_maintenance_period)
@@ -618,6 +620,7 @@ is set to true. Defaults to ZONAL. When `null`, the `availability_type` field wi
   - `disk_autoresize_limit` (`number`): The maximum size, in GB, to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit. When `null`, the `disk_autoresize_limit` field will be omitted from the resulting object.
   - `disk_size` (`number`): The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased. The minimum value is 10GB. When `null`, the `disk_size` field will be omitted from the resulting object.
   - `disk_type` (`string`): The type of data disk: PD_SSD or PD_HDD. Defaults to PD_SSD. When `null`, the `disk_type` field will be omitted from the resulting object.
+  - `edition` (`string`): The edition of the instance, can be ENTERPRISE or ENTERPRISE_PLUS. When `null`, the `edition` field will be omitted from the resulting object.
   - `pricing_plan` (`string`): Pricing plan for this instance, can only be PER_USE. When `null`, the `pricing_plan` field will be omitted from the resulting object.
   - `tier` (`string`): The machine type to use. See tiers for more details and supported versions. Postgres supports only shared-core machine types, and custom machine types such as db-custom-2-13312. See the Custom Machine Type Documentation to learn about specifying custom machine types.
   - `time_zone` (`string`): The time_zone to be used by the database engine (supported only for SQL Server), in SQL Server timezone format. When `null`, the `time_zone` field will be omitted from the resulting object.
@@ -625,6 +628,7 @@ is set to true. Defaults to ZONAL. When `null`, the `availability_type` field wi
   - `active_directory_config` (`list[obj]`): Set the `active_directory_config` field on the resulting object. When `null`, the `active_directory_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.active_directory_config.new](#fn-settingsactive_directory_confignew) constructor.
   - `advanced_machine_features` (`list[obj]`): Set the `advanced_machine_features` field on the resulting object. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.advanced_machine_features.new](#fn-settingsadvanced_machine_featuresnew) constructor.
   - `backup_configuration` (`list[obj]`): Set the `backup_configuration` field on the resulting object. When `null`, the `backup_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.backup_configuration.new](#fn-settingsbackup_configurationnew) constructor.
+  - `data_cache_config` (`list[obj]`): Data cache configurations. When `null`, the `data_cache_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.data_cache_config.new](#fn-settingsdata_cache_confignew) constructor.
   - `database_flags` (`list[obj]`): Set the `database_flags` field on the resulting object. When `null`, the `database_flags` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.database_flags.new](#fn-settingsdatabase_flagsnew) constructor.
   - `deny_maintenance_period` (`list[obj]`): Set the `deny_maintenance_period` field on the resulting object. When `null`, the `deny_maintenance_period` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.deny_maintenance_period.new](#fn-settingsdeny_maintenance_periodnew) constructor.
   - `insights_config` (`list[obj]`): Configuration of Query Insights. When `null`, the `insights_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.insights_config.new](#fn-settingsinsights_confignew) constructor.
@@ -735,6 +739,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `backup_retention_settings` sub block.
+
+
+## obj settings.data_cache_config
+
+
+
+### fn settings.data_cache_config.new
+
+```ts
+new()
+```
+
+
+`google.sql_database_instance.settings.data_cache_config.new` constructs a new object with attributes and blocks configured for the `data_cache_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `data_cache_enabled` (`bool`): Whether data cache is enabled for the instance. When `null`, the `data_cache_enabled` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `data_cache_config` sub block.
 
 
 ## obj settings.database_flags

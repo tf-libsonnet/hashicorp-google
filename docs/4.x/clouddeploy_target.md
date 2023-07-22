@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAnnotations()`](#fn-withannotations)
 * [`fn withAnthosCluster()`](#fn-withanthoscluster)
 * [`fn withAnthosClusterMixin()`](#fn-withanthosclustermixin)
+* [`fn withDeployParameters()`](#fn-withdeployparameters)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withExecutionConfigs()`](#fn-withexecutionconfigs)
 * [`fn withExecutionConfigsMixin()`](#fn-withexecutionconfigsmixin)
@@ -73,6 +74,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `annotations` (`obj`): Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `deploy_parameters` (`obj`): Optional. The deploy parameters to use for this target. When `null`, the `deploy_parameters` field will be omitted from the resulting object.
   - `description` (`string`): Optional. Description of the `Target`. Max length is 255 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
@@ -108,6 +110,7 @@ injecting into a complete block.
 
 **Args**:
   - `annotations` (`obj`): Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `deploy_parameters` (`obj`): Optional. The deploy parameters to use for this target. When `null`, the `deploy_parameters` field will be omitted from the resulting object.
   - `description` (`string`): Optional. Description of the `Target`. Max length is 255 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
@@ -175,6 +178,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `anthos_cluster` field.
+
+
+### fn withDeployParameters
+
+```ts
+withDeployParameters()
+```
+
+`google.obj.withDeployParameters` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the deploy_parameters field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `deploy_parameters` field.
 
 
 ### fn withDescription

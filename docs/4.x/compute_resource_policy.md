@@ -16,6 +16,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withDescription()`](#fn-withdescription)
+* [`fn withDiskConsistencyGroupPolicy()`](#fn-withdiskconsistencygrouppolicy)
+* [`fn withDiskConsistencyGroupPolicyMixin()`](#fn-withdiskconsistencygrouppolicymixin)
 * [`fn withGroupPlacementPolicy()`](#fn-withgroupplacementpolicy)
 * [`fn withGroupPlacementPolicyMixin()`](#fn-withgroupplacementpolicymixin)
 * [`fn withInstanceSchedulePolicy()`](#fn-withinstanceschedulepolicy)
@@ -27,6 +29,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withSnapshotSchedulePolicyMixin()`](#fn-withsnapshotschedulepolicymixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj disk_consistency_group_policy`](#obj-disk_consistency_group_policy)
+  * [`fn new()`](#fn-disk_consistency_group_policynew)
 * [`obj group_placement_policy`](#obj-group_placement_policy)
   * [`fn new()`](#fn-group_placement_policynew)
 * [`obj instance_schedule_policy`](#obj-instance_schedule_policy)
@@ -93,6 +97,7 @@ must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where resource policy resides. When `null`, the `region` field will be omitted from the resulting object.
+  - `disk_consistency_group_policy` (`list[obj]`): Replication consistency group for asynchronous disk replication. When `null`, the `disk_consistency_group_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.disk_consistency_group_policy.new](#fn-disk_consistency_group_policynew) constructor.
   - `group_placement_policy` (`list[obj]`): Resource policy for instances used for placement configuration. When `null`, the `group_placement_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.group_placement_policy.new](#fn-group_placement_policynew) constructor.
   - `instance_schedule_policy` (`list[obj]`): Resource policy for scheduling instance operations. When `null`, the `instance_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.instance_schedule_policy.new](#fn-instance_schedule_policynew) constructor.
   - `snapshot_schedule_policy` (`list[obj]`): Policy for creating snapshots of persistent disks. When `null`, the `snapshot_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.new](#fn-snapshot_schedule_policynew) constructor.
@@ -130,6 +135,7 @@ must be a dash, lowercase letter, or digit, except the last character,
 which cannot be a dash.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where resource policy resides. When `null`, the `region` field will be omitted from the resulting object.
+  - `disk_consistency_group_policy` (`list[obj]`): Replication consistency group for asynchronous disk replication. When `null`, the `disk_consistency_group_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.disk_consistency_group_policy.new](#fn-disk_consistency_group_policynew) constructor.
   - `group_placement_policy` (`list[obj]`): Resource policy for instances used for placement configuration. When `null`, the `group_placement_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.group_placement_policy.new](#fn-group_placement_policynew) constructor.
   - `instance_schedule_policy` (`list[obj]`): Resource policy for scheduling instance operations. When `null`, the `instance_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.instance_schedule_policy.new](#fn-instance_schedule_policynew) constructor.
   - `snapshot_schedule_policy` (`list[obj]`): Policy for creating snapshots of persistent disks. When `null`, the `snapshot_schedule_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_resource_policy.snapshot_schedule_policy.new](#fn-snapshot_schedule_policynew) constructor.
@@ -153,6 +159,43 @@ Terraform resource block to set or update the description field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `description` field.
+
+
+### fn withDiskConsistencyGroupPolicy
+
+```ts
+withDiskConsistencyGroupPolicy()
+```
+
+`google.list[obj].withDiskConsistencyGroupPolicy` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the disk_consistency_group_policy field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withDiskConsistencyGroupPolicyMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `disk_consistency_group_policy` field.
+
+
+### fn withDiskConsistencyGroupPolicyMixin
+
+```ts
+withDiskConsistencyGroupPolicyMixin()
+```
+
+`google.list[obj].withDiskConsistencyGroupPolicyMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the disk_consistency_group_policy field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withDiskConsistencyGroupPolicy](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `disk_consistency_group_policy` field.
 
 
 ### fn withGroupPlacementPolicy
@@ -348,6 +391,29 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj disk_consistency_group_policy
+
+
+
+### fn disk_consistency_group_policy.new
+
+```ts
+new()
+```
+
+
+`google.compute_resource_policy.disk_consistency_group_policy.new` constructs a new object with attributes and blocks configured for the `disk_consistency_group_policy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Enable disk consistency on the resource policy.
+
+**Returns**:
+  - An attribute object that represents the `disk_consistency_group_policy` sub block.
 
 
 ## obj group_placement_policy

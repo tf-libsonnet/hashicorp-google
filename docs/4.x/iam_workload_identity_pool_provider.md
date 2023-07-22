@@ -570,6 +570,29 @@ For example:
 https://iam.googleapis.com/projects/&lt;project-number&gt;/locations/&lt;location&gt;/workloadIdentityPools/&lt;pool-id&gt;/providers/&lt;provider-id&gt;
 &#39;&#39;&#39; When `null`, the `allowed_audiences` field will be omitted from the resulting object.
   - `issuer_uri` (`string`): The OIDC issuer URL.
+  - `jwks_json` (`string`): OIDC JWKs in JSON String format. For details on definition of a
+JWK, see https:tools.ietf.org/html/rfc7517. If not set, then we
+use the &#39;jwks_uri&#39; from the discovery document fetched from the
+.well-known path for the &#39;issuer_uri&#39;. Currently, RSA and EC asymmetric
+keys are supported. The JWK must use following format and include only
+the following fields:
+&#39;&#39;&#39;
+{
+  &#34;keys&#34;: [
+    {
+          &#34;kty&#34;: &#34;RSA/EC&#34;,
+          &#34;alg&#34;: &#34;&lt;algorithm&gt;&#34;,
+          &#34;use&#34;: &#34;sig&#34;,
+          &#34;kid&#34;: &#34;&lt;key-id&gt;&#34;,
+          &#34;n&#34;: &#34;&#34;,
+          &#34;e&#34;: &#34;&#34;,
+          &#34;x&#34;: &#34;&#34;,
+          &#34;y&#34;: &#34;&#34;,
+          &#34;crv&#34;: &#34;&#34;
+    }
+  ]
+}
+&#39;&#39;&#39; When `null`, the `jwks_json` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `oidc` sub block.

@@ -358,9 +358,12 @@ Terraform sub block.
 
 
 **Args**:
-  - `dns_authorizations` (`list`): Authorizations that will be used for performing domain authorization When `null`, the `dns_authorizations` field will be omitted from the resulting object.
+  - `dns_authorizations` (`list`): Authorizations that will be used for performing domain authorization. Either issuanceConfig or dnsAuthorizations should be specificed, but not both. When `null`, the `dns_authorizations` field will be omitted from the resulting object.
   - `domains` (`list`): The domains for which a managed SSL certificate will be generated.
 Wildcard domains are only supported with DNS challenge resolution When `null`, the `domains` field will be omitted from the resulting object.
+  - `issuance_config` (`string`): The resource name for a CertificateIssuanceConfig used to configure private PKI certificates in the format projects/*/locations/*/certificateIssuanceConfigs/*.
+If this field is not set, the certificates will instead be publicly signed as documented at https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa.
+Either issuanceConfig or dnsAuthorizations should be specificed, but not both. When `null`, the `issuance_config` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `managed` sub block.

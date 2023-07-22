@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAnnotations()`](#fn-withannotations)
 * [`fn withBinaryAuthorization()`](#fn-withbinaryauthorization)
 * [`fn withBinaryAuthorizationMixin()`](#fn-withbinaryauthorizationmixin)
 * [`fn withClient()`](#fn-withclient)
@@ -106,9 +107,19 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `annotations` (`obj`): Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
+
+Cloud Run API v2 does not support annotations with &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected on new resources.
+All system annotations in v1 now have a corresponding field in v2 Job.
+
+This field follows Kubernetes annotations&#39; namespacing, limits, and rules. When `null`, the `annotations` field will be omitted from the resulting object.
   - `client` (`string`): Arbitrary identifier for the API client. When `null`, the `client` field will be omitted from the resulting object.
   - `client_version` (`string`): Arbitrary version identifier for the API client. When `null`, the `client_version` field will be omitted from the resulting object.
-  - `labels` (`obj`): KRM-style labels for the resource. User-provided labels are shared with Google&#39;s billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run will populate some labels with &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. Those labels are read-only, and user changes will not be preserved. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google&#39;s billing system, so they can be used to filter, or break down billing charges by team, component,
+environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
+
+Cloud Run API v2 does not support labels with &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected.
+All system labels in v1 now have a corresponding field in v2 Job. When `null`, the `labels` field will be omitted from the resulting object.
   - `launch_stage` (`string`): The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA.
 If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features.
 
@@ -142,9 +153,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `annotations` (`obj`): Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
+
+Cloud Run API v2 does not support annotations with &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected on new resources.
+All system annotations in v1 now have a corresponding field in v2 Job.
+
+This field follows Kubernetes annotations&#39; namespacing, limits, and rules. When `null`, the `annotations` field will be omitted from the resulting object.
   - `client` (`string`): Arbitrary identifier for the API client. When `null`, the `client` field will be omitted from the resulting object.
   - `client_version` (`string`): Arbitrary version identifier for the API client. When `null`, the `client_version` field will be omitted from the resulting object.
-  - `labels` (`obj`): KRM-style labels for the resource. User-provided labels are shared with Google&#39;s billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run will populate some labels with &#39;run.googleapis.com&#39; or &#39;serving.knative.dev&#39; namespaces. Those labels are read-only, and user changes will not be preserved. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google&#39;s billing system, so they can be used to filter, or break down billing charges by team, component,
+environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
+
+Cloud Run API v2 does not support labels with &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected.
+All system labels in v1 now have a corresponding field in v2 Job. When `null`, the `labels` field will be omitted from the resulting object.
   - `launch_stage` (`string`): The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA.
 If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features.
 
@@ -158,6 +179,22 @@ For example, if ALPHA is provided as input, but only BETA and GA-level features 
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `cloud_run_v2_job` resource into the root Terraform configuration.
+
+
+### fn withAnnotations
+
+```ts
+withAnnotations()
+```
+
+`google.obj.withAnnotations` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the annotations field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `annotations` field.
 
 
 ### fn withBinaryAuthorization
@@ -423,7 +460,18 @@ Terraform sub block.
 
 
 **Args**:
-  - `labels` (`obj`): KRM-style labels for the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `annotations` (`obj`): Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
+
+Cloud Run API v2 does not support annotations with &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected.
+All system annotations in v1 now have a corresponding field in v2 ExecutionTemplate.
+
+This field follows Kubernetes annotations&#39; namespacing, limits, and rules. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `labels` (`obj`): Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google&#39;s billing system, so they can be used to filter,
+or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+https://cloud.google.com/run/docs/configuring/labels.
+
+Cloud Run API v2 does not support labels with &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected.
+All system labels in v1 now have a corresponding field in v2 ExecutionTemplate. When `null`, the `labels` field will be omitted from the resulting object.
   - `parallelism` (`number`): Specifies the maximum desired number of tasks the execution should run at given time. Must be &lt;= taskCount. When the job is run, if this field is 0 or unset, the maximum possible value will be used for that execution. The actual number of tasks running in steady state will be less than this number when there are fewer tasks waiting to be completed remaining, i.e. when the work left to do is less than max parallelism. When `null`, the `parallelism` field will be omitted from the resulting object.
   - `task_count` (`number`): Specifies the desired number of tasks the execution should run. Setting to 1 means that parallelism is limited to 1 and the success of that task signals the success of the execution. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/ When `null`, the `task_count` field will be omitted from the resulting object.
   - `template` (`list[obj]`): Describes the task(s) that will be created when executing an execution When `null`, the `template` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.new](#fn-templatetemplatenew) constructor.
