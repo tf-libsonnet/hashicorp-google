@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withComplexDataTypeReferenceParsing()`](#fn-withcomplexdatatypereferenceparsing)
 * [`fn withDataset()`](#fn-withdataset)
 * [`fn withDisableReferentialIntegrity()`](#fn-withdisablereferentialintegrity)
 * [`fn withDisableResourceVersioning()`](#fn-withdisableresourceversioning)
@@ -69,6 +70,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `complex_data_type_reference_parsing` (`string`): Enable parsing of references within complex FHIR data types such as Extensions. If this value is set to ENABLED, then features like referential integrity and Bundle reference rewriting apply to all references. If this flag has not been specified the behavior of the FHIR store will not change, references in complex data types will not be parsed. New stores will have this value set to ENABLED by default after a notification period. Warning: turning on this flag causes processing existing resources to fail if they contain references to non-existent resources. Possible values: [&#34;COMPLEX_DATA_TYPE_REFERENCE_PARSING_UNSPECIFIED&#34;, &#34;DISABLED&#34;, &#34;ENABLED&#34;] When `null`, the `complex_data_type_reference_parsing` field will be omitted from the resulting object.
   - `dataset` (`string`): Identifies the dataset addressed by this request. Must be in the format
 &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
   - `disable_referential_integrity` (`bool`): Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
@@ -146,6 +148,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `complex_data_type_reference_parsing` (`string`): Enable parsing of references within complex FHIR data types such as Extensions. If this value is set to ENABLED, then features like referential integrity and Bundle reference rewriting apply to all references. If this flag has not been specified the behavior of the FHIR store will not change, references in complex data types will not be parsed. New stores will have this value set to ENABLED by default after a notification period. Warning: turning on this flag causes processing existing resources to fail if they contain references to non-existent resources. Possible values: [&#34;COMPLEX_DATA_TYPE_REFERENCE_PARSING_UNSPECIFIED&#34;, &#34;DISABLED&#34;, &#34;ENABLED&#34;] When `null`, the `complex_data_type_reference_parsing` field will be omitted from the resulting object.
   - `dataset` (`string`): Identifies the dataset addressed by this request. Must be in the format
 &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
   - `disable_referential_integrity` (`bool`): Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
@@ -203,6 +206,22 @@ the order of dozens of seconds) is expected before the results show up in the st
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `healthcare_fhir_store` resource into the root Terraform configuration.
+
+
+### fn withComplexDataTypeReferenceParsing
+
+```ts
+withComplexDataTypeReferenceParsing()
+```
+
+`google.string.withComplexDataTypeReferenceParsing` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the complex_data_type_reference_parsing field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `complex_data_type_reference_parsing` field.
 
 
 ### fn withDataset

@@ -128,7 +128,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     },
     schedule:: {
       daily_schedule:: {
-        '#new':: d.fn(help='\n`google.compute_resource_policy.snapshot_schedule_policy.schedule.daily_schedule.new` constructs a new object with attributes and blocks configured for the `daily_schedule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `days_in_cycle` (`number`): The number of days between snapshots.\n  - `start_time` (`string`): This must be in UTC format that resolves to one of\n00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example,\nboth 13:00-5 and 08:00 are valid.\n\n**Returns**:\n  - An attribute object that represents the `daily_schedule` sub block.\n', args=[]),
+        '#new':: d.fn(help='\n`google.compute_resource_policy.snapshot_schedule_policy.schedule.daily_schedule.new` constructs a new object with attributes and blocks configured for the `daily_schedule`\nTerraform sub block.\n\n\n\n**Args**:\n  - `days_in_cycle` (`number`): Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle. Days in cycle for snapshot schedule policy must be 1.\n  - `start_time` (`string`): This must be in UTC format that resolves to one of\n00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example,\nboth 13:00-5 and 08:00 are valid.\n\n**Returns**:\n  - An attribute object that represents the `daily_schedule` sub block.\n', args=[]),
         new(
           days_in_cycle,
           start_time

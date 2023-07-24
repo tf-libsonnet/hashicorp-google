@@ -66,7 +66,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `ip_cidr_range` (`string`): The range of internal addresses that follows RFC 4632 notation. Example: &#39;10.132.0.0/28&#39;. When `null`, the `ip_cidr_range` field will be omitted from the resulting object.
   - `machine_type` (`string`): Machine type of VM Instance underlying connector. Default is e2-micro When `null`, the `machine_type` field will be omitted from the resulting object.
   - `max_instances` (`number`): Maximum value of instances in autoscaling group underlying the connector. When `null`, the `max_instances` field will be omitted from the resulting object.
-  - `max_throughput` (`number`): Maximum throughput of the connector in Mbps, must be greater than &#39;min_throughput&#39;. Default is 300. When `null`, the `max_throughput` field will be omitted from the resulting object.
+  - `max_throughput` (`number`): Maximum throughput of the connector in Mbps, must be greater than &#39;min_throughput&#39;. Default is 1000. When `null`, the `max_throughput` field will be omitted from the resulting object.
   - `min_instances` (`number`): Minimum value of instances in autoscaling group underlying the connector. When `null`, the `min_instances` field will be omitted from the resulting object.
   - `min_throughput` (`number`): Minimum throughput of the connector in Mbps. Default and min is 200. When `null`, the `min_throughput` field will be omitted from the resulting object.
   - `name` (`string`): The name of the resource (Max 25 characters).
@@ -101,7 +101,7 @@ injecting into a complete block.
   - `ip_cidr_range` (`string`): The range of internal addresses that follows RFC 4632 notation. Example: &#39;10.132.0.0/28&#39;. When `null`, the `ip_cidr_range` field will be omitted from the resulting object.
   - `machine_type` (`string`): Machine type of VM Instance underlying connector. Default is e2-micro When `null`, the `machine_type` field will be omitted from the resulting object.
   - `max_instances` (`number`): Maximum value of instances in autoscaling group underlying the connector. When `null`, the `max_instances` field will be omitted from the resulting object.
-  - `max_throughput` (`number`): Maximum throughput of the connector in Mbps, must be greater than &#39;min_throughput&#39;. Default is 300. When `null`, the `max_throughput` field will be omitted from the resulting object.
+  - `max_throughput` (`number`): Maximum throughput of the connector in Mbps, must be greater than &#39;min_throughput&#39;. Default is 1000. When `null`, the `max_throughput` field will be omitted from the resulting object.
   - `min_instances` (`number`): Minimum value of instances in autoscaling group underlying the connector. When `null`, the `min_instances` field will be omitted from the resulting object.
   - `min_throughput` (`number`): Minimum throughput of the connector in Mbps. Default and min is 200. When `null`, the `min_throughput` field will be omitted from the resulting object.
   - `name` (`string`): The name of the resource (Max 25 characters).
@@ -392,6 +392,7 @@ Terraform sub block.
 **Args**:
   - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
   - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

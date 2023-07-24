@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAuthorizedNetwork()`](#fn-withauthorizednetwork)
 * [`fn withBillingType()`](#fn-withbillingtype)
 * [`fn withDescription()`](#fn-withdescription)
+* [`fn withDisableVpcPeering()`](#fn-withdisablevpcpeering)
 * [`fn withDisplayName()`](#fn-withdisplayname)
 * [`fn withProjectId()`](#fn-withprojectid)
 * [`fn withProperties()`](#fn-withproperties)
@@ -70,6 +71,11 @@ See [Getting started with the Service Networking API](https://cloud.google.com/s
 Valid only when &#39;RuntimeType&#39; is set to CLOUD. The value can be updated only when there are no runtime instances. For example: &#34;default&#34;. When `null`, the `authorized_network` field will be omitted from the resulting object.
   - `billing_type` (`string`): Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing). When `null`, the `billing_type` field will be omitted from the resulting object.
   - `description` (`string`): Description of the Apigee organization. When `null`, the `description` field will be omitted from the resulting object.
+  - `disable_vpc_peering` (`bool`): Flag that specifies whether the VPC Peering through Private Google Access should be
+disabled between the consumer network and Apigee. Required if an &#39;authorizedNetwork&#39;
+on the consumer project is not provided, in which case the flag should be set to &#39;true&#39;.
+Valid only when &#39;RuntimeType&#39; is set to CLOUD. The value must be set before the creation
+of any Apigee runtime instance and can be updated only when there are no runtime instances. When `null`, the `disable_vpc_peering` field will be omitted from the resulting object.
   - `display_name` (`string`): The display name of the Apigee organization. When `null`, the `display_name` field will be omitted from the resulting object.
   - `project_id` (`string`): The project ID associated with the Apigee organization.
   - `retention` (`string`): Optional. This setting is applicable only for organizations that are soft-deleted (i.e., BillingType
@@ -112,6 +118,11 @@ See [Getting started with the Service Networking API](https://cloud.google.com/s
 Valid only when &#39;RuntimeType&#39; is set to CLOUD. The value can be updated only when there are no runtime instances. For example: &#34;default&#34;. When `null`, the `authorized_network` field will be omitted from the resulting object.
   - `billing_type` (`string`): Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing). When `null`, the `billing_type` field will be omitted from the resulting object.
   - `description` (`string`): Description of the Apigee organization. When `null`, the `description` field will be omitted from the resulting object.
+  - `disable_vpc_peering` (`bool`): Flag that specifies whether the VPC Peering through Private Google Access should be
+disabled between the consumer network and Apigee. Required if an &#39;authorizedNetwork&#39;
+on the consumer project is not provided, in which case the flag should be set to &#39;true&#39;.
+Valid only when &#39;RuntimeType&#39; is set to CLOUD. The value must be set before the creation
+of any Apigee runtime instance and can be updated only when there are no runtime instances. When `null`, the `disable_vpc_peering` field will be omitted from the resulting object.
   - `display_name` (`string`): The display name of the Apigee organization. When `null`, the `display_name` field will be omitted from the resulting object.
   - `project_id` (`string`): The project ID associated with the Apigee organization.
   - `retention` (`string`): Optional. This setting is applicable only for organizations that are soft-deleted (i.e., BillingType
@@ -192,6 +203,22 @@ Terraform resource block to set or update the description field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `description` field.
+
+
+### fn withDisableVpcPeering
+
+```ts
+withDisableVpcPeering()
+```
+
+`google.bool.withDisableVpcPeering` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the disable_vpc_peering field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `disable_vpc_peering` field.
 
 
 ### fn withDisplayName

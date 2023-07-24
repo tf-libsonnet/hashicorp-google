@@ -49,6 +49,10 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-external_data_configurationgoogle_sheets_optionsnew)
   * [`obj external_data_configuration.hive_partitioning_options`](#obj-external_data_configurationhive_partitioning_options)
     * [`fn new()`](#fn-external_data_configurationhive_partitioning_optionsnew)
+  * [`obj external_data_configuration.json_options`](#obj-external_data_configurationjson_options)
+    * [`fn new()`](#fn-external_data_configurationjson_optionsnew)
+  * [`obj external_data_configuration.parquet_options`](#obj-external_data_configurationparquet_options)
+    * [`fn new()`](#fn-external_data_configurationparquet_optionsnew)
 * [`obj materialized_view`](#obj-materialized_view)
   * [`fn new()`](#fn-materialized_viewnew)
 * [`obj range_partitioning`](#obj-range_partitioning)
@@ -586,6 +590,8 @@ Terraform sub block.
   - `csv_options` (`list[obj]`): Additional properties to set if source_format is set to &#34;CSV&#34;. When `null`, the `csv_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.external_data_configuration.csv_options.new](#fn-external_data_configurationcsv_optionsnew) constructor.
   - `google_sheets_options` (`list[obj]`): Additional options if source_format is set to &#34;GOOGLE_SHEETS&#34;. When `null`, the `google_sheets_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.external_data_configuration.google_sheets_options.new](#fn-external_data_configurationgoogle_sheets_optionsnew) constructor.
   - `hive_partitioning_options` (`list[obj]`): When set, configures hive partitioning support. Not all storage formats support hive partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as will providing an invalid specification. When `null`, the `hive_partitioning_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.external_data_configuration.hive_partitioning_options.new](#fn-external_data_configurationhive_partitioning_optionsnew) constructor.
+  - `json_options` (`list[obj]`): Additional properties to set if sourceFormat is set to JSON.&#34; When `null`, the `json_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.external_data_configuration.json_options.new](#fn-external_data_configurationjson_optionsnew) constructor.
+  - `parquet_options` (`list[obj]`): Additional properties to set if sourceFormat is set to PARQUET.&#34; When `null`, the `parquet_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.external_data_configuration.parquet_options.new](#fn-external_data_configurationparquet_optionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `external_data_configuration` sub block.
@@ -689,6 +695,53 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `hive_partitioning_options` sub block.
+
+
+## obj external_data_configuration.json_options
+
+
+
+### fn external_data_configuration.json_options.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_table.external_data_configuration.json_options.new` constructs a new object with attributes and blocks configured for the `json_options`
+Terraform sub block.
+
+
+
+**Args**:
+  - `encoding` (`string`): The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8. When `null`, the `encoding` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `json_options` sub block.
+
+
+## obj external_data_configuration.parquet_options
+
+
+
+### fn external_data_configuration.parquet_options.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_table.external_data_configuration.parquet_options.new` constructs a new object with attributes and blocks configured for the `parquet_options`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enable_list_inference` (`bool`): Indicates whether to use schema inference specifically for Parquet LIST logical type. When `null`, the `enable_list_inference` field will be omitted from the resulting object.
+  - `enum_as_string` (`bool`): Indicates whether to infer Parquet ENUM logical type as STRING instead of BYTES by default. When `null`, the `enum_as_string` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `parquet_options` sub block.
 
 
 ## obj materialized_view
