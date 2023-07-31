@@ -38,6 +38,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-stream_configsbigquery_destinationnew)
     * [`obj stream_configs.bigquery_destination.schema_config`](#obj-stream_configsbigquery_destinationschema_config)
       * [`fn new()`](#fn-stream_configsbigquery_destinationschema_confignew)
+      * [`obj stream_configs.bigquery_destination.schema_config.last_updated_partition_config`](#obj-stream_configsbigquery_destinationschema_configlast_updated_partition_config)
+        * [`fn new()`](#fn-stream_configsbigquery_destinationschema_configlast_updated_partition_confignew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -570,9 +572,34 @@ value 2. The maximum depth allowed is 5.
   See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
  * ANALYTICS_V2: Analytics V2, similar to schema defined by the FHIR community, with added support for extensions with one or more occurrences and contained resources in stringified JSON.
  * LOSSLESS: A data-driven schema generated from the fields present in the FHIR data being exported, with no additional simplification. Default value: &#34;ANALYTICS&#34; Possible values: [&#34;ANALYTICS&#34;, &#34;ANALYTICS_V2&#34;, &#34;LOSSLESS&#34;] When `null`, the `schema_type` field will be omitted from the resulting object.
+  - `last_updated_partition_config` (`list[obj]`): The configuration for exported BigQuery tables to be partitioned by FHIR resource&#39;s last updated time column. When `null`, the `last_updated_partition_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.healthcare_fhir_store.stream_configs.bigquery_destination.schema_config.last_updated_partition_config.new](#fn-stream_configsstream_configsbigquery_destinationlast_updated_partition_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `schema_config` sub block.
+
+
+## obj stream_configs.bigquery_destination.schema_config.last_updated_partition_config
+
+
+
+### fn stream_configs.bigquery_destination.schema_config.last_updated_partition_config.new
+
+```ts
+new()
+```
+
+
+`google.healthcare_fhir_store.stream_configs.bigquery_destination.schema_config.last_updated_partition_config.new` constructs a new object with attributes and blocks configured for the `last_updated_partition_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `expiration_ms` (`string`): Number of milliseconds for which to keep the storage for a partition. When `null`, the `expiration_ms` field will be omitted from the resulting object.
+  - `type` (`string`): Type of partitioning. Possible values: [&#34;PARTITION_TYPE_UNSPECIFIED&#34;, &#34;HOUR&#34;, &#34;DAY&#34;, &#34;MONTH&#34;, &#34;YEAR&#34;]
+
+**Returns**:
+  - An attribute object that represents the `last_updated_partition_config` sub block.
 
 
 ## obj timeouts

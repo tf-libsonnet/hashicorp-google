@@ -49,6 +49,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-conditionscondition_monitoring_query_languagenew)
     * [`obj conditions.condition_monitoring_query_language.trigger`](#obj-conditionscondition_monitoring_query_languagetrigger)
       * [`fn new()`](#fn-conditionscondition_monitoring_query_languagetriggernew)
+  * [`obj conditions.condition_prometheus_query_language`](#obj-conditionscondition_prometheus_query_language)
+    * [`fn new()`](#fn-conditionscondition_prometheus_query_languagenew)
   * [`obj conditions.condition_threshold`](#obj-conditionscondition_threshold)
     * [`fn new()`](#fn-conditionscondition_thresholdnew)
     * [`obj conditions.condition_threshold.aggregations`](#obj-conditionscondition_thresholdaggregations)
@@ -530,6 +532,13 @@ continues to receive new data points. When `null`, the `condition_absent` sub bl
   - `condition_matched_log` (`list[obj]`): A condition that checks for log messages matching given constraints.
 If set, no other conditions can be present. When `null`, the `condition_matched_log` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_matched_log.new](#fn-conditionscondition_matched_lognew) constructor.
   - `condition_monitoring_query_language` (`list[obj]`): A Monitoring Query Language query that outputs a boolean stream When `null`, the `condition_monitoring_query_language` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_monitoring_query_language.new](#fn-conditionscondition_monitoring_query_languagenew) constructor.
+  - `condition_prometheus_query_language` (`list[obj]`): A Monitoring Query Language query that outputs a boolean stream
+
+A condition type that allows alert policies to be defined using
+Prometheus Query Language (PromQL).
+
+The PrometheusQueryLanguageCondition message contains information
+from a Prometheus alerting rule and its associated rule group. When `null`, the `condition_prometheus_query_language` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_prometheus_query_language.new](#fn-conditionscondition_prometheus_query_languagenew) constructor.
   - `condition_threshold` (`list[obj]`): A condition that compares a time series against a
 threshold. When `null`, the `condition_threshold` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_alert_policy.conditions.condition_threshold.new](#fn-conditionscondition_thresholdnew) constructor.
 
@@ -819,6 +828,69 @@ condition to be triggered. When `null`, the `percent` field will be omitted from
 
 **Returns**:
   - An attribute object that represents the `trigger` sub block.
+
+
+## obj conditions.condition_prometheus_query_language
+
+
+
+### fn conditions.condition_prometheus_query_language.new
+
+```ts
+new()
+```
+
+
+`google.monitoring_alert_policy.conditions.condition_prometheus_query_language.new` constructs a new object with attributes and blocks configured for the `condition_prometheus_query_language`
+Terraform sub block.
+
+
+
+**Args**:
+  - `alert_rule` (`string`): The alerting rule name of this alert in the corresponding Prometheus
+configuration file.
+
+Some external tools may require this field to be populated correctly
+in order to refer to the original Prometheus configuration file.
+The rule group name and the alert name are necessary to update the
+relevant AlertPolicies in case the definition of the rule group changes
+in the future.
+
+This field is optional. If this field is not empty, then it must be a
+valid Prometheus label name. When `null`, the `alert_rule` field will be omitted from the resulting object.
+  - `duration` (`string`): Alerts are considered firing once their PromQL expression evaluated
+to be &#34;true&#34; for this long. Alerts whose PromQL expression was not
+evaluated to be &#34;true&#34; for long enough are considered pending. The
+default value is zero. Must be zero or positive. When `null`, the `duration` field will be omitted from the resulting object.
+  - `evaluation_interval` (`string`): How often this rule should be evaluated. Must be a positive multiple
+of 30 seconds or missing. The default value is 30 seconds. If this
+PrometheusQueryLanguageCondition was generated from a Prometheus
+alerting rule, then this value should be taken from the enclosing
+rule group.
+  - `labels` (`obj`): Labels to add to or overwrite in the PromQL query result. Label names
+must be valid.
+
+Label values can be templatized by using variables. The only available
+variable names are the names of the labels in the PromQL result, including
+&#34;__name__&#34; and &#34;value&#34;. &#34;labels&#34; may be empty. This field is intended to be
+used for organizing and identifying the AlertPolicy When `null`, the `labels` field will be omitted from the resulting object.
+  - `query` (`string`): The PromQL expression to evaluate. Every evaluation cycle this
+expression is evaluated at the current time, and all resultant time
+series become pending/firing alerts. This field must not be empty.
+  - `rule_group` (`string`): The rule group name of this alert in the corresponding Prometheus
+configuration file.
+
+Some external tools may require this field to be populated correctly
+in order to refer to the original Prometheus configuration file.
+The rule group name and the alert name are necessary to update the
+relevant AlertPolicies in case the definition of the rule group changes
+in the future.
+
+This field is optional. If this field is not empty, then it must be a
+valid Prometheus label name. When `null`, the `rule_group` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `condition_prometheus_query_language` sub block.
 
 
 ## obj conditions.condition_threshold
