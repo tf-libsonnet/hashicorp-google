@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withChangeStreamRetention()`](#fn-withchangestreamretention)
 * [`fn withColumnFamily()`](#fn-withcolumnfamily)
 * [`fn withColumnFamilyMixin()`](#fn-withcolumnfamilymixin)
 * [`fn withDeletionProtection()`](#fn-withdeletionprotection)
@@ -58,6 +59,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `change_stream_retention` (`string`): Duration to retain change stream data for the table. Set to 0 to disable. Must be between 1 and 7 days. When `null`, the `change_stream_retention` field will be omitted from the resulting object.
   - `deletion_protection` (`string`): A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value. When `null`, the `deletion_protection` field will be omitted from the resulting object.
   - `instance_name` (`string`): The name of the Bigtable instance.
   - `name` (`string`): The name of the table. Must be 1-50 characters and must only contain hyphens, underscores, periods, letters and numbers.
@@ -88,6 +90,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `change_stream_retention` (`string`): Duration to retain change stream data for the table. Set to 0 to disable. Must be between 1 and 7 days. When `null`, the `change_stream_retention` field will be omitted from the resulting object.
   - `deletion_protection` (`string`): A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value. When `null`, the `deletion_protection` field will be omitted from the resulting object.
   - `instance_name` (`string`): The name of the Bigtable instance.
   - `name` (`string`): The name of the table. Must be 1-50 characters and must only contain hyphens, underscores, periods, letters and numbers.
@@ -98,6 +101,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `bigtable_table` resource into the root Terraform configuration.
+
+
+### fn withChangeStreamRetention
+
+```ts
+withChangeStreamRetention()
+```
+
+`google.string.withChangeStreamRetention` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the change_stream_retention field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `change_stream_retention` field.
 
 
 ### fn withColumnFamily

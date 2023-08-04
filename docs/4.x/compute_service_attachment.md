@@ -25,6 +25,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withNatSubnets()`](#fn-withnatsubnets)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withReconcileConnections()`](#fn-withreconcileconnections)
 * [`fn withRegion()`](#fn-withregion)
 * [`fn withTargetService()`](#fn-withtargetservice)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -83,6 +84,12 @@ following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
   - `nat_subnets` (`list`): An array of subnets that is provided for NAT in this service attachment.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `reconcile_connections` (`bool`): This flag determines whether a consumer accept/reject list change can reconcile the statuses of existing ACCEPTED or REJECTED PSC endpoints.
+
+If false, connection policy update will only affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain untouched regardless how the connection policy is modified .
+If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list.
+
+For newly created service attachment, this boolean defaults to true. When `null`, the `reconcile_connections` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where the resource resides. When `null`, the `region` field will be omitted from the resulting object.
   - `target_service` (`string`): The URL of a forwarding rule that represents the service identified by
 this service attachment.
@@ -132,6 +139,12 @@ following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
   - `nat_subnets` (`list`): An array of subnets that is provided for NAT in this service attachment.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `reconcile_connections` (`bool`): This flag determines whether a consumer accept/reject list change can reconcile the statuses of existing ACCEPTED or REJECTED PSC endpoints.
+
+If false, connection policy update will only affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain untouched regardless how the connection policy is modified .
+If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list.
+
+For newly created service attachment, this boolean defaults to true. When `null`, the `reconcile_connections` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where the resource resides. When `null`, the `region` field will be omitted from the resulting object.
   - `target_service` (`string`): The URL of a forwarding rule that represents the service identified by
 this service attachment.
@@ -306,6 +319,22 @@ Terraform resource block to set or update the project field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `project` field.
+
+
+### fn withReconcileConnections
+
+```ts
+withReconcileConnections()
+```
+
+`google.bool.withReconcileConnections` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the reconcile_connections field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `reconcile_connections` field.
 
 
 ### fn withRegion

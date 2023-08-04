@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDatabaseDialect()`](#fn-withdatabasedialect)
 * [`fn withDdl()`](#fn-withddl)
 * [`fn withDeletionProtection()`](#fn-withdeletionprotection)
+* [`fn withEnableDropProtection()`](#fn-withenabledropprotection)
 * [`fn withEncryptionConfig()`](#fn-withencryptionconfig)
 * [`fn withEncryptionConfigMixin()`](#fn-withencryptionconfigmixin)
 * [`fn withInstance()`](#fn-withinstance)
@@ -66,8 +67,15 @@ If it is not provided, &#34;GOOGLE_STANDARD_SQL&#34; will be used. Possible valu
 database. Statements can create tables, indexes, etc. These statements
 execute atomically with the creation of the database: if there is an
 error in any statement, the database is not created. When `null`, the `ddl` field will be omitted from the resulting object.
-  - `deletion_protection` (`bool`): Whether or not to allow Terraform to destroy the instance. Unless this field is set to false
-in Terraform state, a &#39;terraform destroy&#39; or &#39;terraform apply&#39; that would delete the instance will fail. When `null`, the `deletion_protection` field will be omitted from the resulting object.
+  - `deletion_protection` (`bool`): Whether or not to allow Terraform to destroy the database. Defaults to true. Unless this field is set to false
+in Terraform state, a &#39;terraform destroy&#39; or &#39;terraform apply&#39; that would delete the database will fail. When `null`, the `deletion_protection` field will be omitted from the resulting object.
+  - `enable_drop_protection` (`bool`): Whether drop protection is enabled for this database. Defaults to false.
+Drop protection is different from
+the &#34;deletion_protection&#34; attribute in the following ways:
+(1) &#34;deletion_protection&#34; only protects the database from deletions in Terraform.
+whereas setting “enableDropProtection” to true protects the database from deletions in all interfaces.
+(2) Setting &#34;enableDropProtection&#34; to true also prevents the deletion of the parent instance containing the database.
+&#34;deletion_protection&#34; attribute does not provide protection against the deletion of the parent instance. When `null`, the `enable_drop_protection` field will be omitted from the resulting object.
   - `instance` (`string`): The instance to create the database on.
   - `name` (`string`): A unique identifier for the database, which cannot be changed after
 the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
@@ -108,8 +116,15 @@ If it is not provided, &#34;GOOGLE_STANDARD_SQL&#34; will be used. Possible valu
 database. Statements can create tables, indexes, etc. These statements
 execute atomically with the creation of the database: if there is an
 error in any statement, the database is not created. When `null`, the `ddl` field will be omitted from the resulting object.
-  - `deletion_protection` (`bool`): Whether or not to allow Terraform to destroy the instance. Unless this field is set to false
-in Terraform state, a &#39;terraform destroy&#39; or &#39;terraform apply&#39; that would delete the instance will fail. When `null`, the `deletion_protection` field will be omitted from the resulting object.
+  - `deletion_protection` (`bool`): Whether or not to allow Terraform to destroy the database. Defaults to true. Unless this field is set to false
+in Terraform state, a &#39;terraform destroy&#39; or &#39;terraform apply&#39; that would delete the database will fail. When `null`, the `deletion_protection` field will be omitted from the resulting object.
+  - `enable_drop_protection` (`bool`): Whether drop protection is enabled for this database. Defaults to false.
+Drop protection is different from
+the &#34;deletion_protection&#34; attribute in the following ways:
+(1) &#34;deletion_protection&#34; only protects the database from deletions in Terraform.
+whereas setting “enableDropProtection” to true protects the database from deletions in all interfaces.
+(2) Setting &#34;enableDropProtection&#34; to true also prevents the deletion of the parent instance containing the database.
+&#34;deletion_protection&#34; attribute does not provide protection against the deletion of the parent instance. When `null`, the `enable_drop_protection` field will be omitted from the resulting object.
   - `instance` (`string`): The instance to create the database on.
   - `name` (`string`): A unique identifier for the database, which cannot be changed after
 the instance is created. Values are of the form [a-z][-a-z0-9]*[a-z0-9].
@@ -172,6 +187,22 @@ Terraform resource block to set or update the deletion_protection field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `deletion_protection` field.
+
+
+### fn withEnableDropProtection
+
+```ts
+withEnableDropProtection()
+```
+
+`google.bool.withEnableDropProtection` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the enable_drop_protection field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `enable_drop_protection` field.
 
 
 ### fn withEncryptionConfig

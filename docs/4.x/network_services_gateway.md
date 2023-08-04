@@ -89,7 +89,7 @@ limited to 1 port. Gateways of type &#39;OPEN_MESH&#39; listen on 0.0.0.0 and su
   - `scope` (`string`): Immutable. Scope determines how configuration across multiple Gateway instances are merged.
 The configuration for multiple Gateway instances with the same scope will be merged as presented as
 a single coniguration to the proxy/load balancer.
-Max length 64 characters. Scope should start with a letter and can only have letters, numbers, hyphens.
+Max length 64 characters. Scope should start with a letter and can only have letters, numbers, hyphens. When `null`, the `scope` field will be omitted from the resulting object.
   - `server_tls_policy` (`string`): A fully-qualified ServerTLSPolicy URL reference. Specifies how TLS traffic is terminated.
 If empty, TLS termination is disabled. When `null`, the `server_tls_policy` field will be omitted from the resulting object.
   - `subnetwork` (`string`): The relative resource name identifying the subnetwork in which this SWG is allocated.
@@ -145,7 +145,7 @@ limited to 1 port. Gateways of type &#39;OPEN_MESH&#39; listen on 0.0.0.0 and su
   - `scope` (`string`): Immutable. Scope determines how configuration across multiple Gateway instances are merged.
 The configuration for multiple Gateway instances with the same scope will be merged as presented as
 a single coniguration to the proxy/load balancer.
-Max length 64 characters. Scope should start with a letter and can only have letters, numbers, hyphens.
+Max length 64 characters. Scope should start with a letter and can only have letters, numbers, hyphens. When `null`, the `scope` field will be omitted from the resulting object.
   - `server_tls_policy` (`string`): A fully-qualified ServerTLSPolicy URL reference. Specifies how TLS traffic is terminated.
 If empty, TLS termination is disabled. When `null`, the `server_tls_policy` field will be omitted from the resulting object.
   - `subnetwork` (`string`): The relative resource name identifying the subnetwork in which this SWG is allocated.
