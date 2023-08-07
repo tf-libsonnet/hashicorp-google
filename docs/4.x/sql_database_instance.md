@@ -710,7 +710,7 @@ Terraform sub block.
   - `location` (`string`): Location of the backup configuration. When `null`, the `location` field will be omitted from the resulting object.
   - `point_in_time_recovery_enabled` (`bool`): True if Point-in-time recovery is enabled. When `null`, the `point_in_time_recovery_enabled` field will be omitted from the resulting object.
   - `start_time` (`string`): HH:MM format time indicating when backup configuration starts. When `null`, the `start_time` field will be omitted from the resulting object.
-  - `transaction_log_retention_days` (`number`): The number of days of transaction logs we retain for point in time restore, from 1-7. When `null`, the `transaction_log_retention_days` field will be omitted from the resulting object.
+  - `transaction_log_retention_days` (`number`): The number of days of transaction logs we retain for point in time restore, from 1-7. (For PostgreSQL Enterprise Plus instances, from 1 to 35.) When `null`, the `transaction_log_retention_days` field will be omitted from the resulting object.
   - `backup_retention_settings` (`list[obj]`): Set the `backup_retention_settings` field on the resulting object. When `null`, the `backup_retention_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.backup_configuration.backup_retention_settings.new](#fn-settingssettingsbackup_retention_settingsnew) constructor.
 
 **Returns**:

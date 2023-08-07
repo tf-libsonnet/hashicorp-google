@@ -393,6 +393,8 @@ project.
 * [dns_response_policy_rule](dns_response_policy_rule.md)
 * [document_ai_processor](document_ai_processor.md)
 * [document_ai_processor_default_version](document_ai_processor_default_version.md)
+* [document_ai_warehouse_document_schema](document_ai_warehouse_document_schema.md)
+* [document_ai_warehouse_location](document_ai_warehouse_location.md)
 * [endpoints_service](endpoints_service.md)
 * [endpoints_service_consumers_iam_binding](endpoints_service_consumers_iam_binding.md)
 * [endpoints_service_consumers_iam_member](endpoints_service_consumers_iam_member.md)

@@ -82,8 +82,8 @@ This should only be set when using an Internal address. When `null`, the `networ
   - `prefix_length` (`number`): The prefix length of the IP range. If not present, it means the
 address field is a single IP address.
 
-This field is not applicable to addresses with addressType=EXTERNAL,
-or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT When `null`, the `prefix_length` field will be omitted from the resulting object.
+This field is not applicable to addresses with addressType=INTERNAL
+when purpose=PRIVATE_SERVICE_CONNECT When `null`, the `prefix_length` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `purpose` (`string`): The purpose of the resource. Possible values include:
 
@@ -138,8 +138,8 @@ This should only be set when using an Internal address. When `null`, the `networ
   - `prefix_length` (`number`): The prefix length of the IP range. If not present, it means the
 address field is a single IP address.
 
-This field is not applicable to addresses with addressType=EXTERNAL,
-or addressType=INTERNAL when purpose=PRIVATE_SERVICE_CONNECT When `null`, the `prefix_length` field will be omitted from the resulting object.
+This field is not applicable to addresses with addressType=INTERNAL
+when purpose=PRIVATE_SERVICE_CONNECT When `null`, the `prefix_length` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `purpose` (`string`): The purpose of the resource. Possible values include:
 

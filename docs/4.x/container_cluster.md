@@ -41,6 +41,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withEnableAutopilot()`](#fn-withenableautopilot)
 * [`fn withEnableBinaryAuthorization()`](#fn-withenablebinaryauthorization)
 * [`fn withEnableIntranodeVisibility()`](#fn-withenableintranodevisibility)
+* [`fn withEnableK8SBetaApis()`](#fn-withenablek8sbetaapis)
+* [`fn withEnableK8SBetaApisMixin()`](#fn-withenablek8sbetaapismixin)
 * [`fn withEnableKubernetesAlpha()`](#fn-withenablekubernetesalpha)
 * [`fn withEnableL4IlbSubsetting()`](#fn-withenablel4ilbsubsetting)
 * [`fn withEnableLegacyAbac()`](#fn-withenablelegacyabac)
@@ -155,6 +157,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-default_snat_statusnew)
 * [`obj dns_config`](#obj-dns_config)
   * [`fn new()`](#fn-dns_confignew)
+* [`obj enable_k8s_beta_apis`](#obj-enable_k8s_beta_apis)
+  * [`fn new()`](#fn-enable_k8s_beta_apisnew)
 * [`obj gateway_api_config`](#obj-gateway_api_config)
   * [`fn new()`](#fn-gateway_api_confignew)
 * [`obj ip_allocation_policy`](#obj-ip_allocation_policy)
@@ -199,6 +203,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-node_configgcfs_confignew)
   * [`obj node_config.gvnic`](#obj-node_configgvnic)
     * [`fn new()`](#fn-node_configgvnicnew)
+  * [`obj node_config.host_maintenance_policy`](#obj-node_confighost_maintenance_policy)
+    * [`fn new()`](#fn-node_confighost_maintenance_policynew)
   * [`obj node_config.kubelet_config`](#obj-node_configkubelet_config)
     * [`fn new()`](#fn-node_configkubelet_confignew)
   * [`obj node_config.linux_node_config`](#obj-node_configlinux_node_config)
@@ -235,6 +241,8 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-node_poolnode_configgcfs_confignew)
     * [`obj node_pool.node_config.gvnic`](#obj-node_poolnode_configgvnic)
       * [`fn new()`](#fn-node_poolnode_configgvnicnew)
+    * [`obj node_pool.node_config.host_maintenance_policy`](#obj-node_poolnode_confighost_maintenance_policy)
+      * [`fn new()`](#fn-node_poolnode_confighost_maintenance_policynew)
     * [`obj node_pool.node_config.kubelet_config`](#obj-node_poolnode_configkubelet_config)
       * [`fn new()`](#fn-node_poolnode_configkubelet_confignew)
     * [`obj node_pool.node_config.linux_node_config`](#obj-node_poolnode_configlinux_node_config)
@@ -356,6 +364,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `database_encryption` (`list[obj]`): Application-layer Secrets Encryption settings. The object format is {state = string, key_name = string}. Valid values of state are: &#34;ENCRYPTED&#34;; &#34;DECRYPTED&#34;. key_name is the name of a CloudKMS key. When `null`, the `database_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.database_encryption.new](#fn-database_encryptionnew) constructor.
   - `default_snat_status` (`list[obj]`): Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when defaultSnatStatus is disabled. When `null`, the `default_snat_status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.default_snat_status.new](#fn-default_snat_statusnew) constructor.
   - `dns_config` (`list[obj]`): Configuration for Cloud DNS for Kubernetes Engine. When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.dns_config.new](#fn-dns_confignew) constructor.
+  - `enable_k8s_beta_apis` (`list[obj]`): Configuration for Kubernetes Beta APIs. When `null`, the `enable_k8s_beta_apis` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.enable_k8s_beta_apis.new](#fn-enable_k8s_beta_apisnew) constructor.
   - `gateway_api_config` (`list[obj]`): Configuration for GKE Gateway API controller. When `null`, the `gateway_api_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.gateway_api_config.new](#fn-gateway_api_confignew) constructor.
   - `ip_allocation_policy` (`list[obj]`): Configuration of cluster IP allocation for VPC-native clusters. Adding this block enables IP aliasing, making the cluster VPC-native instead of routes-based. When `null`, the `ip_allocation_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.ip_allocation_policy.new](#fn-ip_allocation_policynew) constructor.
   - `logging_config` (`list[obj]`): Logging configuration for the cluster. When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.logging_config.new](#fn-logging_confignew) constructor.
@@ -437,6 +446,7 @@ injecting into a complete block.
   - `database_encryption` (`list[obj]`): Application-layer Secrets Encryption settings. The object format is {state = string, key_name = string}. Valid values of state are: &#34;ENCRYPTED&#34;; &#34;DECRYPTED&#34;. key_name is the name of a CloudKMS key. When `null`, the `database_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.database_encryption.new](#fn-database_encryptionnew) constructor.
   - `default_snat_status` (`list[obj]`): Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when defaultSnatStatus is disabled. When `null`, the `default_snat_status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.default_snat_status.new](#fn-default_snat_statusnew) constructor.
   - `dns_config` (`list[obj]`): Configuration for Cloud DNS for Kubernetes Engine. When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.dns_config.new](#fn-dns_confignew) constructor.
+  - `enable_k8s_beta_apis` (`list[obj]`): Configuration for Kubernetes Beta APIs. When `null`, the `enable_k8s_beta_apis` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.enable_k8s_beta_apis.new](#fn-enable_k8s_beta_apisnew) constructor.
   - `gateway_api_config` (`list[obj]`): Configuration for GKE Gateway API controller. When `null`, the `gateway_api_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.gateway_api_config.new](#fn-gateway_api_confignew) constructor.
   - `ip_allocation_policy` (`list[obj]`): Configuration of cluster IP allocation for VPC-native clusters. Adding this block enables IP aliasing, making the cluster VPC-native instead of routes-based. When `null`, the `ip_allocation_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.ip_allocation_policy.new](#fn-ip_allocation_policynew) constructor.
   - `logging_config` (`list[obj]`): Logging configuration for the cluster. When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.logging_config.new](#fn-logging_confignew) constructor.
@@ -922,6 +932,43 @@ Terraform resource block to set or update the enable_intranode_visibility field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `enable_intranode_visibility` field.
+
+
+### fn withEnableK8SBetaApis
+
+```ts
+withEnableK8SBetaApis()
+```
+
+`google.list[obj].withEnableK8SBetaApis` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the enable_k8s_beta_apis field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withEnableK8SBetaApisMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `enable_k8s_beta_apis` field.
+
+
+### fn withEnableK8SBetaApisMixin
+
+```ts
+withEnableK8SBetaApisMixin()
+```
+
+`google.list[obj].withEnableK8SBetaApisMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the enable_k8s_beta_apis field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withEnableK8SBetaApis](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `enable_k8s_beta_apis` field.
 
 
 ### fn withEnableKubernetesAlpha
@@ -2657,6 +2704,29 @@ Terraform sub block.
   - An attribute object that represents the `dns_config` sub block.
 
 
+## obj enable_k8s_beta_apis
+
+
+
+### fn enable_k8s_beta_apis.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.enable_k8s_beta_apis.new` constructs a new object with attributes and blocks configured for the `enable_k8s_beta_apis`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled_apis` (`list`): Enabled Kubernetes Beta APIs.
+
+**Returns**:
+  - An attribute object that represents the `enable_k8s_beta_apis` sub block.
+
+
 ## obj gateway_api_config
 
 
@@ -3104,6 +3174,7 @@ Terraform sub block.
   - `ephemeral_storage_local_ssd_config` (`list[obj]`): Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. When `null`, the `ephemeral_storage_local_ssd_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.ephemeral_storage_local_ssd_config.new](#fn-node_configephemeral_storage_local_ssd_confignew) constructor.
   - `gcfs_config` (`list[obj]`): GCFS configuration for this node. When `null`, the `gcfs_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.gcfs_config.new](#fn-node_configgcfs_confignew) constructor.
   - `gvnic` (`list[obj]`): Enable or disable gvnic in the node pool. When `null`, the `gvnic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.gvnic.new](#fn-node_configgvnicnew) constructor.
+  - `host_maintenance_policy` (`list[obj]`): The maintenance policy for the hosts on which the GKE VMs run on. When `null`, the `host_maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.host_maintenance_policy.new](#fn-node_confighost_maintenance_policynew) constructor.
   - `kubelet_config` (`list[obj]`): Node kubelet configs. When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.kubelet_config.new](#fn-node_configkubelet_confignew) constructor.
   - `linux_node_config` (`list[obj]`): Parameters that can be configured on Linux nodes. When `null`, the `linux_node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.linux_node_config.new](#fn-node_configlinux_node_confignew) constructor.
   - `local_nvme_ssd_block_config` (`list[obj]`): Parameters for raw-block local NVMe SSDs. When `null`, the `local_nvme_ssd_block_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.local_nvme_ssd_block_config.new](#fn-node_configlocal_nvme_ssd_block_confignew) constructor.
@@ -3206,6 +3277,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `gvnic` sub block.
+
+
+## obj node_config.host_maintenance_policy
+
+
+
+### fn node_config.host_maintenance_policy.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_config.host_maintenance_policy.new` constructs a new object with attributes and blocks configured for the `host_maintenance_policy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `maintenance_interval` (`string`): .
+
+**Returns**:
+  - An attribute object that represents the `host_maintenance_policy` sub block.
 
 
 ## obj node_config.kubelet_config
@@ -3576,6 +3670,7 @@ Terraform sub block.
   - `ephemeral_storage_local_ssd_config` (`list[obj]`): Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. When `null`, the `ephemeral_storage_local_ssd_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.ephemeral_storage_local_ssd_config.new](#fn-node_poolnode_poolephemeral_storage_local_ssd_confignew) constructor.
   - `gcfs_config` (`list[obj]`): GCFS configuration for this node. When `null`, the `gcfs_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.gcfs_config.new](#fn-node_poolnode_poolgcfs_confignew) constructor.
   - `gvnic` (`list[obj]`): Enable or disable gvnic in the node pool. When `null`, the `gvnic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.gvnic.new](#fn-node_poolnode_poolgvnicnew) constructor.
+  - `host_maintenance_policy` (`list[obj]`): The maintenance policy for the hosts on which the GKE VMs run on. When `null`, the `host_maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.host_maintenance_policy.new](#fn-node_poolnode_poolhost_maintenance_policynew) constructor.
   - `kubelet_config` (`list[obj]`): Node kubelet configs. When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.kubelet_config.new](#fn-node_poolnode_poolkubelet_confignew) constructor.
   - `linux_node_config` (`list[obj]`): Parameters that can be configured on Linux nodes. When `null`, the `linux_node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.linux_node_config.new](#fn-node_poolnode_poollinux_node_confignew) constructor.
   - `local_nvme_ssd_block_config` (`list[obj]`): Parameters for raw-block local NVMe SSDs. When `null`, the `local_nvme_ssd_block_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.local_nvme_ssd_block_config.new](#fn-node_poolnode_poollocal_nvme_ssd_block_confignew) constructor.
@@ -3678,6 +3773,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `gvnic` sub block.
+
+
+## obj node_pool.node_config.host_maintenance_policy
+
+
+
+### fn node_pool.node_config.host_maintenance_policy.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_pool.node_config.host_maintenance_policy.new` constructs a new object with attributes and blocks configured for the `host_maintenance_policy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `maintenance_interval` (`string`): .
+
+**Returns**:
+  - An attribute object that represents the `host_maintenance_policy` sub block.
 
 
 ## obj node_pool.node_config.kubelet_config
@@ -3889,6 +4007,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `policy_name` (`string`): If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned. When `null`, the `policy_name` field will be omitted from the resulting object.
   - `type` (`string`): Type defines the type of placement policy
 
 **Returns**:
@@ -4104,7 +4223,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `enable_private_endpoint` (`bool`): When true, the cluster&#39;s private endpoint is used as the cluster endpoint and access through the public endpoint is disabled. When false, either endpoint can be used. This field only applies to private clusters, when enable_private_nodes is true. When `null`, the `enable_private_endpoint` field will be omitted from the resulting object.
+  - `enable_private_endpoint` (`bool`): When true, the cluster&#39;s private endpoint is used as the cluster endpoint and access through the public endpoint is disabled. When false, either endpoint can be used. When `null`, the `enable_private_endpoint` field will be omitted from the resulting object.
   - `enable_private_nodes` (`bool`): Enables the private cluster feature, creating a private endpoint on the cluster. In a private cluster, nodes only have RFC 1918 private addresses and communicate with the master&#39;s private endpoint via private networking. When `null`, the `enable_private_nodes` field will be omitted from the resulting object.
   - `master_ipv4_cidr_block` (`string`): The IP range in CIDR notation to use for the hosted master network. This range will be used for assigning private IP addresses to the cluster master(s) and the ILB VIP. This range must not overlap with any other ranges in use within the cluster&#39;s network, and it must be a /28 subnet. See Private Cluster Limitations for more details. This field only applies to private clusters, when enable_private_nodes is true. When `null`, the `master_ipv4_cidr_block` field will be omitted from the resulting object.
   - `private_endpoint_subnetwork` (`string`): Subnetwork in cluster&#39;s network where master&#39;s endpoint will be provisioned. When `null`, the `private_endpoint_subnetwork` field will be omitted from the resulting object.

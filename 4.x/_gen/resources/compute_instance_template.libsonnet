@@ -298,10 +298,21 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     },
   },
   scheduling:: {
-    '#new':: d.fn(help='\n`google.compute_instance_template.scheduling.new` constructs a new object with attributes and blocks configured for the `scheduling`\nTerraform sub block.\n\n\n\n**Args**:\n  - `automatic_restart` (`bool`): Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). This defaults to true. When `null`, the `automatic_restart` field will be omitted from the resulting object.\n  - `instance_termination_action` (`string`): Specifies the action GCE should take when SPOT VM is preempted. When `null`, the `instance_termination_action` field will be omitted from the resulting object.\n  - `min_node_cpus` (`number`): Minimum number of cpus for the instance. When `null`, the `min_node_cpus` field will be omitted from the resulting object.\n  - `on_host_maintenance` (`string`): Defines the maintenance behavior for this instance. When `null`, the `on_host_maintenance` field will be omitted from the resulting object.\n  - `preemptible` (`bool`): Allows instance to be preempted. This defaults to false. When `null`, the `preemptible` field will be omitted from the resulting object.\n  - `provisioning_model` (`string`): Whether the instance is spot. If this is set as SPOT. When `null`, the `provisioning_model` field will be omitted from the resulting object.\n  - `node_affinities` (`list[obj]`): Specifies node affinities or anti-affinities to determine which sole-tenant nodes your instances and managed instance groups will use as host systems. When `null`, the `node_affinities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.scheduling.node_affinities.new](#fn-schedulingnode_affinitiesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `scheduling` sub block.\n', args=[]),
+    local_ssd_recovery_timeout:: {
+      '#new':: d.fn(help='\n`google.compute_instance_template.scheduling.local_ssd_recovery_timeout.new` constructs a new object with attributes and blocks configured for the `local_ssd_recovery_timeout`\nTerraform sub block.\n\n\n\n**Args**:\n  - `nanos` (`number`): Span of time that&#39;s a fraction of a second at nanosecond\nresolution. Durations less than one second are represented\nwith a 0 seconds field and a positive nanos field. Must\nbe from 0 to 999,999,999 inclusive. When `null`, the `nanos` field will be omitted from the resulting object.\n  - `seconds` (`number`): Span of time at a resolution of a second.\nMust be from 0 to 315,576,000,000 inclusive.\n\n**Returns**:\n  - An attribute object that represents the `local_ssd_recovery_timeout` sub block.\n', args=[]),
+      new(
+        seconds,
+        nanos=null
+      ):: std.prune(a={
+        nanos: nanos,
+        seconds: seconds,
+      }),
+    },
+    '#new':: d.fn(help='\n`google.compute_instance_template.scheduling.new` constructs a new object with attributes and blocks configured for the `scheduling`\nTerraform sub block.\n\n\n\n**Args**:\n  - `automatic_restart` (`bool`): Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). This defaults to true. When `null`, the `automatic_restart` field will be omitted from the resulting object.\n  - `instance_termination_action` (`string`): Specifies the action GCE should take when SPOT VM is preempted. When `null`, the `instance_termination_action` field will be omitted from the resulting object.\n  - `min_node_cpus` (`number`): Minimum number of cpus for the instance. When `null`, the `min_node_cpus` field will be omitted from the resulting object.\n  - `on_host_maintenance` (`string`): Defines the maintenance behavior for this instance. When `null`, the `on_host_maintenance` field will be omitted from the resulting object.\n  - `preemptible` (`bool`): Allows instance to be preempted. This defaults to false. When `null`, the `preemptible` field will be omitted from the resulting object.\n  - `provisioning_model` (`string`): Whether the instance is spot. If this is set as SPOT. When `null`, the `provisioning_model` field will be omitted from the resulting object.\n  - `local_ssd_recovery_timeout` (`list[obj]`): Specifies the maximum amount of time a Local Ssd Vm should wait while\n  recovery of the Local Ssd state is attempted. Its value should be in\n  between 0 and 168 hours with hour granularity and the default value being 1\n  hour. When `null`, the `local_ssd_recovery_timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.scheduling.local_ssd_recovery_timeout.new](#fn-schedulinglocal_ssd_recovery_timeoutnew) constructor.\n  - `node_affinities` (`list[obj]`): Specifies node affinities or anti-affinities to determine which sole-tenant nodes your instances and managed instance groups will use as host systems. When `null`, the `node_affinities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.scheduling.node_affinities.new](#fn-schedulingnode_affinitiesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `scheduling` sub block.\n', args=[]),
     new(
       automatic_restart=null,
       instance_termination_action=null,
+      local_ssd_recovery_timeout=null,
       min_node_cpus=null,
       node_affinities=null,
       on_host_maintenance=null,
@@ -310,6 +321,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ):: std.prune(a={
       automatic_restart: automatic_restart,
       instance_termination_action: instance_termination_action,
+      local_ssd_recovery_timeout: local_ssd_recovery_timeout,
       min_node_cpus: min_node_cpus,
       node_affinities: node_affinities,
       on_host_maintenance: on_host_maintenance,

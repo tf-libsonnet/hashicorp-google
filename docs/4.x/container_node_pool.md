@@ -57,6 +57,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-node_configgcfs_confignew)
   * [`obj node_config.gvnic`](#obj-node_configgvnic)
     * [`fn new()`](#fn-node_configgvnicnew)
+  * [`obj node_config.host_maintenance_policy`](#obj-node_confighost_maintenance_policy)
+    * [`fn new()`](#fn-node_confighost_maintenance_policynew)
   * [`obj node_config.kubelet_config`](#obj-node_configkubelet_config)
     * [`fn new()`](#fn-node_configkubelet_confignew)
   * [`obj node_config.linux_node_config`](#obj-node_configlinux_node_config)
@@ -734,6 +736,7 @@ Terraform sub block.
   - `ephemeral_storage_local_ssd_config` (`list[obj]`): Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. When `null`, the `ephemeral_storage_local_ssd_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.ephemeral_storage_local_ssd_config.new](#fn-node_configephemeral_storage_local_ssd_confignew) constructor.
   - `gcfs_config` (`list[obj]`): GCFS configuration for this node. When `null`, the `gcfs_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.gcfs_config.new](#fn-node_configgcfs_confignew) constructor.
   - `gvnic` (`list[obj]`): Enable or disable gvnic in the node pool. When `null`, the `gvnic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.gvnic.new](#fn-node_configgvnicnew) constructor.
+  - `host_maintenance_policy` (`list[obj]`): The maintenance policy for the hosts on which the GKE VMs run on. When `null`, the `host_maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.host_maintenance_policy.new](#fn-node_confighost_maintenance_policynew) constructor.
   - `kubelet_config` (`list[obj]`): Node kubelet configs. When `null`, the `kubelet_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.kubelet_config.new](#fn-node_configkubelet_confignew) constructor.
   - `linux_node_config` (`list[obj]`): Parameters that can be configured on Linux nodes. When `null`, the `linux_node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.linux_node_config.new](#fn-node_configlinux_node_confignew) constructor.
   - `local_nvme_ssd_block_config` (`list[obj]`): Parameters for raw-block local NVMe SSDs. When `null`, the `local_nvme_ssd_block_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.local_nvme_ssd_block_config.new](#fn-node_configlocal_nvme_ssd_block_confignew) constructor.
@@ -836,6 +839,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `gvnic` sub block.
+
+
+## obj node_config.host_maintenance_policy
+
+
+
+### fn node_config.host_maintenance_policy.new
+
+```ts
+new()
+```
+
+
+`google.container_node_pool.node_config.host_maintenance_policy.new` constructs a new object with attributes and blocks configured for the `host_maintenance_policy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `maintenance_interval` (`string`): .
+
+**Returns**:
+  - An attribute object that represents the `host_maintenance_policy` sub block.
 
 
 ## obj node_config.kubelet_config
@@ -1047,6 +1073,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `policy_name` (`string`): If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned. When `null`, the `policy_name` field will be omitted from the resulting object.
   - `type` (`string`): Type defines the type of placement policy
 
 **Returns**:

@@ -15,10 +15,25 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAuthorizedDomains()`](#fn-withauthorizeddomains)
 * [`fn withAutodeleteAnonymousUsers()`](#fn-withautodeleteanonymoususers)
+* [`fn withBlockingFunctions()`](#fn-withblockingfunctions)
+* [`fn withBlockingFunctionsMixin()`](#fn-withblockingfunctionsmixin)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withQuota()`](#fn-withquota)
+* [`fn withQuotaMixin()`](#fn-withquotamixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj blocking_functions`](#obj-blocking_functions)
+  * [`fn new()`](#fn-blocking_functionsnew)
+  * [`obj blocking_functions.forward_inbound_credentials`](#obj-blocking_functionsforward_inbound_credentials)
+    * [`fn new()`](#fn-blocking_functionsforward_inbound_credentialsnew)
+  * [`obj blocking_functions.triggers`](#obj-blocking_functionstriggers)
+    * [`fn new()`](#fn-blocking_functionstriggersnew)
+* [`obj quota`](#obj-quota)
+  * [`fn new()`](#fn-quotanew)
+  * [`obj quota.sign_up_quota_config`](#obj-quotasign_up_quota_config)
+    * [`fn new()`](#fn-quotasign_up_quota_confignew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -51,8 +66,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `authorized_domains` (`list`): List of domains authorized for OAuth redirects. When `null`, the `authorized_domains` field will be omitted from the resulting object.
   - `autodelete_anonymous_users` (`bool`): Whether anonymous users will be auto-deleted after a period of 30 days When `null`, the `autodelete_anonymous_users` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.
+  - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -77,12 +95,31 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `authorized_domains` (`list`): List of domains authorized for OAuth redirects. When `null`, the `authorized_domains` field will be omitted from the resulting object.
   - `autodelete_anonymous_users` (`bool`): Whether anonymous users will be auto-deleted after a period of 30 days When `null`, the `autodelete_anonymous_users` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.
+  - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `identity_platform_config` resource into the root Terraform configuration.
+
+
+### fn withAuthorizedDomains
+
+```ts
+withAuthorizedDomains()
+```
+
+`google.list.withAuthorizedDomains` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the authorized_domains field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `authorized_domains` field.
 
 
 ### fn withAutodeleteAnonymousUsers
@@ -101,6 +138,43 @@ Terraform resource block to set or update the autodelete_anonymous_users field.
   - `value` (`bool`): The value to set for the `autodelete_anonymous_users` field.
 
 
+### fn withBlockingFunctions
+
+```ts
+withBlockingFunctions()
+```
+
+`google.list[obj].withBlockingFunctions` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the blocking_functions field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withBlockingFunctionsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `blocking_functions` field.
+
+
+### fn withBlockingFunctionsMixin
+
+```ts
+withBlockingFunctionsMixin()
+```
+
+`google.list[obj].withBlockingFunctionsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the blocking_functions field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withBlockingFunctions](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `blocking_functions` field.
+
+
 ### fn withProject
 
 ```ts
@@ -115,6 +189,43 @@ Terraform resource block to set or update the project field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `project` field.
+
+
+### fn withQuota
+
+```ts
+withQuota()
+```
+
+`google.list[obj].withQuota` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the quota field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withQuotaMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `quota` field.
+
+
+### fn withQuotaMixin
+
+```ts
+withQuotaMixin()
+```
+
+`google.list[obj].withQuotaMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the quota field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withQuota](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `quota` field.
 
 
 ### fn withTimeouts
@@ -151,6 +262,127 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj blocking_functions
+
+
+
+### fn blocking_functions.new
+
+```ts
+new()
+```
+
+
+`google.identity_platform_config.blocking_functions.new` constructs a new object with attributes and blocks configured for the `blocking_functions`
+Terraform sub block.
+
+
+
+**Args**:
+  - `forward_inbound_credentials` (`list[obj]`): The user credentials to include in the JWT payload that is sent to the registered Blocking Functions. When `null`, the `forward_inbound_credentials` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.forward_inbound_credentials.new](#fn-blocking_functionsforward_inbound_credentialsnew) constructor.
+  - `triggers` (`list[obj]`): Map of Trigger to event type. Key should be one of the supported event types: &#34;beforeCreate&#34;, &#34;beforeSignIn&#34;. When `null`, the `triggers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.triggers.new](#fn-blocking_functionstriggersnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `blocking_functions` sub block.
+
+
+## obj blocking_functions.forward_inbound_credentials
+
+
+
+### fn blocking_functions.forward_inbound_credentials.new
+
+```ts
+new()
+```
+
+
+`google.identity_platform_config.blocking_functions.forward_inbound_credentials.new` constructs a new object with attributes and blocks configured for the `forward_inbound_credentials`
+Terraform sub block.
+
+
+
+**Args**:
+  - `access_token` (`bool`): Whether to pass the user&#39;s OAuth identity provider&#39;s access token. When `null`, the `access_token` field will be omitted from the resulting object.
+  - `id_token` (`bool`): Whether to pass the user&#39;s OIDC identity provider&#39;s ID token. When `null`, the `id_token` field will be omitted from the resulting object.
+  - `refresh_token` (`bool`): Whether to pass the user&#39;s OAuth identity provider&#39;s refresh token. When `null`, the `refresh_token` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `forward_inbound_credentials` sub block.
+
+
+## obj blocking_functions.triggers
+
+
+
+### fn blocking_functions.triggers.new
+
+```ts
+new()
+```
+
+
+`google.identity_platform_config.blocking_functions.triggers.new` constructs a new object with attributes and blocks configured for the `triggers`
+Terraform sub block.
+
+
+
+**Args**:
+  - `event_type` (`string`): Set the `event_type` field on the resulting object.
+  - `function_uri` (`string`): HTTP URI trigger for the Cloud Function.
+
+**Returns**:
+  - An attribute object that represents the `triggers` sub block.
+
+
+## obj quota
+
+
+
+### fn quota.new
+
+```ts
+new()
+```
+
+
+`google.identity_platform_config.quota.new` constructs a new object with attributes and blocks configured for the `quota`
+Terraform sub block.
+
+
+
+**Args**:
+  - `sign_up_quota_config` (`list[obj]`): Quota for the Signup endpoint, if overwritten. Signup quota is measured in sign ups per project per hour per IP. When `null`, the `sign_up_quota_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.sign_up_quota_config.new](#fn-quotasign_up_quota_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `quota` sub block.
+
+
+## obj quota.sign_up_quota_config
+
+
+
+### fn quota.sign_up_quota_config.new
+
+```ts
+new()
+```
+
+
+`google.identity_platform_config.quota.sign_up_quota_config.new` constructs a new object with attributes and blocks configured for the `sign_up_quota_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `quota` (`number`): A sign up APIs quota that customers can override temporarily. When `null`, the `quota` field will be omitted from the resulting object.
+  - `quota_duration` (`string`): How long this quota will be active for. It is measurred in seconds, e.g., Example: &#34;9.615s&#34;. When `null`, the `quota_duration` field will be omitted from the resulting object.
+  - `start_time` (`string`): When this quota will take affect. When `null`, the `start_time` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `sign_up_quota_config` sub block.
 
 
 ## obj timeouts
