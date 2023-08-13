@@ -81,6 +81,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-reservation_affinityspecific_reservationnew)
 * [`obj scheduling`](#obj-scheduling)
   * [`fn new()`](#fn-schedulingnew)
+  * [`obj scheduling.local_ssd_recovery_timeout`](#obj-schedulinglocal_ssd_recovery_timeout)
+    * [`fn new()`](#fn-schedulinglocal_ssd_recovery_timeoutnew)
   * [`obj scheduling.node_affinities`](#obj-schedulingnode_affinities)
     * [`fn new()`](#fn-schedulingnode_affinitiesnew)
 * [`obj service_account`](#obj-service_account)
@@ -1222,10 +1224,42 @@ Terraform sub block.
   - `on_host_maintenance` (`string`): Defines the maintenance behavior for this instance. When `null`, the `on_host_maintenance` field will be omitted from the resulting object.
   - `preemptible` (`bool`): Allows instance to be preempted. This defaults to false. When `null`, the `preemptible` field will be omitted from the resulting object.
   - `provisioning_model` (`string`): Whether the instance is spot. If this is set as SPOT. When `null`, the `provisioning_model` field will be omitted from the resulting object.
+  - `local_ssd_recovery_timeout` (`list[obj]`): Specifies the maximum amount of time a Local Ssd Vm should wait while
+  recovery of the Local Ssd state is attempted. Its value should be in
+  between 0 and 168 hours with hour granularity and the default value being 1
+  hour. When `null`, the `local_ssd_recovery_timeout` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.scheduling.local_ssd_recovery_timeout.new](#fn-schedulinglocal_ssd_recovery_timeoutnew) constructor.
   - `node_affinities` (`list[obj]`): Specifies node affinities or anti-affinities to determine which sole-tenant nodes your instances and managed instance groups will use as host systems. When `null`, the `node_affinities` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.scheduling.node_affinities.new](#fn-schedulingnode_affinitiesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `scheduling` sub block.
+
+
+## obj scheduling.local_ssd_recovery_timeout
+
+
+
+### fn scheduling.local_ssd_recovery_timeout.new
+
+```ts
+new()
+```
+
+
+`google.compute_instance_template.scheduling.local_ssd_recovery_timeout.new` constructs a new object with attributes and blocks configured for the `local_ssd_recovery_timeout`
+Terraform sub block.
+
+
+
+**Args**:
+  - `nanos` (`number`): Span of time that&#39;s a fraction of a second at nanosecond
+resolution. Durations less than one second are represented
+with a 0 seconds field and a positive nanos field. Must
+be from 0 to 999,999,999 inclusive. When `null`, the `nanos` field will be omitted from the resulting object.
+  - `seconds` (`number`): Span of time at a resolution of a second.
+Must be from 0 to 315,576,000,000 inclusive.
+
+**Returns**:
+  - An attribute object that represents the `local_ssd_recovery_timeout` sub block.
 
 
 ## obj scheduling.node_affinities

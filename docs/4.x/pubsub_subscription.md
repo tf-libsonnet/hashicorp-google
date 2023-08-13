@@ -45,6 +45,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-expiration_policynew)
 * [`obj push_config`](#obj-push_config)
   * [`fn new()`](#fn-push_confignew)
+  * [`obj push_config.no_wrapper`](#obj-push_configno_wrapper)
+    * [`fn new()`](#fn-push_configno_wrappernew)
   * [`obj push_config.oidc_token`](#obj-push_configoidc_token)
     * [`fn new()`](#fn-push_configoidc_tokennew)
 * [`obj retry_policy`](#obj-retry_policy)
@@ -787,11 +789,38 @@ The possible values for this attribute are:
   - `push_endpoint` (`string`): A URL locating the endpoint to which messages should be pushed.
 For example, a Webhook endpoint might use
 &#34;https://example.com/push&#34;.
+  - `no_wrapper` (`list[obj]`): When set, the payload to the push endpoint is not wrapped.Sets the
+&#39;data&#39; field as the HTTP body for delivery. When `null`, the `no_wrapper` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.push_config.no_wrapper.new](#fn-push_configno_wrappernew) constructor.
   - `oidc_token` (`list[obj]`): If specified, Pub/Sub will generate and attach an OIDC JWT token as
 an Authorization header in the HTTP request for every pushed message. When `null`, the `oidc_token` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.push_config.oidc_token.new](#fn-push_configoidc_tokennew) constructor.
 
 **Returns**:
   - An attribute object that represents the `push_config` sub block.
+
+
+## obj push_config.no_wrapper
+
+
+
+### fn push_config.no_wrapper.new
+
+```ts
+new()
+```
+
+
+`google.pubsub_subscription.push_config.no_wrapper.new` constructs a new object with attributes and blocks configured for the `no_wrapper`
+Terraform sub block.
+
+
+
+**Args**:
+  - `write_metadata` (`bool`): When true, writes the Pub/Sub message metadata to
+&#39;x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt;&#39; headers of the HTTP request. Writes the
+Pub/Sub message attributes to &#39;&lt;KEY&gt;:&lt;VAL&gt;&#39; headers of the HTTP request.
+
+**Returns**:
+  - An attribute object that represents the `no_wrapper` sub block.
 
 
 ## obj push_config.oidc_token

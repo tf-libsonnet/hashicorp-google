@@ -18,6 +18,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAutomatedBackupPolicy()`](#fn-withautomatedbackuppolicy)
 * [`fn withAutomatedBackupPolicyMixin()`](#fn-withautomatedbackuppolicymixin)
 * [`fn withClusterId()`](#fn-withclusterid)
+* [`fn withContinuousBackupConfig()`](#fn-withcontinuousbackupconfig)
+* [`fn withContinuousBackupConfigMixin()`](#fn-withcontinuousbackupconfigmixin)
 * [`fn withDisplayName()`](#fn-withdisplayname)
 * [`fn withEncryptionConfig()`](#fn-withencryptionconfig)
 * [`fn withEncryptionConfigMixin()`](#fn-withencryptionconfigmixin)
@@ -41,6 +43,10 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-automated_backup_policyweekly_schedulenew)
     * [`obj automated_backup_policy.weekly_schedule.start_times`](#obj-automated_backup_policyweekly_schedulestart_times)
       * [`fn new()`](#fn-automated_backup_policyweekly_schedulestart_timesnew)
+* [`obj continuous_backup_config`](#obj-continuous_backup_config)
+  * [`fn new()`](#fn-continuous_backup_confignew)
+  * [`obj continuous_backup_config.encryption_config`](#obj-continuous_backup_configencryption_config)
+    * [`fn new()`](#fn-continuous_backup_configencryption_confignew)
 * [`obj encryption_config`](#obj-encryption_config)
   * [`fn new()`](#fn-encryption_confignew)
 * [`obj initial_user`](#obj-initial_user)
@@ -85,9 +91,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 &#34;projects/{projectNumber}/global/networks/{network_id}&#34;.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `automated_backup_policy` (`list[obj]`): The automated backup policy for this cluster.
+  - `automated_backup_policy` (`list[obj]`): The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default. When `null`, the `automated_backup_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.automated_backup_policy.new](#fn-automated_backup_policynew) constructor.
+  - `continuous_backup_config` (`list[obj]`): The continuous backup config for this cluster.
 
-If no policy is provided then the default policy will be used. The default policy takes one backup a day, has a backup window of 1 hour, and retains backups for 14 days. When `null`, the `automated_backup_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.automated_backup_policy.new](#fn-automated_backup_policynew) constructor.
+If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days. When `null`, the `continuous_backup_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.continuous_backup_config.new](#fn-continuous_backup_confignew) constructor.
   - `encryption_config` (`list[obj]`): EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.encryption_config.new](#fn-encryption_confignew) constructor.
   - `initial_user` (`list[obj]`): Initial user to setup during cluster creation. When `null`, the `initial_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.initial_user.new](#fn-initial_usernew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.timeouts.new](#fn-timeoutsnew) constructor.
@@ -122,9 +129,10 @@ injecting into a complete block.
 
 &#34;projects/{projectNumber}/global/networks/{network_id}&#34;.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `automated_backup_policy` (`list[obj]`): The automated backup policy for this cluster.
+  - `automated_backup_policy` (`list[obj]`): The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default. When `null`, the `automated_backup_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.automated_backup_policy.new](#fn-automated_backup_policynew) constructor.
+  - `continuous_backup_config` (`list[obj]`): The continuous backup config for this cluster.
 
-If no policy is provided then the default policy will be used. The default policy takes one backup a day, has a backup window of 1 hour, and retains backups for 14 days. When `null`, the `automated_backup_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.automated_backup_policy.new](#fn-automated_backup_policynew) constructor.
+If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days. When `null`, the `continuous_backup_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.continuous_backup_config.new](#fn-continuous_backup_confignew) constructor.
   - `encryption_config` (`list[obj]`): EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.encryption_config.new](#fn-encryption_confignew) constructor.
   - `initial_user` (`list[obj]`): Initial user to setup during cluster creation. When `null`, the `initial_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.initial_user.new](#fn-initial_usernew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.timeouts.new](#fn-timeoutsnew) constructor.
@@ -184,6 +192,43 @@ Terraform resource block to set or update the cluster_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `cluster_id` field.
+
+
+### fn withContinuousBackupConfig
+
+```ts
+withContinuousBackupConfig()
+```
+
+`google.list[obj].withContinuousBackupConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the continuous_backup_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withContinuousBackupConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `continuous_backup_config` field.
+
+
+### fn withContinuousBackupConfigMixin
+
+```ts
+withContinuousBackupConfigMixin()
+```
+
+`google.list[obj].withContinuousBackupConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the continuous_backup_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withContinuousBackupConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `continuous_backup_config` field.
 
 
 ### fn withDisplayName
@@ -528,6 +573,56 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `start_times` sub block.
+
+
+## obj continuous_backup_config
+
+
+
+### fn continuous_backup_config.new
+
+```ts
+new()
+```
+
+
+`google.alloydb_cluster.continuous_backup_config.new` constructs a new object with attributes and blocks configured for the `continuous_backup_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Whether continuous backup recovery is enabled. If not set, defaults to true. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `recovery_window_days` (`number`): The numbers of days that are eligible to restore from using PITR. To support the entire recovery window, backups and logs are retained for one day more than the recovery window.
+
+If not set, defaults to 14 days. When `null`, the `recovery_window_days` field will be omitted from the resulting object.
+  - `encryption_config` (`list[obj]`): EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.continuous_backup_config.encryption_config.new](#fn-continuous_backup_configencryption_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `continuous_backup_config` sub block.
+
+
+## obj continuous_backup_config.encryption_config
+
+
+
+### fn continuous_backup_config.encryption_config.new
+
+```ts
+new()
+```
+
+
+`google.alloydb_cluster.continuous_backup_config.encryption_config.new` constructs a new object with attributes and blocks configured for the `encryption_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `kms_key_name` (`string`): The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME]. When `null`, the `kms_key_name` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `encryption_config` sub block.
 
 
 ## obj encryption_config

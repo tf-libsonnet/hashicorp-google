@@ -18,6 +18,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAddress()`](#fn-withaddress)
 * [`fn withAddressType()`](#fn-withaddresstype)
 * [`fn withDescription()`](#fn-withdescription)
+* [`fn withIpVersion()`](#fn-withipversion)
+* [`fn withIpv6EndpointType()`](#fn-withipv6endpointtype)
 * [`fn withName()`](#fn-withname)
 * [`fn withNetwork()`](#fn-withnetwork)
 * [`fn withNetworkTier()`](#fn-withnetworktier)
@@ -60,13 +62,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `address` (`string`): The static external IP address represented by this resource. Only
-IPv4 is supported. An address may only be specified for INTERNAL
-address types. The IP address must be inside the specified subnetwork,
+  - `address` (`string`): The static external IP address represented by this resource.
+The IP address must be inside the specified subnetwork,
 if any. Set by the API if undefined. When `null`, the `address` field will be omitted from the resulting object.
   - `address_type` (`string`): The type of address to reserve.
 Note: if you set this argument&#39;s value as &#39;INTERNAL&#39; you need to leave the &#39;network_tier&#39; argument unset in that resource block. Default value: &#34;EXTERNAL&#34; Possible values: [&#34;INTERNAL&#34;, &#34;EXTERNAL&#34;] When `null`, the `address_type` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `ip_version` (`string`): The IP Version that will be used by this address. The default value is &#39;IPV4&#39;. Possible values: [&#34;IPV4&#34;, &#34;IPV6&#34;] When `null`, the `ip_version` field will be omitted from the resulting object.
+  - `ipv6_endpoint_type` (`string`): The endpoint type of this address, which should be VM or NETLB. This is
+used for deciding which type of endpoint this address can be used after
+the external IPv6 address reservation. Possible values: [&#34;VM&#34;, &#34;NETLB&#34;] When `null`, the `ipv6_endpoint_type` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39;
@@ -131,13 +136,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `address` (`string`): The static external IP address represented by this resource. Only
-IPv4 is supported. An address may only be specified for INTERNAL
-address types. The IP address must be inside the specified subnetwork,
+  - `address` (`string`): The static external IP address represented by this resource.
+The IP address must be inside the specified subnetwork,
 if any. Set by the API if undefined. When `null`, the `address` field will be omitted from the resulting object.
   - `address_type` (`string`): The type of address to reserve.
 Note: if you set this argument&#39;s value as &#39;INTERNAL&#39; you need to leave the &#39;network_tier&#39; argument unset in that resource block. Default value: &#34;EXTERNAL&#34; Possible values: [&#34;INTERNAL&#34;, &#34;EXTERNAL&#34;] When `null`, the `address_type` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `ip_version` (`string`): The IP Version that will be used by this address. The default value is &#39;IPV4&#39;. Possible values: [&#34;IPV4&#34;, &#34;IPV6&#34;] When `null`, the `ip_version` field will be omitted from the resulting object.
+  - `ipv6_endpoint_type` (`string`): The endpoint type of this address, which should be VM or NETLB. This is
+used for deciding which type of endpoint this address can be used after
+the external IPv6 address reservation. Possible values: [&#34;VM&#34;, &#34;NETLB&#34;] When `null`, the `ipv6_endpoint_type` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39;
@@ -230,6 +238,38 @@ Terraform resource block to set or update the description field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `description` field.
+
+
+### fn withIpVersion
+
+```ts
+withIpVersion()
+```
+
+`google.string.withIpVersion` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the ip_version field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `ip_version` field.
+
+
+### fn withIpv6EndpointType
+
+```ts
+withIpv6EndpointType()
+```
+
+`google.string.withIpv6EndpointType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the ipv6_endpoint_type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `ipv6_endpoint_type` field.
 
 
 ### fn withName

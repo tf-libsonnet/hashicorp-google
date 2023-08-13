@@ -383,6 +383,8 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   dns_response_policy_rule: (import 'resources/dns_response_policy_rule.libsonnet'),
   document_ai_processor: (import 'resources/document_ai_processor.libsonnet'),
   document_ai_processor_default_version: (import 'resources/document_ai_processor_default_version.libsonnet'),
+  document_ai_warehouse_document_schema: (import 'resources/document_ai_warehouse_document_schema.libsonnet'),
+  document_ai_warehouse_location: (import 'resources/document_ai_warehouse_location.libsonnet'),
   endpoints_service: (import 'resources/endpoints_service.libsonnet'),
   endpoints_service_consumers_iam_binding: (import 'resources/endpoints_service_consumers_iam_binding.libsonnet'),
   endpoints_service_consumers_iam_member: (import 'resources/endpoints_service_consumers_iam_member.libsonnet'),
