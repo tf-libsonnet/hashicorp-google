@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAnnotations()`](#fn-withannotations)
 * [`fn withExpireTime()`](#fn-withexpiretime)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withProject()`](#fn-withproject)
@@ -72,6 +73,20 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `annotations` (`obj`): Custom metadata about the secret.
+
+Annotations are distinct from various forms of labels. Annotations exist to allow
+client tools to store their own state information without requiring a database.
+
+Annotation keys must be between 1 and 63 characters long, have a UTF-8 encoding of
+maximum 128 bytes, begin and end with an alphanumeric character ([a-z0-9A-Z]), and
+may have dashes (-), underscores (_), dots (.), and alphanumerics in between these
+symbols.
+
+The total size of annotation keys and values must be less than 16KiB.
+
+An object containing a list of &#34;key&#34;: value pairs. Example:
+{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `annotations` field will be omitted from the resulting object.
   - `expire_time` (`string`): Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
 A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `expire_time` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels assigned to this Secret.
@@ -118,6 +133,20 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `annotations` (`obj`): Custom metadata about the secret.
+
+Annotations are distinct from various forms of labels. Annotations exist to allow
+client tools to store their own state information without requiring a database.
+
+Annotation keys must be between 1 and 63 characters long, have a UTF-8 encoding of
+maximum 128 bytes, begin and end with an alphanumeric character ([a-z0-9A-Z]), and
+may have dashes (-), underscores (_), dots (.), and alphanumerics in between these
+symbols.
+
+The total size of annotation keys and values must be less than 16KiB.
+
+An object containing a list of &#34;key&#34;: value pairs. Example:
+{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `annotations` field will be omitted from the resulting object.
   - `expire_time` (`string`): Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
 A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `expire_time` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels assigned to this Secret.
@@ -144,6 +173,22 @@ after the Secret has been created. When `null`, the `replication` sub block will
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `secret_manager_secret` resource into the root Terraform configuration.
+
+
+### fn withAnnotations
+
+```ts
+withAnnotations()
+```
+
+`google.obj.withAnnotations` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the annotations field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `annotations` field.
 
 
 ### fn withExpireTime

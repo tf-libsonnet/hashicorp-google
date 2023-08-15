@@ -22,6 +22,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withIpAddress()`](#fn-withipaddress)
 * [`fn withIpProtocol()`](#fn-withipprotocol)
+* [`fn withIpVersion()`](#fn-withipversion)
 * [`fn withIsMirroringCollector()`](#fn-withismirroringcollector)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withLoadBalancingScheme()`](#fn-withloadbalancingscheme)
@@ -80,6 +81,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 * By internal TCP/UDP load balancers, backend service-based network load
 balancers, and internal and external protocol forwarding.
 
+This option should be set to TRUE when the Forwarding Rule
+IPProtocol is set to L3_DEFAULT.
 
 Set this field to true to allow packets addressed to any port or packets
 lacking destination port information (for example, UDP fragments after the
@@ -153,7 +156,15 @@ options are &#39;TCP&#39;, &#39;UDP&#39;, &#39;ESP&#39;,
 
 The valid IP protocols are different for different load balancing products
 as described in [Load balancing
-features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends). Possible values: [&#34;TCP&#34;, &#34;UDP&#34;, &#34;ESP&#34;, &#34;AH&#34;, &#34;SCTP&#34;, &#34;ICMP&#34;, &#34;L3_DEFAULT&#34;] When `null`, the `ip_protocol` field will be omitted from the resulting object.
+features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).
+
+A Forwarding Rule with protocol L3_DEFAULT can attach with target instance or
+backend service with UNSPECIFIED protocol.
+A forwarding rule with &#34;L3_DEFAULT&#34; IPProtocal cannot be attached to a backend service with TCP or UDP. Possible values: [&#34;TCP&#34;, &#34;UDP&#34;, &#34;ESP&#34;, &#34;AH&#34;, &#34;SCTP&#34;, &#34;ICMP&#34;, &#34;L3_DEFAULT&#34;] When `null`, the `ip_protocol` field will be omitted from the resulting object.
+  - `ip_version` (`string`): The IP address version that will be used by this forwarding rule.
+Valid options are IPV4 and IPV6.
+
+If not set, the IPv4 address will be used by default. Possible values: [&#34;IPV4&#34;, &#34;IPV6&#34;] When `null`, the `ip_version` field will be omitted from the resulting object.
   - `is_mirroring_collector` (`bool`): Indicates whether or not this load balancer can be used as a collector for
 packet mirroring. To prevent mirroring loops, instances behind this
 load balancer will not have their traffic mirrored even if a
@@ -228,7 +239,7 @@ pair, and cannot have overlapping &#39;portRange&#39;s. When `null`, the `port_r
 
 * If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
 * By internal TCP/UDP load balancers, backend service-based network load
-balancers, and internal protocol forwarding.
+balancers, internal protocol forwarding and when protocol is not L3_DEFAULT.
 
 
 You can specify a list of up to five ports by number, separated by commas.
@@ -314,6 +325,8 @@ injecting into a complete block.
 * By internal TCP/UDP load balancers, backend service-based network load
 balancers, and internal and external protocol forwarding.
 
+This option should be set to TRUE when the Forwarding Rule
+IPProtocol is set to L3_DEFAULT.
 
 Set this field to true to allow packets addressed to any port or packets
 lacking destination port information (for example, UDP fragments after the
@@ -387,7 +400,15 @@ options are &#39;TCP&#39;, &#39;UDP&#39;, &#39;ESP&#39;,
 
 The valid IP protocols are different for different load balancing products
 as described in [Load balancing
-features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends). Possible values: [&#34;TCP&#34;, &#34;UDP&#34;, &#34;ESP&#34;, &#34;AH&#34;, &#34;SCTP&#34;, &#34;ICMP&#34;, &#34;L3_DEFAULT&#34;] When `null`, the `ip_protocol` field will be omitted from the resulting object.
+features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends).
+
+A Forwarding Rule with protocol L3_DEFAULT can attach with target instance or
+backend service with UNSPECIFIED protocol.
+A forwarding rule with &#34;L3_DEFAULT&#34; IPProtocal cannot be attached to a backend service with TCP or UDP. Possible values: [&#34;TCP&#34;, &#34;UDP&#34;, &#34;ESP&#34;, &#34;AH&#34;, &#34;SCTP&#34;, &#34;ICMP&#34;, &#34;L3_DEFAULT&#34;] When `null`, the `ip_protocol` field will be omitted from the resulting object.
+  - `ip_version` (`string`): The IP address version that will be used by this forwarding rule.
+Valid options are IPV4 and IPV6.
+
+If not set, the IPv4 address will be used by default. Possible values: [&#34;IPV4&#34;, &#34;IPV6&#34;] When `null`, the `ip_version` field will be omitted from the resulting object.
   - `is_mirroring_collector` (`bool`): Indicates whether or not this load balancer can be used as a collector for
 packet mirroring. To prevent mirroring loops, instances behind this
 load balancer will not have their traffic mirrored even if a
@@ -462,7 +483,7 @@ pair, and cannot have overlapping &#39;portRange&#39;s. When `null`, the `port_r
 
 * If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
 * By internal TCP/UDP load balancers, backend service-based network load
-balancers, and internal protocol forwarding.
+balancers, internal protocol forwarding and when protocol is not L3_DEFAULT.
 
 
 You can specify a list of up to five ports by number, separated by commas.
@@ -635,6 +656,22 @@ Terraform resource block to set or update the ip_protocol field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `ip_protocol` field.
+
+
+### fn withIpVersion
+
+```ts
+withIpVersion()
+```
+
+`google.string.withIpVersion` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the ip_version field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `ip_version` field.
 
 
 ### fn withIsMirroringCollector

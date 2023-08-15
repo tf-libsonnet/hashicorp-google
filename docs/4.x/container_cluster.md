@@ -189,6 +189,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-mesh_certificatesnew)
 * [`obj monitoring_config`](#obj-monitoring_config)
   * [`fn new()`](#fn-monitoring_confignew)
+  * [`obj monitoring_config.advanced_datapath_observability_config`](#obj-monitoring_configadvanced_datapath_observability_config)
+    * [`fn new()`](#fn-monitoring_configadvanced_datapath_observability_confignew)
   * [`obj monitoring_config.managed_prometheus`](#obj-monitoring_configmanaged_prometheus)
     * [`fn new()`](#fn-monitoring_configmanaged_prometheusnew)
 * [`obj network_policy`](#obj-network_policy)
@@ -3081,10 +3083,35 @@ Terraform sub block.
 
 **Args**:
   - `enable_components` (`list`): GKE components exposing metrics. Valid values include SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, and SCHEDULER. When `null`, the `enable_components` field will be omitted from the resulting object.
+  - `advanced_datapath_observability_config` (`list[obj]`): Configuration of Advanced Datapath Observability features. When `null`, the `advanced_datapath_observability_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.monitoring_config.advanced_datapath_observability_config.new](#fn-monitoring_configadvanced_datapath_observability_confignew) constructor.
   - `managed_prometheus` (`list[obj]`): Configuration for Google Cloud Managed Services for Prometheus. When `null`, the `managed_prometheus` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.monitoring_config.managed_prometheus.new](#fn-monitoring_configmanaged_prometheusnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `monitoring_config` sub block.
+
+
+## obj monitoring_config.advanced_datapath_observability_config
+
+
+
+### fn monitoring_config.advanced_datapath_observability_config.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.monitoring_config.advanced_datapath_observability_config.new` constructs a new object with attributes and blocks configured for the `advanced_datapath_observability_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enable_metrics` (`bool`): Whether or not the advanced datapath metrics are enabled.
+  - `relay_mode` (`string`): Mode used to make Relay available. When `null`, the `relay_mode` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `advanced_datapath_observability_config` sub block.
 
 
 ## obj monitoring_config.managed_prometheus

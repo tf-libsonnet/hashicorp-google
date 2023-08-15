@@ -28,6 +28,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withMaterializedView()`](#fn-withmaterializedview)
 * [`fn withMaterializedViewMixin()`](#fn-withmaterializedviewmixin)
+* [`fn withMaxStaleness()`](#fn-withmaxstaleness)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRangePartitioning()`](#fn-withrangepartitioning)
 * [`fn withRangePartitioningMixin()`](#fn-withrangepartitioningmixin)
@@ -100,6 +101,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `expiration_time` (`number`): The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. When `null`, the `expiration_time` field will be omitted from the resulting object.
   - `friendly_name` (`string`): A descriptive name for the table. When `null`, the `friendly_name` field will be omitted from the resulting object.
   - `labels` (`obj`): A mapping of labels to assign to the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `max_staleness` (`string`): The maximum staleness of data that could be returned when the table (or stale MV) is queried. Staleness encoded as a string encoding of sql IntervalValue type. When `null`, the `max_staleness` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. When `null`, the `project` field will be omitted from the resulting object.
   - `schema` (`string`): A JSON schema for the table. When `null`, the `schema` field will be omitted from the resulting object.
   - `table_id` (`string`): A unique ID for the resource. Changing this forces a new resource to be created.
@@ -139,6 +141,7 @@ injecting into a complete block.
   - `expiration_time` (`number`): The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. When `null`, the `expiration_time` field will be omitted from the resulting object.
   - `friendly_name` (`string`): A descriptive name for the table. When `null`, the `friendly_name` field will be omitted from the resulting object.
   - `labels` (`obj`): A mapping of labels to assign to the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `max_staleness` (`string`): The maximum staleness of data that could be returned when the table (or stale MV) is queried. Staleness encoded as a string encoding of sql IntervalValue type. When `null`, the `max_staleness` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. When `null`, the `project` field will be omitted from the resulting object.
   - `schema` (`string`): A JSON schema for the table. When `null`, the `schema` field will be omitted from the resulting object.
   - `table_id` (`string`): A unique ID for the resource. Changing this forces a new resource to be created.
@@ -376,6 +379,22 @@ function.
   - `value` (`list[obj]`): The value to set for the `materialized_view` field.
 
 
+### fn withMaxStaleness
+
+```ts
+withMaxStaleness()
+```
+
+`google.string.withMaxStaleness` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the max_staleness field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `max_staleness` field.
+
+
 ### fn withProject
 
 ```ts
@@ -578,6 +597,7 @@ Terraform sub block.
   - `autodetect` (`bool`): Let BigQuery try to autodetect the schema and format of the table.
   - `compression` (`string`): The compression type of the data source. Valid values are &#34;NONE&#34; or &#34;GZIP&#34;. When `null`, the `compression` field will be omitted from the resulting object.
   - `connection_id` (`string`): The connection specifying the credentials to be used to read external storage, such as Azure Blob, Cloud Storage, or S3. The connectionId can have the form &#34;{{project}}.{{location}}.{{connection_id}}&#34; or &#34;projects/{{project}}/locations/{{location}}/connections/{{connection_id}}&#34;. When `null`, the `connection_id` field will be omitted from the resulting object.
+  - `file_set_spec_type` (`string`): Specifies how source URIs are interpreted for constructing the file set to load.  By default source URIs are expanded against the underlying storage.  Other options include specifying manifest files. Only applicable to object storage systems. When `null`, the `file_set_spec_type` field will be omitted from the resulting object.
   - `ignore_unknown_values` (`bool`): Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. When `null`, the `ignore_unknown_values` field will be omitted from the resulting object.
   - `max_bad_records` (`number`): The maximum number of bad records that BigQuery can ignore when reading data. When `null`, the `max_bad_records` field will be omitted from the resulting object.
   - `metadata_cache_mode` (`string`): Metadata Cache Mode for the table. Set this to enable caching of metadata from external data source. When `null`, the `metadata_cache_mode` field will be omitted from the resulting object.

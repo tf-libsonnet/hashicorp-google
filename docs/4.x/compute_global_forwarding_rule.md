@@ -29,6 +29,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withPortRange()`](#fn-withportrange)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withSourceIpRanges()`](#fn-withsourceipranges)
+* [`fn withSubnetwork()`](#fn-withsubnetwork)
 * [`fn withTarget()`](#fn-withtarget)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -125,7 +126,7 @@ features](https://cloud.google.com/load-balancing/docs/features#protocols_from_t
   - `load_balancing_scheme` (`string`): Specifies the forwarding rule type.
 
 For more information about forwarding rules, refer to
-[Forwarding rule concepts](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts). Default value: &#34;EXTERNAL&#34; Possible values: [&#34;EXTERNAL&#34;, &#34;EXTERNAL_MANAGED&#34;, &#34;INTERNAL_SELF_MANAGED&#34;] When `null`, the `load_balancing_scheme` field will be omitted from the resulting object.
+[Forwarding rule concepts](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts). Default value: &#34;EXTERNAL&#34; Possible values: [&#34;EXTERNAL&#34;, &#34;EXTERNAL_MANAGED&#34;, &#34;INTERNAL_MANAGED&#34;, &#34;INTERNAL_SELF_MANAGED&#34;] When `null`, the `load_balancing_scheme` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource; provided by the client when the resource is created.
 The name must be 1-63 characters long, and comply with
 [RFC1035](https://www.ietf.org/rfc/rfc1035.txt).
@@ -170,6 +171,13 @@ for details.
 * TargetVpnGateway: 500, 4500 When `null`, the `port_range` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `source_ip_ranges` (`list`): If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each sourceIpRange entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24). When `null`, the `source_ip_ranges` field will be omitted from the resulting object.
+  - `subnetwork` (`string`): This field identifies the subnetwork that the load balanced IP should
+belong to for this Forwarding Rule, used in internal load balancing and
+network load balancing with IPv6.
+
+If the network specified is in auto subnet mode, this field is optional.
+However, a subnetwork must be specified if the network is in custom subnet
+mode or when creating external forwarding rule with IPv6. When `null`, the `subnetwork` field will be omitted from the resulting object.
   - `target` (`string`): The URL of the target resource to receive the matched traffic.  For
 regional forwarding rules, this target must be in the same region as the
 forwarding rule. For global forwarding rules, this target must be a global
@@ -281,7 +289,7 @@ features](https://cloud.google.com/load-balancing/docs/features#protocols_from_t
   - `load_balancing_scheme` (`string`): Specifies the forwarding rule type.
 
 For more information about forwarding rules, refer to
-[Forwarding rule concepts](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts). Default value: &#34;EXTERNAL&#34; Possible values: [&#34;EXTERNAL&#34;, &#34;EXTERNAL_MANAGED&#34;, &#34;INTERNAL_SELF_MANAGED&#34;] When `null`, the `load_balancing_scheme` field will be omitted from the resulting object.
+[Forwarding rule concepts](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts). Default value: &#34;EXTERNAL&#34; Possible values: [&#34;EXTERNAL&#34;, &#34;EXTERNAL_MANAGED&#34;, &#34;INTERNAL_MANAGED&#34;, &#34;INTERNAL_SELF_MANAGED&#34;] When `null`, the `load_balancing_scheme` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource; provided by the client when the resource is created.
 The name must be 1-63 characters long, and comply with
 [RFC1035](https://www.ietf.org/rfc/rfc1035.txt).
@@ -326,6 +334,13 @@ for details.
 * TargetVpnGateway: 500, 4500 When `null`, the `port_range` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `source_ip_ranges` (`list`): If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each sourceIpRange entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24). When `null`, the `source_ip_ranges` field will be omitted from the resulting object.
+  - `subnetwork` (`string`): This field identifies the subnetwork that the load balanced IP should
+belong to for this Forwarding Rule, used in internal load balancing and
+network load balancing with IPv6.
+
+If the network specified is in auto subnet mode, this field is optional.
+However, a subnetwork must be specified if the network is in custom subnet
+mode or when creating external forwarding rule with IPv6. When `null`, the `subnetwork` field will be omitted from the resulting object.
   - `target` (`string`): The URL of the target resource to receive the matched traffic.  For
 regional forwarding rules, this target must be in the same region as the
 forwarding rule. For global forwarding rules, this target must be a global
@@ -589,6 +604,22 @@ Terraform resource block to set or update the source_ip_ranges field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list`): The value to set for the `source_ip_ranges` field.
+
+
+### fn withSubnetwork
+
+```ts
+withSubnetwork()
+```
+
+`google.string.withSubnetwork` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the subnetwork field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `subnetwork` field.
 
 
 ### fn withTarget

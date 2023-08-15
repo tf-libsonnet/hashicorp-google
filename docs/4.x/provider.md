@@ -80,6 +80,7 @@ the `src` and/or `version` parameters are set.
   - `container_aws_custom_endpoint` (`string`): Set the `container_aws_custom_endpoint` field on the resulting provider block. When `null`, the `container_aws_custom_endpoint` field will be omitted from the resulting object.
   - `container_azure_custom_endpoint` (`string`): Set the `container_azure_custom_endpoint` field on the resulting provider block. When `null`, the `container_azure_custom_endpoint` field will be omitted from the resulting object.
   - `container_custom_endpoint` (`string`): Set the `container_custom_endpoint` field on the resulting provider block. When `null`, the `container_custom_endpoint` field will be omitted from the resulting object.
+  - `core_billing_custom_endpoint` (`string`): Set the `core_billing_custom_endpoint` field on the resulting provider block. When `null`, the `core_billing_custom_endpoint` field will be omitted from the resulting object.
   - `credentials` (`string`): Set the `credentials` field on the resulting provider block. When `null`, the `credentials` field will be omitted from the resulting object.
   - `data_catalog_custom_endpoint` (`string`): Set the `data_catalog_custom_endpoint` field on the resulting provider block. When `null`, the `data_catalog_custom_endpoint` field will be omitted from the resulting object.
   - `data_fusion_custom_endpoint` (`string`): Set the `data_fusion_custom_endpoint` field on the resulting provider block. When `null`, the `data_fusion_custom_endpoint` field will be omitted from the resulting object.
@@ -238,6 +239,7 @@ injecting into a complete block.
   - `container_aws_custom_endpoint` (`string`): Set the `container_aws_custom_endpoint` field on the resulting object. When `null`, the `container_aws_custom_endpoint` field will be omitted from the resulting object.
   - `container_azure_custom_endpoint` (`string`): Set the `container_azure_custom_endpoint` field on the resulting object. When `null`, the `container_azure_custom_endpoint` field will be omitted from the resulting object.
   - `container_custom_endpoint` (`string`): Set the `container_custom_endpoint` field on the resulting object. When `null`, the `container_custom_endpoint` field will be omitted from the resulting object.
+  - `core_billing_custom_endpoint` (`string`): Set the `core_billing_custom_endpoint` field on the resulting object. When `null`, the `core_billing_custom_endpoint` field will be omitted from the resulting object.
   - `credentials` (`string`): Set the `credentials` field on the resulting object. When `null`, the `credentials` field will be omitted from the resulting object.
   - `data_catalog_custom_endpoint` (`string`): Set the `data_catalog_custom_endpoint` field on the resulting object. When `null`, the `data_catalog_custom_endpoint` field will be omitted from the resulting object.
   - `data_fusion_custom_endpoint` (`string`): Set the `data_fusion_custom_endpoint` field on the resulting object. When `null`, the `data_fusion_custom_endpoint` field will be omitted from the resulting object.

@@ -104,12 +104,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts: timeouts,
   }),
   resource_spec:: {
-    '#new':: d.fn(help='\n`google.dataplex_asset.resource_spec.new` constructs a new object with attributes and blocks configured for the `resource_spec`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Immutable. Relative name of the cloud resource that contains the data that is being managed within a lake. For example: `projects/{project_number}/buckets/{bucket_id}` `projects/{project_number}/datasets/{dataset_id}` When `null`, the `name` field will be omitted from the resulting object.\n  - `type` (`string`): Required. Immutable. Type of resource. Possible values: STORAGE_BUCKET, BIGQUERY_DATASET\n\n**Returns**:\n  - An attribute object that represents the `resource_spec` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.dataplex_asset.resource_spec.new` constructs a new object with attributes and blocks configured for the `resource_spec`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Immutable. Relative name of the cloud resource that contains the data that is being managed within a lake. For example: `projects/{project_number}/buckets/{bucket_id}` `projects/{project_number}/datasets/{dataset_id}` When `null`, the `name` field will be omitted from the resulting object.\n  - `read_access_mode` (`string`): Optional. Determines how read permissions are handled for each asset and their associated tables. Only available to storage buckets assets. Possible values: DIRECT, MANAGED When `null`, the `read_access_mode` field will be omitted from the resulting object.\n  - `type` (`string`): Required. Immutable. Type of resource. Possible values: STORAGE_BUCKET, BIGQUERY_DATASET\n\n**Returns**:\n  - An attribute object that represents the `resource_spec` sub block.\n', args=[]),
     new(
       type,
-      name=null
+      name=null,
+      read_access_mode=null
     ):: std.prune(a={
       name: name,
+      read_access_mode: read_access_mode,
       type: type,
     }),
   },

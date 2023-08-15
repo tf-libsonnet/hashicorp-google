@@ -477,6 +477,10 @@ specifying that usage from only this set of projects should be
 included in the budget. If omitted, the report will include
 all usage for the billing account, regardless of which project
 the usage occurred on. When `null`, the `projects` field will be omitted from the resulting object.
+  - `resource_ancestors` (`list`): A set of folder and organization names of the form folders/{folderId} or organizations/{organizationId},
+specifying that usage from only this set of folders and organizations should be included in the budget.
+If omitted, the budget includes all usage that the billing account pays for. If the folder or organization
+contains projects that are paid for by a different Cloud Billing account, the budget doesn&#39;t apply to those projects. When `null`, the `resource_ancestors` field will be omitted from the resulting object.
   - `services` (`list`): A set of services of the form services/{service_id},
 specifying that usage from only this set of services should be
 included in the budget. If omitted, the report will include
