@@ -77,7 +77,9 @@ If unsure, choose this option.
 
 EDGE_CACHE: Certificates with scope EDGE_CACHE are special-purposed certificates,
 served from non-core Google data centers.
-Currently allowed only for managed certificates. When `null`, the `scope` field will be omitted from the resulting object.
+
+ALL_REGIONS: Certificates with ALL_REGIONS scope are served from all GCP regions (You can only use ALL_REGIONS with global certs).
+see https://cloud.google.com/compute/docs/regions-zones When `null`, the `scope` field will be omitted from the resulting object.
   - `managed` (`list[obj]`): Configuration and state of a Managed Certificate.
 Certificate Manager provisions and renews Managed Certificates
 automatically, for as long as it&#39;s authorized to do so. When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.managed.new](#fn-managednew) constructor.
@@ -122,7 +124,9 @@ If unsure, choose this option.
 
 EDGE_CACHE: Certificates with scope EDGE_CACHE are special-purposed certificates,
 served from non-core Google data centers.
-Currently allowed only for managed certificates. When `null`, the `scope` field will be omitted from the resulting object.
+
+ALL_REGIONS: Certificates with ALL_REGIONS scope are served from all GCP regions (You can only use ALL_REGIONS with global certs).
+see https://cloud.google.com/compute/docs/regions-zones When `null`, the `scope` field will be omitted from the resulting object.
   - `managed` (`list[obj]`): Configuration and state of a Managed Certificate.
 Certificate Manager provisions and renews Managed Certificates
 automatically, for as long as it&#39;s authorized to do so. When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.managed.new](#fn-managednew) constructor.

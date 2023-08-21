@@ -29,6 +29,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTopics()`](#fn-withtopics)
 * [`fn withTopicsMixin()`](#fn-withtopicsmixin)
 * [`fn withTtl()`](#fn-withttl)
+* [`fn withVersionAliases()`](#fn-withversionaliases)
 * [`obj replication`](#obj-replication)
   * [`fn new()`](#fn-replicationnew)
   * [`obj replication.user_managed`](#obj-replicationuser_managed)
@@ -105,6 +106,15 @@ An object containing a list of &#34;key&#34;: value pairs. Example:
   - `secret_id` (`string`): This must be unique within the project.
   - `ttl` (`string`): The TTL for the Secret.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `ttl` field will be omitted from the resulting object.
+  - `version_aliases` (`obj`): Mapping from version alias to version name.
+
+A version alias is a string with a maximum length of 63 characters and can contain
+uppercase and lowercase letters, numerals, and the hyphen (-) and underscore (&#39;_&#39;)
+characters. An alias string must start with a letter and cannot be the string
+&#39;latest&#39; or &#39;NEW&#39;. No more than 50 aliases can be assigned to a given secret.
+
+An object containing a list of &#34;key&#34;: value pairs. Example:
+{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `version_aliases` field will be omitted from the resulting object.
   - `replication` (`list[obj]`): The replication policy of the secret data attached to the Secret. It cannot be changed
 after the Secret has been created. When `null`, the `replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.new](#fn-replicationnew) constructor.
   - `rotation` (`list[obj]`): The rotation time and period for a Secret. At &#39;next_rotation_time&#39;, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. &#39;topics&#39; must be set to configure rotation. When `null`, the `rotation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.rotation.new](#fn-rotationnew) constructor.
@@ -165,6 +175,15 @@ An object containing a list of &#34;key&#34;: value pairs. Example:
   - `secret_id` (`string`): This must be unique within the project.
   - `ttl` (`string`): The TTL for the Secret.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `ttl` field will be omitted from the resulting object.
+  - `version_aliases` (`obj`): Mapping from version alias to version name.
+
+A version alias is a string with a maximum length of 63 characters and can contain
+uppercase and lowercase letters, numerals, and the hyphen (-) and underscore (&#39;_&#39;)
+characters. An alias string must start with a letter and cannot be the string
+&#39;latest&#39; or &#39;NEW&#39;. No more than 50 aliases can be assigned to a given secret.
+
+An object containing a list of &#34;key&#34;: value pairs. Example:
+{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `version_aliases` field will be omitted from the resulting object.
   - `replication` (`list[obj]`): The replication policy of the secret data attached to the Secret. It cannot be changed
 after the Secret has been created. When `null`, the `replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.new](#fn-replicationnew) constructor.
   - `rotation` (`list[obj]`): The rotation time and period for a Secret. At &#39;next_rotation_time&#39;, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. &#39;topics&#39; must be set to configure rotation. When `null`, the `rotation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.rotation.new](#fn-rotationnew) constructor.
@@ -416,6 +435,22 @@ Terraform resource block to set or update the ttl field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `ttl` field.
+
+
+### fn withVersionAliases
+
+```ts
+withVersionAliases()
+```
+
+`google.obj.withVersionAliases` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the version_aliases field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `version_aliases` field.
 
 
 ## obj replication
