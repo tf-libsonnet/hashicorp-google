@@ -390,14 +390,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate_pem` (`string`): **Deprecated** The certificate chain in PEM-encoded form.
+  - `certificate_pem` (`string`): The certificate chain in PEM-encoded form.
 
 Leaf certificate comes first, followed by intermediate ones if any. When `null`, the `certificate_pem` field will be omitted from the resulting object.
   - `pem_certificate` (`string`): The certificate chain in PEM-encoded form.
 
 Leaf certificate comes first, followed by intermediate ones if any. When `null`, the `pem_certificate` field will be omitted from the resulting object.
   - `pem_private_key` (`string`): The private key of the leaf certificate in PEM-encoded form. When `null`, the `pem_private_key` field will be omitted from the resulting object.
-  - `private_key_pem` (`string`): **Deprecated** The private key of the leaf certificate in PEM-encoded form. When `null`, the `private_key_pem` field will be omitted from the resulting object.
+  - `private_key_pem` (`string`): The private key of the leaf certificate in PEM-encoded form. When `null`, the `private_key_pem` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `self_managed` sub block.

@@ -63,6 +63,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-settingsip_configurationnew)
     * [`obj settings.ip_configuration.authorized_networks`](#obj-settingsip_configurationauthorized_networks)
       * [`fn new()`](#fn-settingsip_configurationauthorized_networksnew)
+    * [`obj settings.ip_configuration.psc_config`](#obj-settingsip_configurationpsc_config)
+      * [`fn new()`](#fn-settingsip_configurationpsc_confignew)
   * [`obj settings.location_preference`](#obj-settingslocation_preference)
     * [`fn new()`](#fn-settingslocation_preferencenew)
   * [`obj settings.maintenance_window`](#obj-settingsmaintenance_window)
@@ -863,6 +865,7 @@ Terraform sub block.
   - `private_network` (`string`): The VPC network from which the Cloud SQL instance is accessible for private IP. For example, projects/myProject/global/networks/default. Specifying a network enables private IP. At least ipv4_enabled must be enabled or a private_network must be configured. This setting can be updated, but it cannot be removed after it is set. When `null`, the `private_network` field will be omitted from the resulting object.
   - `require_ssl` (`bool`): Set the `require_ssl` field on the resulting object. When `null`, the `require_ssl` field will be omitted from the resulting object.
   - `authorized_networks` (`list[obj]`): Set the `authorized_networks` field on the resulting object. When `null`, the `authorized_networks` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.ip_configuration.authorized_networks.new](#fn-settingssettingsauthorized_networksnew) constructor.
+  - `psc_config` (`list[obj]`): PSC settings for a Cloud SQL instance. When `null`, the `psc_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_database_instance.settings.ip_configuration.psc_config.new](#fn-settingssettingspsc_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `ip_configuration` sub block.
@@ -891,6 +894,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `authorized_networks` sub block.
+
+
+## obj settings.ip_configuration.psc_config
+
+
+
+### fn settings.ip_configuration.psc_config.new
+
+```ts
+new()
+```
+
+
+`google.sql_database_instance.settings.ip_configuration.psc_config.new` constructs a new object with attributes and blocks configured for the `psc_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `allowed_consumer_projects` (`list`): List of consumer projects that are allow-listed for PSC connections to this instance. This instance can be connected to with PSC from any network in these projects. Each consumer project in this list may be represented by a project number (numeric) or by a project id (alphanumeric). When `null`, the `allowed_consumer_projects` field will be omitted from the resulting object.
+  - `psc_enabled` (`bool`): Whether PSC connectivity is enabled for this instance. When `null`, the `psc_enabled` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `psc_config` sub block.
 
 
 ## obj settings.location_preference

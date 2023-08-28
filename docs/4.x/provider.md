@@ -107,6 +107,7 @@ the `src` and/or `version` parameters are set.
   - `gke_backup_custom_endpoint` (`string`): Set the `gke_backup_custom_endpoint` field on the resulting provider block. When `null`, the `gke_backup_custom_endpoint` field will be omitted from the resulting object.
   - `gke_hub2_custom_endpoint` (`string`): Set the `gke_hub2_custom_endpoint` field on the resulting provider block. When `null`, the `gke_hub2_custom_endpoint` field will be omitted from the resulting object.
   - `gke_hub_custom_endpoint` (`string`): Set the `gke_hub_custom_endpoint` field on the resulting provider block. When `null`, the `gke_hub_custom_endpoint` field will be omitted from the resulting object.
+  - `gkehub_feature_custom_endpoint` (`string`): Set the `gkehub_feature_custom_endpoint` field on the resulting provider block. When `null`, the `gkehub_feature_custom_endpoint` field will be omitted from the resulting object.
   - `healthcare_custom_endpoint` (`string`): Set the `healthcare_custom_endpoint` field on the resulting provider block. When `null`, the `healthcare_custom_endpoint` field will be omitted from the resulting object.
   - `iam2_custom_endpoint` (`string`): Set the `iam2_custom_endpoint` field on the resulting provider block. When `null`, the `iam2_custom_endpoint` field will be omitted from the resulting object.
   - `iam_beta_custom_endpoint` (`string`): Set the `iam_beta_custom_endpoint` field on the resulting provider block. When `null`, the `iam_beta_custom_endpoint` field will be omitted from the resulting object.
@@ -266,6 +267,7 @@ injecting into a complete block.
   - `gke_backup_custom_endpoint` (`string`): Set the `gke_backup_custom_endpoint` field on the resulting object. When `null`, the `gke_backup_custom_endpoint` field will be omitted from the resulting object.
   - `gke_hub2_custom_endpoint` (`string`): Set the `gke_hub2_custom_endpoint` field on the resulting object. When `null`, the `gke_hub2_custom_endpoint` field will be omitted from the resulting object.
   - `gke_hub_custom_endpoint` (`string`): Set the `gke_hub_custom_endpoint` field on the resulting object. When `null`, the `gke_hub_custom_endpoint` field will be omitted from the resulting object.
+  - `gkehub_feature_custom_endpoint` (`string`): Set the `gkehub_feature_custom_endpoint` field on the resulting object. When `null`, the `gkehub_feature_custom_endpoint` field will be omitted from the resulting object.
   - `healthcare_custom_endpoint` (`string`): Set the `healthcare_custom_endpoint` field on the resulting object. When `null`, the `healthcare_custom_endpoint` field will be omitted from the resulting object.
   - `iam2_custom_endpoint` (`string`): Set the `iam2_custom_endpoint` field on the resulting object. When `null`, the `iam2_custom_endpoint` field will be omitted from the resulting object.
   - `iam_beta_custom_endpoint` (`string`): Set the `iam_beta_custom_endpoint` field on the resulting object. When `null`, the `iam_beta_custom_endpoint` field will be omitted from the resulting object.

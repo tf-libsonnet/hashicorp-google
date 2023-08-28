@@ -63,7 +63,7 @@ This property will be ignored if set by an ancestor of the resource, and new non
   - `notification_emails` (`list`): A list of email addresses to which notifications relating to approval requests should be sent.
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed. When `null`, the `notification_emails` field will be omitted from the resulting object.
-  - `project` (`string`): Deprecated in favor of &#39;project_id&#39; When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Project id. When `null`, the `project` field will be omitted from the resulting object.
   - `project_id` (`string`): ID of the project of the access approval settings.
   - `enrolled_services` (`list[obj]`): A list of Google Cloud Services for which the given resource has Access Approval enrolled.
 Access requests for the resource given by name against any of these services contained here will be required
@@ -100,7 +100,7 @@ This property will be ignored if set by an ancestor of the resource, and new non
   - `notification_emails` (`list`): A list of email addresses to which notifications relating to approval requests should be sent.
 Notifications relating to a resource will be sent to all emails in the settings of ancestor
 resources of that resource. A maximum of 50 email addresses are allowed. When `null`, the `notification_emails` field will be omitted from the resulting object.
-  - `project` (`string`): Deprecated in favor of &#39;project_id&#39; When `null`, the `project` field will be omitted from the resulting object.
+  - `project` (`string`): Project id. When `null`, the `project` field will be omitted from the resulting object.
   - `project_id` (`string`): ID of the project of the access approval settings.
   - `enrolled_services` (`list[obj]`): A list of Google Cloud Services for which the given resource has Access Approval enrolled.
 Access requests for the resource given by name against any of these services contained here will be required

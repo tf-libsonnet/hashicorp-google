@@ -199,6 +199,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   sql_ca_certs: (import 'sql_ca_certs.libsonnet'),
   sql_database: (import 'sql_database.libsonnet'),
   sql_database_instance: (import 'sql_database_instance.libsonnet'),
+  sql_database_instance_latest_recovery_time: (import 'sql_database_instance_latest_recovery_time.libsonnet'),
   sql_database_instances: (import 'sql_database_instances.libsonnet'),
   sql_databases: (import 'sql_databases.libsonnet'),
   sql_tiers: (import 'sql_tiers.libsonnet'),

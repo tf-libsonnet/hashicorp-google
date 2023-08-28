@@ -204,6 +204,7 @@ permalink: /data/
 * [sql_ca_certs](sql_ca_certs.md)
 * [sql_database](sql_database.md)
 * [sql_database_instance](sql_database_instance.md)
+* [sql_database_instance_latest_recovery_time](sql_database_instance_latest_recovery_time.md)
 * [sql_database_instances](sql_database_instances.md)
 * [sql_databases](sql_databases.md)
 * [sql_tiers](sql_tiers.md)
