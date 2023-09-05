@@ -306,11 +306,11 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         }),
         secret:: {
           items:: {
-            '#new':: d.fn(help='\n`google.cloud_run_v2_job.template.template.volumes.secret.items.new` constructs a new object with attributes and blocks configured for the `items`\nTerraform sub block.\n\n\n\n**Args**:\n  - `mode` (`number`): Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume&#39;s default mode will be used.\n  - `path` (`string`): The relative path of the secret in the container.\n  - `version` (`string`): The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version\n\n**Returns**:\n  - An attribute object that represents the `items` sub block.\n', args=[]),
+            '#new':: d.fn(help='\n`google.cloud_run_v2_job.template.template.volumes.secret.items.new` constructs a new object with attributes and blocks configured for the `items`\nTerraform sub block.\n\n\n\n**Args**:\n  - `mode` (`number`): Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume&#39;s default mode will be used. When `null`, the `mode` field will be omitted from the resulting object.\n  - `path` (`string`): The relative path of the secret in the container.\n  - `version` (`string`): The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version\n\n**Returns**:\n  - An attribute object that represents the `items` sub block.\n', args=[]),
             new(
-              mode,
               path,
-              version
+              version,
+              mode=null
             ):: std.prune(a={
               mode: mode,
               path: path,

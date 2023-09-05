@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRegion()`](#fn-withregion)
 * [`fn withSslCertificates()`](#fn-withsslcertificates)
+* [`fn withSslPolicy()`](#fn-withsslpolicy)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withUrlMap()`](#fn-withurlmap)
@@ -69,6 +70,9 @@ If it is not provided, the provider region is used. When `null`, the `region` fi
   - `ssl_certificates` (`list`): A list of RegionSslCertificate resources that are used to authenticate
 connections between users and the load balancer. Currently, exactly
 one SSL certificate must be specified.
+  - `ssl_policy` (`string`): A reference to the Region SslPolicy resource that will be associated with
+the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
+resource will not have any SSL policy configured. When `null`, the `ssl_policy` field will be omitted from the resulting object.
   - `url_map` (`string`): A reference to the RegionUrlMap resource that defines the mapping from URL
 to the RegionBackendService.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_target_https_proxy.timeouts.new](#fn-timeoutsnew) constructor.
@@ -109,6 +113,9 @@ If it is not provided, the provider region is used. When `null`, the `region` fi
   - `ssl_certificates` (`list`): A list of RegionSslCertificate resources that are used to authenticate
 connections between users and the load balancer. Currently, exactly
 one SSL certificate must be specified.
+  - `ssl_policy` (`string`): A reference to the Region SslPolicy resource that will be associated with
+the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
+resource will not have any SSL policy configured. When `null`, the `ssl_policy` field will be omitted from the resulting object.
   - `url_map` (`string`): A reference to the RegionUrlMap resource that defines the mapping from URL
 to the RegionBackendService.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_target_https_proxy.timeouts.new](#fn-timeoutsnew) constructor.
@@ -195,6 +202,22 @@ Terraform resource block to set or update the ssl_certificates field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list`): The value to set for the `ssl_certificates` field.
+
+
+### fn withSslPolicy
+
+```ts
+withSslPolicy()
+```
+
+`google.string.withSslPolicy` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the ssl_policy field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `ssl_policy` field.
 
 
 ### fn withTimeouts

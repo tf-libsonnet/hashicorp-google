@@ -127,6 +127,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   gke_backup_backup_plan_iam_policy: (import 'gke_backup_backup_plan_iam_policy.libsonnet'),
   gke_hub_feature_iam_policy: (import 'gke_hub_feature_iam_policy.libsonnet'),
   gke_hub_membership_iam_policy: (import 'gke_hub_membership_iam_policy.libsonnet'),
+  gke_hub_scope_iam_policy: (import 'gke_hub_scope_iam_policy.libsonnet'),
   healthcare_consent_store_iam_policy: (import 'healthcare_consent_store_iam_policy.libsonnet'),
   healthcare_dataset_iam_policy: (import 'healthcare_dataset_iam_policy.libsonnet'),
   healthcare_dicom_store_iam_policy: (import 'healthcare_dicom_store_iam_policy.libsonnet'),

@@ -596,6 +596,8 @@ Terraform sub block.
 
 
 **Args**:
+  - `additional_scopes` (`list`): Additional scopes to request for in the OIDC authentication request on top of scopes requested by default. By default, the &#39;openid&#39;, &#39;profile&#39; and &#39;email&#39; scopes that are supported by the identity provider are requested.
+Each additional scope may be at most 256 characters. A maximum of 10 additional scopes may be configured. When `null`, the `additional_scopes` field will be omitted from the resulting object.
   - `assertion_claims_behavior` (`string`): The behavior for how OIDC Claims are included in the &#39;assertion&#39; object used for attribute mapping and attribute condition.
 * MERGE_USER_INFO_OVER_ID_TOKEN_CLAIMS: Merge the UserInfo Endpoint Claims with ID Token Claims, preferring UserInfo Claim Values for the same Claim Name. This option is available only for the Authorization Code Flow.
 * ONLY_ID_TOKEN_CLAIMS: Only include ID Token Claims. Possible values: [&#34;MERGE_USER_INFO_OVER_ID_TOKEN_CLAIMS&#34;, &#34;ONLY_ID_TOKEN_CLAIMS&#34;]

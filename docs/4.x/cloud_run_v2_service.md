@@ -1127,7 +1127,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `mode` (`number`): Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume&#39;s default mode will be used.
+  - `mode` (`number`): Integer octal mode bits to use on this file, must be a value between 01 and 0777 (octal). If 0 or not set, the Volume&#39;s default mode will be used. When `null`, the `mode` field will be omitted from the resulting object.
   - `path` (`string`): The relative path of the secret in the container.
   - `version` (`string`): The Cloud Secret Manager secret version. Can be &#39;latest&#39; for the latest value or an integer for a specific version When `null`, the `version` field will be omitted from the resulting object.
 
