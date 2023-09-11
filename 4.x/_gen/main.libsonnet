@@ -240,6 +240,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   compute_region_disk_resource_policy_attachment: (import 'resources/compute_region_disk_resource_policy_attachment.libsonnet'),
   compute_region_health_check: (import 'resources/compute_region_health_check.libsonnet'),
   compute_region_instance_group_manager: (import 'resources/compute_region_instance_group_manager.libsonnet'),
+  compute_region_instance_template: (import 'resources/compute_region_instance_template.libsonnet'),
   compute_region_network_endpoint_group: (import 'resources/compute_region_network_endpoint_group.libsonnet'),
   compute_region_network_firewall_policy: (import 'resources/compute_region_network_firewall_policy.libsonnet'),
   compute_region_network_firewall_policy_association: (import 'resources/compute_region_network_firewall_policy_association.libsonnet'),

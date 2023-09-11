@@ -78,6 +78,7 @@ permalink: /data/
 * [compute_node_types](compute_node_types.md)
 * [compute_region_disk_iam_policy](compute_region_disk_iam_policy.md)
 * [compute_region_instance_group](compute_region_instance_group.md)
+* [compute_region_instance_template](compute_region_instance_template.md)
 * [compute_region_network_endpoint_group](compute_region_network_endpoint_group.md)
 * [compute_region_ssl_certificate](compute_region_ssl_certificate.md)
 * [compute_regions](compute_regions.md)

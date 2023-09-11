@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withGroup()`](#fn-withgroup)
+* [`fn withLabels()`](#fn-withlabels)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRole()`](#fn-withrole)
 * [`fn withRoleMixin()`](#fn-withrolemixin)
@@ -61,6 +62,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `group` (`string`): Principal that is be authorized in the cluster (at least of one the oneof
 is required). Updating one will unset the other automatically.
 group is the group, as seen by the kubernetes cluster. When `null`, the `group` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels for this ScopeRBACRoleBinding. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `scope_id` (`string`): Id of the scope
   - `scope_rbac_role_binding_id` (`string`): The client-provided identifier of the RBAC Role Binding.
@@ -96,6 +98,7 @@ injecting into a complete block.
   - `group` (`string`): Principal that is be authorized in the cluster (at least of one the oneof
 is required). Updating one will unset the other automatically.
 group is the group, as seen by the kubernetes cluster. When `null`, the `group` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels for this ScopeRBACRoleBinding. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `scope_id` (`string`): Id of the scope
   - `scope_rbac_role_binding_id` (`string`): The client-provided identifier of the RBAC Role Binding.
@@ -124,6 +127,22 @@ Terraform resource block to set or update the group field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `group` field.
+
+
+### fn withLabels
+
+```ts
+withLabels()
+```
+
+`google.obj.withLabels` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the labels field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `labels` field.
 
 
 ### fn withProject

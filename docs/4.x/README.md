@@ -249,6 +249,7 @@ project.
 * [compute_region_disk_resource_policy_attachment](compute_region_disk_resource_policy_attachment.md)
 * [compute_region_health_check](compute_region_health_check.md)
 * [compute_region_instance_group_manager](compute_region_instance_group_manager.md)
+* [compute_region_instance_template](compute_region_instance_template.md)
 * [compute_region_network_endpoint_group](compute_region_network_endpoint_group.md)
 * [compute_region_network_firewall_policy](compute_region_network_firewall_policy.md)
 * [compute_region_network_firewall_policy_association](compute_region_network_firewall_policy_association.md)

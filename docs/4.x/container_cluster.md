@@ -3112,7 +3112,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `enable_components` (`list`): GKE components exposing metrics. Valid values include SYSTEM_COMPONENTS, APISERVER, CONTROLLER_MANAGER, and SCHEDULER. When `null`, the `enable_components` field will be omitted from the resulting object.
+  - `enable_components` (`list`): GKE components exposing metrics. Valid values include SYSTEM_COMPONENTS, APISERVER, SCHEDULER, CONTROLLER_MANAGER, STORAGE, HPA, POD, DAEMONSET, DEPLOYMENT and STATEFULSET. When `null`, the `enable_components` field will be omitted from the resulting object.
   - `advanced_datapath_observability_config` (`list[obj]`): Configuration of Advanced Datapath Observability features. When `null`, the `advanced_datapath_observability_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.monitoring_config.advanced_datapath_observability_config.new](#fn-monitoring_configadvanced_datapath_observability_confignew) constructor.
   - `managed_prometheus` (`list[obj]`): Configuration for Google Cloud Managed Services for Prometheus. When `null`, the `managed_prometheus` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.monitoring_config.managed_prometheus.new](#fn-monitoring_configmanaged_prometheusnew) constructor.
 
