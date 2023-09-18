@@ -32,6 +32,10 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withVersionAliases()`](#fn-withversionaliases)
 * [`obj replication`](#obj-replication)
   * [`fn new()`](#fn-replicationnew)
+  * [`obj replication.auto`](#obj-replicationauto)
+    * [`fn new()`](#fn-replicationautonew)
+    * [`obj replication.auto.customer_managed_encryption`](#obj-replicationautocustomer_managed_encryption)
+      * [`fn new()`](#fn-replicationautocustomer_managed_encryptionnew)
   * [`obj replication.user_managed`](#obj-replicationuser_managed)
     * [`fn new()`](#fn-replicationuser_managednew)
     * [`obj replication.user_managed.replicas`](#obj-replicationuser_managedreplicas)
@@ -471,10 +475,59 @@ Terraform sub block.
 
 **Args**:
   - `automatic` (`bool`): The Secret will automatically be replicated without any restrictions. When `null`, the `automatic` field will be omitted from the resulting object.
+  - `auto` (`list[obj]`): The Secret will automatically be replicated without any restrictions. When `null`, the `auto` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.auto.new](#fn-replicationautonew) constructor.
   - `user_managed` (`list[obj]`): The Secret will be replicated to the regions specified by the user. When `null`, the `user_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.new](#fn-replicationuser_managednew) constructor.
 
 **Returns**:
   - An attribute object that represents the `replication` sub block.
+
+
+## obj replication.auto
+
+
+
+### fn replication.auto.new
+
+```ts
+new()
+```
+
+
+`google.secret_manager_secret.replication.auto.new` constructs a new object with attributes and blocks configured for the `auto`
+Terraform sub block.
+
+
+
+**Args**:
+  - `customer_managed_encryption` (`list[obj]`): The customer-managed encryption configuration of the Secret.
+If no configuration is provided, Google-managed default
+encryption is used. When `null`, the `customer_managed_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.auto.customer_managed_encryption.new](#fn-replicationreplicationcustomer_managed_encryptionnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `auto` sub block.
+
+
+## obj replication.auto.customer_managed_encryption
+
+
+
+### fn replication.auto.customer_managed_encryption.new
+
+```ts
+new()
+```
+
+
+`google.secret_manager_secret.replication.auto.customer_managed_encryption.new` constructs a new object with attributes and blocks configured for the `customer_managed_encryption`
+Terraform sub block.
+
+
+
+**Args**:
+  - `kms_key_name` (`string`): The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads.
+
+**Returns**:
+  - An attribute object that represents the `customer_managed_encryption` sub block.
 
 
 ## obj replication.user_managed

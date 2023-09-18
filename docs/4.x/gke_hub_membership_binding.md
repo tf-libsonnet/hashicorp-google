@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withLabels()`](#fn-withlabels)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMembershipBindingId()`](#fn-withmembershipbindingid)
 * [`fn withMembershipId()`](#fn-withmembershipid)
@@ -54,6 +55,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `labels` (`obj`): Labels for this Membership binding. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): Location of the membership
   - `membership_binding_id` (`string`): The client-provided identifier of the membership binding.
   - `membership_id` (`string`): Id of the membership
@@ -84,6 +86,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `labels` (`obj`): Labels for this Membership binding. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): Location of the membership
   - `membership_binding_id` (`string`): The client-provided identifier of the membership binding.
   - `membership_id` (`string`): Id of the membership
@@ -94,6 +97,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `gke_hub_membership_binding` resource into the root Terraform configuration.
+
+
+### fn withLabels
+
+```ts
+withLabels()
+```
+
+`google.obj.withLabels` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the labels field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `labels` field.
 
 
 ### fn withLocation

@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withConcurrencyMode()`](#fn-withconcurrencymode)
 * [`fn withLocationId()`](#fn-withlocationid)
 * [`fn withName()`](#fn-withname)
+* [`fn withPointInTimeRecoveryEnablement()`](#fn-withpointintimerecoveryenablement)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -65,6 +66,11 @@ characters. Valid characters are /[a-z][0-9]-/ with first character
 a letter and the last a letter or a number. Must not be
 UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
 &#34;(default)&#34; database id is also valid.
+  - `point_in_time_recovery_enablement` (`string`): Whether to enable the PITR feature on this database.
+If &#39;POINT_IN_TIME_RECOVERY_ENABLED&#39; is selected, reads are supported on selected versions of the data from within the past 7 days.
+versionRetentionPeriod and earliestVersionTime can be used to determine the supported versions. These include reads against any timestamp within the past hour
+and reads against 1-minute snapshots beyond 1 hour and within 7 days.
+If &#39;POINT_IN_TIME_RECOVERY_DISABLED&#39; is selected, reads are supported on any version of the data from within the past 1 hour. Default value: &#34;POINT_IN_TIME_RECOVERY_DISABLED&#34; Possible values: [&#34;POINT_IN_TIME_RECOVERY_ENABLED&#34;, &#34;POINT_IN_TIME_RECOVERY_DISABLED&#34;] When `null`, the `point_in_time_recovery_enablement` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): The type of the database.
 See https://cloud.google.com/datastore/docs/firestore-or-datastore
@@ -103,6 +109,11 @@ characters. Valid characters are /[a-z][0-9]-/ with first character
 a letter and the last a letter or a number. Must not be
 UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
 &#34;(default)&#34; database id is also valid.
+  - `point_in_time_recovery_enablement` (`string`): Whether to enable the PITR feature on this database.
+If &#39;POINT_IN_TIME_RECOVERY_ENABLED&#39; is selected, reads are supported on selected versions of the data from within the past 7 days.
+versionRetentionPeriod and earliestVersionTime can be used to determine the supported versions. These include reads against any timestamp within the past hour
+and reads against 1-minute snapshots beyond 1 hour and within 7 days.
+If &#39;POINT_IN_TIME_RECOVERY_DISABLED&#39; is selected, reads are supported on any version of the data from within the past 1 hour. Default value: &#34;POINT_IN_TIME_RECOVERY_DISABLED&#34; Possible values: [&#34;POINT_IN_TIME_RECOVERY_ENABLED&#34;, &#34;POINT_IN_TIME_RECOVERY_DISABLED&#34;] When `null`, the `point_in_time_recovery_enablement` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): The type of the database.
 See https://cloud.google.com/datastore/docs/firestore-or-datastore
@@ -175,6 +186,22 @@ Terraform resource block to set or update the name field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `name` field.
+
+
+### fn withPointInTimeRecoveryEnablement
+
+```ts
+withPointInTimeRecoveryEnablement()
+```
+
+`google.string.withPointInTimeRecoveryEnablement` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the point_in_time_recovery_enablement field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `point_in_time_recovery_enablement` field.
 
 
 ### fn withProject

@@ -15,6 +15,8 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withLabels()`](#fn-withlabels)
+* [`fn withNamespaceLabels()`](#fn-withnamespacelabels)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withScope()`](#fn-withscope)
 * [`fn withScopeId()`](#fn-withscopeid)
@@ -53,6 +55,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `labels` (`obj`): Labels for this Namespace. When `null`, the `labels` field will be omitted from the resulting object.
+  - `namespace_labels` (`obj`): Namespace-level cluster namespace labels. These labels are applied
+to the related namespace of the member clusters bound to the parent
+Scope. Scope-level labels (&#39;namespace_labels&#39; in the Fleet Scope
+resource) take precedence over Namespace-level labels if they share
+a key. Keys and values must be Kubernetes-conformant. When `null`, the `namespace_labels` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `scope` (`string`): The name of the Scope instance.
   - `scope_id` (`string`): Id of the scope
@@ -81,6 +89,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `labels` (`obj`): Labels for this Namespace. When `null`, the `labels` field will be omitted from the resulting object.
+  - `namespace_labels` (`obj`): Namespace-level cluster namespace labels. These labels are applied
+to the related namespace of the member clusters bound to the parent
+Scope. Scope-level labels (&#39;namespace_labels&#39; in the Fleet Scope
+resource) take precedence over Namespace-level labels if they share
+a key. Keys and values must be Kubernetes-conformant. When `null`, the `namespace_labels` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `scope` (`string`): The name of the Scope instance.
   - `scope_id` (`string`): Id of the scope
@@ -89,6 +103,38 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `gke_hub_namespace` resource into the root Terraform configuration.
+
+
+### fn withLabels
+
+```ts
+withLabels()
+```
+
+`google.obj.withLabels` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the labels field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `labels` field.
+
+
+### fn withNamespaceLabels
+
+```ts
+withNamespaceLabels()
+```
+
+`google.obj.withNamespaceLabels` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the namespace_labels field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `namespace_labels` field.
 
 
 ### fn withProject
@@ -210,6 +256,7 @@ Terraform sub block.
 **Args**:
   - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
   - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

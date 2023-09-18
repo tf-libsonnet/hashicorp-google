@@ -86,6 +86,7 @@ the `src` and/or `version` parameters are set.
   - `data_catalog_custom_endpoint` (`string`): Set the `data_catalog_custom_endpoint` field on the resulting provider block. When `null`, the `data_catalog_custom_endpoint` field will be omitted from the resulting object.
   - `data_fusion_custom_endpoint` (`string`): Set the `data_fusion_custom_endpoint` field on the resulting provider block. When `null`, the `data_fusion_custom_endpoint` field will be omitted from the resulting object.
   - `data_loss_prevention_custom_endpoint` (`string`): Set the `data_loss_prevention_custom_endpoint` field on the resulting provider block. When `null`, the `data_loss_prevention_custom_endpoint` field will be omitted from the resulting object.
+  - `data_pipeline_custom_endpoint` (`string`): Set the `data_pipeline_custom_endpoint` field on the resulting provider block. When `null`, the `data_pipeline_custom_endpoint` field will be omitted from the resulting object.
   - `database_migration_service_custom_endpoint` (`string`): Set the `database_migration_service_custom_endpoint` field on the resulting provider block. When `null`, the `database_migration_service_custom_endpoint` field will be omitted from the resulting object.
   - `dataflow_custom_endpoint` (`string`): Set the `dataflow_custom_endpoint` field on the resulting provider block. When `null`, the `dataflow_custom_endpoint` field will be omitted from the resulting object.
   - `dataplex_custom_endpoint` (`string`): Set the `dataplex_custom_endpoint` field on the resulting provider block. When `null`, the `dataplex_custom_endpoint` field will be omitted from the resulting object.
@@ -155,6 +156,7 @@ the `src` and/or `version` parameters are set.
   - `spanner_custom_endpoint` (`string`): Set the `spanner_custom_endpoint` field on the resulting provider block. When `null`, the `spanner_custom_endpoint` field will be omitted from the resulting object.
   - `sql_custom_endpoint` (`string`): Set the `sql_custom_endpoint` field on the resulting provider block. When `null`, the `sql_custom_endpoint` field will be omitted from the resulting object.
   - `storage_custom_endpoint` (`string`): Set the `storage_custom_endpoint` field on the resulting provider block. When `null`, the `storage_custom_endpoint` field will be omitted from the resulting object.
+  - `storage_insights_custom_endpoint` (`string`): Set the `storage_insights_custom_endpoint` field on the resulting provider block. When `null`, the `storage_insights_custom_endpoint` field will be omitted from the resulting object.
   - `storage_transfer_custom_endpoint` (`string`): Set the `storage_transfer_custom_endpoint` field on the resulting provider block. When `null`, the `storage_transfer_custom_endpoint` field will be omitted from the resulting object.
   - `tags_custom_endpoint` (`string`): Set the `tags_custom_endpoint` field on the resulting provider block. When `null`, the `tags_custom_endpoint` field will be omitted from the resulting object.
   - `tags_location_custom_endpoint` (`string`): Set the `tags_location_custom_endpoint` field on the resulting provider block. When `null`, the `tags_location_custom_endpoint` field will be omitted from the resulting object.
@@ -247,6 +249,7 @@ injecting into a complete block.
   - `data_catalog_custom_endpoint` (`string`): Set the `data_catalog_custom_endpoint` field on the resulting object. When `null`, the `data_catalog_custom_endpoint` field will be omitted from the resulting object.
   - `data_fusion_custom_endpoint` (`string`): Set the `data_fusion_custom_endpoint` field on the resulting object. When `null`, the `data_fusion_custom_endpoint` field will be omitted from the resulting object.
   - `data_loss_prevention_custom_endpoint` (`string`): Set the `data_loss_prevention_custom_endpoint` field on the resulting object. When `null`, the `data_loss_prevention_custom_endpoint` field will be omitted from the resulting object.
+  - `data_pipeline_custom_endpoint` (`string`): Set the `data_pipeline_custom_endpoint` field on the resulting object. When `null`, the `data_pipeline_custom_endpoint` field will be omitted from the resulting object.
   - `database_migration_service_custom_endpoint` (`string`): Set the `database_migration_service_custom_endpoint` field on the resulting object. When `null`, the `database_migration_service_custom_endpoint` field will be omitted from the resulting object.
   - `dataflow_custom_endpoint` (`string`): Set the `dataflow_custom_endpoint` field on the resulting object. When `null`, the `dataflow_custom_endpoint` field will be omitted from the resulting object.
   - `dataplex_custom_endpoint` (`string`): Set the `dataplex_custom_endpoint` field on the resulting object. When `null`, the `dataplex_custom_endpoint` field will be omitted from the resulting object.
@@ -316,6 +319,7 @@ injecting into a complete block.
   - `spanner_custom_endpoint` (`string`): Set the `spanner_custom_endpoint` field on the resulting object. When `null`, the `spanner_custom_endpoint` field will be omitted from the resulting object.
   - `sql_custom_endpoint` (`string`): Set the `sql_custom_endpoint` field on the resulting object. When `null`, the `sql_custom_endpoint` field will be omitted from the resulting object.
   - `storage_custom_endpoint` (`string`): Set the `storage_custom_endpoint` field on the resulting object. When `null`, the `storage_custom_endpoint` field will be omitted from the resulting object.
+  - `storage_insights_custom_endpoint` (`string`): Set the `storage_insights_custom_endpoint` field on the resulting object. When `null`, the `storage_insights_custom_endpoint` field will be omitted from the resulting object.
   - `storage_transfer_custom_endpoint` (`string`): Set the `storage_transfer_custom_endpoint` field on the resulting object. When `null`, the `storage_transfer_custom_endpoint` field will be omitted from the resulting object.
   - `tags_custom_endpoint` (`string`): Set the `tags_custom_endpoint` field on the resulting object. When `null`, the `tags_custom_endpoint` field will be omitted from the resulting object.
   - `tags_location_custom_endpoint` (`string`): Set the `tags_location_custom_endpoint` field on the resulting object. When `null`, the `tags_location_custom_endpoint` field will be omitted from the resulting object.

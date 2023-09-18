@@ -62,11 +62,29 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     version_aliases: version_aliases,
   }),
   replication:: {
-    '#new':: d.fn(help='\n`google.secret_manager_secret.replication.new` constructs a new object with attributes and blocks configured for the `replication`\nTerraform sub block.\n\n\n\n**Args**:\n  - `automatic` (`bool`): The Secret will automatically be replicated without any restrictions. When `null`, the `automatic` field will be omitted from the resulting object.\n  - `user_managed` (`list[obj]`): The Secret will be replicated to the regions specified by the user. When `null`, the `user_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.new](#fn-replicationuser_managednew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `replication` sub block.\n', args=[]),
+    auto:: {
+      customer_managed_encryption:: {
+        '#new':: d.fn(help='\n`google.secret_manager_secret.replication.auto.customer_managed_encryption.new` constructs a new object with attributes and blocks configured for the `customer_managed_encryption`\nTerraform sub block.\n\n\n\n**Args**:\n  - `kms_key_name` (`string`): The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads.\n\n**Returns**:\n  - An attribute object that represents the `customer_managed_encryption` sub block.\n', args=[]),
+        new(
+          kms_key_name
+        ):: std.prune(a={
+          kms_key_name: kms_key_name,
+        }),
+      },
+      '#new':: d.fn(help='\n`google.secret_manager_secret.replication.auto.new` constructs a new object with attributes and blocks configured for the `auto`\nTerraform sub block.\n\n\n\n**Args**:\n  - `customer_managed_encryption` (`list[obj]`): The customer-managed encryption configuration of the Secret.\nIf no configuration is provided, Google-managed default\nencryption is used. When `null`, the `customer_managed_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.auto.customer_managed_encryption.new](#fn-replicationreplicationcustomer_managed_encryptionnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `auto` sub block.\n', args=[]),
+      new(
+        customer_managed_encryption=null
+      ):: std.prune(a={
+        customer_managed_encryption: customer_managed_encryption,
+      }),
+    },
+    '#new':: d.fn(help='\n`google.secret_manager_secret.replication.new` constructs a new object with attributes and blocks configured for the `replication`\nTerraform sub block.\n\n\n\n**Args**:\n  - `automatic` (`bool`): The Secret will automatically be replicated without any restrictions. When `null`, the `automatic` field will be omitted from the resulting object.\n  - `auto` (`list[obj]`): The Secret will automatically be replicated without any restrictions. When `null`, the `auto` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.auto.new](#fn-replicationautonew) constructor.\n  - `user_managed` (`list[obj]`): The Secret will be replicated to the regions specified by the user. When `null`, the `user_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.new](#fn-replicationuser_managednew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `replication` sub block.\n', args=[]),
     new(
+      auto=null,
       automatic=null,
       user_managed=null
     ):: std.prune(a={
+      auto: auto,
       automatic: automatic,
       user_managed: user_managed,
     }),

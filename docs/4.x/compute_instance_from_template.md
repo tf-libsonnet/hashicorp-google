@@ -1053,6 +1053,8 @@ Terraform sub block.
 **Args**:
   - `access_config` (`list`): Access configurations, i.e. IPs via which this instance can be accessed via the Internet. When `null`, the `access_config` field will be omitted from the resulting object.
   - `alias_ip_range` (`list`): An array of alias IP ranges for this network interface. When `null`, the `alias_ip_range` field will be omitted from the resulting object.
+  - `internal_ipv6_prefix_length` (`number`): The prefix length of the primary internal IPv6 range. When `null`, the `internal_ipv6_prefix_length` field will be omitted from the resulting object.
+  - `ipv6_address` (`string`): An IPv6 internal network address for this network interface. If not specified, Google Cloud will automatically assign an internal IPv6 address from the instance&#39;s subnetwork. When `null`, the `ipv6_address` field will be omitted from the resulting object.
   - `network` (`string`): The name or self_link of the network attached to this interface. When `null`, the `network` field will be omitted from the resulting object.
   - `network_ip` (`string`): The private IP address assigned to the instance. When `null`, the `network_ip` field will be omitted from the resulting object.
   - `nic_type` (`string`): The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET When `null`, the `nic_type` field will be omitted from the resulting object.
