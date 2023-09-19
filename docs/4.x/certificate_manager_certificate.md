@@ -77,7 +77,9 @@ If unsure, choose this option.
 
 EDGE_CACHE: Certificates with scope EDGE_CACHE are special-purposed certificates,
 served from non-core Google data centers.
-Currently allowed only for managed certificates. When `null`, the `scope` field will be omitted from the resulting object.
+
+ALL_REGIONS: Certificates with ALL_REGIONS scope are served from all GCP regions (You can only use ALL_REGIONS with global certs).
+see https://cloud.google.com/compute/docs/regions-zones When `null`, the `scope` field will be omitted from the resulting object.
   - `managed` (`list[obj]`): Configuration and state of a Managed Certificate.
 Certificate Manager provisions and renews Managed Certificates
 automatically, for as long as it&#39;s authorized to do so. When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.managed.new](#fn-managednew) constructor.
@@ -122,7 +124,9 @@ If unsure, choose this option.
 
 EDGE_CACHE: Certificates with scope EDGE_CACHE are special-purposed certificates,
 served from non-core Google data centers.
-Currently allowed only for managed certificates. When `null`, the `scope` field will be omitted from the resulting object.
+
+ALL_REGIONS: Certificates with ALL_REGIONS scope are served from all GCP regions (You can only use ALL_REGIONS with global certs).
+see https://cloud.google.com/compute/docs/regions-zones When `null`, the `scope` field will be omitted from the resulting object.
   - `managed` (`list[obj]`): Configuration and state of a Managed Certificate.
 Certificate Manager provisions and renews Managed Certificates
 automatically, for as long as it&#39;s authorized to do so. When `null`, the `managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.certificate_manager_certificate.managed.new](#fn-managednew) constructor.
@@ -386,14 +390,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `certificate_pem` (`string`): **Deprecated** The certificate chain in PEM-encoded form.
+  - `certificate_pem` (`string`): The certificate chain in PEM-encoded form.
 
 Leaf certificate comes first, followed by intermediate ones if any. When `null`, the `certificate_pem` field will be omitted from the resulting object.
   - `pem_certificate` (`string`): The certificate chain in PEM-encoded form.
 
 Leaf certificate comes first, followed by intermediate ones if any. When `null`, the `pem_certificate` field will be omitted from the resulting object.
   - `pem_private_key` (`string`): The private key of the leaf certificate in PEM-encoded form. When `null`, the `pem_private_key` field will be omitted from the resulting object.
-  - `private_key_pem` (`string`): **Deprecated** The private key of the leaf certificate in PEM-encoded form. When `null`, the `private_key_pem` field will be omitted from the resulting object.
+  - `private_key_pem` (`string`): The private key of the leaf certificate in PEM-encoded form. When `null`, the `private_key_pem` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `self_managed` sub block.

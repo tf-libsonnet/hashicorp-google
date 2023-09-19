@@ -113,7 +113,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): A user-defined name of the function. Function names must be unique globally.
   - `project` (`string`): Project of the function. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region of function. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
-  - `runtime` (`string`): The runtime in which the function is going to run. Eg. &#34;nodejs8&#34;, &#34;nodejs10&#34;, &#34;python37&#34;, &#34;go111&#34;.
+  - `runtime` (`string`): The runtime in which the function is going to run. Eg. &#34;nodejs12&#34;, &#34;nodejs14&#34;, &#34;python37&#34;, &#34;go111&#34;.
   - `service_account_email` (`string`):  If provided, the self-provided service account to run the function with. When `null`, the `service_account_email` field will be omitted from the resulting object.
   - `source_archive_bucket` (`string`): The GCS bucket containing the zip archive which contains the function. When `null`, the `source_archive_bucket` field will be omitted from the resulting object.
   - `source_archive_object` (`string`): The source archive object (file) in archive bucket. When `null`, the `source_archive_object` field will be omitted from the resulting object.
@@ -167,7 +167,7 @@ injecting into a complete block.
   - `name` (`string`): A user-defined name of the function. Function names must be unique globally.
   - `project` (`string`): Project of the function. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region of function. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
-  - `runtime` (`string`): The runtime in which the function is going to run. Eg. &#34;nodejs8&#34;, &#34;nodejs10&#34;, &#34;python37&#34;, &#34;go111&#34;.
+  - `runtime` (`string`): The runtime in which the function is going to run. Eg. &#34;nodejs12&#34;, &#34;nodejs14&#34;, &#34;python37&#34;, &#34;go111&#34;.
   - `service_account_email` (`string`):  If provided, the self-provided service account to run the function with. When `null`, the `service_account_email` field will be omitted from the resulting object.
   - `source_archive_bucket` (`string`): The GCS bucket containing the zip archive which contains the function. When `null`, the `source_archive_bucket` field will be omitted from the resulting object.
   - `source_archive_object` (`string`): The source archive object (file) in archive bucket. When `null`, the `source_archive_object` field will be omitted from the resulting object.

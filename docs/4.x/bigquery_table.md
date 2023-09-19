@@ -28,10 +28,13 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withMaterializedView()`](#fn-withmaterializedview)
 * [`fn withMaterializedViewMixin()`](#fn-withmaterializedviewmixin)
+* [`fn withMaxStaleness()`](#fn-withmaxstaleness)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRangePartitioning()`](#fn-withrangepartitioning)
 * [`fn withRangePartitioningMixin()`](#fn-withrangepartitioningmixin)
 * [`fn withSchema()`](#fn-withschema)
+* [`fn withTableConstraints()`](#fn-withtableconstraints)
+* [`fn withTableConstraintsMixin()`](#fn-withtableconstraintsmixin)
 * [`fn withTableId()`](#fn-withtableid)
 * [`fn withTimePartitioning()`](#fn-withtimepartitioning)
 * [`fn withTimePartitioningMixin()`](#fn-withtimepartitioningmixin)
@@ -59,6 +62,16 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-range_partitioningnew)
   * [`obj range_partitioning.range`](#obj-range_partitioningrange)
     * [`fn new()`](#fn-range_partitioningrangenew)
+* [`obj table_constraints`](#obj-table_constraints)
+  * [`fn new()`](#fn-table_constraintsnew)
+  * [`obj table_constraints.foreign_keys`](#obj-table_constraintsforeign_keys)
+    * [`fn new()`](#fn-table_constraintsforeign_keysnew)
+    * [`obj table_constraints.foreign_keys.column_references`](#obj-table_constraintsforeign_keyscolumn_references)
+      * [`fn new()`](#fn-table_constraintsforeign_keyscolumn_referencesnew)
+    * [`obj table_constraints.foreign_keys.referenced_table`](#obj-table_constraintsforeign_keysreferenced_table)
+      * [`fn new()`](#fn-table_constraintsforeign_keysreferenced_tablenew)
+  * [`obj table_constraints.primary_key`](#obj-table_constraintsprimary_key)
+    * [`fn new()`](#fn-table_constraintsprimary_keynew)
 * [`obj time_partitioning`](#obj-time_partitioning)
   * [`fn new()`](#fn-time_partitioningnew)
 * [`obj view`](#obj-view)
@@ -100,6 +113,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `expiration_time` (`number`): The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. When `null`, the `expiration_time` field will be omitted from the resulting object.
   - `friendly_name` (`string`): A descriptive name for the table. When `null`, the `friendly_name` field will be omitted from the resulting object.
   - `labels` (`obj`): A mapping of labels to assign to the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `max_staleness` (`string`): The maximum staleness of data that could be returned when the table (or stale MV) is queried. Staleness encoded as a string encoding of sql IntervalValue type. When `null`, the `max_staleness` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. When `null`, the `project` field will be omitted from the resulting object.
   - `schema` (`string`): A JSON schema for the table. When `null`, the `schema` field will be omitted from the resulting object.
   - `table_id` (`string`): A unique ID for the resource. Changing this forces a new resource to be created.
@@ -107,6 +121,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `external_data_configuration` (`list[obj]`): Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table. When `null`, the `external_data_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.external_data_configuration.new](#fn-external_data_configurationnew) constructor.
   - `materialized_view` (`list[obj]`): If specified, configures this table as a materialized view. When `null`, the `materialized_view` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.materialized_view.new](#fn-materialized_viewnew) constructor.
   - `range_partitioning` (`list[obj]`): If specified, configures range-based partitioning for this table. When `null`, the `range_partitioning` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.range_partitioning.new](#fn-range_partitioningnew) constructor.
+  - `table_constraints` (`list[obj]`): Defines the primary key and foreign keys. When `null`, the `table_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.table_constraints.new](#fn-table_constraintsnew) constructor.
   - `time_partitioning` (`list[obj]`): If specified, configures time-based partitioning for this table. When `null`, the `time_partitioning` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.time_partitioning.new](#fn-time_partitioningnew) constructor.
   - `view` (`list[obj]`): If specified, configures this table as a view. When `null`, the `view` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.view.new](#fn-viewnew) constructor.
 
@@ -139,6 +154,7 @@ injecting into a complete block.
   - `expiration_time` (`number`): The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. When `null`, the `expiration_time` field will be omitted from the resulting object.
   - `friendly_name` (`string`): A descriptive name for the table. When `null`, the `friendly_name` field will be omitted from the resulting object.
   - `labels` (`obj`): A mapping of labels to assign to the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `max_staleness` (`string`): The maximum staleness of data that could be returned when the table (or stale MV) is queried. Staleness encoded as a string encoding of sql IntervalValue type. When `null`, the `max_staleness` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. When `null`, the `project` field will be omitted from the resulting object.
   - `schema` (`string`): A JSON schema for the table. When `null`, the `schema` field will be omitted from the resulting object.
   - `table_id` (`string`): A unique ID for the resource. Changing this forces a new resource to be created.
@@ -146,6 +162,7 @@ injecting into a complete block.
   - `external_data_configuration` (`list[obj]`): Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table. When `null`, the `external_data_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.external_data_configuration.new](#fn-external_data_configurationnew) constructor.
   - `materialized_view` (`list[obj]`): If specified, configures this table as a materialized view. When `null`, the `materialized_view` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.materialized_view.new](#fn-materialized_viewnew) constructor.
   - `range_partitioning` (`list[obj]`): If specified, configures range-based partitioning for this table. When `null`, the `range_partitioning` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.range_partitioning.new](#fn-range_partitioningnew) constructor.
+  - `table_constraints` (`list[obj]`): Defines the primary key and foreign keys. When `null`, the `table_constraints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.table_constraints.new](#fn-table_constraintsnew) constructor.
   - `time_partitioning` (`list[obj]`): If specified, configures time-based partitioning for this table. When `null`, the `time_partitioning` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.time_partitioning.new](#fn-time_partitioningnew) constructor.
   - `view` (`list[obj]`): If specified, configures this table as a view. When `null`, the `view` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.view.new](#fn-viewnew) constructor.
 
@@ -376,6 +393,22 @@ function.
   - `value` (`list[obj]`): The value to set for the `materialized_view` field.
 
 
+### fn withMaxStaleness
+
+```ts
+withMaxStaleness()
+```
+
+`google.string.withMaxStaleness` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the max_staleness field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `max_staleness` field.
+
+
 ### fn withProject
 
 ```ts
@@ -443,6 +476,43 @@ Terraform resource block to set or update the schema field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `schema` field.
+
+
+### fn withTableConstraints
+
+```ts
+withTableConstraints()
+```
+
+`google.list[obj].withTableConstraints` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the table_constraints field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withTableConstraintsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `table_constraints` field.
+
+
+### fn withTableConstraintsMixin
+
+```ts
+withTableConstraintsMixin()
+```
+
+`google.list[obj].withTableConstraintsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the table_constraints field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withTableConstraints](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `table_constraints` field.
 
 
 ### fn withTableId
@@ -578,6 +648,7 @@ Terraform sub block.
   - `autodetect` (`bool`): Let BigQuery try to autodetect the schema and format of the table.
   - `compression` (`string`): The compression type of the data source. Valid values are &#34;NONE&#34; or &#34;GZIP&#34;. When `null`, the `compression` field will be omitted from the resulting object.
   - `connection_id` (`string`): The connection specifying the credentials to be used to read external storage, such as Azure Blob, Cloud Storage, or S3. The connectionId can have the form &#34;{{project}}.{{location}}.{{connection_id}}&#34; or &#34;projects/{{project}}/locations/{{location}}/connections/{{connection_id}}&#34;. When `null`, the `connection_id` field will be omitted from the resulting object.
+  - `file_set_spec_type` (`string`): Specifies how source URIs are interpreted for constructing the file set to load.  By default source URIs are expanded against the underlying storage.  Other options include specifying manifest files. Only applicable to object storage systems. When `null`, the `file_set_spec_type` field will be omitted from the resulting object.
   - `ignore_unknown_values` (`bool`): Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. When `null`, the `ignore_unknown_values` field will be omitted from the resulting object.
   - `max_bad_records` (`number`): The maximum number of bad records that BigQuery can ignore when reading data. When `null`, the `max_bad_records` field will be omitted from the resulting object.
   - `metadata_cache_mode` (`string`): Metadata Cache Mode for the table. Set this to enable caching of metadata from external data source. When `null`, the `metadata_cache_mode` field will be omitted from the resulting object.
@@ -761,6 +832,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `allow_non_incremental_definition` (`bool`): Allow non incremental materialized view definition. The default value is false. When `null`, the `allow_non_incremental_definition` field will be omitted from the resulting object.
   - `enable_refresh` (`bool`): Specifies if BigQuery should automatically refresh materialized view when the base table is updated. The default is true. When `null`, the `enable_refresh` field will be omitted from the resulting object.
   - `query` (`string`): A query whose result is persisted.
   - `refresh_interval_ms` (`number`): Specifies maximum frequency at which this materialized view will be refreshed. The default is 1800000 When `null`, the `refresh_interval_ms` field will be omitted from the resulting object.
@@ -816,6 +888,127 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `range` sub block.
+
+
+## obj table_constraints
+
+
+
+### fn table_constraints.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_table.table_constraints.new` constructs a new object with attributes and blocks configured for the `table_constraints`
+Terraform sub block.
+
+
+
+**Args**:
+  - `foreign_keys` (`list[obj]`): Present only if the table has a foreign key. The foreign key is not enforced. When `null`, the `foreign_keys` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.table_constraints.foreign_keys.new](#fn-table_constraintsforeign_keysnew) constructor.
+  - `primary_key` (`list[obj]`): Represents a primary key constraint on a table&#39;s columns. Present only if the table has a primary key. The primary key is not enforced. When `null`, the `primary_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.table_constraints.primary_key.new](#fn-table_constraintsprimary_keynew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `table_constraints` sub block.
+
+
+## obj table_constraints.foreign_keys
+
+
+
+### fn table_constraints.foreign_keys.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_table.table_constraints.foreign_keys.new` constructs a new object with attributes and blocks configured for the `foreign_keys`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): Set only if the foreign key constraint is named. When `null`, the `name` field will be omitted from the resulting object.
+  - `column_references` (`list[obj]`): The pair of the foreign key column and primary key column. When `null`, the `column_references` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.table_constraints.foreign_keys.column_references.new](#fn-table_constraintstable_constraintscolumn_referencesnew) constructor.
+  - `referenced_table` (`list[obj]`): The table that holds the primary key and is referenced by this foreign key. When `null`, the `referenced_table` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.table_constraints.foreign_keys.referenced_table.new](#fn-table_constraintstable_constraintsreferenced_tablenew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `foreign_keys` sub block.
+
+
+## obj table_constraints.foreign_keys.column_references
+
+
+
+### fn table_constraints.foreign_keys.column_references.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_table.table_constraints.foreign_keys.column_references.new` constructs a new object with attributes and blocks configured for the `column_references`
+Terraform sub block.
+
+
+
+**Args**:
+  - `referenced_column` (`string`): The column in the primary key that are referenced by the referencingColumn.
+  - `referencing_column` (`string`): The column that composes the foreign key.
+
+**Returns**:
+  - An attribute object that represents the `column_references` sub block.
+
+
+## obj table_constraints.foreign_keys.referenced_table
+
+
+
+### fn table_constraints.foreign_keys.referenced_table.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_table.table_constraints.foreign_keys.referenced_table.new` constructs a new object with attributes and blocks configured for the `referenced_table`
+Terraform sub block.
+
+
+
+**Args**:
+  - `dataset_id` (`string`): The ID of the dataset containing this table.
+  - `project_id` (`string`): The ID of the project containing this table.
+  - `table_id` (`string`): The ID of the table. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters. Certain operations allow suffixing of the table ID with a partition decorator, such as sample_table$20190123.
+
+**Returns**:
+  - An attribute object that represents the `referenced_table` sub block.
+
+
+## obj table_constraints.primary_key
+
+
+
+### fn table_constraints.primary_key.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_table.table_constraints.primary_key.new` constructs a new object with attributes and blocks configured for the `primary_key`
+Terraform sub block.
+
+
+
+**Args**:
+  - `columns` (`list`): The columns that are composed of the primary key constraint.
+
+**Returns**:
+  - An attribute object that represents the `primary_key` sub block.
 
 
 ## obj time_partitioning

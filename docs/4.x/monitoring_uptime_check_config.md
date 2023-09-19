@@ -28,6 +28,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withResourceGroup()`](#fn-withresourcegroup)
 * [`fn withResourceGroupMixin()`](#fn-withresourcegroupmixin)
 * [`fn withSelectedRegions()`](#fn-withselectedregions)
+* [`fn withSyntheticMonitor()`](#fn-withsyntheticmonitor)
+* [`fn withSyntheticMonitorMixin()`](#fn-withsyntheticmonitormixin)
 * [`fn withTcpCheck()`](#fn-withtcpcheck)
 * [`fn withTcpCheckMixin()`](#fn-withtcpcheckmixin)
 * [`fn withTimeout()`](#fn-withtimeout)
@@ -47,6 +49,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-monitored_resourcenew)
 * [`obj resource_group`](#obj-resource_group)
   * [`fn new()`](#fn-resource_groupnew)
+* [`obj synthetic_monitor`](#obj-synthetic_monitor)
+  * [`fn new()`](#fn-synthetic_monitornew)
+  * [`obj synthetic_monitor.cloud_function_v2`](#obj-synthetic_monitorcloud_function_v2)
+    * [`fn new()`](#fn-synthetic_monitorcloud_function_v2new)
 * [`obj tcp_check`](#obj-tcp_check)
   * [`fn new()`](#fn-tcp_checknew)
 * [`obj timeouts`](#obj-timeouts)
@@ -91,6 +97,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `http_check` (`list[obj]`): Contains information needed to make an HTTP or HTTPS check. When `null`, the `http_check` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.http_check.new](#fn-http_checknew) constructor.
   - `monitored_resource` (`list[obj]`): The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance aws_elb_load_balancer  k8s_service  servicedirectory_service When `null`, the `monitored_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.monitored_resource.new](#fn-monitored_resourcenew) constructor.
   - `resource_group` (`list[obj]`): The group resource associated with the configuration. When `null`, the `resource_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.resource_group.new](#fn-resource_groupnew) constructor.
+  - `synthetic_monitor` (`list[obj]`): A Synthetic Monitor deployed to a Cloud Functions V2 instance. When `null`, the `synthetic_monitor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.synthetic_monitor.new](#fn-synthetic_monitornew) constructor.
   - `tcp_check` (`list[obj]`): Contains information needed to make a TCP check. When `null`, the `tcp_check` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.tcp_check.new](#fn-tcp_checknew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -126,6 +133,7 @@ injecting into a complete block.
   - `http_check` (`list[obj]`): Contains information needed to make an HTTP or HTTPS check. When `null`, the `http_check` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.http_check.new](#fn-http_checknew) constructor.
   - `monitored_resource` (`list[obj]`): The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance aws_elb_load_balancer  k8s_service  servicedirectory_service When `null`, the `monitored_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.monitored_resource.new](#fn-monitored_resourcenew) constructor.
   - `resource_group` (`list[obj]`): The group resource associated with the configuration. When `null`, the `resource_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.resource_group.new](#fn-resource_groupnew) constructor.
+  - `synthetic_monitor` (`list[obj]`): A Synthetic Monitor deployed to a Cloud Functions V2 instance. When `null`, the `synthetic_monitor` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.synthetic_monitor.new](#fn-synthetic_monitornew) constructor.
   - `tcp_check` (`list[obj]`): Contains information needed to make a TCP check. When `null`, the `tcp_check` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.tcp_check.new](#fn-tcp_checknew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -359,6 +367,43 @@ Terraform resource block to set or update the selected_regions field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list`): The value to set for the `selected_regions` field.
+
+
+### fn withSyntheticMonitor
+
+```ts
+withSyntheticMonitor()
+```
+
+`google.list[obj].withSyntheticMonitor` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the synthetic_monitor field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withSyntheticMonitorMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `synthetic_monitor` field.
+
+
+### fn withSyntheticMonitorMixin
+
+```ts
+withSyntheticMonitorMixin()
+```
+
+`google.list[obj].withSyntheticMonitorMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the synthetic_monitor field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withSyntheticMonitor](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `synthetic_monitor` field.
 
 
 ### fn withTcpCheck
@@ -626,6 +671,52 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `resource_group` sub block.
+
+
+## obj synthetic_monitor
+
+
+
+### fn synthetic_monitor.new
+
+```ts
+new()
+```
+
+
+`google.monitoring_uptime_check_config.synthetic_monitor.new` constructs a new object with attributes and blocks configured for the `synthetic_monitor`
+Terraform sub block.
+
+
+
+**Args**:
+  - `cloud_function_v2` (`list[obj]`): Target a Synthetic Monitor GCFv2 Instance When `null`, the `cloud_function_v2` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.synthetic_monitor.cloud_function_v2.new](#fn-synthetic_monitorcloud_function_v2new) constructor.
+
+**Returns**:
+  - An attribute object that represents the `synthetic_monitor` sub block.
+
+
+## obj synthetic_monitor.cloud_function_v2
+
+
+
+### fn synthetic_monitor.cloud_function_v2.new
+
+```ts
+new()
+```
+
+
+`google.monitoring_uptime_check_config.synthetic_monitor.cloud_function_v2.new` constructs a new object with attributes and blocks configured for the `cloud_function_v2`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): The fully qualified name of the cloud function resource.
+
+**Returns**:
+  - An attribute object that represents the `cloud_function_v2` sub block.
 
 
 ## obj tcp_check

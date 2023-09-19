@@ -32,10 +32,24 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-event_handlersnew)
   * [`obj event_handlers.trigger_fulfillment`](#obj-event_handlerstrigger_fulfillment)
     * [`fn new()`](#fn-event_handlerstrigger_fulfillmentnew)
+    * [`obj event_handlers.trigger_fulfillment.conditional_cases`](#obj-event_handlerstrigger_fulfillmentconditional_cases)
+      * [`fn new()`](#fn-event_handlerstrigger_fulfillmentconditional_casesnew)
     * [`obj event_handlers.trigger_fulfillment.messages`](#obj-event_handlerstrigger_fulfillmentmessages)
       * [`fn new()`](#fn-event_handlerstrigger_fulfillmentmessagesnew)
+      * [`obj event_handlers.trigger_fulfillment.messages.conversation_success`](#obj-event_handlerstrigger_fulfillmentmessagesconversation_success)
+        * [`fn new()`](#fn-event_handlerstrigger_fulfillmentmessagesconversation_successnew)
+      * [`obj event_handlers.trigger_fulfillment.messages.live_agent_handoff`](#obj-event_handlerstrigger_fulfillmentmessageslive_agent_handoff)
+        * [`fn new()`](#fn-event_handlerstrigger_fulfillmentmessageslive_agent_handoffnew)
+      * [`obj event_handlers.trigger_fulfillment.messages.output_audio_text`](#obj-event_handlerstrigger_fulfillmentmessagesoutput_audio_text)
+        * [`fn new()`](#fn-event_handlerstrigger_fulfillmentmessagesoutput_audio_textnew)
+      * [`obj event_handlers.trigger_fulfillment.messages.play_audio`](#obj-event_handlerstrigger_fulfillmentmessagesplay_audio)
+        * [`fn new()`](#fn-event_handlerstrigger_fulfillmentmessagesplay_audionew)
+      * [`obj event_handlers.trigger_fulfillment.messages.telephony_transfer_call`](#obj-event_handlerstrigger_fulfillmentmessagestelephony_transfer_call)
+        * [`fn new()`](#fn-event_handlerstrigger_fulfillmentmessagestelephony_transfer_callnew)
       * [`obj event_handlers.trigger_fulfillment.messages.text`](#obj-event_handlerstrigger_fulfillmentmessagestext)
         * [`fn new()`](#fn-event_handlerstrigger_fulfillmentmessagestextnew)
+    * [`obj event_handlers.trigger_fulfillment.set_parameter_actions`](#obj-event_handlerstrigger_fulfillmentset_parameter_actions)
+      * [`fn new()`](#fn-event_handlerstrigger_fulfillmentset_parameter_actionsnew)
 * [`obj nlu_settings`](#obj-nlu_settings)
   * [`fn new()`](#fn-nlu_settingsnew)
 * [`obj timeouts`](#obj-timeouts)
@@ -44,10 +58,24 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-transition_routesnew)
   * [`obj transition_routes.trigger_fulfillment`](#obj-transition_routestrigger_fulfillment)
     * [`fn new()`](#fn-transition_routestrigger_fulfillmentnew)
+    * [`obj transition_routes.trigger_fulfillment.conditional_cases`](#obj-transition_routestrigger_fulfillmentconditional_cases)
+      * [`fn new()`](#fn-transition_routestrigger_fulfillmentconditional_casesnew)
     * [`obj transition_routes.trigger_fulfillment.messages`](#obj-transition_routestrigger_fulfillmentmessages)
       * [`fn new()`](#fn-transition_routestrigger_fulfillmentmessagesnew)
+      * [`obj transition_routes.trigger_fulfillment.messages.conversation_success`](#obj-transition_routestrigger_fulfillmentmessagesconversation_success)
+        * [`fn new()`](#fn-transition_routestrigger_fulfillmentmessagesconversation_successnew)
+      * [`obj transition_routes.trigger_fulfillment.messages.live_agent_handoff`](#obj-transition_routestrigger_fulfillmentmessageslive_agent_handoff)
+        * [`fn new()`](#fn-transition_routestrigger_fulfillmentmessageslive_agent_handoffnew)
+      * [`obj transition_routes.trigger_fulfillment.messages.output_audio_text`](#obj-transition_routestrigger_fulfillmentmessagesoutput_audio_text)
+        * [`fn new()`](#fn-transition_routestrigger_fulfillmentmessagesoutput_audio_textnew)
+      * [`obj transition_routes.trigger_fulfillment.messages.play_audio`](#obj-transition_routestrigger_fulfillmentmessagesplay_audio)
+        * [`fn new()`](#fn-transition_routestrigger_fulfillmentmessagesplay_audionew)
+      * [`obj transition_routes.trigger_fulfillment.messages.telephony_transfer_call`](#obj-transition_routestrigger_fulfillmentmessagestelephony_transfer_call)
+        * [`fn new()`](#fn-transition_routestrigger_fulfillmentmessagestelephony_transfer_callnew)
       * [`obj transition_routes.trigger_fulfillment.messages.text`](#obj-transition_routestrigger_fulfillmentmessagestext)
         * [`fn new()`](#fn-transition_routestrigger_fulfillmentmessagestextnew)
+    * [`obj transition_routes.trigger_fulfillment.set_parameter_actions`](#obj-transition_routestrigger_fulfillmentset_parameter_actions)
+      * [`fn new()`](#fn-transition_routestrigger_fulfillmentset_parameter_actionsnew)
 
 ## Fields
 
@@ -437,10 +465,36 @@ Terraform sub block.
   - `return_partial_responses` (`bool`): Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks. When `null`, the `return_partial_responses` field will be omitted from the resulting object.
   - `tag` (`string`): The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified. When `null`, the `tag` field will be omitted from the resulting object.
   - `webhook` (`string`): The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;. When `null`, the `webhook` field will be omitted from the resulting object.
+  - `conditional_cases` (`list[obj]`): Conditional cases for this fulfillment. When `null`, the `conditional_cases` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.conditional_cases.new](#fn-event_handlersevent_handlersconditional_casesnew) constructor.
   - `messages` (`list[obj]`): The list of rich message responses to present to the user. When `null`, the `messages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.new](#fn-event_handlersevent_handlersmessagesnew) constructor.
+  - `set_parameter_actions` (`list[obj]`): Set parameter values before executing the webhook. When `null`, the `set_parameter_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.set_parameter_actions.new](#fn-event_handlersevent_handlersset_parameter_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `trigger_fulfillment` sub block.
+
+
+## obj event_handlers.trigger_fulfillment.conditional_cases
+
+
+
+### fn event_handlers.trigger_fulfillment.conditional_cases.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.conditional_cases.new` constructs a new object with attributes and blocks configured for the `conditional_cases`
+Terraform sub block.
+
+
+
+**Args**:
+  - `cases` (`string`): A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
+See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema. When `null`, the `cases` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `conditional_cases` sub block.
 
 
 ## obj event_handlers.trigger_fulfillment.messages
@@ -460,10 +514,141 @@ Terraform sub block.
 
 
 **Args**:
+  - `channel` (`string`): The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned. When `null`, the `channel` field will be omitted from the resulting object.
+  - `payload` (`string`): A custom, platform-specific payload. When `null`, the `payload` field will be omitted from the resulting object.
+  - `conversation_success` (`list[obj]`): Indicates that the conversation succeeded, i.e., the bot handled the issue that the customer talked to it about.
+Dialogflow only uses this to determine which conversations should be counted as successful and doesn&#39;t process the metadata in this message in any way. Note that Dialogflow also considers conversations that get to the conversation end page as successful even if they don&#39;t return ConversationSuccess.
+You may set this, for example:
+* In the entryFulfillment of a Page if entering the page indicates that the conversation succeeded.
+* In a webhook response when you determine that you handled the customer issue. When `null`, the `conversation_success` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.conversation_success.new](#fn-event_handlersevent_handlerstrigger_fulfillmentconversation_successnew) constructor.
+  - `live_agent_handoff` (`list[obj]`): Indicates that the conversation should be handed off to a live agent.
+Dialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures.
+You may set this, for example:
+* In the entryFulfillment of a Page if entering the page indicates something went extremely wrong in the conversation.
+* In a webhook response when you determine that the customer issue can only be handled by a human. When `null`, the `live_agent_handoff` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.live_agent_handoff.new](#fn-event_handlersevent_handlerstrigger_fulfillmentlive_agent_handoffnew) constructor.
+  - `output_audio_text` (`list[obj]`): A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message. When `null`, the `output_audio_text` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.output_audio_text.new](#fn-event_handlersevent_handlerstrigger_fulfillmentoutput_audio_textnew) constructor.
+  - `play_audio` (`list[obj]`): Specifies an audio clip to be played by the client as part of the response. When `null`, the `play_audio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.play_audio.new](#fn-event_handlersevent_handlerstrigger_fulfillmentplay_audionew) constructor.
+  - `telephony_transfer_call` (`list[obj]`): Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint. When `null`, the `telephony_transfer_call` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.telephony_transfer_call.new](#fn-event_handlersevent_handlerstrigger_fulfillmenttelephony_transfer_callnew) constructor.
   - `text` (`list[obj]`): The text response message. When `null`, the `text` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.text.new](#fn-event_handlersevent_handlerstrigger_fulfillmenttextnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `messages` sub block.
+
+
+## obj event_handlers.trigger_fulfillment.messages.conversation_success
+
+
+
+### fn event_handlers.trigger_fulfillment.messages.conversation_success.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.conversation_success.new` constructs a new object with attributes and blocks configured for the `conversation_success`
+Terraform sub block.
+
+
+
+**Args**:
+  - `metadata` (`string`): Custom metadata. Dialogflow doesn&#39;t impose any structure on this. When `null`, the `metadata` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `conversation_success` sub block.
+
+
+## obj event_handlers.trigger_fulfillment.messages.live_agent_handoff
+
+
+
+### fn event_handlers.trigger_fulfillment.messages.live_agent_handoff.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.live_agent_handoff.new` constructs a new object with attributes and blocks configured for the `live_agent_handoff`
+Terraform sub block.
+
+
+
+**Args**:
+  - `metadata` (`string`): Custom metadata. Dialogflow doesn&#39;t impose any structure on this. When `null`, the `metadata` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `live_agent_handoff` sub block.
+
+
+## obj event_handlers.trigger_fulfillment.messages.output_audio_text
+
+
+
+### fn event_handlers.trigger_fulfillment.messages.output_audio_text.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.output_audio_text.new` constructs a new object with attributes and blocks configured for the `output_audio_text`
+Terraform sub block.
+
+
+
+**Args**:
+  - `ssml` (`string`): The SSML text to be synthesized. For more information, see SSML. When `null`, the `ssml` field will be omitted from the resulting object.
+  - `text` (`string`): The raw text to be synthesized. When `null`, the `text` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `output_audio_text` sub block.
+
+
+## obj event_handlers.trigger_fulfillment.messages.play_audio
+
+
+
+### fn event_handlers.trigger_fulfillment.messages.play_audio.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.play_audio.new` constructs a new object with attributes and blocks configured for the `play_audio`
+Terraform sub block.
+
+
+
+**Args**:
+  - `audio_uri` (`string`): URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
+
+**Returns**:
+  - An attribute object that represents the `play_audio` sub block.
+
+
+## obj event_handlers.trigger_fulfillment.messages.telephony_transfer_call
+
+
+
+### fn event_handlers.trigger_fulfillment.messages.telephony_transfer_call.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.telephony_transfer_call.new` constructs a new object with attributes and blocks configured for the `telephony_transfer_call`
+Terraform sub block.
+
+
+
+**Args**:
+  - `phone_number` (`string`): Transfer the call to a phone number in E.164 format.
+
+**Returns**:
+  - An attribute object that represents the `telephony_transfer_call` sub block.
 
 
 ## obj event_handlers.trigger_fulfillment.messages.text
@@ -487,6 +672,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `text` sub block.
+
+
+## obj event_handlers.trigger_fulfillment.set_parameter_actions
+
+
+
+### fn event_handlers.trigger_fulfillment.set_parameter_actions.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.set_parameter_actions.new` constructs a new object with attributes and blocks configured for the `set_parameter_actions`
+Terraform sub block.
+
+
+
+**Args**:
+  - `parameter` (`string`): Display name of the parameter. When `null`, the `parameter` field will be omitted from the resulting object.
+  - `value` (`string`): The new JSON-encoded value of the parameter. A null value clears the parameter. When `null`, the `value` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `set_parameter_actions` sub block.
 
 
 ## obj nlu_settings
@@ -595,10 +804,36 @@ Terraform sub block.
   - `return_partial_responses` (`bool`): Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks. When `null`, the `return_partial_responses` field will be omitted from the resulting object.
   - `tag` (`string`): The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified. When `null`, the `tag` field will be omitted from the resulting object.
   - `webhook` (`string`): The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;. When `null`, the `webhook` field will be omitted from the resulting object.
+  - `conditional_cases` (`list[obj]`): Conditional cases for this fulfillment. When `null`, the `conditional_cases` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.conditional_cases.new](#fn-transition_routestransition_routesconditional_casesnew) constructor.
   - `messages` (`list[obj]`): The list of rich message responses to present to the user. When `null`, the `messages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.new](#fn-transition_routestransition_routesmessagesnew) constructor.
+  - `set_parameter_actions` (`list[obj]`): Set parameter values before executing the webhook. When `null`, the `set_parameter_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.set_parameter_actions.new](#fn-transition_routestransition_routesset_parameter_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `trigger_fulfillment` sub block.
+
+
+## obj transition_routes.trigger_fulfillment.conditional_cases
+
+
+
+### fn transition_routes.trigger_fulfillment.conditional_cases.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.conditional_cases.new` constructs a new object with attributes and blocks configured for the `conditional_cases`
+Terraform sub block.
+
+
+
+**Args**:
+  - `cases` (`string`): A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.
+See [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema. When `null`, the `cases` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `conditional_cases` sub block.
 
 
 ## obj transition_routes.trigger_fulfillment.messages
@@ -618,10 +853,141 @@ Terraform sub block.
 
 
 **Args**:
+  - `channel` (`string`): The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned. When `null`, the `channel` field will be omitted from the resulting object.
+  - `payload` (`string`): A custom, platform-specific payload. When `null`, the `payload` field will be omitted from the resulting object.
+  - `conversation_success` (`list[obj]`): Indicates that the conversation succeeded, i.e., the bot handled the issue that the customer talked to it about.
+Dialogflow only uses this to determine which conversations should be counted as successful and doesn&#39;t process the metadata in this message in any way. Note that Dialogflow also considers conversations that get to the conversation end page as successful even if they don&#39;t return ConversationSuccess.
+You may set this, for example:
+* In the entryFulfillment of a Page if entering the page indicates that the conversation succeeded.
+* In a webhook response when you determine that you handled the customer issue. When `null`, the `conversation_success` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.conversation_success.new](#fn-transition_routestransition_routestrigger_fulfillmentconversation_successnew) constructor.
+  - `live_agent_handoff` (`list[obj]`): Indicates that the conversation should be handed off to a live agent.
+Dialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures.
+You may set this, for example:
+* In the entryFulfillment of a Page if entering the page indicates something went extremely wrong in the conversation.
+* In a webhook response when you determine that the customer issue can only be handled by a human. When `null`, the `live_agent_handoff` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.live_agent_handoff.new](#fn-transition_routestransition_routestrigger_fulfillmentlive_agent_handoffnew) constructor.
+  - `output_audio_text` (`list[obj]`): A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message. When `null`, the `output_audio_text` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.output_audio_text.new](#fn-transition_routestransition_routestrigger_fulfillmentoutput_audio_textnew) constructor.
+  - `play_audio` (`list[obj]`): Specifies an audio clip to be played by the client as part of the response. When `null`, the `play_audio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.play_audio.new](#fn-transition_routestransition_routestrigger_fulfillmentplay_audionew) constructor.
+  - `telephony_transfer_call` (`list[obj]`): Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint. When `null`, the `telephony_transfer_call` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.telephony_transfer_call.new](#fn-transition_routestransition_routestrigger_fulfillmenttelephony_transfer_callnew) constructor.
   - `text` (`list[obj]`): The text response message. When `null`, the `text` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.text.new](#fn-transition_routestransition_routestrigger_fulfillmenttextnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `messages` sub block.
+
+
+## obj transition_routes.trigger_fulfillment.messages.conversation_success
+
+
+
+### fn transition_routes.trigger_fulfillment.messages.conversation_success.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.conversation_success.new` constructs a new object with attributes and blocks configured for the `conversation_success`
+Terraform sub block.
+
+
+
+**Args**:
+  - `metadata` (`string`): Custom metadata. Dialogflow doesn&#39;t impose any structure on this. When `null`, the `metadata` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `conversation_success` sub block.
+
+
+## obj transition_routes.trigger_fulfillment.messages.live_agent_handoff
+
+
+
+### fn transition_routes.trigger_fulfillment.messages.live_agent_handoff.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.live_agent_handoff.new` constructs a new object with attributes and blocks configured for the `live_agent_handoff`
+Terraform sub block.
+
+
+
+**Args**:
+  - `metadata` (`string`): Custom metadata. Dialogflow doesn&#39;t impose any structure on this. When `null`, the `metadata` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `live_agent_handoff` sub block.
+
+
+## obj transition_routes.trigger_fulfillment.messages.output_audio_text
+
+
+
+### fn transition_routes.trigger_fulfillment.messages.output_audio_text.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.output_audio_text.new` constructs a new object with attributes and blocks configured for the `output_audio_text`
+Terraform sub block.
+
+
+
+**Args**:
+  - `ssml` (`string`): The SSML text to be synthesized. For more information, see SSML. When `null`, the `ssml` field will be omitted from the resulting object.
+  - `text` (`string`): The raw text to be synthesized. When `null`, the `text` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `output_audio_text` sub block.
+
+
+## obj transition_routes.trigger_fulfillment.messages.play_audio
+
+
+
+### fn transition_routes.trigger_fulfillment.messages.play_audio.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.play_audio.new` constructs a new object with attributes and blocks configured for the `play_audio`
+Terraform sub block.
+
+
+
+**Args**:
+  - `audio_uri` (`string`): URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.
+
+**Returns**:
+  - An attribute object that represents the `play_audio` sub block.
+
+
+## obj transition_routes.trigger_fulfillment.messages.telephony_transfer_call
+
+
+
+### fn transition_routes.trigger_fulfillment.messages.telephony_transfer_call.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.telephony_transfer_call.new` constructs a new object with attributes and blocks configured for the `telephony_transfer_call`
+Terraform sub block.
+
+
+
+**Args**:
+  - `phone_number` (`string`): Transfer the call to a phone number in E.164 format.
+
+**Returns**:
+  - An attribute object that represents the `telephony_transfer_call` sub block.
 
 
 ## obj transition_routes.trigger_fulfillment.messages.text
@@ -645,3 +1011,27 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `text` sub block.
+
+
+## obj transition_routes.trigger_fulfillment.set_parameter_actions
+
+
+
+### fn transition_routes.trigger_fulfillment.set_parameter_actions.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.set_parameter_actions.new` constructs a new object with attributes and blocks configured for the `set_parameter_actions`
+Terraform sub block.
+
+
+
+**Args**:
+  - `parameter` (`string`): Display name of the parameter. When `null`, the `parameter` field will be omitted from the resulting object.
+  - `value` (`string`): The new JSON-encoded value of the parameter. A null value clears the parameter. When `null`, the `value` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `set_parameter_actions` sub block.

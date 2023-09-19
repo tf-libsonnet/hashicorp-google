@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAnnotations()`](#fn-withannotations)
 * [`fn withExpireTime()`](#fn-withexpiretime)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withProject()`](#fn-withproject)
@@ -28,8 +29,13 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTopics()`](#fn-withtopics)
 * [`fn withTopicsMixin()`](#fn-withtopicsmixin)
 * [`fn withTtl()`](#fn-withttl)
+* [`fn withVersionAliases()`](#fn-withversionaliases)
 * [`obj replication`](#obj-replication)
   * [`fn new()`](#fn-replicationnew)
+  * [`obj replication.auto`](#obj-replicationauto)
+    * [`fn new()`](#fn-replicationautonew)
+    * [`obj replication.auto.customer_managed_encryption`](#obj-replicationautocustomer_managed_encryption)
+      * [`fn new()`](#fn-replicationautocustomer_managed_encryptionnew)
   * [`obj replication.user_managed`](#obj-replicationuser_managed)
     * [`fn new()`](#fn-replicationuser_managednew)
     * [`obj replication.user_managed.replicas`](#obj-replicationuser_managedreplicas)
@@ -72,6 +78,20 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `annotations` (`obj`): Custom metadata about the secret.
+
+Annotations are distinct from various forms of labels. Annotations exist to allow
+client tools to store their own state information without requiring a database.
+
+Annotation keys must be between 1 and 63 characters long, have a UTF-8 encoding of
+maximum 128 bytes, begin and end with an alphanumeric character ([a-z0-9A-Z]), and
+may have dashes (-), underscores (_), dots (.), and alphanumerics in between these
+symbols.
+
+The total size of annotation keys and values must be less than 16KiB.
+
+An object containing a list of &#34;key&#34;: value pairs. Example:
+{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `annotations` field will be omitted from the resulting object.
   - `expire_time` (`string`): Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
 A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `expire_time` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels assigned to this Secret.
@@ -90,6 +110,15 @@ An object containing a list of &#34;key&#34;: value pairs. Example:
   - `secret_id` (`string`): This must be unique within the project.
   - `ttl` (`string`): The TTL for the Secret.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `ttl` field will be omitted from the resulting object.
+  - `version_aliases` (`obj`): Mapping from version alias to version name.
+
+A version alias is a string with a maximum length of 63 characters and can contain
+uppercase and lowercase letters, numerals, and the hyphen (-) and underscore (&#39;_&#39;)
+characters. An alias string must start with a letter and cannot be the string
+&#39;latest&#39; or &#39;NEW&#39;. No more than 50 aliases can be assigned to a given secret.
+
+An object containing a list of &#34;key&#34;: value pairs. Example:
+{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `version_aliases` field will be omitted from the resulting object.
   - `replication` (`list[obj]`): The replication policy of the secret data attached to the Secret. It cannot be changed
 after the Secret has been created. When `null`, the `replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.new](#fn-replicationnew) constructor.
   - `rotation` (`list[obj]`): The rotation time and period for a Secret. At &#39;next_rotation_time&#39;, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. &#39;topics&#39; must be set to configure rotation. When `null`, the `rotation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.rotation.new](#fn-rotationnew) constructor.
@@ -118,6 +147,20 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `annotations` (`obj`): Custom metadata about the secret.
+
+Annotations are distinct from various forms of labels. Annotations exist to allow
+client tools to store their own state information without requiring a database.
+
+Annotation keys must be between 1 and 63 characters long, have a UTF-8 encoding of
+maximum 128 bytes, begin and end with an alphanumeric character ([a-z0-9A-Z]), and
+may have dashes (-), underscores (_), dots (.), and alphanumerics in between these
+symbols.
+
+The total size of annotation keys and values must be less than 16KiB.
+
+An object containing a list of &#34;key&#34;: value pairs. Example:
+{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `annotations` field will be omitted from the resulting object.
   - `expire_time` (`string`): Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
 A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `expire_time` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels assigned to this Secret.
@@ -136,6 +179,15 @@ An object containing a list of &#34;key&#34;: value pairs. Example:
   - `secret_id` (`string`): This must be unique within the project.
   - `ttl` (`string`): The TTL for the Secret.
 A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `ttl` field will be omitted from the resulting object.
+  - `version_aliases` (`obj`): Mapping from version alias to version name.
+
+A version alias is a string with a maximum length of 63 characters and can contain
+uppercase and lowercase letters, numerals, and the hyphen (-) and underscore (&#39;_&#39;)
+characters. An alias string must start with a letter and cannot be the string
+&#39;latest&#39; or &#39;NEW&#39;. No more than 50 aliases can be assigned to a given secret.
+
+An object containing a list of &#34;key&#34;: value pairs. Example:
+{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `version_aliases` field will be omitted from the resulting object.
   - `replication` (`list[obj]`): The replication policy of the secret data attached to the Secret. It cannot be changed
 after the Secret has been created. When `null`, the `replication` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.new](#fn-replicationnew) constructor.
   - `rotation` (`list[obj]`): The rotation time and period for a Secret. At &#39;next_rotation_time&#39;, Secret Manager will send a Pub/Sub notification to the topics configured on the Secret. &#39;topics&#39; must be set to configure rotation. When `null`, the `rotation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.rotation.new](#fn-rotationnew) constructor.
@@ -144,6 +196,22 @@ after the Secret has been created. When `null`, the `replication` sub block will
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `secret_manager_secret` resource into the root Terraform configuration.
+
+
+### fn withAnnotations
+
+```ts
+withAnnotations()
+```
+
+`google.obj.withAnnotations` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the annotations field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `annotations` field.
 
 
 ### fn withExpireTime
@@ -373,6 +441,22 @@ Terraform resource block to set or update the ttl field.
   - `value` (`string`): The value to set for the `ttl` field.
 
 
+### fn withVersionAliases
+
+```ts
+withVersionAliases()
+```
+
+`google.obj.withVersionAliases` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the version_aliases field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `version_aliases` field.
+
+
 ## obj replication
 
 
@@ -391,10 +475,59 @@ Terraform sub block.
 
 **Args**:
   - `automatic` (`bool`): The Secret will automatically be replicated without any restrictions. When `null`, the `automatic` field will be omitted from the resulting object.
+  - `auto` (`list[obj]`): The Secret will automatically be replicated without any restrictions. When `null`, the `auto` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.auto.new](#fn-replicationautonew) constructor.
   - `user_managed` (`list[obj]`): The Secret will be replicated to the regions specified by the user. When `null`, the `user_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.new](#fn-replicationuser_managednew) constructor.
 
 **Returns**:
   - An attribute object that represents the `replication` sub block.
+
+
+## obj replication.auto
+
+
+
+### fn replication.auto.new
+
+```ts
+new()
+```
+
+
+`google.secret_manager_secret.replication.auto.new` constructs a new object with attributes and blocks configured for the `auto`
+Terraform sub block.
+
+
+
+**Args**:
+  - `customer_managed_encryption` (`list[obj]`): The customer-managed encryption configuration of the Secret.
+If no configuration is provided, Google-managed default
+encryption is used. When `null`, the `customer_managed_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.auto.customer_managed_encryption.new](#fn-replicationreplicationcustomer_managed_encryptionnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `auto` sub block.
+
+
+## obj replication.auto.customer_managed_encryption
+
+
+
+### fn replication.auto.customer_managed_encryption.new
+
+```ts
+new()
+```
+
+
+`google.secret_manager_secret.replication.auto.customer_managed_encryption.new` constructs a new object with attributes and blocks configured for the `customer_managed_encryption`
+Terraform sub block.
+
+
+
+**Args**:
+  - `kms_key_name` (`string`): The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads.
+
+**Returns**:
+  - An attribute object that represents the `customer_managed_encryption` sub block.
 
 
 ## obj replication.user_managed

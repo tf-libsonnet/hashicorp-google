@@ -17,6 +17,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withComplexDataTypeReferenceParsing()`](#fn-withcomplexdatatypereferenceparsing)
 * [`fn withDataset()`](#fn-withdataset)
+* [`fn withDefaultSearchHandlingStrict()`](#fn-withdefaultsearchhandlingstrict)
 * [`fn withDisableReferentialIntegrity()`](#fn-withdisablereferentialintegrity)
 * [`fn withDisableResourceVersioning()`](#fn-withdisableresourceversioning)
 * [`fn withEnableHistoryImport()`](#fn-withenablehistoryimport)
@@ -75,6 +76,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `complex_data_type_reference_parsing` (`string`): Enable parsing of references within complex FHIR data types such as Extensions. If this value is set to ENABLED, then features like referential integrity and Bundle reference rewriting apply to all references. If this flag has not been specified the behavior of the FHIR store will not change, references in complex data types will not be parsed. New stores will have this value set to ENABLED by default after a notification period. Warning: turning on this flag causes processing existing resources to fail if they contain references to non-existent resources. Possible values: [&#34;COMPLEX_DATA_TYPE_REFERENCE_PARSING_UNSPECIFIED&#34;, &#34;DISABLED&#34;, &#34;ENABLED&#34;] When `null`, the `complex_data_type_reference_parsing` field will be omitted from the resulting object.
   - `dataset` (`string`): Identifies the dataset addressed by this request. Must be in the format
 &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+  - `default_search_handling_strict` (`bool`): If true, overrides the default search behavior for this FHIR store to handling=strict which returns an error for unrecognized search parameters.
+If false, uses the FHIR specification default handling=lenient which ignores unrecognized search parameters.
+The handling can always be changed from the default on an individual API call by setting the HTTP header Prefer: handling=strict or Prefer: handling=lenient. When `null`, the `default_search_handling_strict` field will be omitted from the resulting object.
   - `disable_referential_integrity` (`bool`): Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
 creation. The default value is false, meaning that the API will enforce referential integrity and fail the
 requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
@@ -153,6 +157,9 @@ injecting into a complete block.
   - `complex_data_type_reference_parsing` (`string`): Enable parsing of references within complex FHIR data types such as Extensions. If this value is set to ENABLED, then features like referential integrity and Bundle reference rewriting apply to all references. If this flag has not been specified the behavior of the FHIR store will not change, references in complex data types will not be parsed. New stores will have this value set to ENABLED by default after a notification period. Warning: turning on this flag causes processing existing resources to fail if they contain references to non-existent resources. Possible values: [&#34;COMPLEX_DATA_TYPE_REFERENCE_PARSING_UNSPECIFIED&#34;, &#34;DISABLED&#34;, &#34;ENABLED&#34;] When `null`, the `complex_data_type_reference_parsing` field will be omitted from the resulting object.
   - `dataset` (`string`): Identifies the dataset addressed by this request. Must be in the format
 &#39;projects/{project}/locations/{location}/datasets/{dataset}&#39;
+  - `default_search_handling_strict` (`bool`): If true, overrides the default search behavior for this FHIR store to handling=strict which returns an error for unrecognized search parameters.
+If false, uses the FHIR specification default handling=lenient which ignores unrecognized search parameters.
+The handling can always be changed from the default on an individual API call by setting the HTTP header Prefer: handling=strict or Prefer: handling=lenient. When `null`, the `default_search_handling_strict` field will be omitted from the resulting object.
   - `disable_referential_integrity` (`bool`): Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store
 creation. The default value is false, meaning that the API will enforce referential integrity and fail the
 requests that will result in inconsistent state in the FHIR store. When this field is set to true, the API
@@ -240,6 +247,22 @@ Terraform resource block to set or update the dataset field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `dataset` field.
+
+
+### fn withDefaultSearchHandlingStrict
+
+```ts
+withDefaultSearchHandlingStrict()
+```
+
+`google.bool.withDefaultSearchHandlingStrict` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the default_search_handling_strict field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `default_search_handling_strict` field.
 
 
 ### fn withDisableReferentialIntegrity

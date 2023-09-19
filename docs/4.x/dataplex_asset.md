@@ -453,6 +453,7 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): Immutable. Relative name of the cloud resource that contains the data that is being managed within a lake. For example: `projects/{project_number}/buckets/{bucket_id}` `projects/{project_number}/datasets/{dataset_id}` When `null`, the `name` field will be omitted from the resulting object.
+  - `read_access_mode` (`string`): Optional. Determines how read permissions are handled for each asset and their associated tables. Only available to storage buckets assets. Possible values: DIRECT, MANAGED When `null`, the `read_access_mode` field will be omitted from the resulting object.
   - `type` (`string`): Required. Immutable. Type of resource. Possible values: STORAGE_BUCKET, BIGQUERY_DATASET
 
 **Returns**:

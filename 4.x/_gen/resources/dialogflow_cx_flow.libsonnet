@@ -16,13 +16,77 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       trigger_fulfillment: trigger_fulfillment,
     }),
     trigger_fulfillment:: {
-      messages:: {
-        '#new':: d.fn(help='\n`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.new` constructs a new object with attributes and blocks configured for the `messages`\nTerraform sub block.\n\n\n\n**Args**:\n  - `text` (`list[obj]`): The text response message. When `null`, the `text` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.text.new](#fn-event_handlersevent_handlerstrigger_fulfillmenttextnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `messages` sub block.\n', args=[]),
+      conditional_cases:: {
+        '#new':: d.fn(help='\n`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.conditional_cases.new` constructs a new object with attributes and blocks configured for the `conditional_cases`\nTerraform sub block.\n\n\n\n**Args**:\n  - `cases` (`string`): A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.\nSee [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema. When `null`, the `cases` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `conditional_cases` sub block.\n', args=[]),
         new(
+          cases=null
+        ):: std.prune(a={
+          cases: cases,
+        }),
+      },
+      messages:: {
+        conversation_success:: {
+          '#new':: d.fn(help='\n`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.conversation_success.new` constructs a new object with attributes and blocks configured for the `conversation_success`\nTerraform sub block.\n\n\n\n**Args**:\n  - `metadata` (`string`): Custom metadata. Dialogflow doesn&#39;t impose any structure on this. When `null`, the `metadata` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `conversation_success` sub block.\n', args=[]),
+          new(
+            metadata=null
+          ):: std.prune(a={
+            metadata: metadata,
+          }),
+        },
+        live_agent_handoff:: {
+          '#new':: d.fn(help='\n`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.live_agent_handoff.new` constructs a new object with attributes and blocks configured for the `live_agent_handoff`\nTerraform sub block.\n\n\n\n**Args**:\n  - `metadata` (`string`): Custom metadata. Dialogflow doesn&#39;t impose any structure on this. When `null`, the `metadata` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `live_agent_handoff` sub block.\n', args=[]),
+          new(
+            metadata=null
+          ):: std.prune(a={
+            metadata: metadata,
+          }),
+        },
+        '#new':: d.fn(help='\n`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.new` constructs a new object with attributes and blocks configured for the `messages`\nTerraform sub block.\n\n\n\n**Args**:\n  - `channel` (`string`): The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned. When `null`, the `channel` field will be omitted from the resulting object.\n  - `payload` (`string`): A custom, platform-specific payload. When `null`, the `payload` field will be omitted from the resulting object.\n  - `conversation_success` (`list[obj]`): Indicates that the conversation succeeded, i.e., the bot handled the issue that the customer talked to it about.\nDialogflow only uses this to determine which conversations should be counted as successful and doesn&#39;t process the metadata in this message in any way. Note that Dialogflow also considers conversations that get to the conversation end page as successful even if they don&#39;t return ConversationSuccess.\nYou may set this, for example:\n* In the entryFulfillment of a Page if entering the page indicates that the conversation succeeded.\n* In a webhook response when you determine that you handled the customer issue. When `null`, the `conversation_success` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.conversation_success.new](#fn-event_handlersevent_handlerstrigger_fulfillmentconversation_successnew) constructor.\n  - `live_agent_handoff` (`list[obj]`): Indicates that the conversation should be handed off to a live agent.\nDialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures.\nYou may set this, for example:\n* In the entryFulfillment of a Page if entering the page indicates something went extremely wrong in the conversation.\n* In a webhook response when you determine that the customer issue can only be handled by a human. When `null`, the `live_agent_handoff` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.live_agent_handoff.new](#fn-event_handlersevent_handlerstrigger_fulfillmentlive_agent_handoffnew) constructor.\n  - `output_audio_text` (`list[obj]`): A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message. When `null`, the `output_audio_text` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.output_audio_text.new](#fn-event_handlersevent_handlerstrigger_fulfillmentoutput_audio_textnew) constructor.\n  - `play_audio` (`list[obj]`): Specifies an audio clip to be played by the client as part of the response. When `null`, the `play_audio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.play_audio.new](#fn-event_handlersevent_handlerstrigger_fulfillmentplay_audionew) constructor.\n  - `telephony_transfer_call` (`list[obj]`): Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint. When `null`, the `telephony_transfer_call` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.telephony_transfer_call.new](#fn-event_handlersevent_handlerstrigger_fulfillmenttelephony_transfer_callnew) constructor.\n  - `text` (`list[obj]`): The text response message. When `null`, the `text` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.text.new](#fn-event_handlersevent_handlerstrigger_fulfillmenttextnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `messages` sub block.\n', args=[]),
+        new(
+          channel=null,
+          conversation_success=null,
+          live_agent_handoff=null,
+          output_audio_text=null,
+          payload=null,
+          play_audio=null,
+          telephony_transfer_call=null,
           text=null
         ):: std.prune(a={
+          channel: channel,
+          conversation_success: conversation_success,
+          live_agent_handoff: live_agent_handoff,
+          output_audio_text: output_audio_text,
+          payload: payload,
+          play_audio: play_audio,
+          telephony_transfer_call: telephony_transfer_call,
           text: text,
         }),
+        output_audio_text:: {
+          '#new':: d.fn(help='\n`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.output_audio_text.new` constructs a new object with attributes and blocks configured for the `output_audio_text`\nTerraform sub block.\n\n\n\n**Args**:\n  - `ssml` (`string`): The SSML text to be synthesized. For more information, see SSML. When `null`, the `ssml` field will be omitted from the resulting object.\n  - `text` (`string`): The raw text to be synthesized. When `null`, the `text` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `output_audio_text` sub block.\n', args=[]),
+          new(
+            ssml=null,
+            text=null
+          ):: std.prune(a={
+            ssml: ssml,
+            text: text,
+          }),
+        },
+        play_audio:: {
+          '#new':: d.fn(help='\n`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.play_audio.new` constructs a new object with attributes and blocks configured for the `play_audio`\nTerraform sub block.\n\n\n\n**Args**:\n  - `audio_uri` (`string`): URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.\n\n**Returns**:\n  - An attribute object that represents the `play_audio` sub block.\n', args=[]),
+          new(
+            audio_uri
+          ):: std.prune(a={
+            audio_uri: audio_uri,
+          }),
+        },
+        telephony_transfer_call:: {
+          '#new':: d.fn(help='\n`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.telephony_transfer_call.new` constructs a new object with attributes and blocks configured for the `telephony_transfer_call`\nTerraform sub block.\n\n\n\n**Args**:\n  - `phone_number` (`string`): Transfer the call to a phone number in E.164 format.\n\n**Returns**:\n  - An attribute object that represents the `telephony_transfer_call` sub block.\n', args=[]),
+          new(
+            phone_number
+          ):: std.prune(a={
+            phone_number: phone_number,
+          }),
+        },
         text:: {
           '#new':: d.fn(help='\n`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.text.new` constructs a new object with attributes and blocks configured for the `text`\nTerraform sub block.\n\n\n\n**Args**:\n  - `text` (`list`): A collection of text responses. When `null`, the `text` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `text` sub block.\n', args=[]),
           new(
@@ -32,18 +96,32 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           }),
         },
       },
-      '#new':: d.fn(help='\n`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.new` constructs a new object with attributes and blocks configured for the `trigger_fulfillment`\nTerraform sub block.\n\n\n\n**Args**:\n  - `return_partial_responses` (`bool`): Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks. When `null`, the `return_partial_responses` field will be omitted from the resulting object.\n  - `tag` (`string`): The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified. When `null`, the `tag` field will be omitted from the resulting object.\n  - `webhook` (`string`): The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;. When `null`, the `webhook` field will be omitted from the resulting object.\n  - `messages` (`list[obj]`): The list of rich message responses to present to the user. When `null`, the `messages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.new](#fn-event_handlersevent_handlersmessagesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `trigger_fulfillment` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.new` constructs a new object with attributes and blocks configured for the `trigger_fulfillment`\nTerraform sub block.\n\n\n\n**Args**:\n  - `return_partial_responses` (`bool`): Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks. When `null`, the `return_partial_responses` field will be omitted from the resulting object.\n  - `tag` (`string`): The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified. When `null`, the `tag` field will be omitted from the resulting object.\n  - `webhook` (`string`): The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;. When `null`, the `webhook` field will be omitted from the resulting object.\n  - `conditional_cases` (`list[obj]`): Conditional cases for this fulfillment. When `null`, the `conditional_cases` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.conditional_cases.new](#fn-event_handlersevent_handlersconditional_casesnew) constructor.\n  - `messages` (`list[obj]`): The list of rich message responses to present to the user. When `null`, the `messages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.messages.new](#fn-event_handlersevent_handlersmessagesnew) constructor.\n  - `set_parameter_actions` (`list[obj]`): Set parameter values before executing the webhook. When `null`, the `set_parameter_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.set_parameter_actions.new](#fn-event_handlersevent_handlersset_parameter_actionsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `trigger_fulfillment` sub block.\n', args=[]),
       new(
+        conditional_cases=null,
         messages=null,
         return_partial_responses=null,
+        set_parameter_actions=null,
         tag=null,
         webhook=null
       ):: std.prune(a={
+        conditional_cases: conditional_cases,
         messages: messages,
         return_partial_responses: return_partial_responses,
+        set_parameter_actions: set_parameter_actions,
         tag: tag,
         webhook: webhook,
       }),
+      set_parameter_actions:: {
+        '#new':: d.fn(help='\n`google.dialogflow_cx_flow.event_handlers.trigger_fulfillment.set_parameter_actions.new` constructs a new object with attributes and blocks configured for the `set_parameter_actions`\nTerraform sub block.\n\n\n\n**Args**:\n  - `parameter` (`string`): Display name of the parameter. When `null`, the `parameter` field will be omitted from the resulting object.\n  - `value` (`string`): The new JSON-encoded value of the parameter. A null value clears the parameter. When `null`, the `value` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `set_parameter_actions` sub block.\n', args=[]),
+        new(
+          parameter=null,
+          value=null
+        ):: std.prune(a={
+          parameter: parameter,
+          value: value,
+        }),
+      },
     },
   },
   '#new':: d.fn(help="\n`google.dialogflow_cx_flow.new` injects a new `google_dialogflow_cx_flow` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.dialogflow_cx_flow.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.dialogflow_cx_flow` using the reference:\n\n    $._ref.google_dialogflow_cx_flow.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_dialogflow_cx_flow.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `description` (`string`): The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected. When `null`, the `description` field will be omitted from the resulting object.\n  - `display_name` (`string`): The human-readable name of the flow.\n  - `language_code` (`string`): The language of the following fields in flow:\nFlow.event_handlers.trigger_fulfillment.messages\nFlow.event_handlers.trigger_fulfillment.conditional_cases\nFlow.transition_routes.trigger_fulfillment.messages\nFlow.transition_routes.trigger_fulfillment.conditional_cases\nIf not specified, the agent\u0026#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used. When `null`, the `language_code` field will be omitted from the resulting object.\n  - `parent` (`string`): The agent to create a flow for.\nFormat: projects/\u0026lt;Project ID\u0026gt;/locations/\u0026lt;Location ID\u0026gt;/agents/\u0026lt;Agent ID\u0026gt;. When `null`, the `parent` field will be omitted from the resulting object.\n  - `transition_route_groups` (`list`): A flow\u0026#39;s transition route group serve two purposes:\nThey are responsible for matching the user\u0026#39;s first utterances in the flow.\nThey are inherited by every page\u0026#39;s [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow.\nFormat:projects/\u0026lt;Project ID\u0026gt;/locations/\u0026lt;Location ID\u0026gt;/agents/\u0026lt;Agent ID\u0026gt;/flows/\u0026lt;Flow ID\u0026gt;/transitionRouteGroups/\u0026lt;TransitionRouteGroup ID\u0026gt;. When `null`, the `transition_route_groups` field will be omitted from the resulting object.\n  - `event_handlers` (`list[obj]`): A flow\u0026#39;s event handlers serve two purposes:\nThey are responsible for handling events (e.g. no match, webhook errors) in the flow.\nThey are inherited by every page\u0026#39;s [event handlers][Page.event_handlers], which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow.\nUnlike transitionRoutes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored. When `null`, the `event_handlers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.event_handlers.new](#fn-event_handlersnew) constructor.\n  - `nlu_settings` (`list[obj]`): NLU related settings of the flow. When `null`, the `nlu_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.nlu_settings.new](#fn-nlu_settingsnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.timeouts.new](#fn-timeoutsnew) constructor.\n  - `transition_routes` (`list[obj]`): A flow\u0026#39;s transition routes serve two purposes:\nThey are responsible for matching the user\u0026#39;s first utterances in the flow.\nThey are inherited by every page\u0026#39;s [transition routes][Page.transition_routes] and can support use cases such as the user saying \u0026#34;help\u0026#34; or \u0026#34;can I talk to a human?\u0026#34;, which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow.\n\nTransitionRoutes are evalauted in the following order:\n  TransitionRoutes with intent specified.\n  TransitionRoutes with only condition specified.\n  TransitionRoutes with intent specified are inherited by pages in the flow. When `null`, the `transition_routes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.new](#fn-transition_routesnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
@@ -137,13 +215,77 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       trigger_fulfillment: trigger_fulfillment,
     }),
     trigger_fulfillment:: {
-      messages:: {
-        '#new':: d.fn(help='\n`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.new` constructs a new object with attributes and blocks configured for the `messages`\nTerraform sub block.\n\n\n\n**Args**:\n  - `text` (`list[obj]`): The text response message. When `null`, the `text` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.text.new](#fn-transition_routestransition_routestrigger_fulfillmenttextnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `messages` sub block.\n', args=[]),
+      conditional_cases:: {
+        '#new':: d.fn(help='\n`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.conditional_cases.new` constructs a new object with attributes and blocks configured for the `conditional_cases`\nTerraform sub block.\n\n\n\n**Args**:\n  - `cases` (`string`): A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored.\nSee [Case](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/Fulfillment#case) for the schema. When `null`, the `cases` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `conditional_cases` sub block.\n', args=[]),
         new(
+          cases=null
+        ):: std.prune(a={
+          cases: cases,
+        }),
+      },
+      messages:: {
+        conversation_success:: {
+          '#new':: d.fn(help='\n`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.conversation_success.new` constructs a new object with attributes and blocks configured for the `conversation_success`\nTerraform sub block.\n\n\n\n**Args**:\n  - `metadata` (`string`): Custom metadata. Dialogflow doesn&#39;t impose any structure on this. When `null`, the `metadata` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `conversation_success` sub block.\n', args=[]),
+          new(
+            metadata=null
+          ):: std.prune(a={
+            metadata: metadata,
+          }),
+        },
+        live_agent_handoff:: {
+          '#new':: d.fn(help='\n`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.live_agent_handoff.new` constructs a new object with attributes and blocks configured for the `live_agent_handoff`\nTerraform sub block.\n\n\n\n**Args**:\n  - `metadata` (`string`): Custom metadata. Dialogflow doesn&#39;t impose any structure on this. When `null`, the `metadata` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `live_agent_handoff` sub block.\n', args=[]),
+          new(
+            metadata=null
+          ):: std.prune(a={
+            metadata: metadata,
+          }),
+        },
+        '#new':: d.fn(help='\n`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.new` constructs a new object with attributes and blocks configured for the `messages`\nTerraform sub block.\n\n\n\n**Args**:\n  - `channel` (`string`): The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned. When `null`, the `channel` field will be omitted from the resulting object.\n  - `payload` (`string`): A custom, platform-specific payload. When `null`, the `payload` field will be omitted from the resulting object.\n  - `conversation_success` (`list[obj]`): Indicates that the conversation succeeded, i.e., the bot handled the issue that the customer talked to it about.\nDialogflow only uses this to determine which conversations should be counted as successful and doesn&#39;t process the metadata in this message in any way. Note that Dialogflow also considers conversations that get to the conversation end page as successful even if they don&#39;t return ConversationSuccess.\nYou may set this, for example:\n* In the entryFulfillment of a Page if entering the page indicates that the conversation succeeded.\n* In a webhook response when you determine that you handled the customer issue. When `null`, the `conversation_success` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.conversation_success.new](#fn-transition_routestransition_routestrigger_fulfillmentconversation_successnew) constructor.\n  - `live_agent_handoff` (`list[obj]`): Indicates that the conversation should be handed off to a live agent.\nDialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures.\nYou may set this, for example:\n* In the entryFulfillment of a Page if entering the page indicates something went extremely wrong in the conversation.\n* In a webhook response when you determine that the customer issue can only be handled by a human. When `null`, the `live_agent_handoff` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.live_agent_handoff.new](#fn-transition_routestransition_routestrigger_fulfillmentlive_agent_handoffnew) constructor.\n  - `output_audio_text` (`list[obj]`): A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message. When `null`, the `output_audio_text` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.output_audio_text.new](#fn-transition_routestransition_routestrigger_fulfillmentoutput_audio_textnew) constructor.\n  - `play_audio` (`list[obj]`): Specifies an audio clip to be played by the client as part of the response. When `null`, the `play_audio` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.play_audio.new](#fn-transition_routestransition_routestrigger_fulfillmentplay_audionew) constructor.\n  - `telephony_transfer_call` (`list[obj]`): Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint. When `null`, the `telephony_transfer_call` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.telephony_transfer_call.new](#fn-transition_routestransition_routestrigger_fulfillmenttelephony_transfer_callnew) constructor.\n  - `text` (`list[obj]`): The text response message. When `null`, the `text` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.text.new](#fn-transition_routestransition_routestrigger_fulfillmenttextnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `messages` sub block.\n', args=[]),
+        new(
+          channel=null,
+          conversation_success=null,
+          live_agent_handoff=null,
+          output_audio_text=null,
+          payload=null,
+          play_audio=null,
+          telephony_transfer_call=null,
           text=null
         ):: std.prune(a={
+          channel: channel,
+          conversation_success: conversation_success,
+          live_agent_handoff: live_agent_handoff,
+          output_audio_text: output_audio_text,
+          payload: payload,
+          play_audio: play_audio,
+          telephony_transfer_call: telephony_transfer_call,
           text: text,
         }),
+        output_audio_text:: {
+          '#new':: d.fn(help='\n`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.output_audio_text.new` constructs a new object with attributes and blocks configured for the `output_audio_text`\nTerraform sub block.\n\n\n\n**Args**:\n  - `ssml` (`string`): The SSML text to be synthesized. For more information, see SSML. When `null`, the `ssml` field will be omitted from the resulting object.\n  - `text` (`string`): The raw text to be synthesized. When `null`, the `text` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `output_audio_text` sub block.\n', args=[]),
+          new(
+            ssml=null,
+            text=null
+          ):: std.prune(a={
+            ssml: ssml,
+            text: text,
+          }),
+        },
+        play_audio:: {
+          '#new':: d.fn(help='\n`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.play_audio.new` constructs a new object with attributes and blocks configured for the `play_audio`\nTerraform sub block.\n\n\n\n**Args**:\n  - `audio_uri` (`string`): URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.\n\n**Returns**:\n  - An attribute object that represents the `play_audio` sub block.\n', args=[]),
+          new(
+            audio_uri
+          ):: std.prune(a={
+            audio_uri: audio_uri,
+          }),
+        },
+        telephony_transfer_call:: {
+          '#new':: d.fn(help='\n`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.telephony_transfer_call.new` constructs a new object with attributes and blocks configured for the `telephony_transfer_call`\nTerraform sub block.\n\n\n\n**Args**:\n  - `phone_number` (`string`): Transfer the call to a phone number in E.164 format.\n\n**Returns**:\n  - An attribute object that represents the `telephony_transfer_call` sub block.\n', args=[]),
+          new(
+            phone_number
+          ):: std.prune(a={
+            phone_number: phone_number,
+          }),
+        },
         text:: {
           '#new':: d.fn(help='\n`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.text.new` constructs a new object with attributes and blocks configured for the `text`\nTerraform sub block.\n\n\n\n**Args**:\n  - `text` (`list`): A collection of text responses. When `null`, the `text` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `text` sub block.\n', args=[]),
           new(
@@ -153,18 +295,32 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           }),
         },
       },
-      '#new':: d.fn(help='\n`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.new` constructs a new object with attributes and blocks configured for the `trigger_fulfillment`\nTerraform sub block.\n\n\n\n**Args**:\n  - `return_partial_responses` (`bool`): Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks. When `null`, the `return_partial_responses` field will be omitted from the resulting object.\n  - `tag` (`string`): The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified. When `null`, the `tag` field will be omitted from the resulting object.\n  - `webhook` (`string`): The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;. When `null`, the `webhook` field will be omitted from the resulting object.\n  - `messages` (`list[obj]`): The list of rich message responses to present to the user. When `null`, the `messages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.new](#fn-transition_routestransition_routesmessagesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `trigger_fulfillment` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.new` constructs a new object with attributes and blocks configured for the `trigger_fulfillment`\nTerraform sub block.\n\n\n\n**Args**:\n  - `return_partial_responses` (`bool`): Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks. When `null`, the `return_partial_responses` field will be omitted from the resulting object.\n  - `tag` (`string`): The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified. When `null`, the `tag` field will be omitted from the resulting object.\n  - `webhook` (`string`): The webhook to call. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;. When `null`, the `webhook` field will be omitted from the resulting object.\n  - `conditional_cases` (`list[obj]`): Conditional cases for this fulfillment. When `null`, the `conditional_cases` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.conditional_cases.new](#fn-transition_routestransition_routesconditional_casesnew) constructor.\n  - `messages` (`list[obj]`): The list of rich message responses to present to the user. When `null`, the `messages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.messages.new](#fn-transition_routestransition_routesmessagesnew) constructor.\n  - `set_parameter_actions` (`list[obj]`): Set parameter values before executing the webhook. When `null`, the `set_parameter_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.set_parameter_actions.new](#fn-transition_routestransition_routesset_parameter_actionsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `trigger_fulfillment` sub block.\n', args=[]),
       new(
+        conditional_cases=null,
         messages=null,
         return_partial_responses=null,
+        set_parameter_actions=null,
         tag=null,
         webhook=null
       ):: std.prune(a={
+        conditional_cases: conditional_cases,
         messages: messages,
         return_partial_responses: return_partial_responses,
+        set_parameter_actions: set_parameter_actions,
         tag: tag,
         webhook: webhook,
       }),
+      set_parameter_actions:: {
+        '#new':: d.fn(help='\n`google.dialogflow_cx_flow.transition_routes.trigger_fulfillment.set_parameter_actions.new` constructs a new object with attributes and blocks configured for the `set_parameter_actions`\nTerraform sub block.\n\n\n\n**Args**:\n  - `parameter` (`string`): Display name of the parameter. When `null`, the `parameter` field will be omitted from the resulting object.\n  - `value` (`string`): The new JSON-encoded value of the parameter. A null value clears the parameter. When `null`, the `value` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `set_parameter_actions` sub block.\n', args=[]),
+        new(
+          parameter=null,
+          value=null
+        ):: std.prune(a={
+          parameter: parameter,
+          value: value,
+        }),
+      },
     },
   },
   '#withDescription':: d.fn(help='`google.string.withDescription` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the description field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `description` field.\n', args=[]),

@@ -18,6 +18,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAnnotations()`](#fn-withannotations)
 * [`fn withAuthorization()`](#fn-withauthorization)
 * [`fn withAuthorizationMixin()`](#fn-withauthorizationmixin)
+* [`fn withBinaryAuthorization()`](#fn-withbinaryauthorization)
+* [`fn withBinaryAuthorizationMixin()`](#fn-withbinaryauthorizationmixin)
 * [`fn withDeletionPolicy()`](#fn-withdeletionpolicy)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDistribution()`](#fn-withdistribution)
@@ -37,6 +39,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj authorization`](#obj-authorization)
   * [`fn new()`](#fn-authorizationnew)
+* [`obj binary_authorization`](#obj-binary_authorization)
+  * [`fn new()`](#fn-binary_authorizationnew)
 * [`obj fleet`](#obj-fleet)
   * [`fn new()`](#fn-fleetnew)
 * [`obj logging_config`](#obj-logging_config)
@@ -97,6 +101,7 @@ than 255 UTF-8 encoded bytes. When `null`, the `description` field will be omitt
   - `platform_version` (`string`): The platform version for the cluster (e.g. &#39;1.23.0-gke.1&#39;).
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `authorization` (`list[obj]`): Configuration related to the cluster RBAC settings. When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.authorization.new](#fn-authorizationnew) constructor.
+  - `binary_authorization` (`list[obj]`): Binary Authorization configuration. When `null`, the `binary_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.binary_authorization.new](#fn-binary_authorizationnew) constructor.
   - `fleet` (`list[obj]`): Fleet configuration. When `null`, the `fleet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.fleet.new](#fn-fleetnew) constructor.
   - `logging_config` (`list[obj]`): Logging configuration. When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.logging_config.new](#fn-logging_confignew) constructor.
   - `monitoring_config` (`list[obj]`): Monitoring configuration. When `null`, the `monitoring_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.monitoring_config.new](#fn-monitoring_confignew) constructor.
@@ -151,6 +156,7 @@ than 255 UTF-8 encoded bytes. When `null`, the `description` field will be omitt
   - `platform_version` (`string`): The platform version for the cluster (e.g. &#39;1.23.0-gke.1&#39;).
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `authorization` (`list[obj]`): Configuration related to the cluster RBAC settings. When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.authorization.new](#fn-authorizationnew) constructor.
+  - `binary_authorization` (`list[obj]`): Binary Authorization configuration. When `null`, the `binary_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.binary_authorization.new](#fn-binary_authorizationnew) constructor.
   - `fleet` (`list[obj]`): Fleet configuration. When `null`, the `fleet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.fleet.new](#fn-fleetnew) constructor.
   - `logging_config` (`list[obj]`): Logging configuration. When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.logging_config.new](#fn-logging_confignew) constructor.
   - `monitoring_config` (`list[obj]`): Monitoring configuration. When `null`, the `monitoring_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.monitoring_config.new](#fn-monitoring_confignew) constructor.
@@ -222,6 +228,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `authorization` field.
+
+
+### fn withBinaryAuthorization
+
+```ts
+withBinaryAuthorization()
+```
+
+`google.list[obj].withBinaryAuthorization` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the binary_authorization field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withBinaryAuthorizationMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `binary_authorization` field.
+
+
+### fn withBinaryAuthorizationMixin
+
+```ts
+withBinaryAuthorizationMixin()
+```
+
+`google.list[obj].withBinaryAuthorizationMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the binary_authorization field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withBinaryAuthorization](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `binary_authorization` field.
 
 
 ### fn withDeletionPolicy
@@ -546,6 +589,29 @@ https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles 
 
 **Returns**:
   - An attribute object that represents the `authorization` sub block.
+
+
+## obj binary_authorization
+
+
+
+### fn binary_authorization.new
+
+```ts
+new()
+```
+
+
+`google.container_attached_cluster.binary_authorization.new` constructs a new object with attributes and blocks configured for the `binary_authorization`
+Terraform sub block.
+
+
+
+**Args**:
+  - `evaluation_mode` (`string`): Configure Binary Authorization evaluation mode. Possible values: [&#34;DISABLED&#34;, &#34;PROJECT_SINGLETON_POLICY_ENFORCE&#34;] When `null`, the `evaluation_mode` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `binary_authorization` sub block.
 
 
 ## obj fleet

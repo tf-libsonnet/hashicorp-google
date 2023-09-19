@@ -29,6 +29,10 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withNetwork()`](#fn-withnetwork)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withRestoreBackupSource()`](#fn-withrestorebackupsource)
+* [`fn withRestoreBackupSourceMixin()`](#fn-withrestorebackupsourcemixin)
+* [`fn withRestoreContinuousBackupSource()`](#fn-withrestorecontinuousbackupsource)
+* [`fn withRestoreContinuousBackupSourceMixin()`](#fn-withrestorecontinuousbackupsourcemixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj automated_backup_policy`](#obj-automated_backup_policy)
@@ -51,6 +55,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-encryption_confignew)
 * [`obj initial_user`](#obj-initial_user)
   * [`fn new()`](#fn-initial_usernew)
+* [`obj restore_backup_source`](#obj-restore_backup_source)
+  * [`fn new()`](#fn-restore_backup_sourcenew)
+* [`obj restore_continuous_backup_source`](#obj-restore_continuous_backup_source)
+  * [`fn new()`](#fn-restore_continuous_backup_sourcenew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -97,6 +105,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days. When `null`, the `continuous_backup_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.continuous_backup_config.new](#fn-continuous_backup_confignew) constructor.
   - `encryption_config` (`list[obj]`): EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.encryption_config.new](#fn-encryption_confignew) constructor.
   - `initial_user` (`list[obj]`): Initial user to setup during cluster creation. When `null`, the `initial_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.initial_user.new](#fn-initial_usernew) constructor.
+  - `restore_backup_source` (`list[obj]`): The source when restoring from a backup. Conflicts with &#39;restore_continuous_backup_source&#39;, both can&#39;t be set together. When `null`, the `restore_backup_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.restore_backup_source.new](#fn-restore_backup_sourcenew) constructor.
+  - `restore_continuous_backup_source` (`list[obj]`): The source when restoring via point in time recovery (PITR). Conflicts with &#39;restore_backup_source&#39;, both can&#39;t be set together. When `null`, the `restore_continuous_backup_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.restore_continuous_backup_source.new](#fn-restore_continuous_backup_sourcenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -135,6 +145,8 @@ injecting into a complete block.
 If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days. When `null`, the `continuous_backup_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.continuous_backup_config.new](#fn-continuous_backup_confignew) constructor.
   - `encryption_config` (`list[obj]`): EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.encryption_config.new](#fn-encryption_confignew) constructor.
   - `initial_user` (`list[obj]`): Initial user to setup during cluster creation. When `null`, the `initial_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.initial_user.new](#fn-initial_usernew) constructor.
+  - `restore_backup_source` (`list[obj]`): The source when restoring from a backup. Conflicts with &#39;restore_continuous_backup_source&#39;, both can&#39;t be set together. When `null`, the `restore_backup_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.restore_backup_source.new](#fn-restore_backup_sourcenew) constructor.
+  - `restore_continuous_backup_source` (`list[obj]`): The source when restoring via point in time recovery (PITR). Conflicts with &#39;restore_backup_source&#39;, both can&#39;t be set together. When `null`, the `restore_continuous_backup_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.restore_continuous_backup_source.new](#fn-restore_continuous_backup_sourcenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -383,6 +395,80 @@ Terraform resource block to set or update the project field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `project` field.
+
+
+### fn withRestoreBackupSource
+
+```ts
+withRestoreBackupSource()
+```
+
+`google.list[obj].withRestoreBackupSource` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the restore_backup_source field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withRestoreBackupSourceMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `restore_backup_source` field.
+
+
+### fn withRestoreBackupSourceMixin
+
+```ts
+withRestoreBackupSourceMixin()
+```
+
+`google.list[obj].withRestoreBackupSourceMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the restore_backup_source field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withRestoreBackupSource](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `restore_backup_source` field.
+
+
+### fn withRestoreContinuousBackupSource
+
+```ts
+withRestoreContinuousBackupSource()
+```
+
+`google.list[obj].withRestoreContinuousBackupSource` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the restore_continuous_backup_source field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withRestoreContinuousBackupSourceMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `restore_continuous_backup_source` field.
+
+
+### fn withRestoreContinuousBackupSourceMixin
+
+```ts
+withRestoreContinuousBackupSourceMixin()
+```
+
+`google.list[obj].withRestoreContinuousBackupSourceMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the restore_continuous_backup_source field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withRestoreContinuousBackupSource](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `restore_continuous_backup_source` field.
 
 
 ### fn withTimeouts
@@ -670,6 +756,53 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `initial_user` sub block.
+
+
+## obj restore_backup_source
+
+
+
+### fn restore_backup_source.new
+
+```ts
+new()
+```
+
+
+`google.alloydb_cluster.restore_backup_source.new` constructs a new object with attributes and blocks configured for the `restore_backup_source`
+Terraform sub block.
+
+
+
+**Args**:
+  - `backup_name` (`string`): The name of the backup that this cluster is restored from.
+
+**Returns**:
+  - An attribute object that represents the `restore_backup_source` sub block.
+
+
+## obj restore_continuous_backup_source
+
+
+
+### fn restore_continuous_backup_source.new
+
+```ts
+new()
+```
+
+
+`google.alloydb_cluster.restore_continuous_backup_source.new` constructs a new object with attributes and blocks configured for the `restore_continuous_backup_source`
+Terraform sub block.
+
+
+
+**Args**:
+  - `cluster` (`string`): The name of the source cluster that this cluster is restored from.
+  - `point_in_time` (`string`): The point in time that this cluster is restored to, in RFC 3339 format.
+
+**Returns**:
+  - An attribute object that represents the `restore_continuous_backup_source` sub block.
 
 
 ## obj timeouts

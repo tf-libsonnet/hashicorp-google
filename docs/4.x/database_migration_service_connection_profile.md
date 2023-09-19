@@ -573,6 +573,7 @@ If the available storage repeatedly falls below the threshold size, Cloud SQL co
   - `database_flags` (`obj`): The database flags passed to the Cloud SQL instance at startup. When `null`, the `database_flags` field will be omitted from the resulting object.
   - `database_version` (`string`): The database engine type and version.
 Currently supported values located at https://cloud.google.com/database-migration/docs/reference/rest/v1/projects.locations.connectionProfiles#sqldatabaseversion When `null`, the `database_version` field will be omitted from the resulting object.
+  - `edition` (`string`): The edition of the given Cloud SQL instance. Possible values: [&#34;ENTERPRISE&#34;, &#34;ENTERPRISE_PLUS&#34;] When `null`, the `edition` field will be omitted from the resulting object.
   - `root_password` (`string`): Input only. Initial root password. When `null`, the `root_password` field will be omitted from the resulting object.
   - `source_id` (`string`): The Database Migration Service source connection profile ID, in the format: projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID
   - `storage_auto_resize_limit` (`string`): The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit. When `null`, the `storage_auto_resize_limit` field will be omitted from the resulting object.

@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withEventTrigger()`](#fn-witheventtrigger)
 * [`fn withEventTriggerMixin()`](#fn-witheventtriggermixin)
+* [`fn withKmsKeyName()`](#fn-withkmskeyname)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
@@ -81,6 +82,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): User-provided description of a function. When `null`, the `description` field will be omitted from the resulting object.
+  - `kms_key_name` (`string`): Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
+It must match the pattern projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}. When `null`, the `kms_key_name` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs associated with this Cloud Function. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location of this cloud function. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): A user-defined name of the function. Function names must
@@ -116,6 +119,8 @@ injecting into a complete block.
 
 **Args**:
   - `description` (`string`): User-provided description of a function. When `null`, the `description` field will be omitted from the resulting object.
+  - `kms_key_name` (`string`): Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
+It must match the pattern projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}. When `null`, the `kms_key_name` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs associated with this Cloud Function. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location of this cloud function. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): A user-defined name of the function. Function names must
@@ -220,6 +225,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `event_trigger` field.
+
+
+### fn withKmsKeyName
+
+```ts
+withKmsKeyName()
+```
+
+`google.string.withKmsKeyName` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the kms_key_name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `kms_key_name` field.
 
 
 ### fn withLabels

@@ -602,6 +602,7 @@ Terraform sub block.
 **Args**:
   - `deployment` (`string`): Required. Name of the Kubernetes Deployment whose traffic is managed by the specified HTTPRoute and Service.
   - `http_route` (`string`): Required. Name of the Gateway API HTTPRoute.
+  - `route_update_wait_time` (`string`): Optional. The time to wait for route updates to propagate. The maximum configurable time is 3 hours, in seconds format. If unspecified, there is no wait time. When `null`, the `route_update_wait_time` field will be omitted from the resulting object.
   - `service` (`string`): Required. Name of the Kubernetes Service.
 
 **Returns**:

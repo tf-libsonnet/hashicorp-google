@@ -35,8 +35,20 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-datanew)
 * [`obj data_profile_spec`](#obj-data_profile_spec)
   * [`fn new()`](#fn-data_profile_specnew)
+  * [`obj data_profile_spec.exclude_fields`](#obj-data_profile_specexclude_fields)
+    * [`fn new()`](#fn-data_profile_specexclude_fieldsnew)
+  * [`obj data_profile_spec.include_fields`](#obj-data_profile_specinclude_fields)
+    * [`fn new()`](#fn-data_profile_specinclude_fieldsnew)
+  * [`obj data_profile_spec.post_scan_actions`](#obj-data_profile_specpost_scan_actions)
+    * [`fn new()`](#fn-data_profile_specpost_scan_actionsnew)
+    * [`obj data_profile_spec.post_scan_actions.bigquery_export`](#obj-data_profile_specpost_scan_actionsbigquery_export)
+      * [`fn new()`](#fn-data_profile_specpost_scan_actionsbigquery_exportnew)
 * [`obj data_quality_spec`](#obj-data_quality_spec)
   * [`fn new()`](#fn-data_quality_specnew)
+  * [`obj data_quality_spec.post_scan_actions`](#obj-data_quality_specpost_scan_actions)
+    * [`fn new()`](#fn-data_quality_specpost_scan_actionsnew)
+    * [`obj data_quality_spec.post_scan_actions.bigquery_export`](#obj-data_quality_specpost_scan_actionsbigquery_export)
+      * [`fn new()`](#fn-data_quality_specpost_scan_actionsbigquery_exportnew)
   * [`obj data_quality_spec.rules`](#obj-data_quality_specrules)
     * [`fn new()`](#fn-data_quality_specrulesnew)
     * [`obj data_quality_spec.rules.non_null_expectation`](#obj-data_quality_specrulesnon_null_expectation)
@@ -468,10 +480,114 @@ Terraform sub block.
 
 **Args**:
   - `row_filter` (`string`): A filter applied to all rows in a single DataScan job. The filter needs to be a valid SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 &gt;= 0 AND col2 &lt; 10 When `null`, the `row_filter` field will be omitted from the resulting object.
-  - `sampling_percent` (`number`): The percentage of the records to be selected from the dataset for DataScan. When `null`, the `sampling_percent` field will be omitted from the resulting object.
+  - `sampling_percent` (`number`): The percentage of the records to be selected from the dataset for DataScan.
+Value can range between 0.0 and 100.0 with up to 3 significant decimal digits.
+Sampling is not applied if &#39;sampling_percent&#39; is not specified, 0 or 100. When `null`, the `sampling_percent` field will be omitted from the resulting object.
+  - `exclude_fields` (`list[obj]`): The fields to exclude from data profile.
+If specified, the fields will be excluded from data profile, regardless of &#39;include_fields&#39; value. When `null`, the `exclude_fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_profile_spec.exclude_fields.new](#fn-data_profile_specexclude_fieldsnew) constructor.
+  - `include_fields` (`list[obj]`): The fields to include in data profile.
+If not specified, all fields at the time of profile scan job execution are included, except for ones listed in &#39;exclude_fields&#39;. When `null`, the `include_fields` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_profile_spec.include_fields.new](#fn-data_profile_specinclude_fieldsnew) constructor.
+  - `post_scan_actions` (`list[obj]`): Actions to take upon job completion. When `null`, the `post_scan_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_profile_spec.post_scan_actions.new](#fn-data_profile_specpost_scan_actionsnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `data_profile_spec` sub block.
+
+
+## obj data_profile_spec.exclude_fields
+
+
+
+### fn data_profile_spec.exclude_fields.new
+
+```ts
+new()
+```
+
+
+`google.dataplex_datascan.data_profile_spec.exclude_fields.new` constructs a new object with attributes and blocks configured for the `exclude_fields`
+Terraform sub block.
+
+
+
+**Args**:
+  - `field_names` (`list`): Expected input is a list of fully qualified names of fields as in the schema.
+Only top-level field names for nested fields are supported.
+For instance, if &#39;x&#39; is of nested field type, listing &#39;x&#39; is supported but &#39;x.y.z&#39; is not supported. Here &#39;y&#39; and &#39;y.z&#39; are nested fields of &#39;x&#39;. When `null`, the `field_names` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `exclude_fields` sub block.
+
+
+## obj data_profile_spec.include_fields
+
+
+
+### fn data_profile_spec.include_fields.new
+
+```ts
+new()
+```
+
+
+`google.dataplex_datascan.data_profile_spec.include_fields.new` constructs a new object with attributes and blocks configured for the `include_fields`
+Terraform sub block.
+
+
+
+**Args**:
+  - `field_names` (`list`): Expected input is a list of fully qualified names of fields as in the schema.
+Only top-level field names for nested fields are supported.
+For instance, if &#39;x&#39; is of nested field type, listing &#39;x&#39; is supported but &#39;x.y.z&#39; is not supported. Here &#39;y&#39; and &#39;y.z&#39; are nested fields of &#39;x&#39;. When `null`, the `field_names` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `include_fields` sub block.
+
+
+## obj data_profile_spec.post_scan_actions
+
+
+
+### fn data_profile_spec.post_scan_actions.new
+
+```ts
+new()
+```
+
+
+`google.dataplex_datascan.data_profile_spec.post_scan_actions.new` constructs a new object with attributes and blocks configured for the `post_scan_actions`
+Terraform sub block.
+
+
+
+**Args**:
+  - `bigquery_export` (`list[obj]`): If set, results will be exported to the provided BigQuery table. When `null`, the `bigquery_export` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_profile_spec.post_scan_actions.bigquery_export.new](#fn-data_profile_specdata_profile_specbigquery_exportnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `post_scan_actions` sub block.
+
+
+## obj data_profile_spec.post_scan_actions.bigquery_export
+
+
+
+### fn data_profile_spec.post_scan_actions.bigquery_export.new
+
+```ts
+new()
+```
+
+
+`google.dataplex_datascan.data_profile_spec.post_scan_actions.bigquery_export.new` constructs a new object with attributes and blocks configured for the `bigquery_export`
+Terraform sub block.
+
+
+
+**Args**:
+  - `results_table` (`string`): The BigQuery table to export DataProfileScan results to.
+Format://bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID When `null`, the `results_table` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `bigquery_export` sub block.
 
 
 ## obj data_quality_spec
@@ -492,11 +608,61 @@ Terraform sub block.
 
 **Args**:
   - `row_filter` (`string`): A filter applied to all rows in a single DataScan job. The filter needs to be a valid SQL expression for a WHERE clause in BigQuery standard SQL syntax. Example: col1 &gt;= 0 AND col2 &lt; 10 When `null`, the `row_filter` field will be omitted from the resulting object.
-  - `sampling_percent` (`number`): The percentage of the records to be selected from the dataset for DataScan. When `null`, the `sampling_percent` field will be omitted from the resulting object.
+  - `sampling_percent` (`number`): The percentage of the records to be selected from the dataset for DataScan.
+Value can range between 0.0 and 100.0 with up to 3 significant decimal digits.
+Sampling is not applied if &#39;sampling_percent&#39; is not specified, 0 or 100. When `null`, the `sampling_percent` field will be omitted from the resulting object.
+  - `post_scan_actions` (`list[obj]`): Actions to take upon job completion. When `null`, the `post_scan_actions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_quality_spec.post_scan_actions.new](#fn-data_quality_specpost_scan_actionsnew) constructor.
   - `rules` (`list[obj]`): The list of rules to evaluate against a data source. At least one rule is required. When `null`, the `rules` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_quality_spec.rules.new](#fn-data_quality_specrulesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `data_quality_spec` sub block.
+
+
+## obj data_quality_spec.post_scan_actions
+
+
+
+### fn data_quality_spec.post_scan_actions.new
+
+```ts
+new()
+```
+
+
+`google.dataplex_datascan.data_quality_spec.post_scan_actions.new` constructs a new object with attributes and blocks configured for the `post_scan_actions`
+Terraform sub block.
+
+
+
+**Args**:
+  - `bigquery_export` (`list[obj]`): If set, results will be exported to the provided BigQuery table. When `null`, the `bigquery_export` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_quality_spec.post_scan_actions.bigquery_export.new](#fn-data_quality_specdata_quality_specbigquery_exportnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `post_scan_actions` sub block.
+
+
+## obj data_quality_spec.post_scan_actions.bigquery_export
+
+
+
+### fn data_quality_spec.post_scan_actions.bigquery_export.new
+
+```ts
+new()
+```
+
+
+`google.dataplex_datascan.data_quality_spec.post_scan_actions.bigquery_export.new` constructs a new object with attributes and blocks configured for the `bigquery_export`
+Terraform sub block.
+
+
+
+**Args**:
+  - `results_table` (`string`): The BigQuery table to export DataQualityScan results to.
+Format://bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID When `null`, the `results_table` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `bigquery_export` sub block.
 
 
 ## obj data_quality_spec.rules
@@ -517,8 +683,15 @@ Terraform sub block.
 
 **Args**:
   - `column` (`string`): The unnested column which this rule is evaluated against. When `null`, the `column` field will be omitted from the resulting object.
+  - `description` (`string`): Description of the rule.
+The maximum length is 1,024 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `dimension` (`string`): The dimension a rule belongs to. Results are also aggregated at the dimension level. Supported dimensions are [&#34;COMPLETENESS&#34;, &#34;ACCURACY&#34;, &#34;CONSISTENCY&#34;, &#34;VALIDITY&#34;, &#34;UNIQUENESS&#34;, &#34;INTEGRITY&#34;]
   - `ignore_null` (`bool`): Rows with null values will automatically fail a rule, unless ignoreNull is true. In that case, such null rows are trivially considered passing. Only applicable to ColumnMap rules. When `null`, the `ignore_null` field will be omitted from the resulting object.
+  - `name` (`string`): A mutable name for the rule.
+The name must contain only letters (a-z, A-Z), numbers (0-9), or hyphens (-).
+The maximum length is 63 characters.
+Must start with a letter.
+Must end with a number or a letter. When `null`, the `name` field will be omitted from the resulting object.
   - `threshold` (`number`): The minimum ratio of passing_rows / total_rows required to pass this rule, with a range of [0.0, 1.0]. 0 indicates default value (i.e. 1.0). When `null`, the `threshold` field will be omitted from the resulting object.
   - `non_null_expectation` (`list[obj]`): ColumnMap rule which evaluates whether each column value is null. When `null`, the `non_null_expectation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_quality_spec.rules.non_null_expectation.new](#fn-data_quality_specdata_quality_specnon_null_expectationnew) constructor.
   - `range_expectation` (`list[obj]`): ColumnMap rule which evaluates whether each column value lies between a specified range. When `null`, the `range_expectation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_quality_spec.rules.range_expectation.new](#fn-data_quality_specdata_quality_specrange_expectationnew) constructor.
@@ -527,7 +700,7 @@ Terraform sub block.
   - `set_expectation` (`list[obj]`): ColumnMap rule which evaluates whether each column value is contained by a specified set. When `null`, the `set_expectation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_quality_spec.rules.set_expectation.new](#fn-data_quality_specdata_quality_specset_expectationnew) constructor.
   - `statistic_range_expectation` (`list[obj]`): ColumnAggregate rule which evaluates whether the column aggregate statistic lies between a specified range. When `null`, the `statistic_range_expectation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_quality_spec.rules.statistic_range_expectation.new](#fn-data_quality_specdata_quality_specstatistic_range_expectationnew) constructor.
   - `table_condition_expectation` (`list[obj]`): Table rule which evaluates whether the provided expression is true. When `null`, the `table_condition_expectation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_quality_spec.rules.table_condition_expectation.new](#fn-data_quality_specdata_quality_spectable_condition_expectationnew) constructor.
-  - `uniqueness_expectation` (`list[obj]`): ColumnAggregate rule which evaluates whether the column has duplicates. When `null`, the `uniqueness_expectation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_quality_spec.rules.uniqueness_expectation.new](#fn-data_quality_specdata_quality_specuniqueness_expectationnew) constructor.
+  - `uniqueness_expectation` (`list[obj]`): Row-level rule which evaluates whether each column value is unique. When `null`, the `uniqueness_expectation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data_quality_spec.rules.uniqueness_expectation.new](#fn-data_quality_specdata_quality_specuniqueness_expectationnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `rules` sub block.

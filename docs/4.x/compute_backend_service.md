@@ -148,7 +148,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
   - `load_balancing_scheme` (`string`): Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
 load balancing cannot be used with the other. For more information, refer to
-[Choosing a load balancer](https://cloud.google.com/load-balancing/docs/backend-service). Default value: &#34;EXTERNAL&#34; Possible values: [&#34;EXTERNAL&#34;, &#34;INTERNAL_SELF_MANAGED&#34;, &#34;EXTERNAL_MANAGED&#34;] When `null`, the `load_balancing_scheme` field will be omitted from the resulting object.
+[Choosing a load balancer](https://cloud.google.com/load-balancing/docs/backend-service). Default value: &#34;EXTERNAL&#34; Possible values: [&#34;EXTERNAL&#34;, &#34;INTERNAL_SELF_MANAGED&#34;, &#34;INTERNAL_MANAGED&#34;, &#34;EXTERNAL_MANAGED&#34;] When `null`, the `load_balancing_scheme` field will be omitted from the resulting object.
   - `locality_lb_policy` (`string`): The load balancing algorithm used within the scope of the locality.
 The possible values are:
 
@@ -219,7 +219,9 @@ scheme is EXTERNAL. When `null`, the `port_name` field will be omitted from the 
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `protocol` (`string`): The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
-types and may result in errors if used with the GA API. Possible values: [&#34;HTTP&#34;, &#34;HTTPS&#34;, &#34;HTTP2&#34;, &#34;TCP&#34;, &#34;SSL&#34;, &#34;GRPC&#34;] When `null`, the `protocol` field will be omitted from the resulting object.
+types and may result in errors if used with the GA API. **NOTE**: With protocol “UNSPECIFIED”,
+the backend service can be used by Layer 4 Internal Load Balancing or Network Load Balancing
+with TCP/UDP/L3_DEFAULT Forwarding Rule protocol. Possible values: [&#34;HTTP&#34;, &#34;HTTPS&#34;, &#34;HTTP2&#34;, &#34;TCP&#34;, &#34;SSL&#34;, &#34;GRPC&#34;, &#34;UNSPECIFIED&#34;] When `null`, the `protocol` field will be omitted from the resulting object.
   - `security_policy` (`string`): The security policy associated with this backend service. When `null`, the `security_policy` field will be omitted from the resulting object.
   - `session_affinity` (`string`): Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP. Possible values: [&#34;NONE&#34;, &#34;CLIENT_IP&#34;, &#34;CLIENT_IP_PORT_PROTO&#34;, &#34;CLIENT_IP_PROTO&#34;, &#34;GENERATED_COOKIE&#34;, &#34;HEADER_FIELD&#34;, &#34;HTTP_COOKIE&#34;] When `null`, the `session_affinity` field will be omitted from the resulting object.
@@ -305,7 +307,7 @@ For internal load balancing, a URL to a HealthCheck resource must be specified i
   - `load_balancing_scheme` (`string`): Indicates whether the backend service will be used with internal or
 external load balancing. A backend service created for one type of
 load balancing cannot be used with the other. For more information, refer to
-[Choosing a load balancer](https://cloud.google.com/load-balancing/docs/backend-service). Default value: &#34;EXTERNAL&#34; Possible values: [&#34;EXTERNAL&#34;, &#34;INTERNAL_SELF_MANAGED&#34;, &#34;EXTERNAL_MANAGED&#34;] When `null`, the `load_balancing_scheme` field will be omitted from the resulting object.
+[Choosing a load balancer](https://cloud.google.com/load-balancing/docs/backend-service). Default value: &#34;EXTERNAL&#34; Possible values: [&#34;EXTERNAL&#34;, &#34;INTERNAL_SELF_MANAGED&#34;, &#34;INTERNAL_MANAGED&#34;, &#34;EXTERNAL_MANAGED&#34;] When `null`, the `load_balancing_scheme` field will be omitted from the resulting object.
   - `locality_lb_policy` (`string`): The load balancing algorithm used within the scope of the locality.
 The possible values are:
 
@@ -376,7 +378,9 @@ scheme is EXTERNAL. When `null`, the `port_name` field will be omitted from the 
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `protocol` (`string`): The protocol this BackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
-types and may result in errors if used with the GA API. Possible values: [&#34;HTTP&#34;, &#34;HTTPS&#34;, &#34;HTTP2&#34;, &#34;TCP&#34;, &#34;SSL&#34;, &#34;GRPC&#34;] When `null`, the `protocol` field will be omitted from the resulting object.
+types and may result in errors if used with the GA API. **NOTE**: With protocol “UNSPECIFIED”,
+the backend service can be used by Layer 4 Internal Load Balancing or Network Load Balancing
+with TCP/UDP/L3_DEFAULT Forwarding Rule protocol. Possible values: [&#34;HTTP&#34;, &#34;HTTPS&#34;, &#34;HTTP2&#34;, &#34;TCP&#34;, &#34;SSL&#34;, &#34;GRPC&#34;, &#34;UNSPECIFIED&#34;] When `null`, the `protocol` field will be omitted from the resulting object.
   - `security_policy` (`string`): The security policy associated with this backend service. When `null`, the `security_policy` field will be omitted from the resulting object.
   - `session_affinity` (`string`): Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP. Possible values: [&#34;NONE&#34;, &#34;CLIENT_IP&#34;, &#34;CLIENT_IP_PORT_PROTO&#34;, &#34;CLIENT_IP_PROTO&#34;, &#34;GENERATED_COOKIE&#34;, &#34;HEADER_FIELD&#34;, &#34;HTTP_COOKIE&#34;] When `null`, the `session_affinity` field will be omitted from the resulting object.

@@ -18,6 +18,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAckDeadlineSeconds()`](#fn-withackdeadlineseconds)
 * [`fn withBigqueryConfig()`](#fn-withbigqueryconfig)
 * [`fn withBigqueryConfigMixin()`](#fn-withbigqueryconfigmixin)
+* [`fn withCloudStorageConfig()`](#fn-withcloudstorageconfig)
+* [`fn withCloudStorageConfigMixin()`](#fn-withcloudstorageconfigmixin)
 * [`fn withDeadLetterPolicy()`](#fn-withdeadletterpolicy)
 * [`fn withDeadLetterPolicyMixin()`](#fn-withdeadletterpolicymixin)
 * [`fn withEnableExactlyOnceDelivery()`](#fn-withenableexactlyoncedelivery)
@@ -39,6 +41,10 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTopic()`](#fn-withtopic)
 * [`obj bigquery_config`](#obj-bigquery_config)
   * [`fn new()`](#fn-bigquery_confignew)
+* [`obj cloud_storage_config`](#obj-cloud_storage_config)
+  * [`fn new()`](#fn-cloud_storage_confignew)
+  * [`obj cloud_storage_config.avro_config`](#obj-cloud_storage_configavro_config)
+    * [`fn new()`](#fn-cloud_storage_configavro_confignew)
 * [`obj dead_letter_policy`](#obj-dead_letter_policy)
   * [`fn new()`](#fn-dead_letter_policynew)
 * [`obj expiration_policy`](#obj-expiration_policy)
@@ -135,8 +141,11 @@ they are acknowledged, until they fall out of the
 messageRetentionDuration window. When `null`, the `retain_acked_messages` field will be omitted from the resulting object.
   - `topic` (`string`): A reference to a Topic resource.
   - `bigquery_config` (`list[obj]`): If delivery to BigQuery is used with this subscription, this field is used to configure it.
-Either pushConfig or bigQueryConfig can be set, but not both.
-If both are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `bigquery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.bigquery_config.new](#fn-bigquery_confignew) constructor.
+Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined.
+If all three are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `bigquery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.bigquery_config.new](#fn-bigquery_confignew) constructor.
+  - `cloud_storage_config` (`list[obj]`): If delivery to Cloud Storage is used with this subscription, this field is used to configure it.
+Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined.
+If all three are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `cloud_storage_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.cloud_storage_config.new](#fn-cloud_storage_confignew) constructor.
   - `dead_letter_policy` (`list[obj]`): A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
 is disabled.
@@ -235,8 +244,11 @@ they are acknowledged, until they fall out of the
 messageRetentionDuration window. When `null`, the `retain_acked_messages` field will be omitted from the resulting object.
   - `topic` (`string`): A reference to a Topic resource.
   - `bigquery_config` (`list[obj]`): If delivery to BigQuery is used with this subscription, this field is used to configure it.
-Either pushConfig or bigQueryConfig can be set, but not both.
-If both are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `bigquery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.bigquery_config.new](#fn-bigquery_confignew) constructor.
+Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined.
+If all three are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `bigquery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.bigquery_config.new](#fn-bigquery_confignew) constructor.
+  - `cloud_storage_config` (`list[obj]`): If delivery to Cloud Storage is used with this subscription, this field is used to configure it.
+Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined.
+If all three are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `cloud_storage_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.cloud_storage_config.new](#fn-cloud_storage_confignew) constructor.
   - `dead_letter_policy` (`list[obj]`): A policy that specifies the conditions for dead lettering messages in
 this subscription. If dead_letter_policy is not set, dead lettering
 is disabled.
@@ -316,6 +328,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `bigquery_config` field.
+
+
+### fn withCloudStorageConfig
+
+```ts
+withCloudStorageConfig()
+```
+
+`google.list[obj].withCloudStorageConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the cloud_storage_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withCloudStorageConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `cloud_storage_config` field.
+
+
+### fn withCloudStorageConfigMixin
+
+```ts
+withCloudStorageConfigMixin()
+```
+
+`google.list[obj].withCloudStorageConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the cloud_storage_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withCloudStorageConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `cloud_storage_config` field.
 
 
 ### fn withDeadLetterPolicy
@@ -672,6 +721,60 @@ The subscription name, messageId, and publishTime fields are put in their own co
 
 **Returns**:
   - An attribute object that represents the `bigquery_config` sub block.
+
+
+## obj cloud_storage_config
+
+
+
+### fn cloud_storage_config.new
+
+```ts
+new()
+```
+
+
+`google.pubsub_subscription.cloud_storage_config.new` constructs a new object with attributes and blocks configured for the `cloud_storage_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `bucket` (`string`): User-provided name for the Cloud Storage bucket. The bucket must be created by the user. The bucket name must be without any prefix like &#34;gs://&#34;.
+  - `filename_prefix` (`string`): User-provided prefix for Cloud Storage filename. When `null`, the `filename_prefix` field will be omitted from the resulting object.
+  - `filename_suffix` (`string`): User-provided suffix for Cloud Storage filename. Must not end in &#34;/&#34;. When `null`, the `filename_suffix` field will be omitted from the resulting object.
+  - `max_bytes` (`number`): The maximum bytes that can be written to a Cloud Storage file before a new file is created. Min 1 KB, max 10 GiB.
+The maxBytes limit may be exceeded in cases where messages are larger than the limit. When `null`, the `max_bytes` field will be omitted from the resulting object.
+  - `max_duration` (`string`): The maximum duration that can elapse before a new Cloud Storage file is created. Min 1 minute, max 10 minutes, default 5 minutes.
+May not exceed the subscription&#39;s acknowledgement deadline.
+A duration in seconds with up to nine fractional digits, ending with &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `max_duration` field will be omitted from the resulting object.
+  - `avro_config` (`list[obj]`): If set, message data will be written to Cloud Storage in Avro format. When `null`, the `avro_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.cloud_storage_config.avro_config.new](#fn-cloud_storage_configavro_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `cloud_storage_config` sub block.
+
+
+## obj cloud_storage_config.avro_config
+
+
+
+### fn cloud_storage_config.avro_config.new
+
+```ts
+new()
+```
+
+
+`google.pubsub_subscription.cloud_storage_config.avro_config.new` constructs a new object with attributes and blocks configured for the `avro_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `write_metadata` (`bool`): When true, write the subscription name, messageId, publishTime, attributes, and orderingKey as additional fields in the output. When `null`, the `write_metadata` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `avro_config` sub block.
 
 
 ## obj dead_letter_policy

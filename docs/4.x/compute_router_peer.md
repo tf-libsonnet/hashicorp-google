@@ -76,11 +76,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `advertise_mode` (`string`): User-specified flag to indicate which mode to use for advertisement.
 Valid values of this enum field are: &#39;DEFAULT&#39;, &#39;CUSTOM&#39; Default value: &#34;DEFAULT&#34; Possible values: [&#34;DEFAULT&#34;, &#34;CUSTOM&#34;] When `null`, the `advertise_mode` field will be omitted from the resulting object.
   - `advertised_groups` (`list`): User-specified list of prefix groups to advertise in custom
-mode, which can take one of the following options:
+mode, which currently supports the following option:
 
-* &#39;ALL_SUBNETS&#39;: Advertises all available subnets, including peer VPC subnets.
-* &#39;ALL_VPC_SUBNETS&#39;: Advertises the router&#39;s own VPC subnets.
-* &#39;ALL_PEER_VPC_SUBNETS&#39;: Advertises peer subnets of the router&#39;s VPC network.
+* &#39;ALL_SUBNETS&#39;: Advertises all of the router&#39;s own VPC subnets.
+This excludes any routes learned for subnets that use VPC Network
+Peering.
 
 
 Note that this field can only be populated if advertiseMode is &#39;CUSTOM&#39;
@@ -157,11 +157,11 @@ injecting into a complete block.
   - `advertise_mode` (`string`): User-specified flag to indicate which mode to use for advertisement.
 Valid values of this enum field are: &#39;DEFAULT&#39;, &#39;CUSTOM&#39; Default value: &#34;DEFAULT&#34; Possible values: [&#34;DEFAULT&#34;, &#34;CUSTOM&#34;] When `null`, the `advertise_mode` field will be omitted from the resulting object.
   - `advertised_groups` (`list`): User-specified list of prefix groups to advertise in custom
-mode, which can take one of the following options:
+mode, which currently supports the following option:
 
-* &#39;ALL_SUBNETS&#39;: Advertises all available subnets, including peer VPC subnets.
-* &#39;ALL_VPC_SUBNETS&#39;: Advertises the router&#39;s own VPC subnets.
-* &#39;ALL_PEER_VPC_SUBNETS&#39;: Advertises peer subnets of the router&#39;s VPC network.
+* &#39;ALL_SUBNETS&#39;: Advertises all of the router&#39;s own VPC subnets.
+This excludes any routes learned for subnets that use VPC Network
+Peering.
 
 
 Note that this field can only be populated if advertiseMode is &#39;CUSTOM&#39;

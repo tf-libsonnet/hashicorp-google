@@ -138,14 +138,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
             },
             kubernetes:: {
               gateway_service_mesh:: {
-                '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.gateway_service_mesh.new` constructs a new object with attributes and blocks configured for the `gateway_service_mesh`\nTerraform sub block.\n\n\n\n**Args**:\n  - `deployment` (`string`): Required. Name of the Kubernetes Deployment whose traffic is managed by the specified HTTPRoute and Service.\n  - `http_route` (`string`): Required. Name of the Gateway API HTTPRoute.\n  - `service` (`string`): Required. Name of the Kubernetes Service.\n\n**Returns**:\n  - An attribute object that represents the `gateway_service_mesh` sub block.\n', args=[]),
+                '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.kubernetes.gateway_service_mesh.new` constructs a new object with attributes and blocks configured for the `gateway_service_mesh`\nTerraform sub block.\n\n\n\n**Args**:\n  - `deployment` (`string`): Required. Name of the Kubernetes Deployment whose traffic is managed by the specified HTTPRoute and Service.\n  - `http_route` (`string`): Required. Name of the Gateway API HTTPRoute.\n  - `route_update_wait_time` (`string`): Optional. The time to wait for route updates to propagate. The maximum configurable time is 3 hours, in seconds format. If unspecified, there is no wait time. When `null`, the `route_update_wait_time` field will be omitted from the resulting object.\n  - `service` (`string`): Required. Name of the Kubernetes Service.\n\n**Returns**:\n  - An attribute object that represents the `gateway_service_mesh` sub block.\n', args=[]),
                 new(
                   deployment,
                   http_route,
-                  service
+                  service,
+                  route_update_wait_time=null
                 ):: std.prune(a={
                   deployment: deployment,
                   http_route: http_route,
+                  route_update_wait_time: route_update_wait_time,
                   service: service,
                 }),
               },

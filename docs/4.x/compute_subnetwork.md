@@ -89,20 +89,18 @@ Only networks that are in the distributed mode can have subnetworks.
 access Google APIs and services by using Private Google Access. When `null`, the `private_ip_google_access` field will be omitted from the resulting object.
   - `private_ipv6_google_access` (`string`): The private IPv6 google access type for the VMs in this subnet. When `null`, the `private_ipv6_google_access` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `purpose` (`string`): The purpose of the resource. This field can be either &#39;PRIVATE_RFC_1918&#39;, &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39;, &#39;REGIONAL_MANAGED_PROXY&#39;, &#39;GLOBAL_MANAGED_PROXY&#39; or &#39;PRIVATE_SERVICE_CONNECT&#39;.
-A subnetwork with purpose set to &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-A subnetwork in a given region with purpose set to &#39;REGIONAL_MANAGED_PROXY&#39; is a proxy-only subnet and is shared between all the regional Envoy-based load balancers.
+  - `purpose` (`string`): The purpose of the resource. This field can be either &#39;PRIVATE_RFC_1918&#39;, &#39;REGIONAL_MANAGED_PROXY&#39;, &#39;GLOBAL_MANAGED_PROXY&#39;, or &#39;PRIVATE_SERVICE_CONNECT&#39;.
+A subnet with purpose set to &#39;REGIONAL_MANAGED_PROXY&#39; is a user-created subnetwork that is reserved for regional Envoy-based load balancers.
 A subnetwork in a given region with purpose set to &#39;GLOBAL_MANAGED_PROXY&#39; is a proxy-only subnet and is shared between all the cross-regional Envoy-based load balancers.
 A subnetwork with purpose set to &#39;PRIVATE_SERVICE_CONNECT&#39; reserves the subnet for hosting a Private Service Connect published service.
-If unspecified, the purpose defaults to &#39;PRIVATE_RFC_1918&#39;.
-The enableFlowLogs field isn&#39;t supported with the purpose field set to &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; or &#39;REGIONAL_MANAGED_PROXY&#39; or &#39;GLOBAL_MANAGED_PROXY&#39;. When `null`, the `purpose` field will be omitted from the resulting object.
+Note that &#39;REGIONAL_MANAGED_PROXY&#39; is the preferred setting for all regional Envoy load balancers.
+If unspecified, the purpose defaults to &#39;PRIVATE_RFC_1918&#39;. When `null`, the `purpose` field will be omitted from the resulting object.
   - `region` (`string`): The GCP region for this subnetwork. When `null`, the `region` field will be omitted from the resulting object.
   - `role` (`string`): The role of subnetwork.
+Currently, this field is only used when &#39;purpose&#39; is &#39;REGIONAL_MANAGED_PROXY&#39;.
 The value can be set to &#39;ACTIVE&#39; or &#39;BACKUP&#39;.
-An &#39;ACTIVE&#39; subnetwork is one that is currently being used.
-A &#39;BACKUP&#39; subnetwork is one that is ready to be promoted to &#39;ACTIVE&#39; or is currently draining.
-
-Subnetwork role must be specified when purpose is set to &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; or &#39;REGIONAL_MANAGED_PROXY&#39;. Possible values: [&#34;ACTIVE&#34;, &#34;BACKUP&#34;] When `null`, the `role` field will be omitted from the resulting object.
+An &#39;ACTIVE&#39; subnetwork is one that is currently being used for Envoy-based load balancers in a region.
+A &#39;BACKUP&#39; subnetwork is one that is ready to be promoted to &#39;ACTIVE&#39; or is currently draining. Possible values: [&#34;ACTIVE&#34;, &#34;BACKUP&#34;] When `null`, the `role` field will be omitted from the resulting object.
   - `secondary_ip_range` (`list`): An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
@@ -115,9 +113,10 @@ of zero objects you must use the following syntax:
 For more details about this behavior, see [this section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value). When `null`, the `secondary_ip_range` field will be omitted from the resulting object.
   - `stack_type` (`string`): The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
 If not specified IPV4_ONLY will be used. Possible values: [&#34;IPV4_ONLY&#34;, &#34;IPV4_IPV6&#34;] When `null`, the `stack_type` field will be omitted from the resulting object.
-  - `log_config` (`list[obj]`): Denotes the logging options for the subnetwork flow logs. If logging is enabled
-logs will be exported to Stackdriver. This field cannot be set if the &#39;purpose&#39; of this
-subnetwork is &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; or &#39;REGIONAL_MANAGED_PROXY&#39; or &#39;GLOBAL_MANAGED_PROXY&#39; When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.log_config.new](#fn-log_confignew) constructor.
+  - `log_config` (`list[obj]`): This field denotes the VPC flow logging options for this subnetwork. If
+logging is enabled, logs are exported to Cloud Logging. Flow logging
+isn&#39;t supported if the subnet &#39;purpose&#39; field is set to subnetwork is
+&#39;REGIONAL_MANAGED_PROXY&#39; or &#39;GLOBAL_MANAGED_PROXY&#39;. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.log_config.new](#fn-log_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -165,20 +164,18 @@ Only networks that are in the distributed mode can have subnetworks.
 access Google APIs and services by using Private Google Access. When `null`, the `private_ip_google_access` field will be omitted from the resulting object.
   - `private_ipv6_google_access` (`string`): The private IPv6 google access type for the VMs in this subnet. When `null`, the `private_ipv6_google_access` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `purpose` (`string`): The purpose of the resource. This field can be either &#39;PRIVATE_RFC_1918&#39;, &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39;, &#39;REGIONAL_MANAGED_PROXY&#39;, &#39;GLOBAL_MANAGED_PROXY&#39; or &#39;PRIVATE_SERVICE_CONNECT&#39;.
-A subnetwork with purpose set to &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; is a user-created subnetwork that is reserved for Internal HTTP(S) Load Balancing.
-A subnetwork in a given region with purpose set to &#39;REGIONAL_MANAGED_PROXY&#39; is a proxy-only subnet and is shared between all the regional Envoy-based load balancers.
+  - `purpose` (`string`): The purpose of the resource. This field can be either &#39;PRIVATE_RFC_1918&#39;, &#39;REGIONAL_MANAGED_PROXY&#39;, &#39;GLOBAL_MANAGED_PROXY&#39;, or &#39;PRIVATE_SERVICE_CONNECT&#39;.
+A subnet with purpose set to &#39;REGIONAL_MANAGED_PROXY&#39; is a user-created subnetwork that is reserved for regional Envoy-based load balancers.
 A subnetwork in a given region with purpose set to &#39;GLOBAL_MANAGED_PROXY&#39; is a proxy-only subnet and is shared between all the cross-regional Envoy-based load balancers.
 A subnetwork with purpose set to &#39;PRIVATE_SERVICE_CONNECT&#39; reserves the subnet for hosting a Private Service Connect published service.
-If unspecified, the purpose defaults to &#39;PRIVATE_RFC_1918&#39;.
-The enableFlowLogs field isn&#39;t supported with the purpose field set to &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; or &#39;REGIONAL_MANAGED_PROXY&#39; or &#39;GLOBAL_MANAGED_PROXY&#39;. When `null`, the `purpose` field will be omitted from the resulting object.
+Note that &#39;REGIONAL_MANAGED_PROXY&#39; is the preferred setting for all regional Envoy load balancers.
+If unspecified, the purpose defaults to &#39;PRIVATE_RFC_1918&#39;. When `null`, the `purpose` field will be omitted from the resulting object.
   - `region` (`string`): The GCP region for this subnetwork. When `null`, the `region` field will be omitted from the resulting object.
   - `role` (`string`): The role of subnetwork.
+Currently, this field is only used when &#39;purpose&#39; is &#39;REGIONAL_MANAGED_PROXY&#39;.
 The value can be set to &#39;ACTIVE&#39; or &#39;BACKUP&#39;.
-An &#39;ACTIVE&#39; subnetwork is one that is currently being used.
-A &#39;BACKUP&#39; subnetwork is one that is ready to be promoted to &#39;ACTIVE&#39; or is currently draining.
-
-Subnetwork role must be specified when purpose is set to &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; or &#39;REGIONAL_MANAGED_PROXY&#39;. Possible values: [&#34;ACTIVE&#34;, &#34;BACKUP&#34;] When `null`, the `role` field will be omitted from the resulting object.
+An &#39;ACTIVE&#39; subnetwork is one that is currently being used for Envoy-based load balancers in a region.
+A &#39;BACKUP&#39; subnetwork is one that is ready to be promoted to &#39;ACTIVE&#39; or is currently draining. Possible values: [&#34;ACTIVE&#34;, &#34;BACKUP&#34;] When `null`, the `role` field will be omitted from the resulting object.
   - `secondary_ip_range` (`list`): An array of configurations for secondary IP ranges for VM instances
 contained in this subnetwork. The primary IP of such VM must belong
 to the primary ipCidrRange of the subnetwork. The alias IPs may belong
@@ -191,9 +188,10 @@ of zero objects you must use the following syntax:
 For more details about this behavior, see [this section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#defining-a-fixed-object-collection-value). When `null`, the `secondary_ip_range` field will be omitted from the resulting object.
   - `stack_type` (`string`): The stack type for this subnet to identify whether the IPv6 feature is enabled or not.
 If not specified IPV4_ONLY will be used. Possible values: [&#34;IPV4_ONLY&#34;, &#34;IPV4_IPV6&#34;] When `null`, the `stack_type` field will be omitted from the resulting object.
-  - `log_config` (`list[obj]`): Denotes the logging options for the subnetwork flow logs. If logging is enabled
-logs will be exported to Stackdriver. This field cannot be set if the &#39;purpose&#39; of this
-subnetwork is &#39;INTERNAL_HTTPS_LOAD_BALANCER&#39; or &#39;REGIONAL_MANAGED_PROXY&#39; or &#39;GLOBAL_MANAGED_PROXY&#39; When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.log_config.new](#fn-log_confignew) constructor.
+  - `log_config` (`list[obj]`): This field denotes the VPC flow logging options for this subnetwork. If
+logging is enabled, logs are exported to Cloud Logging. Flow logging
+isn&#39;t supported if the subnet &#39;purpose&#39; field is set to subnetwork is
+&#39;REGIONAL_MANAGED_PROXY&#39; or &#39;GLOBAL_MANAGED_PROXY&#39;. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.log_config.new](#fn-log_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_subnetwork.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:

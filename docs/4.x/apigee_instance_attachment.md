@@ -53,7 +53,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `environment` (`string`): The resource ID of the environment.
   - `instance_id` (`string`): The Apigee instance associated with the Apigee environment,
-in the format &#39;organisations/{{org_name}}/instances/{{instance_name}}&#39;.
+in the format &#39;organizations/{{org_name}}/instances/{{instance_name}}&#39;.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_instance_attachment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -80,7 +80,7 @@ injecting into a complete block.
 **Args**:
   - `environment` (`string`): The resource ID of the environment.
   - `instance_id` (`string`): The Apigee instance associated with the Apigee environment,
-in the format &#39;organisations/{{org_name}}/instances/{{instance_name}}&#39;.
+in the format &#39;organizations/{{org_name}}/instances/{{instance_name}}&#39;.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_instance_attachment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:

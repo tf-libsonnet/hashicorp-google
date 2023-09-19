@@ -866,7 +866,7 @@ default value is zero. Must be zero or positive. When `null`, the `duration` fie
 of 30 seconds or missing. The default value is 30 seconds. If this
 PrometheusQueryLanguageCondition was generated from a Prometheus
 alerting rule, then this value should be taken from the enclosing
-rule group.
+rule group. When `null`, the `evaluation_interval` field will be omitted from the resulting object.
   - `labels` (`obj`): Labels to add to or overwrite in the PromQL query result. Label names
 must be valid.
 

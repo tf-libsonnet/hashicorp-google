@@ -103,7 +103,7 @@ to forward to. When `null`, the `forwarding_config` sub block will be omitted fr
   - `peering_config` (`list[obj]`): The presence of this field indicates that DNS Peering is enabled for this
 zone. The value of this field contains the network to peer with. When `null`, the `peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.peering_config.new](#fn-peering_confignew) constructor.
   - `private_visibility_config` (`list[obj]`): For privately visible zones, the set of Virtual Private Cloud
-resources that the zone is visible from. When `null`, the `private_visibility_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.private_visibility_config.new](#fn-private_visibility_confignew) constructor.
+resources that the zone is visible from. At least one of &#39;gke_clusters&#39; or &#39;networks&#39; must be specified. When `null`, the `private_visibility_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.private_visibility_config.new](#fn-private_visibility_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -145,7 +145,7 @@ to forward to. When `null`, the `forwarding_config` sub block will be omitted fr
   - `peering_config` (`list[obj]`): The presence of this field indicates that DNS Peering is enabled for this
 zone. The value of this field contains the network to peer with. When `null`, the `peering_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.peering_config.new](#fn-peering_confignew) constructor.
   - `private_visibility_config` (`list[obj]`): For privately visible zones, the set of Virtual Private Cloud
-resources that the zone is visible from. When `null`, the `private_visibility_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.private_visibility_config.new](#fn-private_visibility_confignew) constructor.
+resources that the zone is visible from. At least one of &#39;gke_clusters&#39; or &#39;networks&#39; must be specified. When `null`, the `private_visibility_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.private_visibility_config.new](#fn-private_visibility_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dns_managed_zone.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:

@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withNetwork()`](#fn-withnetwork)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withPublicEndpointEnabled()`](#fn-withpublicendpointenabled)
 * [`fn withRegion()`](#fn-withregion)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -63,6 +64,7 @@ Private services access must already be configured for the network. If left unsp
 [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert): &#39;projects/{project}/global/networks/{network}&#39;.
 Where &#39;{project}&#39; is a project number, as in &#39;12345&#39;, and &#39;{network}&#39; is network name. When `null`, the `network` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `public_endpoint_enabled` (`bool`): If true, the deployed index will be accessible through public endpoint. When `null`, the `public_endpoint_enabled` field will be omitted from the resulting object.
   - `region` (`string`): The region of the index endpoint. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -96,6 +98,7 @@ Private services access must already be configured for the network. If left unsp
 [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert): &#39;projects/{project}/global/networks/{network}&#39;.
 Where &#39;{project}&#39; is a project number, as in &#39;12345&#39;, and &#39;{network}&#39; is network name. When `null`, the `network` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `public_endpoint_enabled` (`bool`): If true, the deployed index will be accessible through public endpoint. When `null`, the `public_endpoint_enabled` field will be omitted from the resulting object.
   - `region` (`string`): The region of the index endpoint. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -181,6 +184,22 @@ Terraform resource block to set or update the project field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `project` field.
+
+
+### fn withPublicEndpointEnabled
+
+```ts
+withPublicEndpointEnabled()
+```
+
+`google.bool.withPublicEndpointEnabled` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the public_endpoint_enabled field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `public_endpoint_enabled` field.
 
 
 ### fn withRegion

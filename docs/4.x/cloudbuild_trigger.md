@@ -1540,6 +1540,8 @@ Terraform sub block.
 
 
 **Args**:
+  - `bitbucket_server_config` (`string`): The full resource name of the bitbucket server config.
+Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}. When `null`, the `bitbucket_server_config` field will be omitted from the resulting object.
   - `github_enterprise_config` (`string`): The full resource name of the github enterprise config.
 Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}. When `null`, the `github_enterprise_config` field will be omitted from the resulting object.
   - `path` (`string`): The path of the file, with the repo root as the root of the path.
@@ -1762,6 +1764,8 @@ Terraform sub block.
 
 
 **Args**:
+  - `bitbucket_server_config` (`string`): The full resource name of the bitbucket server config.
+Format: projects/{project}/locations/{location}/bitbucketServerConfigs/{id}. When `null`, the `bitbucket_server_config` field will be omitted from the resulting object.
   - `github_enterprise_config` (`string`): The full resource name of the github enterprise config.
 Format: projects/{project}/locations/{location}/githubEnterpriseConfigs/{id}. projects/{project}/githubEnterpriseConfigs/{id}. When `null`, the `github_enterprise_config` field will be omitted from the resulting object.
   - `ref` (`string`): The branch or tag to use. Must start with &#34;refs/&#34; (required).

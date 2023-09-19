@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withDeletionPolicy()`](#fn-withdeletionpolicy)
 * [`fn withEnabled()`](#fn-withenabled)
 * [`fn withSecret()`](#fn-withsecret)
 * [`fn withSecretData()`](#fn-withsecretdata)
@@ -52,6 +53,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `deletion_policy` (`string`): The deletion policy for the secret version. Setting &#39;ABANDON&#39; allows the resource
+to be abandoned rather than deleted. Setting &#39;DISABLE&#39; allows the resource to be
+disabled rather than deleted. Default is &#39;DELETE&#39;. Possible values are:
+  * DELETE
+  * DISABLE
+  * ABANDON When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `enabled` (`bool`): The current state of the SecretVersion. When `null`, the `enabled` field will be omitted from the resulting object.
   - `secret` (`string`): Secret Manager secret resource
   - `secret_data` (`string`): The secret data. Must be no larger than 64KiB.
@@ -79,6 +86,12 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `deletion_policy` (`string`): The deletion policy for the secret version. Setting &#39;ABANDON&#39; allows the resource
+to be abandoned rather than deleted. Setting &#39;DISABLE&#39; allows the resource to be
+disabled rather than deleted. Default is &#39;DELETE&#39;. Possible values are:
+  * DELETE
+  * DISABLE
+  * ABANDON When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `enabled` (`bool`): The current state of the SecretVersion. When `null`, the `enabled` field will be omitted from the resulting object.
   - `secret` (`string`): Secret Manager secret resource
   - `secret_data` (`string`): The secret data. Must be no larger than 64KiB.
@@ -86,6 +99,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `secret_manager_secret_version` resource into the root Terraform configuration.
+
+
+### fn withDeletionPolicy
+
+```ts
+withDeletionPolicy()
+```
+
+`google.string.withDeletionPolicy` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the deletion_policy field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `deletion_policy` field.
 
 
 ### fn withEnabled

@@ -903,6 +903,7 @@ Terraform sub block.
   - `interface` (`string`): Specifies the disk interface to use for attaching this disk. When `null`, the `interface` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs to assign to disks, When `null`, the `labels` field will be omitted from the resulting object.
   - `mode` (`string`): The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If you are attaching or creating a boot disk, this must read-write mode. When `null`, the `mode` field will be omitted from the resulting object.
+  - `provisioned_iops` (`number`): Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the [Extreme persistent disk documentation](https://cloud.google.com/compute/docs/disks/extreme-persistent-disk). When `null`, the `provisioned_iops` field will be omitted from the resulting object.
   - `resource_policies` (`list`): A list (short name or id) of resource policies to attach to this disk. Currently a max of 1 resource policy is supported. When `null`, the `resource_policies` field will be omitted from the resulting object.
   - `source` (`string`): The name (not self_link) of the disk (such as those managed by google_compute_disk) to attach. ~&gt; Note: Either source or source_image is required when creating a new instance except for when creating a local SSD. When `null`, the `source` field will be omitted from the resulting object.
   - `source_image` (`string`): The image from which to initialize this disk. This can be one of: the image&#39;s self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~&gt; Note: Either source or source_image is required when creating a new instance except for when creating a local SSD. When `null`, the `source_image` field will be omitted from the resulting object.
@@ -1044,6 +1045,8 @@ Terraform sub block.
 
 
 **Args**:
+  - `internal_ipv6_prefix_length` (`number`): The prefix length of the primary internal IPv6 range. When `null`, the `internal_ipv6_prefix_length` field will be omitted from the resulting object.
+  - `ipv6_address` (`string`): An IPv6 internal network address for this network interface. If not specified, Google Cloud will automatically assign an internal IPv6 address from the instance&#39;s subnetwork. When `null`, the `ipv6_address` field will be omitted from the resulting object.
   - `network` (`string`): The name or self_link of the network to attach this interface to. Use network attribute for Legacy or Auto subnetted networks and subnetwork for custom subnetted networks. When `null`, the `network` field will be omitted from the resulting object.
   - `network_ip` (`string`): The private IP address to assign to the instance. If empty, the address will be automatically assigned. When `null`, the `network_ip` field will be omitted from the resulting object.
   - `nic_type` (`string`): The type of vNIC to be used on this interface. Possible values:GVNIC, VIRTIO_NET When `null`, the `nic_type` field will be omitted from the resulting object.

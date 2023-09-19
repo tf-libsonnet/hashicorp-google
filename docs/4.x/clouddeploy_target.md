@@ -26,6 +26,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withGkeMixin()`](#fn-withgkemixin)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withLocation()`](#fn-withlocation)
+* [`fn withMultiTarget()`](#fn-withmultitarget)
+* [`fn withMultiTargetMixin()`](#fn-withmultitargetmixin)
 * [`fn withName()`](#fn-withname)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRequireApproval()`](#fn-withrequireapproval)
@@ -39,6 +41,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-execution_configsnew)
 * [`obj gke`](#obj-gke)
   * [`fn new()`](#fn-gkenew)
+* [`obj multi_target`](#obj-multi_target)
+  * [`fn new()`](#fn-multi_targetnew)
 * [`obj run`](#obj-run)
   * [`fn new()`](#fn-runnew)
 * [`obj timeouts`](#obj-timeouts)
@@ -84,6 +88,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `anthos_cluster` (`list[obj]`): Information specifying an Anthos Cluster. When `null`, the `anthos_cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_target.anthos_cluster.new](#fn-anthos_clusternew) constructor.
   - `execution_configs` (`list[obj]`): Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`. When `null`, the `execution_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_target.execution_configs.new](#fn-execution_configsnew) constructor.
   - `gke` (`list[obj]`): Information specifying a GKE Cluster. When `null`, the `gke` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_target.gke.new](#fn-gkenew) constructor.
+  - `multi_target` (`list[obj]`): Information specifying a multiTarget. When `null`, the `multi_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_target.multi_target.new](#fn-multi_targetnew) constructor.
   - `run` (`list[obj]`): Information specifying a Cloud Run deployment target. When `null`, the `run` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_target.run.new](#fn-runnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_target.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -120,6 +125,7 @@ injecting into a complete block.
   - `anthos_cluster` (`list[obj]`): Information specifying an Anthos Cluster. When `null`, the `anthos_cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_target.anthos_cluster.new](#fn-anthos_clusternew) constructor.
   - `execution_configs` (`list[obj]`): Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`. When `null`, the `execution_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_target.execution_configs.new](#fn-execution_configsnew) constructor.
   - `gke` (`list[obj]`): Information specifying a GKE Cluster. When `null`, the `gke` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_target.gke.new](#fn-gkenew) constructor.
+  - `multi_target` (`list[obj]`): Information specifying a multiTarget. When `null`, the `multi_target` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_target.multi_target.new](#fn-multi_targetnew) constructor.
   - `run` (`list[obj]`): Information specifying a Cloud Run deployment target. When `null`, the `run` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_target.run.new](#fn-runnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_target.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -318,6 +324,43 @@ Terraform resource block to set or update the location field.
   - `value` (`string`): The value to set for the `location` field.
 
 
+### fn withMultiTarget
+
+```ts
+withMultiTarget()
+```
+
+`google.list[obj].withMultiTarget` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the multi_target field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withMultiTargetMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `multi_target` field.
+
+
+### fn withMultiTargetMixin
+
+```ts
+withMultiTargetMixin()
+```
+
+`google.list[obj].withMultiTargetMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the multi_target field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withMultiTarget](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `multi_target` field.
+
+
 ### fn withName
 
 ```ts
@@ -511,6 +554,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `gke` sub block.
+
+
+## obj multi_target
+
+
+
+### fn multi_target.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_target.multi_target.new` constructs a new object with attributes and blocks configured for the `multi_target`
+Terraform sub block.
+
+
+
+**Args**:
+  - `target_ids` (`list`): Required. The target_ids of this multiTarget.
+
+**Returns**:
+  - An attribute object that represents the `multi_target` sub block.
 
 
 ## obj run
