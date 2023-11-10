@@ -98,8 +98,7 @@ project that is hosting the Looker Instance. When `null`, the `consumer_network`
 - LOOKER_CORE_STANDARD: pay as you go standard instance
 - LOOKER_CORE_STANDARD_ANNUAL: subscription standard instance
 - LOOKER_CORE_ENTERPRISE_ANNUAL: subscription enterprise instance
-- LOOKER_CORE_EMBED_ANNUAL: subscription embed instance
-- LOOKER_MODELER: standalone modeling service Default value: &#34;LOOKER_CORE_TRIAL&#34; Possible values: [&#34;LOOKER_CORE_TRIAL&#34;, &#34;LOOKER_CORE_STANDARD&#34;, &#34;LOOKER_CORE_STANDARD_ANNUAL&#34;, &#34;LOOKER_CORE_ENTERPRISE_ANNUAL&#34;, &#34;LOOKER_CORE_EMBED_ANNUAL&#34;, &#34;LOOKER_MODELER&#34;] When `null`, the `platform_edition` field will be omitted from the resulting object.
+- LOOKER_CORE_EMBED_ANNUAL: subscription embed instance Default value: &#34;LOOKER_CORE_TRIAL&#34; Possible values: [&#34;LOOKER_CORE_TRIAL&#34;, &#34;LOOKER_CORE_STANDARD&#34;, &#34;LOOKER_CORE_STANDARD_ANNUAL&#34;, &#34;LOOKER_CORE_ENTERPRISE_ANNUAL&#34;, &#34;LOOKER_CORE_EMBED_ANNUAL&#34;] When `null`, the `platform_edition` field will be omitted from the resulting object.
   - `private_ip_enabled` (`bool`): Whether private IP is enabled on the Looker instance. When `null`, the `private_ip_enabled` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `public_ip_enabled` (`bool`): Whether public IP is enabled on the Looker instance. When `null`, the `public_ip_enabled` field will be omitted from the resulting object.
@@ -161,8 +160,7 @@ project that is hosting the Looker Instance. When `null`, the `consumer_network`
 - LOOKER_CORE_STANDARD: pay as you go standard instance
 - LOOKER_CORE_STANDARD_ANNUAL: subscription standard instance
 - LOOKER_CORE_ENTERPRISE_ANNUAL: subscription enterprise instance
-- LOOKER_CORE_EMBED_ANNUAL: subscription embed instance
-- LOOKER_MODELER: standalone modeling service Default value: &#34;LOOKER_CORE_TRIAL&#34; Possible values: [&#34;LOOKER_CORE_TRIAL&#34;, &#34;LOOKER_CORE_STANDARD&#34;, &#34;LOOKER_CORE_STANDARD_ANNUAL&#34;, &#34;LOOKER_CORE_ENTERPRISE_ANNUAL&#34;, &#34;LOOKER_CORE_EMBED_ANNUAL&#34;, &#34;LOOKER_MODELER&#34;] When `null`, the `platform_edition` field will be omitted from the resulting object.
+- LOOKER_CORE_EMBED_ANNUAL: subscription embed instance Default value: &#34;LOOKER_CORE_TRIAL&#34; Possible values: [&#34;LOOKER_CORE_TRIAL&#34;, &#34;LOOKER_CORE_STANDARD&#34;, &#34;LOOKER_CORE_STANDARD_ANNUAL&#34;, &#34;LOOKER_CORE_ENTERPRISE_ANNUAL&#34;, &#34;LOOKER_CORE_EMBED_ANNUAL&#34;] When `null`, the `platform_edition` field will be omitted from the resulting object.
   - `private_ip_enabled` (`bool`): Whether private IP is enabled on the Looker instance. When `null`, the `private_ip_enabled` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `public_ip_enabled` (`bool`): Whether public IP is enabled on the Looker instance. When `null`, the `public_ip_enabled` field will be omitted from the resulting object.

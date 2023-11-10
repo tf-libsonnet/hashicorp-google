@@ -15,6 +15,8 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAdvancedSettings()`](#fn-withadvancedsettings)
+* [`fn withAdvancedSettingsMixin()`](#fn-withadvancedsettingsmixin)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDisplayName()`](#fn-withdisplayname)
 * [`fn withEventHandlers()`](#fn-witheventhandlers)
@@ -28,6 +30,12 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTransitionRouteGroups()`](#fn-withtransitionroutegroups)
 * [`fn withTransitionRoutes()`](#fn-withtransitionroutes)
 * [`fn withTransitionRoutesMixin()`](#fn-withtransitionroutesmixin)
+* [`obj advanced_settings`](#obj-advanced_settings)
+  * [`fn new()`](#fn-advanced_settingsnew)
+  * [`obj advanced_settings.audio_export_gcs_destination`](#obj-advanced_settingsaudio_export_gcs_destination)
+    * [`fn new()`](#fn-advanced_settingsaudio_export_gcs_destinationnew)
+  * [`obj advanced_settings.dtmf_settings`](#obj-advanced_settingsdtmf_settings)
+    * [`fn new()`](#fn-advanced_settingsdtmf_settingsnew)
 * [`obj event_handlers`](#obj-event_handlers)
   * [`fn new()`](#fn-event_handlersnew)
   * [`obj event_handlers.trigger_fulfillment`](#obj-event_handlerstrigger_fulfillment)
@@ -120,6 +128,8 @@ Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Age
 They are responsible for matching the user&#39;s first utterances in the flow.
 They are inherited by every page&#39;s [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow.
 Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;TransitionRouteGroup ID&gt;. When `null`, the `transition_route_groups` field will be omitted from the resulting object.
+  - `advanced_settings` (`list[obj]`): Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides the settings exposed at the higher level.
+Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. When `null`, the `advanced_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.advanced_settings.new](#fn-advanced_settingsnew) constructor.
   - `event_handlers` (`list[obj]`): A flow&#39;s event handlers serve two purposes:
 They are responsible for handling events (e.g. no match, webhook errors) in the flow.
 They are inherited by every page&#39;s [event handlers][Page.event_handlers], which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow.
@@ -171,6 +181,8 @@ Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Age
 They are responsible for matching the user&#39;s first utterances in the flow.
 They are inherited by every page&#39;s [transition route groups][Page.transition_route_groups]. Transition route groups defined in the page have higher priority than those defined in the flow.
 Format:projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/flows/&lt;Flow ID&gt;/transitionRouteGroups/&lt;TransitionRouteGroup ID&gt;. When `null`, the `transition_route_groups` field will be omitted from the resulting object.
+  - `advanced_settings` (`list[obj]`): Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides the settings exposed at the higher level.
+Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. When `null`, the `advanced_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.advanced_settings.new](#fn-advanced_settingsnew) constructor.
   - `event_handlers` (`list[obj]`): A flow&#39;s event handlers serve two purposes:
 They are responsible for handling events (e.g. no match, webhook errors) in the flow.
 They are inherited by every page&#39;s [event handlers][Page.event_handlers], which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow.
@@ -188,6 +200,43 @@ TransitionRoutes are evalauted in the following order:
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dialogflow_cx_flow` resource into the root Terraform configuration.
+
+
+### fn withAdvancedSettings
+
+```ts
+withAdvancedSettings()
+```
+
+`google.list[obj].withAdvancedSettings` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the advanced_settings field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withAdvancedSettingsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `advanced_settings` field.
+
+
+### fn withAdvancedSettingsMixin
+
+```ts
+withAdvancedSettingsMixin()
+```
+
+`google.list[obj].withAdvancedSettingsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the advanced_settings field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withAdvancedSettings](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `advanced_settings` field.
 
 
 ### fn withDescription
@@ -415,6 +464,85 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `transition_routes` field.
+
+
+## obj advanced_settings
+
+
+
+### fn advanced_settings.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.advanced_settings.new` constructs a new object with attributes and blocks configured for the `advanced_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `audio_export_gcs_destination` (`list[obj]`): If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:
+* Agent level
+* Flow level When `null`, the `audio_export_gcs_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.advanced_settings.audio_export_gcs_destination.new](#fn-advanced_settingsaudio_export_gcs_destinationnew) constructor.
+  - `dtmf_settings` (`list[obj]`): Define behaviors for DTMF (dual tone multi frequency). DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Exposed at the following levels:
+* Agent level
+* Flow level
+* Page level
+* Parameter level When `null`, the `dtmf_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_flow.advanced_settings.dtmf_settings.new](#fn-advanced_settingsdtmf_settingsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `advanced_settings` sub block.
+
+
+## obj advanced_settings.audio_export_gcs_destination
+
+
+
+### fn advanced_settings.audio_export_gcs_destination.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.advanced_settings.audio_export_gcs_destination.new` constructs a new object with attributes and blocks configured for the `audio_export_gcs_destination`
+Terraform sub block.
+
+
+
+**Args**:
+  - `uri` (`string`): The Google Cloud Storage URI for the exported objects. Whether a full object name, or just a prefix, its usage depends on the Dialogflow operation.
+Format: gs://bucket/object-name-or-prefix When `null`, the `uri` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `audio_export_gcs_destination` sub block.
+
+
+## obj advanced_settings.dtmf_settings
+
+
+
+### fn advanced_settings.dtmf_settings.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_flow.advanced_settings.dtmf_settings.new` constructs a new object with attributes and blocks configured for the `dtmf_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a &#34;3&#34; was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance). When `null`, the `enabled` field will be omitted from the resulting object.
+  - `finish_digit` (`string`): The digit that terminates a DTMF digit sequence. When `null`, the `finish_digit` field will be omitted from the resulting object.
+  - `max_digits` (`number`): Max length of DTMF digits. When `null`, the `max_digits` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `dtmf_settings` sub block.
 
 
 ## obj event_handlers

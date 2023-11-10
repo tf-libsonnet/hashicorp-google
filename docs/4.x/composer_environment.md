@@ -55,6 +55,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-configworkloads_confignew)
     * [`obj config.workloads_config.scheduler`](#obj-configworkloads_configscheduler)
       * [`fn new()`](#fn-configworkloads_configschedulernew)
+    * [`obj config.workloads_config.triggerer`](#obj-configworkloads_configtriggerer)
+      * [`fn new()`](#fn-configworkloads_configtriggerernew)
     * [`obj config.workloads_config.web_server`](#obj-configworkloads_configweb_server)
       * [`fn new()`](#fn-configworkloads_configweb_servernew)
     * [`obj config.workloads_config.worker`](#obj-configworkloads_configworker)
@@ -91,7 +93,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `labels` (`obj`): User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: [a-z]([-a-z0-9]*[a-z0-9])?. Label values must be between 0 and 63 characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?. No more than 64 labels can be associated with a given environment. Both keys and values must be &lt;= 128 bytes in size. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: [a-z]([-a-z0-9]*[a-z0-9])?. Label values must be between 0 and 63 characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?. No more than 64 labels can be associated with a given environment. Both keys and values must be &lt;= 128 bytes in size.
+				
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the environment.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The location or Compute Engine region for the environment. When `null`, the `region` field will be omitted from the resulting object.
@@ -120,7 +125,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `labels` (`obj`): User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: [a-z]([-a-z0-9]*[a-z0-9])?. Label values must be between 0 and 63 characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?. No more than 64 labels can be associated with a given environment. Both keys and values must be &lt;= 128 bytes in size. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: [a-z]([-a-z0-9]*[a-z0-9])?. Label values must be between 0 and 63 characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?. No more than 64 labels can be associated with a given environment. Both keys and values must be &lt;= 128 bytes in size.
+				
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the environment.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The location or Compute Engine region for the environment. When `null`, the `region` field will be omitted from the resulting object.
@@ -650,6 +658,7 @@ Terraform sub block.
 
 **Args**:
   - `scheduler` (`list[obj]`): Configuration for resources used by Airflow schedulers. When `null`, the `scheduler` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.workloads_config.scheduler.new](#fn-configconfigschedulernew) constructor.
+  - `triggerer` (`list[obj]`): Configuration for resources used by Airflow triggerers. When `null`, the `triggerer` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.workloads_config.triggerer.new](#fn-configconfigtriggerernew) constructor.
   - `web_server` (`list[obj]`): Configuration for resources used by Airflow web server. When `null`, the `web_server` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.workloads_config.web_server.new](#fn-configconfigweb_servernew) constructor.
   - `worker` (`list[obj]`): Configuration for resources used by Airflow workers. When `null`, the `worker` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.workloads_config.worker.new](#fn-configconfigworkernew) constructor.
 
@@ -681,6 +690,31 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `scheduler` sub block.
+
+
+## obj config.workloads_config.triggerer
+
+
+
+### fn config.workloads_config.triggerer.new
+
+```ts
+new()
+```
+
+
+`google.composer_environment.config.workloads_config.triggerer.new` constructs a new object with attributes and blocks configured for the `triggerer`
+Terraform sub block.
+
+
+
+**Args**:
+  - `count` (`number`): The number of triggerers.
+  - `cpu` (`number`): CPU request and limit for a single Airflow triggerer replica.
+  - `memory_gb` (`number`): Memory (GB) request and limit for a single Airflow triggerer replica.
+
+**Returns**:
+  - An attribute object that represents the `triggerer` sub block.
 
 
 ## obj config.workloads_config.web_server

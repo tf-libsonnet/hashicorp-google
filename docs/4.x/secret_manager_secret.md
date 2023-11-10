@@ -91,9 +91,14 @@ symbols.
 The total size of annotation keys and values must be less than 16KiB.
 
 An object containing a list of &#34;key&#34;: value pairs. Example:
-{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `annotations` field will be omitted from the resulting object.
+{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `expire_time` (`string`): Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
-A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `expire_time` field will be omitted from the resulting object.
+A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+Only one of &#39;expire_time&#39; or &#39;ttl&#39; can be provided. When `null`, the `expire_time` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels assigned to this Secret.
 
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
@@ -105,11 +110,16 @@ and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]
 No more than 64 labels can be assigned to a given resource.
 
 An object containing a list of &#34;key&#34;: value pairs. Example:
-{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `secret_id` (`string`): This must be unique within the project.
   - `ttl` (`string`): The TTL for the Secret.
-A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `ttl` field will be omitted from the resulting object.
+A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+Only one of &#39;ttl&#39; or &#39;expire_time&#39; can be provided. When `null`, the `ttl` field will be omitted from the resulting object.
   - `version_aliases` (`obj`): Mapping from version alias to version name.
 
 A version alias is a string with a maximum length of 63 characters and can contain
@@ -160,9 +170,14 @@ symbols.
 The total size of annotation keys and values must be less than 16KiB.
 
 An object containing a list of &#34;key&#34;: value pairs. Example:
-{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `annotations` field will be omitted from the resulting object.
+{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `expire_time` (`string`): Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input.
-A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;. When `null`, the `expire_time` field will be omitted from the resulting object.
+A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond resolution and up to nine fractional digits. Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+Only one of &#39;expire_time&#39; or &#39;ttl&#39; can be provided. When `null`, the `expire_time` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels assigned to this Secret.
 
 Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes,
@@ -174,11 +189,16 @@ and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]
 No more than 64 labels can be assigned to a given resource.
 
 An object containing a list of &#34;key&#34;: value pairs. Example:
-{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+{ &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `secret_id` (`string`): This must be unique within the project.
   - `ttl` (`string`): The TTL for the Secret.
-A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `ttl` field will be omitted from the resulting object.
+A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
+Only one of &#39;ttl&#39; or &#39;expire_time&#39; can be provided. When `null`, the `ttl` field will be omitted from the resulting object.
   - `version_aliases` (`obj`): Mapping from version alias to version name.
 
 A version alias is a string with a maximum length of 63 characters and can contain
@@ -474,7 +494,6 @@ Terraform sub block.
 
 
 **Args**:
-  - `automatic` (`bool`): The Secret will automatically be replicated without any restrictions. When `null`, the `automatic` field will be omitted from the resulting object.
   - `auto` (`list[obj]`): The Secret will automatically be replicated without any restrictions. When `null`, the `auto` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.auto.new](#fn-replicationautonew) constructor.
   - `user_managed` (`list[obj]`): The Secret will be replicated to the regions specified by the user. When `null`, the `user_managed` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret.replication.user_managed.new](#fn-replicationuser_managednew) constructor.
 

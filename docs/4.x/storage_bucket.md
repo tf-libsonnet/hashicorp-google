@@ -22,6 +22,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withCustomPlacementConfig()`](#fn-withcustomplacementconfig)
 * [`fn withCustomPlacementConfigMixin()`](#fn-withcustomplacementconfigmixin)
 * [`fn withDefaultEventBasedHold()`](#fn-withdefaulteventbasedhold)
+* [`fn withEnableObjectRetention()`](#fn-withenableobjectretention)
 * [`fn withEncryption()`](#fn-withencryption)
 * [`fn withEncryptionMixin()`](#fn-withencryptionmixin)
 * [`fn withForceDestroy()`](#fn-withforcedestroy)
@@ -100,6 +101,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `default_event_based_hold` (`bool`): Whether or not to automatically apply an eventBasedHold to new objects added to the bucket. When `null`, the `default_event_based_hold` field will be omitted from the resulting object.
+  - `enable_object_retention` (`bool`): Enables each object in the bucket to have its own retention policy, which prevents deletion until stored for a specific length of time. When `null`, the `enable_object_retention` field will be omitted from the resulting object.
   - `force_destroy` (`bool`): When deleting a bucket, this boolean option will delete all contained objects. If you try to delete a bucket that contains objects, Terraform will fail that run. When `null`, the `force_destroy` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs to assign to the bucket. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The Google Cloud Storage location
@@ -143,6 +145,7 @@ injecting into a complete block.
 
 **Args**:
   - `default_event_based_hold` (`bool`): Whether or not to automatically apply an eventBasedHold to new objects added to the bucket. When `null`, the `default_event_based_hold` field will be omitted from the resulting object.
+  - `enable_object_retention` (`bool`): Enables each object in the bucket to have its own retention policy, which prevents deletion until stored for a specific length of time. When `null`, the `enable_object_retention` field will be omitted from the resulting object.
   - `force_destroy` (`bool`): When deleting a bucket, this boolean option will delete all contained objects. If you try to delete a bucket that contains objects, Terraform will fail that run. When `null`, the `force_destroy` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs to assign to the bucket. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The Google Cloud Storage location
@@ -292,6 +295,22 @@ Terraform resource block to set or update the default_event_based_hold field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `default_event_based_hold` field.
+
+
+### fn withEnableObjectRetention
+
+```ts
+withEnableObjectRetention()
+```
+
+`google.bool.withEnableObjectRetention` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the enable_object_retention field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `enable_object_retention` field.
 
 
 ### fn withEncryption
@@ -714,6 +733,7 @@ Terraform sub block.
 
 **Args**:
   - `enabled` (`bool`): While set to true, autoclass automatically transitions objects in your bucket to appropriate storage classes based on each object&#39;s access pattern.
+  - `terminal_storage_class` (`string`): The storage class that objects in the bucket eventually transition to if they are not read for a certain length of time. Supported values include: NEARLINE, ARCHIVE. When `null`, the `terminal_storage_class` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `autoclass` sub block.

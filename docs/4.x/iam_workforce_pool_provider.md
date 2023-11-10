@@ -526,6 +526,29 @@ Terraform sub block.
 **Args**:
   - `client_id` (`string`): The client ID. Must match the audience claim of the JWT issued by the identity provider.
   - `issuer_uri` (`string`): The OIDC issuer URI. Must be a valid URI using the &#39;https&#39; scheme.
+  - `jwks_json` (`string`): OIDC JWKs in JSON String format. For details on definition of a
+JWK, see https:tools.ietf.org/html/rfc7517. If not set, then we
+use the &#39;jwks_uri&#39; from the discovery document fetched from the
+.well-known path for the &#39;issuer_uri&#39;. Currently, RSA and EC asymmetric
+keys are supported. The JWK must use following format and include only
+the following fields:
+&#39;&#39;&#39;
+{
+  &#34;keys&#34;: [
+    {
+          &#34;kty&#34;: &#34;RSA/EC&#34;,
+          &#34;alg&#34;: &#34;&lt;algorithm&gt;&#34;,
+          &#34;use&#34;: &#34;sig&#34;,
+          &#34;kid&#34;: &#34;&lt;key-id&gt;&#34;,
+          &#34;n&#34;: &#34;&#34;,
+          &#34;e&#34;: &#34;&#34;,
+          &#34;x&#34;: &#34;&#34;,
+          &#34;y&#34;: &#34;&#34;,
+          &#34;crv&#34;: &#34;&#34;
+    }
+  ]
+}
+&#39;&#39;&#39; When `null`, the `jwks_json` field will be omitted from the resulting object.
   - `client_secret` (`list[obj]`): The optional client secret. Required to enable Authorization Code flow for web sign-in. When `null`, the `client_secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool_provider.oidc.client_secret.new](#fn-oidcclient_secretnew) constructor.
   - `web_sso_config` (`list[obj]`): Configuration for web single sign-on for the OIDC provider. Here, web sign-in refers to console sign-in and gcloud sign-in through the browser. When `null`, the `web_sso_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool_provider.oidc.web_sso_config.new](#fn-oidcweb_sso_confignew) constructor.
 

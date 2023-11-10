@@ -53,8 +53,6 @@ This package contains functions and utilities for setting up the resource using 
         * [`fn new()`](#fn-templatecontainersliveness_probehttp_getnew)
         * [`obj template.containers.liveness_probe.http_get.http_headers`](#obj-templatecontainersliveness_probehttp_gethttp_headers)
           * [`fn new()`](#fn-templatecontainersliveness_probehttp_gethttp_headersnew)
-      * [`obj template.containers.liveness_probe.tcp_socket`](#obj-templatecontainersliveness_probetcp_socket)
-        * [`fn new()`](#fn-templatecontainersliveness_probetcp_socketnew)
     * [`obj template.containers.ports`](#obj-templatecontainersports)
       * [`fn new()`](#fn-templatecontainersportsnew)
     * [`obj template.containers.resources`](#obj-templatecontainersresources)
@@ -124,7 +122,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 Cloud Run API v2 does not support annotations with &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected in new resources.
 All system annotations in v1 now have a corresponding field in v2 Service.
 
-This field follows Kubernetes annotations&#39; namespacing, limits, and rules. When `null`, the `annotations` field will be omitted from the resulting object.
+This field follows Kubernetes annotations&#39; namespacing, limits, and rules.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `client` (`string`): Arbitrary identifier for the API client. When `null`, the `client` field will be omitted from the resulting object.
   - `client_version` (`string`): Arbitrary version identifier for the API client. When `null`, the `client_version` field will be omitted from the resulting object.
   - `description` (`string`): User-provided description of the Service. This field currently has a 512-character limit. When `null`, the `description` field will be omitted from the resulting object.
@@ -133,12 +134,15 @@ This field follows Kubernetes annotations&#39; namespacing, limits, and rules. W
 environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
 
 Cloud Run API v2 does not support labels with  &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected.
-All system labels in v1 now have a corresponding field in v2 Service. When `null`, the `labels` field will be omitted from the resulting object.
+All system labels in v1 now have a corresponding field in v2 Service.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `launch_stage` (`string`): The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA.
 If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features.
 
 For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: [&#34;UNIMPLEMENTED&#34;, &#34;PRELAUNCH&#34;, &#34;EARLY_ACCESS&#34;, &#34;ALPHA&#34;, &#34;BETA&#34;, &#34;GA&#34;, &#34;DEPRECATED&#34;] When `null`, the `launch_stage` field will be omitted from the resulting object.
-  - `location` (`string`): The location of the cloud run service When `null`, the `location` field will be omitted from the resulting object.
+  - `location` (`string`): The location of the cloud run service
   - `name` (`string`): Name of the Service.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `binary_authorization` (`list[obj]`): Settings for the Binary Authorization feature. When `null`, the `binary_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.binary_authorization.new](#fn-binary_authorizationnew) constructor.
@@ -173,7 +177,10 @@ injecting into a complete block.
 Cloud Run API v2 does not support annotations with &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected in new resources.
 All system annotations in v1 now have a corresponding field in v2 Service.
 
-This field follows Kubernetes annotations&#39; namespacing, limits, and rules. When `null`, the `annotations` field will be omitted from the resulting object.
+This field follows Kubernetes annotations&#39; namespacing, limits, and rules.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `client` (`string`): Arbitrary identifier for the API client. When `null`, the `client` field will be omitted from the resulting object.
   - `client_version` (`string`): Arbitrary version identifier for the API client. When `null`, the `client_version` field will be omitted from the resulting object.
   - `description` (`string`): User-provided description of the Service. This field currently has a 512-character limit. When `null`, the `description` field will be omitted from the resulting object.
@@ -182,12 +189,15 @@ This field follows Kubernetes annotations&#39; namespacing, limits, and rules. W
 environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
 
 Cloud Run API v2 does not support labels with  &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected.
-All system labels in v1 now have a corresponding field in v2 Service. When `null`, the `labels` field will be omitted from the resulting object.
+All system labels in v1 now have a corresponding field in v2 Service.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `launch_stage` (`string`): The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA.
 If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features.
 
 For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: [&#34;UNIMPLEMENTED&#34;, &#34;PRELAUNCH&#34;, &#34;EARLY_ACCESS&#34;, &#34;ALPHA&#34;, &#34;BETA&#34;, &#34;GA&#34;, &#34;DEPRECATED&#34;] When `null`, the `launch_stage` field will be omitted from the resulting object.
-  - `location` (`string`): The location of the cloud run service When `null`, the `location` field will be omitted from the resulting object.
+  - `location` (`string`): The location of the cloud run service
   - `name` (`string`): Name of the Service.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `binary_authorization` (`list[obj]`): Settings for the Binary Authorization feature. When `null`, the `binary_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.binary_authorization.new](#fn-binary_authorizationnew) constructor.
@@ -706,7 +716,6 @@ Terraform sub block.
   - `timeout_seconds` (`number`): Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes When `null`, the `timeout_seconds` field will be omitted from the resulting object.
   - `grpc` (`list[obj]`): GRPC specifies an action involving a GRPC port. When `null`, the `grpc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.template.containers.liveness_probe.grpc.new](#fn-templatetemplatecontainersgrpcnew) constructor.
   - `http_get` (`list[obj]`): HTTPGet specifies the http request to perform. When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.template.containers.liveness_probe.http_get.new](#fn-templatetemplatecontainershttp_getnew) constructor.
-  - `tcp_socket` (`list[obj]`): TCPSocket specifies an action involving a TCP port. This field is not supported in liveness probe currently. When `null`, the `tcp_socket` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.template.containers.liveness_probe.tcp_socket.new](#fn-templatetemplatecontainerstcp_socketnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `liveness_probe` sub block.
@@ -787,29 +796,6 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `http_headers` sub block.
-
-
-## obj template.containers.liveness_probe.tcp_socket
-
-
-
-### fn template.containers.liveness_probe.tcp_socket.new
-
-```ts
-new()
-```
-
-
-`google.cloud_run_v2_service.template.containers.liveness_probe.tcp_socket.new` constructs a new object with attributes and blocks configured for the `tcp_socket`
-Terraform sub block.
-
-
-
-**Args**:
-  - `port` (`number`): Port number to access on the container. Must be in the range 1 to 65535. If not specified, defaults to 8080. When `null`, the `port` field will be omitted from the resulting object.
-
-**Returns**:
-  - An attribute object that represents the `tcp_socket` sub block.
 
 
 ## obj template.containers.ports

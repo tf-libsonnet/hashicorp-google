@@ -25,6 +25,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withOrgId()`](#fn-withorgid)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withType()`](#fn-withtype)
 * [`obj node_config`](#obj-node_config)
   * [`fn new()`](#fn-node_confignew)
 * [`obj timeouts`](#obj-timeouts)
@@ -73,6 +74,10 @@ Creating, updating, or deleting target servers. Possible values: [&#34;DEPLOYMEN
   - `name` (`string`): The resource ID of the environment.
   - `org_id` (`string`): The Apigee Organization associated with the Apigee environment,
 in the format &#39;organizations/{{org_name}}&#39;.
+  - `type` (`string`): Types that can be selected for an Environment. Each of the types are
+limited by capability and capacity. Refer to Apigee&#39;s public documentation
+to understand about each of these types in details.
+An Apigee org can support heterogeneous Environments. Possible values: [&#34;ENVIRONMENT_TYPE_UNSPECIFIED&#34;, &#34;BASE&#34;, &#34;INTERMEDIATE&#34;, &#34;COMPREHENSIVE&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `node_config` (`list[obj]`): NodeConfig for setting the min/max number of nodes associated with the environment. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_environment.node_config.new](#fn-node_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_environment.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -112,6 +117,10 @@ Creating, updating, or deleting target servers. Possible values: [&#34;DEPLOYMEN
   - `name` (`string`): The resource ID of the environment.
   - `org_id` (`string`): The Apigee Organization associated with the Apigee environment,
 in the format &#39;organizations/{{org_name}}&#39;.
+  - `type` (`string`): Types that can be selected for an Environment. Each of the types are
+limited by capability and capacity. Refer to Apigee&#39;s public documentation
+to understand about each of these types in details.
+An Apigee org can support heterogeneous Environments. Possible values: [&#34;ENVIRONMENT_TYPE_UNSPECIFIED&#34;, &#34;BASE&#34;, &#34;INTERMEDIATE&#34;, &#34;COMPREHENSIVE&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `node_config` (`list[obj]`): NodeConfig for setting the min/max number of nodes associated with the environment. When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_environment.node_config.new](#fn-node_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.apigee_environment.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -286,6 +295,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withType
+
+```ts
+withType()
+```
+
+`google.string.withType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `type` field.
 
 
 ## obj node_config

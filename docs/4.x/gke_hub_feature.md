@@ -67,7 +67,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `labels` (`obj`): GCP labels for this Feature. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): GCP labels for this Feature.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): The full, unique name of this Feature resource When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -96,7 +99,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `labels` (`obj`): GCP labels for this Feature. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): GCP labels for this Feature.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): The full, unique name of this Feature resource When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.

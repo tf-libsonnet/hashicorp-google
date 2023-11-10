@@ -124,7 +124,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `can_ip_forward` (`bool`): Whether to allow sending and receiving of packets with non-matching source or destination IPs. This defaults to false. When `null`, the `can_ip_forward` field will be omitted from the resulting object.
   - `description` (`string`): A brief description of this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `instance_description` (`string`): A description of the instance. When `null`, the `instance_description` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to instances created from this template, When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to instances created from this template,
+				
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `machine_type` (`string`): The machine type to create. To create a machine with a custom type (such as extended memory), format the value like custom-VCPUS-MEM_IN_MB like custom-6-20480 for 6 vCPU and 20GB of RAM.
   - `metadata` (`obj`): Metadata key/value pairs to make available from within instances created from this template. When `null`, the `metadata` field will be omitted from the resulting object.
   - `metadata_startup_script` (`string`): An alternative to using the startup-script metadata key, mostly to match the compute_instance resource. This replaces the startup-script metadata key on the created instance and thus the two mechanisms are not allowed to be used simultaneously. When `null`, the `metadata_startup_script` field will be omitted from the resulting object.
@@ -172,7 +175,10 @@ injecting into a complete block.
   - `can_ip_forward` (`bool`): Whether to allow sending and receiving of packets with non-matching source or destination IPs. This defaults to false. When `null`, the `can_ip_forward` field will be omitted from the resulting object.
   - `description` (`string`): A brief description of this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `instance_description` (`string`): A description of the instance. When `null`, the `instance_description` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to instances created from this template, When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to instances created from this template,
+				
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `machine_type` (`string`): The machine type to create. To create a machine with a custom type (such as extended memory), format the value like custom-VCPUS-MEM_IN_MB like custom-6-20480 for 6 vCPU and 20GB of RAM.
   - `metadata` (`obj`): Metadata key/value pairs to make available from within instances created from this template. When `null`, the `metadata` field will be omitted from the resulting object.
   - `metadata_startup_script` (`string`): An alternative to using the startup-script metadata key, mostly to match the compute_instance resource. This replaces the startup-script metadata key on the created instance and thus the two mechanisms are not allowed to be used simultaneously. When `null`, the `metadata_startup_script` field will be omitted from the resulting object.

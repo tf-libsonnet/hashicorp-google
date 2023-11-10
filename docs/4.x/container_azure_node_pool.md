@@ -79,7 +79,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `annotations` (`obj`): Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `azure_availability_zone` (`string`): Optional. The Azure availability zone of the nodes in this nodepool. When unspecified, it defaults to `1`. When `null`, the `azure_availability_zone` field will be omitted from the resulting object.
   - `cluster` (`string`): The azureCluster for the resource
   - `location` (`string`): The location for the resource
@@ -115,7 +118,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `annotations` (`obj`): Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `azure_availability_zone` (`string`): Optional. The Azure availability zone of the nodes in this nodepool. When unspecified, it defaults to `1`. When `null`, the `azure_availability_zone` field will be omitted from the resulting object.
   - `cluster` (`string`): The azureCluster for the resource
   - `location` (`string`): The location for the resource

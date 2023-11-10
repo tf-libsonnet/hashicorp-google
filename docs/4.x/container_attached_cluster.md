@@ -90,7 +90,11 @@ restrictions as Kubernetes annotations. The total size of all keys and
 values combined is limited to 256k. Key can have 2 segments: prefix (optional)
 and name (required), separated by a slash (/). Prefix must be a DNS subdomain.
 Name must be 63 characters or less, begin and end with alphanumerics,
-with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
+with dashes (-), underscores (_), dots (.), and alphanumerics between.
+
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `deletion_policy` (`string`): Policy to determine what flags to send on delete. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `description` (`string`): A human readable description of this attached cluster. Cannot be longer
 than 255 UTF-8 encoded bytes. When `null`, the `description` field will be omitted from the resulting object.
@@ -145,7 +149,11 @@ restrictions as Kubernetes annotations. The total size of all keys and
 values combined is limited to 256k. Key can have 2 segments: prefix (optional)
 and name (required), separated by a slash (/). Prefix must be a DNS subdomain.
 Name must be 63 characters or less, begin and end with alphanumerics,
-with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
+with dashes (-), underscores (_), dots (.), and alphanumerics between.
+
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `deletion_policy` (`string`): Policy to determine what flags to send on delete. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `description` (`string`): A human readable description of this attached cluster. Cannot be longer
 than 255 UTF-8 encoded bytes. When `null`, the `description` field will be omitted from the resulting object.
@@ -580,6 +588,12 @@ Terraform sub block.
 
 
 **Args**:
+  - `admin_groups` (`list`): Groups that can perform operations as a cluster admin. A managed
+ClusterRoleBinding will be created to grant the &#39;cluster-admin&#39; ClusterRole
+to the groups. Up to ten admin groups can be provided.
+
+For more info on RBAC, see
+https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles When `null`, the `admin_groups` field will be omitted from the resulting object.
   - `admin_users` (`list`): Users that can perform operations as a cluster admin. A managed
 ClusterRoleBinding will be created to grant the &#39;cluster-admin&#39; ClusterRole
 to the users. Up to ten admin users can be provided.

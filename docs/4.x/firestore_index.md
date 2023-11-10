@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withApiScope()`](#fn-withapiscope)
 * [`fn withCollection()`](#fn-withcollection)
 * [`fn withDatabase()`](#fn-withdatabase)
 * [`fn withFields()`](#fn-withfields)
@@ -57,10 +58,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `api_scope` (`string`): The API scope at which a query is run. Default value: &#34;ANY_API&#34; Possible values: [&#34;ANY_API&#34;, &#34;DATASTORE_MODE_API&#34;] When `null`, the `api_scope` field will be omitted from the resulting object.
   - `collection` (`string`): The collection being indexed.
   - `database` (`string`): The Firestore database id. Defaults to &#39;&#34;(default)&#34;&#39;. When `null`, the `database` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `query_scope` (`string`): The scope at which a query is run. Default value: &#34;COLLECTION&#34; Possible values: [&#34;COLLECTION&#34;, &#34;COLLECTION_GROUP&#34;] When `null`, the `query_scope` field will be omitted from the resulting object.
+  - `query_scope` (`string`): The scope at which a query is run. Default value: &#34;COLLECTION&#34; Possible values: [&#34;COLLECTION&#34;, &#34;COLLECTION_GROUP&#34;, &#34;COLLECTION_RECURSIVE&#34;] When `null`, the `query_scope` field will be omitted from the resulting object.
   - `fields` (`list[obj]`): The fields supported by this index. The last field entry is always for
 the field path &#39;__name__&#39;. If, on creation, &#39;__name__&#39; was not
 specified as the last field, it will be added automatically with the
@@ -91,10 +93,11 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `api_scope` (`string`): The API scope at which a query is run. Default value: &#34;ANY_API&#34; Possible values: [&#34;ANY_API&#34;, &#34;DATASTORE_MODE_API&#34;] When `null`, the `api_scope` field will be omitted from the resulting object.
   - `collection` (`string`): The collection being indexed.
   - `database` (`string`): The Firestore database id. Defaults to &#39;&#34;(default)&#34;&#39;. When `null`, the `database` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `query_scope` (`string`): The scope at which a query is run. Default value: &#34;COLLECTION&#34; Possible values: [&#34;COLLECTION&#34;, &#34;COLLECTION_GROUP&#34;] When `null`, the `query_scope` field will be omitted from the resulting object.
+  - `query_scope` (`string`): The scope at which a query is run. Default value: &#34;COLLECTION&#34; Possible values: [&#34;COLLECTION&#34;, &#34;COLLECTION_GROUP&#34;, &#34;COLLECTION_RECURSIVE&#34;] When `null`, the `query_scope` field will be omitted from the resulting object.
   - `fields` (`list[obj]`): The fields supported by this index. The last field entry is always for
 the field path &#39;__name__&#39;. If, on creation, &#39;__name__&#39; was not
 specified as the last field, it will be added automatically with the
@@ -105,6 +108,22 @@ ordered &#39;&#34;ASCENDING&#34;&#39; (unless explicitly specified otherwise). W
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firestore_index` resource into the root Terraform configuration.
+
+
+### fn withApiScope
+
+```ts
+withApiScope()
+```
+
+`google.string.withApiScope` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the api_scope field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `api_scope` field.
 
 
 ### fn withCollection

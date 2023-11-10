@@ -55,7 +55,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `annotations` (`obj`): Allows clients to store small amounts of arbitrary data. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): Allows clients to store small amounts of arbitrary data.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): Name of the repository.
   - `parent_connection` (`string`): The connection for the resource
@@ -85,7 +88,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `annotations` (`obj`): Allows clients to store small amounts of arbitrary data. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): Allows clients to store small amounts of arbitrary data.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): Name of the repository.
   - `parent_connection` (`string`): The connection for the resource

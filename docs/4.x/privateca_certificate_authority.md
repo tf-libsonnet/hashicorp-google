@@ -116,7 +116,11 @@ Use with care. Defaults to &#39;false&#39;. When `null`, the `ignore_active_cert
   - `labels` (`obj`): Labels with user-defined metadata.
 
 An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
-&#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+&#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `lifetime` (`string`): The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
 &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `lifetime` field will be omitted from the resulting object.
@@ -177,7 +181,11 @@ Use with care. Defaults to &#39;false&#39;. When `null`, the `ignore_active_cert
   - `labels` (`obj`): Labels with user-defined metadata.
 
 An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
-&#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+&#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `lifetime` (`string`): The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
 &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `lifetime` field will be omitted from the resulting object.

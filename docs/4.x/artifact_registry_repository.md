@@ -39,6 +39,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-maven_confignew)
 * [`obj remote_repository_config`](#obj-remote_repository_config)
   * [`fn new()`](#fn-remote_repository_confignew)
+  * [`obj remote_repository_config.apt_repository`](#obj-remote_repository_configapt_repository)
+    * [`fn new()`](#fn-remote_repository_configapt_repositorynew)
+    * [`obj remote_repository_config.apt_repository.public_repository`](#obj-remote_repository_configapt_repositorypublic_repository)
+      * [`fn new()`](#fn-remote_repository_configapt_repositorypublic_repositorynew)
   * [`obj remote_repository_config.docker_repository`](#obj-remote_repository_configdocker_repository)
     * [`fn new()`](#fn-remote_repository_configdocker_repositorynew)
   * [`obj remote_repository_config.maven_repository`](#obj-remote_repository_configmaven_repository)
@@ -47,6 +51,10 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-remote_repository_confignpm_repositorynew)
   * [`obj remote_repository_config.python_repository`](#obj-remote_repository_configpython_repository)
     * [`fn new()`](#fn-remote_repository_configpython_repositorynew)
+  * [`obj remote_repository_config.yum_repository`](#obj-remote_repository_configyum_repository)
+    * [`fn new()`](#fn-remote_repository_configyum_repositorynew)
+    * [`obj remote_repository_config.yum_repository.public_repository`](#obj-remote_repository_configyum_repositorypublic_repository)
+      * [`fn new()`](#fn-remote_repository_configyum_repositorypublic_repositorynew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 * [`obj virtual_repository_config`](#obj-virtual_repository_config)
@@ -96,7 +104,11 @@ This value may not be changed after the Repository has been created. When `null`
 This field may contain up to 64 entries. Label keys and values may be no
 longer than 63 characters. Label keys must begin with a lowercase letter
 and may only contain lowercase letters, numeric characters, underscores,
-and dashes. When `null`, the `labels` field will be omitted from the resulting object.
+and dashes.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location this repository is located in. When `null`, the `location` field will be omitted from the resulting object.
   - `mode` (`string`): The mode configures the repository to serve artifacts from different sources. Default value: &#34;STANDARD_REPOSITORY&#34; Possible values: [&#34;STANDARD_REPOSITORY&#34;, &#34;VIRTUAL_REPOSITORY&#34;, &#34;REMOTE_REPOSITORY&#34;] When `null`, the `mode` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -145,7 +157,11 @@ This value may not be changed after the Repository has been created. When `null`
 This field may contain up to 64 entries. Label keys and values may be no
 longer than 63 characters. Label keys must begin with a lowercase letter
 and may only contain lowercase letters, numeric characters, underscores,
-and dashes. When `null`, the `labels` field will be omitted from the resulting object.
+and dashes.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location this repository is located in. When `null`, the `location` field will be omitted from the resulting object.
   - `mode` (`string`): The mode configures the repository to serve artifacts from different sources. Default value: &#34;STANDARD_REPOSITORY&#34; Possible values: [&#34;STANDARD_REPOSITORY&#34;, &#34;VIRTUAL_REPOSITORY&#34;, &#34;REMOTE_REPOSITORY&#34;] When `null`, the `mode` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
@@ -541,13 +557,62 @@ Terraform sub block.
 
 **Args**:
   - `description` (`string`): The description of the remote source. When `null`, the `description` field will be omitted from the resulting object.
+  - `apt_repository` (`list[obj]`): Specific settings for an Apt remote repository. When `null`, the `apt_repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.apt_repository.new](#fn-remote_repository_configapt_repositorynew) constructor.
   - `docker_repository` (`list[obj]`): Specific settings for a Docker remote repository. When `null`, the `docker_repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.docker_repository.new](#fn-remote_repository_configdocker_repositorynew) constructor.
   - `maven_repository` (`list[obj]`): Specific settings for a Maven remote repository. When `null`, the `maven_repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.maven_repository.new](#fn-remote_repository_configmaven_repositorynew) constructor.
   - `npm_repository` (`list[obj]`): Specific settings for an Npm remote repository. When `null`, the `npm_repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.npm_repository.new](#fn-remote_repository_confignpm_repositorynew) constructor.
   - `python_repository` (`list[obj]`): Specific settings for a Python remote repository. When `null`, the `python_repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.python_repository.new](#fn-remote_repository_configpython_repositorynew) constructor.
+  - `yum_repository` (`list[obj]`): Specific settings for an Yum remote repository. When `null`, the `yum_repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.yum_repository.new](#fn-remote_repository_configyum_repositorynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `remote_repository_config` sub block.
+
+
+## obj remote_repository_config.apt_repository
+
+
+
+### fn remote_repository_config.apt_repository.new
+
+```ts
+new()
+```
+
+
+`google.artifact_registry_repository.remote_repository_config.apt_repository.new` constructs a new object with attributes and blocks configured for the `apt_repository`
+Terraform sub block.
+
+
+
+**Args**:
+  - `public_repository` (`list[obj]`): One of the publicly available Apt repositories supported by Artifact Registry. When `null`, the `public_repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.apt_repository.public_repository.new](#fn-remote_repository_configremote_repository_configpublic_repositorynew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `apt_repository` sub block.
+
+
+## obj remote_repository_config.apt_repository.public_repository
+
+
+
+### fn remote_repository_config.apt_repository.public_repository.new
+
+```ts
+new()
+```
+
+
+`google.artifact_registry_repository.remote_repository_config.apt_repository.public_repository.new` constructs a new object with attributes and blocks configured for the `public_repository`
+Terraform sub block.
+
+
+
+**Args**:
+  - `repository_base` (`string`): A common public repository base for Apt, e.g. &#39;&#34;debian/dists/buster&#34;&#39; Possible values: [&#34;DEBIAN&#34;, &#34;UBUNTU&#34;]
+  - `repository_path` (`string`): Specific repository from the base.
+
+**Returns**:
+  - An attribute object that represents the `public_repository` sub block.
 
 
 ## obj remote_repository_config.docker_repository
@@ -640,6 +705,53 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `python_repository` sub block.
+
+
+## obj remote_repository_config.yum_repository
+
+
+
+### fn remote_repository_config.yum_repository.new
+
+```ts
+new()
+```
+
+
+`google.artifact_registry_repository.remote_repository_config.yum_repository.new` constructs a new object with attributes and blocks configured for the `yum_repository`
+Terraform sub block.
+
+
+
+**Args**:
+  - `public_repository` (`list[obj]`): One of the publicly available Yum repositories supported by Artifact Registry. When `null`, the `public_repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.yum_repository.public_repository.new](#fn-remote_repository_configremote_repository_configpublic_repositorynew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `yum_repository` sub block.
+
+
+## obj remote_repository_config.yum_repository.public_repository
+
+
+
+### fn remote_repository_config.yum_repository.public_repository.new
+
+```ts
+new()
+```
+
+
+`google.artifact_registry_repository.remote_repository_config.yum_repository.public_repository.new` constructs a new object with attributes and blocks configured for the `public_repository`
+Terraform sub block.
+
+
+
+**Args**:
+  - `repository_base` (`string`): A common public repository base for Yum. Possible values: [&#34;CENTOS&#34;, &#34;CENTOS_DEBUG&#34;, &#34;CENTOS_VAULT&#34;, &#34;CENTOS_STREAM&#34;, &#34;ROCKY&#34;, &#34;EPEL&#34;]
+  - `repository_path` (`string`): Specific repository from the base, e.g. &#39;&#34;centos/8-stream/BaseOS/x86_64/os&#34;&#39;
+
+**Returns**:
+  - An attribute object that represents the `public_repository` sub block.
 
 
 ## obj timeouts

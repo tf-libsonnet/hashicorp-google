@@ -468,9 +468,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `growth_factor` (`number`): Must be greater than 1. When `null`, the `growth_factor` field will be omitted from the resulting object.
-  - `num_finite_buckets` (`number`): Must be greater than 0. When `null`, the `num_finite_buckets` field will be omitted from the resulting object.
-  - `scale` (`number`): Must be greater than 0. When `null`, the `scale` field will be omitted from the resulting object.
+  - `growth_factor` (`number`): Must be greater than 1.
+  - `num_finite_buckets` (`number`): Must be greater than 0.
+  - `scale` (`number`): Must be greater than 0.
 
 **Returns**:
   - An attribute object that represents the `exponential_buckets` sub block.
@@ -493,9 +493,9 @@ Terraform sub block.
 
 
 **Args**:
-  - `num_finite_buckets` (`number`): Must be greater than 0. When `null`, the `num_finite_buckets` field will be omitted from the resulting object.
-  - `offset` (`number`): Lower bound of the first bucket. When `null`, the `offset` field will be omitted from the resulting object.
-  - `width` (`number`): Must be greater than 0. When `null`, the `width` field will be omitted from the resulting object.
+  - `num_finite_buckets` (`number`): Must be greater than 0.
+  - `offset` (`number`): Lower bound of the first bucket.
+  - `width` (`number`): Must be greater than 0.
 
 **Returns**:
   - An attribute object that represents the `linear_buckets` sub block.

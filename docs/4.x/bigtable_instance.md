@@ -64,7 +64,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `deletion_protection` (`bool`): Whether or not to allow Terraform to destroy the instance. Unless this field is set to false in Terraform state, a terraform destroy or terraform apply that would delete the instance will fail. When `null`, the `deletion_protection` field will be omitted from the resulting object.
   - `display_name` (`string`): The human-readable display name of the Bigtable instance. Defaults to the instance name. When `null`, the `display_name` field will be omitted from the resulting object.
   - `instance_type` (`string`): The instance type to create. One of &#34;DEVELOPMENT&#34; or &#34;PRODUCTION&#34;. Defaults to &#34;PRODUCTION&#34;. When `null`, the `instance_type` field will be omitted from the resulting object.
-  - `labels` (`obj`): A mapping of labels to assign to the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A mapping of labels to assign to the resource.
+				
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance. Must be 6-33 characters and must only contain hyphens, lowercase letters and numbers.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `cluster` (`list[obj]`): A block of cluster configuration options. This can be specified at least once. When `null`, the `cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.new](#fn-clusternew) constructor.
@@ -95,7 +98,10 @@ injecting into a complete block.
   - `deletion_protection` (`bool`): Whether or not to allow Terraform to destroy the instance. Unless this field is set to false in Terraform state, a terraform destroy or terraform apply that would delete the instance will fail. When `null`, the `deletion_protection` field will be omitted from the resulting object.
   - `display_name` (`string`): The human-readable display name of the Bigtable instance. Defaults to the instance name. When `null`, the `display_name` field will be omitted from the resulting object.
   - `instance_type` (`string`): The instance type to create. One of &#34;DEVELOPMENT&#34; or &#34;PRODUCTION&#34;. Defaults to &#34;PRODUCTION&#34;. When `null`, the `instance_type` field will be omitted from the resulting object.
-  - `labels` (`obj`): A mapping of labels to assign to the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A mapping of labels to assign to the resource.
+				
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance. Must be 6-33 characters and must only contain hyphens, lowercase letters and numbers.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `cluster` (`list[obj]`): A block of cluster configuration options. This can be specified at least once. When `null`, the `cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_instance.cluster.new](#fn-clusternew) constructor.

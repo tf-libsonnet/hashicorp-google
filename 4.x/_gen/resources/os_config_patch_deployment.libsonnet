@@ -312,12 +312,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         week_day_of_month: week_day_of_month,
       }),
       week_day_of_month:: {
-        '#new':: d.fn(help='\n`google.os_config_patch_deployment.recurring_schedule.monthly.week_day_of_month.new` constructs a new object with attributes and blocks configured for the `week_day_of_month`\nTerraform sub block.\n\n\n\n**Args**:\n  - `day_of_week` (`string`): A day of the week. Possible values: [&#34;MONDAY&#34;, &#34;TUESDAY&#34;, &#34;WEDNESDAY&#34;, &#34;THURSDAY&#34;, &#34;FRIDAY&#34;, &#34;SATURDAY&#34;, &#34;SUNDAY&#34;]\n  - `week_ordinal` (`number`): Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.\n\n**Returns**:\n  - An attribute object that represents the `week_day_of_month` sub block.\n', args=[]),
+        '#new':: d.fn(help='\n`google.os_config_patch_deployment.recurring_schedule.monthly.week_day_of_month.new` constructs a new object with attributes and blocks configured for the `week_day_of_month`\nTerraform sub block.\n\n\n\n**Args**:\n  - `day_of_week` (`string`): A day of the week. Possible values: [&#34;MONDAY&#34;, &#34;TUESDAY&#34;, &#34;WEDNESDAY&#34;, &#34;THURSDAY&#34;, &#34;FRIDAY&#34;, &#34;SATURDAY&#34;, &#34;SUNDAY&#34;]\n  - `day_offset` (`number`): Represents the number of days before or after the given week day of month that the patch deployment is scheduled for. When `null`, the `day_offset` field will be omitted from the resulting object.\n  - `week_ordinal` (`number`): Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.\n\n**Returns**:\n  - An attribute object that represents the `week_day_of_month` sub block.\n', args=[]),
         new(
           day_of_week,
-          week_ordinal
+          week_ordinal,
+          day_offset=null
         ):: std.prune(a={
           day_of_week: day_of_week,
+          day_offset: day_offset,
           week_ordinal: week_ordinal,
         }),
       },

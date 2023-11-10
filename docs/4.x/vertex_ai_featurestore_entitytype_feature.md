@@ -56,7 +56,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): Description of the feature. When `null`, the `description` field will be omitted from the resulting object.
   - `entitytype` (`string`): The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entitytype}.
-  - `labels` (`obj`): A set of key/value label pairs to assign to the feature. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to the feature.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name of the feature. The feature can be up to 64 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The value will be unique given an entity type. When `null`, the `name` field will be omitted from the resulting object.
   - `value_type` (`string`): Type of Feature value. Immutable. https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.featurestores.entityTypes.features#ValueType
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype_feature.timeouts.new](#fn-timeoutsnew) constructor.
@@ -85,7 +89,11 @@ injecting into a complete block.
 **Args**:
   - `description` (`string`): Description of the feature. When `null`, the `description` field will be omitted from the resulting object.
   - `entitytype` (`string`): The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entitytype}.
-  - `labels` (`obj`): A set of key/value label pairs to assign to the feature. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to the feature.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name of the feature. The feature can be up to 64 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscore(_), and ASCII digits 0-9 starting with a letter. The value will be unique given an entity type. When `null`, the `name` field will be omitted from the resulting object.
   - `value_type` (`string`): Type of Feature value. Immutable. https://cloud.google.com/vertex-ai/docs/reference/rest/v1/projects.locations.featurestores.entityTypes.features#ValueType
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_featurestore_entitytype_feature.timeouts.new](#fn-timeoutsnew) constructor.

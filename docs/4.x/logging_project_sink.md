@@ -17,6 +17,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withBigqueryOptions()`](#fn-withbigqueryoptions)
 * [`fn withBigqueryOptionsMixin()`](#fn-withbigqueryoptionsmixin)
+* [`fn withCustomWriterIdentity()`](#fn-withcustomwriteridentity)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDestination()`](#fn-withdestination)
 * [`fn withDisabled()`](#fn-withdisabled)
@@ -60,13 +61,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `custom_writer_identity` (`string`): A service account provided by the caller that will be used to write the log entries. The format must be serviceAccount:some@email. This field can only be specified if you are routing logs to a destination outside this sink&#39;s project. If not specified, a Logging service account will automatically be generated. When `null`, the `custom_writer_identity` field will be omitted from the resulting object.
   - `description` (`string`): A description of this sink. The maximum length of the description is 8000 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `destination` (`string`): The destination of the sink (or, in other words, where logs are written to). Can be a Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples: &#34;storage.googleapis.com/[GCS_BUCKET]&#34; &#34;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&#34; &#34;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&#34; The writer associated with the sink must have access to write to the above resource.
   - `disabled` (`bool`): If set to True, then this sink is disabled and it does not export any log entries. When `null`, the `disabled` field will be omitted from the resulting object.
   - `filter` (`string`): The filter to apply when exporting logs. Only log entries that match the filter are exported. When `null`, the `filter` field will be omitted from the resulting object.
   - `name` (`string`): The name of the logging sink.
   - `project` (`string`): The ID of the project to create the sink in. If omitted, the project associated with the provider is used. When `null`, the `project` field will be omitted from the resulting object.
-  - `unique_writer_identity` (`bool`): Whether or not to create a unique identity associated with this sink. If false (the default), then the writer_identity used is serviceAccount:cloud-logs@system.gserviceaccount.com. If true, then a unique service account is created and used for this sink. If you wish to publish logs across projects, you must set unique_writer_identity to true. When `null`, the `unique_writer_identity` field will be omitted from the resulting object.
+  - `unique_writer_identity` (`bool`): Whether or not to create a unique identity associated with this sink. If false (the legacy behavior), then the writer_identity used is serviceAccount:cloud-logs@system.gserviceaccount.com. If true (default), then a unique service account is created and used for this sink. If you wish to publish logs across projects, you must set unique_writer_identity to true. When `null`, the `unique_writer_identity` field will be omitted from the resulting object.
   - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_sink.bigquery_options.new](#fn-bigquery_optionsnew) constructor.
   - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_sink.exclusions.new](#fn-exclusionsnew) constructor.
 
@@ -92,13 +94,14 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `custom_writer_identity` (`string`): A service account provided by the caller that will be used to write the log entries. The format must be serviceAccount:some@email. This field can only be specified if you are routing logs to a destination outside this sink&#39;s project. If not specified, a Logging service account will automatically be generated. When `null`, the `custom_writer_identity` field will be omitted from the resulting object.
   - `description` (`string`): A description of this sink. The maximum length of the description is 8000 characters. When `null`, the `description` field will be omitted from the resulting object.
   - `destination` (`string`): The destination of the sink (or, in other words, where logs are written to). Can be a Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples: &#34;storage.googleapis.com/[GCS_BUCKET]&#34; &#34;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&#34; &#34;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&#34; The writer associated with the sink must have access to write to the above resource.
   - `disabled` (`bool`): If set to True, then this sink is disabled and it does not export any log entries. When `null`, the `disabled` field will be omitted from the resulting object.
   - `filter` (`string`): The filter to apply when exporting logs. Only log entries that match the filter are exported. When `null`, the `filter` field will be omitted from the resulting object.
   - `name` (`string`): The name of the logging sink.
   - `project` (`string`): The ID of the project to create the sink in. If omitted, the project associated with the provider is used. When `null`, the `project` field will be omitted from the resulting object.
-  - `unique_writer_identity` (`bool`): Whether or not to create a unique identity associated with this sink. If false (the default), then the writer_identity used is serviceAccount:cloud-logs@system.gserviceaccount.com. If true, then a unique service account is created and used for this sink. If you wish to publish logs across projects, you must set unique_writer_identity to true. When `null`, the `unique_writer_identity` field will be omitted from the resulting object.
+  - `unique_writer_identity` (`bool`): Whether or not to create a unique identity associated with this sink. If false (the legacy behavior), then the writer_identity used is serviceAccount:cloud-logs@system.gserviceaccount.com. If true (default), then a unique service account is created and used for this sink. If you wish to publish logs across projects, you must set unique_writer_identity to true. When `null`, the `unique_writer_identity` field will be omitted from the resulting object.
   - `bigquery_options` (`list[obj]`): Options that affect sinks exporting data to BigQuery. When `null`, the `bigquery_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_sink.bigquery_options.new](#fn-bigquery_optionsnew) constructor.
   - `exclusions` (`list[obj]`): Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion&#39;s filters, it will not be exported. When `null`, the `exclusions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_project_sink.exclusions.new](#fn-exclusionsnew) constructor.
 
@@ -141,6 +144,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `bigquery_options` field.
+
+
+### fn withCustomWriterIdentity
+
+```ts
+withCustomWriterIdentity()
+```
+
+`google.string.withCustomWriterIdentity` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the custom_writer_identity field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `custom_writer_identity` field.
 
 
 ### fn withDescription

@@ -19,6 +19,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAuthorization()`](#fn-withauthorization)
 * [`fn withAuthorizationMixin()`](#fn-withauthorizationmixin)
 * [`fn withAwsRegion()`](#fn-withawsregion)
+* [`fn withBinaryAuthorization()`](#fn-withbinaryauthorization)
+* [`fn withBinaryAuthorizationMixin()`](#fn-withbinaryauthorizationmixin)
 * [`fn withControlPlane()`](#fn-withcontrolplane)
 * [`fn withControlPlaneMixin()`](#fn-withcontrolplanemixin)
 * [`fn withDescription()`](#fn-withdescription)
@@ -35,6 +37,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-authorizationnew)
   * [`obj authorization.admin_users`](#obj-authorizationadmin_users)
     * [`fn new()`](#fn-authorizationadmin_usersnew)
+* [`obj binary_authorization`](#obj-binary_authorization)
+  * [`fn new()`](#fn-binary_authorizationnew)
 * [`obj control_plane`](#obj-control_plane)
   * [`fn new()`](#fn-control_planenew)
   * [`obj control_plane.aws_services_authentication`](#obj-control_planeaws_services_authentication)
@@ -87,13 +91,17 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `annotations` (`obj`): Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `aws_region` (`string`): The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
   - `description` (`string`): Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes. When `null`, the `description` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): The name of this resource.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `authorization` (`list[obj]`): Configuration related to the cluster RBAC settings. When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_cluster.authorization.new](#fn-authorizationnew) constructor.
+  - `binary_authorization` (`list[obj]`): Configuration options for the Binary Authorization feature. When `null`, the `binary_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_cluster.binary_authorization.new](#fn-binary_authorizationnew) constructor.
   - `control_plane` (`list[obj]`): Configuration related to the cluster control plane. When `null`, the `control_plane` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_cluster.control_plane.new](#fn-control_planenew) constructor.
   - `fleet` (`list[obj]`): Fleet configuration. When `null`, the `fleet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_cluster.fleet.new](#fn-fleetnew) constructor.
   - `networking` (`list[obj]`): Cluster-wide networking configuration. When `null`, the `networking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_cluster.networking.new](#fn-networkingnew) constructor.
@@ -121,13 +129,17 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `annotations` (`obj`): Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `aws_region` (`string`): The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
   - `description` (`string`): Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes. When `null`, the `description` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): The name of this resource.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `authorization` (`list[obj]`): Configuration related to the cluster RBAC settings. When `null`, the `authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_cluster.authorization.new](#fn-authorizationnew) constructor.
+  - `binary_authorization` (`list[obj]`): Configuration options for the Binary Authorization feature. When `null`, the `binary_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_cluster.binary_authorization.new](#fn-binary_authorizationnew) constructor.
   - `control_plane` (`list[obj]`): Configuration related to the cluster control plane. When `null`, the `control_plane` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_cluster.control_plane.new](#fn-control_planenew) constructor.
   - `fleet` (`list[obj]`): Fleet configuration. When `null`, the `fleet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_cluster.fleet.new](#fn-fleetnew) constructor.
   - `networking` (`list[obj]`): Cluster-wide networking configuration. When `null`, the `networking` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_cluster.networking.new](#fn-networkingnew) constructor.
@@ -204,6 +216,43 @@ Terraform resource block to set or update the aws_region field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `aws_region` field.
+
+
+### fn withBinaryAuthorization
+
+```ts
+withBinaryAuthorization()
+```
+
+`google.list[obj].withBinaryAuthorization` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the binary_authorization field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withBinaryAuthorizationMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `binary_authorization` field.
+
+
+### fn withBinaryAuthorizationMixin
+
+```ts
+withBinaryAuthorizationMixin()
+```
+
+`google.list[obj].withBinaryAuthorizationMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the binary_authorization field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withBinaryAuthorization](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `binary_authorization` field.
 
 
 ### fn withControlPlane
@@ -461,6 +510,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `admin_users` sub block.
+
+
+## obj binary_authorization
+
+
+
+### fn binary_authorization.new
+
+```ts
+new()
+```
+
+
+`google.container_aws_cluster.binary_authorization.new` constructs a new object with attributes and blocks configured for the `binary_authorization`
+Terraform sub block.
+
+
+
+**Args**:
+  - `evaluation_mode` (`string`): Mode of operation for Binary Authorization policy evaluation. Possible values: DISABLED, PROJECT_SINGLETON_POLICY_ENFORCE When `null`, the `evaluation_mode` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `binary_authorization` sub block.
 
 
 ## obj control_plane

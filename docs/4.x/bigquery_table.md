@@ -32,6 +32,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRangePartitioning()`](#fn-withrangepartitioning)
 * [`fn withRangePartitioningMixin()`](#fn-withrangepartitioningmixin)
+* [`fn withRequirePartitionFilter()`](#fn-withrequirepartitionfilter)
 * [`fn withSchema()`](#fn-withschema)
 * [`fn withTableConstraints()`](#fn-withtableconstraints)
 * [`fn withTableConstraintsMixin()`](#fn-withtableconstraintsmixin)
@@ -112,9 +113,13 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): The field description. When `null`, the `description` field will be omitted from the resulting object.
   - `expiration_time` (`number`): The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. When `null`, the `expiration_time` field will be omitted from the resulting object.
   - `friendly_name` (`string`): A descriptive name for the table. When `null`, the `friendly_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): A mapping of labels to assign to the resource. When `null`, the `labels` field will be omitted from the resulting object.
-  - `max_staleness` (`string`): The maximum staleness of data that could be returned when the table (or stale MV) is queried. Staleness encoded as a string encoding of sql IntervalValue type. When `null`, the `max_staleness` field will be omitted from the resulting object.
+  - `labels` (`obj`): A mapping of labels to assign to the resource.
+
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `max_staleness` (`string`): The maximum staleness of data that could be returned when the table (or stale MV) is queried. Staleness encoded as a string encoding of [SQL IntervalValue type](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#interval_type). When `null`, the `max_staleness` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. When `null`, the `project` field will be omitted from the resulting object.
+  - `require_partition_filter` (`bool`): If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. When `null`, the `require_partition_filter` field will be omitted from the resulting object.
   - `schema` (`string`): A JSON schema for the table. When `null`, the `schema` field will be omitted from the resulting object.
   - `table_id` (`string`): A unique ID for the resource. Changing this forces a new resource to be created.
   - `encryption_configuration` (`list[obj]`): Specifies how the table should be encrypted. If left blank, the table will be encrypted with a Google-managed key; that process is transparent to the user. When `null`, the `encryption_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.encryption_configuration.new](#fn-encryption_configurationnew) constructor.
@@ -153,9 +158,13 @@ injecting into a complete block.
   - `description` (`string`): The field description. When `null`, the `description` field will be omitted from the resulting object.
   - `expiration_time` (`number`): The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed. When `null`, the `expiration_time` field will be omitted from the resulting object.
   - `friendly_name` (`string`): A descriptive name for the table. When `null`, the `friendly_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): A mapping of labels to assign to the resource. When `null`, the `labels` field will be omitted from the resulting object.
-  - `max_staleness` (`string`): The maximum staleness of data that could be returned when the table (or stale MV) is queried. Staleness encoded as a string encoding of sql IntervalValue type. When `null`, the `max_staleness` field will be omitted from the resulting object.
+  - `labels` (`obj`): A mapping of labels to assign to the resource.
+
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `max_staleness` (`string`): The maximum staleness of data that could be returned when the table (or stale MV) is queried. Staleness encoded as a string encoding of [SQL IntervalValue type](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types#interval_type). When `null`, the `max_staleness` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. When `null`, the `project` field will be omitted from the resulting object.
+  - `require_partition_filter` (`bool`): If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified. When `null`, the `require_partition_filter` field will be omitted from the resulting object.
   - `schema` (`string`): A JSON schema for the table. When `null`, the `schema` field will be omitted from the resulting object.
   - `table_id` (`string`): A unique ID for the resource. Changing this forces a new resource to be created.
   - `encryption_configuration` (`list[obj]`): Specifies how the table should be encrypted. If left blank, the table will be encrypted with a Google-managed key; that process is transparent to the user. When `null`, the `encryption_configuration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_table.encryption_configuration.new](#fn-encryption_configurationnew) constructor.
@@ -460,6 +469,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `range_partitioning` field.
+
+
+### fn withRequirePartitionFilter
+
+```ts
+withRequirePartitionFilter()
+```
+
+`google.bool.withRequirePartitionFilter` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the require_partition_filter field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `require_partition_filter` field.
 
 
 ### fn withSchema

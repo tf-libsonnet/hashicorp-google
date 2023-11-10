@@ -172,7 +172,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 will be encrypted using an internal Stream-specific encryption key provisioned through KMS. When `null`, the `customer_managed_encryption_key` field will be omitted from the resulting object.
   - `desired_state` (`string`): Desired state of the Stream. Set this field to &#39;RUNNING&#39; to start the stream, and &#39;PAUSED&#39; to pause the stream. When `null`, the `desired_state` field will be omitted from the resulting object.
   - `display_name` (`string`): Display name.
-  - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location this stream is located in.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `stream_id` (`string`): The stream identifier.
@@ -208,7 +211,10 @@ injecting into a complete block.
 will be encrypted using an internal Stream-specific encryption key provisioned through KMS. When `null`, the `customer_managed_encryption_key` field will be omitted from the resulting object.
   - `desired_state` (`string`): Desired state of the Stream. Set this field to &#39;RUNNING&#39; to start the stream, and &#39;PAUSED&#39; to pause the stream. When `null`, the `desired_state` field will be omitted from the resulting object.
   - `display_name` (`string`): Display name.
-  - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location this stream is located in.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `stream_id` (`string`): The stream identifier.

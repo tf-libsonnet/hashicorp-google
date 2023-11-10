@@ -77,7 +77,11 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 
 An object containing a list of &#34;key&#34;: value pairs.
-Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The resource name for the Hl7V2Store.
 
 ** Changing this property may recreate the Hl7v2 store (removing all data) **
@@ -123,7 +127,11 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 
 An object containing a list of &#34;key&#34;: value pairs.
-Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The resource name for the Hl7V2Store.
 
 ** Changing this property may recreate the Hl7v2 store (removing all data) **

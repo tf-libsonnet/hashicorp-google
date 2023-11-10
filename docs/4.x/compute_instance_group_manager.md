@@ -28,6 +28,10 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withStatefulDisk()`](#fn-withstatefuldisk)
 * [`fn withStatefulDiskMixin()`](#fn-withstatefuldiskmixin)
+* [`fn withStatefulExternalIp()`](#fn-withstatefulexternalip)
+* [`fn withStatefulExternalIpMixin()`](#fn-withstatefulexternalipmixin)
+* [`fn withStatefulInternalIp()`](#fn-withstatefulinternalip)
+* [`fn withStatefulInternalIpMixin()`](#fn-withstatefulinternalipmixin)
 * [`fn withTargetPools()`](#fn-withtargetpools)
 * [`fn withTargetSize()`](#fn-withtargetsize)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -47,6 +51,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-named_portnew)
 * [`obj stateful_disk`](#obj-stateful_disk)
   * [`fn new()`](#fn-stateful_disknew)
+* [`obj stateful_external_ip`](#obj-stateful_external_ip)
+  * [`fn new()`](#fn-stateful_external_ipnew)
+* [`obj stateful_internal_ip`](#obj-stateful_internal_ip)
+  * [`fn new()`](#fn-stateful_internal_ipnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 * [`obj update_policy`](#obj-update_policy)
@@ -99,6 +107,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `instance_lifecycle_policy` (`list[obj]`): The instance lifecycle policy for this managed instance group. When `null`, the `instance_lifecycle_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.instance_lifecycle_policy.new](#fn-instance_lifecycle_policynew) constructor.
   - `named_port` (`list[obj]`): The named port configuration. When `null`, the `named_port` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.named_port.new](#fn-named_portnew) constructor.
   - `stateful_disk` (`list[obj]`): Disks created on the instances that will be preserved on instance delete, update, etc. When `null`, the `stateful_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.stateful_disk.new](#fn-stateful_disknew) constructor.
+  - `stateful_external_ip` (`list[obj]`): External IPs considered stateful by the instance group.  When `null`, the `stateful_external_ip` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.stateful_external_ip.new](#fn-stateful_external_ipnew) constructor.
+  - `stateful_internal_ip` (`list[obj]`): External IPs considered stateful by the instance group.  When `null`, the `stateful_internal_ip` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.stateful_internal_ip.new](#fn-stateful_internal_ipnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.timeouts.new](#fn-timeoutsnew) constructor.
   - `update_policy` (`list[obj]`): The update policy for this managed instance group. When `null`, the `update_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.update_policy.new](#fn-update_policynew) constructor.
   - `version` (`list[obj]`): Application versions managed by this instance group. Each version deals with a specific instance template, allowing canary release scenarios. When `null`, the `version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.version.new](#fn-versionnew) constructor.
@@ -139,6 +149,8 @@ injecting into a complete block.
   - `instance_lifecycle_policy` (`list[obj]`): The instance lifecycle policy for this managed instance group. When `null`, the `instance_lifecycle_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.instance_lifecycle_policy.new](#fn-instance_lifecycle_policynew) constructor.
   - `named_port` (`list[obj]`): The named port configuration. When `null`, the `named_port` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.named_port.new](#fn-named_portnew) constructor.
   - `stateful_disk` (`list[obj]`): Disks created on the instances that will be preserved on instance delete, update, etc. When `null`, the `stateful_disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.stateful_disk.new](#fn-stateful_disknew) constructor.
+  - `stateful_external_ip` (`list[obj]`): External IPs considered stateful by the instance group.  When `null`, the `stateful_external_ip` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.stateful_external_ip.new](#fn-stateful_external_ipnew) constructor.
+  - `stateful_internal_ip` (`list[obj]`): External IPs considered stateful by the instance group.  When `null`, the `stateful_internal_ip` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.stateful_internal_ip.new](#fn-stateful_internal_ipnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.timeouts.new](#fn-timeoutsnew) constructor.
   - `update_policy` (`list[obj]`): The update policy for this managed instance group. When `null`, the `update_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.update_policy.new](#fn-update_policynew) constructor.
   - `version` (`list[obj]`): Application versions managed by this instance group. Each version deals with a specific instance template, allowing canary release scenarios. When `null`, the `version` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_group_manager.version.new](#fn-versionnew) constructor.
@@ -373,6 +385,80 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `stateful_disk` field.
+
+
+### fn withStatefulExternalIp
+
+```ts
+withStatefulExternalIp()
+```
+
+`google.list[obj].withStatefulExternalIp` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the stateful_external_ip field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withStatefulExternalIpMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `stateful_external_ip` field.
+
+
+### fn withStatefulExternalIpMixin
+
+```ts
+withStatefulExternalIpMixin()
+```
+
+`google.list[obj].withStatefulExternalIpMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the stateful_external_ip field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withStatefulExternalIp](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `stateful_external_ip` field.
+
+
+### fn withStatefulInternalIp
+
+```ts
+withStatefulInternalIp()
+```
+
+`google.list[obj].withStatefulInternalIp` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the stateful_internal_ip field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withStatefulInternalIpMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `stateful_internal_ip` field.
+
+
+### fn withStatefulInternalIpMixin
+
+```ts
+withStatefulInternalIpMixin()
+```
+
+`google.list[obj].withStatefulInternalIpMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the stateful_internal_ip field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withStatefulInternalIp](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `stateful_internal_ip` field.
 
 
 ### fn withTargetPools
@@ -658,6 +744,54 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `stateful_disk` sub block.
+
+
+## obj stateful_external_ip
+
+
+
+### fn stateful_external_ip.new
+
+```ts
+new()
+```
+
+
+`google.compute_instance_group_manager.stateful_external_ip.new` constructs a new object with attributes and blocks configured for the `stateful_external_ip`
+Terraform sub block.
+
+
+
+**Args**:
+  - `delete_rule` (`string`): A value that prescribes what should happen to an associated static Address resource when a VM instance is permanently deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the IP when the VM is deleted, but do not delete the address resource. ON_PERMANENT_INSTANCE_DELETION will delete the stateful address when the VM is permanently deleted from the instance group. The default is NEVER. When `null`, the `delete_rule` field will be omitted from the resulting object.
+  - `interface_name` (`string`): The network interface name When `null`, the `interface_name` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `stateful_external_ip` sub block.
+
+
+## obj stateful_internal_ip
+
+
+
+### fn stateful_internal_ip.new
+
+```ts
+new()
+```
+
+
+`google.compute_instance_group_manager.stateful_internal_ip.new` constructs a new object with attributes and blocks configured for the `stateful_internal_ip`
+Terraform sub block.
+
+
+
+**Args**:
+  - `delete_rule` (`string`): A value that prescribes what should happen to an associated static Address resource when a VM instance is permanently deleted. The available options are NEVER and ON_PERMANENT_INSTANCE_DELETION. NEVER - detach the IP when the VM is deleted, but do not delete the address resource. ON_PERMANENT_INSTANCE_DELETION will delete the stateful address when the VM is permanently deleted from the instance group. The default is NEVER. When `null`, the `delete_rule` field will be omitted from the resulting object.
+  - `interface_name` (`string`): The network interface name When `null`, the `interface_name` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `stateful_internal_ip` sub block.
 
 
 ## obj timeouts

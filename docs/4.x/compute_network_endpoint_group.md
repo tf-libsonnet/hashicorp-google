@@ -78,7 +78,7 @@ that 1) have the following load balancing schemes: EXTERNAL, EXTERNAL_MANAGED,
 INTERNAL_MANAGED, and INTERNAL_SELF_MANAGED and 2) support the RATE or
 CONNECTION balancing modes.
 
-Possible values include: GCE_VM_IP, GCE_VM_IP_PORT, and NON_GCP_PRIVATE_IP_PORT. Default value: &#34;GCE_VM_IP_PORT&#34; Possible values: [&#34;GCE_VM_IP&#34;, &#34;GCE_VM_IP_PORT&#34;, &#34;NON_GCP_PRIVATE_IP_PORT&#34;] When `null`, the `network_endpoint_type` field will be omitted from the resulting object.
+Possible values include: GCE_VM_IP, GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_IP_PORT, INTERNET_FQDN_PORT, SERVERLESS, and PRIVATE_SERVICE_CONNECT. Default value: &#34;GCE_VM_IP_PORT&#34; Possible values: [&#34;GCE_VM_IP&#34;, &#34;GCE_VM_IP_PORT&#34;, &#34;NON_GCP_PRIVATE_IP_PORT&#34;, &#34;INTERNET_IP_PORT&#34;, &#34;INTERNET_FQDN_PORT&#34;, &#34;SERVERLESS&#34;, &#34;PRIVATE_SERVICE_CONNECT&#34;] When `null`, the `network_endpoint_type` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `subnetwork` (`string`): Optional subnetwork to which all network endpoints in the NEG belong. When `null`, the `subnetwork` field will be omitted from the resulting object.
   - `zone` (`string`): Zone where the network endpoint group is located. When `null`, the `zone` field will be omitted from the resulting object.
@@ -127,7 +127,7 @@ that 1) have the following load balancing schemes: EXTERNAL, EXTERNAL_MANAGED,
 INTERNAL_MANAGED, and INTERNAL_SELF_MANAGED and 2) support the RATE or
 CONNECTION balancing modes.
 
-Possible values include: GCE_VM_IP, GCE_VM_IP_PORT, and NON_GCP_PRIVATE_IP_PORT. Default value: &#34;GCE_VM_IP_PORT&#34; Possible values: [&#34;GCE_VM_IP&#34;, &#34;GCE_VM_IP_PORT&#34;, &#34;NON_GCP_PRIVATE_IP_PORT&#34;] When `null`, the `network_endpoint_type` field will be omitted from the resulting object.
+Possible values include: GCE_VM_IP, GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_IP_PORT, INTERNET_FQDN_PORT, SERVERLESS, and PRIVATE_SERVICE_CONNECT. Default value: &#34;GCE_VM_IP_PORT&#34; Possible values: [&#34;GCE_VM_IP&#34;, &#34;GCE_VM_IP_PORT&#34;, &#34;NON_GCP_PRIVATE_IP_PORT&#34;, &#34;INTERNET_IP_PORT&#34;, &#34;INTERNET_FQDN_PORT&#34;, &#34;SERVERLESS&#34;, &#34;PRIVATE_SERVICE_CONNECT&#34;] When `null`, the `network_endpoint_type` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `subnetwork` (`string`): Optional subnetwork to which all network endpoints in the NEG belong. When `null`, the `subnetwork` field will be omitted from the resulting object.
   - `zone` (`string`): Zone where the network endpoint group is located. When `null`, the `zone` field will be omitted from the resulting object.

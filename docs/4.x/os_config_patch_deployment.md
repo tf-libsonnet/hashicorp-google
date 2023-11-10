@@ -1034,6 +1034,7 @@ Terraform sub block.
 
 **Args**:
   - `day_of_week` (`string`): A day of the week. Possible values: [&#34;MONDAY&#34;, &#34;TUESDAY&#34;, &#34;WEDNESDAY&#34;, &#34;THURSDAY&#34;, &#34;FRIDAY&#34;, &#34;SATURDAY&#34;, &#34;SUNDAY&#34;]
+  - `day_offset` (`number`): Represents the number of days before or after the given week day of month that the patch deployment is scheduled for. When `null`, the `day_offset` field will be omitted from the resulting object.
   - `week_ordinal` (`number`): Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
 
 **Returns**:

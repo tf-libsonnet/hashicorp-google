@@ -15,14 +15,18 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAnnotations()`](#fn-withannotations)
 * [`fn withAutomatedBackupPolicy()`](#fn-withautomatedbackuppolicy)
 * [`fn withAutomatedBackupPolicyMixin()`](#fn-withautomatedbackuppolicymixin)
 * [`fn withClusterId()`](#fn-withclusterid)
+* [`fn withClusterType()`](#fn-withclustertype)
 * [`fn withContinuousBackupConfig()`](#fn-withcontinuousbackupconfig)
 * [`fn withContinuousBackupConfigMixin()`](#fn-withcontinuousbackupconfigmixin)
+* [`fn withDeletionPolicy()`](#fn-withdeletionpolicy)
 * [`fn withDisplayName()`](#fn-withdisplayname)
 * [`fn withEncryptionConfig()`](#fn-withencryptionconfig)
 * [`fn withEncryptionConfigMixin()`](#fn-withencryptionconfigmixin)
+* [`fn withEtag()`](#fn-withetag)
 * [`fn withInitialUser()`](#fn-withinitialuser)
 * [`fn withInitialUserMixin()`](#fn-withinitialusermixin)
 * [`fn withLabels()`](#fn-withlabels)
@@ -35,6 +39,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withRestoreBackupSourceMixin()`](#fn-withrestorebackupsourcemixin)
 * [`fn withRestoreContinuousBackupSource()`](#fn-withrestorecontinuousbackupsource)
 * [`fn withRestoreContinuousBackupSourceMixin()`](#fn-withrestorecontinuousbackupsourcemixin)
+* [`fn withSecondaryConfig()`](#fn-withsecondaryconfig)
+* [`fn withSecondaryConfigMixin()`](#fn-withsecondaryconfigmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj automated_backup_policy`](#obj-automated_backup_policy)
@@ -63,6 +69,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-restore_backup_sourcenew)
 * [`obj restore_continuous_backup_source`](#obj-restore_continuous_backup_source)
   * [`fn new()`](#fn-restore_continuous_backup_sourcenew)
+* [`obj secondary_config`](#obj-secondary_config)
+  * [`fn new()`](#fn-secondary_confignew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -95,9 +103,23 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `annotations` (`obj`): Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. https://google.aip.dev/128
+An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `cluster_id` (`string`): The ID of the alloydb cluster.
+  - `cluster_type` (`string`): The type of cluster. If not set, defaults to PRIMARY. Default value: &#34;PRIMARY&#34; Possible values: [&#34;PRIMARY&#34;, &#34;SECONDARY&#34;] When `null`, the `cluster_type` field will be omitted from the resulting object.
+  - `deletion_policy` (`string`): Policy to determine if the cluster should be deleted forcefully.
+Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster.
+Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = &#34;FORCE&#34; otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `display_name` (`string`): User-settable and human-readable display name for the Cluster. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): User-defined labels for the alloydb cluster. When `null`, the `labels` field will be omitted from the resulting object.
+  - `etag` (`string`): For Resource freshness validation (https://google.aip.dev/154) When `null`, the `etag` field will be omitted from the resulting object.
+  - `labels` (`obj`): User-defined labels for the alloydb cluster.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location where the alloydb cluster should reside.
   - `network` (`string`): The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
 
@@ -112,6 +134,7 @@ If no policy is provided then the default policy will be used. The default polic
   - `network_config` (`list[obj]`): Metadata related to network configuration. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.network_config.new](#fn-network_confignew) constructor.
   - `restore_backup_source` (`list[obj]`): The source when restoring from a backup. Conflicts with &#39;restore_continuous_backup_source&#39;, both can&#39;t be set together. When `null`, the `restore_backup_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.restore_backup_source.new](#fn-restore_backup_sourcenew) constructor.
   - `restore_continuous_backup_source` (`list[obj]`): The source when restoring via point in time recovery (PITR). Conflicts with &#39;restore_backup_source&#39;, both can&#39;t be set together. When `null`, the `restore_continuous_backup_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.restore_continuous_backup_source.new](#fn-restore_continuous_backup_sourcenew) constructor.
+  - `secondary_config` (`list[obj]`): Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY. When `null`, the `secondary_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.secondary_config.new](#fn-secondary_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -136,9 +159,23 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `annotations` (`obj`): Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. https://google.aip.dev/128
+An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `cluster_id` (`string`): The ID of the alloydb cluster.
+  - `cluster_type` (`string`): The type of cluster. If not set, defaults to PRIMARY. Default value: &#34;PRIMARY&#34; Possible values: [&#34;PRIMARY&#34;, &#34;SECONDARY&#34;] When `null`, the `cluster_type` field will be omitted from the resulting object.
+  - `deletion_policy` (`string`): Policy to determine if the cluster should be deleted forcefully.
+Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster.
+Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = &#34;FORCE&#34; otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `display_name` (`string`): User-settable and human-readable display name for the Cluster. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): User-defined labels for the alloydb cluster. When `null`, the `labels` field will be omitted from the resulting object.
+  - `etag` (`string`): For Resource freshness validation (https://google.aip.dev/154) When `null`, the `etag` field will be omitted from the resulting object.
+  - `labels` (`obj`): User-defined labels for the alloydb cluster.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location where the alloydb cluster should reside.
   - `network` (`string`): The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
 
@@ -153,10 +190,27 @@ If no policy is provided then the default policy will be used. The default polic
   - `network_config` (`list[obj]`): Metadata related to network configuration. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.network_config.new](#fn-network_confignew) constructor.
   - `restore_backup_source` (`list[obj]`): The source when restoring from a backup. Conflicts with &#39;restore_continuous_backup_source&#39;, both can&#39;t be set together. When `null`, the `restore_backup_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.restore_backup_source.new](#fn-restore_backup_sourcenew) constructor.
   - `restore_continuous_backup_source` (`list[obj]`): The source when restoring via point in time recovery (PITR). Conflicts with &#39;restore_backup_source&#39;, both can&#39;t be set together. When `null`, the `restore_continuous_backup_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.restore_continuous_backup_source.new](#fn-restore_continuous_backup_sourcenew) constructor.
+  - `secondary_config` (`list[obj]`): Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY. When `null`, the `secondary_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.secondary_config.new](#fn-secondary_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `alloydb_cluster` resource into the root Terraform configuration.
+
+
+### fn withAnnotations
+
+```ts
+withAnnotations()
+```
+
+`google.obj.withAnnotations` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the annotations field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `annotations` field.
 
 
 ### fn withAutomatedBackupPolicy
@@ -212,6 +266,22 @@ Terraform resource block to set or update the cluster_id field.
   - `value` (`string`): The value to set for the `cluster_id` field.
 
 
+### fn withClusterType
+
+```ts
+withClusterType()
+```
+
+`google.string.withClusterType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the cluster_type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `cluster_type` field.
+
+
 ### fn withContinuousBackupConfig
 
 ```ts
@@ -247,6 +317,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `continuous_backup_config` field.
+
+
+### fn withDeletionPolicy
+
+```ts
+withDeletionPolicy()
+```
+
+`google.string.withDeletionPolicy` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the deletion_policy field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `deletion_policy` field.
 
 
 ### fn withDisplayName
@@ -300,6 +386,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `encryption_config` field.
+
+
+### fn withEtag
+
+```ts
+withEtag()
+```
+
+`google.string.withEtag` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the etag field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `etag` field.
 
 
 ### fn withInitialUser
@@ -512,6 +614,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `restore_continuous_backup_source` field.
+
+
+### fn withSecondaryConfig
+
+```ts
+withSecondaryConfig()
+```
+
+`google.list[obj].withSecondaryConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the secondary_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withSecondaryConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `secondary_config` field.
+
+
+### fn withSecondaryConfigMixin
+
+```ts
+withSecondaryConfigMixin()
+```
+
+`google.list[obj].withSecondaryConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the secondary_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withSecondaryConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `secondary_config` field.
 
 
 ### fn withTimeouts
@@ -872,6 +1011,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `restore_continuous_backup_source` sub block.
+
+
+## obj secondary_config
+
+
+
+### fn secondary_config.new
+
+```ts
+new()
+```
+
+
+`google.alloydb_cluster.secondary_config.new` constructs a new object with attributes and blocks configured for the `secondary_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `primary_cluster_name` (`string`): Name of the primary cluster must be in the format
+&#39;projects/{project}/locations/{location}/clusters/{cluster_id}&#39;
+
+**Returns**:
+  - An attribute object that represents the `secondary_config` sub block.
 
 
 ## obj timeouts

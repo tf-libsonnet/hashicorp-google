@@ -35,11 +35,11 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDefaultMaxPodsPerNode()`](#fn-withdefaultmaxpodspernode)
 * [`fn withDefaultSnatStatus()`](#fn-withdefaultsnatstatus)
 * [`fn withDefaultSnatStatusMixin()`](#fn-withdefaultsnatstatusmixin)
+* [`fn withDeletionProtection()`](#fn-withdeletionprotection)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDnsConfig()`](#fn-withdnsconfig)
 * [`fn withDnsConfigMixin()`](#fn-withdnsconfigmixin)
 * [`fn withEnableAutopilot()`](#fn-withenableautopilot)
-* [`fn withEnableBinaryAuthorization()`](#fn-withenablebinaryauthorization)
 * [`fn withEnableIntranodeVisibility()`](#fn-withenableintranodevisibility)
 * [`fn withEnableK8SBetaApis()`](#fn-withenablek8sbetaapis)
 * [`fn withEnableK8SBetaApisMixin()`](#fn-withenablek8sbetaapismixin)
@@ -50,6 +50,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withEnableTpu()`](#fn-withenabletpu)
 * [`fn withGatewayApiConfig()`](#fn-withgatewayapiconfig)
 * [`fn withGatewayApiConfigMixin()`](#fn-withgatewayapiconfigmixin)
+* [`fn withIdentityServiceConfig()`](#fn-withidentityserviceconfig)
+* [`fn withIdentityServiceConfigMixin()`](#fn-withidentityserviceconfigmixin)
 * [`fn withInitialNodeCount()`](#fn-withinitialnodecount)
 * [`fn withIpAllocationPolicy()`](#fn-withipallocationpolicy)
 * [`fn withIpAllocationPolicyMixin()`](#fn-withipallocationpolicymixin)
@@ -163,6 +165,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-enable_k8s_beta_apisnew)
 * [`obj gateway_api_config`](#obj-gateway_api_config)
   * [`fn new()`](#fn-gateway_api_confignew)
+* [`obj identity_service_config`](#obj-identity_service_config)
+  * [`fn new()`](#fn-identity_service_confignew)
 * [`obj ip_allocation_policy`](#obj-ip_allocation_policy)
   * [`fn new()`](#fn-ip_allocation_policynew)
   * [`obj ip_allocation_policy.additional_pod_ranges_config`](#obj-ip_allocation_policyadditional_pod_ranges_config)
@@ -229,6 +233,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-node_configsole_tenant_confignew)
     * [`obj node_config.sole_tenant_config.node_affinity`](#obj-node_configsole_tenant_confignode_affinity)
       * [`fn new()`](#fn-node_configsole_tenant_confignode_affinitynew)
+  * [`obj node_config.taint`](#obj-node_configtaint)
+    * [`fn new()`](#fn-node_configtaintnew)
   * [`obj node_config.workload_metadata_config`](#obj-node_configworkload_metadata_config)
     * [`fn new()`](#fn-node_configworkload_metadata_confignew)
 * [`obj node_pool`](#obj-node_pool)
@@ -271,6 +277,8 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-node_poolnode_configsole_tenant_confignew)
       * [`obj node_pool.node_config.sole_tenant_config.node_affinity`](#obj-node_poolnode_configsole_tenant_confignode_affinity)
         * [`fn new()`](#fn-node_poolnode_configsole_tenant_confignode_affinitynew)
+    * [`obj node_pool.node_config.taint`](#obj-node_poolnode_configtaint)
+      * [`fn new()`](#fn-node_poolnode_configtaintnew)
     * [`obj node_pool.node_config.workload_metadata_config`](#obj-node_poolnode_configworkload_metadata_config)
       * [`fn new()`](#fn-node_poolnode_configworkload_metadata_confignew)
   * [`obj node_pool.placement_policy`](#obj-node_poolplacement_policy)
@@ -349,9 +357,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `cluster_ipv4_cidr` (`string`): The IP address range of the Kubernetes pods in this cluster in CIDR notation (e.g. 10.96.0.0/14). Leave blank to have one automatically chosen or specify a /14 block in 10.0.0.0/8. This field will only work for routes-based clusters, where ip_allocation_policy is not defined. When `null`, the `cluster_ipv4_cidr` field will be omitted from the resulting object.
   - `datapath_provider` (`string`): The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation. When `null`, the `datapath_provider` field will be omitted from the resulting object.
   - `default_max_pods_per_node` (`number`): The default maximum number of pods per node in this cluster. This doesn&#39;t work on &#34;routes-based&#34; clusters, clusters that don&#39;t have IP Aliasing enabled. When `null`, the `default_max_pods_per_node` field will be omitted from the resulting object.
+  - `deletion_protection` (`bool`): Whether or not to allow Terraform to destroy the instance. Defaults to true. Unless this field is set to false in Terraform state, a terraform destroy or terraform apply that would delete the cluster will fail. When `null`, the `deletion_protection` field will be omitted from the resulting object.
   - `description` (`string`):  Description of the cluster. When `null`, the `description` field will be omitted from the resulting object.
   - `enable_autopilot` (`bool`): Enable Autopilot for this cluster. When `null`, the `enable_autopilot` field will be omitted from the resulting object.
-  - `enable_binary_authorization` (`bool`): Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binary Authorization. When `null`, the `enable_binary_authorization` field will be omitted from the resulting object.
   - `enable_intranode_visibility` (`bool`): Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network. When `null`, the `enable_intranode_visibility` field will be omitted from the resulting object.
   - `enable_kubernetes_alpha` (`bool`): Whether to enable Kubernetes Alpha features for this cluster. Note that when this option is enabled, the cluster cannot be upgraded and will be automatically deleted after 30 days. When `null`, the `enable_kubernetes_alpha` field will be omitted from the resulting object.
   - `enable_l4_ilb_subsetting` (`bool`): Whether L4ILB Subsetting is enabled for this cluster. When `null`, the `enable_l4_ilb_subsetting` field will be omitted from the resulting object.
@@ -365,7 +373,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `monitoring_service` (`string`): The monitoring service that the cluster should write metrics to. Automatically send metrics from pods in the cluster to the Google Cloud Monitoring API. VM metrics will be collected by Google Compute Engine regardless of this setting Available options include monitoring.googleapis.com(Legacy Stackdriver), monitoring.googleapis.com/kubernetes(Stackdriver Kubernetes Engine Monitoring), and none. Defaults to monitoring.googleapis.com/kubernetes. When `null`, the `monitoring_service` field will be omitted from the resulting object.
   - `name` (`string`): The name of the cluster, unique within the project and location.
   - `network` (`string`): The name or self_link of the Google Compute Engine network to which the cluster is connected. For Shared VPC, set this to the self link of the shared network. When `null`, the `network` field will be omitted from the resulting object.
-  - `networking_mode` (`string`): Determines whether alias IPs or routes will be used for pod IPs in the cluster. When `null`, the `networking_mode` field will be omitted from the resulting object.
+  - `networking_mode` (`string`): Determines whether alias IPs or routes will be used for pod IPs in the cluster. Defaults to VPC_NATIVE for new clusters. When `null`, the `networking_mode` field will be omitted from the resulting object.
   - `node_locations` (`list`): The list of zones in which the cluster&#39;s nodes are located. Nodes must be in the region of their regional cluster or in the same region as their cluster&#39;s zone for zonal clusters. If this is specified for a zonal cluster, omit the cluster&#39;s zone. When `null`, the `node_locations` field will be omitted from the resulting object.
   - `node_version` (`string`): The Kubernetes version on the nodes. Must either be unset or set to the same value as min_master_version on create. Defaults to the default version set by GKE which is not necessarily the latest version. This only affects nodes in the default node pool. While a fuzzy version can be specified, it&#39;s recommended that you specify explicit versions as Terraform will see spurious diffs when fuzzy versions are used. See the google_container_engine_versions data source&#39;s version_prefix field to approximate fuzzy versions in a Terraform-compatible way. To update nodes in other node pools, use the version attribute on the node pool. When `null`, the `node_version` field will be omitted from the resulting object.
   - `private_ipv6_google_access` (`string`): The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4). When `null`, the `private_ipv6_google_access` field will be omitted from the resulting object.
@@ -384,6 +392,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `dns_config` (`list[obj]`): Configuration for Cloud DNS for Kubernetes Engine. When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.dns_config.new](#fn-dns_confignew) constructor.
   - `enable_k8s_beta_apis` (`list[obj]`): Configuration for Kubernetes Beta APIs. When `null`, the `enable_k8s_beta_apis` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.enable_k8s_beta_apis.new](#fn-enable_k8s_beta_apisnew) constructor.
   - `gateway_api_config` (`list[obj]`): Configuration for GKE Gateway API controller. When `null`, the `gateway_api_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.gateway_api_config.new](#fn-gateway_api_confignew) constructor.
+  - `identity_service_config` (`list[obj]`): Configuration for Identity Service which allows customers to use external identity providers with the K8S API. When `null`, the `identity_service_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.identity_service_config.new](#fn-identity_service_confignew) constructor.
   - `ip_allocation_policy` (`list[obj]`): Configuration of cluster IP allocation for VPC-native clusters. Adding this block enables IP aliasing, making the cluster VPC-native instead of routes-based. When `null`, the `ip_allocation_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.ip_allocation_policy.new](#fn-ip_allocation_policynew) constructor.
   - `logging_config` (`list[obj]`): Logging configuration for the cluster. When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.logging_config.new](#fn-logging_confignew) constructor.
   - `maintenance_policy` (`list[obj]`): The maintenance policy to use for the cluster. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.maintenance_policy.new](#fn-maintenance_policynew) constructor.
@@ -432,9 +441,9 @@ injecting into a complete block.
   - `cluster_ipv4_cidr` (`string`): The IP address range of the Kubernetes pods in this cluster in CIDR notation (e.g. 10.96.0.0/14). Leave blank to have one automatically chosen or specify a /14 block in 10.0.0.0/8. This field will only work for routes-based clusters, where ip_allocation_policy is not defined. When `null`, the `cluster_ipv4_cidr` field will be omitted from the resulting object.
   - `datapath_provider` (`string`): The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation. When `null`, the `datapath_provider` field will be omitted from the resulting object.
   - `default_max_pods_per_node` (`number`): The default maximum number of pods per node in this cluster. This doesn&#39;t work on &#34;routes-based&#34; clusters, clusters that don&#39;t have IP Aliasing enabled. When `null`, the `default_max_pods_per_node` field will be omitted from the resulting object.
+  - `deletion_protection` (`bool`): Whether or not to allow Terraform to destroy the instance. Defaults to true. Unless this field is set to false in Terraform state, a terraform destroy or terraform apply that would delete the cluster will fail. When `null`, the `deletion_protection` field will be omitted from the resulting object.
   - `description` (`string`):  Description of the cluster. When `null`, the `description` field will be omitted from the resulting object.
   - `enable_autopilot` (`bool`): Enable Autopilot for this cluster. When `null`, the `enable_autopilot` field will be omitted from the resulting object.
-  - `enable_binary_authorization` (`bool`): Enable Binary Authorization for this cluster. If enabled, all container images will be validated by Google Binary Authorization. When `null`, the `enable_binary_authorization` field will be omitted from the resulting object.
   - `enable_intranode_visibility` (`bool`): Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network. When `null`, the `enable_intranode_visibility` field will be omitted from the resulting object.
   - `enable_kubernetes_alpha` (`bool`): Whether to enable Kubernetes Alpha features for this cluster. Note that when this option is enabled, the cluster cannot be upgraded and will be automatically deleted after 30 days. When `null`, the `enable_kubernetes_alpha` field will be omitted from the resulting object.
   - `enable_l4_ilb_subsetting` (`bool`): Whether L4ILB Subsetting is enabled for this cluster. When `null`, the `enable_l4_ilb_subsetting` field will be omitted from the resulting object.
@@ -448,7 +457,7 @@ injecting into a complete block.
   - `monitoring_service` (`string`): The monitoring service that the cluster should write metrics to. Automatically send metrics from pods in the cluster to the Google Cloud Monitoring API. VM metrics will be collected by Google Compute Engine regardless of this setting Available options include monitoring.googleapis.com(Legacy Stackdriver), monitoring.googleapis.com/kubernetes(Stackdriver Kubernetes Engine Monitoring), and none. Defaults to monitoring.googleapis.com/kubernetes. When `null`, the `monitoring_service` field will be omitted from the resulting object.
   - `name` (`string`): The name of the cluster, unique within the project and location.
   - `network` (`string`): The name or self_link of the Google Compute Engine network to which the cluster is connected. For Shared VPC, set this to the self link of the shared network. When `null`, the `network` field will be omitted from the resulting object.
-  - `networking_mode` (`string`): Determines whether alias IPs or routes will be used for pod IPs in the cluster. When `null`, the `networking_mode` field will be omitted from the resulting object.
+  - `networking_mode` (`string`): Determines whether alias IPs or routes will be used for pod IPs in the cluster. Defaults to VPC_NATIVE for new clusters. When `null`, the `networking_mode` field will be omitted from the resulting object.
   - `node_locations` (`list`): The list of zones in which the cluster&#39;s nodes are located. Nodes must be in the region of their regional cluster or in the same region as their cluster&#39;s zone for zonal clusters. If this is specified for a zonal cluster, omit the cluster&#39;s zone. When `null`, the `node_locations` field will be omitted from the resulting object.
   - `node_version` (`string`): The Kubernetes version on the nodes. Must either be unset or set to the same value as min_master_version on create. Defaults to the default version set by GKE which is not necessarily the latest version. This only affects nodes in the default node pool. While a fuzzy version can be specified, it&#39;s recommended that you specify explicit versions as Terraform will see spurious diffs when fuzzy versions are used. See the google_container_engine_versions data source&#39;s version_prefix field to approximate fuzzy versions in a Terraform-compatible way. To update nodes in other node pools, use the version attribute on the node pool. When `null`, the `node_version` field will be omitted from the resulting object.
   - `private_ipv6_google_access` (`string`): The desired state of IPv6 connectivity to Google Services. By default, no private IPv6 access to or from Google Services (all access will be via IPv4). When `null`, the `private_ipv6_google_access` field will be omitted from the resulting object.
@@ -467,6 +476,7 @@ injecting into a complete block.
   - `dns_config` (`list[obj]`): Configuration for Cloud DNS for Kubernetes Engine. When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.dns_config.new](#fn-dns_confignew) constructor.
   - `enable_k8s_beta_apis` (`list[obj]`): Configuration for Kubernetes Beta APIs. When `null`, the `enable_k8s_beta_apis` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.enable_k8s_beta_apis.new](#fn-enable_k8s_beta_apisnew) constructor.
   - `gateway_api_config` (`list[obj]`): Configuration for GKE Gateway API controller. When `null`, the `gateway_api_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.gateway_api_config.new](#fn-gateway_api_confignew) constructor.
+  - `identity_service_config` (`list[obj]`): Configuration for Identity Service which allows customers to use external identity providers with the K8S API. When `null`, the `identity_service_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.identity_service_config.new](#fn-identity_service_confignew) constructor.
   - `ip_allocation_policy` (`list[obj]`): Configuration of cluster IP allocation for VPC-native clusters. Adding this block enables IP aliasing, making the cluster VPC-native instead of routes-based. When `null`, the `ip_allocation_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.ip_allocation_policy.new](#fn-ip_allocation_policynew) constructor.
   - `logging_config` (`list[obj]`): Logging configuration for the cluster. When `null`, the `logging_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.logging_config.new](#fn-logging_confignew) constructor.
   - `maintenance_policy` (`list[obj]`): The maintenance policy to use for the cluster. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.maintenance_policy.new](#fn-maintenance_policynew) constructor.
@@ -853,6 +863,22 @@ function.
   - `value` (`list[obj]`): The value to set for the `default_snat_status` field.
 
 
+### fn withDeletionProtection
+
+```ts
+withDeletionProtection()
+```
+
+`google.bool.withDeletionProtection` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the deletion_protection field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `deletion_protection` field.
+
+
 ### fn withDescription
 
 ```ts
@@ -920,22 +946,6 @@ Terraform resource block to set or update the enable_autopilot field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `enable_autopilot` field.
-
-
-### fn withEnableBinaryAuthorization
-
-```ts
-withEnableBinaryAuthorization()
-```
-
-`google.bool.withEnableBinaryAuthorization` constructs a mixin object that can be merged into the `bool`
-Terraform resource block to set or update the enable_binary_authorization field.
-
-
-
-**Args**:
-  - `resourceLabel` (`string`): The name label of the block to update.
-  - `value` (`bool`): The value to set for the `enable_binary_authorization` field.
 
 
 ### fn withEnableIntranodeVisibility
@@ -1106,6 +1116,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `gateway_api_config` field.
+
+
+### fn withIdentityServiceConfig
+
+```ts
+withIdentityServiceConfig()
+```
+
+`google.list[obj].withIdentityServiceConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the identity_service_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withIdentityServiceConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `identity_service_config` field.
+
+
+### fn withIdentityServiceConfigMixin
+
+```ts
+withIdentityServiceConfigMixin()
+```
+
+`google.list[obj].withIdentityServiceConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the identity_service_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withIdentityServiceConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `identity_service_config` field.
 
 
 ### fn withInitialNodeCount
@@ -2807,6 +2854,29 @@ Terraform sub block.
   - An attribute object that represents the `gateway_api_config` sub block.
 
 
+## obj identity_service_config
+
+
+
+### fn identity_service_config.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.identity_service_config.new` constructs a new object with attributes and blocks configured for the `identity_service_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Whether to enable the Identity Service component. When `null`, the `enabled` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `identity_service_config` sub block.
+
+
 ## obj ip_allocation_policy
 
 
@@ -3234,7 +3304,7 @@ Terraform sub block.
 
 **Args**:
   - `enabled` (`bool`): Whether network policy is enabled on the cluster.
-  - `provider` (`string`): The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED. When `null`, the `provider` field will be omitted from the resulting object.
+  - `provider` (`string`): The selected network policy provider. When `null`, the `provider` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `network_policy` sub block.
@@ -3275,7 +3345,6 @@ Terraform sub block.
   - `service_account` (`string`): The Google Cloud Platform Service Account to be used by the node VMs. When `null`, the `service_account` field will be omitted from the resulting object.
   - `spot` (`bool`): Whether the nodes are created as spot VM instances. When `null`, the `spot` field will be omitted from the resulting object.
   - `tags` (`list`): The list of instance tags applied to all nodes. When `null`, the `tags` field will be omitted from the resulting object.
-  - `taint` (`list`): List of Kubernetes taints to be applied to each node. When `null`, the `taint` field will be omitted from the resulting object.
   - `advanced_machine_features` (`list[obj]`): Specifies options for controlling advanced machine features. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.advanced_machine_features.new](#fn-node_configadvanced_machine_featuresnew) constructor.
   - `confidential_nodes` (`list[obj]`): Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration can&#39;t be changed (or added/removed) after pool creation without deleting and recreating the entire pool. When `null`, the `confidential_nodes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.confidential_nodes.new](#fn-node_configconfidential_nodesnew) constructor.
   - `ephemeral_storage_local_ssd_config` (`list[obj]`): Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. When `null`, the `ephemeral_storage_local_ssd_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.ephemeral_storage_local_ssd_config.new](#fn-node_configephemeral_storage_local_ssd_confignew) constructor.
@@ -3289,6 +3358,7 @@ Terraform sub block.
   - `reservation_affinity` (`list[obj]`): The reservation affinity configuration for the node pool. When `null`, the `reservation_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.reservation_affinity.new](#fn-node_configreservation_affinitynew) constructor.
   - `shielded_instance_config` (`list[obj]`): Shielded Instance options. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.shielded_instance_config.new](#fn-node_configshielded_instance_confignew) constructor.
   - `sole_tenant_config` (`list[obj]`): Node affinity options for sole tenant node pools. When `null`, the `sole_tenant_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.sole_tenant_config.new](#fn-node_configsole_tenant_confignew) constructor.
+  - `taint` (`list[obj]`): List of Kubernetes taints to be applied to each node. When `null`, the `taint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.taint.new](#fn-node_configtaintnew) constructor.
   - `workload_metadata_config` (`list[obj]`): The workload metadata configuration for this node. When `null`, the `workload_metadata_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.workload_metadata_config.new](#fn-node_configworkload_metadata_confignew) constructor.
 
 **Returns**:
@@ -3499,7 +3569,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `sysctls` (`obj`): The Linux kernel parameters to be applied to the nodes and all pods running on the nodes.
+  - `cgroup_mode` (`string`): cgroupMode specifies the cgroup mode to be used on the node. When `null`, the `cgroup_mode` field will be omitted from the resulting object.
+  - `sysctls` (`obj`): The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. When `null`, the `sysctls` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `linux_node_config` sub block.
@@ -3625,6 +3696,31 @@ Terraform sub block.
   - An attribute object that represents the `node_affinity` sub block.
 
 
+## obj node_config.taint
+
+
+
+### fn node_config.taint.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_config.taint.new` constructs a new object with attributes and blocks configured for the `taint`
+Terraform sub block.
+
+
+
+**Args**:
+  - `effect` (`string`): Effect for taint.
+  - `key` (`string`): Key for taint.
+  - `value` (`string`): Value for taint.
+
+**Returns**:
+  - An attribute object that represents the `taint` sub block.
+
+
 ## obj node_config.workload_metadata_config
 
 
@@ -3727,8 +3823,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `auto_repair` (`bool`): Whether the nodes will be automatically repaired. When `null`, the `auto_repair` field will be omitted from the resulting object.
-  - `auto_upgrade` (`bool`): Whether the nodes will be automatically upgraded. When `null`, the `auto_upgrade` field will be omitted from the resulting object.
+  - `auto_repair` (`bool`): Whether the nodes will be automatically repaired. Enabled by default. When `null`, the `auto_repair` field will be omitted from the resulting object.
+  - `auto_upgrade` (`bool`): Whether the nodes will be automatically upgraded. Enabled by default. When `null`, the `auto_upgrade` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `management` sub block.
@@ -3819,7 +3915,6 @@ Terraform sub block.
   - `service_account` (`string`): The Google Cloud Platform Service Account to be used by the node VMs. When `null`, the `service_account` field will be omitted from the resulting object.
   - `spot` (`bool`): Whether the nodes are created as spot VM instances. When `null`, the `spot` field will be omitted from the resulting object.
   - `tags` (`list`): The list of instance tags applied to all nodes. When `null`, the `tags` field will be omitted from the resulting object.
-  - `taint` (`list`): List of Kubernetes taints to be applied to each node. When `null`, the `taint` field will be omitted from the resulting object.
   - `advanced_machine_features` (`list[obj]`): Specifies options for controlling advanced machine features. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.advanced_machine_features.new](#fn-node_poolnode_pooladvanced_machine_featuresnew) constructor.
   - `confidential_nodes` (`list[obj]`): Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration can&#39;t be changed (or added/removed) after pool creation without deleting and recreating the entire pool. When `null`, the `confidential_nodes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.confidential_nodes.new](#fn-node_poolnode_poolconfidential_nodesnew) constructor.
   - `ephemeral_storage_local_ssd_config` (`list[obj]`): Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. When `null`, the `ephemeral_storage_local_ssd_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.ephemeral_storage_local_ssd_config.new](#fn-node_poolnode_poolephemeral_storage_local_ssd_confignew) constructor.
@@ -3833,6 +3928,7 @@ Terraform sub block.
   - `reservation_affinity` (`list[obj]`): The reservation affinity configuration for the node pool. When `null`, the `reservation_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.reservation_affinity.new](#fn-node_poolnode_poolreservation_affinitynew) constructor.
   - `shielded_instance_config` (`list[obj]`): Shielded Instance options. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.shielded_instance_config.new](#fn-node_poolnode_poolshielded_instance_confignew) constructor.
   - `sole_tenant_config` (`list[obj]`): Node affinity options for sole tenant node pools. When `null`, the `sole_tenant_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.sole_tenant_config.new](#fn-node_poolnode_poolsole_tenant_confignew) constructor.
+  - `taint` (`list[obj]`): List of Kubernetes taints to be applied to each node. When `null`, the `taint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.taint.new](#fn-node_poolnode_pooltaintnew) constructor.
   - `workload_metadata_config` (`list[obj]`): The workload metadata configuration for this node. When `null`, the `workload_metadata_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.workload_metadata_config.new](#fn-node_poolnode_poolworkload_metadata_confignew) constructor.
 
 **Returns**:
@@ -4043,7 +4139,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `sysctls` (`obj`): The Linux kernel parameters to be applied to the nodes and all pods running on the nodes.
+  - `cgroup_mode` (`string`): cgroupMode specifies the cgroup mode to be used on the node. When `null`, the `cgroup_mode` field will be omitted from the resulting object.
+  - `sysctls` (`obj`): The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. When `null`, the `sysctls` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `linux_node_config` sub block.
@@ -4167,6 +4264,31 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `node_affinity` sub block.
+
+
+## obj node_pool.node_config.taint
+
+
+
+### fn node_pool.node_config.taint.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_pool.node_config.taint.new` constructs a new object with attributes and blocks configured for the `taint`
+Terraform sub block.
+
+
+
+**Args**:
+  - `effect` (`string`): Effect for taint.
+  - `key` (`string`): Key for taint.
+  - `value` (`string`): Value for taint.
+
+**Returns**:
+  - An attribute object that represents the `taint` sub block.
 
 
 ## obj node_pool.node_config.workload_metadata_config
@@ -4598,7 +4720,7 @@ Terraform sub block.
 
 **Args**:
   - `mode` (`string`): Sets the mode of the Kubernetes security posture API&#39;s off-cluster features. Available options include DISABLED and BASIC. When `null`, the `mode` field will be omitted from the resulting object.
-  - `vulnerability_mode` (`string`): Sets the mode of the Kubernetes security posture API&#39;s workload vulnerability scanning. Available options include VULNERABILITY_DISABLED and VULNERABILITY_BASIC. When `null`, the `vulnerability_mode` field will be omitted from the resulting object.
+  - `vulnerability_mode` (`string`): Sets the mode of the Kubernetes security posture API&#39;s workload vulnerability scanning. Available options include VULNERABILITY_DISABLED, VULNERABILITY_BASIC and VULNERABILITY_ENTERPRISE. When `null`, the `vulnerability_mode` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `security_posture_config` sub block.

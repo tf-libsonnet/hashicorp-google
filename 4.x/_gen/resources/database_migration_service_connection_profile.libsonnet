@@ -160,7 +160,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       }),
     },
   },
-  '#new':: d.fn(help="\n`google.database_migration_service_connection_profile.new` injects a new `google_database_migration_service_connection_profile` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.database_migration_service_connection_profile.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.database_migration_service_connection_profile` using the reference:\n\n    $._ref.google_database_migration_service_connection_profile.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_database_migration_service_connection_profile.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `connection_profile_id` (`string`): The ID of the connection profile.\n  - `display_name` (`string`): The connection profile display name. When `null`, the `display_name` field will be omitted from the resulting object.\n  - `labels` (`obj`): The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. When `null`, the `labels` field will be omitted from the resulting object.\n  - `location` (`string`): The location where the connection profile should reside. When `null`, the `location` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.\n  - `alloydb` (`list[obj]`): Specifies required connection parameters, and the parameters required to create an AlloyDB destination cluster. When `null`, the `alloydb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.alloydb.new](#fn-alloydbnew) constructor.\n  - `cloudsql` (`list[obj]`): Specifies required connection parameters, and, optionally, the parameters required to create a Cloud SQL destination database instance. When `null`, the `cloudsql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.cloudsql.new](#fn-cloudsqlnew) constructor.\n  - `mysql` (`list[obj]`): Specifies connection parameters required specifically for MySQL databases. When `null`, the `mysql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.mysql.new](#fn-mysqlnew) constructor.\n  - `postgresql` (`list[obj]`): Specifies connection parameters required specifically for PostgreSQL databases. When `null`, the `postgresql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.postgresql.new](#fn-postgresqlnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`google.database_migration_service_connection_profile.new` injects a new `google_database_migration_service_connection_profile` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.database_migration_service_connection_profile.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.database_migration_service_connection_profile` using the reference:\n\n    $._ref.google_database_migration_service_connection_profile.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_database_migration_service_connection_profile.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `connection_profile_id` (`string`): The ID of the connection profile.\n  - `display_name` (`string`): The connection profile display name. When `null`, the `display_name` field will be omitted from the resulting object.\n  - `labels` (`obj`): The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs.\n\n\n**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.\nPlease refer to the field \u0026#39;effective_labels\u0026#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.\n  - `location` (`string`): The location where the connection profile should reside. When `null`, the `location` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.\n  - `alloydb` (`list[obj]`): Specifies required connection parameters, and the parameters required to create an AlloyDB destination cluster. When `null`, the `alloydb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.alloydb.new](#fn-alloydbnew) constructor.\n  - `cloudsql` (`list[obj]`): Specifies required connection parameters, and, optionally, the parameters required to create a Cloud SQL destination database instance. When `null`, the `cloudsql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.cloudsql.new](#fn-cloudsqlnew) constructor.\n  - `mysql` (`list[obj]`): Specifies connection parameters required specifically for MySQL databases. When `null`, the `mysql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.mysql.new](#fn-mysqlnew) constructor.\n  - `oracle` (`list[obj]`): Specifies connection parameters required specifically for Oracle databases. When `null`, the `oracle` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.oracle.new](#fn-oraclenew) constructor.\n  - `postgresql` (`list[obj]`): Specifies connection parameters required specifically for PostgreSQL databases. When `null`, the `postgresql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.postgresql.new](#fn-postgresqlnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     connection_profile_id,
@@ -170,6 +170,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     labels=null,
     location=null,
     mysql=null,
+    oracle=null,
     postgresql=null,
     project=null,
     timeouts=null,
@@ -185,13 +186,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       labels=labels,
       location=location,
       mysql=mysql,
+      oracle=oracle,
       postgresql=postgresql,
       project=project,
       timeouts=timeouts
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`google.database_migration_service_connection_profile.newAttrs` constructs a new object with attributes and blocks configured for the `database_migration_service_connection_profile`\nTerraform resource.\n\nUnlike [google.database_migration_service_connection_profile.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `connection_profile_id` (`string`): The ID of the connection profile.\n  - `display_name` (`string`): The connection profile display name. When `null`, the `display_name` field will be omitted from the resulting object.\n  - `labels` (`obj`): The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. When `null`, the `labels` field will be omitted from the resulting object.\n  - `location` (`string`): The location where the connection profile should reside. When `null`, the `location` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.\n  - `alloydb` (`list[obj]`): Specifies required connection parameters, and the parameters required to create an AlloyDB destination cluster. When `null`, the `alloydb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.alloydb.new](#fn-alloydbnew) constructor.\n  - `cloudsql` (`list[obj]`): Specifies required connection parameters, and, optionally, the parameters required to create a Cloud SQL destination database instance. When `null`, the `cloudsql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.cloudsql.new](#fn-cloudsqlnew) constructor.\n  - `mysql` (`list[obj]`): Specifies connection parameters required specifically for MySQL databases. When `null`, the `mysql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.mysql.new](#fn-mysqlnew) constructor.\n  - `postgresql` (`list[obj]`): Specifies connection parameters required specifically for PostgreSQL databases. When `null`, the `postgresql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.postgresql.new](#fn-postgresqlnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `database_migration_service_connection_profile` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`google.database_migration_service_connection_profile.newAttrs` constructs a new object with attributes and blocks configured for the `database_migration_service_connection_profile`\nTerraform resource.\n\nUnlike [google.database_migration_service_connection_profile.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `connection_profile_id` (`string`): The ID of the connection profile.\n  - `display_name` (`string`): The connection profile display name. When `null`, the `display_name` field will be omitted from the resulting object.\n  - `labels` (`obj`): The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs.\n\n\n**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.\nPlease refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.\n  - `location` (`string`): The location where the connection profile should reside. When `null`, the `location` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.\n  - `alloydb` (`list[obj]`): Specifies required connection parameters, and the parameters required to create an AlloyDB destination cluster. When `null`, the `alloydb` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.alloydb.new](#fn-alloydbnew) constructor.\n  - `cloudsql` (`list[obj]`): Specifies required connection parameters, and, optionally, the parameters required to create a Cloud SQL destination database instance. When `null`, the `cloudsql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.cloudsql.new](#fn-cloudsqlnew) constructor.\n  - `mysql` (`list[obj]`): Specifies connection parameters required specifically for MySQL databases. When `null`, the `mysql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.mysql.new](#fn-mysqlnew) constructor.\n  - `oracle` (`list[obj]`): Specifies connection parameters required specifically for Oracle databases. When `null`, the `oracle` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.oracle.new](#fn-oraclenew) constructor.\n  - `postgresql` (`list[obj]`): Specifies connection parameters required specifically for PostgreSQL databases. When `null`, the `postgresql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.postgresql.new](#fn-postgresqlnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `database_migration_service_connection_profile` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     connection_profile_id,
     alloydb=null,
@@ -200,6 +202,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     labels=null,
     location=null,
     mysql=null,
+    oracle=null,
     postgresql=null,
     project=null,
     timeouts=null
@@ -211,10 +214,77 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     labels: labels,
     location: location,
     mysql: mysql,
+    oracle: oracle,
     postgresql: postgresql,
     project: project,
     timeouts: timeouts,
   }),
+  oracle:: {
+    forward_ssh_connectivity:: {
+      '#new':: d.fn(help='\n`google.database_migration_service_connection_profile.oracle.forward_ssh_connectivity.new` constructs a new object with attributes and blocks configured for the `forward_ssh_connectivity`\nTerraform sub block.\n\n\n\n**Args**:\n  - `hostname` (`string`): Required. Hostname for the SSH tunnel.\n  - `password` (`string`): Input only. SSH password. Only one of &#39;password&#39; and &#39;private_key&#39; can be configured. When `null`, the `password` field will be omitted from the resulting object.\n  - `port` (`number`): Port for the SSH tunnel, default value is 22.\n  - `private_key` (`string`): Input only. SSH private key. Only one of &#39;password&#39; and &#39;private_key&#39; can be configured. When `null`, the `private_key` field will be omitted from the resulting object.\n  - `username` (`string`): Required. Username for the SSH tunnel.\n\n**Returns**:\n  - An attribute object that represents the `forward_ssh_connectivity` sub block.\n', args=[]),
+      new(
+        hostname,
+        port,
+        username,
+        password=null,
+        private_key=null
+      ):: std.prune(a={
+        hostname: hostname,
+        password: password,
+        port: port,
+        private_key: private_key,
+        username: username,
+      }),
+    },
+    '#new':: d.fn(help='\n`google.database_migration_service_connection_profile.oracle.new` constructs a new object with attributes and blocks configured for the `oracle`\nTerraform sub block.\n\n\n\n**Args**:\n  - `database_service` (`string`): Required. Database service for the Oracle connection.\n  - `host` (`string`): Required. The IP or hostname of the source Oracle database.\n  - `password` (`string`): Required. Input only. The password for the user that Database Migration Service will be using to connect to the database.\nThis field is not returned on request, and the value is encrypted when stored in Database Migration Service.\n  - `port` (`number`): Required. The network port of the source Oracle database.\n  - `username` (`string`): Required. The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.\n  - `forward_ssh_connectivity` (`list[obj]`): SSL configuration for the destination to connect to the source database. When `null`, the `forward_ssh_connectivity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.oracle.forward_ssh_connectivity.new](#fn-oracleforward_ssh_connectivitynew) constructor.\n  - `private_connectivity` (`list[obj]`): Configuration for using a private network to communicate with the source database When `null`, the `private_connectivity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.oracle.private_connectivity.new](#fn-oracleprivate_connectivitynew) constructor.\n  - `ssl` (`list[obj]`): SSL configuration for the destination to connect to the source database. When `null`, the `ssl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.oracle.ssl.new](#fn-oraclesslnew) constructor.\n  - `static_service_ip_connectivity` (`list[obj]`): This object has no nested fields.\n\nStatic IP address connectivity configured on service project. When `null`, the `static_service_ip_connectivity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.oracle.static_service_ip_connectivity.new](#fn-oraclestatic_service_ip_connectivitynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `oracle` sub block.\n', args=[]),
+    new(
+      database_service,
+      host,
+      password,
+      port,
+      username,
+      forward_ssh_connectivity=null,
+      private_connectivity=null,
+      ssl=null,
+      static_service_ip_connectivity=null
+    ):: std.prune(a={
+      database_service: database_service,
+      forward_ssh_connectivity: forward_ssh_connectivity,
+      host: host,
+      password: password,
+      port: port,
+      private_connectivity: private_connectivity,
+      ssl: ssl,
+      static_service_ip_connectivity: static_service_ip_connectivity,
+      username: username,
+    }),
+    private_connectivity:: {
+      '#new':: d.fn(help='\n`google.database_migration_service_connection_profile.oracle.private_connectivity.new` constructs a new object with attributes and blocks configured for the `private_connectivity`\nTerraform sub block.\n\n\n\n**Args**:\n  - `private_connection` (`string`): Required. The resource name (URI) of the private connection.\n\n**Returns**:\n  - An attribute object that represents the `private_connectivity` sub block.\n', args=[]),
+      new(
+        private_connection
+      ):: std.prune(a={
+        private_connection: private_connection,
+      }),
+    },
+    ssl:: {
+      '#new':: d.fn(help='\n`google.database_migration_service_connection_profile.oracle.ssl.new` constructs a new object with attributes and blocks configured for the `ssl`\nTerraform sub block.\n\n\n\n**Args**:\n  - `ca_certificate` (`string`): Required. Input only. The x509 PEM-encoded certificate of the CA that signed the source database server&#39;s certificate.\nThe replica will use this certificate to verify it&#39;s connecting to the right host.\n  - `client_certificate` (`string`): Input only. The x509 PEM-encoded certificate that will be used by the replica to authenticate against the source database server.\nIf this field is used then the &#39;clientKey&#39; field is mandatory When `null`, the `client_certificate` field will be omitted from the resulting object.\n  - `client_key` (`string`): Input only. The unencrypted PKCS#1 or PKCS#8 PEM-encoded private key associated with the Client Certificate.\nIf this field is used then the &#39;clientCertificate&#39; field is mandatory. When `null`, the `client_key` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `ssl` sub block.\n', args=[]),
+      new(
+        ca_certificate,
+        client_certificate=null,
+        client_key=null
+      ):: std.prune(a={
+        ca_certificate: ca_certificate,
+        client_certificate: client_certificate,
+        client_key: client_key,
+      }),
+    },
+    static_service_ip_connectivity:: {
+      '#new':: d.fn(help='\n`google.database_migration_service_connection_profile.oracle.static_service_ip_connectivity.new` constructs a new object with attributes and blocks configured for the `static_service_ip_connectivity`\nTerraform sub block.\n\n\n\n**Returns**:\n  - An attribute object that represents the `static_service_ip_connectivity` sub block.\n', args=[]),
+      new(
+
+      ):: std.prune(a={}),
+    },
+  },
   postgresql:: {
     '#new':: d.fn(help='\n`google.database_migration_service_connection_profile.postgresql.new` constructs a new object with attributes and blocks configured for the `postgresql`\nTerraform sub block.\n\n\n\n**Args**:\n  - `cloud_sql_id` (`string`): If the source is a Cloud SQL database, use this field to provide the Cloud SQL instance ID of the source. When `null`, the `cloud_sql_id` field will be omitted from the resulting object.\n  - `host` (`string`): Required. The IP or hostname of the source MySQL database.\n  - `password` (`string`): Required. Input only. The password for the user that Database Migration Service will be using to connect to the database.\nThis field is not returned on request, and the value is encrypted when stored in Database Migration Service.\n  - `port` (`number`): Required. The network port of the source MySQL database.\n  - `username` (`string`): Required. The username that Database Migration Service will use to connect to the database. The value is encrypted when stored in Database Migration Service.\n  - `ssl` (`list[obj]`): SSL configuration for the destination to connect to the source database. When `null`, the `ssl` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.database_migration_service_connection_profile.postgresql.ssl.new](#fn-postgresqlsslnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `postgresql` sub block.\n', args=[]),
     new(
@@ -353,6 +423,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       google_database_migration_service_connection_profile+: {
         [resourceLabel]+: {
           mysql+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  '#withOracle':: d.fn(help='`google.list[obj].withOracle` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the oracle field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [google.list[obj].withOracleMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `oracle` field.\n', args=[]),
+  withOracle(resourceLabel, value): {
+    resource+: {
+      google_database_migration_service_connection_profile+: {
+        [resourceLabel]+: {
+          oracle: value,
+        },
+      },
+    },
+  },
+  '#withOracleMixin':: d.fn(help='`google.list[obj].withOracleMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the oracle field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [google.list[obj].withOracle](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `oracle` field.\n', args=[]),
+  withOracleMixin(resourceLabel, value): {
+    resource+: {
+      google_database_migration_service_connection_profile+: {
+        [resourceLabel]+: {
+          oracle+: if std.isArray(v=value) then value else [value],
         },
       },
     },

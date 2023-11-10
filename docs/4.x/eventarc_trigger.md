@@ -76,7 +76,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `channel` (`string`): Optional. The name of the channel associated with the trigger in `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel to receive events from Eventarc SaaS partners. When `null`, the `channel` field will be omitted from the resulting object.
   - `event_data_content_type` (`string`): Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This is set to `application/json` if the value is not defined. When `null`, the `event_data_content_type` field will be omitted from the resulting object.
-  - `labels` (`obj`): Optional. User labels attached to the triggers that can be used to group resources. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Optional. User labels attached to the triggers that can be used to group resources.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Required. The resource name of the trigger. Must be unique within the location on the project.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
@@ -110,7 +113,10 @@ injecting into a complete block.
 **Args**:
   - `channel` (`string`): Optional. The name of the channel associated with the trigger in `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel to receive events from Eventarc SaaS partners. When `null`, the `channel` field will be omitted from the resulting object.
   - `event_data_content_type` (`string`): Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This is set to `application/json` if the value is not defined. When `null`, the `event_data_content_type` field will be omitted from the resulting object.
-  - `labels` (`obj`): Optional. User labels attached to the triggers that can be used to group resources. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Optional. User labels attached to the triggers that can be used to group resources.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Required. The resource name of the trigger. Must be unique within the location on the project.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.

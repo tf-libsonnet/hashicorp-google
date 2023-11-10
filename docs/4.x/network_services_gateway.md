@@ -75,7 +75,10 @@ If there is no other gateway of type &#39;SECURE_WEB_GATEWAY&#39; remaining for 
   - `gateway_security_policy` (`string`): A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections.
 For example: &#39;projects/*/locations/*/gatewaySecurityPolicies/swg-policy&#39;.
 This policy is specific to gateways of type &#39;SECURE_WEB_GATEWAY&#39;. When `null`, the `gateway_security_policy` field will be omitted from the resulting object.
-  - `labels` (`obj`): Set of label tags associated with the Gateway resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Set of label tags associated with the Gateway resource.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location of the gateway.
 The default value is &#39;global&#39;. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): Short name of the Gateway resource to be created.
@@ -131,7 +134,10 @@ If there is no other gateway of type &#39;SECURE_WEB_GATEWAY&#39; remaining for 
   - `gateway_security_policy` (`string`): A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections.
 For example: &#39;projects/*/locations/*/gatewaySecurityPolicies/swg-policy&#39;.
 This policy is specific to gateways of type &#39;SECURE_WEB_GATEWAY&#39;. When `null`, the `gateway_security_policy` field will be omitted from the resulting object.
-  - `labels` (`obj`): Set of label tags associated with the Gateway resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Set of label tags associated with the Gateway resource.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location of the gateway.
 The default value is &#39;global&#39;. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): Short name of the Gateway resource to be created.

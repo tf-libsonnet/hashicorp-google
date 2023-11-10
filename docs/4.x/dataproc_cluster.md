@@ -62,6 +62,10 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-cluster_configpreemptible_worker_confignew)
     * [`obj cluster_config.preemptible_worker_config.disk_config`](#obj-cluster_configpreemptible_worker_configdisk_config)
       * [`fn new()`](#fn-cluster_configpreemptible_worker_configdisk_confignew)
+    * [`obj cluster_config.preemptible_worker_config.instance_flexibility_policy`](#obj-cluster_configpreemptible_worker_configinstance_flexibility_policy)
+      * [`fn new()`](#fn-cluster_configpreemptible_worker_configinstance_flexibility_policynew)
+      * [`obj cluster_config.preemptible_worker_config.instance_flexibility_policy.instance_selection_list`](#obj-cluster_configpreemptible_worker_configinstance_flexibility_policyinstance_selection_list)
+        * [`fn new()`](#fn-cluster_configpreemptible_worker_configinstance_flexibility_policyinstance_selection_listnew)
   * [`obj cluster_config.security_config`](#obj-cluster_configsecurity_config)
     * [`fn new()`](#fn-cluster_configsecurity_confignew)
     * [`obj cluster_config.security_config.kerberos_config`](#obj-cluster_configsecurity_configkerberos_config)
@@ -129,7 +133,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `graceful_decommission_timeout` (`string`): The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a terraform apply When `null`, the `graceful_decommission_timeout` field will be omitted from the resulting object.
-  - `labels` (`obj`): The list of labels (key/value pairs) to be applied to instances in the cluster. GCP generates some itself including goog-dataproc-cluster-name which is the name of the cluster. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): The list of the labels (key/value pairs) configured on the resource and to be applied to instances in the cluster.
+				
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name of the cluster, unique within the project and zone.
   - `project` (`string`): The ID of the project in which the cluster will exist. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region in which the cluster and associated nodes will be created in. Defaults to global. When `null`, the `region` field will be omitted from the resulting object.
@@ -160,7 +167,10 @@ injecting into a complete block.
 
 **Args**:
   - `graceful_decommission_timeout` (`string`): The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a terraform apply When `null`, the `graceful_decommission_timeout` field will be omitted from the resulting object.
-  - `labels` (`obj`): The list of labels (key/value pairs) to be applied to instances in the cluster. GCP generates some itself including goog-dataproc-cluster-name which is the name of the cluster. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): The list of the labels (key/value pairs) configured on the resource and to be applied to instances in the cluster.
+				
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name of the cluster, unique within the project and zone.
   - `project` (`string`): The ID of the project in which the cluster will exist. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region in which the cluster and associated nodes will be created in. Defaults to global. When `null`, the `region` field will be omitted from the resulting object.
@@ -388,12 +398,12 @@ Terraform sub block.
   - `gce_cluster_config` (`list[obj]`): Common config settings for resources of Google Compute Engine cluster instances, applicable to all instances in the cluster. When `null`, the `gce_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.gce_cluster_config.new](#fn-cluster_configgce_cluster_confignew) constructor.
   - `initialization_action` (`list[obj]`): Commands to execute on each node after config is completed. You can specify multiple versions of these. When `null`, the `initialization_action` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.initialization_action.new](#fn-cluster_configinitialization_actionnew) constructor.
   - `lifecycle_config` (`list[obj]`): The settings for auto deletion cluster schedule. When `null`, the `lifecycle_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.lifecycle_config.new](#fn-cluster_configlifecycle_confignew) constructor.
-  - `master_config` (`list[obj]`): The Google Compute Engine config settings for the master/worker instances in a cluster. When `null`, the `master_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.master_config.new](#fn-cluster_configmaster_confignew) constructor.
+  - `master_config` (`list[obj]`): The Compute Engine config settings for the cluster&#39;s master instance. When `null`, the `master_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.master_config.new](#fn-cluster_configmaster_confignew) constructor.
   - `metastore_config` (`list[obj]`): Specifies a Metastore configuration. When `null`, the `metastore_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.metastore_config.new](#fn-cluster_configmetastore_confignew) constructor.
   - `preemptible_worker_config` (`list[obj]`): The Google Compute Engine config settings for the additional (aka preemptible) instances in a cluster. When `null`, the `preemptible_worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.preemptible_worker_config.new](#fn-cluster_configpreemptible_worker_confignew) constructor.
   - `security_config` (`list[obj]`): Security related configuration. When `null`, the `security_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.security_config.new](#fn-cluster_configsecurity_confignew) constructor.
   - `software_config` (`list[obj]`): The config settings for software inside the cluster. When `null`, the `software_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.software_config.new](#fn-cluster_configsoftware_confignew) constructor.
-  - `worker_config` (`list[obj]`): The Google Compute Engine config settings for the master/worker instances in a cluster. When `null`, the `worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.worker_config.new](#fn-cluster_configworker_confignew) constructor.
+  - `worker_config` (`list[obj]`): The Compute Engine config settings for the cluster&#39;s worker instances. When `null`, the `worker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.worker_config.new](#fn-cluster_configworker_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `cluster_config` sub block.
@@ -686,10 +696,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `image_uri` (`string`): The URI for the image to use for this master/worker When `null`, the `image_uri` field will be omitted from the resulting object.
-  - `machine_type` (`string`): The name of a Google Compute Engine machine type to create for the master/worker When `null`, the `machine_type` field will be omitted from the resulting object.
-  - `min_cpu_platform` (`string`): The name of a minimum generation of CPU family for the master/worker. If not specified, GCP will default to a predetermined computed value for each zone. When `null`, the `min_cpu_platform` field will be omitted from the resulting object.
-  - `num_instances` (`number`): Specifies the number of master/worker nodes to create. If not specified, GCP will default to a predetermined computed value. When `null`, the `num_instances` field will be omitted from the resulting object.
+  - `image_uri` (`string`): The URI for the image to use for this master When `null`, the `image_uri` field will be omitted from the resulting object.
+  - `machine_type` (`string`): The name of a Google Compute Engine machine type to create for the master When `null`, the `machine_type` field will be omitted from the resulting object.
+  - `min_cpu_platform` (`string`): The name of a minimum generation of CPU family for the master. If not specified, GCP will default to a predetermined computed value for each zone. When `null`, the `min_cpu_platform` field will be omitted from the resulting object.
+  - `num_instances` (`number`): Specifies the number of master nodes to create. If not specified, GCP will default to a predetermined computed value. When `null`, the `num_instances` field will be omitted from the resulting object.
   - `accelerators` (`list[obj]`): The Compute Engine accelerator (GPU) configuration for these instances. Can be specified multiple times. When `null`, the `accelerators` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.master_config.accelerators.new](#fn-cluster_configcluster_configacceleratorsnew) constructor.
   - `disk_config` (`list[obj]`): Disk Config When `null`, the `disk_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.master_config.disk_config.new](#fn-cluster_configcluster_configdisk_confignew) constructor.
 
@@ -789,6 +799,7 @@ Terraform sub block.
   - `num_instances` (`number`): Specifies the number of preemptible nodes to create. Defaults to 0. When `null`, the `num_instances` field will be omitted from the resulting object.
   - `preemptibility` (`string`): Specifies the preemptibility of the secondary nodes. Defaults to PREEMPTIBLE. When `null`, the `preemptibility` field will be omitted from the resulting object.
   - `disk_config` (`list[obj]`): Disk Config When `null`, the `disk_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.preemptible_worker_config.disk_config.new](#fn-cluster_configcluster_configdisk_confignew) constructor.
+  - `instance_flexibility_policy` (`list[obj]`): Instance flexibility Policy allowing a mixture of VM shapes and provisioning models. When `null`, the `instance_flexibility_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.preemptible_worker_config.instance_flexibility_policy.new](#fn-cluster_configcluster_configinstance_flexibility_policynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `preemptible_worker_config` sub block.
@@ -817,6 +828,53 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `disk_config` sub block.
+
+
+## obj cluster_config.preemptible_worker_config.instance_flexibility_policy
+
+
+
+### fn cluster_config.preemptible_worker_config.instance_flexibility_policy.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_cluster.cluster_config.preemptible_worker_config.instance_flexibility_policy.new` constructs a new object with attributes and blocks configured for the `instance_flexibility_policy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `instance_selection_list` (`list[obj]`): List of instance selection options that the group will use when creating new VMs. When `null`, the `instance_selection_list` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.preemptible_worker_config.instance_flexibility_policy.instance_selection_list.new](#fn-cluster_configcluster_configpreemptible_worker_configinstance_selection_listnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `instance_flexibility_policy` sub block.
+
+
+## obj cluster_config.preemptible_worker_config.instance_flexibility_policy.instance_selection_list
+
+
+
+### fn cluster_config.preemptible_worker_config.instance_flexibility_policy.instance_selection_list.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_cluster.cluster_config.preemptible_worker_config.instance_flexibility_policy.instance_selection_list.new` constructs a new object with attributes and blocks configured for the `instance_selection_list`
+Terraform sub block.
+
+
+
+**Args**:
+  - `machine_types` (`list`): Full machine-type names, e.g. &#34;n1-standard-16&#34;. When `null`, the `machine_types` field will be omitted from the resulting object.
+  - `rank` (`number`): Preference of this instance selection. Lower number means higher preference. Dataproc will first try to create a VM based on the machine-type with priority rank and fallback to next rank based on availability. Machine types and instance selections with the same priority have the same preference. When `null`, the `rank` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `instance_selection_list` sub block.
 
 
 ## obj cluster_config.security_config
@@ -927,7 +985,8 @@ Terraform sub block.
   - `image_uri` (`string`): The URI for the image to use for this master/worker When `null`, the `image_uri` field will be omitted from the resulting object.
   - `machine_type` (`string`): The name of a Google Compute Engine machine type to create for the master/worker When `null`, the `machine_type` field will be omitted from the resulting object.
   - `min_cpu_platform` (`string`): The name of a minimum generation of CPU family for the master/worker. If not specified, GCP will default to a predetermined computed value for each zone. When `null`, the `min_cpu_platform` field will be omitted from the resulting object.
-  - `num_instances` (`number`): Specifies the number of master/worker nodes to create. If not specified, GCP will default to a predetermined computed value. When `null`, the `num_instances` field will be omitted from the resulting object.
+  - `min_num_instances` (`number`): The minimum number of primary worker instances to create. When `null`, the `min_num_instances` field will be omitted from the resulting object.
+  - `num_instances` (`number`): Specifies the number of worker nodes to create. If not specified, GCP will default to a predetermined computed value. When `null`, the `num_instances` field will be omitted from the resulting object.
   - `accelerators` (`list[obj]`): The Compute Engine accelerator (GPU) configuration for these instances. Can be specified multiple times. When `null`, the `accelerators` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.worker_config.accelerators.new](#fn-cluster_configcluster_configacceleratorsnew) constructor.
   - `disk_config` (`list[obj]`): Disk Config When `null`, the `disk_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.worker_config.disk_config.new](#fn-cluster_configcluster_configdisk_confignew) constructor.
 

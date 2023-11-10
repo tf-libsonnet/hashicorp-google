@@ -55,7 +55,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `definition` (`string`): The definition of the schema.
 This should contain a string representing the full definition of the schema
-that is a valid schema definition of the type specified in type. When `null`, the `definition` field will be omitted from the resulting object.
+that is a valid schema definition of the type specified in type. Changes
+to the definition commit new [schema revisions](https://cloud.google.com/pubsub/docs/commit-schema-revision).
+A schema can only have up to 20 revisions, so updates that fail with an
+error indicating that the limit has been reached require manually
+[deleting old revisions](https://cloud.google.com/pubsub/docs/delete-schema-revision). When `null`, the `definition` field will be omitted from the resulting object.
   - `name` (`string`): The ID to use for the schema, which will become the final component of the schema&#39;s resource name.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): The type of the schema definition Default value: &#34;TYPE_UNSPECIFIED&#34; Possible values: [&#34;TYPE_UNSPECIFIED&#34;, &#34;PROTOCOL_BUFFER&#34;, &#34;AVRO&#34;] When `null`, the `type` field will be omitted from the resulting object.
@@ -85,7 +89,11 @@ injecting into a complete block.
 **Args**:
   - `definition` (`string`): The definition of the schema.
 This should contain a string representing the full definition of the schema
-that is a valid schema definition of the type specified in type. When `null`, the `definition` field will be omitted from the resulting object.
+that is a valid schema definition of the type specified in type. Changes
+to the definition commit new [schema revisions](https://cloud.google.com/pubsub/docs/commit-schema-revision).
+A schema can only have up to 20 revisions, so updates that fail with an
+error indicating that the limit has been reached require manually
+[deleting old revisions](https://cloud.google.com/pubsub/docs/delete-schema-revision). When `null`, the `definition` field will be omitted from the resulting object.
   - `name` (`string`): The ID to use for the schema, which will become the final component of the schema&#39;s resource name.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): The type of the schema definition Default value: &#34;TYPE_UNSPECIFIED&#34; Possible values: [&#34;TYPE_UNSPECIFIED&#34;, &#34;PROTOCOL_BUFFER&#34;, &#34;AVRO&#34;] When `null`, the `type` field will be omitted from the resulting object.

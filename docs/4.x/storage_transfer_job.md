@@ -16,6 +16,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withDescription()`](#fn-withdescription)
+* [`fn withEventStream()`](#fn-witheventstream)
+* [`fn withEventStreamMixin()`](#fn-witheventstreammixin)
 * [`fn withNotificationConfig()`](#fn-withnotificationconfig)
 * [`fn withNotificationConfigMixin()`](#fn-withnotificationconfigmixin)
 * [`fn withProject()`](#fn-withproject)
@@ -24,6 +26,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withStatus()`](#fn-withstatus)
 * [`fn withTransferSpec()`](#fn-withtransferspec)
 * [`fn withTransferSpecMixin()`](#fn-withtransferspecmixin)
+* [`obj event_stream`](#obj-event_stream)
+  * [`fn new()`](#fn-event_streamnew)
 * [`obj notification_config`](#obj-notification_config)
   * [`fn new()`](#fn-notification_confignew)
 * [`obj schedule`](#obj-schedule)
@@ -91,6 +95,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): Unique description to identify the Transfer Job.
   - `project` (`string`): The project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `status` (`string`): Status of the job. Default: ENABLED. NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation. When `null`, the `status` field will be omitted from the resulting object.
+  - `event_stream` (`list[obj]`): Set the `event_stream` field on the resulting resource block. When `null`, the `event_stream` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.event_stream.new](#fn-event_streamnew) constructor.
   - `notification_config` (`list[obj]`): Notification configuration. When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.notification_config.new](#fn-notification_confignew) constructor.
   - `schedule` (`list[obj]`): Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.schedule.new](#fn-schedulenew) constructor.
   - `transfer_spec` (`list[obj]`): Transfer specification. When `null`, the `transfer_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.transfer_spec.new](#fn-transfer_specnew) constructor.
@@ -120,6 +125,7 @@ injecting into a complete block.
   - `description` (`string`): Unique description to identify the Transfer Job.
   - `project` (`string`): The project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `status` (`string`): Status of the job. Default: ENABLED. NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation. When `null`, the `status` field will be omitted from the resulting object.
+  - `event_stream` (`list[obj]`): Set the `event_stream` field on the resulting object. When `null`, the `event_stream` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.event_stream.new](#fn-event_streamnew) constructor.
   - `notification_config` (`list[obj]`): Notification configuration. When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.notification_config.new](#fn-notification_confignew) constructor.
   - `schedule` (`list[obj]`): Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.schedule.new](#fn-schedulenew) constructor.
   - `transfer_spec` (`list[obj]`): Transfer specification. When `null`, the `transfer_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.transfer_spec.new](#fn-transfer_specnew) constructor.
@@ -142,6 +148,43 @@ Terraform resource block to set or update the description field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `description` field.
+
+
+### fn withEventStream
+
+```ts
+withEventStream()
+```
+
+`google.list[obj].withEventStream` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the event_stream field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withEventStreamMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `event_stream` field.
+
+
+### fn withEventStreamMixin
+
+```ts
+withEventStreamMixin()
+```
+
+`google.list[obj].withEventStreamMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the event_stream field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withEventStream](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `event_stream` field.
 
 
 ### fn withNotificationConfig
@@ -285,6 +328,31 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `transfer_spec` field.
+
+
+## obj event_stream
+
+
+
+### fn event_stream.new
+
+```ts
+new()
+```
+
+
+`google.storage_transfer_job.event_stream.new` constructs a new object with attributes and blocks configured for the `event_stream`
+Terraform sub block.
+
+
+
+**Args**:
+  - `event_stream_expiration_time` (`string`): Specifies the data and time at which Storage Transfer Service stops listening for events from this stream. After this time, any transfers in progress will complete, but no new transfers are initiated When `null`, the `event_stream_expiration_time` field will be omitted from the resulting object.
+  - `event_stream_start_time` (`string`): Specifies the date and time that Storage Transfer Service starts listening for events from this stream. If no start time is specified or start time is in the past, Storage Transfer Service starts listening immediately When `null`, the `event_stream_start_time` field will be omitted from the resulting object.
+  - `name` (`string`): Specifies a unique name of the resource such as AWS SQS ARN in the form &#39;arn:aws:sqs:region:account_id:queue_name&#39;, or Pub/Sub subscription resource name in the form &#39;projects/{project}/subscriptions/{sub}&#39;
+
+**Returns**:
+  - An attribute object that represents the `event_stream` sub block.
 
 
 ## obj notification_config

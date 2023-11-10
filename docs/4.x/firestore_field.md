@@ -72,7 +72,7 @@ Creating an index configuration for this field will override any inherited confi
 indexes specified. Configuring the index configuration with an empty block disables all indexes on
 the field. When `null`, the `index_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_field.index_config.new](#fn-index_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_field.timeouts.new](#fn-timeoutsnew) constructor.
-  - `ttl_config` (`list[obj]`): If set, this field is configured for TTL deletion. When `null`, the `ttl_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_field.ttl_config.new](#fn-ttl_confignew) constructor.
+  - `ttl_config` (`list[obj]`): The TTL configuration for this Field. If set to an empty block (i.e. &#39;ttl_config {}&#39;), a TTL policy is configured based on the field. If unset, a TTL policy is not configured (or will be disabled upon updating the resource). When `null`, the `ttl_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_field.ttl_config.new](#fn-ttl_confignew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -105,7 +105,7 @@ Creating an index configuration for this field will override any inherited confi
 indexes specified. Configuring the index configuration with an empty block disables all indexes on
 the field. When `null`, the `index_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_field.index_config.new](#fn-index_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_field.timeouts.new](#fn-timeoutsnew) constructor.
-  - `ttl_config` (`list[obj]`): If set, this field is configured for TTL deletion. When `null`, the `ttl_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_field.ttl_config.new](#fn-ttl_confignew) constructor.
+  - `ttl_config` (`list[obj]`): The TTL configuration for this Field. If set to an empty block (i.e. &#39;ttl_config {}&#39;), a TTL policy is configured based on the field. If unset, a TTL policy is not configured (or will be disabled upon updating the resource). When `null`, the `ttl_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.firestore_field.ttl_config.new](#fn-ttl_confignew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `firestore_field` resource into the root Terraform configuration.

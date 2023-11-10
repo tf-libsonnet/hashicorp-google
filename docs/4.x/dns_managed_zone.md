@@ -89,7 +89,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): A textual description field. Defaults to &#39;Managed by Terraform&#39;. When `null`, the `description` field will be omitted from the resulting object.
   - `dns_name` (`string`): The DNS name of this managed zone, for instance &#34;example.com.&#34;.
   - `force_destroy` (`bool`): Set this true to delete all records in the zone. When `null`, the `force_destroy` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to this ManagedZone. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to this ManagedZone.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): User assigned name for this resource.
 Must be unique within the project.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -131,7 +135,11 @@ injecting into a complete block.
   - `description` (`string`): A textual description field. Defaults to &#39;Managed by Terraform&#39;. When `null`, the `description` field will be omitted from the resulting object.
   - `dns_name` (`string`): The DNS name of this managed zone, for instance &#34;example.com.&#34;.
   - `force_destroy` (`bool`): Set this true to delete all records in the zone. When `null`, the `force_destroy` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to this ManagedZone. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to this ManagedZone.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): User assigned name for this resource.
 Must be unique within the project.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.

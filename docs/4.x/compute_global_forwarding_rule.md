@@ -122,7 +122,11 @@ The valid IP protocols are different for different load balancing products
 as described in [Load balancing
 features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends). Possible values: [&#34;TCP&#34;, &#34;UDP&#34;, &#34;ESP&#34;, &#34;AH&#34;, &#34;SCTP&#34;, &#34;ICMP&#34;] When `null`, the `ip_protocol` field will be omitted from the resulting object.
   - `ip_version` (`string`): The IP Version that will be used by this global forwarding rule. Possible values: [&#34;IPV4&#34;, &#34;IPV6&#34;] When `null`, the `ip_version` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels to apply to this forwarding rule.  A list of key-&gt;value pairs. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `load_balancing_scheme` (`string`): Specifies the forwarding rule type.
 
 For more information about forwarding rules, refer to
@@ -151,24 +155,26 @@ be used.
 For Private Service Connect forwarding rules that forward traffic to Google
 APIs, a network must be provided. When `null`, the `network` field will be omitted from the resulting object.
   - `no_automate_dns_zone` (`bool`): This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field. When `null`, the `no_automate_dns_zone` field will be omitted from the resulting object.
-  - `port_range` (`string`): This field can only be used:
-
-* If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
-* By backend service-based network load balancers, target pool-based
-network load balancers, internal proxy load balancers, external proxy load
-balancers, Traffic Director, external protocol forwarding, and Classic VPN.
-Some products have restrictions on what ports can be used. See
+  - `port_range` (`string`): The &#39;portRange&#39; field has the following limitations:
+* It requires that the forwarding rule &#39;IPProtocol&#39; be TCP, UDP, or SCTP,
+and
+* It&#39;s applicable only to the following products: external passthrough
+Network Load Balancers, internal and external proxy Network Load
+Balancers, internal and external Application Load Balancers, external
+protocol forwarding, and Classic VPN.
+* Some products have restrictions on what ports can be used. See
 [port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)
 for details.
 
+For external forwarding rules, two or more forwarding rules cannot use the
+same &#39;[IPAddress, IPProtocol]&#39; pair, and cannot have overlapping
+&#39;portRange&#39;s.
 
-* TargetHttpProxy: 80, 8080
-* TargetHttpsProxy: 443
-* TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-                  1883, 5222
-* TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-                  1883, 5222
-* TargetVpnGateway: 500, 4500 When `null`, the `port_range` field will be omitted from the resulting object.
+For internal forwarding rules within the same VPC network, two or more
+forwarding rules cannot use the same &#39;[IPAddress, IPProtocol]&#39; pair, and
+cannot have overlapping &#39;portRange&#39;s.
+
+@pattern: \d&#43;(?:-\d&#43;)? When `null`, the `port_range` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `source_ip_ranges` (`list`): If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each sourceIpRange entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24). When `null`, the `source_ip_ranges` field will be omitted from the resulting object.
   - `subnetwork` (`string`): This field identifies the subnetwork that the load balanced IP should
@@ -285,7 +291,11 @@ The valid IP protocols are different for different load balancing products
 as described in [Load balancing
 features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends). Possible values: [&#34;TCP&#34;, &#34;UDP&#34;, &#34;ESP&#34;, &#34;AH&#34;, &#34;SCTP&#34;, &#34;ICMP&#34;] When `null`, the `ip_protocol` field will be omitted from the resulting object.
   - `ip_version` (`string`): The IP Version that will be used by this global forwarding rule. Possible values: [&#34;IPV4&#34;, &#34;IPV6&#34;] When `null`, the `ip_version` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels to apply to this forwarding rule.  A list of key-&gt;value pairs. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `load_balancing_scheme` (`string`): Specifies the forwarding rule type.
 
 For more information about forwarding rules, refer to
@@ -314,24 +324,26 @@ be used.
 For Private Service Connect forwarding rules that forward traffic to Google
 APIs, a network must be provided. When `null`, the `network` field will be omitted from the resulting object.
   - `no_automate_dns_zone` (`bool`): This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field. When `null`, the `no_automate_dns_zone` field will be omitted from the resulting object.
-  - `port_range` (`string`): This field can only be used:
-
-* If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
-* By backend service-based network load balancers, target pool-based
-network load balancers, internal proxy load balancers, external proxy load
-balancers, Traffic Director, external protocol forwarding, and Classic VPN.
-Some products have restrictions on what ports can be used. See
+  - `port_range` (`string`): The &#39;portRange&#39; field has the following limitations:
+* It requires that the forwarding rule &#39;IPProtocol&#39; be TCP, UDP, or SCTP,
+and
+* It&#39;s applicable only to the following products: external passthrough
+Network Load Balancers, internal and external proxy Network Load
+Balancers, internal and external Application Load Balancers, external
+protocol forwarding, and Classic VPN.
+* Some products have restrictions on what ports can be used. See
 [port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)
 for details.
 
+For external forwarding rules, two or more forwarding rules cannot use the
+same &#39;[IPAddress, IPProtocol]&#39; pair, and cannot have overlapping
+&#39;portRange&#39;s.
 
-* TargetHttpProxy: 80, 8080
-* TargetHttpsProxy: 443
-* TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-                  1883, 5222
-* TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-                  1883, 5222
-* TargetVpnGateway: 500, 4500 When `null`, the `port_range` field will be omitted from the resulting object.
+For internal forwarding rules within the same VPC network, two or more
+forwarding rules cannot use the same &#39;[IPAddress, IPProtocol]&#39; pair, and
+cannot have overlapping &#39;portRange&#39;s.
+
+@pattern: \d&#43;(?:-\d&#43;)? When `null`, the `port_range` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `source_ip_ranges` (`list`): If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each sourceIpRange entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24). When `null`, the `source_ip_ranges` field will be omitted from the resulting object.
   - `subnetwork` (`string`): This field identifies the subnetwork that the load balanced IP should

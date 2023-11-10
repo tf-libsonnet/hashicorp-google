@@ -128,7 +128,11 @@ destroying the resource will fail if tables are present. When `null`, the `delet
 By default, this is FALSE, which means the dataset and its table names are
 case-sensitive. This field does not affect routine references. When `null`, the `is_case_insensitive` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels associated with this dataset. You can use these to
-organize and group your datasets When `null`, the `labels` field will be omitted from the resulting object.
+organize and group your datasets.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
@@ -226,7 +230,11 @@ destroying the resource will fail if tables are present. When `null`, the `delet
 By default, this is FALSE, which means the dataset and its table names are
 case-sensitive. This field does not affect routine references. When `null`, the `is_case_insensitive` field will be omitted from the resulting object.
   - `labels` (`obj`): The labels associated with this dataset. You can use these to
-organize and group your datasets When `null`, the `labels` field will be omitted from the resulting object.
+organize and group your datasets.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The geographic location where the dataset should reside.
 See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
 
@@ -594,6 +602,8 @@ Terraform sub block.
   - `domain` (`string`): A domain to grant access to. Any users signed in with the
 domain specified will be granted the specified access When `null`, the `domain` field will be omitted from the resulting object.
   - `group_by_email` (`string`): An email address of a Google Group to grant access to. When `null`, the `group_by_email` field will be omitted from the resulting object.
+  - `iam_member` (`string`): Some other type of member that appears in the IAM Policy but isn&#39;t a user,
+group, domain, or special group. For example: &#39;allUsers&#39; When `null`, the `iam_member` field will be omitted from the resulting object.
   - `role` (`string`): Describes the rights granted to the user specified by the other
 member of the access object. Basic, predefined, and custom roles
 are supported. Predefined roles that have equivalent basic roles

@@ -24,6 +24,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj egress_from`](#obj-egress_from)
   * [`fn new()`](#fn-egress_fromnew)
+  * [`obj egress_from.sources`](#obj-egress_fromsources)
+    * [`fn new()`](#fn-egress_fromsourcesnew)
 * [`obj egress_to`](#obj-egress_to)
   * [`fn new()`](#fn-egress_tonew)
   * [`obj egress_to.operations`](#obj-egress_tooperations)
@@ -249,9 +251,34 @@ represent individual user or service account only. When `null`, the `identities`
   - `identity_type` (`string`): Specifies the type of identities that are allowed access to outside the
 perimeter. If left unspecified, then members of &#39;identities&#39; field will
 be allowed access. Possible values: [&#34;ANY_IDENTITY&#34;, &#34;ANY_USER_ACCOUNT&#34;, &#34;ANY_SERVICE_ACCOUNT&#34;] When `null`, the `identity_type` field will be omitted from the resulting object.
+  - `source_restriction` (`string`): Whether to enforce traffic restrictions based on &#39;sources&#39; field. If the &#39;sources&#39; field is non-empty, then this field must be set to &#39;SOURCE_RESTRICTION_ENABLED&#39;. Possible values: [&#34;SOURCE_RESTRICTION_UNSPECIFIED&#34;, &#34;SOURCE_RESTRICTION_ENABLED&#34;, &#34;SOURCE_RESTRICTION_DISABLED&#34;] When `null`, the `source_restriction` field will be omitted from the resulting object.
+  - `sources` (`list[obj]`): Sources that this EgressPolicy authorizes access from. When `null`, the `sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter_egress_policy.egress_from.sources.new](#fn-egress_fromsourcesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `egress_from` sub block.
+
+
+## obj egress_from.sources
+
+
+
+### fn egress_from.sources.new
+
+```ts
+new()
+```
+
+
+`google.access_context_manager_service_perimeter_egress_policy.egress_from.sources.new` constructs a new object with attributes and blocks configured for the `sources`
+Terraform sub block.
+
+
+
+**Args**:
+  - `access_level` (`string`): An AccessLevel resource name that allows resources outside the ServicePerimeter to be accessed from the inside. When `null`, the `access_level` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `sources` sub block.
 
 
 ## obj egress_to

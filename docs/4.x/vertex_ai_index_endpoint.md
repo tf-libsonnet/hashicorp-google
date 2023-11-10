@@ -58,7 +58,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): The description of the Index. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): The display name of the Index. The name can be up to 128 characters long and can consist of any UTF-8 characters.
-  - `labels` (`obj`): The labels with user-defined metadata to organize your Indexes. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): The labels with user-defined metadata to organize your Indexes.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `network` (`string`): The full name of the Google Compute Engine [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks) to which the index endpoint should be peered.
 Private services access must already be configured for the network. If left unspecified, the index endpoint is not peered with any network.
 [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert): &#39;projects/{project}/global/networks/{network}&#39;.
@@ -92,7 +95,10 @@ injecting into a complete block.
 **Args**:
   - `description` (`string`): The description of the Index. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): The display name of the Index. The name can be up to 128 characters long and can consist of any UTF-8 characters.
-  - `labels` (`obj`): The labels with user-defined metadata to organize your Indexes. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): The labels with user-defined metadata to organize your Indexes.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `network` (`string`): The full name of the Google Compute Engine [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks) to which the index endpoint should be peered.
 Private services access must already be configured for the network. If left unspecified, the index endpoint is not peered with any network.
 [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert): &#39;projects/{project}/global/networks/{network}&#39;.

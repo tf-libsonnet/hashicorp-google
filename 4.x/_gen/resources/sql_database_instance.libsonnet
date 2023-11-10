@@ -3,16 +3,18 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='sql_database_instance', url='', help='`sql_database_instance` represents the `google_sql_database_instance` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   clone:: {
-    '#new':: d.fn(help='\n`google.sql_database_instance.clone.new` constructs a new object with attributes and blocks configured for the `clone`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allocated_ip_range` (`string`): The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the cloned instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?. When `null`, the `allocated_ip_range` field will be omitted from the resulting object.\n  - `database_names` (`list`): (SQL Server only, use with point_in_time) clone only the specified databases from the source instance. Clone all databases if empty. When `null`, the `database_names` field will be omitted from the resulting object.\n  - `point_in_time` (`string`): The timestamp of the point in time that should be restored. When `null`, the `point_in_time` field will be omitted from the resulting object.\n  - `source_instance_name` (`string`): The name of the instance from which the point in time should be restored.\n\n**Returns**:\n  - An attribute object that represents the `clone` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.sql_database_instance.clone.new` constructs a new object with attributes and blocks configured for the `clone`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allocated_ip_range` (`string`): The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the cloned instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?. When `null`, the `allocated_ip_range` field will be omitted from the resulting object.\n  - `database_names` (`list`): (SQL Server only, use with point_in_time) clone only the specified databases from the source instance. Clone all databases if empty. When `null`, the `database_names` field will be omitted from the resulting object.\n  - `point_in_time` (`string`): The timestamp of the point in time that should be restored. When `null`, the `point_in_time` field will be omitted from the resulting object.\n  - `preferred_zone` (`string`): (Point-in-time recovery for PostgreSQL only) Clone to an instance in the specified zone. If no zone is specified, clone to the same zone as the source instance. When `null`, the `preferred_zone` field will be omitted from the resulting object.\n  - `source_instance_name` (`string`): The name of the instance from which the point in time should be restored.\n\n**Returns**:\n  - An attribute object that represents the `clone` sub block.\n', args=[]),
     new(
       source_instance_name,
       allocated_ip_range=null,
       database_names=null,
-      point_in_time=null
+      point_in_time=null,
+      preferred_zone=null
     ):: std.prune(a={
       allocated_ip_range: allocated_ip_range,
       database_names: database_names,
       point_in_time: point_in_time,
+      preferred_zone: preferred_zone,
       source_instance_name: source_instance_name,
     }),
   },

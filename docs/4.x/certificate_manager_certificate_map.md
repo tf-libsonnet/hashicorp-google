@@ -54,7 +54,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): A human-readable description of the resource. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): Set of labels associated with a Certificate Map resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Set of labels associated with a Certificate Map resource.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): A user-defined name of the Certificate Map. Certificate Map names must be unique
 globally and match the pattern &#39;projects/*/locations/*/certificateMaps/*&#39;.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -83,7 +87,11 @@ injecting into a complete block.
 
 **Args**:
   - `description` (`string`): A human-readable description of the resource. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): Set of labels associated with a Certificate Map resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Set of labels associated with a Certificate Map resource.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): A user-defined name of the Certificate Map. Certificate Map names must be unique
 globally and match the pattern &#39;projects/*/locations/*/certificateMaps/*&#39;.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.

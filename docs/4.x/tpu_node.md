@@ -74,7 +74,10 @@ currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user&#39;s provided network, or the provided network
 is peered with another network that is using that CIDR block. When `null`, the `cidr_block` field will be omitted from the resulting object.
   - `description` (`string`): The user-supplied description of the TPU. Maximum of 512 characters. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user provided metadata.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The immutable name of the TPU.
   - `network` (`string`): The name of a network to peer the TPU node to. It must be a
 preexisting Compute Engine network inside of the project on which
@@ -123,7 +126,10 @@ currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user&#39;s provided network, or the provided network
 is peered with another network that is using that CIDR block. When `null`, the `cidr_block` field will be omitted from the resulting object.
   - `description` (`string`): The user-supplied description of the TPU. Maximum of 512 characters. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user provided metadata.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The immutable name of the TPU.
   - `network` (`string`): The name of a network to peer the TPU node to. It must be a
 preexisting Compute Engine network inside of the project on which

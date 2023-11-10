@@ -76,7 +76,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `annotations` (`obj`): Allows clients to store small amounts of arbitrary data. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): Allows clients to store small amounts of arbitrary data.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `disabled` (`bool`): If disabled is set to true, functionality is disabled for this connection. Repository based API methods and webhooks processing for repositories in this connection will be disabled. When `null`, the `disabled` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Immutable. The resource name of the connection, in the format `projects/{project}/locations/{location}/connections/{connection_id}`.
@@ -108,7 +111,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `annotations` (`obj`): Allows clients to store small amounts of arbitrary data. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): Allows clients to store small amounts of arbitrary data.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `disabled` (`bool`): If disabled is set to true, functionality is disabled for this connection. Repository based API methods and webhooks processing for repositories in this connection will be disabled. When `null`, the `disabled` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Immutable. The resource name of the connection, in the format `projects/{project}/locations/{location}/connections/{connection_id}`.

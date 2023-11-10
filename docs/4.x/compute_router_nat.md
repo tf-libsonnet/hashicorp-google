@@ -89,8 +89,8 @@ If maxPortsPerVm is set, maxPortsPerVm must be set to a power of two greater tha
 If maxPortsPerVm is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
 
 Mutually exclusive with enableEndpointIndependentMapping. When `null`, the `enable_dynamic_port_allocation` field will be omitted from the resulting object.
-  - `enable_endpoint_independent_mapping` (`bool`): Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
-see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs). When `null`, the `enable_endpoint_independent_mapping` field will be omitted from the resulting object.
+  - `enable_endpoint_independent_mapping` (`bool`): Enable endpoint independent mapping.
+For more information see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs). When `null`, the `enable_endpoint_independent_mapping` field will be omitted from the resulting object.
   - `icmp_idle_timeout_sec` (`number`): Timeout (in seconds) for ICMP connections. Defaults to 30s if not set. When `null`, the `icmp_idle_timeout_sec` field will be omitted from the resulting object.
   - `max_ports_per_vm` (`number`): Maximum number of ports allocated to a VM from this NAT.
 This field can only be set when enableDynamicPortAllocation is enabled. When `null`, the `max_ports_per_vm` field will be omitted from the resulting object.
@@ -99,7 +99,7 @@ This field can only be set when enableDynamicPortAllocation is enabled. When `nu
 comply with RFC1035.
   - `nat_ip_allocate_option` (`string`): How external IPs should be allocated for this NAT. Valid values are
 &#39;AUTO_ONLY&#39; for only allowing NAT IPs allocated by Google Cloud
-Platform, or &#39;MANUAL_ONLY&#39; for only user-allocated NAT IP addresses. Possible values: [&#34;MANUAL_ONLY&#34;, &#34;AUTO_ONLY&#34;]
+Platform, or &#39;MANUAL_ONLY&#39; for only user-allocated NAT IP addresses. Possible values: [&#34;MANUAL_ONLY&#34;, &#34;AUTO_ONLY&#34;] When `null`, the `nat_ip_allocate_option` field will be omitted from the resulting object.
   - `nat_ips` (`list`): Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY. When `null`, the `nat_ips` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -159,8 +159,8 @@ If maxPortsPerVm is set, maxPortsPerVm must be set to a power of two greater tha
 If maxPortsPerVm is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
 
 Mutually exclusive with enableEndpointIndependentMapping. When `null`, the `enable_dynamic_port_allocation` field will be omitted from the resulting object.
-  - `enable_endpoint_independent_mapping` (`bool`): Specifies if endpoint independent mapping is enabled. This is enabled by default. For more information
-see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs). When `null`, the `enable_endpoint_independent_mapping` field will be omitted from the resulting object.
+  - `enable_endpoint_independent_mapping` (`bool`): Enable endpoint independent mapping.
+For more information see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs). When `null`, the `enable_endpoint_independent_mapping` field will be omitted from the resulting object.
   - `icmp_idle_timeout_sec` (`number`): Timeout (in seconds) for ICMP connections. Defaults to 30s if not set. When `null`, the `icmp_idle_timeout_sec` field will be omitted from the resulting object.
   - `max_ports_per_vm` (`number`): Maximum number of ports allocated to a VM from this NAT.
 This field can only be set when enableDynamicPortAllocation is enabled. When `null`, the `max_ports_per_vm` field will be omitted from the resulting object.
@@ -169,7 +169,7 @@ This field can only be set when enableDynamicPortAllocation is enabled. When `nu
 comply with RFC1035.
   - `nat_ip_allocate_option` (`string`): How external IPs should be allocated for this NAT. Valid values are
 &#39;AUTO_ONLY&#39; for only allowing NAT IPs allocated by Google Cloud
-Platform, or &#39;MANUAL_ONLY&#39; for only user-allocated NAT IP addresses. Possible values: [&#34;MANUAL_ONLY&#34;, &#34;AUTO_ONLY&#34;]
+Platform, or &#39;MANUAL_ONLY&#39; for only user-allocated NAT IP addresses. Possible values: [&#34;MANUAL_ONLY&#34;, &#34;AUTO_ONLY&#34;] When `null`, the `nat_ip_allocate_option` field will be omitted from the resulting object.
   - `nat_ips` (`list`): Self-links of NAT IPs. Only valid if natIpAllocateOption
 is set to MANUAL_ONLY. When `null`, the `nat_ips` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.

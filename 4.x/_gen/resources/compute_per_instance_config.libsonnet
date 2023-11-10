@@ -68,12 +68,56 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         source: source,
       }),
     },
-    '#new':: d.fn(help='\n`google.compute_per_instance_config.preserved_state.new` constructs a new object with attributes and blocks configured for the `preserved_state`\nTerraform sub block.\n\n\n\n**Args**:\n  - `metadata` (`obj`): Preserved metadata defined for this instance. This is a list of key-&gt;value pairs. When `null`, the `metadata` field will be omitted from the resulting object.\n  - `disk` (`list[obj]`): Stateful disks for the instance. When `null`, the `disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.disk.new](#fn-preserved_statedisknew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `preserved_state` sub block.\n', args=[]),
+    external_ip:: {
+      ip_address:: {
+        '#new':: d.fn(help='\n`google.compute_per_instance_config.preserved_state.external_ip.ip_address.new` constructs a new object with attributes and blocks configured for the `ip_address`\nTerraform sub block.\n\n\n\n**Args**:\n  - `address` (`string`): The URL of the reservation for this IP address. When `null`, the `address` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `ip_address` sub block.\n', args=[]),
+        new(
+          address=null
+        ):: std.prune(a={
+          address: address,
+        }),
+      },
+      '#new':: d.fn(help='\n`google.compute_per_instance_config.preserved_state.external_ip.new` constructs a new object with attributes and blocks configured for the `external_ip`\nTerraform sub block.\n\n\n\n**Args**:\n  - `auto_delete` (`string`): These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: &#34;NEVER&#34; Possible values: [&#34;NEVER&#34;, &#34;ON_PERMANENT_INSTANCE_DELETION&#34;] When `null`, the `auto_delete` field will be omitted from the resulting object.\n  - `interface_name` (`string`): Set the `interface_name` field on the resulting object.\n  - `ip_address` (`list[obj]`): Ip address representation When `null`, the `ip_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.external_ip.ip_address.new](#fn-preserved_statepreserved_stateip_addressnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `external_ip` sub block.\n', args=[]),
+      new(
+        interface_name,
+        auto_delete=null,
+        ip_address=null
+      ):: std.prune(a={
+        auto_delete: auto_delete,
+        interface_name: interface_name,
+        ip_address: ip_address,
+      }),
+    },
+    internal_ip:: {
+      ip_address:: {
+        '#new':: d.fn(help='\n`google.compute_per_instance_config.preserved_state.internal_ip.ip_address.new` constructs a new object with attributes and blocks configured for the `ip_address`\nTerraform sub block.\n\n\n\n**Args**:\n  - `address` (`string`): The URL of the reservation for this IP address. When `null`, the `address` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `ip_address` sub block.\n', args=[]),
+        new(
+          address=null
+        ):: std.prune(a={
+          address: address,
+        }),
+      },
+      '#new':: d.fn(help='\n`google.compute_per_instance_config.preserved_state.internal_ip.new` constructs a new object with attributes and blocks configured for the `internal_ip`\nTerraform sub block.\n\n\n\n**Args**:\n  - `auto_delete` (`string`): These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: &#34;NEVER&#34; Possible values: [&#34;NEVER&#34;, &#34;ON_PERMANENT_INSTANCE_DELETION&#34;] When `null`, the `auto_delete` field will be omitted from the resulting object.\n  - `interface_name` (`string`): Set the `interface_name` field on the resulting object.\n  - `ip_address` (`list[obj]`): Ip address representation When `null`, the `ip_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.internal_ip.ip_address.new](#fn-preserved_statepreserved_stateip_addressnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `internal_ip` sub block.\n', args=[]),
+      new(
+        interface_name,
+        auto_delete=null,
+        ip_address=null
+      ):: std.prune(a={
+        auto_delete: auto_delete,
+        interface_name: interface_name,
+        ip_address: ip_address,
+      }),
+    },
+    '#new':: d.fn(help='\n`google.compute_per_instance_config.preserved_state.new` constructs a new object with attributes and blocks configured for the `preserved_state`\nTerraform sub block.\n\n\n\n**Args**:\n  - `metadata` (`obj`): Preserved metadata defined for this instance. This is a list of key-&gt;value pairs. When `null`, the `metadata` field will be omitted from the resulting object.\n  - `disk` (`list[obj]`): Stateful disks for the instance. When `null`, the `disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.disk.new](#fn-preserved_statedisknew) constructor.\n  - `external_ip` (`list[obj]`): Preserved external IPs defined for this instance. This map is keyed with the name of the network interface. When `null`, the `external_ip` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.external_ip.new](#fn-preserved_stateexternal_ipnew) constructor.\n  - `internal_ip` (`list[obj]`): Preserved internal IPs defined for this instance. This map is keyed with the name of the network interface. When `null`, the `internal_ip` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.internal_ip.new](#fn-preserved_stateinternal_ipnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `preserved_state` sub block.\n', args=[]),
     new(
       disk=null,
+      external_ip=null,
+      internal_ip=null,
       metadata=null
     ):: std.prune(a={
       disk: disk,
+      external_ip: external_ip,
+      internal_ip: internal_ip,
       metadata: metadata,
     }),
   },

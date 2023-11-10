@@ -62,7 +62,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): A human-readable description of the resource. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): Set of label tags associated with the EdgeCache resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Set of label tags associated with the EdgeCache resource.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
@@ -103,7 +106,10 @@ injecting into a complete block.
 
 **Args**:
   - `description` (`string`): A human-readable description of the resource. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): Set of label tags associated with the EdgeCache resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Set of label tags associated with the EdgeCache resource.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.

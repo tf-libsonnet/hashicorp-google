@@ -58,7 +58,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `domain` (`string`): A domain which is being authorized. A DnsAuthorization resource covers a
 single domain and its wildcard, e.g. authorization for &#34;example.com&#34; can
 be used to issue certificates for &#34;example.com&#34; and &#34;*.example.com&#34;.
-  - `labels` (`obj`): Set of label tags associated with the DNS Authorization resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Set of label tags associated with the DNS Authorization resource.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
@@ -91,7 +94,10 @@ injecting into a complete block.
   - `domain` (`string`): A domain which is being authorized. A DnsAuthorization resource covers a
 single domain and its wildcard, e.g. authorization for &#34;example.com&#34; can
 be used to issue certificates for &#34;example.com&#34; and &#34;*.example.com&#34;.
-  - `labels` (`obj`): Set of label tags associated with the DNS Authorization resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Set of label tags associated with the DNS Authorization resource.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.

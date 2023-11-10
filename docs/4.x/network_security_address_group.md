@@ -61,7 +61,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): Free-text description of the resource. When `null`, the `description` field will be omitted from the resulting object.
   - `items` (`list`): List of items. When `null`, the `items` field will be omitted from the resulting object.
   - `labels` (`obj`): Set of label tags associated with the AddressGroup resource.
-An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location of the gateway security policy.
 The default value is &#39;global&#39;.
   - `name` (`string`): Name of the AddressGroup resource.
@@ -95,7 +99,11 @@ injecting into a complete block.
   - `description` (`string`): Free-text description of the resource. When `null`, the `description` field will be omitted from the resulting object.
   - `items` (`list`): List of items. When `null`, the `items` field will be omitted from the resulting object.
   - `labels` (`obj`): Set of label tags associated with the AddressGroup resource.
-An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location of the gateway security policy.
 The default value is &#39;global&#39;.
   - `name` (`string`): Name of the AddressGroup resource.

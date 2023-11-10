@@ -62,7 +62,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `annotations` (`obj`): User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `display_name` (`string`): A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters. When `null`, the `display_name` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): User-defined name of the `WorkerPool`.
@@ -93,7 +96,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `annotations` (`obj`): User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): User specified annotations. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `display_name` (`string`): A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters. When `null`, the `display_name` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): User-defined name of the `WorkerPool`.

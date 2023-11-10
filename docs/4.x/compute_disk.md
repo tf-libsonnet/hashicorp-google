@@ -94,7 +94,11 @@ images names must include the family name. If they don&#39;t, use the
 [google_compute_image data source](/docs/providers/google/d/compute_image.html).
 For instance, the image &#39;centos-6-v20180104&#39; includes its family name &#39;centos-6&#39;.
 These images can be referred by family name here. When `null`, the `image` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels to apply to this disk.  A list of key-&gt;value pairs. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this disk.  A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `licenses` (`list`): Any applicable license URI. When `null`, the `licenses` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -204,7 +208,11 @@ images names must include the family name. If they don&#39;t, use the
 [google_compute_image data source](/docs/providers/google/d/compute_image.html).
 For instance, the image &#39;centos-6-v20180104&#39; includes its family name &#39;centos-6&#39;.
 These images can be referred by family name here. When `null`, the `image` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels to apply to this disk.  A list of key-&gt;value pairs. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this disk.  A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `licenses` (`list`): Any applicable license URI. When `null`, the `licenses` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with

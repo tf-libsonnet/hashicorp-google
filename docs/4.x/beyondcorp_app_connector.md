@@ -61,7 +61,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `display_name` (`string`): An arbitrary user-provided name for the AppConnector. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): ID of the AppConnector.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the AppConnector. When `null`, the `region` field will be omitted from the resulting object.
@@ -91,7 +95,11 @@ injecting into a complete block.
 
 **Args**:
   - `display_name` (`string`): An arbitrary user-provided name for the AppConnector. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): ID of the AppConnector.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the AppConnector. When `null`, the `region` field will be omitted from the resulting object.

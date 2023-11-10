@@ -33,6 +33,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-specegress_policiesnew)
     * [`obj spec.egress_policies.egress_from`](#obj-specegress_policiesegress_from)
       * [`fn new()`](#fn-specegress_policiesegress_fromnew)
+      * [`obj spec.egress_policies.egress_from.sources`](#obj-specegress_policiesegress_fromsources)
+        * [`fn new()`](#fn-specegress_policiesegress_fromsourcesnew)
     * [`obj spec.egress_policies.egress_to`](#obj-specegress_policiesegress_to)
       * [`fn new()`](#fn-specegress_policiesegress_tonew)
       * [`obj spec.egress_policies.egress_to.operations`](#obj-specegress_policiesegress_tooperations)
@@ -59,6 +61,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-statusegress_policiesnew)
     * [`obj status.egress_policies.egress_from`](#obj-statusegress_policiesegress_from)
       * [`fn new()`](#fn-statusegress_policiesegress_fromnew)
+      * [`obj status.egress_policies.egress_from.sources`](#obj-statusegress_policiesegress_fromsources)
+        * [`fn new()`](#fn-statusegress_policiesegress_fromsourcesnew)
     * [`obj status.egress_policies.egress_to`](#obj-statusegress_policiesegress_to)
       * [`fn new()`](#fn-statusegress_policiesegress_tonew)
       * [`obj status.egress_policies.egress_to.operations`](#obj-statusegress_policiesegress_tooperations)
@@ -525,9 +529,34 @@ represent individual user or service account only. When `null`, the `identities`
   - `identity_type` (`string`): Specifies the type of identities that are allowed access to outside the
 perimeter. If left unspecified, then members of &#39;identities&#39; field will
 be allowed access. Possible values: [&#34;IDENTITY_TYPE_UNSPECIFIED&#34;, &#34;ANY_IDENTITY&#34;, &#34;ANY_USER_ACCOUNT&#34;, &#34;ANY_SERVICE_ACCOUNT&#34;] When `null`, the `identity_type` field will be omitted from the resulting object.
+  - `source_restriction` (`string`): Whether to enforce traffic restrictions based on &#39;sources&#39; field. If the &#39;sources&#39; field is non-empty, then this field must be set to &#39;SOURCE_RESTRICTION_ENABLED&#39;. Possible values: [&#34;SOURCE_RESTRICTION_UNSPECIFIED&#34;, &#34;SOURCE_RESTRICTION_ENABLED&#34;, &#34;SOURCE_RESTRICTION_DISABLED&#34;] When `null`, the `source_restriction` field will be omitted from the resulting object.
+  - `sources` (`list[obj]`): Sources that this EgressPolicy authorizes access from. When `null`, the `sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.spec.egress_policies.egress_from.sources.new](#fn-specspecegress_policiessourcesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `egress_from` sub block.
+
+
+## obj spec.egress_policies.egress_from.sources
+
+
+
+### fn spec.egress_policies.egress_from.sources.new
+
+```ts
+new()
+```
+
+
+`google.access_context_manager_service_perimeter.spec.egress_policies.egress_from.sources.new` constructs a new object with attributes and blocks configured for the `sources`
+Terraform sub block.
+
+
+
+**Args**:
+  - `access_level` (`string`): An AccessLevel resource name that allows resources outside the ServicePerimeter to be accessed from the inside. When `null`, the `access_level` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `sources` sub block.
 
 
 ## obj spec.egress_policies.egress_to
@@ -921,9 +950,34 @@ represent individual user or service account only. When `null`, the `identities`
   - `identity_type` (`string`): Specifies the type of identities that are allowed access to outside the
 perimeter. If left unspecified, then members of &#39;identities&#39; field will
 be allowed access. Possible values: [&#34;IDENTITY_TYPE_UNSPECIFIED&#34;, &#34;ANY_IDENTITY&#34;, &#34;ANY_USER_ACCOUNT&#34;, &#34;ANY_SERVICE_ACCOUNT&#34;] When `null`, the `identity_type` field will be omitted from the resulting object.
+  - `source_restriction` (`string`): Whether to enforce traffic restrictions based on &#39;sources&#39; field. If the &#39;sources&#39; field is non-empty, then this field must be set to &#39;SOURCE_RESTRICTION_ENABLED&#39;. Possible values: [&#34;SOURCE_RESTRICTION_UNSPECIFIED&#34;, &#34;SOURCE_RESTRICTION_ENABLED&#34;, &#34;SOURCE_RESTRICTION_DISABLED&#34;] When `null`, the `source_restriction` field will be omitted from the resulting object.
+  - `sources` (`list[obj]`): Sources that this EgressPolicy authorizes access from. When `null`, the `sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_service_perimeter.status.egress_policies.egress_from.sources.new](#fn-statusstatusegress_policiessourcesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `egress_from` sub block.
+
+
+## obj status.egress_policies.egress_from.sources
+
+
+
+### fn status.egress_policies.egress_from.sources.new
+
+```ts
+new()
+```
+
+
+`google.access_context_manager_service_perimeter.status.egress_policies.egress_from.sources.new` constructs a new object with attributes and blocks configured for the `sources`
+Terraform sub block.
+
+
+
+**Args**:
+  - `access_level` (`string`): An AccessLevel resource name that allows resources outside the ServicePerimeter to be accessed from the inside. When `null`, the `access_level` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `sources` sub block.
 
 
 ## obj status.egress_policies.egress_to

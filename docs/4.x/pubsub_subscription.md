@@ -123,7 +123,11 @@ may be delivered in any order. When `null`, the `enable_message_ordering` field 
 Pub/Sub automatically acknowledges the messages that don&#39;t match the filter. You can filter messages
 by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
 you can&#39;t modify the filter. When `null`, the `filter` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to this Subscription. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to this Subscription.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `message_retention_duration` (`string`): How long to retain unacknowledged messages in the subscription&#39;s
 backlog, from the moment a message is published. If
 retain_acked_messages is true, then this also configures the retention
@@ -226,7 +230,11 @@ may be delivered in any order. When `null`, the `enable_message_ordering` field 
 Pub/Sub automatically acknowledges the messages that don&#39;t match the filter. You can filter messages
 by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
 you can&#39;t modify the filter. When `null`, the `filter` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to this Subscription. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to this Subscription.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `message_retention_duration` (`string`): How long to retain unacknowledged messages in the subscription&#39;s
 backlog, from the moment a message is published. If
 retain_acked_messages is true, then this also configures the retention

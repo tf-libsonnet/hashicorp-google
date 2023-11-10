@@ -30,6 +30,10 @@ This package contains functions and utilities for setting up the resource using 
         * [`fn new()`](#fn-access_levelsbasicconditionsdevice_policynew)
         * [`obj access_levels.basic.conditions.device_policy.os_constraints`](#obj-access_levelsbasicconditionsdevice_policyos_constraints)
           * [`fn new()`](#fn-access_levelsbasicconditionsdevice_policyos_constraintsnew)
+      * [`obj access_levels.basic.conditions.vpc_network_sources`](#obj-access_levelsbasicconditionsvpc_network_sources)
+        * [`fn new()`](#fn-access_levelsbasicconditionsvpc_network_sourcesnew)
+        * [`obj access_levels.basic.conditions.vpc_network_sources.vpc_subnetwork`](#obj-access_levelsbasicconditionsvpc_network_sourcesvpc_subnetwork)
+          * [`fn new()`](#fn-access_levelsbasicconditionsvpc_network_sourcesvpc_subnetworknew)
   * [`obj access_levels.custom`](#obj-access_levelscustom)
     * [`fn new()`](#fn-access_levelscustomnew)
     * [`obj access_levels.custom.expr`](#obj-access_levelscustomexpr)
@@ -298,6 +302,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name} When `null`, the `r
   - `device_policy` (`list[obj]`): Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
 allowed. When `null`, the `device_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.basic.conditions.device_policy.new](#fn-access_levelsaccess_levelsbasicdevice_policynew) constructor.
+  - `vpc_network_sources` (`list[obj]`): The request must originate from one of the provided VPC networks in Google Cloud. Cannot specify this field together with &#39;ip_subnetworks&#39;. When `null`, the `vpc_network_sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.basic.conditions.vpc_network_sources.new](#fn-access_levelsaccess_levelsbasicvpc_network_sourcesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `conditions` sub block.
@@ -359,6 +364,53 @@ Format: &#34;major.minor.patch&#34; such as &#34;10.5.301&#34;, &#34;9.2.1&#34;.
 
 **Returns**:
   - An attribute object that represents the `os_constraints` sub block.
+
+
+## obj access_levels.basic.conditions.vpc_network_sources
+
+
+
+### fn access_levels.basic.conditions.vpc_network_sources.new
+
+```ts
+new()
+```
+
+
+`google.access_context_manager_access_levels.access_levels.basic.conditions.vpc_network_sources.new` constructs a new object with attributes and blocks configured for the `vpc_network_sources`
+Terraform sub block.
+
+
+
+**Args**:
+  - `vpc_subnetwork` (`list[obj]`): Sub networks within a VPC network. When `null`, the `vpc_subnetwork` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_levels.access_levels.basic.conditions.vpc_network_sources.vpc_subnetwork.new](#fn-access_levelsaccess_levelsbasicconditionsvpc_subnetworknew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `vpc_network_sources` sub block.
+
+
+## obj access_levels.basic.conditions.vpc_network_sources.vpc_subnetwork
+
+
+
+### fn access_levels.basic.conditions.vpc_network_sources.vpc_subnetwork.new
+
+```ts
+new()
+```
+
+
+`google.access_context_manager_access_levels.access_levels.basic.conditions.vpc_network_sources.vpc_subnetwork.new` constructs a new object with attributes and blocks configured for the `vpc_subnetwork`
+Terraform sub block.
+
+
+
+**Args**:
+  - `network` (`string`): Required. Network name to be allowed by this Access Level. Networks of foreign organizations requires &#39;compute.network.get&#39; permission to be granted to caller.
+  - `vpc_ip_subnetworks` (`list`): CIDR block IP subnetwork specification. Must be IPv4. When `null`, the `vpc_ip_subnetworks` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `vpc_subnetwork` sub block.
 
 
 ## obj access_levels.custom

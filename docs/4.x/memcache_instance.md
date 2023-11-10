@@ -77,7 +77,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `authorized_network` (`string`): The full name of the GCE network to connect the instance to.  If not provided,
 &#39;default&#39; will be used. When `null`, the `authorized_network` field will be omitted from the resulting object.
   - `display_name` (`string`): A user-visible name for the instance. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user-provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `memcache_version` (`string`): The major version of Memcached software. If not provided, latest supported version will be used.
 Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
 determined by our system based on the latest supported minor version. Default value: &#34;MEMCACHE_1_5&#34; Possible values: [&#34;MEMCACHE_1_5&#34;] When `null`, the `memcache_version` field will be omitted from the resulting object.
@@ -117,7 +121,11 @@ injecting into a complete block.
   - `authorized_network` (`string`): The full name of the GCE network to connect the instance to.  If not provided,
 &#39;default&#39; will be used. When `null`, the `authorized_network` field will be omitted from the resulting object.
   - `display_name` (`string`): A user-visible name for the instance. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user-provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `memcache_version` (`string`): The major version of Memcached software. If not provided, latest supported version will be used.
 Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
 determined by our system based on the latest supported minor version. Default value: &#34;MEMCACHE_1_5&#34; Possible values: [&#34;MEMCACHE_1_5&#34;] When `null`, the `memcache_version` field will be omitted from the resulting object.

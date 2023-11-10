@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withIpVersion()`](#fn-withipversion)
 * [`fn withIpv6EndpointType()`](#fn-withipv6endpointtype)
+* [`fn withLabels()`](#fn-withlabels)
 * [`fn withName()`](#fn-withname)
 * [`fn withNetwork()`](#fn-withnetwork)
 * [`fn withNetworkTier()`](#fn-withnetworktier)
@@ -72,6 +73,11 @@ Note: if you set this argument&#39;s value as &#39;INTERNAL&#39; you need to lea
   - `ipv6_endpoint_type` (`string`): The endpoint type of this address, which should be VM or NETLB. This is
 used for deciding which type of endpoint this address can be used after
 the external IPv6 address reservation. Possible values: [&#34;VM&#34;, &#34;NETLB&#34;] When `null`, the `ipv6_endpoint_type` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this address.  A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39;
@@ -146,6 +152,11 @@ Note: if you set this argument&#39;s value as &#39;INTERNAL&#39; you need to lea
   - `ipv6_endpoint_type` (`string`): The endpoint type of this address, which should be VM or NETLB. This is
 used for deciding which type of endpoint this address can be used after
 the external IPv6 address reservation. Possible values: [&#34;VM&#34;, &#34;NETLB&#34;] When `null`, the `ipv6_endpoint_type` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this address.  A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters
 long and match the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39;
@@ -270,6 +281,22 @@ Terraform resource block to set or update the ipv6_endpoint_type field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `ipv6_endpoint_type` field.
+
+
+### fn withLabels
+
+```ts
+withLabels()
+```
+
+`google.obj.withLabels` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the labels field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `labels` field.
 
 
 ### fn withName
@@ -455,6 +482,7 @@ Terraform sub block.
 **Args**:
   - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
   - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

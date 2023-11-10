@@ -69,7 +69,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): A description of the instance. When `null`, the `description` field will be omitted from the resulting object.
   - `kms_key_name` (`string`): KMS key name used for data encryption. When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user-provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location of the instance. This can be a region for ENTERPRISE tier instances. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the instance.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -106,7 +110,11 @@ injecting into a complete block.
 **Args**:
   - `description` (`string`): A description of the instance. When `null`, the `description` field will be omitted from the resulting object.
   - `kms_key_name` (`string`): KMS key name used for data encryption. When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user-provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location of the instance. This can be a region for ENTERPRISE tier instances. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the instance.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.

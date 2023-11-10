@@ -17,6 +17,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withCondition()`](#fn-withcondition)
 * [`fn withConditionMixin()`](#fn-withconditionmixin)
+* [`fn withLocation()`](#fn-withlocation)
 * [`fn withMembers()`](#fn-withmembers)
 * [`fn withMembershipId()`](#fn-withmembershipid)
 * [`fn withProject()`](#fn-withproject)
@@ -53,6 +54,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `location` (`string`): Set the `location` field on the resulting resource block. When `null`, the `location` field will be omitted from the resulting object.
   - `members` (`list`): Set the `members` field on the resulting resource block.
   - `membership_id` (`string`): Set the `membership_id` field on the resulting resource block.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -81,6 +83,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `location` (`string`): Set the `location` field on the resulting object. When `null`, the `location` field will be omitted from the resulting object.
   - `members` (`list`): Set the `members` field on the resulting object.
   - `membership_id` (`string`): Set the `membership_id` field on the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
@@ -126,6 +129,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `condition` field.
+
+
+### fn withLocation
+
+```ts
+withLocation()
+```
+
+`google.string.withLocation` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the location field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `location` field.
 
 
 ### fn withMembers

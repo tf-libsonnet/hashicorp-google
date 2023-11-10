@@ -87,7 +87,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `enable_stackdriver_logging` (`bool`): Option to enable Stackdriver Logging. When `null`, the `enable_stackdriver_logging` field will be omitted from the resulting object.
   - `enable_stackdriver_monitoring` (`bool`): Option to enable Stackdriver Monitoring. When `null`, the `enable_stackdriver_monitoring` field will be omitted from the resulting object.
   - `labels` (`obj`): The resource labels for instance to use to annotate any related underlying resources,
-such as Compute Engine VMs. When `null`, the `labels` field will be omitted from the resulting object.
+such as Compute Engine VMs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The ID of the instance or a fully qualified identifier for the instance.
   - `options` (`obj`): Map of additional options used to configure the behavior of Data Fusion instance. When `null`, the `options` field will be omitted from the resulting object.
   - `private_instance` (`bool`): Specifies whether the Data Fusion instance should be private. If set to
@@ -145,7 +149,11 @@ injecting into a complete block.
   - `enable_stackdriver_logging` (`bool`): Option to enable Stackdriver Logging. When `null`, the `enable_stackdriver_logging` field will be omitted from the resulting object.
   - `enable_stackdriver_monitoring` (`bool`): Option to enable Stackdriver Monitoring. When `null`, the `enable_stackdriver_monitoring` field will be omitted from the resulting object.
   - `labels` (`obj`): The resource labels for instance to use to annotate any related underlying resources,
-such as Compute Engine VMs. When `null`, the `labels` field will be omitted from the resulting object.
+such as Compute Engine VMs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The ID of the instance or a fully qualified identifier for the instance.
   - `options` (`obj`): Map of additional options used to configure the behavior of Data Fusion instance. When `null`, the `options` field will be omitted from the resulting object.
   - `private_instance` (`bool`): Specifies whether the Data Fusion instance should be private. If set to

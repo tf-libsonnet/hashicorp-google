@@ -35,13 +35,19 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ):: std.prune(a={}),
   },
   cloud_spanner:: {
-    '#new':: d.fn(help='\n`google.bigquery_connection.cloud_spanner.new` constructs a new object with attributes and blocks configured for the `cloud_spanner`\nTerraform sub block.\n\n\n\n**Args**:\n  - `database` (`string`): Cloud Spanner database in the form &#39;project/instance/database&#39;\n  - `use_parallelism` (`bool`): If parallelism should be used when reading from Cloud Spanner When `null`, the `use_parallelism` field will be omitted from the resulting object.\n  - `use_serverless_analytics` (`bool`): If the serverless analytics service should be used to read data from Cloud Spanner. useParallelism must be set when using serverless analytics When `null`, the `use_serverless_analytics` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `cloud_spanner` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.bigquery_connection.cloud_spanner.new` constructs a new object with attributes and blocks configured for the `cloud_spanner`\nTerraform sub block.\n\n\n\n**Args**:\n  - `database` (`string`): Cloud Spanner database in the form &#39;project/instance/database&#39;.\n  - `database_role` (`string`): Cloud Spanner database role for fine-grained access control. The Cloud Spanner admin should have provisioned the database role with appropriate permissions, such as &#39;SELECT&#39; and &#39;INSERT&#39;. Other users should only use roles provided by their Cloud Spanner admins. The database role name must start with a letter, and can only contain letters, numbers, and underscores. For more details, see https://cloud.google.com/spanner/docs/fgac-about. When `null`, the `database_role` field will be omitted from the resulting object.\n  - `max_parallelism` (`number`): Allows setting max parallelism per query when executing on Spanner independent compute resources. If unspecified, default values of parallelism are chosen that are dependent on the Cloud Spanner instance configuration. &#39;useParallelism&#39; and &#39;useDataBoost&#39; must be set when setting max parallelism. When `null`, the `max_parallelism` field will be omitted from the resulting object.\n  - `use_data_boost` (`bool`): If set, the request will be executed via Spanner independent compute resources. &#39;use_parallelism&#39; must be set when using data boost. When `null`, the `use_data_boost` field will be omitted from the resulting object.\n  - `use_parallelism` (`bool`): If parallelism should be used when reading from Cloud Spanner. When `null`, the `use_parallelism` field will be omitted from the resulting object.\n  - `use_serverless_analytics` (`bool`): If the serverless analytics service should be used to read data from Cloud Spanner. &#39;useParallelism&#39; must be set when using serverless analytics. When `null`, the `use_serverless_analytics` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `cloud_spanner` sub block.\n', args=[]),
     new(
       database,
+      database_role=null,
+      max_parallelism=null,
+      use_data_boost=null,
       use_parallelism=null,
       use_serverless_analytics=null
     ):: std.prune(a={
       database: database,
+      database_role: database_role,
+      max_parallelism: max_parallelism,
+      use_data_boost: use_data_boost,
       use_parallelism: use_parallelism,
       use_serverless_analytics: use_serverless_analytics,
     }),

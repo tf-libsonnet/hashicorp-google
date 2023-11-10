@@ -99,7 +99,11 @@ in the format &#39;projects/*/locations/*/certificateTemplates/*&#39;. If this i
 the caller must have the necessary permission to use this template. If this is
 omitted, no template will be used. This template must be in the same location
 as the Certificate. When `null`, the `certificate_template` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels with user-defined metadata to apply to this resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels with user-defined metadata to apply to this resource.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `lifetime` (`string`): The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
 &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `lifetime` field will be omitted from the resulting object.
@@ -143,7 +147,11 @@ in the format &#39;projects/*/locations/*/certificateTemplates/*&#39;. If this i
 the caller must have the necessary permission to use this template. If this is
 omitted, no template will be used. This template must be in the same location
 as the Certificate. When `null`, the `certificate_template` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels with user-defined metadata to apply to this resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels with user-defined metadata to apply to this resource.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `lifetime` (`string`): The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
 &#34;notAfterTime&#34; fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;. When `null`, the `lifetime` field will be omitted from the resulting object.

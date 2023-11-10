@@ -527,6 +527,7 @@ Terraform sub block.
   - `allocated_ip_range` (`string`): The name of the allocated ip range for the private ip CloudSQL instance. For example: &#34;google-managed-services-default&#34;. If set, the cloned instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?. When `null`, the `allocated_ip_range` field will be omitted from the resulting object.
   - `database_names` (`list`): (SQL Server only, use with point_in_time) clone only the specified databases from the source instance. Clone all databases if empty. When `null`, the `database_names` field will be omitted from the resulting object.
   - `point_in_time` (`string`): The timestamp of the point in time that should be restored. When `null`, the `point_in_time` field will be omitted from the resulting object.
+  - `preferred_zone` (`string`): (Point-in-time recovery for PostgreSQL only) Clone to an instance in the specified zone. If no zone is specified, clone to the same zone as the source instance. When `null`, the `preferred_zone` field will be omitted from the resulting object.
   - `source_instance_name` (`string`): The name of the instance from which the point in time should be restored.
 
 **Returns**:

@@ -67,7 +67,11 @@ to messages published on this topic. Your project&#39;s PubSub service account
 (&#39;service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com&#39;) must have
 &#39;roles/cloudkms.cryptoKeyEncrypterDecrypter&#39; to use this feature.
 The expected format is &#39;projects/*/locations/*/keyRings/*/cryptoKeys/*&#39; When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to this Topic. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to this Topic.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `message_retention_duration` (`string`): Indicates the minimum duration to retain a message after it is published
 to the topic. If this field is set, messages published to the topic in
 the last messageRetentionDuration are always available to subscribers.
@@ -110,7 +114,11 @@ to messages published on this topic. Your project&#39;s PubSub service account
 (&#39;service-{{PROJECT_NUMBER}}@gcp-sa-pubsub.iam.gserviceaccount.com&#39;) must have
 &#39;roles/cloudkms.cryptoKeyEncrypterDecrypter&#39; to use this feature.
 The expected format is &#39;projects/*/locations/*/keyRings/*/cryptoKeys/*&#39; When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to this Topic. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to this Topic.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `message_retention_duration` (`string`): Indicates the minimum duration to retain a message after it is published
 to the topic. If this field is set, messages published to the topic in
 the last messageRetentionDuration are always available to subscribers.

@@ -33,6 +33,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withPortRange()`](#fn-withportrange)
 * [`fn withPorts()`](#fn-withports)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withRecreateClosedPsc()`](#fn-withrecreateclosedpsc)
 * [`fn withRegion()`](#fn-withregion)
 * [`fn withServiceDirectoryRegistrations()`](#fn-withservicedirectoryregistrations)
 * [`fn withServiceDirectoryRegistrationsMixin()`](#fn-withservicedirectoryregistrationsmixin)
@@ -76,21 +77,21 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `all_ports` (`bool`): This field can only be used:
-* If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
-* By internal TCP/UDP load balancers, backend service-based network load
-balancers, and internal and external protocol forwarding.
+  - `all_ports` (`bool`): The &#39;ports&#39;, &#39;portRange&#39;, and &#39;allPorts&#39; fields are mutually exclusive.
+Only packets addressed to ports in the specified range will be forwarded
+to the backends configured with this forwarding rule.
 
-This option should be set to TRUE when the Forwarding Rule
-IPProtocol is set to L3_DEFAULT.
-
-Set this field to true to allow packets addressed to any port or packets
+The &#39;allPorts&#39; field has the following limitations:
+* It requires that the forwarding rule &#39;IPProtocol&#39; be TCP, UDP, SCTP, or
+L3_DEFAULT.
+* It&#39;s applicable only to the following products: internal passthrough
+Network Load Balancers, backend service-based external passthrough Network
+Load Balancers, and internal and external protocol forwarding.
+* Set this field to true to allow packets addressed to any port or packets
 lacking destination port information (for example, UDP fragments after the
 first fragment) to be forwarded to the backends configured with this
-forwarding rule.
-
-The &#39;ports&#39;, &#39;port_range&#39;, and
-&#39;allPorts&#39; fields are mutually exclusive. When `null`, the `all_ports` field will be omitted from the resulting object.
+forwarding rule. The L3_DEFAULT protocol requires &#39;allPorts&#39; be set to
+true. When `null`, the `all_ports` field will be omitted from the resulting object.
   - `allow_global_access` (`bool`): This field is used along with the &#39;backend_service&#39; field for
 internal load balancing or with the &#39;target&#39; field for internal
 TargetInstance.
@@ -172,7 +173,11 @@ load balancer will not have their traffic mirrored even if a
 
 This can only be set to true for load balancers that have their
 &#39;loadBalancingScheme&#39; set to &#39;INTERNAL&#39;. When `null`, the `is_mirroring_collector` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels to apply to this forwarding rule.  A list of key-&gt;value pairs. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `load_balancing_scheme` (`string`): Specifies the forwarding rule type.
 
 For more information about forwarding rules, refer to
@@ -212,51 +217,54 @@ If this field is not specified, it is assumed to be &#39;PREMIUM&#39;.
 If &#39;IPAddress&#39; is specified, this value must be equal to the
 networkTier of the Address. Possible values: [&#34;PREMIUM&#34;, &#34;STANDARD&#34;] When `null`, the `network_tier` field will be omitted from the resulting object.
   - `no_automate_dns_zone` (`bool`): This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field. When `null`, the `no_automate_dns_zone` field will be omitted from the resulting object.
-  - `port_range` (`string`): This field can only be used:
+  - `port_range` (`string`): The &#39;ports&#39;, &#39;portRange&#39;, and &#39;allPorts&#39; fields are mutually exclusive.
+Only packets addressed to ports in the specified range will be forwarded
+to the backends configured with this forwarding rule.
 
-* If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
-* By backend service-based network load balancers, target pool-based
-network load balancers, internal proxy load balancers, external proxy load
-balancers, Traffic Director, external protocol forwarding, and Classic VPN.
-Some products have restrictions on what ports can be used. See
+The &#39;portRange&#39; field has the following limitations:
+* It requires that the forwarding rule &#39;IPProtocol&#39; be TCP, UDP, or SCTP,
+and
+* It&#39;s applicable only to the following products: external passthrough
+Network Load Balancers, internal and external proxy Network Load
+Balancers, internal and external Application Load Balancers, external
+protocol forwarding, and Classic VPN.
+* Some products have restrictions on what ports can be used. See
 [port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)
 for details.
 
-
-Only packets addressed to ports in the specified range will be forwarded to
-the backends configured with this forwarding rule.
-
-The &#39;ports&#39; and &#39;port_range&#39; fields are mutually exclusive.
-
 For external forwarding rules, two or more forwarding rules cannot use the
-same &#39;[IPAddress, IPProtocol]&#39; pair, and cannot have
-overlapping &#39;portRange&#39;s.
+same &#39;[IPAddress, IPProtocol]&#39; pair, and cannot have overlapping
+&#39;portRange&#39;s.
 
 For internal forwarding rules within the same VPC network, two or more
-forwarding rules cannot use the same &#39;[IPAddress, IPProtocol]&#39;
-pair, and cannot have overlapping &#39;portRange&#39;s. When `null`, the `port_range` field will be omitted from the resulting object.
-  - `ports` (`list`): This field can only be used:
+forwarding rules cannot use the same &#39;[IPAddress, IPProtocol]&#39; pair, and
+cannot have overlapping &#39;portRange&#39;s.
 
-* If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
-* By internal TCP/UDP load balancers, backend service-based network load
-balancers, internal protocol forwarding and when protocol is not L3_DEFAULT.
+@pattern: \d&#43;(?:-\d&#43;)? When `null`, the `port_range` field will be omitted from the resulting object.
+  - `ports` (`list`): The &#39;ports&#39;, &#39;portRange&#39;, and &#39;allPorts&#39; fields are mutually exclusive.
+Only packets addressed to ports in the specified range will be forwarded
+to the backends configured with this forwarding rule.
 
-
-You can specify a list of up to five ports by number, separated by commas.
-The ports can be contiguous or discontiguous. Only packets addressed to
-these ports will be forwarded to the backends configured with this
-forwarding rule.
+The &#39;ports&#39; field has the following limitations:
+* It requires that the forwarding rule &#39;IPProtocol&#39; be TCP, UDP, or SCTP,
+and
+* It&#39;s applicable only to the following products: internal passthrough
+Network Load Balancers, backend service-based external passthrough Network
+Load Balancers, and internal protocol forwarding.
+* You can specify a list of up to five ports by number, separated by
+commas. The ports can be contiguous or discontiguous.
 
 For external forwarding rules, two or more forwarding rules cannot use the
-same &#39;[IPAddress, IPProtocol]&#39; pair, and cannot share any values
-defined in &#39;ports&#39;.
+same &#39;[IPAddress, IPProtocol]&#39; pair if they share at least one port
+number.
 
 For internal forwarding rules within the same VPC network, two or more
-forwarding rules cannot use the same &#39;[IPAddress, IPProtocol]&#39;
-pair, and cannot share any values defined in &#39;ports&#39;.
+forwarding rules cannot use the same &#39;[IPAddress, IPProtocol]&#39; pair if
+they share at least one port number.
 
-The &#39;ports&#39; and &#39;port_range&#39; fields are mutually exclusive. When `null`, the `ports` field will be omitted from the resulting object.
+@pattern: \d&#43;(?:-\d&#43;)? When `null`, the `ports` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `recreate_closed_psc` (`bool`): This is used in PSC consumer ForwardingRule to make terraform recreate the ForwardingRule when the status is closed When `null`, the `recreate_closed_psc` field will be omitted from the resulting object.
   - `region` (`string`): A reference to the region where the regional forwarding rule resides.
 
 This field is not applicable to global forwarding rules. When `null`, the `region` field will be omitted from the resulting object.
@@ -320,21 +328,21 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `all_ports` (`bool`): This field can only be used:
-* If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
-* By internal TCP/UDP load balancers, backend service-based network load
-balancers, and internal and external protocol forwarding.
+  - `all_ports` (`bool`): The &#39;ports&#39;, &#39;portRange&#39;, and &#39;allPorts&#39; fields are mutually exclusive.
+Only packets addressed to ports in the specified range will be forwarded
+to the backends configured with this forwarding rule.
 
-This option should be set to TRUE when the Forwarding Rule
-IPProtocol is set to L3_DEFAULT.
-
-Set this field to true to allow packets addressed to any port or packets
+The &#39;allPorts&#39; field has the following limitations:
+* It requires that the forwarding rule &#39;IPProtocol&#39; be TCP, UDP, SCTP, or
+L3_DEFAULT.
+* It&#39;s applicable only to the following products: internal passthrough
+Network Load Balancers, backend service-based external passthrough Network
+Load Balancers, and internal and external protocol forwarding.
+* Set this field to true to allow packets addressed to any port or packets
 lacking destination port information (for example, UDP fragments after the
 first fragment) to be forwarded to the backends configured with this
-forwarding rule.
-
-The &#39;ports&#39;, &#39;port_range&#39;, and
-&#39;allPorts&#39; fields are mutually exclusive. When `null`, the `all_ports` field will be omitted from the resulting object.
+forwarding rule. The L3_DEFAULT protocol requires &#39;allPorts&#39; be set to
+true. When `null`, the `all_ports` field will be omitted from the resulting object.
   - `allow_global_access` (`bool`): This field is used along with the &#39;backend_service&#39; field for
 internal load balancing or with the &#39;target&#39; field for internal
 TargetInstance.
@@ -416,7 +424,11 @@ load balancer will not have their traffic mirrored even if a
 
 This can only be set to true for load balancers that have their
 &#39;loadBalancingScheme&#39; set to &#39;INTERNAL&#39;. When `null`, the `is_mirroring_collector` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels to apply to this forwarding rule.  A list of key-&gt;value pairs. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `load_balancing_scheme` (`string`): Specifies the forwarding rule type.
 
 For more information about forwarding rules, refer to
@@ -456,51 +468,54 @@ If this field is not specified, it is assumed to be &#39;PREMIUM&#39;.
 If &#39;IPAddress&#39; is specified, this value must be equal to the
 networkTier of the Address. Possible values: [&#34;PREMIUM&#34;, &#34;STANDARD&#34;] When `null`, the `network_tier` field will be omitted from the resulting object.
   - `no_automate_dns_zone` (`bool`): This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field. When `null`, the `no_automate_dns_zone` field will be omitted from the resulting object.
-  - `port_range` (`string`): This field can only be used:
+  - `port_range` (`string`): The &#39;ports&#39;, &#39;portRange&#39;, and &#39;allPorts&#39; fields are mutually exclusive.
+Only packets addressed to ports in the specified range will be forwarded
+to the backends configured with this forwarding rule.
 
-* If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
-* By backend service-based network load balancers, target pool-based
-network load balancers, internal proxy load balancers, external proxy load
-balancers, Traffic Director, external protocol forwarding, and Classic VPN.
-Some products have restrictions on what ports can be used. See
+The &#39;portRange&#39; field has the following limitations:
+* It requires that the forwarding rule &#39;IPProtocol&#39; be TCP, UDP, or SCTP,
+and
+* It&#39;s applicable only to the following products: external passthrough
+Network Load Balancers, internal and external proxy Network Load
+Balancers, internal and external Application Load Balancers, external
+protocol forwarding, and Classic VPN.
+* Some products have restrictions on what ports can be used. See
 [port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)
 for details.
 
-
-Only packets addressed to ports in the specified range will be forwarded to
-the backends configured with this forwarding rule.
-
-The &#39;ports&#39; and &#39;port_range&#39; fields are mutually exclusive.
-
 For external forwarding rules, two or more forwarding rules cannot use the
-same &#39;[IPAddress, IPProtocol]&#39; pair, and cannot have
-overlapping &#39;portRange&#39;s.
+same &#39;[IPAddress, IPProtocol]&#39; pair, and cannot have overlapping
+&#39;portRange&#39;s.
 
 For internal forwarding rules within the same VPC network, two or more
-forwarding rules cannot use the same &#39;[IPAddress, IPProtocol]&#39;
-pair, and cannot have overlapping &#39;portRange&#39;s. When `null`, the `port_range` field will be omitted from the resulting object.
-  - `ports` (`list`): This field can only be used:
+forwarding rules cannot use the same &#39;[IPAddress, IPProtocol]&#39; pair, and
+cannot have overlapping &#39;portRange&#39;s.
 
-* If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
-* By internal TCP/UDP load balancers, backend service-based network load
-balancers, internal protocol forwarding and when protocol is not L3_DEFAULT.
+@pattern: \d&#43;(?:-\d&#43;)? When `null`, the `port_range` field will be omitted from the resulting object.
+  - `ports` (`list`): The &#39;ports&#39;, &#39;portRange&#39;, and &#39;allPorts&#39; fields are mutually exclusive.
+Only packets addressed to ports in the specified range will be forwarded
+to the backends configured with this forwarding rule.
 
-
-You can specify a list of up to five ports by number, separated by commas.
-The ports can be contiguous or discontiguous. Only packets addressed to
-these ports will be forwarded to the backends configured with this
-forwarding rule.
+The &#39;ports&#39; field has the following limitations:
+* It requires that the forwarding rule &#39;IPProtocol&#39; be TCP, UDP, or SCTP,
+and
+* It&#39;s applicable only to the following products: internal passthrough
+Network Load Balancers, backend service-based external passthrough Network
+Load Balancers, and internal protocol forwarding.
+* You can specify a list of up to five ports by number, separated by
+commas. The ports can be contiguous or discontiguous.
 
 For external forwarding rules, two or more forwarding rules cannot use the
-same &#39;[IPAddress, IPProtocol]&#39; pair, and cannot share any values
-defined in &#39;ports&#39;.
+same &#39;[IPAddress, IPProtocol]&#39; pair if they share at least one port
+number.
 
 For internal forwarding rules within the same VPC network, two or more
-forwarding rules cannot use the same &#39;[IPAddress, IPProtocol]&#39;
-pair, and cannot share any values defined in &#39;ports&#39;.
+forwarding rules cannot use the same &#39;[IPAddress, IPProtocol]&#39; pair if
+they share at least one port number.
 
-The &#39;ports&#39; and &#39;port_range&#39; fields are mutually exclusive. When `null`, the `ports` field will be omitted from the resulting object.
+@pattern: \d&#43;(?:-\d&#43;)? When `null`, the `ports` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `recreate_closed_psc` (`bool`): This is used in PSC consumer ForwardingRule to make terraform recreate the ForwardingRule when the status is closed When `null`, the `recreate_closed_psc` field will be omitted from the resulting object.
   - `region` (`string`): A reference to the region where the regional forwarding rule resides.
 
 This field is not applicable to global forwarding rules. When `null`, the `region` field will be omitted from the resulting object.
@@ -832,6 +847,22 @@ Terraform resource block to set or update the project field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `project` field.
+
+
+### fn withRecreateClosedPsc
+
+```ts
+withRecreateClosedPsc()
+```
+
+`google.bool.withRecreateClosedPsc` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the recreate_closed_psc field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `recreate_closed_psc` field.
 
 
 ### fn withRegion

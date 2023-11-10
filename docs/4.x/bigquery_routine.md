@@ -88,7 +88,7 @@ d the order of values or replaced STRUCT field type with RECORD field type, we c
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API. When `null`, the `return_type` field will be omitted from the resulting object.
   - `routine_id` (`string`): The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-  - `routine_type` (`string`): The type of routine. Possible values: [&#34;SCALAR_FUNCTION&#34;, &#34;PROCEDURE&#34;, &#34;TABLE_VALUED_FUNCTION&#34;] When `null`, the `routine_type` field will be omitted from the resulting object.
+  - `routine_type` (`string`): The type of routine. Possible values: [&#34;SCALAR_FUNCTION&#34;, &#34;PROCEDURE&#34;, &#34;TABLE_VALUED_FUNCTION&#34;]
   - `arguments` (`list[obj]`): Input/output argument of a function or a stored procedure. When `null`, the `arguments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.arguments.new](#fn-argumentsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -138,7 +138,7 @@ d the order of values or replaced STRUCT field type with RECORD field type, we c
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API. When `null`, the `return_type` field will be omitted from the resulting object.
   - `routine_id` (`string`): The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-  - `routine_type` (`string`): The type of routine. Possible values: [&#34;SCALAR_FUNCTION&#34;, &#34;PROCEDURE&#34;, &#34;TABLE_VALUED_FUNCTION&#34;] When `null`, the `routine_type` field will be omitted from the resulting object.
+  - `routine_type` (`string`): The type of routine. Possible values: [&#34;SCALAR_FUNCTION&#34;, &#34;PROCEDURE&#34;, &#34;TABLE_VALUED_FUNCTION&#34;]
   - `arguments` (`list[obj]`): Input/output argument of a function or a stored procedure. When `null`, the `arguments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.arguments.new](#fn-argumentsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.timeouts.new](#fn-timeoutsnew) constructor.
 

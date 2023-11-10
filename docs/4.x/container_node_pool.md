@@ -77,6 +77,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-node_configsole_tenant_confignew)
     * [`obj node_config.sole_tenant_config.node_affinity`](#obj-node_configsole_tenant_confignode_affinity)
       * [`fn new()`](#fn-node_configsole_tenant_confignode_affinitynew)
+  * [`obj node_config.taint`](#obj-node_configtaint)
+    * [`fn new()`](#fn-node_configtaintnew)
   * [`obj node_config.workload_metadata_config`](#obj-node_configworkload_metadata_config)
     * [`fn new()`](#fn-node_configworkload_metadata_confignew)
 * [`obj placement_policy`](#obj-placement_policy)
@@ -643,8 +645,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `auto_repair` (`bool`): Whether the nodes will be automatically repaired. When `null`, the `auto_repair` field will be omitted from the resulting object.
-  - `auto_upgrade` (`bool`): Whether the nodes will be automatically upgraded. When `null`, the `auto_upgrade` field will be omitted from the resulting object.
+  - `auto_repair` (`bool`): Whether the nodes will be automatically repaired. Enabled by default. When `null`, the `auto_repair` field will be omitted from the resulting object.
+  - `auto_upgrade` (`bool`): Whether the nodes will be automatically upgraded. Enabled by default. When `null`, the `auto_upgrade` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `management` sub block.
@@ -735,7 +737,6 @@ Terraform sub block.
   - `service_account` (`string`): The Google Cloud Platform Service Account to be used by the node VMs. When `null`, the `service_account` field will be omitted from the resulting object.
   - `spot` (`bool`): Whether the nodes are created as spot VM instances. When `null`, the `spot` field will be omitted from the resulting object.
   - `tags` (`list`): The list of instance tags applied to all nodes. When `null`, the `tags` field will be omitted from the resulting object.
-  - `taint` (`list`): List of Kubernetes taints to be applied to each node. When `null`, the `taint` field will be omitted from the resulting object.
   - `advanced_machine_features` (`list[obj]`): Specifies options for controlling advanced machine features. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.advanced_machine_features.new](#fn-node_configadvanced_machine_featuresnew) constructor.
   - `confidential_nodes` (`list[obj]`): Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration can&#39;t be changed (or added/removed) after pool creation without deleting and recreating the entire pool. When `null`, the `confidential_nodes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.confidential_nodes.new](#fn-node_configconfidential_nodesnew) constructor.
   - `ephemeral_storage_local_ssd_config` (`list[obj]`): Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. When `null`, the `ephemeral_storage_local_ssd_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.ephemeral_storage_local_ssd_config.new](#fn-node_configephemeral_storage_local_ssd_confignew) constructor.
@@ -749,6 +750,7 @@ Terraform sub block.
   - `reservation_affinity` (`list[obj]`): The reservation affinity configuration for the node pool. When `null`, the `reservation_affinity` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.reservation_affinity.new](#fn-node_configreservation_affinitynew) constructor.
   - `shielded_instance_config` (`list[obj]`): Shielded Instance options. When `null`, the `shielded_instance_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.shielded_instance_config.new](#fn-node_configshielded_instance_confignew) constructor.
   - `sole_tenant_config` (`list[obj]`): Node affinity options for sole tenant node pools. When `null`, the `sole_tenant_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.sole_tenant_config.new](#fn-node_configsole_tenant_confignew) constructor.
+  - `taint` (`list[obj]`): List of Kubernetes taints to be applied to each node. When `null`, the `taint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.taint.new](#fn-node_configtaintnew) constructor.
   - `workload_metadata_config` (`list[obj]`): The workload metadata configuration for this node. When `null`, the `workload_metadata_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.workload_metadata_config.new](#fn-node_configworkload_metadata_confignew) constructor.
 
 **Returns**:
@@ -959,7 +961,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `sysctls` (`obj`): The Linux kernel parameters to be applied to the nodes and all pods running on the nodes.
+  - `cgroup_mode` (`string`): cgroupMode specifies the cgroup mode to be used on the node. When `null`, the `cgroup_mode` field will be omitted from the resulting object.
+  - `sysctls` (`obj`): The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. When `null`, the `sysctls` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `linux_node_config` sub block.
@@ -1083,6 +1086,31 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `node_affinity` sub block.
+
+
+## obj node_config.taint
+
+
+
+### fn node_config.taint.new
+
+```ts
+new()
+```
+
+
+`google.container_node_pool.node_config.taint.new` constructs a new object with attributes and blocks configured for the `taint`
+Terraform sub block.
+
+
+
+**Args**:
+  - `effect` (`string`): Effect for taint.
+  - `key` (`string`): Key for taint.
+  - `value` (`string`): Value for taint.
+
+**Returns**:
+  - An attribute object that represents the `taint` sub block.
 
 
 ## obj node_config.workload_metadata_config

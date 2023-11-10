@@ -69,7 +69,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `display_name` (`string`): Human-readable display name of this key. Modifiable by user.
-  - `labels` (`obj`): See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels). When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `android_settings` (`list[obj]`): Settings for keys that can be used by Android apps. When `null`, the `android_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.android_settings.new](#fn-android_settingsnew) constructor.
   - `ios_settings` (`list[obj]`): Settings for keys that can be used by iOS apps. When `null`, the `ios_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.ios_settings.new](#fn-ios_settingsnew) constructor.
@@ -100,7 +103,10 @@ injecting into a complete block.
 
 **Args**:
   - `display_name` (`string`): Human-readable display name of this key. Modifiable by user.
-  - `labels` (`obj`): See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels). When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `android_settings` (`list[obj]`): Settings for keys that can be used by Android apps. When `null`, the `android_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.android_settings.new](#fn-android_settingsnew) constructor.
   - `ios_settings` (`list[obj]`): Settings for keys that can be used by iOS apps. When `null`, the `ios_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.ios_settings.new](#fn-ios_settingsnew) constructor.

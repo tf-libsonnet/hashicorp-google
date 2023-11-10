@@ -62,7 +62,10 @@ If not specified, setupadmin will be used. When `null`, the `admin` field will b
 If CIDR subnets overlap between networks, domain creation will fail. When `null`, the `authorized_networks` field will be omitted from the resulting object.
   - `domain_name` (`string`): The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-  - `labels` (`obj`): Resource labels that can contain user-provided metadata When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels that can contain user-provided metadata
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `locations` (`list`): Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -98,7 +101,10 @@ If not specified, setupadmin will be used. When `null`, the `admin` field will b
 If CIDR subnets overlap between networks, domain creation will fail. When `null`, the `authorized_networks` field will be omitted from the resulting object.
   - `domain_name` (`string`): The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions,
 https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
-  - `labels` (`obj`): Resource labels that can contain user-provided metadata When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels that can contain user-provided metadata
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `locations` (`list`): Locations where domain needs to be provisioned. [regions][compute/docs/regions-zones/]
 e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
