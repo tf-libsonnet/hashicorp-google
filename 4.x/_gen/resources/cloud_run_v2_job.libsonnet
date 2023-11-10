@@ -330,13 +330,27 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         },
       },
       vpc_access:: {
-        '#new':: d.fn(help='\n`google.cloud_run_v2_job.template.template.vpc_access.new` constructs a new object with attributes and blocks configured for the `vpc_access`\nTerraform sub block.\n\n\n\n**Args**:\n  - `connector` (`string`): VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project id or number. When `null`, the `connector` field will be omitted from the resulting object.\n  - `egress` (`string`): Traffic VPC egress settings. Possible values: [&#34;ALL_TRAFFIC&#34;, &#34;PRIVATE_RANGES_ONLY&#34;] When `null`, the `egress` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `vpc_access` sub block.\n', args=[]),
+        network_interfaces:: {
+          '#new':: d.fn(help='\n`google.cloud_run_v2_job.template.template.vpc_access.network_interfaces.new` constructs a new object with attributes and blocks configured for the `network_interfaces`\nTerraform sub block.\n\n\n\n**Args**:\n  - `network` (`string`): The VPC network that the Cloud Run resource will be able to send traffic to. At least one of network or subnetwork must be specified. If both\nnetwork and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be\nlooked up from the subnetwork. When `null`, the `network` field will be omitted from the resulting object.\n  - `subnetwork` (`string`): The VPC subnetwork that the Cloud Run resource will get IPs from. At least one of network or subnetwork must be specified. If both\nnetwork and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the\nsubnetwork with the same name with the network will be used. When `null`, the `subnetwork` field will be omitted from the resulting object.\n  - `tags` (`list`): Network tags applied to this Cloud Run job. When `null`, the `tags` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `network_interfaces` sub block.\n', args=[]),
+          new(
+            network=null,
+            subnetwork=null,
+            tags=null
+          ):: std.prune(a={
+            network: network,
+            subnetwork: subnetwork,
+            tags: tags,
+          }),
+        },
+        '#new':: d.fn(help='\n`google.cloud_run_v2_job.template.template.vpc_access.new` constructs a new object with attributes and blocks configured for the `vpc_access`\nTerraform sub block.\n\n\n\n**Args**:\n  - `connector` (`string`): VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project id or number. When `null`, the `connector` field will be omitted from the resulting object.\n  - `egress` (`string`): Traffic VPC egress settings. Possible values: [&#34;ALL_TRAFFIC&#34;, &#34;PRIVATE_RANGES_ONLY&#34;] When `null`, the `egress` field will be omitted from the resulting object.\n  - `network_interfaces` (`list[obj]`): Direct VPC egress settings. Currently only single network interface is supported. When `null`, the `network_interfaces` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.vpc_access.network_interfaces.new](#fn-templatetemplatetemplatenetwork_interfacesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `vpc_access` sub block.\n', args=[]),
         new(
           connector=null,
-          egress=null
+          egress=null,
+          network_interfaces=null
         ):: std.prune(a={
           connector: connector,
           egress: egress,
+          network_interfaces: network_interfaces,
         }),
       },
     },

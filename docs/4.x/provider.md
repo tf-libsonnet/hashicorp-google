@@ -100,6 +100,7 @@ the `src` and/or `version` parameters are set.
   - `dns_custom_endpoint` (`string`): Set the `dns_custom_endpoint` field on the resulting provider block. When `null`, the `dns_custom_endpoint` field will be omitted from the resulting object.
   - `document_ai_custom_endpoint` (`string`): Set the `document_ai_custom_endpoint` field on the resulting provider block. When `null`, the `document_ai_custom_endpoint` field will be omitted from the resulting object.
   - `document_ai_warehouse_custom_endpoint` (`string`): Set the `document_ai_warehouse_custom_endpoint` field on the resulting provider block. When `null`, the `document_ai_warehouse_custom_endpoint` field will be omitted from the resulting object.
+  - `edgenetwork_custom_endpoint` (`string`): Set the `edgenetwork_custom_endpoint` field on the resulting provider block. When `null`, the `edgenetwork_custom_endpoint` field will be omitted from the resulting object.
   - `essential_contacts_custom_endpoint` (`string`): Set the `essential_contacts_custom_endpoint` field on the resulting provider block. When `null`, the `essential_contacts_custom_endpoint` field will be omitted from the resulting object.
   - `eventarc_custom_endpoint` (`string`): Set the `eventarc_custom_endpoint` field on the resulting provider block. When `null`, the `eventarc_custom_endpoint` field will be omitted from the resulting object.
   - `filestore_custom_endpoint` (`string`): Set the `filestore_custom_endpoint` field on the resulting provider block. When `null`, the `filestore_custom_endpoint` field will be omitted from the resulting object.
@@ -263,6 +264,7 @@ injecting into a complete block.
   - `dns_custom_endpoint` (`string`): Set the `dns_custom_endpoint` field on the resulting object. When `null`, the `dns_custom_endpoint` field will be omitted from the resulting object.
   - `document_ai_custom_endpoint` (`string`): Set the `document_ai_custom_endpoint` field on the resulting object. When `null`, the `document_ai_custom_endpoint` field will be omitted from the resulting object.
   - `document_ai_warehouse_custom_endpoint` (`string`): Set the `document_ai_warehouse_custom_endpoint` field on the resulting object. When `null`, the `document_ai_warehouse_custom_endpoint` field will be omitted from the resulting object.
+  - `edgenetwork_custom_endpoint` (`string`): Set the `edgenetwork_custom_endpoint` field on the resulting object. When `null`, the `edgenetwork_custom_endpoint` field will be omitted from the resulting object.
   - `essential_contacts_custom_endpoint` (`string`): Set the `essential_contacts_custom_endpoint` field on the resulting object. When `null`, the `essential_contacts_custom_endpoint` field will be omitted from the resulting object.
   - `eventarc_custom_endpoint` (`string`): Set the `eventarc_custom_endpoint` field on the resulting object. When `null`, the `eventarc_custom_endpoint` field will be omitted from the resulting object.
   - `filestore_custom_endpoint` (`string`): Set the `filestore_custom_endpoint` field on the resulting object. When `null`, the `filestore_custom_endpoint` field will be omitted from the resulting object.
