@@ -22,6 +22,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withConfig()`](#fn-withconfig)
 * [`fn withConfigMixin()`](#fn-withconfigmixin)
 * [`fn withLocation()`](#fn-withlocation)
+* [`fn withManagement()`](#fn-withmanagement)
+* [`fn withManagementMixin()`](#fn-withmanagementmixin)
 * [`fn withMaxPodsConstraint()`](#fn-withmaxpodsconstraint)
 * [`fn withMaxPodsConstraintMixin()`](#fn-withmaxpodsconstraintmixin)
 * [`fn withName()`](#fn-withname)
@@ -46,6 +48,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-configssh_confignew)
   * [`obj config.taints`](#obj-configtaints)
     * [`fn new()`](#fn-configtaintsnew)
+* [`obj management`](#obj-management)
+  * [`fn new()`](#fn-managementnew)
 * [`obj max_pods_constraint`](#obj-max_pods_constraint)
   * [`fn new()`](#fn-max_pods_constraintnew)
 * [`obj timeouts`](#obj-timeouts)
@@ -89,6 +93,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `version` (`string`): The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
   - `autoscaling` (`list[obj]`): Autoscaler configuration for this node pool. When `null`, the `autoscaling` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.autoscaling.new](#fn-autoscalingnew) constructor.
   - `config` (`list[obj]`): The configuration of the node pool. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.config.new](#fn-confignew) constructor.
+  - `management` (`list[obj]`): The Management configuration for this node pool. When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.management.new](#fn-managementnew) constructor.
   - `max_pods_constraint` (`list[obj]`): The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool. When `null`, the `max_pods_constraint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.max_pods_constraint.new](#fn-max_pods_constraintnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -123,6 +128,7 @@ injecting into a complete block.
   - `version` (`string`): The Kubernetes version to run on this node pool (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAwsServerConfig.
   - `autoscaling` (`list[obj]`): Autoscaler configuration for this node pool. When `null`, the `autoscaling` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.autoscaling.new](#fn-autoscalingnew) constructor.
   - `config` (`list[obj]`): The configuration of the node pool. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.config.new](#fn-confignew) constructor.
+  - `management` (`list[obj]`): The Management configuration for this node pool. When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.management.new](#fn-managementnew) constructor.
   - `max_pods_constraint` (`list[obj]`): The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool. When `null`, the `max_pods_constraint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.max_pods_constraint.new](#fn-max_pods_constraintnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -250,6 +256,43 @@ Terraform resource block to set or update the location field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `location` field.
+
+
+### fn withManagement
+
+```ts
+withManagement()
+```
+
+`google.list[obj].withManagement` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the management field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withManagementMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `management` field.
+
+
+### fn withManagementMixin
+
+```ts
+withManagementMixin()
+```
+
+`google.list[obj].withManagementMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the management field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withManagement](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `management` field.
 
 
 ### fn withMaxPodsConstraint
@@ -590,6 +633,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `taints` sub block.
+
+
+## obj management
+
+
+
+### fn management.new
+
+```ts
+new()
+```
+
+
+`google.container_aws_node_pool.management.new` constructs a new object with attributes and blocks configured for the `management`
+Terraform sub block.
+
+
+
+**Args**:
+  - `auto_repair` (`bool`): Optional. Whether or not the nodes will be automatically repaired. When `null`, the `auto_repair` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `management` sub block.
 
 
 ## obj max_pods_constraint

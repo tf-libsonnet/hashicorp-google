@@ -22,6 +22,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withProxyBind()`](#fn-withproxybind)
 * [`fn withQuicOverride()`](#fn-withquicoverride)
+* [`fn withServerTlsPolicy()`](#fn-withservertlspolicy)
 * [`fn withSslCertificates()`](#fn-withsslcertificates)
 * [`fn withSslPolicy()`](#fn-withsslpolicy)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -83,6 +84,15 @@ this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. When `
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, Google manages whether QUIC is used. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ENABLE&#34;, &#34;DISABLE&#34;] When `null`, the `quic_override` field will be omitted from the resulting object.
+  - `server_tls_policy` (`string`): A URL referring to a networksecurity.ServerTlsPolicy
+resource that describes how the proxy should authenticate inbound
+traffic. serverTlsPolicy only applies to a global TargetHttpsProxy
+attached to globalForwardingRules with the loadBalancingScheme
+set to INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED.
+For details which ServerTlsPolicy resources are accepted with
+INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
+loadBalancingScheme consult ServerTlsPolicy documentation.
+If left blank, communications are not encrypted. When `null`, the `server_tls_policy` field will be omitted from the resulting object.
   - `ssl_certificates` (`list`): A list of SslCertificate resource URLs or Certificate Manager certificate URLs that are used to authenticate
 connections between users and the load balancer. At least one resource must be specified. When `null`, the `ssl_certificates` field will be omitted from the resulting object.
   - `ssl_policy` (`string`): A reference to the SslPolicy resource that will be associated with
@@ -138,6 +148,15 @@ this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. When `
 whether the load balancer will attempt to negotiate QUIC with clients
 or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is
 specified, Google manages whether QUIC is used. Default value: &#34;NONE&#34; Possible values: [&#34;NONE&#34;, &#34;ENABLE&#34;, &#34;DISABLE&#34;] When `null`, the `quic_override` field will be omitted from the resulting object.
+  - `server_tls_policy` (`string`): A URL referring to a networksecurity.ServerTlsPolicy
+resource that describes how the proxy should authenticate inbound
+traffic. serverTlsPolicy only applies to a global TargetHttpsProxy
+attached to globalForwardingRules with the loadBalancingScheme
+set to INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED.
+For details which ServerTlsPolicy resources are accepted with
+INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
+loadBalancingScheme consult ServerTlsPolicy documentation.
+If left blank, communications are not encrypted. When `null`, the `server_tls_policy` field will be omitted from the resulting object.
   - `ssl_certificates` (`list`): A list of SslCertificate resource URLs or Certificate Manager certificate URLs that are used to authenticate
 connections between users and the load balancer. At least one resource must be specified. When `null`, the `ssl_certificates` field will be omitted from the resulting object.
   - `ssl_policy` (`string`): A reference to the SslPolicy resource that will be associated with
@@ -261,6 +280,22 @@ Terraform resource block to set or update the quic_override field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `quic_override` field.
+
+
+### fn withServerTlsPolicy
+
+```ts
+withServerTlsPolicy()
+```
+
+`google.string.withServerTlsPolicy` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the server_tls_policy field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `server_tls_policy` field.
 
 
 ### fn withSslCertificates

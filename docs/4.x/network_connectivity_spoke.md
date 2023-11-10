@@ -22,6 +22,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLinkedInterconnectAttachmentsMixin()`](#fn-withlinkedinterconnectattachmentsmixin)
 * [`fn withLinkedRouterApplianceInstances()`](#fn-withlinkedrouterapplianceinstances)
 * [`fn withLinkedRouterApplianceInstancesMixin()`](#fn-withlinkedrouterapplianceinstancesmixin)
+* [`fn withLinkedVpcNetwork()`](#fn-withlinkedvpcnetwork)
+* [`fn withLinkedVpcNetworkMixin()`](#fn-withlinkedvpcnetworkmixin)
 * [`fn withLinkedVpnTunnels()`](#fn-withlinkedvpntunnels)
 * [`fn withLinkedVpnTunnelsMixin()`](#fn-withlinkedvpntunnelsmixin)
 * [`fn withLocation()`](#fn-withlocation)
@@ -35,6 +37,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-linked_router_appliance_instancesnew)
   * [`obj linked_router_appliance_instances.instances`](#obj-linked_router_appliance_instancesinstances)
     * [`fn new()`](#fn-linked_router_appliance_instancesinstancesnew)
+* [`obj linked_vpc_network`](#obj-linked_vpc_network)
+  * [`fn new()`](#fn-linked_vpc_networknew)
 * [`obj linked_vpn_tunnels`](#obj-linked_vpn_tunnels)
   * [`fn new()`](#fn-linked_vpn_tunnelsnew)
 * [`obj timeouts`](#obj-timeouts)
@@ -77,6 +81,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `linked_interconnect_attachments` (`list[obj]`): A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes. When `null`, the `linked_interconnect_attachments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_interconnect_attachments.new](#fn-linked_interconnect_attachmentsnew) constructor.
   - `linked_router_appliance_instances` (`list[obj]`): The URIs of linked Router appliance resources When `null`, the `linked_router_appliance_instances` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_router_appliance_instances.new](#fn-linked_router_appliance_instancesnew) constructor.
+  - `linked_vpc_network` (`list[obj]`): VPC network that is associated with the spoke. When `null`, the `linked_vpc_network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_vpc_network.new](#fn-linked_vpc_networknew) constructor.
   - `linked_vpn_tunnels` (`list[obj]`): The URIs of linked VPN tunnel resources When `null`, the `linked_vpn_tunnels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_vpn_tunnels.new](#fn-linked_vpn_tunnelsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -110,6 +115,7 @@ injecting into a complete block.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `linked_interconnect_attachments` (`list[obj]`): A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes. When `null`, the `linked_interconnect_attachments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_interconnect_attachments.new](#fn-linked_interconnect_attachmentsnew) constructor.
   - `linked_router_appliance_instances` (`list[obj]`): The URIs of linked Router appliance resources When `null`, the `linked_router_appliance_instances` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_router_appliance_instances.new](#fn-linked_router_appliance_instancesnew) constructor.
+  - `linked_vpc_network` (`list[obj]`): VPC network that is associated with the spoke. When `null`, the `linked_vpc_network` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_vpc_network.new](#fn-linked_vpc_networknew) constructor.
   - `linked_vpn_tunnels` (`list[obj]`): The URIs of linked VPN tunnel resources When `null`, the `linked_vpn_tunnels` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.linked_vpn_tunnels.new](#fn-linked_vpn_tunnelsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.network_connectivity_spoke.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -237,6 +243,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `linked_router_appliance_instances` field.
+
+
+### fn withLinkedVpcNetwork
+
+```ts
+withLinkedVpcNetwork()
+```
+
+`google.list[obj].withLinkedVpcNetwork` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the linked_vpc_network field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withLinkedVpcNetworkMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `linked_vpc_network` field.
+
+
+### fn withLinkedVpcNetworkMixin
+
+```ts
+withLinkedVpcNetworkMixin()
+```
+
+`google.list[obj].withLinkedVpcNetworkMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the linked_vpc_network field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withLinkedVpcNetwork](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `linked_vpc_network` field.
 
 
 ### fn withLinkedVpnTunnels
@@ -430,6 +473,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `instances` sub block.
+
+
+## obj linked_vpc_network
+
+
+
+### fn linked_vpc_network.new
+
+```ts
+new()
+```
+
+
+`google.network_connectivity_spoke.linked_vpc_network.new` constructs a new object with attributes and blocks configured for the `linked_vpc_network`
+Terraform sub block.
+
+
+
+**Args**:
+  - `exclude_export_ranges` (`list`): IP ranges encompassing the subnets to be excluded from peering. When `null`, the `exclude_export_ranges` field will be omitted from the resulting object.
+  - `uri` (`string`): The URI of the VPC network resource.
+
+**Returns**:
+  - An attribute object that represents the `linked_vpc_network` sub block.
 
 
 ## obj linked_vpn_tunnels

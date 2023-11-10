@@ -17,6 +17,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withDeletionPolicy()`](#fn-withdeletionpolicy)
 * [`fn withEnabled()`](#fn-withenabled)
+* [`fn withIsSecretDataBase64()`](#fn-withissecretdatabase64)
 * [`fn withSecret()`](#fn-withsecret)
 * [`fn withSecretData()`](#fn-withsecretdata)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -60,6 +61,7 @@ disabled rather than deleted. Default is &#39;DELETE&#39;. Possible values are:
   * DISABLE
   * ABANDON When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `enabled` (`bool`): The current state of the SecretVersion. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `is_secret_data_base64` (`bool`): If set to &#39;true&#39;, the secret data is expected to be base64-encoded string and would be sent as is. When `null`, the `is_secret_data_base64` field will be omitted from the resulting object.
   - `secret` (`string`): Secret Manager secret resource
   - `secret_data` (`string`): The secret data. Must be no larger than 64KiB.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret_version.timeouts.new](#fn-timeoutsnew) constructor.
@@ -93,6 +95,7 @@ disabled rather than deleted. Default is &#39;DELETE&#39;. Possible values are:
   * DISABLE
   * ABANDON When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `enabled` (`bool`): The current state of the SecretVersion. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `is_secret_data_base64` (`bool`): If set to &#39;true&#39;, the secret data is expected to be base64-encoded string and would be sent as is. When `null`, the `is_secret_data_base64` field will be omitted from the resulting object.
   - `secret` (`string`): Secret Manager secret resource
   - `secret_data` (`string`): The secret data. Must be no larger than 64KiB.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.secret_manager_secret_version.timeouts.new](#fn-timeoutsnew) constructor.
@@ -131,6 +134,22 @@ Terraform resource block to set or update the enabled field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `enabled` field.
+
+
+### fn withIsSecretDataBase64
+
+```ts
+withIsSecretDataBase64()
+```
+
+`google.bool.withIsSecretDataBase64` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the is_secret_data_base64 field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `is_secret_data_base64` field.
 
 
 ### fn withSecret

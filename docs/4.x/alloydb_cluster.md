@@ -28,6 +28,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withNetwork()`](#fn-withnetwork)
+* [`fn withNetworkConfig()`](#fn-withnetworkconfig)
+* [`fn withNetworkConfigMixin()`](#fn-withnetworkconfigmixin)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRestoreBackupSource()`](#fn-withrestorebackupsource)
 * [`fn withRestoreBackupSourceMixin()`](#fn-withrestorebackupsourcemixin)
@@ -55,6 +57,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-encryption_confignew)
 * [`obj initial_user`](#obj-initial_user)
   * [`fn new()`](#fn-initial_usernew)
+* [`obj network_config`](#obj-network_config)
+  * [`fn new()`](#fn-network_confignew)
 * [`obj restore_backup_source`](#obj-restore_backup_source)
   * [`fn new()`](#fn-restore_backup_sourcenew)
 * [`obj restore_continuous_backup_source`](#obj-restore_continuous_backup_source)
@@ -97,7 +101,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): The location where the alloydb cluster should reside.
   - `network` (`string`): The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
 
-&#34;projects/{projectNumber}/global/networks/{network_id}&#34;.
+&#34;projects/{projectNumber}/global/networks/{network_id}&#34;. When `null`, the `network` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `automated_backup_policy` (`list[obj]`): The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default. When `null`, the `automated_backup_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.automated_backup_policy.new](#fn-automated_backup_policynew) constructor.
   - `continuous_backup_config` (`list[obj]`): The continuous backup config for this cluster.
@@ -105,6 +109,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days. When `null`, the `continuous_backup_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.continuous_backup_config.new](#fn-continuous_backup_confignew) constructor.
   - `encryption_config` (`list[obj]`): EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.encryption_config.new](#fn-encryption_confignew) constructor.
   - `initial_user` (`list[obj]`): Initial user to setup during cluster creation. When `null`, the `initial_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.initial_user.new](#fn-initial_usernew) constructor.
+  - `network_config` (`list[obj]`): Metadata related to network configuration. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.network_config.new](#fn-network_confignew) constructor.
   - `restore_backup_source` (`list[obj]`): The source when restoring from a backup. Conflicts with &#39;restore_continuous_backup_source&#39;, both can&#39;t be set together. When `null`, the `restore_backup_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.restore_backup_source.new](#fn-restore_backup_sourcenew) constructor.
   - `restore_continuous_backup_source` (`list[obj]`): The source when restoring via point in time recovery (PITR). Conflicts with &#39;restore_backup_source&#39;, both can&#39;t be set together. When `null`, the `restore_continuous_backup_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.restore_continuous_backup_source.new](#fn-restore_continuous_backup_sourcenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.timeouts.new](#fn-timeoutsnew) constructor.
@@ -137,7 +142,7 @@ injecting into a complete block.
   - `location` (`string`): The location where the alloydb cluster should reside.
   - `network` (`string`): The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
 
-&#34;projects/{projectNumber}/global/networks/{network_id}&#34;.
+&#34;projects/{projectNumber}/global/networks/{network_id}&#34;. When `null`, the `network` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `automated_backup_policy` (`list[obj]`): The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default. When `null`, the `automated_backup_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.automated_backup_policy.new](#fn-automated_backup_policynew) constructor.
   - `continuous_backup_config` (`list[obj]`): The continuous backup config for this cluster.
@@ -145,6 +150,7 @@ injecting into a complete block.
 If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days. When `null`, the `continuous_backup_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.continuous_backup_config.new](#fn-continuous_backup_confignew) constructor.
   - `encryption_config` (`list[obj]`): EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key). When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.encryption_config.new](#fn-encryption_confignew) constructor.
   - `initial_user` (`list[obj]`): Initial user to setup during cluster creation. When `null`, the `initial_user` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.initial_user.new](#fn-initial_usernew) constructor.
+  - `network_config` (`list[obj]`): Metadata related to network configuration. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.network_config.new](#fn-network_confignew) constructor.
   - `restore_backup_source` (`list[obj]`): The source when restoring from a backup. Conflicts with &#39;restore_continuous_backup_source&#39;, both can&#39;t be set together. When `null`, the `restore_backup_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.restore_backup_source.new](#fn-restore_backup_sourcenew) constructor.
   - `restore_continuous_backup_source` (`list[obj]`): The source when restoring via point in time recovery (PITR). Conflicts with &#39;restore_backup_source&#39;, both can&#39;t be set together. When `null`, the `restore_continuous_backup_source` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.restore_continuous_backup_source.new](#fn-restore_continuous_backup_sourcenew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.alloydb_cluster.timeouts.new](#fn-timeoutsnew) constructor.
@@ -379,6 +385,43 @@ Terraform resource block to set or update the network field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `network` field.
+
+
+### fn withNetworkConfig
+
+```ts
+withNetworkConfig()
+```
+
+`google.list[obj].withNetworkConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the network_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withNetworkConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `network_config` field.
+
+
+### fn withNetworkConfigMixin
+
+```ts
+withNetworkConfigMixin()
+```
+
+`google.list[obj].withNetworkConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the network_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withNetworkConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `network_config` field.
 
 
 ### fn withProject
@@ -756,6 +799,32 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `initial_user` sub block.
+
+
+## obj network_config
+
+
+
+### fn network_config.new
+
+```ts
+new()
+```
+
+
+`google.alloydb_cluster.network_config.new` constructs a new object with attributes and blocks configured for the `network_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `allocated_ip_range` (`string`): The name of the allocated IP range for the private IP AlloyDB cluster. For example: &#34;google-managed-services-default&#34;.
+If set, the instance IPs for this cluster will be created in the allocated range. When `null`, the `allocated_ip_range` field will be omitted from the resulting object.
+  - `network` (`string`): The resource link for the VPC network in which cluster resources are created and from which they are accessible via Private IP. The network must belong to the same project as the cluster.
+It is specified in the form: &#34;projects/{projectNumber}/global/networks/{network_id}&#34;. When `null`, the `network` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `network_config` sub block.
 
 
 ## obj restore_backup_source

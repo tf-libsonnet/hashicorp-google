@@ -78,6 +78,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withNodeConfigMixin()`](#fn-withnodeconfigmixin)
 * [`fn withNodeLocations()`](#fn-withnodelocations)
 * [`fn withNodePool()`](#fn-withnodepool)
+* [`fn withNodePoolAutoConfig()`](#fn-withnodepoolautoconfig)
+* [`fn withNodePoolAutoConfigMixin()`](#fn-withnodepoolautoconfigmixin)
 * [`fn withNodePoolDefaults()`](#fn-withnodepooldefaults)
 * [`fn withNodePoolDefaultsMixin()`](#fn-withnodepooldefaultsmixin)
 * [`fn withNodePoolMixin()`](#fn-withnodepoolmixin)
@@ -205,6 +207,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-node_configconfidential_nodesnew)
   * [`obj node_config.ephemeral_storage_local_ssd_config`](#obj-node_configephemeral_storage_local_ssd_config)
     * [`fn new()`](#fn-node_configephemeral_storage_local_ssd_confignew)
+  * [`obj node_config.fast_socket`](#obj-node_configfast_socket)
+    * [`fn new()`](#fn-node_configfast_socketnew)
   * [`obj node_config.gcfs_config`](#obj-node_configgcfs_config)
     * [`fn new()`](#fn-node_configgcfs_confignew)
   * [`obj node_config.gvnic`](#obj-node_configgvnic)
@@ -245,6 +249,8 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-node_poolnode_configconfidential_nodesnew)
     * [`obj node_pool.node_config.ephemeral_storage_local_ssd_config`](#obj-node_poolnode_configephemeral_storage_local_ssd_config)
       * [`fn new()`](#fn-node_poolnode_configephemeral_storage_local_ssd_confignew)
+    * [`obj node_pool.node_config.fast_socket`](#obj-node_poolnode_configfast_socket)
+      * [`fn new()`](#fn-node_poolnode_configfast_socketnew)
     * [`obj node_pool.node_config.gcfs_config`](#obj-node_poolnode_configgcfs_config)
       * [`fn new()`](#fn-node_poolnode_configgcfs_confignew)
     * [`obj node_pool.node_config.gvnic`](#obj-node_poolnode_configgvnic)
@@ -275,6 +281,10 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-node_poolupgrade_settingsblue_green_settingsnew)
       * [`obj node_pool.upgrade_settings.blue_green_settings.standard_rollout_policy`](#obj-node_poolupgrade_settingsblue_green_settingsstandard_rollout_policy)
         * [`fn new()`](#fn-node_poolupgrade_settingsblue_green_settingsstandard_rollout_policynew)
+* [`obj node_pool_auto_config`](#obj-node_pool_auto_config)
+  * [`fn new()`](#fn-node_pool_auto_confignew)
+  * [`obj node_pool_auto_config.network_tags`](#obj-node_pool_auto_confignetwork_tags)
+    * [`fn new()`](#fn-node_pool_auto_confignetwork_tagsnew)
 * [`obj node_pool_defaults`](#obj-node_pool_defaults)
   * [`fn new()`](#fn-node_pool_defaultsnew)
   * [`obj node_pool_defaults.node_config_defaults`](#obj-node_pool_defaultsnode_config_defaults)
@@ -384,6 +394,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `network_policy` (`list[obj]`): Configuration options for the NetworkPolicy feature. When `null`, the `network_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.network_policy.new](#fn-network_policynew) constructor.
   - `node_config` (`list[obj]`): The configuration of the nodepool When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.new](#fn-node_confignew) constructor.
   - `node_pool` (`list[obj]`): List of node pools associated with this cluster. See google_container_node_pool for schema. Warning: node pools defined inside a cluster can&#39;t be changed (or added/removed) after cluster creation without deleting and recreating the entire cluster. Unless you absolutely need the ability to say &#34;these are the only node pools associated with this cluster&#34;, use the google_container_node_pool resource instead of this property. When `null`, the `node_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.new](#fn-node_poolnew) constructor.
+  - `node_pool_auto_config` (`list[obj]`): Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node auto-provisioning enabled clusters. When `null`, the `node_pool_auto_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool_auto_config.new](#fn-node_pool_auto_confignew) constructor.
   - `node_pool_defaults` (`list[obj]`): The default nodel pool settings for the entire cluster. When `null`, the `node_pool_defaults` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool_defaults.new](#fn-node_pool_defaultsnew) constructor.
   - `notification_config` (`list[obj]`): The notification config for sending cluster upgrade notifications When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.notification_config.new](#fn-notification_confignew) constructor.
   - `private_cluster_config` (`list[obj]`): Configuration for private clusters, clusters with private nodes. When `null`, the `private_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.private_cluster_config.new](#fn-private_cluster_confignew) constructor.
@@ -466,6 +477,7 @@ injecting into a complete block.
   - `network_policy` (`list[obj]`): Configuration options for the NetworkPolicy feature. When `null`, the `network_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.network_policy.new](#fn-network_policynew) constructor.
   - `node_config` (`list[obj]`): The configuration of the nodepool When `null`, the `node_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.new](#fn-node_confignew) constructor.
   - `node_pool` (`list[obj]`): List of node pools associated with this cluster. See google_container_node_pool for schema. Warning: node pools defined inside a cluster can&#39;t be changed (or added/removed) after cluster creation without deleting and recreating the entire cluster. Unless you absolutely need the ability to say &#34;these are the only node pools associated with this cluster&#34;, use the google_container_node_pool resource instead of this property. When `null`, the `node_pool` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.new](#fn-node_poolnew) constructor.
+  - `node_pool_auto_config` (`list[obj]`): Node pool configs that apply to all auto-provisioned node pools in autopilot clusters and node auto-provisioning enabled clusters. When `null`, the `node_pool_auto_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool_auto_config.new](#fn-node_pool_auto_confignew) constructor.
   - `node_pool_defaults` (`list[obj]`): The default nodel pool settings for the entire cluster. When `null`, the `node_pool_defaults` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool_defaults.new](#fn-node_pool_defaultsnew) constructor.
   - `notification_config` (`list[obj]`): The notification config for sending cluster upgrade notifications When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.notification_config.new](#fn-notification_confignew) constructor.
   - `private_cluster_config` (`list[obj]`): Configuration for private clusters, clusters with private nodes. When `null`, the `private_cluster_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.private_cluster_config.new](#fn-private_cluster_confignew) constructor.
@@ -1589,6 +1601,43 @@ passed in value to the existing array, use the [google.list[obj].withNodePoolMix
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `node_pool` field.
+
+
+### fn withNodePoolAutoConfig
+
+```ts
+withNodePoolAutoConfig()
+```
+
+`google.list[obj].withNodePoolAutoConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the node_pool_auto_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withNodePoolAutoConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `node_pool_auto_config` field.
+
+
+### fn withNodePoolAutoConfigMixin
+
+```ts
+withNodePoolAutoConfigMixin()
+```
+
+`google.list[obj].withNodePoolAutoConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the node_pool_auto_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withNodePoolAutoConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `node_pool_auto_config` field.
 
 
 ### fn withNodePoolDefaults
@@ -3230,6 +3279,7 @@ Terraform sub block.
   - `advanced_machine_features` (`list[obj]`): Specifies options for controlling advanced machine features. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.advanced_machine_features.new](#fn-node_configadvanced_machine_featuresnew) constructor.
   - `confidential_nodes` (`list[obj]`): Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration can&#39;t be changed (or added/removed) after pool creation without deleting and recreating the entire pool. When `null`, the `confidential_nodes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.confidential_nodes.new](#fn-node_configconfidential_nodesnew) constructor.
   - `ephemeral_storage_local_ssd_config` (`list[obj]`): Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. When `null`, the `ephemeral_storage_local_ssd_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.ephemeral_storage_local_ssd_config.new](#fn-node_configephemeral_storage_local_ssd_confignew) constructor.
+  - `fast_socket` (`list[obj]`): Enable or disable NCCL Fast Socket in the node pool. When `null`, the `fast_socket` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.fast_socket.new](#fn-node_configfast_socketnew) constructor.
   - `gcfs_config` (`list[obj]`): GCFS configuration for this node. When `null`, the `gcfs_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.gcfs_config.new](#fn-node_configgcfs_confignew) constructor.
   - `gvnic` (`list[obj]`): Enable or disable gvnic in the node pool. When `null`, the `gvnic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.gvnic.new](#fn-node_configgvnicnew) constructor.
   - `host_maintenance_policy` (`list[obj]`): The maintenance policy for the hosts on which the GKE VMs run on. When `null`, the `host_maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_config.host_maintenance_policy.new](#fn-node_confighost_maintenance_policynew) constructor.
@@ -3312,6 +3362,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `ephemeral_storage_local_ssd_config` sub block.
+
+
+## obj node_config.fast_socket
+
+
+
+### fn node_config.fast_socket.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_config.fast_socket.new` constructs a new object with attributes and blocks configured for the `fast_socket`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Whether or not NCCL Fast Socket is enabled
+
+**Returns**:
+  - An attribute object that represents the `fast_socket` sub block.
 
 
 ## obj node_config.gcfs_config
@@ -3750,6 +3823,7 @@ Terraform sub block.
   - `advanced_machine_features` (`list[obj]`): Specifies options for controlling advanced machine features. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.advanced_machine_features.new](#fn-node_poolnode_pooladvanced_machine_featuresnew) constructor.
   - `confidential_nodes` (`list[obj]`): Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration can&#39;t be changed (or added/removed) after pool creation without deleting and recreating the entire pool. When `null`, the `confidential_nodes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.confidential_nodes.new](#fn-node_poolnode_poolconfidential_nodesnew) constructor.
   - `ephemeral_storage_local_ssd_config` (`list[obj]`): Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. When `null`, the `ephemeral_storage_local_ssd_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.ephemeral_storage_local_ssd_config.new](#fn-node_poolnode_poolephemeral_storage_local_ssd_confignew) constructor.
+  - `fast_socket` (`list[obj]`): Enable or disable NCCL Fast Socket in the node pool. When `null`, the `fast_socket` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.fast_socket.new](#fn-node_poolnode_poolfast_socketnew) constructor.
   - `gcfs_config` (`list[obj]`): GCFS configuration for this node. When `null`, the `gcfs_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.gcfs_config.new](#fn-node_poolnode_poolgcfs_confignew) constructor.
   - `gvnic` (`list[obj]`): Enable or disable gvnic in the node pool. When `null`, the `gvnic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.gvnic.new](#fn-node_poolnode_poolgvnicnew) constructor.
   - `host_maintenance_policy` (`list[obj]`): The maintenance policy for the hosts on which the GKE VMs run on. When `null`, the `host_maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool.node_config.host_maintenance_policy.new](#fn-node_poolnode_poolhost_maintenance_policynew) constructor.
@@ -3832,6 +3906,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `ephemeral_storage_local_ssd_config` sub block.
+
+
+## obj node_pool.node_config.fast_socket
+
+
+
+### fn node_pool.node_config.fast_socket.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_pool.node_config.fast_socket.new` constructs a new object with attributes and blocks configured for the `fast_socket`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Whether or not NCCL Fast Socket is enabled
+
+**Returns**:
+  - An attribute object that represents the `fast_socket` sub block.
 
 
 ## obj node_pool.node_config.gcfs_config
@@ -4113,6 +4210,7 @@ Terraform sub block.
 
 **Args**:
   - `policy_name` (`string`): If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned. When `null`, the `policy_name` field will be omitted from the resulting object.
+  - `tpu_topology` (`string`): TPU placement topology for pod slice node pool. https://cloud.google.com/tpu/docs/types-topologies#tpu_topologies When `null`, the `tpu_topology` field will be omitted from the resulting object.
   - `type` (`string`): Type defines the type of placement policy
 
 **Returns**:
@@ -4192,6 +4290,52 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `standard_rollout_policy` sub block.
+
+
+## obj node_pool_auto_config
+
+
+
+### fn node_pool_auto_config.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_pool_auto_config.new` constructs a new object with attributes and blocks configured for the `node_pool_auto_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `network_tags` (`list[obj]`): Collection of Compute Engine network tags that can be applied to a node&#39;s underlying VM instance. When `null`, the `network_tags` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.node_pool_auto_config.network_tags.new](#fn-node_pool_auto_confignetwork_tagsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `node_pool_auto_config` sub block.
+
+
+## obj node_pool_auto_config.network_tags
+
+
+
+### fn node_pool_auto_config.network_tags.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.node_pool_auto_config.network_tags.new` constructs a new object with attributes and blocks configured for the `network_tags`
+Terraform sub block.
+
+
+
+**Args**:
+  - `tags` (`list`): List of network tags applied to auto-provisioned node pools. When `null`, the `tags` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `network_tags` sub block.
 
 
 ## obj node_pool_defaults

@@ -83,6 +83,8 @@ This package contains functions and utilities for setting up the resource using 
         * [`fn new()`](#fn-templatevolumessecretitemsnew)
   * [`obj template.vpc_access`](#obj-templatevpc_access)
     * [`fn new()`](#fn-templatevpc_accessnew)
+    * [`obj template.vpc_access.network_interfaces`](#obj-templatevpc_accessnetwork_interfaces)
+      * [`fn new()`](#fn-templatevpc_accessnetwork_interfacesnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 * [`obj traffic`](#obj-traffic)
@@ -1154,9 +1156,39 @@ Terraform sub block.
 **Args**:
   - `connector` (`string`): VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}, where {project} can be project id or number. When `null`, the `connector` field will be omitted from the resulting object.
   - `egress` (`string`): Traffic VPC egress settings. Possible values: [&#34;ALL_TRAFFIC&#34;, &#34;PRIVATE_RANGES_ONLY&#34;] When `null`, the `egress` field will be omitted from the resulting object.
+  - `network_interfaces` (`list[obj]`): Direct VPC egress settings. Currently only single network interface is supported. When `null`, the `network_interfaces` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_service.template.vpc_access.network_interfaces.new](#fn-templatetemplatenetwork_interfacesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `vpc_access` sub block.
+
+
+## obj template.vpc_access.network_interfaces
+
+
+
+### fn template.vpc_access.network_interfaces.new
+
+```ts
+new()
+```
+
+
+`google.cloud_run_v2_service.template.vpc_access.network_interfaces.new` constructs a new object with attributes and blocks configured for the `network_interfaces`
+Terraform sub block.
+
+
+
+**Args**:
+  - `network` (`string`): The VPC network that the Cloud Run resource will be able to send traffic to. At least one of network or subnetwork must be specified. If both
+network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be
+looked up from the subnetwork. When `null`, the `network` field will be omitted from the resulting object.
+  - `subnetwork` (`string`): The VPC subnetwork that the Cloud Run resource will get IPs from. At least one of network or subnetwork must be specified. If both
+network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the
+subnetwork with the same name with the network will be used. When `null`, the `subnetwork` field will be omitted from the resulting object.
+  - `tags` (`list`): Network tags applied to this Cloud Run service. When `null`, the `tags` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `network_interfaces` sub block.
 
 
 ## obj timeouts

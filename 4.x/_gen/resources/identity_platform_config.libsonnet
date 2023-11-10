@@ -34,7 +34,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       }),
     },
   },
-  '#new':: d.fn(help="\n`google.identity_platform_config.new` injects a new `google_identity_platform_config` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.identity_platform_config.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.identity_platform_config` using the reference:\n\n    $._ref.google_identity_platform_config.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_identity_platform_config.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `authorized_domains` (`list`): List of domains authorized for OAuth redirects. When `null`, the `authorized_domains` field will be omitted from the resulting object.\n  - `autodelete_anonymous_users` (`bool`): Whether anonymous users will be auto-deleted after a period of 30 days When `null`, the `autodelete_anonymous_users` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.\n  - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.\n  - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`google.identity_platform_config.new` injects a new `google_identity_platform_config` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.identity_platform_config.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.identity_platform_config` using the reference:\n\n    $._ref.google_identity_platform_config.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_identity_platform_config.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `authorized_domains` (`list`): List of domains authorized for OAuth redirects. When `null`, the `authorized_domains` field will be omitted from the resulting object.\n  - `autodelete_anonymous_users` (`bool`): Whether anonymous users will be auto-deleted after a period of 30 days When `null`, the `autodelete_anonymous_users` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.\n  - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.\n  - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.\n  - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.new](#fn-sign_innew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     authorized_domains=null,
@@ -42,6 +42,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     blocking_functions=null,
     project=null,
     quota=null,
+    sign_in=null,
     timeouts=null,
     _meta={}
   ):: tf.withResource(
@@ -53,17 +54,19 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       blocking_functions=blocking_functions,
       project=project,
       quota=quota,
+      sign_in=sign_in,
       timeouts=timeouts
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`google.identity_platform_config.newAttrs` constructs a new object with attributes and blocks configured for the `identity_platform_config`\nTerraform resource.\n\nUnlike [google.identity_platform_config.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `authorized_domains` (`list`): List of domains authorized for OAuth redirects. When `null`, the `authorized_domains` field will be omitted from the resulting object.\n  - `autodelete_anonymous_users` (`bool`): Whether anonymous users will be auto-deleted after a period of 30 days When `null`, the `autodelete_anonymous_users` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.\n  - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.\n  - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `identity_platform_config` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`google.identity_platform_config.newAttrs` constructs a new object with attributes and blocks configured for the `identity_platform_config`\nTerraform resource.\n\nUnlike [google.identity_platform_config.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `authorized_domains` (`list`): List of domains authorized for OAuth redirects. When `null`, the `authorized_domains` field will be omitted from the resulting object.\n  - `autodelete_anonymous_users` (`bool`): Whether anonymous users will be auto-deleted after a period of 30 days When `null`, the `autodelete_anonymous_users` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.\n  - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.\n  - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.\n  - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.new](#fn-sign_innew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `identity_platform_config` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     authorized_domains=null,
     autodelete_anonymous_users=null,
     blocking_functions=null,
     project=null,
     quota=null,
+    sign_in=null,
     timeouts=null
   ):: std.prune(a={
     authorized_domains: authorized_domains,
@@ -71,6 +74,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     blocking_functions: blocking_functions,
     project: project,
     quota: quota,
+    sign_in: sign_in,
     timeouts: timeouts,
   }),
   quota:: {
@@ -90,6 +94,48 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         quota: quota,
         quota_duration: quota_duration,
         start_time: start_time,
+      }),
+    },
+  },
+  sign_in:: {
+    anonymous:: {
+      '#new':: d.fn(help='\n`google.identity_platform_config.sign_in.anonymous.new` constructs a new object with attributes and blocks configured for the `anonymous`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Whether anonymous user auth is enabled for the project or not.\n\n**Returns**:\n  - An attribute object that represents the `anonymous` sub block.\n', args=[]),
+      new(
+        enabled
+      ):: std.prune(a={
+        enabled: enabled,
+      }),
+    },
+    email:: {
+      '#new':: d.fn(help='\n`google.identity_platform_config.sign_in.email.new` constructs a new object with attributes and blocks configured for the `email`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Whether email auth is enabled for the project or not.\n  - `password_required` (`bool`): Whether a password is required for email auth or not. If true, both an email and\npassword must be provided to sign in. If false, a user may sign in via either\nemail/password or email link. When `null`, the `password_required` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `email` sub block.\n', args=[]),
+      new(
+        enabled,
+        password_required=null
+      ):: std.prune(a={
+        enabled: enabled,
+        password_required: password_required,
+      }),
+    },
+    '#new':: d.fn(help='\n`google.identity_platform_config.sign_in.new` constructs a new object with attributes and blocks configured for the `sign_in`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allow_duplicate_emails` (`bool`): Whether to allow more than one account to have the same email. When `null`, the `allow_duplicate_emails` field will be omitted from the resulting object.\n  - `anonymous` (`list[obj]`): Configuration options related to authenticating an anonymous user. When `null`, the `anonymous` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.anonymous.new](#fn-sign_inanonymousnew) constructor.\n  - `email` (`list[obj]`): Configuration options related to authenticating a user by their email address. When `null`, the `email` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.email.new](#fn-sign_inemailnew) constructor.\n  - `phone_number` (`list[obj]`): Configuration options related to authenticated a user by their phone number. When `null`, the `phone_number` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.phone_number.new](#fn-sign_inphone_numbernew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `sign_in` sub block.\n', args=[]),
+    new(
+      allow_duplicate_emails=null,
+      anonymous=null,
+      email=null,
+      phone_number=null
+    ):: std.prune(a={
+      allow_duplicate_emails: allow_duplicate_emails,
+      anonymous: anonymous,
+      email: email,
+      phone_number: phone_number,
+    }),
+    phone_number:: {
+      '#new':: d.fn(help='\n`google.identity_platform_config.sign_in.phone_number.new` constructs a new object with attributes and blocks configured for the `phone_number`\nTerraform sub block.\n\n\n\n**Args**:\n  - `enabled` (`bool`): Whether phone number auth is enabled for the project or not.\n  - `test_phone_numbers` (`obj`): A map of &lt;test phone number, fake code&gt; that can be used for phone auth testing. When `null`, the `test_phone_numbers` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `phone_number` sub block.\n', args=[]),
+      new(
+        enabled,
+        test_phone_numbers=null
+      ):: std.prune(a={
+        enabled: enabled,
+        test_phone_numbers: test_phone_numbers,
       }),
     },
   },
@@ -171,6 +217,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       google_identity_platform_config+: {
         [resourceLabel]+: {
           quota+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  '#withSignIn':: d.fn(help='`google.list[obj].withSignIn` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the sign_in field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [google.list[obj].withSignInMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `sign_in` field.\n', args=[]),
+  withSignIn(resourceLabel, value): {
+    resource+: {
+      google_identity_platform_config+: {
+        [resourceLabel]+: {
+          sign_in: value,
+        },
+      },
+    },
+  },
+  '#withSignInMixin':: d.fn(help='`google.list[obj].withSignInMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the sign_in field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [google.list[obj].withSignIn](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `sign_in` field.\n', args=[]),
+  withSignInMixin(resourceLabel, value): {
+    resource+: {
+      google_identity_platform_config+: {
+        [resourceLabel]+: {
+          sign_in+: if std.isArray(v=value) then value else [value],
         },
       },
     },

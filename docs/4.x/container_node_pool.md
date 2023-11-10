@@ -55,6 +55,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-node_configconfidential_nodesnew)
   * [`obj node_config.ephemeral_storage_local_ssd_config`](#obj-node_configephemeral_storage_local_ssd_config)
     * [`fn new()`](#fn-node_configephemeral_storage_local_ssd_confignew)
+  * [`obj node_config.fast_socket`](#obj-node_configfast_socket)
+    * [`fn new()`](#fn-node_configfast_socketnew)
   * [`obj node_config.gcfs_config`](#obj-node_configgcfs_config)
     * [`fn new()`](#fn-node_configgcfs_confignew)
   * [`obj node_config.gvnic`](#obj-node_configgvnic)
@@ -737,6 +739,7 @@ Terraform sub block.
   - `advanced_machine_features` (`list[obj]`): Specifies options for controlling advanced machine features. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.advanced_machine_features.new](#fn-node_configadvanced_machine_featuresnew) constructor.
   - `confidential_nodes` (`list[obj]`): Configuration for the confidential nodes feature, which makes nodes run on confidential VMs. Warning: This configuration can&#39;t be changed (or added/removed) after pool creation without deleting and recreating the entire pool. When `null`, the `confidential_nodes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.confidential_nodes.new](#fn-node_configconfidential_nodesnew) constructor.
   - `ephemeral_storage_local_ssd_config` (`list[obj]`): Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. When `null`, the `ephemeral_storage_local_ssd_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.ephemeral_storage_local_ssd_config.new](#fn-node_configephemeral_storage_local_ssd_confignew) constructor.
+  - `fast_socket` (`list[obj]`): Enable or disable NCCL Fast Socket in the node pool. When `null`, the `fast_socket` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.fast_socket.new](#fn-node_configfast_socketnew) constructor.
   - `gcfs_config` (`list[obj]`): GCFS configuration for this node. When `null`, the `gcfs_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.gcfs_config.new](#fn-node_configgcfs_confignew) constructor.
   - `gvnic` (`list[obj]`): Enable or disable gvnic in the node pool. When `null`, the `gvnic` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.gvnic.new](#fn-node_configgvnicnew) constructor.
   - `host_maintenance_policy` (`list[obj]`): The maintenance policy for the hosts on which the GKE VMs run on. When `null`, the `host_maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_node_pool.node_config.host_maintenance_policy.new](#fn-node_confighost_maintenance_policynew) constructor.
@@ -819,6 +822,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `ephemeral_storage_local_ssd_config` sub block.
+
+
+## obj node_config.fast_socket
+
+
+
+### fn node_config.fast_socket.new
+
+```ts
+new()
+```
+
+
+`google.container_node_pool.node_config.fast_socket.new` constructs a new object with attributes and blocks configured for the `fast_socket`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Whether or not NCCL Fast Socket is enabled
+
+**Returns**:
+  - An attribute object that represents the `fast_socket` sub block.
 
 
 ## obj node_config.gcfs_config
@@ -1100,6 +1126,7 @@ Terraform sub block.
 
 **Args**:
   - `policy_name` (`string`): If set, refers to the name of a custom resource policy supplied by the user. The resource policy must be in the same project and region as the node pool. If not found, InvalidArgument error is returned. When `null`, the `policy_name` field will be omitted from the resulting object.
+  - `tpu_topology` (`string`): TPU placement topology for pod slice node pool. https://cloud.google.com/tpu/docs/types-topologies#tpu_topologies When `null`, the `tpu_topology` field will be omitted from the resulting object.
   - `type` (`string`): Type defines the type of placement policy
 
 **Returns**:

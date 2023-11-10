@@ -22,6 +22,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withQuota()`](#fn-withquota)
 * [`fn withQuotaMixin()`](#fn-withquotamixin)
+* [`fn withSignIn()`](#fn-withsignin)
+* [`fn withSignInMixin()`](#fn-withsigninmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj blocking_functions`](#obj-blocking_functions)
@@ -34,6 +36,14 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-quotanew)
   * [`obj quota.sign_up_quota_config`](#obj-quotasign_up_quota_config)
     * [`fn new()`](#fn-quotasign_up_quota_confignew)
+* [`obj sign_in`](#obj-sign_in)
+  * [`fn new()`](#fn-sign_innew)
+  * [`obj sign_in.anonymous`](#obj-sign_inanonymous)
+    * [`fn new()`](#fn-sign_inanonymousnew)
+  * [`obj sign_in.email`](#obj-sign_inemail)
+    * [`fn new()`](#fn-sign_inemailnew)
+  * [`obj sign_in.phone_number`](#obj-sign_inphone_number)
+    * [`fn new()`](#fn-sign_inphone_numbernew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -71,6 +81,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.
   - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.
+  - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.new](#fn-sign_innew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -100,6 +111,7 @@ injecting into a complete block.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.
   - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.
+  - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.new](#fn-sign_innew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -226,6 +238,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `quota` field.
+
+
+### fn withSignIn
+
+```ts
+withSignIn()
+```
+
+`google.list[obj].withSignIn` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the sign_in field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withSignInMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `sign_in` field.
+
+
+### fn withSignInMixin
+
+```ts
+withSignInMixin()
+```
+
+`google.list[obj].withSignInMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the sign_in field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withSignIn](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `sign_in` field.
 
 
 ### fn withTimeouts
@@ -383,6 +432,105 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `sign_up_quota_config` sub block.
+
+
+## obj sign_in
+
+
+
+### fn sign_in.new
+
+```ts
+new()
+```
+
+
+`google.identity_platform_config.sign_in.new` constructs a new object with attributes and blocks configured for the `sign_in`
+Terraform sub block.
+
+
+
+**Args**:
+  - `allow_duplicate_emails` (`bool`): Whether to allow more than one account to have the same email. When `null`, the `allow_duplicate_emails` field will be omitted from the resulting object.
+  - `anonymous` (`list[obj]`): Configuration options related to authenticating an anonymous user. When `null`, the `anonymous` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.anonymous.new](#fn-sign_inanonymousnew) constructor.
+  - `email` (`list[obj]`): Configuration options related to authenticating a user by their email address. When `null`, the `email` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.email.new](#fn-sign_inemailnew) constructor.
+  - `phone_number` (`list[obj]`): Configuration options related to authenticated a user by their phone number. When `null`, the `phone_number` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.phone_number.new](#fn-sign_inphone_numbernew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `sign_in` sub block.
+
+
+## obj sign_in.anonymous
+
+
+
+### fn sign_in.anonymous.new
+
+```ts
+new()
+```
+
+
+`google.identity_platform_config.sign_in.anonymous.new` constructs a new object with attributes and blocks configured for the `anonymous`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Whether anonymous user auth is enabled for the project or not.
+
+**Returns**:
+  - An attribute object that represents the `anonymous` sub block.
+
+
+## obj sign_in.email
+
+
+
+### fn sign_in.email.new
+
+```ts
+new()
+```
+
+
+`google.identity_platform_config.sign_in.email.new` constructs a new object with attributes and blocks configured for the `email`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Whether email auth is enabled for the project or not.
+  - `password_required` (`bool`): Whether a password is required for email auth or not. If true, both an email and
+password must be provided to sign in. If false, a user may sign in via either
+email/password or email link. When `null`, the `password_required` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `email` sub block.
+
+
+## obj sign_in.phone_number
+
+
+
+### fn sign_in.phone_number.new
+
+```ts
+new()
+```
+
+
+`google.identity_platform_config.sign_in.phone_number.new` constructs a new object with attributes and blocks configured for the `phone_number`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Whether phone number auth is enabled for the project or not.
+  - `test_phone_numbers` (`obj`): A map of &lt;test phone number, fake code&gt; that can be used for phone auth testing. When `null`, the `test_phone_numbers` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `phone_number` sub block.
 
 
 ## obj timeouts

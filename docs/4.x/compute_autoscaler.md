@@ -318,7 +318,7 @@ of replicas.
 to. This cannot be less than 0. If not provided, autoscaler will
 choose a default value depending on maximum number of instances
 allowed.
-  - `mode` (`string`): Defines operating mode for this policy. Default value: &#34;ON&#34; Possible values: [&#34;OFF&#34;, &#34;ONLY_UP&#34;, &#34;ON&#34;] When `null`, the `mode` field will be omitted from the resulting object.
+  - `mode` (`string`): Defines operating mode for this policy. When `null`, the `mode` field will be omitted from the resulting object.
   - `cpu_utilization` (`list[obj]`): Defines the CPU utilization policy that allows the autoscaler to
 scale based on the average CPU utilization of a managed instance
 group. When `null`, the `cpu_utilization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_autoscaler.autoscaling_policy.cpu_utilization.new](#fn-autoscaling_policycpu_utilizationnew) constructor.
