@@ -122,6 +122,7 @@ the `src` and/or `version` parameters are set.
   - `identity_platform_custom_endpoint` (`string`): Set the `identity_platform_custom_endpoint` field on the resulting provider block. When `null`, the `identity_platform_custom_endpoint` field will be omitted from the resulting object.
   - `impersonate_service_account` (`string`): Set the `impersonate_service_account` field on the resulting provider block. When `null`, the `impersonate_service_account` field will be omitted from the resulting object.
   - `impersonate_service_account_delegates` (`list`): Set the `impersonate_service_account_delegates` field on the resulting provider block. When `null`, the `impersonate_service_account_delegates` field will be omitted from the resulting object.
+  - `integration_connectors_custom_endpoint` (`string`): Set the `integration_connectors_custom_endpoint` field on the resulting provider block. When `null`, the `integration_connectors_custom_endpoint` field will be omitted from the resulting object.
   - `kms_custom_endpoint` (`string`): Set the `kms_custom_endpoint` field on the resulting provider block. When `null`, the `kms_custom_endpoint` field will be omitted from the resulting object.
   - `logging_custom_endpoint` (`string`): Set the `logging_custom_endpoint` field on the resulting provider block. When `null`, the `logging_custom_endpoint` field will be omitted from the resulting object.
   - `looker_custom_endpoint` (`string`): Set the `looker_custom_endpoint` field on the resulting provider block. When `null`, the `looker_custom_endpoint` field will be omitted from the resulting object.
@@ -288,6 +289,7 @@ injecting into a complete block.
   - `identity_platform_custom_endpoint` (`string`): Set the `identity_platform_custom_endpoint` field on the resulting object. When `null`, the `identity_platform_custom_endpoint` field will be omitted from the resulting object.
   - `impersonate_service_account` (`string`): Set the `impersonate_service_account` field on the resulting object. When `null`, the `impersonate_service_account` field will be omitted from the resulting object.
   - `impersonate_service_account_delegates` (`list`): Set the `impersonate_service_account_delegates` field on the resulting object. When `null`, the `impersonate_service_account_delegates` field will be omitted from the resulting object.
+  - `integration_connectors_custom_endpoint` (`string`): Set the `integration_connectors_custom_endpoint` field on the resulting object. When `null`, the `integration_connectors_custom_endpoint` field will be omitted from the resulting object.
   - `kms_custom_endpoint` (`string`): Set the `kms_custom_endpoint` field on the resulting object. When `null`, the `kms_custom_endpoint` field will be omitted from the resulting object.
   - `logging_custom_endpoint` (`string`): Set the `logging_custom_endpoint` field on the resulting object. When `null`, the `logging_custom_endpoint` field will be omitted from the resulting object.
   - `looker_custom_endpoint` (`string`): Set the `looker_custom_endpoint` field on the resulting object. When `null`, the `looker_custom_endpoint` field will be omitted from the resulting object.

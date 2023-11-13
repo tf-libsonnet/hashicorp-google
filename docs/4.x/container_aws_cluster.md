@@ -35,6 +35,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj authorization`](#obj-authorization)
   * [`fn new()`](#fn-authorizationnew)
+  * [`obj authorization.admin_groups`](#obj-authorizationadmin_groups)
+    * [`fn new()`](#fn-authorizationadmin_groupsnew)
   * [`obj authorization.admin_users`](#obj-authorizationadmin_users)
     * [`fn new()`](#fn-authorizationadmin_usersnew)
 * [`obj binary_authorization`](#obj-binary_authorization)
@@ -483,10 +485,34 @@ Terraform sub block.
 
 
 **Args**:
+  - `admin_groups` (`list[obj]`): Groups of users that can perform operations as a cluster admin. A managed ClusterRoleBinding will be created to grant the `cluster-admin` ClusterRole to the groups. Up to ten admin groups can be provided. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles When `null`, the `admin_groups` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_cluster.authorization.admin_groups.new](#fn-authorizationadmin_groupsnew) constructor.
   - `admin_users` (`list[obj]`): Users to perform operations as a cluster admin. A managed ClusterRoleBinding will be created to grant the `cluster-admin` ClusterRole to the users. Up to ten admin users can be provided. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles When `null`, the `admin_users` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_cluster.authorization.admin_users.new](#fn-authorizationadmin_usersnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `authorization` sub block.
+
+
+## obj authorization.admin_groups
+
+
+
+### fn authorization.admin_groups.new
+
+```ts
+new()
+```
+
+
+`google.container_aws_cluster.authorization.admin_groups.new` constructs a new object with attributes and blocks configured for the `admin_groups`
+Terraform sub block.
+
+
+
+**Args**:
+  - `group` (`string`): The name of the group, e.g. `my-group@domain.com`.
+
+**Returns**:
+  - An attribute object that represents the `admin_groups` sub block.
 
 
 ## obj authorization.admin_users
@@ -660,7 +686,7 @@ Terraform sub block.
   - `iops` (`number`): Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume. When `null`, the `iops` field will be omitted from the resulting object.
   - `kms_key_arn` (`string`): Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used. When `null`, the `kms_key_arn` field will be omitted from the resulting object.
   - `size_gib` (`number`): Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource. When `null`, the `size_gib` field will be omitted from the resulting object.
-  - `throughput` (`number`): Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3. When `null`, the `throughput` field will be omitted from the resulting object.
+  - `throughput` (`number`): Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3. If volume type is gp3 and throughput is not specified, the throughput will defaults to 125. When `null`, the `throughput` field will be omitted from the resulting object.
   - `volume_type` (`string`): Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3 When `null`, the `volume_type` field will be omitted from the resulting object.
 
 **Returns**:
@@ -711,7 +737,7 @@ Terraform sub block.
   - `iops` (`number`): Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume. When `null`, the `iops` field will be omitted from the resulting object.
   - `kms_key_arn` (`string`): Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used. When `null`, the `kms_key_arn` field will be omitted from the resulting object.
   - `size_gib` (`number`): Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource. When `null`, the `size_gib` field will be omitted from the resulting object.
-  - `throughput` (`number`): Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3. When `null`, the `throughput` field will be omitted from the resulting object.
+  - `throughput` (`number`): Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3. If volume type is gp3 and throughput is not specified, the throughput will defaults to 125. When `null`, the `throughput` field will be omitted from the resulting object.
   - `volume_type` (`string`): Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3 When `null`, the `volume_type` field will be omitted from the resulting object.
 
 **Returns**:

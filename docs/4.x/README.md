@@ -530,6 +530,7 @@ project.
 * [identity_platform_tenant_default_supported_idp_config](identity_platform_tenant_default_supported_idp_config.md)
 * [identity_platform_tenant_inbound_saml_config](identity_platform_tenant_inbound_saml_config.md)
 * [identity_platform_tenant_oauth_idp_config](identity_platform_tenant_oauth_idp_config.md)
+* [integration_connectors_connection](integration_connectors_connection.md)
 * [kms_crypto_key](kms_crypto_key.md)
 * [kms_crypto_key_iam_binding](kms_crypto_key_iam_binding.md)
 * [kms_crypto_key_iam_member](kms_crypto_key_iam_member.md)

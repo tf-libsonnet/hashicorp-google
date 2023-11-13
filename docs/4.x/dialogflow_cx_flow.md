@@ -21,6 +21,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDisplayName()`](#fn-withdisplayname)
 * [`fn withEventHandlers()`](#fn-witheventhandlers)
 * [`fn withEventHandlersMixin()`](#fn-witheventhandlersmixin)
+* [`fn withIsDefaultStartFlow()`](#fn-withisdefaultstartflow)
 * [`fn withLanguageCode()`](#fn-withlanguagecode)
 * [`fn withNluSettings()`](#fn-withnlusettings)
 * [`fn withNluSettingsMixin()`](#fn-withnlusettingsmixin)
@@ -116,6 +117,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): The human-readable name of the flow.
+  - `is_default_start_flow` (`bool`): Marks this as the [Default Start Flow](https://cloud.google.com/dialogflow/cx/docs/concept/flow#start) for an agent. When you create an agent, the Default Start Flow is created automatically.
+The Default Start Flow cannot be deleted; deleting the &#39;google_dialogflow_cx_flow&#39; resource does nothing to the underlying GCP resources.
+
+~&gt; Avoid having multiple &#39;google_dialogflow_cx_flow&#39; resources linked to the same agent with &#39;is_default_start_flow = true&#39; because they will compete to control a single Default Start Flow resource in GCP. When `null`, the `is_default_start_flow` field will be omitted from the resulting object.
   - `language_code` (`string`): The language of the following fields in flow:
 Flow.event_handlers.trigger_fulfillment.messages
 Flow.event_handlers.trigger_fulfillment.conditional_cases
@@ -169,6 +174,10 @@ injecting into a complete block.
 **Args**:
   - `description` (`string`): The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): The human-readable name of the flow.
+  - `is_default_start_flow` (`bool`): Marks this as the [Default Start Flow](https://cloud.google.com/dialogflow/cx/docs/concept/flow#start) for an agent. When you create an agent, the Default Start Flow is created automatically.
+The Default Start Flow cannot be deleted; deleting the &#39;google_dialogflow_cx_flow&#39; resource does nothing to the underlying GCP resources.
+
+~&gt; Avoid having multiple &#39;google_dialogflow_cx_flow&#39; resources linked to the same agent with &#39;is_default_start_flow = true&#39; because they will compete to control a single Default Start Flow resource in GCP. When `null`, the `is_default_start_flow` field will be omitted from the resulting object.
   - `language_code` (`string`): The language of the following fields in flow:
 Flow.event_handlers.trigger_fulfillment.messages
 Flow.event_handlers.trigger_fulfillment.conditional_cases
@@ -306,6 +315,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `event_handlers` field.
+
+
+### fn withIsDefaultStartFlow
+
+```ts
+withIsDefaultStartFlow()
+```
+
+`google.bool.withIsDefaultStartFlow` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the is_default_start_flow field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `is_default_start_flow` field.
 
 
 ### fn withLanguageCode

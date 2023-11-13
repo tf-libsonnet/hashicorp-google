@@ -15,6 +15,8 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAutoscalingConfig()`](#fn-withautoscalingconfig)
+* [`fn withAutoscalingConfigMixin()`](#fn-withautoscalingconfigmixin)
 * [`fn withConfig()`](#fn-withconfig)
 * [`fn withDisplayName()`](#fn-withdisplayname)
 * [`fn withForceDestroy()`](#fn-withforcedestroy)
@@ -25,6 +27,12 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj autoscaling_config`](#obj-autoscaling_config)
+  * [`fn new()`](#fn-autoscaling_confignew)
+  * [`obj autoscaling_config.autoscaling_limits`](#obj-autoscaling_configautoscaling_limits)
+    * [`fn new()`](#fn-autoscaling_configautoscaling_limitsnew)
+  * [`obj autoscaling_config.autoscaling_targets`](#obj-autoscaling_configautoscaling_targets)
+    * [`fn new()`](#fn-autoscaling_configautoscaling_targetsnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -84,6 +92,10 @@ must be present in terraform. When `null`, the `num_nodes` field will be omitted
   - `processing_units` (`number`): The number of processing units allocated to this instance. Exactly one of processing_units
 or node_count must be present in terraform. When `null`, the `processing_units` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `autoscaling_config` (`list[obj]`): The autoscaling configuration. Autoscaling is enabled if this field is set.
+When autoscaling is enabled, num_nodes and processing_units are treated as,
+OUTPUT_ONLY fields and reflect the current compute capacity allocated to
+the instance. When `null`, the `autoscaling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_instance.autoscaling_config.new](#fn-autoscaling_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -135,10 +147,51 @@ must be present in terraform. When `null`, the `num_nodes` field will be omitted
   - `processing_units` (`number`): The number of processing units allocated to this instance. Exactly one of processing_units
 or node_count must be present in terraform. When `null`, the `processing_units` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `autoscaling_config` (`list[obj]`): The autoscaling configuration. Autoscaling is enabled if this field is set.
+When autoscaling is enabled, num_nodes and processing_units are treated as,
+OUTPUT_ONLY fields and reflect the current compute capacity allocated to
+the instance. When `null`, the `autoscaling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_instance.autoscaling_config.new](#fn-autoscaling_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_instance.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `spanner_instance` resource into the root Terraform configuration.
+
+
+### fn withAutoscalingConfig
+
+```ts
+withAutoscalingConfig()
+```
+
+`google.list[obj].withAutoscalingConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the autoscaling_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withAutoscalingConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `autoscaling_config` field.
+
+
+### fn withAutoscalingConfigMixin
+
+```ts
+withAutoscalingConfigMixin()
+```
+
+`google.list[obj].withAutoscalingConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the autoscaling_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withAutoscalingConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `autoscaling_config` field.
 
 
 ### fn withConfig
@@ -303,6 +356,87 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj autoscaling_config
+
+
+
+### fn autoscaling_config.new
+
+```ts
+new()
+```
+
+
+`google.spanner_instance.autoscaling_config.new` constructs a new object with attributes and blocks configured for the `autoscaling_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `autoscaling_limits` (`list[obj]`): Defines scale in controls to reduce the risk of response latency
+and outages due to abrupt scale-in events When `null`, the `autoscaling_limits` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_instance.autoscaling_config.autoscaling_limits.new](#fn-autoscaling_configautoscaling_limitsnew) constructor.
+  - `autoscaling_targets` (`list[obj]`): Defines scale in controls to reduce the risk of response latency
+and outages due to abrupt scale-in events When `null`, the `autoscaling_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_instance.autoscaling_config.autoscaling_targets.new](#fn-autoscaling_configautoscaling_targetsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `autoscaling_config` sub block.
+
+
+## obj autoscaling_config.autoscaling_limits
+
+
+
+### fn autoscaling_config.autoscaling_limits.new
+
+```ts
+new()
+```
+
+
+`google.spanner_instance.autoscaling_config.autoscaling_limits.new` constructs a new object with attributes and blocks configured for the `autoscaling_limits`
+Terraform sub block.
+
+
+
+**Args**:
+  - `max_processing_units` (`number`): Specifies maximum number of processing units allocated to the instance.
+If set, this number should be multiples of 1000 and be greater than or equal to
+min_processing_units. When `null`, the `max_processing_units` field will be omitted from the resulting object.
+  - `min_processing_units` (`number`): Specifies minimum number of processing units allocated to the instance.
+If set, this number should be multiples of 1000. When `null`, the `min_processing_units` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `autoscaling_limits` sub block.
+
+
+## obj autoscaling_config.autoscaling_targets
+
+
+
+### fn autoscaling_config.autoscaling_targets.new
+
+```ts
+new()
+```
+
+
+`google.spanner_instance.autoscaling_config.autoscaling_targets.new` constructs a new object with attributes and blocks configured for the `autoscaling_targets`
+Terraform sub block.
+
+
+
+**Args**:
+  - `high_priority_cpu_utilization_percent` (`number`): Specifies the target high priority cpu utilization percentage that the autoscaler
+should be trying to achieve for the instance.
+This number is on a scale from 0 (no utilization) to 100 (full utilization).. When `null`, the `high_priority_cpu_utilization_percent` field will be omitted from the resulting object.
+  - `storage_utilization_percent` (`number`): Specifies the target storage utilization percentage that the autoscaler
+should be trying to achieve for the instance.
+This number is on a scale from 0 (no utilization) to 100 (full utilization). When `null`, the `storage_utilization_percent` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `autoscaling_targets` sub block.
 
 
 ## obj timeouts

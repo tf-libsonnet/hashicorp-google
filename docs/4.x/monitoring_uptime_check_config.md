@@ -35,6 +35,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeout()`](#fn-withtimeout)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withUserLabels()`](#fn-withuserlabels)
 * [`obj content_matchers`](#obj-content_matchers)
   * [`fn new()`](#fn-content_matchersnew)
   * [`obj content_matchers.json_path_matcher`](#obj-content_matchersjson_path_matcher)
@@ -45,6 +46,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-http_checkaccepted_response_status_codesnew)
   * [`obj http_check.auth_info`](#obj-http_checkauth_info)
     * [`fn new()`](#fn-http_checkauth_infonew)
+  * [`obj http_check.ping_config`](#obj-http_checkping_config)
+    * [`fn new()`](#fn-http_checkping_confignew)
 * [`obj monitored_resource`](#obj-monitored_resource)
   * [`fn new()`](#fn-monitored_resourcenew)
 * [`obj resource_group`](#obj-resource_group)
@@ -55,6 +58,8 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-synthetic_monitorcloud_function_v2new)
 * [`obj tcp_check`](#obj-tcp_check)
   * [`fn new()`](#fn-tcp_checknew)
+  * [`obj tcp_check.ping_config`](#obj-tcp_checkping_config)
+    * [`fn new()`](#fn-tcp_checkping_confignew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -93,6 +98,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `selected_regions` (`list`): The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions. When `null`, the `selected_regions` field will be omitted from the resulting object.
   - `timeout` (`string`): The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
+  - `user_labels` (`obj`): User-supplied key/value data to be used for organizing and identifying the &#39;UptimeCheckConfig&#39; objects. The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter. When `null`, the `user_labels` field will be omitted from the resulting object.
   - `content_matchers` (`list[obj]`): The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response&#39;s content. This field is optional and should only be specified if a content match is required. When `null`, the `content_matchers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.content_matchers.new](#fn-content_matchersnew) constructor.
   - `http_check` (`list[obj]`): Contains information needed to make an HTTP or HTTPS check. When `null`, the `http_check` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.http_check.new](#fn-http_checknew) constructor.
   - `monitored_resource` (`list[obj]`): The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance aws_elb_load_balancer  k8s_service  servicedirectory_service When `null`, the `monitored_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.monitored_resource.new](#fn-monitored_resourcenew) constructor.
@@ -129,6 +135,7 @@ injecting into a complete block.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `selected_regions` (`list`): The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions. When `null`, the `selected_regions` field will be omitted from the resulting object.
   - `timeout` (`string`): The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
+  - `user_labels` (`obj`): User-supplied key/value data to be used for organizing and identifying the &#39;UptimeCheckConfig&#39; objects. The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter. When `null`, the `user_labels` field will be omitted from the resulting object.
   - `content_matchers` (`list[obj]`): The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response&#39;s content. This field is optional and should only be specified if a content match is required. When `null`, the `content_matchers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.content_matchers.new](#fn-content_matchersnew) constructor.
   - `http_check` (`list[obj]`): Contains information needed to make an HTTP or HTTPS check. When `null`, the `http_check` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.http_check.new](#fn-http_checknew) constructor.
   - `monitored_resource` (`list[obj]`): The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance aws_elb_load_balancer  k8s_service  servicedirectory_service When `null`, the `monitored_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.monitored_resource.new](#fn-monitored_resourcenew) constructor.
@@ -495,6 +502,22 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+### fn withUserLabels
+
+```ts
+withUserLabels()
+```
+
+`google.obj.withUserLabels` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the user_labels field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `user_labels` field.
+
+
 ## obj content_matchers
 
 
@@ -562,7 +585,8 @@ Terraform sub block.
 
 **Args**:
   - `body` (`string`): The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. &#34;foo=bar&#34; in URL-encoded form is &#34;foo%3Dbar&#34; and in base64 encoding is &#34;Zm9vJTI1M0RiYXI=&#34;. When `null`, the `body` field will be omitted from the resulting object.
-  - `content_type` (`string`): The content type to use for the check. Possible values: [&#34;TYPE_UNSPECIFIED&#34;, &#34;URL_ENCODED&#34;] When `null`, the `content_type` field will be omitted from the resulting object.
+  - `content_type` (`string`): The content type to use for the check. Possible values: [&#34;TYPE_UNSPECIFIED&#34;, &#34;URL_ENCODED&#34;, &#34;USER_PROVIDED&#34;] When `null`, the `content_type` field will be omitted from the resulting object.
+  - `custom_content_type` (`string`): A user provided content type header to use for the check. The invalid configurations outlined in the &#39;content_type&#39; field apply to custom_content_type&#39;, as well as the following 1. &#39;content_type&#39; is &#39;URL_ENCODED&#39; and &#39;custom_content_type&#39; is set. 2. &#39;content_type&#39; is &#39;USER_PROVIDED&#39; and &#39;custom_content_type&#39; is not set. When `null`, the `custom_content_type` field will be omitted from the resulting object.
   - `headers` (`obj`): The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100. When `null`, the `headers` field will be omitted from the resulting object.
   - `mask_headers` (`bool`): Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******. When `null`, the `mask_headers` field will be omitted from the resulting object.
   - `path` (`string`): The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. If the provided path does not begin with &#34;/&#34;, a &#34;/&#34; will be prepended automatically. Optional (defaults to &#34;/&#34;). When `null`, the `path` field will be omitted from the resulting object.
@@ -572,6 +596,7 @@ Terraform sub block.
   - `validate_ssl` (`bool`): Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect. When `null`, the `validate_ssl` field will be omitted from the resulting object.
   - `accepted_response_status_codes` (`list[obj]`): If present, the check will only pass if the HTTP response status code is in this set of status codes. If empty, the HTTP status code will only pass if the HTTP status code is 200-299. When `null`, the `accepted_response_status_codes` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.http_check.accepted_response_status_codes.new](#fn-http_checkaccepted_response_status_codesnew) constructor.
   - `auth_info` (`list[obj]`): The authentication information. Optional when creating an HTTP check; defaults to empty. When `null`, the `auth_info` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.http_check.auth_info.new](#fn-http_checkauth_infonew) constructor.
+  - `ping_config` (`list[obj]`): Contains information needed to add pings to an HTTP check. When `null`, the `ping_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.http_check.ping_config.new](#fn-http_checkping_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `http_check` sub block.
@@ -623,6 +648,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `auth_info` sub block.
+
+
+## obj http_check.ping_config
+
+
+
+### fn http_check.ping_config.new
+
+```ts
+new()
+```
+
+
+`google.monitoring_uptime_check_config.http_check.ping_config.new` constructs a new object with attributes and blocks configured for the `ping_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `pings_count` (`number`): Number of ICMP pings. A maximum of 3 ICMP pings is currently supported.
+
+**Returns**:
+  - An attribute object that represents the `ping_config` sub block.
 
 
 ## obj monitored_resource
@@ -737,9 +785,33 @@ Terraform sub block.
 
 **Args**:
   - `port` (`number`): The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
+  - `ping_config` (`list[obj]`): Contains information needed to add pings to a TCP check. When `null`, the `ping_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.monitoring_uptime_check_config.tcp_check.ping_config.new](#fn-tcp_checkping_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `tcp_check` sub block.
+
+
+## obj tcp_check.ping_config
+
+
+
+### fn tcp_check.ping_config.new
+
+```ts
+new()
+```
+
+
+`google.monitoring_uptime_check_config.tcp_check.ping_config.new` constructs a new object with attributes and blocks configured for the `ping_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `pings_count` (`number`): Number of ICMP pings. A maximum of 3 ICMP pings is currently supported.
+
+**Returns**:
+  - An attribute object that represents the `ping_config` sub block.
 
 
 ## obj timeouts

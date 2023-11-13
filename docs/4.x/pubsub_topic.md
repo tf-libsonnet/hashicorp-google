@@ -78,7 +78,8 @@ the last messageRetentionDuration are always available to subscribers.
 For instance, it allows any attached subscription to seek to a timestamp
 that is up to messageRetentionDuration in the past. If this field is not
 set, message retention is controlled by settings on individual subscriptions.
-Cannot be more than 31 days or less than 10 minutes. When `null`, the `message_retention_duration` field will be omitted from the resulting object.
+The rotation period has the format of a decimal number, followed by the
+letter &#39;s&#39; (seconds). Cannot be more than 31 days or less than 10 minutes. When `null`, the `message_retention_duration` field will be omitted from the resulting object.
   - `name` (`string`): Name of the topic.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `message_storage_policy` (`list[obj]`): Policy constraining the set of Google Cloud Platform regions where
@@ -125,7 +126,8 @@ the last messageRetentionDuration are always available to subscribers.
 For instance, it allows any attached subscription to seek to a timestamp
 that is up to messageRetentionDuration in the past. If this field is not
 set, message retention is controlled by settings on individual subscriptions.
-Cannot be more than 31 days or less than 10 minutes. When `null`, the `message_retention_duration` field will be omitted from the resulting object.
+The rotation period has the format of a decimal number, followed by the
+letter &#39;s&#39; (seconds). Cannot be more than 31 days or less than 10 minutes. When `null`, the `message_retention_duration` field will be omitted from the resulting object.
   - `name` (`string`): Name of the topic.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `message_storage_policy` (`list[obj]`): Policy constraining the set of Google Cloud Platform regions where

@@ -20,10 +20,14 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withCmekSettings()`](#fn-withcmeksettings)
 * [`fn withCmekSettingsMixin()`](#fn-withcmeksettingsmixin)
 * [`fn withDescription()`](#fn-withdescription)
+* [`fn withIndexConfigs()`](#fn-withindexconfigs)
+* [`fn withIndexConfigsMixin()`](#fn-withindexconfigsmixin)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withRetentionDays()`](#fn-withretentiondays)
 * [`obj cmek_settings`](#obj-cmek_settings)
   * [`fn new()`](#fn-cmek_settingsnew)
+* [`obj index_configs`](#obj-index_configs)
+  * [`fn new()`](#fn-index_configsnew)
 
 ## Fields
 
@@ -60,6 +64,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): The location of the bucket.
   - `retention_days` (`number`): Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. When `null`, the `retention_days` field will be omitted from the resulting object.
   - `cmek_settings` (`list[obj]`): The CMEK settings of the log bucket. If present, new log entries written to this log bucket are encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings, the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is allowed. When `null`, the `cmek_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_bucket_config.cmek_settings.new](#fn-cmek_settingsnew) constructor.
+  - `index_configs` (`list[obj]`): A list of indexed fields and related configuration data. When `null`, the `index_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_bucket_config.index_configs.new](#fn-index_configsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -89,6 +94,7 @@ injecting into a complete block.
   - `location` (`string`): The location of the bucket.
   - `retention_days` (`number`): Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. When `null`, the `retention_days` field will be omitted from the resulting object.
   - `cmek_settings` (`list[obj]`): The CMEK settings of the log bucket. If present, new log entries written to this log bucket are encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings, the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is allowed. When `null`, the `cmek_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_bucket_config.cmek_settings.new](#fn-cmek_settingsnew) constructor.
+  - `index_configs` (`list[obj]`): A list of indexed fields and related configuration data. When `null`, the `index_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_bucket_config.index_configs.new](#fn-index_configsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logging_billing_account_bucket_config` resource into the root Terraform configuration.
@@ -179,6 +185,43 @@ Terraform resource block to set or update the description field.
   - `value` (`string`): The value to set for the `description` field.
 
 
+### fn withIndexConfigs
+
+```ts
+withIndexConfigs()
+```
+
+`google.list[obj].withIndexConfigs` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the index_configs field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withIndexConfigsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `index_configs` field.
+
+
+### fn withIndexConfigsMixin
+
+```ts
+withIndexConfigsMixin()
+```
+
+`google.list[obj].withIndexConfigsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the index_configs field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withIndexConfigs](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `index_configs` field.
+
+
 ### fn withLocation
 
 ```ts
@@ -237,3 +280,29 @@ See [Enabling CMEK for Logging Buckets](https://cloud.google.com/logging/docs/ro
 
 **Returns**:
   - An attribute object that represents the `cmek_settings` sub block.
+
+
+## obj index_configs
+
+
+
+### fn index_configs.new
+
+```ts
+new()
+```
+
+
+`google.logging_billing_account_bucket_config.index_configs.new` constructs a new object with attributes and blocks configured for the `index_configs`
+Terraform sub block.
+
+
+
+**Args**:
+  - `field_path` (`string`): The LogEntry field path to index.
+  - `type` (`string`): The type of data in this index
+Note that some paths are automatically indexed, and other paths are not eligible for indexing. See [indexing documentation]( https://cloud.google.com/logging/docs/view/advanced-queries#indexed-fields) for details.
+For example: jsonPayload.request.status
+
+**Returns**:
+  - An attribute object that represents the `index_configs` sub block.

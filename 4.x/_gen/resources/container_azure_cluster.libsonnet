@@ -3,6 +3,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='container_azure_cluster', url='', help='`container_azure_cluster` represents the `google_container_azure_cluster` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   authorization:: {
+    admin_groups:: {
+      '#new':: d.fn(help='\n`google.container_azure_cluster.authorization.admin_groups.new` constructs a new object with attributes and blocks configured for the `admin_groups`\nTerraform sub block.\n\n\n\n**Args**:\n  - `group` (`string`): The name of the group, e.g. `my-group@domain.com`.\n\n**Returns**:\n  - An attribute object that represents the `admin_groups` sub block.\n', args=[]),
+      new(
+        group
+      ):: std.prune(a={
+        group: group,
+      }),
+    },
     admin_users:: {
       '#new':: d.fn(help='\n`google.container_azure_cluster.authorization.admin_users.new` constructs a new object with attributes and blocks configured for the `admin_users`\nTerraform sub block.\n\n\n\n**Args**:\n  - `username` (`string`): The name of the user, e.g. `my-gcp-id@gmail.com`.\n\n**Returns**:\n  - An attribute object that represents the `admin_users` sub block.\n', args=[]),
       new(
@@ -11,10 +19,12 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         username: username,
       }),
     },
-    '#new':: d.fn(help='\n`google.container_azure_cluster.authorization.new` constructs a new object with attributes and blocks configured for the `authorization`\nTerraform sub block.\n\n\n\n**Args**:\n  - `admin_users` (`list[obj]`): Users that can perform operations as a cluster admin. A new ClusterRoleBinding will be created to grant the cluster-admin ClusterRole to the users. Up to ten admin users can be provided. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles When `null`, the `admin_users` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.authorization.admin_users.new](#fn-authorizationadmin_usersnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `authorization` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.container_azure_cluster.authorization.new` constructs a new object with attributes and blocks configured for the `authorization`\nTerraform sub block.\n\n\n\n**Args**:\n  - `admin_groups` (`list[obj]`): Groups of users that can perform operations as a cluster admin. A managed ClusterRoleBinding will be created to grant the `cluster-admin` ClusterRole to the groups. Up to ten admin groups can be provided. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles When `null`, the `admin_groups` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.authorization.admin_groups.new](#fn-authorizationadmin_groupsnew) constructor.\n  - `admin_users` (`list[obj]`): Users that can perform operations as a cluster admin. A new ClusterRoleBinding will be created to grant the cluster-admin ClusterRole to the users. Up to ten admin users can be provided. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles When `null`, the `admin_users` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.authorization.admin_users.new](#fn-authorizationadmin_usersnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `authorization` sub block.\n', args=[]),
     new(
+      admin_groups=null,
       admin_users=null
     ):: std.prune(a={
+      admin_groups: admin_groups,
       admin_users: admin_users,
     }),
   },

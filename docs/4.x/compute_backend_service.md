@@ -250,8 +250,8 @@ validateForProxyless field set to true. When `null`, the `locality_lb_policies` 
   - `log_config` (`list[obj]`): This field denotes the logging options for the load balancer traffic served by this backend service.
 If logging is enabled, logs will be exported to Stackdriver. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.log_config.new](#fn-log_confignew) constructor.
   - `outlier_detection` (`list[obj]`): Settings controlling eviction of unhealthy hosts from the load balancing pool.
-This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED. When `null`, the `outlier_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.new](#fn-outlier_detectionnew) constructor.
+Applicable backend service types can be a global backend service with the
+loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED. When `null`, the `outlier_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.new](#fn-outlier_detectionnew) constructor.
   - `security_settings` (`list[obj]`): The security settings that apply to this backend service. This field is applicable to either
 a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
 load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
@@ -409,8 +409,8 @@ validateForProxyless field set to true. When `null`, the `locality_lb_policies` 
   - `log_config` (`list[obj]`): This field denotes the logging options for the load balancer traffic served by this backend service.
 If logging is enabled, logs will be exported to Stackdriver. When `null`, the `log_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.log_config.new](#fn-log_confignew) constructor.
   - `outlier_detection` (`list[obj]`): Settings controlling eviction of unhealthy hosts from the load balancing pool.
-This field is applicable only when the load_balancing_scheme is set
-to INTERNAL_SELF_MANAGED. When `null`, the `outlier_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.new](#fn-outlier_detectionnew) constructor.
+Applicable backend service types can be a global backend service with the
+loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED. When `null`, the `outlier_detection` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_backend_service.outlier_detection.new](#fn-outlier_detectionnew) constructor.
   - `security_settings` (`list[obj]`): The security settings that apply to this backend service. This field is applicable to either
 a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
 load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the

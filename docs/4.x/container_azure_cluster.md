@@ -37,6 +37,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj authorization`](#obj-authorization)
   * [`fn new()`](#fn-authorizationnew)
+  * [`obj authorization.admin_groups`](#obj-authorizationadmin_groups)
+    * [`fn new()`](#fn-authorizationadmin_groupsnew)
   * [`obj authorization.admin_users`](#obj-authorizationadmin_users)
     * [`fn new()`](#fn-authorizationadmin_usersnew)
 * [`obj azure_services_authentication`](#obj-azure_services_authentication)
@@ -519,10 +521,34 @@ Terraform sub block.
 
 
 **Args**:
+  - `admin_groups` (`list[obj]`): Groups of users that can perform operations as a cluster admin. A managed ClusterRoleBinding will be created to grant the `cluster-admin` ClusterRole to the groups. Up to ten admin groups can be provided. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles When `null`, the `admin_groups` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.authorization.admin_groups.new](#fn-authorizationadmin_groupsnew) constructor.
   - `admin_users` (`list[obj]`): Users that can perform operations as a cluster admin. A new ClusterRoleBinding will be created to grant the cluster-admin ClusterRole to the users. Up to ten admin users can be provided. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles When `null`, the `admin_users` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_azure_cluster.authorization.admin_users.new](#fn-authorizationadmin_usersnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `authorization` sub block.
+
+
+## obj authorization.admin_groups
+
+
+
+### fn authorization.admin_groups.new
+
+```ts
+new()
+```
+
+
+`google.container_azure_cluster.authorization.admin_groups.new` constructs a new object with attributes and blocks configured for the `admin_groups`
+Terraform sub block.
+
+
+
+**Args**:
+  - `group` (`string`): The name of the group, e.g. `my-group@domain.com`.
+
+**Returns**:
+  - An attribute object that represents the `admin_groups` sub block.
 
 
 ## obj authorization.admin_users

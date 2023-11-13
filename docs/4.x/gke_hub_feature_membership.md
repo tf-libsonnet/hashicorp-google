@@ -358,6 +358,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `metrics_gcp_service_account_email` (`string`): The Email of the Google Cloud Service Account (GSA) used for exporting Config Sync metrics to Cloud Monitoring. The GSA should have the Monitoring Metric Writer(roles/monitoring.metricWriter) IAM role. The Kubernetes ServiceAccount `default` in the namespace `config-management-monitoring` should be bound to the GSA. When `null`, the `metrics_gcp_service_account_email` field will be omitted from the resulting object.
   - `prevent_drift` (`bool`): Set to true to enable the Config Sync admission webhook to prevent drifts. If set to `false`, disables the Config Sync admission webhook and does not prevent drifts. When `null`, the `prevent_drift` field will be omitted from the resulting object.
   - `source_format` (`string`): Specifies whether the Config Sync Repo is in &#34;hierarchical&#34; or &#34;unstructured&#34; mode. When `null`, the `source_format` field will be omitted from the resulting object.
   - `git` (`list[obj]`): Set the `git` field on the resulting object. When `null`, the `git` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.config_sync.git.new](#fn-configmanagementconfigmanagementgitnew) constructor.

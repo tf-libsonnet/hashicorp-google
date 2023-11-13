@@ -15,6 +15,8 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withFleetDefaultMemberConfig()`](#fn-withfleetdefaultmemberconfig)
+* [`fn withFleetDefaultMemberConfigMixin()`](#fn-withfleetdefaultmemberconfigmixin)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
@@ -23,6 +25,18 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withSpecMixin()`](#fn-withspecmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj fleet_default_member_config`](#obj-fleet_default_member_config)
+  * [`fn new()`](#fn-fleet_default_member_confignew)
+  * [`obj fleet_default_member_config.configmanagement`](#obj-fleet_default_member_configconfigmanagement)
+    * [`fn new()`](#fn-fleet_default_member_configconfigmanagementnew)
+    * [`obj fleet_default_member_config.configmanagement.config_sync`](#obj-fleet_default_member_configconfigmanagementconfig_sync)
+      * [`fn new()`](#fn-fleet_default_member_configconfigmanagementconfig_syncnew)
+      * [`obj fleet_default_member_config.configmanagement.config_sync.git`](#obj-fleet_default_member_configconfigmanagementconfig_syncgit)
+        * [`fn new()`](#fn-fleet_default_member_configconfigmanagementconfig_syncgitnew)
+      * [`obj fleet_default_member_config.configmanagement.config_sync.oci`](#obj-fleet_default_member_configconfigmanagementconfig_syncoci)
+        * [`fn new()`](#fn-fleet_default_member_configconfigmanagementconfig_syncocinew)
+  * [`obj fleet_default_member_config.mesh`](#obj-fleet_default_member_configmesh)
+    * [`fn new()`](#fn-fleet_default_member_configmeshnew)
 * [`obj spec`](#obj-spec)
   * [`fn new()`](#fn-specnew)
   * [`obj spec.fleetobservability`](#obj-specfleetobservability)
@@ -74,6 +88,7 @@ Please refer to the field &#39;effective_labels&#39; for all of the labels prese
   - `location` (`string`): The location for the resource
   - `name` (`string`): The full, unique name of this Feature resource When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `fleet_default_member_config` (`list[obj]`): Optional. Fleet Default Membership Configuration. When `null`, the `fleet_default_member_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.new](#fn-fleet_default_member_confignew) constructor.
   - `spec` (`list[obj]`): Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.new](#fn-specnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -106,11 +121,49 @@ Please refer to the field &#39;effective_labels&#39; for all of the labels prese
   - `location` (`string`): The location for the resource
   - `name` (`string`): The full, unique name of this Feature resource When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `fleet_default_member_config` (`list[obj]`): Optional. Fleet Default Membership Configuration. When `null`, the `fleet_default_member_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.new](#fn-fleet_default_member_confignew) constructor.
   - `spec` (`list[obj]`): Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.new](#fn-specnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `gke_hub_feature` resource into the root Terraform configuration.
+
+
+### fn withFleetDefaultMemberConfig
+
+```ts
+withFleetDefaultMemberConfig()
+```
+
+`google.list[obj].withFleetDefaultMemberConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the fleet_default_member_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withFleetDefaultMemberConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `fleet_default_member_config` field.
+
+
+### fn withFleetDefaultMemberConfigMixin
+
+```ts
+withFleetDefaultMemberConfigMixin()
+```
+
+`google.list[obj].withFleetDefaultMemberConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the fleet_default_member_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withFleetDefaultMemberConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `fleet_default_member_config` field.
 
 
 ### fn withLabels
@@ -248,6 +301,159 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj fleet_default_member_config
+
+
+
+### fn fleet_default_member_config.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.new` constructs a new object with attributes and blocks configured for the `fleet_default_member_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `configmanagement` (`list[obj]`): Config Management spec When `null`, the `configmanagement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.configmanagement.new](#fn-fleet_default_member_configconfigmanagementnew) constructor.
+  - `mesh` (`list[obj]`): Service Mesh spec When `null`, the `mesh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.mesh.new](#fn-fleet_default_member_configmeshnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `fleet_default_member_config` sub block.
+
+
+## obj fleet_default_member_config.configmanagement
+
+
+
+### fn fleet_default_member_config.configmanagement.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.configmanagement.new` constructs a new object with attributes and blocks configured for the `configmanagement`
+Terraform sub block.
+
+
+
+**Args**:
+  - `config_sync` (`list[obj]`): ConfigSync configuration for the cluster When `null`, the `config_sync` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.new](#fn-fleet_default_member_configfleet_default_member_configconfig_syncnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `configmanagement` sub block.
+
+
+## obj fleet_default_member_config.configmanagement.config_sync
+
+
+
+### fn fleet_default_member_config.configmanagement.config_sync.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.new` constructs a new object with attributes and blocks configured for the `config_sync`
+Terraform sub block.
+
+
+
+**Args**:
+  - `source_format` (`string`): Specifies whether the Config Sync Repo is in hierarchical or unstructured mode When `null`, the `source_format` field will be omitted from the resulting object.
+  - `git` (`list[obj]`): Git repo configuration for the cluster When `null`, the `git` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.git.new](#fn-fleet_default_member_configfleet_default_member_configconfigmanagementgitnew) constructor.
+  - `oci` (`list[obj]`): OCI repo configuration for the cluster When `null`, the `oci` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.oci.new](#fn-fleet_default_member_configfleet_default_member_configconfigmanagementocinew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `config_sync` sub block.
+
+
+## obj fleet_default_member_config.configmanagement.config_sync.git
+
+
+
+### fn fleet_default_member_config.configmanagement.config_sync.git.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.git.new` constructs a new object with attributes and blocks configured for the `git`
+Terraform sub block.
+
+
+
+**Args**:
+  - `gcp_service_account_email` (`string`): The Google Cloud Service Account Email used for auth when secretType is gcpServiceAccount When `null`, the `gcp_service_account_email` field will be omitted from the resulting object.
+  - `https_proxy` (`string`): URL for the HTTPS Proxy to be used when communicating with the Git repo When `null`, the `https_proxy` field will be omitted from the resulting object.
+  - `policy_dir` (`string`): The path within the Git repository that represents the top level of the repo to sync When `null`, the `policy_dir` field will be omitted from the resulting object.
+  - `secret_type` (`string`): Type of secret configured for access to the Git repo
+  - `sync_branch` (`string`): The branch of the repository to sync from. Default: master When `null`, the `sync_branch` field will be omitted from the resulting object.
+  - `sync_repo` (`string`): The URL of the Git repository to use as the source of truth When `null`, the `sync_repo` field will be omitted from the resulting object.
+  - `sync_rev` (`string`): Git revision (tag or hash) to check out. Default HEAD When `null`, the `sync_rev` field will be omitted from the resulting object.
+  - `sync_wait_secs` (`string`): Period in seconds between consecutive syncs. Default: 15 When `null`, the `sync_wait_secs` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `git` sub block.
+
+
+## obj fleet_default_member_config.configmanagement.config_sync.oci
+
+
+
+### fn fleet_default_member_config.configmanagement.config_sync.oci.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.oci.new` constructs a new object with attributes and blocks configured for the `oci`
+Terraform sub block.
+
+
+
+**Args**:
+  - `gcp_service_account_email` (`string`): The Google Cloud Service Account Email used for auth when secretType is gcpServiceAccount When `null`, the `gcp_service_account_email` field will be omitted from the resulting object.
+  - `policy_dir` (`string`): The absolute path of the directory that contains the local resources. Default: the root directory of the image When `null`, the `policy_dir` field will be omitted from the resulting object.
+  - `secret_type` (`string`): Type of secret configured for access to the Git repo
+  - `sync_repo` (`string`): The OCI image repository URL for the package to sync from When `null`, the `sync_repo` field will be omitted from the resulting object.
+  - `sync_wait_secs` (`string`): Period in seconds between consecutive syncs. Default: 15 When `null`, the `sync_wait_secs` field will be omitted from the resulting object.
+  - `version` (`string`): Version of ACM installed When `null`, the `version` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `oci` sub block.
+
+
+## obj fleet_default_member_config.mesh
+
+
+
+### fn fleet_default_member_config.mesh.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.mesh.new` constructs a new object with attributes and blocks configured for the `mesh`
+Terraform sub block.
+
+
+
+**Args**:
+  - `management` (`string`): Whether to automatically manage Service Mesh Possible values: [&#34;MANAGEMENT_UNSPECIFIED&#34;, &#34;MANAGEMENT_AUTOMATIC&#34;, &#34;MANAGEMENT_MANUAL&#34;]
+
+**Returns**:
+  - An attribute object that represents the `mesh` sub block.
 
 
 ## obj spec

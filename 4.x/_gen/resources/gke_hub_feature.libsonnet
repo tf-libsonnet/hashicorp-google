@@ -2,10 +2,89 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='gke_hub_feature', url='', help='`gke_hub_feature` represents the `google_gke_hub_feature` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
-  '#new':: d.fn(help="\n`google.gke_hub_feature.new` injects a new `google_gke_hub_feature` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.gke_hub_feature.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.gke_hub_feature` using the reference:\n\n    $._ref.google_gke_hub_feature.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_gke_hub_feature.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `labels` (`obj`): GCP labels for this Feature.\n\n**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.\nPlease refer to the field \u0026#39;effective_labels\u0026#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.\n  - `location` (`string`): The location for the resource\n  - `name` (`string`): The full, unique name of this Feature resource When `null`, the `name` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.\n  - `spec` (`list[obj]`): Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.new](#fn-specnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  fleet_default_member_config:: {
+    configmanagement:: {
+      config_sync:: {
+        git:: {
+          '#new':: d.fn(help='\n`google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.git.new` constructs a new object with attributes and blocks configured for the `git`\nTerraform sub block.\n\n\n\n**Args**:\n  - `gcp_service_account_email` (`string`): The Google Cloud Service Account Email used for auth when secretType is gcpServiceAccount When `null`, the `gcp_service_account_email` field will be omitted from the resulting object.\n  - `https_proxy` (`string`): URL for the HTTPS Proxy to be used when communicating with the Git repo When `null`, the `https_proxy` field will be omitted from the resulting object.\n  - `policy_dir` (`string`): The path within the Git repository that represents the top level of the repo to sync When `null`, the `policy_dir` field will be omitted from the resulting object.\n  - `secret_type` (`string`): Type of secret configured for access to the Git repo\n  - `sync_branch` (`string`): The branch of the repository to sync from. Default: master When `null`, the `sync_branch` field will be omitted from the resulting object.\n  - `sync_repo` (`string`): The URL of the Git repository to use as the source of truth When `null`, the `sync_repo` field will be omitted from the resulting object.\n  - `sync_rev` (`string`): Git revision (tag or hash) to check out. Default HEAD When `null`, the `sync_rev` field will be omitted from the resulting object.\n  - `sync_wait_secs` (`string`): Period in seconds between consecutive syncs. Default: 15 When `null`, the `sync_wait_secs` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `git` sub block.\n', args=[]),
+          new(
+            secret_type,
+            gcp_service_account_email=null,
+            https_proxy=null,
+            policy_dir=null,
+            sync_branch=null,
+            sync_repo=null,
+            sync_rev=null,
+            sync_wait_secs=null
+          ):: std.prune(a={
+            gcp_service_account_email: gcp_service_account_email,
+            https_proxy: https_proxy,
+            policy_dir: policy_dir,
+            secret_type: secret_type,
+            sync_branch: sync_branch,
+            sync_repo: sync_repo,
+            sync_rev: sync_rev,
+            sync_wait_secs: sync_wait_secs,
+          }),
+        },
+        '#new':: d.fn(help='\n`google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.new` constructs a new object with attributes and blocks configured for the `config_sync`\nTerraform sub block.\n\n\n\n**Args**:\n  - `source_format` (`string`): Specifies whether the Config Sync Repo is in hierarchical or unstructured mode When `null`, the `source_format` field will be omitted from the resulting object.\n  - `git` (`list[obj]`): Git repo configuration for the cluster When `null`, the `git` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.git.new](#fn-fleet_default_member_configfleet_default_member_configconfigmanagementgitnew) constructor.\n  - `oci` (`list[obj]`): OCI repo configuration for the cluster When `null`, the `oci` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.oci.new](#fn-fleet_default_member_configfleet_default_member_configconfigmanagementocinew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `config_sync` sub block.\n', args=[]),
+        new(
+          git=null,
+          oci=null,
+          source_format=null
+        ):: std.prune(a={
+          git: git,
+          oci: oci,
+          source_format: source_format,
+        }),
+        oci:: {
+          '#new':: d.fn(help='\n`google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.oci.new` constructs a new object with attributes and blocks configured for the `oci`\nTerraform sub block.\n\n\n\n**Args**:\n  - `gcp_service_account_email` (`string`): The Google Cloud Service Account Email used for auth when secretType is gcpServiceAccount When `null`, the `gcp_service_account_email` field will be omitted from the resulting object.\n  - `policy_dir` (`string`): The absolute path of the directory that contains the local resources. Default: the root directory of the image When `null`, the `policy_dir` field will be omitted from the resulting object.\n  - `secret_type` (`string`): Type of secret configured for access to the Git repo\n  - `sync_repo` (`string`): The OCI image repository URL for the package to sync from When `null`, the `sync_repo` field will be omitted from the resulting object.\n  - `sync_wait_secs` (`string`): Period in seconds between consecutive syncs. Default: 15 When `null`, the `sync_wait_secs` field will be omitted from the resulting object.\n  - `version` (`string`): Version of ACM installed When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `oci` sub block.\n', args=[]),
+          new(
+            secret_type,
+            gcp_service_account_email=null,
+            policy_dir=null,
+            sync_repo=null,
+            sync_wait_secs=null,
+            version=null
+          ):: std.prune(a={
+            gcp_service_account_email: gcp_service_account_email,
+            policy_dir: policy_dir,
+            secret_type: secret_type,
+            sync_repo: sync_repo,
+            sync_wait_secs: sync_wait_secs,
+            version: version,
+          }),
+        },
+      },
+      '#new':: d.fn(help='\n`google.gke_hub_feature.fleet_default_member_config.configmanagement.new` constructs a new object with attributes and blocks configured for the `configmanagement`\nTerraform sub block.\n\n\n\n**Args**:\n  - `config_sync` (`list[obj]`): ConfigSync configuration for the cluster When `null`, the `config_sync` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.new](#fn-fleet_default_member_configfleet_default_member_configconfig_syncnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `configmanagement` sub block.\n', args=[]),
+      new(
+        config_sync=null
+      ):: std.prune(a={
+        config_sync: config_sync,
+      }),
+    },
+    mesh:: {
+      '#new':: d.fn(help='\n`google.gke_hub_feature.fleet_default_member_config.mesh.new` constructs a new object with attributes and blocks configured for the `mesh`\nTerraform sub block.\n\n\n\n**Args**:\n  - `management` (`string`): Whether to automatically manage Service Mesh Possible values: [&#34;MANAGEMENT_UNSPECIFIED&#34;, &#34;MANAGEMENT_AUTOMATIC&#34;, &#34;MANAGEMENT_MANUAL&#34;]\n\n**Returns**:\n  - An attribute object that represents the `mesh` sub block.\n', args=[]),
+      new(
+        management
+      ):: std.prune(a={
+        management: management,
+      }),
+    },
+    '#new':: d.fn(help='\n`google.gke_hub_feature.fleet_default_member_config.new` constructs a new object with attributes and blocks configured for the `fleet_default_member_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `configmanagement` (`list[obj]`): Config Management spec When `null`, the `configmanagement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.configmanagement.new](#fn-fleet_default_member_configconfigmanagementnew) constructor.\n  - `mesh` (`list[obj]`): Service Mesh spec When `null`, the `mesh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.mesh.new](#fn-fleet_default_member_configmeshnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `fleet_default_member_config` sub block.\n', args=[]),
+    new(
+      configmanagement=null,
+      mesh=null
+    ):: std.prune(a={
+      configmanagement: configmanagement,
+      mesh: mesh,
+    }),
+  },
+  '#new':: d.fn(help="\n`google.gke_hub_feature.new` injects a new `google_gke_hub_feature` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.gke_hub_feature.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.gke_hub_feature` using the reference:\n\n    $._ref.google_gke_hub_feature.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_gke_hub_feature.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `labels` (`obj`): GCP labels for this Feature.\n\n**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.\nPlease refer to the field \u0026#39;effective_labels\u0026#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.\n  - `location` (`string`): The location for the resource\n  - `name` (`string`): The full, unique name of this Feature resource When `null`, the `name` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.\n  - `fleet_default_member_config` (`list[obj]`): Optional. Fleet Default Membership Configuration. When `null`, the `fleet_default_member_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.new](#fn-fleet_default_member_confignew) constructor.\n  - `spec` (`list[obj]`): Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.new](#fn-specnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     location,
+    fleet_default_member_config=null,
     labels=null,
     name=null,
     project=null,
@@ -16,6 +95,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     type='google_gke_hub_feature',
     label=resourceLabel,
     attrs=self.newAttrs(
+      fleet_default_member_config=fleet_default_member_config,
       labels=labels,
       location=location,
       name=name,
@@ -25,15 +105,17 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`google.gke_hub_feature.newAttrs` constructs a new object with attributes and blocks configured for the `gke_hub_feature`\nTerraform resource.\n\nUnlike [google.gke_hub_feature.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `labels` (`obj`): GCP labels for this Feature.\n\n**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.\nPlease refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.\n  - `location` (`string`): The location for the resource\n  - `name` (`string`): The full, unique name of this Feature resource When `null`, the `name` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.\n  - `spec` (`list[obj]`): Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.new](#fn-specnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `gke_hub_feature` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`google.gke_hub_feature.newAttrs` constructs a new object with attributes and blocks configured for the `gke_hub_feature`\nTerraform resource.\n\nUnlike [google.gke_hub_feature.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `labels` (`obj`): GCP labels for this Feature.\n\n**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.\nPlease refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.\n  - `location` (`string`): The location for the resource\n  - `name` (`string`): The full, unique name of this Feature resource When `null`, the `name` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.\n  - `fleet_default_member_config` (`list[obj]`): Optional. Fleet Default Membership Configuration. When `null`, the `fleet_default_member_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.new](#fn-fleet_default_member_confignew) constructor.\n  - `spec` (`list[obj]`): Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused. When `null`, the `spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.new](#fn-specnew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `gke_hub_feature` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     location,
+    fleet_default_member_config=null,
     labels=null,
     name=null,
     project=null,
     spec=null,
     timeouts=null
   ):: std.prune(a={
+    fleet_default_member_config: fleet_default_member_config,
     labels: labels,
     location: location,
     name: name,
@@ -104,6 +186,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       delete: delete,
       update: update,
     }),
+  },
+  '#withFleetDefaultMemberConfig':: d.fn(help='`google.list[obj].withFleetDefaultMemberConfig` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the fleet_default_member_config field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [google.list[obj].withFleetDefaultMemberConfigMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `fleet_default_member_config` field.\n', args=[]),
+  withFleetDefaultMemberConfig(resourceLabel, value): {
+    resource+: {
+      google_gke_hub_feature+: {
+        [resourceLabel]+: {
+          fleet_default_member_config: value,
+        },
+      },
+    },
+  },
+  '#withFleetDefaultMemberConfigMixin':: d.fn(help='`google.list[obj].withFleetDefaultMemberConfigMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the fleet_default_member_config field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [google.list[obj].withFleetDefaultMemberConfig](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `fleet_default_member_config` field.\n', args=[]),
+  withFleetDefaultMemberConfigMixin(resourceLabel, value): {
+    resource+: {
+      google_gke_hub_feature+: {
+        [resourceLabel]+: {
+          fleet_default_member_config+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
   },
   '#withLabels':: d.fn(help='`google.obj.withLabels` constructs a mixin object that can be merged into the `obj`\nTerraform resource block to set or update the labels field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`obj`): The value to set for the `labels` field.\n', args=[]),
   withLabels(resourceLabel, value): {

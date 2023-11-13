@@ -19,11 +19,15 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDisplayName()`](#fn-withdisplayname)
 * [`fn withLabels()`](#fn-withlabels)
 * [`fn withNetwork()`](#fn-withnetwork)
+* [`fn withPrivateServiceConnectConfig()`](#fn-withprivateserviceconnectconfig)
+* [`fn withPrivateServiceConnectConfigMixin()`](#fn-withprivateserviceconnectconfigmixin)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withPublicEndpointEnabled()`](#fn-withpublicendpointenabled)
 * [`fn withRegion()`](#fn-withregion)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj private_service_connect_config`](#obj-private_service_connect_config)
+  * [`fn new()`](#fn-private_service_connect_confignew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -69,6 +73,7 @@ Where &#39;{project}&#39; is a project number, as in &#39;12345&#39;, and &#39;{
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `public_endpoint_enabled` (`bool`): If true, the deployed index will be accessible through public endpoint. When `null`, the `public_endpoint_enabled` field will be omitted from the resulting object.
   - `region` (`string`): The region of the index endpoint. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
+  - `private_service_connect_config` (`list[obj]`): Optional. Configuration for private service connect. &#39;network&#39; and &#39;privateServiceConnectConfig&#39; are mutually exclusive. When `null`, the `private_service_connect_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index_endpoint.private_service_connect_config.new](#fn-private_service_connect_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -106,6 +111,7 @@ Where &#39;{project}&#39; is a project number, as in &#39;12345&#39;, and &#39;{
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `public_endpoint_enabled` (`bool`): If true, the deployed index will be accessible through public endpoint. When `null`, the `public_endpoint_enabled` field will be omitted from the resulting object.
   - `region` (`string`): The region of the index endpoint. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
+  - `private_service_connect_config` (`list[obj]`): Optional. Configuration for private service connect. &#39;network&#39; and &#39;privateServiceConnectConfig&#39; are mutually exclusive. When `null`, the `private_service_connect_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index_endpoint.private_service_connect_config.new](#fn-private_service_connect_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index_endpoint.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -174,6 +180,43 @@ Terraform resource block to set or update the network field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `network` field.
+
+
+### fn withPrivateServiceConnectConfig
+
+```ts
+withPrivateServiceConnectConfig()
+```
+
+`google.list[obj].withPrivateServiceConnectConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the private_service_connect_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withPrivateServiceConnectConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `private_service_connect_config` field.
+
+
+### fn withPrivateServiceConnectConfigMixin
+
+```ts
+withPrivateServiceConnectConfigMixin()
+```
+
+`google.list[obj].withPrivateServiceConnectConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the private_service_connect_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withPrivateServiceConnectConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `private_service_connect_config` field.
 
 
 ### fn withProject
@@ -258,6 +301,30 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+## obj private_service_connect_config
+
+
+
+### fn private_service_connect_config.new
+
+```ts
+new()
+```
+
+
+`google.vertex_ai_index_endpoint.private_service_connect_config.new` constructs a new object with attributes and blocks configured for the `private_service_connect_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enable_private_service_connect` (`bool`): If set to true, the IndexEndpoint is created without private service access.
+  - `project_allowlist` (`list`): A list of Projects from which the forwarding rule will target the service attachment. When `null`, the `project_allowlist` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `private_service_connect_config` sub block.
 
 
 ## obj timeouts

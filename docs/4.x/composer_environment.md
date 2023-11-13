@@ -21,6 +21,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRegion()`](#fn-withregion)
+* [`fn withStorageConfig()`](#fn-withstorageconfig)
+* [`fn withStorageConfigMixin()`](#fn-withstorageconfigmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj config`](#obj-config)
@@ -61,6 +63,8 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-configworkloads_configweb_servernew)
     * [`obj config.workloads_config.worker`](#obj-configworkloads_configworker)
       * [`fn new()`](#fn-configworkloads_configworkernew)
+* [`obj storage_config`](#obj-storage_config)
+  * [`fn new()`](#fn-storage_confignew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -94,13 +98,14 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `labels` (`obj`): User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: [a-z]([-a-z0-9]*[a-z0-9])?. Label values must be between 0 and 63 characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?. No more than 64 labels can be associated with a given environment. Both keys and values must be &lt;= 128 bytes in size.
-				
+
 				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the environment.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The location or Compute Engine region for the environment. When `null`, the `region` field will be omitted from the resulting object.
   - `config` (`list[obj]`): Configuration parameters for this environment. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.new](#fn-confignew) constructor.
+  - `storage_config` (`list[obj]`): Configuration options for storage used by Composer environment. When `null`, the `storage_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.storage_config.new](#fn-storage_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -126,13 +131,14 @@ injecting into a complete block.
 
 **Args**:
   - `labels` (`obj`): User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: [a-z]([-a-z0-9]*[a-z0-9])?. Label values must be between 0 and 63 characters long and must conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?. No more than 64 labels can be associated with a given environment. Both keys and values must be &lt;= 128 bytes in size.
-				
+
 				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
 				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the environment.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The location or Compute Engine region for the environment. When `null`, the `region` field will be omitted from the resulting object.
   - `config` (`list[obj]`): Configuration parameters for this environment. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.new](#fn-confignew) constructor.
+  - `storage_config` (`list[obj]`): Configuration options for storage used by Composer environment. When `null`, the `storage_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.storage_config.new](#fn-storage_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -238,6 +244,43 @@ Terraform resource block to set or update the region field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `region` field.
+
+
+### fn withStorageConfig
+
+```ts
+withStorageConfig()
+```
+
+`google.list[obj].withStorageConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the storage_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withStorageConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `storage_config` field.
+
+
+### fn withStorageConfigMixin
+
+```ts
+withStorageConfigMixin()
+```
+
+`google.list[obj].withStorageConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the storage_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withStorageConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `storage_config` field.
 
 
 ### fn withTimeouts
@@ -767,6 +810,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `worker` sub block.
+
+
+## obj storage_config
+
+
+
+### fn storage_config.new
+
+```ts
+new()
+```
+
+
+`google.composer_environment.storage_config.new` constructs a new object with attributes and blocks configured for the `storage_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `bucket` (`string`): Optional. Name of an existing Cloud Storage bucket to be used by the environment.
+
+**Returns**:
+  - An attribute object that represents the `storage_config` sub block.
 
 
 ## obj timeouts

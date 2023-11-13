@@ -520,6 +520,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   identity_platform_tenant_default_supported_idp_config: (import 'resources/identity_platform_tenant_default_supported_idp_config.libsonnet'),
   identity_platform_tenant_inbound_saml_config: (import 'resources/identity_platform_tenant_inbound_saml_config.libsonnet'),
   identity_platform_tenant_oauth_idp_config: (import 'resources/identity_platform_tenant_oauth_idp_config.libsonnet'),
+  integration_connectors_connection: (import 'resources/integration_connectors_connection.libsonnet'),
   kms_crypto_key: (import 'resources/kms_crypto_key.libsonnet'),
   kms_crypto_key_iam_binding: (import 'resources/kms_crypto_key_iam_binding.libsonnet'),
   kms_crypto_key_iam_member: (import 'resources/kms_crypto_key_iam_member.libsonnet'),

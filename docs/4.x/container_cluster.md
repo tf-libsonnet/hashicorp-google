@@ -48,6 +48,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withEnableLegacyAbac()`](#fn-withenablelegacyabac)
 * [`fn withEnableShieldedNodes()`](#fn-withenableshieldednodes)
 * [`fn withEnableTpu()`](#fn-withenabletpu)
+* [`fn withFleet()`](#fn-withfleet)
+* [`fn withFleetMixin()`](#fn-withfleetmixin)
 * [`fn withGatewayApiConfig()`](#fn-withgatewayapiconfig)
 * [`fn withGatewayApiConfigMixin()`](#fn-withgatewayapiconfigmixin)
 * [`fn withIdentityServiceConfig()`](#fn-withidentityserviceconfig)
@@ -163,6 +165,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-dns_confignew)
 * [`obj enable_k8s_beta_apis`](#obj-enable_k8s_beta_apis)
   * [`fn new()`](#fn-enable_k8s_beta_apisnew)
+* [`obj fleet`](#obj-fleet)
+  * [`fn new()`](#fn-fleetnew)
 * [`obj gateway_api_config`](#obj-gateway_api_config)
   * [`fn new()`](#fn-gateway_api_confignew)
 * [`obj identity_service_config`](#obj-identity_service_config)
@@ -391,6 +395,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `default_snat_status` (`list[obj]`): Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when defaultSnatStatus is disabled. When `null`, the `default_snat_status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.default_snat_status.new](#fn-default_snat_statusnew) constructor.
   - `dns_config` (`list[obj]`): Configuration for Cloud DNS for Kubernetes Engine. When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.dns_config.new](#fn-dns_confignew) constructor.
   - `enable_k8s_beta_apis` (`list[obj]`): Configuration for Kubernetes Beta APIs. When `null`, the `enable_k8s_beta_apis` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.enable_k8s_beta_apis.new](#fn-enable_k8s_beta_apisnew) constructor.
+  - `fleet` (`list[obj]`): Fleet configuration of the cluster. When `null`, the `fleet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.fleet.new](#fn-fleetnew) constructor.
   - `gateway_api_config` (`list[obj]`): Configuration for GKE Gateway API controller. When `null`, the `gateway_api_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.gateway_api_config.new](#fn-gateway_api_confignew) constructor.
   - `identity_service_config` (`list[obj]`): Configuration for Identity Service which allows customers to use external identity providers with the K8S API. When `null`, the `identity_service_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.identity_service_config.new](#fn-identity_service_confignew) constructor.
   - `ip_allocation_policy` (`list[obj]`): Configuration of cluster IP allocation for VPC-native clusters. Adding this block enables IP aliasing, making the cluster VPC-native instead of routes-based. When `null`, the `ip_allocation_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.ip_allocation_policy.new](#fn-ip_allocation_policynew) constructor.
@@ -475,6 +480,7 @@ injecting into a complete block.
   - `default_snat_status` (`list[obj]`): Whether the cluster disables default in-node sNAT rules. In-node sNAT rules will be disabled when defaultSnatStatus is disabled. When `null`, the `default_snat_status` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.default_snat_status.new](#fn-default_snat_statusnew) constructor.
   - `dns_config` (`list[obj]`): Configuration for Cloud DNS for Kubernetes Engine. When `null`, the `dns_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.dns_config.new](#fn-dns_confignew) constructor.
   - `enable_k8s_beta_apis` (`list[obj]`): Configuration for Kubernetes Beta APIs. When `null`, the `enable_k8s_beta_apis` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.enable_k8s_beta_apis.new](#fn-enable_k8s_beta_apisnew) constructor.
+  - `fleet` (`list[obj]`): Fleet configuration of the cluster. When `null`, the `fleet` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.fleet.new](#fn-fleetnew) constructor.
   - `gateway_api_config` (`list[obj]`): Configuration for GKE Gateway API controller. When `null`, the `gateway_api_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.gateway_api_config.new](#fn-gateway_api_confignew) constructor.
   - `identity_service_config` (`list[obj]`): Configuration for Identity Service which allows customers to use external identity providers with the K8S API. When `null`, the `identity_service_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.identity_service_config.new](#fn-identity_service_confignew) constructor.
   - `ip_allocation_policy` (`list[obj]`): Configuration of cluster IP allocation for VPC-native clusters. Adding this block enables IP aliasing, making the cluster VPC-native instead of routes-based. When `null`, the `ip_allocation_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_cluster.ip_allocation_policy.new](#fn-ip_allocation_policynew) constructor.
@@ -1079,6 +1085,43 @@ Terraform resource block to set or update the enable_tpu field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `enable_tpu` field.
+
+
+### fn withFleet
+
+```ts
+withFleet()
+```
+
+`google.list[obj].withFleet` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the fleet field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withFleetMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `fleet` field.
+
+
+### fn withFleetMixin
+
+```ts
+withFleetMixin()
+```
+
+`google.list[obj].withFleetMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the fleet field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withFleet](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `fleet` field.
 
 
 ### fn withGatewayApiConfig
@@ -2829,6 +2872,29 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `enable_k8s_beta_apis` sub block.
+
+
+## obj fleet
+
+
+
+### fn fleet.new
+
+```ts
+new()
+```
+
+
+`google.container_cluster.fleet.new` constructs a new object with attributes and blocks configured for the `fleet`
+Terraform sub block.
+
+
+
+**Args**:
+  - `project` (`string`): The Fleet host project of the cluster. When `null`, the `project` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `fleet` sub block.
 
 
 ## obj gateway_api_config
