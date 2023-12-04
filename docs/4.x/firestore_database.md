@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withAppEngineIntegrationMode()`](#fn-withappengineintegrationmode)
 * [`fn withConcurrencyMode()`](#fn-withconcurrencymode)
 * [`fn withDeleteProtectionState()`](#fn-withdeleteprotectionstate)
+* [`fn withDeletionPolicy()`](#fn-withdeletionpolicy)
 * [`fn withLocationId()`](#fn-withlocationid)
 * [`fn withName()`](#fn-withname)
 * [`fn withPointInTimeRecoveryEnablement()`](#fn-withpointintimerecoveryenablement)
@@ -59,7 +60,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `app_engine_integration_mode` (`string`): The App Engine integration mode to use for this database. Possible values: [&#34;ENABLED&#34;, &#34;DISABLED&#34;] When `null`, the `app_engine_integration_mode` field will be omitted from the resulting object.
   - `concurrency_mode` (`string`): The concurrency control mode to use for this database. Possible values: [&#34;OPTIMISTIC&#34;, &#34;PESSIMISTIC&#34;, &#34;OPTIMISTIC_WITH_ENTITY_GROUPS&#34;] When `null`, the `concurrency_mode` field will be omitted from the resulting object.
-  - `delete_protection_state` (`string`): State of delete protection for the database. Possible values: [&#34;DELETE_PROTECTION_STATE_UNSPECIFIED&#34;, &#34;DELETE_PROTECTION_ENABLED&#34;, &#34;DELETE_PROTECTION_DISABLED&#34;] When `null`, the `delete_protection_state` field will be omitted from the resulting object.
+  - `delete_protection_state` (`string`): State of delete protection for the database.
+When delete protection is enabled, this database cannot be deleted.
+The default value is &#39;DELETE_PROTECTION_STATE_UNSPECIFIED&#39;, which is currently equivalent to &#39;DELETE_PROTECTION_DISABLED&#39;.
+**Note:** Additionally, to delete this database using &#39;terraform destroy&#39;, &#39;deletion_policy&#39; must be set to &#39;DELETE&#39;. Possible values: [&#34;DELETE_PROTECTION_STATE_UNSPECIFIED&#34;, &#34;DELETE_PROTECTION_ENABLED&#34;, &#34;DELETE_PROTECTION_DISABLED&#34;] When `null`, the `delete_protection_state` field will be omitted from the resulting object.
+  - `deletion_policy` (`string`): Deletion behavior for this database.
+If the deletion policy is &#39;ABANDON&#39;, the database will be removed from Terraform state but not deleted from Google Cloud upon destruction.
+If the deletion policy is &#39;DELETE&#39;, the database will both be removed from Terraform state and deleted from Google Cloud upon destruction.
+The default value is &#39;ABANDON&#39;.
+See also &#39;delete_protection&#39;. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `location_id` (`string`): The location of the database. Available locations are listed at
 https://cloud.google.com/firestore/docs/locations.
   - `name` (`string`): The ID to use for the database, which will become the final
@@ -103,7 +112,15 @@ injecting into a complete block.
 **Args**:
   - `app_engine_integration_mode` (`string`): The App Engine integration mode to use for this database. Possible values: [&#34;ENABLED&#34;, &#34;DISABLED&#34;] When `null`, the `app_engine_integration_mode` field will be omitted from the resulting object.
   - `concurrency_mode` (`string`): The concurrency control mode to use for this database. Possible values: [&#34;OPTIMISTIC&#34;, &#34;PESSIMISTIC&#34;, &#34;OPTIMISTIC_WITH_ENTITY_GROUPS&#34;] When `null`, the `concurrency_mode` field will be omitted from the resulting object.
-  - `delete_protection_state` (`string`): State of delete protection for the database. Possible values: [&#34;DELETE_PROTECTION_STATE_UNSPECIFIED&#34;, &#34;DELETE_PROTECTION_ENABLED&#34;, &#34;DELETE_PROTECTION_DISABLED&#34;] When `null`, the `delete_protection_state` field will be omitted from the resulting object.
+  - `delete_protection_state` (`string`): State of delete protection for the database.
+When delete protection is enabled, this database cannot be deleted.
+The default value is &#39;DELETE_PROTECTION_STATE_UNSPECIFIED&#39;, which is currently equivalent to &#39;DELETE_PROTECTION_DISABLED&#39;.
+**Note:** Additionally, to delete this database using &#39;terraform destroy&#39;, &#39;deletion_policy&#39; must be set to &#39;DELETE&#39;. Possible values: [&#34;DELETE_PROTECTION_STATE_UNSPECIFIED&#34;, &#34;DELETE_PROTECTION_ENABLED&#34;, &#34;DELETE_PROTECTION_DISABLED&#34;] When `null`, the `delete_protection_state` field will be omitted from the resulting object.
+  - `deletion_policy` (`string`): Deletion behavior for this database.
+If the deletion policy is &#39;ABANDON&#39;, the database will be removed from Terraform state but not deleted from Google Cloud upon destruction.
+If the deletion policy is &#39;DELETE&#39;, the database will both be removed from Terraform state and deleted from Google Cloud upon destruction.
+The default value is &#39;ABANDON&#39;.
+See also &#39;delete_protection&#39;. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `location_id` (`string`): The location of the database. Available locations are listed at
 https://cloud.google.com/firestore/docs/locations.
   - `name` (`string`): The ID to use for the database, which will become the final
@@ -173,6 +190,22 @@ Terraform resource block to set or update the delete_protection_state field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `delete_protection_state` field.
+
+
+### fn withDeletionPolicy
+
+```ts
+withDeletionPolicy()
+```
+
+`google.string.withDeletionPolicy` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the deletion_policy field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `deletion_policy` field.
 
 
 ### fn withLocationId

@@ -51,6 +51,10 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-remote_repository_confignpm_repositorynew)
   * [`obj remote_repository_config.python_repository`](#obj-remote_repository_configpython_repository)
     * [`fn new()`](#fn-remote_repository_configpython_repositorynew)
+  * [`obj remote_repository_config.upstream_credentials`](#obj-remote_repository_configupstream_credentials)
+    * [`fn new()`](#fn-remote_repository_configupstream_credentialsnew)
+    * [`obj remote_repository_config.upstream_credentials.username_password_credentials`](#obj-remote_repository_configupstream_credentialsusername_password_credentials)
+      * [`fn new()`](#fn-remote_repository_configupstream_credentialsusername_password_credentialsnew)
   * [`obj remote_repository_config.yum_repository`](#obj-remote_repository_configyum_repository)
     * [`fn new()`](#fn-remote_repository_configyum_repositorynew)
     * [`obj remote_repository_config.yum_repository.public_repository`](#obj-remote_repository_configyum_repositorypublic_repository)
@@ -562,6 +566,7 @@ Terraform sub block.
   - `maven_repository` (`list[obj]`): Specific settings for a Maven remote repository. When `null`, the `maven_repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.maven_repository.new](#fn-remote_repository_configmaven_repositorynew) constructor.
   - `npm_repository` (`list[obj]`): Specific settings for an Npm remote repository. When `null`, the `npm_repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.npm_repository.new](#fn-remote_repository_confignpm_repositorynew) constructor.
   - `python_repository` (`list[obj]`): Specific settings for a Python remote repository. When `null`, the `python_repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.python_repository.new](#fn-remote_repository_configpython_repositorynew) constructor.
+  - `upstream_credentials` (`list[obj]`): The credentials used to access the remote repository. When `null`, the `upstream_credentials` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.upstream_credentials.new](#fn-remote_repository_configupstream_credentialsnew) constructor.
   - `yum_repository` (`list[obj]`): Specific settings for an Yum remote repository. When `null`, the `yum_repository` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.yum_repository.new](#fn-remote_repository_configyum_repositorynew) constructor.
 
 **Returns**:
@@ -705,6 +710,55 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `python_repository` sub block.
+
+
+## obj remote_repository_config.upstream_credentials
+
+
+
+### fn remote_repository_config.upstream_credentials.new
+
+```ts
+new()
+```
+
+
+`google.artifact_registry_repository.remote_repository_config.upstream_credentials.new` constructs a new object with attributes and blocks configured for the `upstream_credentials`
+Terraform sub block.
+
+
+
+**Args**:
+  - `username_password_credentials` (`list[obj]`): Use username and password to access the remote repository. When `null`, the `username_password_credentials` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.remote_repository_config.upstream_credentials.username_password_credentials.new](#fn-remote_repository_configremote_repository_configusername_password_credentialsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `upstream_credentials` sub block.
+
+
+## obj remote_repository_config.upstream_credentials.username_password_credentials
+
+
+
+### fn remote_repository_config.upstream_credentials.username_password_credentials.new
+
+```ts
+new()
+```
+
+
+`google.artifact_registry_repository.remote_repository_config.upstream_credentials.username_password_credentials.new` constructs a new object with attributes and blocks configured for the `username_password_credentials`
+Terraform sub block.
+
+
+
+**Args**:
+  - `password_secret_version` (`string`): The Secret Manager key version that holds the password to access the
+remote repository. Must be in the format of
+&#39;projects/{project}/secrets/{secret}/versions/{version}&#39;. When `null`, the `password_secret_version` field will be omitted from the resulting object.
+  - `username` (`string`): The username to access the remote repository. When `null`, the `username` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `username_password_credentials` sub block.
 
 
 ## obj remote_repository_config.yum_repository

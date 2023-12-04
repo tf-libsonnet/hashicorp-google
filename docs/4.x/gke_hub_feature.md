@@ -37,6 +37,28 @@ This package contains functions and utilities for setting up the resource using 
         * [`fn new()`](#fn-fleet_default_member_configconfigmanagementconfig_syncocinew)
   * [`obj fleet_default_member_config.mesh`](#obj-fleet_default_member_configmesh)
     * [`fn new()`](#fn-fleet_default_member_configmeshnew)
+  * [`obj fleet_default_member_config.policycontroller`](#obj-fleet_default_member_configpolicycontroller)
+    * [`fn new()`](#fn-fleet_default_member_configpolicycontrollernew)
+    * [`obj fleet_default_member_config.policycontroller.policy_controller_hub_config`](#obj-fleet_default_member_configpolicycontrollerpolicy_controller_hub_config)
+      * [`fn new()`](#fn-fleet_default_member_configpolicycontrollerpolicy_controller_hub_confignew)
+      * [`obj fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs`](#obj-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configdeployment_configs)
+        * [`fn new()`](#fn-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configdeployment_configsnew)
+        * [`obj fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources`](#obj-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configdeployment_configscontainer_resources)
+          * [`fn new()`](#fn-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configdeployment_configscontainer_resourcesnew)
+          * [`obj fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.limits`](#obj-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configdeployment_configscontainer_resourceslimits)
+            * [`fn new()`](#fn-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configdeployment_configscontainer_resourceslimitsnew)
+          * [`obj fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.requests`](#obj-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configdeployment_configscontainer_resourcesrequests)
+            * [`fn new()`](#fn-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configdeployment_configscontainer_resourcesrequestsnew)
+        * [`obj fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.pod_toleration`](#obj-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configdeployment_configspod_toleration)
+          * [`fn new()`](#fn-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configdeployment_configspod_tolerationnew)
+      * [`obj fleet_default_member_config.policycontroller.policy_controller_hub_config.monitoring`](#obj-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configmonitoring)
+        * [`fn new()`](#fn-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configmonitoringnew)
+      * [`obj fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content`](#obj-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configpolicy_content)
+        * [`fn new()`](#fn-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configpolicy_contentnew)
+        * [`obj fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.bundles`](#obj-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configpolicy_contentbundles)
+          * [`fn new()`](#fn-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configpolicy_contentbundlesnew)
+        * [`obj fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.template_library`](#obj-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configpolicy_contenttemplate_library)
+          * [`fn new()`](#fn-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configpolicy_contenttemplate_librarynew)
 * [`obj spec`](#obj-spec)
   * [`fn new()`](#fn-specnew)
   * [`obj spec.fleetobservability`](#obj-specfleetobservability)
@@ -322,6 +344,7 @@ Terraform sub block.
 **Args**:
   - `configmanagement` (`list[obj]`): Config Management spec When `null`, the `configmanagement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.configmanagement.new](#fn-fleet_default_member_configconfigmanagementnew) constructor.
   - `mesh` (`list[obj]`): Service Mesh spec When `null`, the `mesh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.mesh.new](#fn-fleet_default_member_configmeshnew) constructor.
+  - `policycontroller` (`list[obj]`): Policy Controller spec When `null`, the `policycontroller` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.policycontroller.new](#fn-fleet_default_member_configpolicycontrollernew) constructor.
 
 **Returns**:
   - An attribute object that represents the `fleet_default_member_config` sub block.
@@ -454,6 +477,281 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `mesh` sub block.
+
+
+## obj fleet_default_member_config.policycontroller
+
+
+
+### fn fleet_default_member_config.policycontroller.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.policycontroller.new` constructs a new object with attributes and blocks configured for the `policycontroller`
+Terraform sub block.
+
+
+
+**Args**:
+  - `version` (`string`): Configures the version of Policy Controller When `null`, the `version` field will be omitted from the resulting object.
+  - `policy_controller_hub_config` (`list[obj]`): Configuration of Policy Controller When `null`, the `policy_controller_hub_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.new](#fn-fleet_default_member_configfleet_default_member_configpolicy_controller_hub_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `policycontroller` sub block.
+
+
+## obj fleet_default_member_config.policycontroller.policy_controller_hub_config
+
+
+
+### fn fleet_default_member_config.policycontroller.policy_controller_hub_config.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.new` constructs a new object with attributes and blocks configured for the `policy_controller_hub_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `audit_interval_seconds` (`number`): Interval for Policy Controller Audit scans (in seconds). When set to 0, this disables audit functionality altogether. When `null`, the `audit_interval_seconds` field will be omitted from the resulting object.
+  - `constraint_violation_limit` (`number`): The maximum number of audit violations to be stored in a constraint. If not set, the internal default of 20 will be used. When `null`, the `constraint_violation_limit` field will be omitted from the resulting object.
+  - `exemptable_namespaces` (`list`): The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster. When `null`, the `exemptable_namespaces` field will be omitted from the resulting object.
+  - `install_spec` (`string`): Configures the mode of the Policy Controller installation Possible values: [&#34;INSTALL_SPEC_UNSPECIFIED&#34;, &#34;INSTALL_SPEC_NOT_INSTALLED&#34;, &#34;INSTALL_SPEC_ENABLED&#34;, &#34;INSTALL_SPEC_SUSPENDED&#34;, &#34;INSTALL_SPEC_DETACHED&#34;]
+  - `log_denies_enabled` (`bool`): Logs all denies and dry run failures. When `null`, the `log_denies_enabled` field will be omitted from the resulting object.
+  - `mutation_enabled` (`bool`): Enables the ability to mutate resources using Policy Controller. When `null`, the `mutation_enabled` field will be omitted from the resulting object.
+  - `referential_rules_enabled` (`bool`): Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated. When `null`, the `referential_rules_enabled` field will be omitted from the resulting object.
+  - `deployment_configs` (`list[obj]`): Map of deployment configs to deployments (&#34;admission&#34;, &#34;audit&#34;, &#34;mutation&#34;). When `null`, the `deployment_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.new](#fn-fleet_default_member_configfleet_default_member_configpolicycontrollerdeployment_configsnew) constructor.
+  - `monitoring` (`list[obj]`): Monitoring specifies the configuration of monitoring Policy Controller. When `null`, the `monitoring` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.monitoring.new](#fn-fleet_default_member_configfleet_default_member_configpolicycontrollermonitoringnew) constructor.
+  - `policy_content` (`list[obj]`): Specifies the desired policy content on the cluster. When `null`, the `policy_content` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.new](#fn-fleet_default_member_configfleet_default_member_configpolicycontrollerpolicy_contentnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `policy_controller_hub_config` sub block.
+
+
+## obj fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs
+
+
+
+### fn fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.new` constructs a new object with attributes and blocks configured for the `deployment_configs`
+Terraform sub block.
+
+
+
+**Args**:
+  - `component` (`string`): Set the `component` field on the resulting object.
+  - `pod_affinity` (`string`): Pod affinity configuration. Possible values: [&#34;AFFINITY_UNSPECIFIED&#34;, &#34;NO_AFFINITY&#34;, &#34;ANTI_AFFINITY&#34;] When `null`, the `pod_affinity` field will be omitted from the resulting object.
+  - `replica_count` (`number`): Pod replica count. When `null`, the `replica_count` field will be omitted from the resulting object.
+  - `container_resources` (`list[obj]`): Container resource requirements. When `null`, the `container_resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.new](#fn-fleet_default_member_configfleet_default_member_configpolicycontrollerpolicy_controller_hub_configcontainer_resourcesnew) constructor.
+  - `pod_toleration` (`list[obj]`): Pod tolerations of node taints. When `null`, the `pod_toleration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.pod_toleration.new](#fn-fleet_default_member_configfleet_default_member_configpolicycontrollerpolicy_controller_hub_configpod_tolerationnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `deployment_configs` sub block.
+
+
+## obj fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources
+
+
+
+### fn fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.new` constructs a new object with attributes and blocks configured for the `container_resources`
+Terraform sub block.
+
+
+
+**Args**:
+  - `limits` (`list[obj]`): Limits describes the maximum amount of compute resources allowed for use by the running container. When `null`, the `limits` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.limits.new](#fn-fleet_default_member_configfleet_default_member_configpolicycontrollerpolicy_controller_hub_configdeployment_configslimitsnew) constructor.
+  - `requests` (`list[obj]`): Requests describes the amount of compute resources reserved for the container by the kube-scheduler. When `null`, the `requests` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.requests.new](#fn-fleet_default_member_configfleet_default_member_configpolicycontrollerpolicy_controller_hub_configdeployment_configsrequestsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `container_resources` sub block.
+
+
+## obj fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.limits
+
+
+
+### fn fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.limits.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.limits.new` constructs a new object with attributes and blocks configured for the `limits`
+Terraform sub block.
+
+
+
+**Args**:
+  - `cpu` (`string`): CPU requirement expressed in Kubernetes resource units. When `null`, the `cpu` field will be omitted from the resulting object.
+  - `memory` (`string`): Memory requirement expressed in Kubernetes resource units. When `null`, the `memory` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `limits` sub block.
+
+
+## obj fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.requests
+
+
+
+### fn fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.requests.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.container_resources.requests.new` constructs a new object with attributes and blocks configured for the `requests`
+Terraform sub block.
+
+
+
+**Args**:
+  - `cpu` (`string`): CPU requirement expressed in Kubernetes resource units. When `null`, the `cpu` field will be omitted from the resulting object.
+  - `memory` (`string`): Memory requirement expressed in Kubernetes resource units. When `null`, the `memory` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `requests` sub block.
+
+
+## obj fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.pod_toleration
+
+
+
+### fn fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.pod_toleration.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.deployment_configs.pod_toleration.new` constructs a new object with attributes and blocks configured for the `pod_toleration`
+Terraform sub block.
+
+
+
+**Args**:
+  - `effect` (`string`): Matches a taint effect. When `null`, the `effect` field will be omitted from the resulting object.
+  - `key` (`string`): Matches a taint key (not necessarily unique). When `null`, the `key` field will be omitted from the resulting object.
+  - `operator` (`string`): Matches a taint operator. When `null`, the `operator` field will be omitted from the resulting object.
+  - `value` (`string`): Matches a taint value. When `null`, the `value` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `pod_toleration` sub block.
+
+
+## obj fleet_default_member_config.policycontroller.policy_controller_hub_config.monitoring
+
+
+
+### fn fleet_default_member_config.policycontroller.policy_controller_hub_config.monitoring.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.monitoring.new` constructs a new object with attributes and blocks configured for the `monitoring`
+Terraform sub block.
+
+
+
+**Args**:
+  - `backends` (`list`): Specifies the list of backends Policy Controller will export to. An empty list would effectively disable metrics export. Possible values: [&#34;MONITORING_BACKEND_UNSPECIFIED&#34;, &#34;PROMETHEUS&#34;, &#34;CLOUD_MONITORING&#34;] When `null`, the `backends` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `monitoring` sub block.
+
+
+## obj fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content
+
+
+
+### fn fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.new` constructs a new object with attributes and blocks configured for the `policy_content`
+Terraform sub block.
+
+
+
+**Args**:
+  - `bundles` (`list[obj]`): Configures which bundles to install and their corresponding install specs. When `null`, the `bundles` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.bundles.new](#fn-fleet_default_member_configfleet_default_member_configpolicycontrollerpolicy_controller_hub_configbundlesnew) constructor.
+  - `template_library` (`list[obj]`): Configures the installation of the Template Library. When `null`, the `template_library` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.template_library.new](#fn-fleet_default_member_configfleet_default_member_configpolicycontrollerpolicy_controller_hub_configtemplate_librarynew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `policy_content` sub block.
+
+
+## obj fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.bundles
+
+
+
+### fn fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.bundles.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.bundles.new` constructs a new object with attributes and blocks configured for the `bundles`
+Terraform sub block.
+
+
+
+**Args**:
+  - `bundle` (`string`): Set the `bundle` field on the resulting object.
+  - `exempted_namespaces` (`list`): The set of namespaces to be exempted from the bundle. When `null`, the `exempted_namespaces` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `bundles` sub block.
+
+
+## obj fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.template_library
+
+
+
+### fn fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.template_library.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.fleet_default_member_config.policycontroller.policy_controller_hub_config.policy_content.template_library.new` constructs a new object with attributes and blocks configured for the `template_library`
+Terraform sub block.
+
+
+
+**Args**:
+  - `installation` (`string`): Configures the manner in which the template library is installed on the cluster. Possible values: [&#34;INSTALATION_UNSPECIFIED&#34;, &#34;NOT_INSTALLED&#34;, &#34;ALL&#34;] When `null`, the `installation` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `template_library` sub block.
 
 
 ## obj spec

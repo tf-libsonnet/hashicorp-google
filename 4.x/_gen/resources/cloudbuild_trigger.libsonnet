@@ -52,14 +52,46 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   },
   build:: {
     artifacts:: {
-      '#new':: d.fn(help='\n`google.cloudbuild_trigger.build.artifacts.new` constructs a new object with attributes and blocks configured for the `artifacts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `images` (`list`): A list of images to be pushed upon the successful completion of all build steps.\n\nThe images will be pushed using the builder service account&#39;s credentials.\n\nThe digests of the pushed images will be stored in the Build resource&#39;s results field.\n\nIf any of the images fail to be pushed, the build is marked FAILURE. When `null`, the `images` field will be omitted from the resulting object.\n  - `objects` (`list[obj]`): A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.\n\nFiles in the workspace matching specified paths globs will be uploaded to the\nCloud Storage location using the builder service account&#39;s credentials.\n\nThe location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.\n\nIf any objects fail to be pushed, the build is marked FAILURE. When `null`, the `objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.objects.new](#fn-buildbuildobjectsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `artifacts` sub block.\n', args=[]),
+      maven_artifacts:: {
+        '#new':: d.fn(help='\n`google.cloudbuild_trigger.build.artifacts.maven_artifacts.new` constructs a new object with attributes and blocks configured for the `maven_artifacts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `artifact_id` (`string`): Maven artifactId value used when uploading the artifact to Artifact Registry. When `null`, the `artifact_id` field will be omitted from the resulting object.\n  - `group_id` (`string`): Maven groupId value used when uploading the artifact to Artifact Registry. When `null`, the `group_id` field will be omitted from the resulting object.\n  - `path` (`string`): Path to an artifact in the build&#39;s workspace to be uploaded to Artifact Registry. This can be either an absolute path, e.g. /workspace/my-app/target/my-app-1.0.SNAPSHOT.jar or a relative path from /workspace, e.g. my-app/target/my-app-1.0.SNAPSHOT.jar. When `null`, the `path` field will be omitted from the resulting object.\n  - `repository` (`string`): Artifact Registry repository, in the form &#34;https://$REGION-maven.pkg.dev/$PROJECT/$REPOSITORY&#34;\n\nArtifact in the workspace specified by path will be uploaded to Artifact Registry with this location as a prefix. When `null`, the `repository` field will be omitted from the resulting object.\n  - `version` (`string`): Maven version value used when uploading the artifact to Artifact Registry. When `null`, the `version` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `maven_artifacts` sub block.\n', args=[]),
+        new(
+          artifact_id=null,
+          group_id=null,
+          path=null,
+          repository=null,
+          version=null
+        ):: std.prune(a={
+          artifact_id: artifact_id,
+          group_id: group_id,
+          path: path,
+          repository: repository,
+          version: version,
+        }),
+      },
+      '#new':: d.fn(help='\n`google.cloudbuild_trigger.build.artifacts.new` constructs a new object with attributes and blocks configured for the `artifacts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `images` (`list`): A list of images to be pushed upon the successful completion of all build steps.\n\nThe images will be pushed using the builder service account&#39;s credentials.\n\nThe digests of the pushed images will be stored in the Build resource&#39;s results field.\n\nIf any of the images fail to be pushed, the build is marked FAILURE. When `null`, the `images` field will be omitted from the resulting object.\n  - `maven_artifacts` (`list[obj]`): A Maven artifact to upload to Artifact Registry upon successful completion of all build steps.\n\nThe location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.\n\nIf any objects fail to be pushed, the build is marked FAILURE. When `null`, the `maven_artifacts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.maven_artifacts.new](#fn-buildbuildmaven_artifactsnew) constructor.\n  - `npm_packages` (`list[obj]`): Npm package to upload to Artifact Registry upon successful completion of all build steps.\n\nThe location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.\n\nIf any objects fail to be pushed, the build is marked FAILURE. When `null`, the `npm_packages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.npm_packages.new](#fn-buildbuildnpm_packagesnew) constructor.\n  - `objects` (`list[obj]`): A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.\n\nFiles in the workspace matching specified paths globs will be uploaded to the\nCloud Storage location using the builder service account&#39;s credentials.\n\nThe location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.\n\nIf any objects fail to be pushed, the build is marked FAILURE. When `null`, the `objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.objects.new](#fn-buildbuildobjectsnew) constructor.\n  - `python_packages` (`list[obj]`): Python package to upload to Artifact Registry upon successful completion of all build steps. A package can encapsulate multiple objects to be uploaded to a single repository.\n\nThe location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.\n\nIf any objects fail to be pushed, the build is marked FAILURE. When `null`, the `python_packages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.python_packages.new](#fn-buildbuildpython_packagesnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `artifacts` sub block.\n', args=[]),
       new(
         images=null,
-        objects=null
+        maven_artifacts=null,
+        npm_packages=null,
+        objects=null,
+        python_packages=null
       ):: std.prune(a={
         images: images,
+        maven_artifacts: maven_artifacts,
+        npm_packages: npm_packages,
         objects: objects,
+        python_packages: python_packages,
       }),
+      npm_packages:: {
+        '#new':: d.fn(help='\n`google.cloudbuild_trigger.build.artifacts.npm_packages.new` constructs a new object with attributes and blocks configured for the `npm_packages`\nTerraform sub block.\n\n\n\n**Args**:\n  - `package_path` (`string`): Path to the package.json. e.g. workspace/path/to/package When `null`, the `package_path` field will be omitted from the resulting object.\n  - `repository` (`string`): Artifact Registry repository, in the form &#34;https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY&#34;\n\nNpm package in the workspace specified by path will be zipped and uploaded to Artifact Registry with this location as a prefix. When `null`, the `repository` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `npm_packages` sub block.\n', args=[]),
+        new(
+          package_path=null,
+          repository=null
+        ):: std.prune(a={
+          package_path: package_path,
+          repository: repository,
+        }),
+      },
       objects:: {
         '#new':: d.fn(help='\n`google.cloudbuild_trigger.build.artifacts.objects.new` constructs a new object with attributes and blocks configured for the `objects`\nTerraform sub block.\n\n\n\n**Args**:\n  - `location` (`string`): Cloud Storage bucket and optional object path, in the form &#34;gs://bucket/path/to/somewhere/&#34;.\n\nFiles in the workspace matching any path pattern will be uploaded to Cloud Storage with\nthis location as a prefix. When `null`, the `location` field will be omitted from the resulting object.\n  - `paths` (`list`): Path globs used to match files in the build&#39;s workspace. When `null`, the `paths` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `objects` sub block.\n', args=[]),
         new(
@@ -68,6 +100,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         ):: std.prune(a={
           location: location,
           paths: paths,
+        }),
+      },
+      python_packages:: {
+        '#new':: d.fn(help='\n`google.cloudbuild_trigger.build.artifacts.python_packages.new` constructs a new object with attributes and blocks configured for the `python_packages`\nTerraform sub block.\n\n\n\n**Args**:\n  - `paths` (`list`): Path globs used to match files in the build&#39;s workspace. For Python/ Twine, this is usually dist/*, and sometimes additionally an .asc file. When `null`, the `paths` field will be omitted from the resulting object.\n  - `repository` (`string`): Artifact Registry repository, in the form &#34;https://$REGION-python.pkg.dev/$PROJECT/$REPOSITORY&#34;\n\nFiles in the workspace matching any path pattern will be uploaded to Artifact Registry with this location as a prefix. When `null`, the `repository` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `python_packages` sub block.\n', args=[]),
+        new(
+          paths=null,
+          repository=null
+        ):: std.prune(a={
+          paths: paths,
+          repository: repository,
         }),
       },
     },

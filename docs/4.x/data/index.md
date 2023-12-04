@@ -230,4 +230,7 @@ permalink: /data/
 * [tags_tag_value_iam_policy](tags_tag_value_iam_policy.md)
 * [tpu_tensorflow_versions](tpu_tensorflow_versions.md)
 * [vertex_ai_index](vertex_ai_index.md)
+* [vmwareengine_network](vmwareengine_network.md)
+* [vmwareengine_network_peering](vmwareengine_network_peering.md)
+* [vmwareengine_private_cloud](vmwareengine_private_cloud.md)
 * [vpc_access_connector](vpc_access_connector.md)

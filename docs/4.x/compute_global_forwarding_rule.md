@@ -28,6 +28,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withNoAutomateDnsZone()`](#fn-withnoautomatednszone)
 * [`fn withPortRange()`](#fn-withportrange)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withServiceDirectoryRegistrations()`](#fn-withservicedirectoryregistrations)
+* [`fn withServiceDirectoryRegistrationsMixin()`](#fn-withservicedirectoryregistrationsmixin)
 * [`fn withSourceIpRanges()`](#fn-withsourceipranges)
 * [`fn withSubnetwork()`](#fn-withsubnetwork)
 * [`fn withTarget()`](#fn-withtarget)
@@ -37,6 +39,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-metadata_filtersnew)
   * [`obj metadata_filters.filter_labels`](#obj-metadata_filtersfilter_labels)
     * [`fn new()`](#fn-metadata_filtersfilter_labelsnew)
+* [`obj service_directory_registrations`](#obj-service_directory_registrations)
+  * [`fn new()`](#fn-service_directory_registrationsnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -214,6 +218,9 @@ the UrlMap that this ForwardingRule references.
 
 metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED. When `null`, the `metadata_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.metadata_filters.new](#fn-metadata_filtersnew) constructor.
+  - `service_directory_registrations` (`list[obj]`): Service Directory resources to register this forwarding rule with.
+
+Currently, only supports a single Service Directory resource. When `null`, the `service_directory_registrations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.service_directory_registrations.new](#fn-service_directory_registrationsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -383,6 +390,9 @@ the UrlMap that this ForwardingRule references.
 
 metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED. When `null`, the `metadata_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.metadata_filters.new](#fn-metadata_filtersnew) constructor.
+  - `service_directory_registrations` (`list[obj]`): Service Directory resources to register this forwarding rule with.
+
+Currently, only supports a single Service Directory resource. When `null`, the `service_directory_registrations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.service_directory_registrations.new](#fn-service_directory_registrationsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -602,6 +612,43 @@ Terraform resource block to set or update the project field.
   - `value` (`string`): The value to set for the `project` field.
 
 
+### fn withServiceDirectoryRegistrations
+
+```ts
+withServiceDirectoryRegistrations()
+```
+
+`google.list[obj].withServiceDirectoryRegistrations` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the service_directory_registrations field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withServiceDirectoryRegistrationsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `service_directory_registrations` field.
+
+
+### fn withServiceDirectoryRegistrationsMixin
+
+```ts
+withServiceDirectoryRegistrationsMixin()
+```
+
+`google.list[obj].withServiceDirectoryRegistrationsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the service_directory_registrations field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withServiceDirectoryRegistrations](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `service_directory_registrations` field.
+
+
 ### fn withSourceIpRanges
 
 ```ts
@@ -743,6 +790,33 @@ length of 1024 characters.
 
 **Returns**:
   - An attribute object that represents the `filter_labels` sub block.
+
+
+## obj service_directory_registrations
+
+
+
+### fn service_directory_registrations.new
+
+```ts
+new()
+```
+
+
+`google.compute_global_forwarding_rule.service_directory_registrations.new` constructs a new object with attributes and blocks configured for the `service_directory_registrations`
+Terraform sub block.
+
+
+
+**Args**:
+  - `namespace` (`string`): Service Directory namespace to register the forwarding rule under. When `null`, the `namespace` field will be omitted from the resulting object.
+  - `service_directory_region` (`string`): [Optional] Service Directory region to register this global forwarding rule under.
+Default to &#34;us-central1&#34;. Only used for PSC for Google APIs. All PSC for
+Google APIs Forwarding Rules on the same network should use the same Service
+Directory region. When `null`, the `service_directory_region` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `service_directory_registrations` sub block.
 
 
 ## obj timeouts

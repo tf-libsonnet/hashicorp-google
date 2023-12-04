@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withDescription()`](#fn-withdescription)
+* [`fn withExternalIpv6Prefix()`](#fn-withexternalipv6prefix)
 * [`fn withIpCidrRange()`](#fn-withipcidrrange)
 * [`fn withIpv6AccessType()`](#fn-withipv6accesstype)
 * [`fn withLogConfig()`](#fn-withlogconfig)
@@ -69,6 +70,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time. When `null`, the `description` field will be omitted from the resulting object.
+  - `external_ipv6_prefix` (`string`): The range of external IPv6 addresses that are owned by this subnetwork. When `null`, the `external_ipv6_prefix` field will be omitted from the resulting object.
   - `ip_cidr_range` (`string`): The range of internal addresses that are owned by this subnetwork.
 Provide this property when you create the subnetwork. For example,
 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and
@@ -145,6 +147,7 @@ injecting into a complete block.
   - `description` (`string`): An optional description of this resource. Provide this property when
 you create the resource. This field can be set only at resource
 creation time. When `null`, the `description` field will be omitted from the resulting object.
+  - `external_ipv6_prefix` (`string`): The range of external IPv6 addresses that are owned by this subnetwork. When `null`, the `external_ipv6_prefix` field will be omitted from the resulting object.
   - `ip_cidr_range` (`string`): The range of internal addresses that are owned by this subnetwork.
 Provide this property when you create the subnetwork. For example,
 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and
@@ -214,6 +217,22 @@ Terraform resource block to set or update the description field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `description` field.
+
+
+### fn withExternalIpv6Prefix
+
+```ts
+withExternalIpv6Prefix()
+```
+
+`google.string.withExternalIpv6Prefix` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the external_ipv6_prefix field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `external_ipv6_prefix` field.
 
 
 ### fn withIpCidrRange

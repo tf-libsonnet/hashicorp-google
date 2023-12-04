@@ -86,14 +86,34 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       strategy:: {
         canary:: {
           canary_deployment:: {
-            '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.new` constructs a new object with attributes and blocks configured for the `canary_deployment`\nTerraform sub block.\n\n\n\n**Args**:\n  - `percentages` (`list`): Required. The percentage based deployments that will occur as a part of a `Rollout`. List is expected in ascending order and each integer n is 0 &lt;= n &lt; 100.\n  - `verify` (`bool`): Whether to run verify tests after each percentage deployment. When `null`, the `verify` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `canary_deployment` sub block.\n', args=[]),
+            '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.new` constructs a new object with attributes and blocks configured for the `canary_deployment`\nTerraform sub block.\n\n\n\n**Args**:\n  - `percentages` (`list`): Required. The percentage based deployments that will occur as a part of a `Rollout`. List is expected in ascending order and each integer n is 0 &lt;= n &lt; 100.\n  - `verify` (`bool`): Whether to run verify tests after each percentage deployment. When `null`, the `verify` field will be omitted from the resulting object.\n  - `postdeploy` (`list[obj]`): Optional. Configuration for the postdeploy job of the last phase. If this is not configured, postdeploy job will not be present. When `null`, the `postdeploy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.postdeploy.new](#fn-serial_pipelineserial_pipelinestagesstrategycanarypostdeploynew) constructor.\n  - `predeploy` (`list[obj]`): Optional. Configuration for the predeploy job of the first phase. If this is not configured, predeploy job will not be present. When `null`, the `predeploy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.predeploy.new](#fn-serial_pipelineserial_pipelinestagesstrategycanarypredeploynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `canary_deployment` sub block.\n', args=[]),
             new(
               percentages,
+              postdeploy=null,
+              predeploy=null,
               verify=null
             ):: std.prune(a={
               percentages: percentages,
+              postdeploy: postdeploy,
+              predeploy: predeploy,
               verify: verify,
             }),
+            postdeploy:: {
+              '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.postdeploy.new` constructs a new object with attributes and blocks configured for the `postdeploy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `actions` (`list`): Optional. A sequence of skaffold custom actions to invoke during execution of the postdeploy job. When `null`, the `actions` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `postdeploy` sub block.\n', args=[]),
+              new(
+                actions=null
+              ):: std.prune(a={
+                actions: actions,
+              }),
+            },
+            predeploy:: {
+              '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.predeploy.new` constructs a new object with attributes and blocks configured for the `predeploy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `actions` (`list`): Optional. A sequence of skaffold custom actions to invoke during execution of the predeploy job. When `null`, the `actions` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `predeploy` sub block.\n', args=[]),
+              new(
+                actions=null
+              ):: std.prune(a={
+                actions: actions,
+              }),
+            },
           },
           custom_canary_deployment:: {
             '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.new` constructs a new object with attributes and blocks configured for the `custom_canary_deployment`\nTerraform sub block.\n\n\n\n**Args**:\n  - `phase_configs` (`list[obj]`): Required. Configuration for each phase in the canary deployment in the order executed. When `null`, the `phase_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.new](#fn-serial_pipelineserial_pipelinestagesstrategycanaryphase_configsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `custom_canary_deployment` sub block.\n', args=[]),
@@ -103,18 +123,38 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
               phase_configs: phase_configs,
             }),
             phase_configs:: {
-              '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.new` constructs a new object with attributes and blocks configured for the `phase_configs`\nTerraform sub block.\n\n\n\n**Args**:\n  - `percentage` (`number`): Required. Percentage deployment for the phase.\n  - `phase_id` (`string`): Required. The ID to assign to the `Rollout` phase. This value must consist of lower-case letters, numbers, and hyphens, start with a letter and end with a letter or a number, and have a max length of 63 characters. In other words, it must match the following regex: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.\n  - `profiles` (`list`): Skaffold profiles to use when rendering the manifest for this phase. These are in addition to the profiles list specified in the `DeliveryPipeline` stage. When `null`, the `profiles` field will be omitted from the resulting object.\n  - `verify` (`bool`): Whether to run verify tests after the deployment. When `null`, the `verify` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `phase_configs` sub block.\n', args=[]),
+              '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.new` constructs a new object with attributes and blocks configured for the `phase_configs`\nTerraform sub block.\n\n\n\n**Args**:\n  - `percentage` (`number`): Required. Percentage deployment for the phase.\n  - `phase_id` (`string`): Required. The ID to assign to the `Rollout` phase. This value must consist of lower-case letters, numbers, and hyphens, start with a letter and end with a letter or a number, and have a max length of 63 characters. In other words, it must match the following regex: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.\n  - `profiles` (`list`): Skaffold profiles to use when rendering the manifest for this phase. These are in addition to the profiles list specified in the `DeliveryPipeline` stage. When `null`, the `profiles` field will be omitted from the resulting object.\n  - `verify` (`bool`): Whether to run verify tests after the deployment. When `null`, the `verify` field will be omitted from the resulting object.\n  - `postdeploy` (`list[obj]`): Optional. Configuration for the postdeploy job of this phase. If this is not configured, postdeploy job will not be present for this phase. When `null`, the `postdeploy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.postdeploy.new](#fn-serial_pipelineserial_pipelinestagesstrategycanarycustom_canary_deploymentpostdeploynew) constructor.\n  - `predeploy` (`list[obj]`): Optional. Configuration for the predeploy job of this phase. If this is not configured, predeploy job will not be present for this phase. When `null`, the `predeploy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.predeploy.new](#fn-serial_pipelineserial_pipelinestagesstrategycanarycustom_canary_deploymentpredeploynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `phase_configs` sub block.\n', args=[]),
               new(
                 percentage,
                 phase_id,
+                postdeploy=null,
+                predeploy=null,
                 profiles=null,
                 verify=null
               ):: std.prune(a={
                 percentage: percentage,
                 phase_id: phase_id,
+                postdeploy: postdeploy,
+                predeploy: predeploy,
                 profiles: profiles,
                 verify: verify,
               }),
+              postdeploy:: {
+                '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.postdeploy.new` constructs a new object with attributes and blocks configured for the `postdeploy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `actions` (`list`): Optional. A sequence of skaffold custom actions to invoke during execution of the postdeploy job. When `null`, the `actions` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `postdeploy` sub block.\n', args=[]),
+                new(
+                  actions=null
+                ):: std.prune(a={
+                  actions: actions,
+                }),
+              },
+              predeploy:: {
+                '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.predeploy.new` constructs a new object with attributes and blocks configured for the `predeploy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `actions` (`list`): Optional. A sequence of skaffold custom actions to invoke during execution of the predeploy job. When `null`, the `actions` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `predeploy` sub block.\n', args=[]),
+                new(
+                  actions=null
+                ):: std.prune(a={
+                  actions: actions,
+                }),
+              },
             },
           },
           '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.new` constructs a new object with attributes and blocks configured for the `canary`\nTerraform sub block.\n\n\n\n**Args**:\n  - `canary_deployment` (`list[obj]`): Configures the progressive based deployment for a Target. When `null`, the `canary_deployment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.new](#fn-serial_pipelineserial_pipelinestagesstrategycanary_deploymentnew) constructor.\n  - `custom_canary_deployment` (`list[obj]`): Configures the progressive based deployment for a Target, but allows customizing at the phase level where a phase represents each of the percentage deployments. When `null`, the `custom_canary_deployment` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.new](#fn-serial_pipelineserial_pipelinestagesstrategycustom_canary_deploymentnew) constructor.\n  - `runtime_config` (`list[obj]`): Optional. Runtime specific configurations for the deployment strategy. The runtime configuration is used to determine how Cloud Deploy will split traffic to enable a progressive deployment. When `null`, the `runtime_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.runtime_config.new](#fn-serial_pipelineserial_pipelinestagesstrategyruntime_confignew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `canary` sub block.\n', args=[]),
@@ -191,12 +231,32 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           standard: standard,
         }),
         standard:: {
-          '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.new` constructs a new object with attributes and blocks configured for the `standard`\nTerraform sub block.\n\n\n\n**Args**:\n  - `verify` (`bool`): Whether to verify a deployment. When `null`, the `verify` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `standard` sub block.\n', args=[]),
+          '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.new` constructs a new object with attributes and blocks configured for the `standard`\nTerraform sub block.\n\n\n\n**Args**:\n  - `verify` (`bool`): Whether to verify a deployment. When `null`, the `verify` field will be omitted from the resulting object.\n  - `postdeploy` (`list[obj]`): Optional. Configuration for the postdeploy job. If this is not configured, postdeploy job will not be present. When `null`, the `postdeploy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.postdeploy.new](#fn-serial_pipelineserial_pipelinestagesstrategypostdeploynew) constructor.\n  - `predeploy` (`list[obj]`): Optional. Configuration for the predeploy job. If this is not configured, predeploy job will not be present. When `null`, the `predeploy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.predeploy.new](#fn-serial_pipelineserial_pipelinestagesstrategypredeploynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `standard` sub block.\n', args=[]),
           new(
+            postdeploy=null,
+            predeploy=null,
             verify=null
           ):: std.prune(a={
+            postdeploy: postdeploy,
+            predeploy: predeploy,
             verify: verify,
           }),
+          postdeploy:: {
+            '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.postdeploy.new` constructs a new object with attributes and blocks configured for the `postdeploy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `actions` (`list`): Optional. A sequence of skaffold custom actions to invoke during execution of the postdeploy job. When `null`, the `actions` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `postdeploy` sub block.\n', args=[]),
+            new(
+              actions=null
+            ):: std.prune(a={
+              actions: actions,
+            }),
+          },
+          predeploy:: {
+            '#new':: d.fn(help='\n`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.predeploy.new` constructs a new object with attributes and blocks configured for the `predeploy`\nTerraform sub block.\n\n\n\n**Args**:\n  - `actions` (`list`): Optional. A sequence of skaffold custom actions to invoke during execution of the predeploy job. When `null`, the `actions` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `predeploy` sub block.\n', args=[]),
+            new(
+              actions=null
+            ):: std.prune(a={
+              actions: actions,
+            }),
+          },
         },
       },
     },

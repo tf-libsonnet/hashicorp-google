@@ -225,5 +225,8 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   tags_tag_value_iam_policy: (import 'tags_tag_value_iam_policy.libsonnet'),
   tpu_tensorflow_versions: (import 'tpu_tensorflow_versions.libsonnet'),
   vertex_ai_index: (import 'vertex_ai_index.libsonnet'),
+  vmwareengine_network: (import 'vmwareengine_network.libsonnet'),
+  vmwareengine_network_peering: (import 'vmwareengine_network_peering.libsonnet'),
+  vmwareengine_private_cloud: (import 'vmwareengine_private_cloud.libsonnet'),
   vpc_access_connector: (import 'vpc_access_connector.libsonnet'),
 }

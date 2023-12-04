@@ -62,8 +62,14 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-buildnew)
   * [`obj build.artifacts`](#obj-buildartifacts)
     * [`fn new()`](#fn-buildartifactsnew)
+    * [`obj build.artifacts.maven_artifacts`](#obj-buildartifactsmaven_artifacts)
+      * [`fn new()`](#fn-buildartifactsmaven_artifactsnew)
+    * [`obj build.artifacts.npm_packages`](#obj-buildartifactsnpm_packages)
+      * [`fn new()`](#fn-buildartifactsnpm_packagesnew)
     * [`obj build.artifacts.objects`](#obj-buildartifactsobjects)
       * [`fn new()`](#fn-buildartifactsobjectsnew)
+    * [`obj build.artifacts.python_packages`](#obj-buildartifactspython_packages)
+      * [`fn new()`](#fn-buildartifactspython_packagesnew)
   * [`obj build.available_secrets`](#obj-buildavailable_secrets)
     * [`fn new()`](#fn-buildavailable_secretsnew)
     * [`obj build.available_secrets.secret_manager`](#obj-buildavailable_secretssecret_manager)
@@ -1102,6 +1108,16 @@ The images will be pushed using the builder service account&#39;s credentials.
 The digests of the pushed images will be stored in the Build resource&#39;s results field.
 
 If any of the images fail to be pushed, the build is marked FAILURE. When `null`, the `images` field will be omitted from the resulting object.
+  - `maven_artifacts` (`list[obj]`): A Maven artifact to upload to Artifact Registry upon successful completion of all build steps.
+
+The location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.
+
+If any objects fail to be pushed, the build is marked FAILURE. When `null`, the `maven_artifacts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.maven_artifacts.new](#fn-buildbuildmaven_artifactsnew) constructor.
+  - `npm_packages` (`list[obj]`): Npm package to upload to Artifact Registry upon successful completion of all build steps.
+
+The location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.
+
+If any objects fail to be pushed, the build is marked FAILURE. When `null`, the `npm_packages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.npm_packages.new](#fn-buildbuildnpm_packagesnew) constructor.
   - `objects` (`list[obj]`): A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps.
 
 Files in the workspace matching specified paths globs will be uploaded to the
@@ -1110,9 +1126,69 @@ Cloud Storage location using the builder service account&#39;s credentials.
 The location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.
 
 If any objects fail to be pushed, the build is marked FAILURE. When `null`, the `objects` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.objects.new](#fn-buildbuildobjectsnew) constructor.
+  - `python_packages` (`list[obj]`): Python package to upload to Artifact Registry upon successful completion of all build steps. A package can encapsulate multiple objects to be uploaded to a single repository.
+
+The location and generation of the uploaded objects will be stored in the Build resource&#39;s results field.
+
+If any objects fail to be pushed, the build is marked FAILURE. When `null`, the `python_packages` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloudbuild_trigger.build.artifacts.python_packages.new](#fn-buildbuildpython_packagesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `artifacts` sub block.
+
+
+## obj build.artifacts.maven_artifacts
+
+
+
+### fn build.artifacts.maven_artifacts.new
+
+```ts
+new()
+```
+
+
+`google.cloudbuild_trigger.build.artifacts.maven_artifacts.new` constructs a new object with attributes and blocks configured for the `maven_artifacts`
+Terraform sub block.
+
+
+
+**Args**:
+  - `artifact_id` (`string`): Maven artifactId value used when uploading the artifact to Artifact Registry. When `null`, the `artifact_id` field will be omitted from the resulting object.
+  - `group_id` (`string`): Maven groupId value used when uploading the artifact to Artifact Registry. When `null`, the `group_id` field will be omitted from the resulting object.
+  - `path` (`string`): Path to an artifact in the build&#39;s workspace to be uploaded to Artifact Registry. This can be either an absolute path, e.g. /workspace/my-app/target/my-app-1.0.SNAPSHOT.jar or a relative path from /workspace, e.g. my-app/target/my-app-1.0.SNAPSHOT.jar. When `null`, the `path` field will be omitted from the resulting object.
+  - `repository` (`string`): Artifact Registry repository, in the form &#34;https://$REGION-maven.pkg.dev/$PROJECT/$REPOSITORY&#34;
+
+Artifact in the workspace specified by path will be uploaded to Artifact Registry with this location as a prefix. When `null`, the `repository` field will be omitted from the resulting object.
+  - `version` (`string`): Maven version value used when uploading the artifact to Artifact Registry. When `null`, the `version` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `maven_artifacts` sub block.
+
+
+## obj build.artifacts.npm_packages
+
+
+
+### fn build.artifacts.npm_packages.new
+
+```ts
+new()
+```
+
+
+`google.cloudbuild_trigger.build.artifacts.npm_packages.new` constructs a new object with attributes and blocks configured for the `npm_packages`
+Terraform sub block.
+
+
+
+**Args**:
+  - `package_path` (`string`): Path to the package.json. e.g. workspace/path/to/package When `null`, the `package_path` field will be omitted from the resulting object.
+  - `repository` (`string`): Artifact Registry repository, in the form &#34;https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY&#34;
+
+Npm package in the workspace specified by path will be zipped and uploaded to Artifact Registry with this location as a prefix. When `null`, the `repository` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `npm_packages` sub block.
 
 
 ## obj build.artifacts.objects
@@ -1140,6 +1216,32 @@ this location as a prefix. When `null`, the `location` field will be omitted fro
 
 **Returns**:
   - An attribute object that represents the `objects` sub block.
+
+
+## obj build.artifacts.python_packages
+
+
+
+### fn build.artifacts.python_packages.new
+
+```ts
+new()
+```
+
+
+`google.cloudbuild_trigger.build.artifacts.python_packages.new` constructs a new object with attributes and blocks configured for the `python_packages`
+Terraform sub block.
+
+
+
+**Args**:
+  - `paths` (`list`): Path globs used to match files in the build&#39;s workspace. For Python/ Twine, this is usually dist/*, and sometimes additionally an .asc file. When `null`, the `paths` field will be omitted from the resulting object.
+  - `repository` (`string`): Artifact Registry repository, in the form &#34;https://$REGION-python.pkg.dev/$PROJECT/$REPOSITORY&#34;
+
+Files in the workspace matching any path pattern will be uploaded to Artifact Registry with this location as a prefix. When `null`, the `repository` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `python_packages` sub block.
 
 
 ## obj build.available_secrets

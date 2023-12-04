@@ -84,7 +84,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `memcache_version` (`string`): The major version of Memcached software. If not provided, latest supported version will be used.
 Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
-determined by our system based on the latest supported minor version. Default value: &#34;MEMCACHE_1_5&#34; Possible values: [&#34;MEMCACHE_1_5&#34;] When `null`, the `memcache_version` field will be omitted from the resulting object.
+determined by our system based on the latest supported minor version. Default value: &#34;MEMCACHE_1_5&#34; Possible values: [&#34;MEMCACHE_1_5&#34;, &#34;MEMCACHE_1_6_15&#34;] When `null`, the `memcache_version` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the instance.
   - `node_count` (`number`): Number of nodes in the memcache instance.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -128,7 +128,7 @@ injecting into a complete block.
 Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `memcache_version` (`string`): The major version of Memcached software. If not provided, latest supported version will be used.
 Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
-determined by our system based on the latest supported minor version. Default value: &#34;MEMCACHE_1_5&#34; Possible values: [&#34;MEMCACHE_1_5&#34;] When `null`, the `memcache_version` field will be omitted from the resulting object.
+determined by our system based on the latest supported minor version. Default value: &#34;MEMCACHE_1_5&#34; Possible values: [&#34;MEMCACHE_1_5&#34;, &#34;MEMCACHE_1_6_15&#34;] When `null`, the `memcache_version` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the instance.
   - `node_count` (`number`): Number of nodes in the memcache instance.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.

@@ -4,11 +4,13 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   '#':: d.pkg(name='composer_environment', url='', help='`composer_environment` represents the `google_composer_environment` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
   config:: {
     database_config:: {
-      '#new':: d.fn(help='\n`google.composer_environment.config.database_config.new` constructs a new object with attributes and blocks configured for the `database_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `machine_type` (`string`): Optional. Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used.\n\n**Returns**:\n  - An attribute object that represents the `database_config` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.composer_environment.config.database_config.new` constructs a new object with attributes and blocks configured for the `database_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `machine_type` (`string`): Optional. Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used. When `null`, the `machine_type` field will be omitted from the resulting object.\n  - `zone` (`string`): Optional. Cloud SQL database preferred zone. When `null`, the `zone` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `database_config` sub block.\n', args=[]),
       new(
-        machine_type
+        machine_type=null,
+        zone=null
       ):: std.prune(a={
         machine_type: machine_type,
+        zone: zone,
       }),
     },
     encryption_config:: {

@@ -127,8 +127,10 @@ the `src` and/or `version` parameters are set.
   - `logging_custom_endpoint` (`string`): Set the `logging_custom_endpoint` field on the resulting provider block. When `null`, the `logging_custom_endpoint` field will be omitted from the resulting object.
   - `looker_custom_endpoint` (`string`): Set the `looker_custom_endpoint` field on the resulting provider block. When `null`, the `looker_custom_endpoint` field will be omitted from the resulting object.
   - `memcache_custom_endpoint` (`string`): Set the `memcache_custom_endpoint` field on the resulting provider block. When `null`, the `memcache_custom_endpoint` field will be omitted from the resulting object.
+  - `migration_center_custom_endpoint` (`string`): Set the `migration_center_custom_endpoint` field on the resulting provider block. When `null`, the `migration_center_custom_endpoint` field will be omitted from the resulting object.
   - `ml_engine_custom_endpoint` (`string`): Set the `ml_engine_custom_endpoint` field on the resulting provider block. When `null`, the `ml_engine_custom_endpoint` field will be omitted from the resulting object.
   - `monitoring_custom_endpoint` (`string`): Set the `monitoring_custom_endpoint` field on the resulting provider block. When `null`, the `monitoring_custom_endpoint` field will be omitted from the resulting object.
+  - `netapp_custom_endpoint` (`string`): Set the `netapp_custom_endpoint` field on the resulting provider block. When `null`, the `netapp_custom_endpoint` field will be omitted from the resulting object.
   - `network_connectivity_custom_endpoint` (`string`): Set the `network_connectivity_custom_endpoint` field on the resulting provider block. When `null`, the `network_connectivity_custom_endpoint` field will be omitted from the resulting object.
   - `network_management_custom_endpoint` (`string`): Set the `network_management_custom_endpoint` field on the resulting provider block. When `null`, the `network_management_custom_endpoint` field will be omitted from the resulting object.
   - `network_security_custom_endpoint` (`string`): Set the `network_security_custom_endpoint` field on the resulting provider block. When `null`, the `network_security_custom_endpoint` field will be omitted from the resulting object.
@@ -167,6 +169,7 @@ the `src` and/or `version` parameters are set.
   - `universe_domain` (`string`): Set the `universe_domain` field on the resulting provider block. When `null`, the `universe_domain` field will be omitted from the resulting object.
   - `user_project_override` (`bool`): Set the `user_project_override` field on the resulting provider block. When `null`, the `user_project_override` field will be omitted from the resulting object.
   - `vertex_ai_custom_endpoint` (`string`): Set the `vertex_ai_custom_endpoint` field on the resulting provider block. When `null`, the `vertex_ai_custom_endpoint` field will be omitted from the resulting object.
+  - `vmwareengine_custom_endpoint` (`string`): Set the `vmwareengine_custom_endpoint` field on the resulting provider block. When `null`, the `vmwareengine_custom_endpoint` field will be omitted from the resulting object.
   - `vpc_access_custom_endpoint` (`string`): Set the `vpc_access_custom_endpoint` field on the resulting provider block. When `null`, the `vpc_access_custom_endpoint` field will be omitted from the resulting object.
   - `workflows_custom_endpoint` (`string`): Set the `workflows_custom_endpoint` field on the resulting provider block. When `null`, the `workflows_custom_endpoint` field will be omitted from the resulting object.
   - `zone` (`string`): Set the `zone` field on the resulting provider block. When `null`, the `zone` field will be omitted from the resulting object.
@@ -294,8 +297,10 @@ injecting into a complete block.
   - `logging_custom_endpoint` (`string`): Set the `logging_custom_endpoint` field on the resulting object. When `null`, the `logging_custom_endpoint` field will be omitted from the resulting object.
   - `looker_custom_endpoint` (`string`): Set the `looker_custom_endpoint` field on the resulting object. When `null`, the `looker_custom_endpoint` field will be omitted from the resulting object.
   - `memcache_custom_endpoint` (`string`): Set the `memcache_custom_endpoint` field on the resulting object. When `null`, the `memcache_custom_endpoint` field will be omitted from the resulting object.
+  - `migration_center_custom_endpoint` (`string`): Set the `migration_center_custom_endpoint` field on the resulting object. When `null`, the `migration_center_custom_endpoint` field will be omitted from the resulting object.
   - `ml_engine_custom_endpoint` (`string`): Set the `ml_engine_custom_endpoint` field on the resulting object. When `null`, the `ml_engine_custom_endpoint` field will be omitted from the resulting object.
   - `monitoring_custom_endpoint` (`string`): Set the `monitoring_custom_endpoint` field on the resulting object. When `null`, the `monitoring_custom_endpoint` field will be omitted from the resulting object.
+  - `netapp_custom_endpoint` (`string`): Set the `netapp_custom_endpoint` field on the resulting object. When `null`, the `netapp_custom_endpoint` field will be omitted from the resulting object.
   - `network_connectivity_custom_endpoint` (`string`): Set the `network_connectivity_custom_endpoint` field on the resulting object. When `null`, the `network_connectivity_custom_endpoint` field will be omitted from the resulting object.
   - `network_management_custom_endpoint` (`string`): Set the `network_management_custom_endpoint` field on the resulting object. When `null`, the `network_management_custom_endpoint` field will be omitted from the resulting object.
   - `network_security_custom_endpoint` (`string`): Set the `network_security_custom_endpoint` field on the resulting object. When `null`, the `network_security_custom_endpoint` field will be omitted from the resulting object.
@@ -334,6 +339,7 @@ injecting into a complete block.
   - `universe_domain` (`string`): Set the `universe_domain` field on the resulting object. When `null`, the `universe_domain` field will be omitted from the resulting object.
   - `user_project_override` (`bool`): Set the `user_project_override` field on the resulting object. When `null`, the `user_project_override` field will be omitted from the resulting object.
   - `vertex_ai_custom_endpoint` (`string`): Set the `vertex_ai_custom_endpoint` field on the resulting object. When `null`, the `vertex_ai_custom_endpoint` field will be omitted from the resulting object.
+  - `vmwareengine_custom_endpoint` (`string`): Set the `vmwareengine_custom_endpoint` field on the resulting object. When `null`, the `vmwareengine_custom_endpoint` field will be omitted from the resulting object.
   - `vpc_access_custom_endpoint` (`string`): Set the `vpc_access_custom_endpoint` field on the resulting object. When `null`, the `vpc_access_custom_endpoint` field will be omitted from the resulting object.
   - `workflows_custom_endpoint` (`string`): Set the `workflows_custom_endpoint` field on the resulting object. When `null`, the `workflows_custom_endpoint` field will be omitted from the resulting object.
   - `zone` (`string`): Set the `zone` field on the resulting object. When `null`, the `zone` field will be omitted from the resulting object.

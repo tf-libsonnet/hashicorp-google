@@ -372,7 +372,8 @@ Terraform sub block.
 
 
 **Args**:
-  - `machine_type` (`string`): Optional. Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used.
+  - `machine_type` (`string`): Optional. Cloud SQL machine type used by Airflow database. It has to be one of: db-n1-standard-2, db-n1-standard-4, db-n1-standard-8 or db-n1-standard-16. If not specified, db-n1-standard-2 will be used. When `null`, the `machine_type` field will be omitted from the resulting object.
+  - `zone` (`string`): Optional. Cloud SQL database preferred zone. When `null`, the `zone` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `database_config` sub block.

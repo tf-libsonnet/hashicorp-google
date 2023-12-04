@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withFeature()`](#fn-withfeature)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMembership()`](#fn-withmembership)
+* [`fn withMembershipLocation()`](#fn-withmembershiplocation)
 * [`fn withMesh()`](#fn-withmesh)
 * [`fn withMeshMixin()`](#fn-withmeshmixin)
 * [`fn withProject()`](#fn-withproject)
@@ -78,6 +79,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `feature` (`string`): The name of the feature
   - `location` (`string`): The location of the feature
   - `membership` (`string`): The name of the membership
+  - `membership_location` (`string`): The location of the membership When `null`, the `membership_location` field will be omitted from the resulting object.
   - `project` (`string`): The project of the feature When `null`, the `project` field will be omitted from the resulting object.
   - `configmanagement` (`list[obj]`): Config Management-specific spec. When `null`, the `configmanagement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.new](#fn-configmanagementnew) constructor.
   - `mesh` (`list[obj]`): Manage Mesh Features When `null`, the `mesh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.mesh.new](#fn-meshnew) constructor.
@@ -108,6 +110,7 @@ injecting into a complete block.
   - `feature` (`string`): The name of the feature
   - `location` (`string`): The location of the feature
   - `membership` (`string`): The name of the membership
+  - `membership_location` (`string`): The location of the membership When `null`, the `membership_location` field will be omitted from the resulting object.
   - `project` (`string`): The project of the feature When `null`, the `project` field will be omitted from the resulting object.
   - `configmanagement` (`list[obj]`): Config Management-specific spec. When `null`, the `configmanagement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.new](#fn-configmanagementnew) constructor.
   - `mesh` (`list[obj]`): Manage Mesh Features When `null`, the `mesh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.mesh.new](#fn-meshnew) constructor.
@@ -200,6 +203,22 @@ Terraform resource block to set or update the membership field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `membership` field.
+
+
+### fn withMembershipLocation
+
+```ts
+withMembershipLocation()
+```
+
+`google.string.withMembershipLocation` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the membership_location field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `membership_location` field.
 
 
 ### fn withMesh
@@ -309,7 +328,7 @@ Terraform sub block.
 
 **Args**:
   - `version` (`string`): Optional. Version of ACM to install. Defaults to the latest version. When `null`, the `version` field will be omitted from the resulting object.
-  - `binauthz` (`list[obj]`): Binauthz configuration for the cluster. When `null`, the `binauthz` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.binauthz.new](#fn-configmanagementbinauthznew) constructor.
+  - `binauthz` (`list[obj]`): **DEPRECATED** Binauthz configuration for the cluster. This field will be ignored and should not be set. When `null`, the `binauthz` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.binauthz.new](#fn-configmanagementbinauthznew) constructor.
   - `config_sync` (`list[obj]`): Config Sync configuration for the cluster. When `null`, the `config_sync` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.config_sync.new](#fn-configmanagementconfig_syncnew) constructor.
   - `hierarchy_controller` (`list[obj]`): Hierarchy Controller configuration for the cluster. When `null`, the `hierarchy_controller` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.hierarchy_controller.new](#fn-configmanagementhierarchy_controllernew) constructor.
   - `policy_controller` (`list[obj]`): Policy Controller configuration for the cluster. When `null`, the `policy_controller` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.policy_controller.new](#fn-configmanagementpolicy_controllernew) constructor.
