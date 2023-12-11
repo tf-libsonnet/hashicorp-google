@@ -30,6 +30,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withFriendlyName()`](#fn-withfriendlyname)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withSpark()`](#fn-withspark)
+* [`fn withSparkMixin()`](#fn-withsparkmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj aws`](#obj-aws)
@@ -46,6 +48,12 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-cloud_sqlnew)
   * [`obj cloud_sql.credential`](#obj-cloud_sqlcredential)
     * [`fn new()`](#fn-cloud_sqlcredentialnew)
+* [`obj spark`](#obj-spark)
+  * [`fn new()`](#fn-sparknew)
+  * [`obj spark.metastore_service_config`](#obj-sparkmetastore_service_config)
+    * [`fn new()`](#fn-sparkmetastore_service_confignew)
+  * [`obj spark.spark_history_server_config`](#obj-sparkspark_history_server_config)
+    * [`fn new()`](#fn-sparkspark_history_server_confignew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -94,6 +102,7 @@ Azure allowed regions are azure-eastus2 When `null`, the `location` field will b
   - `cloud_resource` (`list[obj]`): Container for connection properties for delegation of access to GCP resources. When `null`, the `cloud_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_resource.new](#fn-cloud_resourcenew) constructor.
   - `cloud_spanner` (`list[obj]`): Connection properties specific to Cloud Spanner When `null`, the `cloud_spanner` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_spanner.new](#fn-cloud_spannernew) constructor.
   - `cloud_sql` (`list[obj]`): Connection properties specific to the Cloud SQL. When `null`, the `cloud_sql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.new](#fn-cloud_sqlnew) constructor.
+  - `spark` (`list[obj]`): Container for connection properties to execute stored procedures for Apache Spark. resources. When `null`, the `spark` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.spark.new](#fn-sparknew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -134,6 +143,7 @@ Azure allowed regions are azure-eastus2 When `null`, the `location` field will b
   - `cloud_resource` (`list[obj]`): Container for connection properties for delegation of access to GCP resources. When `null`, the `cloud_resource` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_resource.new](#fn-cloud_resourcenew) constructor.
   - `cloud_spanner` (`list[obj]`): Connection properties specific to Cloud Spanner When `null`, the `cloud_spanner` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_spanner.new](#fn-cloud_spannernew) constructor.
   - `cloud_sql` (`list[obj]`): Connection properties specific to the Cloud SQL. When `null`, the `cloud_sql` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.cloud_sql.new](#fn-cloud_sqlnew) constructor.
+  - `spark` (`list[obj]`): Container for connection properties to execute stored procedures for Apache Spark. resources. When `null`, the `spark` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.spark.new](#fn-sparknew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -405,6 +415,43 @@ Terraform resource block to set or update the project field.
   - `value` (`string`): The value to set for the `project` field.
 
 
+### fn withSpark
+
+```ts
+withSpark()
+```
+
+`google.list[obj].withSpark` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the spark field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withSparkMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `spark` field.
+
+
+### fn withSparkMixin
+
+```ts
+withSparkMixin()
+```
+
+`google.list[obj].withSparkMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the spark field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withSpark](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `spark` field.
+
+
 ### fn withTimeouts
 
 ```ts
@@ -607,6 +654,76 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `credential` sub block.
+
+
+## obj spark
+
+
+
+### fn spark.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_connection.spark.new` constructs a new object with attributes and blocks configured for the `spark`
+Terraform sub block.
+
+
+
+**Args**:
+  - `metastore_service_config` (`list[obj]`): Dataproc Metastore Service configuration for the connection. When `null`, the `metastore_service_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.spark.metastore_service_config.new](#fn-sparkmetastore_service_confignew) constructor.
+  - `spark_history_server_config` (`list[obj]`): Spark History Server configuration for the connection. When `null`, the `spark_history_server_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_connection.spark.spark_history_server_config.new](#fn-sparkspark_history_server_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `spark` sub block.
+
+
+## obj spark.metastore_service_config
+
+
+
+### fn spark.metastore_service_config.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_connection.spark.metastore_service_config.new` constructs a new object with attributes and blocks configured for the `metastore_service_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `metastore_service` (`string`): Resource name of an existing Dataproc Metastore service in the form of projects/[projectId]/locations/[region]/services/[serviceId]. When `null`, the `metastore_service` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `metastore_service_config` sub block.
+
+
+## obj spark.spark_history_server_config
+
+
+
+### fn spark.spark_history_server_config.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_connection.spark.spark_history_server_config.new` constructs a new object with attributes and blocks configured for the `spark_history_server_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `dataproc_cluster` (`string`): Resource name of an existing Dataproc Cluster to act as a Spark History Server for the connection if the form of projects/[projectId]/regions/[region]/clusters/[cluster_name]. When `null`, the `dataproc_cluster` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `spark_history_server_config` sub block.
 
 
 ## obj timeouts

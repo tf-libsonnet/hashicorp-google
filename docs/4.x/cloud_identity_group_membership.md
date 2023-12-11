@@ -26,6 +26,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-preferred_member_keynew)
 * [`obj roles`](#obj-roles)
   * [`fn new()`](#fn-rolesnew)
+  * [`obj roles.expiry_detail`](#obj-rolesexpiry_detail)
+    * [`fn new()`](#fn-rolesexpiry_detailnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -270,9 +272,39 @@ Terraform sub block.
 
 **Args**:
   - `name` (`string`): The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER. Possible values: [&#34;OWNER&#34;, &#34;MANAGER&#34;, &#34;MEMBER&#34;]
+  - `expiry_detail` (`list[obj]`): The MembershipRole expiry details, only supported for MEMBER role.
+Other roles cannot be accompanied with MEMBER role having expiry. When `null`, the `expiry_detail` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.roles.expiry_detail.new](#fn-rolesexpiry_detailnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `roles` sub block.
+
+
+## obj roles.expiry_detail
+
+
+
+### fn roles.expiry_detail.new
+
+```ts
+new()
+```
+
+
+`google.cloud_identity_group_membership.roles.expiry_detail.new` constructs a new object with attributes and blocks configured for the `expiry_detail`
+Terraform sub block.
+
+
+
+**Args**:
+  - `expire_time` (`string`): The time at which the MembershipRole will expire.
+
+A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+resolution and up to nine fractional digits.
+
+Examples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.
+
+**Returns**:
+  - An attribute object that represents the `expiry_detail` sub block.
 
 
 ## obj timeouts

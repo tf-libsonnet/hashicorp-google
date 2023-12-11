@@ -1717,7 +1717,7 @@ Terraform sub block.
   - `cloud_storage_options` (`list[obj]`): Options defining a file or a set of files within a Google Cloud Storage bucket. When `null`, the `cloud_storage_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.cloud_storage_options.new](#fn-inspect_jobinspect_jobcloud_storage_optionsnew) constructor.
   - `datastore_options` (`list[obj]`): Options defining a data set within Google Cloud Datastore. When `null`, the `datastore_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.datastore_options.new](#fn-inspect_jobinspect_jobdatastore_optionsnew) constructor.
   - `hybrid_options` (`list[obj]`): Configuration to control jobs where the content being inspected is outside of Google Cloud Platform. When `null`, the `hybrid_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.hybrid_options.new](#fn-inspect_jobinspect_jobhybrid_optionsnew) constructor.
-  - `timespan_config` (`list[obj]`): Information on where to inspect When `null`, the `timespan_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.timespan_config.new](#fn-inspect_jobinspect_jobtimespan_confignew) constructor.
+  - `timespan_config` (`list[obj]`): Configuration of the timespan of the items to include in scanning When `null`, the `timespan_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.timespan_config.new](#fn-inspect_jobinspect_jobtimespan_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `storage_config` sub block.
@@ -2125,10 +2125,11 @@ Terraform sub block.
 **Args**:
   - `enable_auto_population_of_timespan_config` (`bool`): When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
 scanning files that have not been modified since the last time the JobTrigger executed. This will
-be based on the time of the execution of the last run of the JobTrigger. When `null`, the `enable_auto_population_of_timespan_config` field will be omitted from the resulting object.
-  - `end_time` (`string`): Exclude files or rows newer than this value. If set to zero, no upper time limit is applied. When `null`, the `end_time` field will be omitted from the resulting object.
-  - `start_time` (`string`): Exclude files or rows older than this value. When `null`, the `start_time` field will be omitted from the resulting object.
-  - `timestamp_field` (`list[obj]`): Information on where to inspect When `null`, the `timestamp_field` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.timespan_config.timestamp_field.new](#fn-inspect_jobinspect_jobstorage_configtimestamp_fieldnew) constructor.
+be based on the time of the execution of the last run of the JobTrigger or the timespan endTime
+used in the last run of the JobTrigger. When `null`, the `enable_auto_population_of_timespan_config` field will be omitted from the resulting object.
+  - `end_time` (`string`): Exclude files, tables, or rows newer than this value. If not set, no upper time limit is applied. When `null`, the `end_time` field will be omitted from the resulting object.
+  - `start_time` (`string`): Exclude files, tables, or rows older than this value. If not set, no lower time limit is applied. When `null`, the `start_time` field will be omitted from the resulting object.
+  - `timestamp_field` (`list[obj]`): Specification of the field containing the timestamp of scanned items. When `null`, the `timestamp_field` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.data_loss_prevention_job_trigger.inspect_job.storage_config.timespan_config.timestamp_field.new](#fn-inspect_jobinspect_jobstorage_configtimestamp_fieldnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `timespan_config` sub block.

@@ -42,10 +42,20 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     }),
   },
   roles:: {
-    '#new':: d.fn(help='\n`google.cloud_identity_group_membership.roles.new` constructs a new object with attributes and blocks configured for the `roles`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER. Possible values: [&#34;OWNER&#34;, &#34;MANAGER&#34;, &#34;MEMBER&#34;]\n\n**Returns**:\n  - An attribute object that represents the `roles` sub block.\n', args=[]),
+    expiry_detail:: {
+      '#new':: d.fn(help='\n`google.cloud_identity_group_membership.roles.expiry_detail.new` constructs a new object with attributes and blocks configured for the `expiry_detail`\nTerraform sub block.\n\n\n\n**Args**:\n  - `expire_time` (`string`): The time at which the MembershipRole will expire.\n\nA timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond\nresolution and up to nine fractional digits.\n\nExamples: &#34;2014-10-02T15:01:23Z&#34; and &#34;2014-10-02T15:01:23.045123456Z&#34;.\n\n**Returns**:\n  - An attribute object that represents the `expiry_detail` sub block.\n', args=[]),
+      new(
+        expire_time
+      ):: std.prune(a={
+        expire_time: expire_time,
+      }),
+    },
+    '#new':: d.fn(help='\n`google.cloud_identity_group_membership.roles.new` constructs a new object with attributes and blocks configured for the `roles`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER. Possible values: [&#34;OWNER&#34;, &#34;MANAGER&#34;, &#34;MEMBER&#34;]\n  - `expiry_detail` (`list[obj]`): The MembershipRole expiry details, only supported for MEMBER role.\nOther roles cannot be accompanied with MEMBER role having expiry. When `null`, the `expiry_detail` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_identity_group_membership.roles.expiry_detail.new](#fn-rolesexpiry_detailnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `roles` sub block.\n', args=[]),
     new(
-      name
+      name,
+      expiry_detail=null
     ):: std.prune(a={
+      expiry_detail: expiry_detail,
       name: name,
     }),
   },
