@@ -60,6 +60,7 @@ defaults to an empty list. Possible values: [&#34;POLICY_TYPE_UNSPECIFIED&#34;, 
 tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes
 long when encoded in UTF-8. If not set, defaults to an empty description. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): User defined name of this taxonomy.
+The taxonomy display name must be unique within an organization.
 It must: contain only unicode letters, numbers, underscores, dashes
 and spaces; not start or end with spaces; and be at most 200 bytes
 long when encoded in UTF-8.
@@ -95,6 +96,7 @@ defaults to an empty list. Possible values: [&#34;POLICY_TYPE_UNSPECIFIED&#34;, 
 tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes
 long when encoded in UTF-8. If not set, defaults to an empty description. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): User defined name of this taxonomy.
+The taxonomy display name must be unique within an organization.
 It must: contain only unicode letters, numbers, underscores, dashes
 and spaces; not start or end with spaces; and be at most 200 bytes
 long when encoded in UTF-8.

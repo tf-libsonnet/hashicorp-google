@@ -376,7 +376,11 @@ Terraform sub block.
 
 **Args**:
   - `autoscaling_limits` (`list[obj]`): Defines scale in controls to reduce the risk of response latency
-and outages due to abrupt scale-in events When `null`, the `autoscaling_limits` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_instance.autoscaling_config.autoscaling_limits.new](#fn-autoscaling_configautoscaling_limitsnew) constructor.
+and outages due to abrupt scale-in events. Users can define the minimum and
+maximum compute capacity allocated to the instance, and the autoscaler will
+only scale within that range. Users can either use nodes or processing
+units to specify the limits, but should use the same unit to set both the
+min_limit and max_limit. When `null`, the `autoscaling_limits` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_instance.autoscaling_config.autoscaling_limits.new](#fn-autoscaling_configautoscaling_limitsnew) constructor.
   - `autoscaling_targets` (`list[obj]`): Defines scale in controls to reduce the risk of response latency
 and outages due to abrupt scale-in events When `null`, the `autoscaling_targets` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.spanner_instance.autoscaling_config.autoscaling_targets.new](#fn-autoscaling_configautoscaling_targetsnew) constructor.
 
@@ -401,9 +405,13 @@ Terraform sub block.
 
 
 **Args**:
+  - `max_nodes` (`number`): Specifies maximum number of nodes allocated to the instance. If set, this number
+should be greater than or equal to min_nodes. When `null`, the `max_nodes` field will be omitted from the resulting object.
   - `max_processing_units` (`number`): Specifies maximum number of processing units allocated to the instance.
 If set, this number should be multiples of 1000 and be greater than or equal to
 min_processing_units. When `null`, the `max_processing_units` field will be omitted from the resulting object.
+  - `min_nodes` (`number`): Specifies number of nodes allocated to the instance. If set, this number
+should be greater than or equal to 1. When `null`, the `min_nodes` field will be omitted from the resulting object.
   - `min_processing_units` (`number`): Specifies minimum number of processing units allocated to the instance.
 If set, this number should be multiples of 1000. When `null`, the `min_processing_units` field will be omitted from the resulting object.
 

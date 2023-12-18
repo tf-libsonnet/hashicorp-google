@@ -38,6 +38,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withRequesterPays()`](#fn-withrequesterpays)
 * [`fn withRetentionPolicy()`](#fn-withretentionpolicy)
 * [`fn withRetentionPolicyMixin()`](#fn-withretentionpolicymixin)
+* [`fn withRpo()`](#fn-withrpo)
 * [`fn withStorageClass()`](#fn-withstorageclass)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -109,6 +110,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `public_access_prevention` (`string`): Prevents public access to a bucket. When `null`, the `public_access_prevention` field will be omitted from the resulting object.
   - `requester_pays` (`bool`): Enables Requester Pays on a storage bucket. When `null`, the `requester_pays` field will be omitted from the resulting object.
+  - `rpo` (`string`): Specifies the RPO setting of bucket. If set &#39;ASYNC_TURBO&#39;, The Turbo Replication will be enabled for the dual-region bucket. Value &#39;DEFAULT&#39; will set RPO setting to default. Turbo Replication is only for buckets in dual-regions.See the docs for more details. When `null`, the `rpo` field will be omitted from the resulting object.
   - `storage_class` (`string`): The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. When `null`, the `storage_class` field will be omitted from the resulting object.
   - `uniform_bucket_level_access` (`bool`): Enables uniform bucket-level access on a bucket. When `null`, the `uniform_bucket_level_access` field will be omitted from the resulting object.
   - `autoclass` (`list[obj]`): The bucket&#39;s autoclass configuration. When `null`, the `autoclass` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.autoclass.new](#fn-autoclassnew) constructor.
@@ -153,6 +155,7 @@ injecting into a complete block.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `public_access_prevention` (`string`): Prevents public access to a bucket. When `null`, the `public_access_prevention` field will be omitted from the resulting object.
   - `requester_pays` (`bool`): Enables Requester Pays on a storage bucket. When `null`, the `requester_pays` field will be omitted from the resulting object.
+  - `rpo` (`string`): Specifies the RPO setting of bucket. If set &#39;ASYNC_TURBO&#39;, The Turbo Replication will be enabled for the dual-region bucket. Value &#39;DEFAULT&#39; will set RPO setting to default. Turbo Replication is only for buckets in dual-regions.See the docs for more details. When `null`, the `rpo` field will be omitted from the resulting object.
   - `storage_class` (`string`): The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. When `null`, the `storage_class` field will be omitted from the resulting object.
   - `uniform_bucket_level_access` (`bool`): Enables uniform bucket-level access on a bucket. When `null`, the `uniform_bucket_level_access` field will be omitted from the resulting object.
   - `autoclass` (`list[obj]`): The bucket&#39;s autoclass configuration. When `null`, the `autoclass` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.autoclass.new](#fn-autoclassnew) constructor.
@@ -571,6 +574,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `retention_policy` field.
+
+
+### fn withRpo
+
+```ts
+withRpo()
+```
+
+`google.string.withRpo` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the rpo field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `rpo` field.
 
 
 ### fn withStorageClass

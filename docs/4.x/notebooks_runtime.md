@@ -17,6 +17,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withAccessConfig()`](#fn-withaccessconfig)
 * [`fn withAccessConfigMixin()`](#fn-withaccessconfigmixin)
+* [`fn withLabels()`](#fn-withlabels)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
 * [`fn withProject()`](#fn-withproject)
@@ -80,6 +81,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `labels` (`obj`): The labels to associate with this runtime. Label **keys** must
+contain 1 to 63 characters, and must conform to [RFC 1035]
+(https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be
+empty, but, if present, must contain 1 to 63 characters, and must
+conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No
+more than 32 labels can be associated with a cluster.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): A reference to the zone where the machine resides.
   - `name` (`string`): The name specified for the Notebook runtime.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -110,6 +121,16 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `labels` (`obj`): The labels to associate with this runtime. Label **keys** must
+contain 1 to 63 characters, and must conform to [RFC 1035]
+(https://www.ietf.org/rfc/rfc1035.txt). Label **values** may be
+empty, but, if present, must contain 1 to 63 characters, and must
+conform to [RFC 1035](https://www.ietf.org/rfc/rfc1035.txt). No
+more than 32 labels can be associated with a cluster.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): A reference to the zone where the machine resides.
   - `name` (`string`): The name specified for the Notebook runtime.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
@@ -157,6 +178,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `access_config` field.
+
+
+### fn withLabels
+
+```ts
+withLabels()
+```
+
+`google.obj.withLabels` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the labels field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `labels` field.
 
 
 ### fn withLocation

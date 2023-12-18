@@ -23,6 +23,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRegion()`](#fn-withregion)
 * [`fn withRegionInstanceGroupManager()`](#fn-withregioninstancegroupmanager)
+* [`fn withRemoveInstanceOnDestroy()`](#fn-withremoveinstanceondestroy)
 * [`fn withRemoveInstanceStateOnDestroy()`](#fn-withremoveinstancestateondestroy)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -86,6 +87,8 @@ Default is &#39;REPLACE&#39;. Possible values are:
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the containing instance group manager is located When `null`, the `region` field will be omitted from the resulting object.
   - `region_instance_group_manager` (`string`): The region instance group manager this instance config is part of.
+  - `remove_instance_on_destroy` (`bool`): When true, deleting this config will immediately remove the underlying instance.
+When false, deleting this config will use the behavior as determined by remove_instance_on_destroy. When `null`, the `remove_instance_on_destroy` field will be omitted from the resulting object.
   - `remove_instance_state_on_destroy` (`bool`): When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update. When `null`, the `remove_instance_state_on_destroy` field will be omitted from the resulting object.
@@ -130,6 +133,8 @@ Default is &#39;REPLACE&#39;. Possible values are:
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the containing instance group manager is located When `null`, the `region` field will be omitted from the resulting object.
   - `region_instance_group_manager` (`string`): The region instance group manager this instance config is part of.
+  - `remove_instance_on_destroy` (`bool`): When true, deleting this config will immediately remove the underlying instance.
+When false, deleting this config will use the behavior as determined by remove_instance_on_destroy. When `null`, the `remove_instance_on_destroy` field will be omitted from the resulting object.
   - `remove_instance_state_on_destroy` (`bool`): When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update. When `null`, the `remove_instance_state_on_destroy` field will be omitted from the resulting object.
@@ -271,6 +276,22 @@ Terraform resource block to set or update the region_instance_group_manager fiel
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `region_instance_group_manager` field.
+
+
+### fn withRemoveInstanceOnDestroy
+
+```ts
+withRemoveInstanceOnDestroy()
+```
+
+`google.bool.withRemoveInstanceOnDestroy` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the remove_instance_on_destroy field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `remove_instance_on_destroy` field.
 
 
 ### fn withRemoveInstanceStateOnDestroy

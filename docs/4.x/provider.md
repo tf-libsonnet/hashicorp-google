@@ -172,6 +172,7 @@ the `src` and/or `version` parameters are set.
   - `vertex_ai_custom_endpoint` (`string`): Set the `vertex_ai_custom_endpoint` field on the resulting provider block. When `null`, the `vertex_ai_custom_endpoint` field will be omitted from the resulting object.
   - `vmwareengine_custom_endpoint` (`string`): Set the `vmwareengine_custom_endpoint` field on the resulting provider block. When `null`, the `vmwareengine_custom_endpoint` field will be omitted from the resulting object.
   - `vpc_access_custom_endpoint` (`string`): Set the `vpc_access_custom_endpoint` field on the resulting provider block. When `null`, the `vpc_access_custom_endpoint` field will be omitted from the resulting object.
+  - `workbench_custom_endpoint` (`string`): Set the `workbench_custom_endpoint` field on the resulting provider block. When `null`, the `workbench_custom_endpoint` field will be omitted from the resulting object.
   - `workflows_custom_endpoint` (`string`): Set the `workflows_custom_endpoint` field on the resulting provider block. When `null`, the `workflows_custom_endpoint` field will be omitted from the resulting object.
   - `zone` (`string`): Set the `zone` field on the resulting provider block. When `null`, the `zone` field will be omitted from the resulting object.
   - `batching` (`list[obj]`): Set the `batching` field on the resulting provider block. When `null`, the `batching` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.provider.batching.new](#fn-googlebatchingnew) constructor.
@@ -343,6 +344,7 @@ injecting into a complete block.
   - `vertex_ai_custom_endpoint` (`string`): Set the `vertex_ai_custom_endpoint` field on the resulting object. When `null`, the `vertex_ai_custom_endpoint` field will be omitted from the resulting object.
   - `vmwareengine_custom_endpoint` (`string`): Set the `vmwareengine_custom_endpoint` field on the resulting object. When `null`, the `vmwareengine_custom_endpoint` field will be omitted from the resulting object.
   - `vpc_access_custom_endpoint` (`string`): Set the `vpc_access_custom_endpoint` field on the resulting object. When `null`, the `vpc_access_custom_endpoint` field will be omitted from the resulting object.
+  - `workbench_custom_endpoint` (`string`): Set the `workbench_custom_endpoint` field on the resulting object. When `null`, the `workbench_custom_endpoint` field will be omitted from the resulting object.
   - `workflows_custom_endpoint` (`string`): Set the `workflows_custom_endpoint` field on the resulting object. When `null`, the `workflows_custom_endpoint` field will be omitted from the resulting object.
   - `zone` (`string`): Set the `zone` field on the resulting object. When `null`, the `zone` field will be omitted from the resulting object.
   - `batching` (`list[obj]`): Set the `batching` field on the resulting object. When `null`, the `batching` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.provider.batching.new](#fn-googlebatchingnew) constructor.

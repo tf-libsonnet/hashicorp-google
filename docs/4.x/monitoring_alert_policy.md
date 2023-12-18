@@ -26,6 +26,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withEnabled()`](#fn-withenabled)
 * [`fn withNotificationChannels()`](#fn-withnotificationchannels)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withSeverity()`](#fn-withseverity)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withUserLabels()`](#fn-withuserlabels)
@@ -110,6 +111,9 @@ returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 &#39;projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]&#39; When `null`, the `notification_channels` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `severity` (`string`): The severity of an alert policy indicates how important incidents generated
+by that policy are. The severity level will be displayed on the Incident
+detail page and in notifications. Possible values: [&#34;CRITICAL&#34;, &#34;ERROR&#34;, &#34;WARNING&#34;] When `null`, the `severity` field will be omitted from the resulting object.
   - `user_labels` (`obj`): This field is intended to be used for organizing and identifying the AlertPolicy
 objects.The field can contain up to 64 entries. Each key and value is limited
 to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
@@ -164,6 +168,9 @@ returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 &#39;projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]&#39; When `null`, the `notification_channels` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `severity` (`string`): The severity of an alert policy indicates how important incidents generated
+by that policy are. The severity level will be displayed on the Incident
+detail page and in notifications. Possible values: [&#34;CRITICAL&#34;, &#34;ERROR&#34;, &#34;WARNING&#34;] When `null`, the `severity` field will be omitted from the resulting object.
   - `user_labels` (`obj`): This field is intended to be used for organizing and identifying the AlertPolicy
 objects.The field can contain up to 64 entries. Each key and value is limited
 to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
@@ -374,6 +381,22 @@ Terraform resource block to set or update the project field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `project` field.
+
+
+### fn withSeverity
+
+```ts
+withSeverity()
+```
+
+`google.string.withSeverity` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the severity field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `severity` field.
 
 
 ### fn withTimeouts

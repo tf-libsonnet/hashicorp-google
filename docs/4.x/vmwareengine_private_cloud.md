@@ -25,6 +25,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withType()`](#fn-withtype)
 * [`obj management_cluster`](#obj-management_cluster)
   * [`fn new()`](#fn-management_clusternew)
   * [`obj management_cluster.node_type_configs`](#obj-management_clusternode_type_configs)
@@ -67,6 +68,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `location` (`string`): The location where the PrivateCloud should reside.
   - `name` (`string`): The ID of the PrivateCloud.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
+  - `type` (`string`): Initial type of the private cloud. Default value: &#34;STANDARD&#34; Possible values: [&#34;STANDARD&#34;, &#34;TIME_LIMITED&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `management_cluster` (`list[obj]`): The management cluster for this private cloud. This used for creating and managing the default cluster. When `null`, the `management_cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vmwareengine_private_cloud.management_cluster.new](#fn-management_clusternew) constructor.
   - `network_config` (`list[obj]`): Network configuration in the consumer project with which the peering has to be done. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vmwareengine_private_cloud.network_config.new](#fn-network_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vmwareengine_private_cloud.timeouts.new](#fn-timeoutsnew) constructor.
@@ -97,6 +99,7 @@ injecting into a complete block.
   - `location` (`string`): The location where the PrivateCloud should reside.
   - `name` (`string`): The ID of the PrivateCloud.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
+  - `type` (`string`): Initial type of the private cloud. Default value: &#34;STANDARD&#34; Possible values: [&#34;STANDARD&#34;, &#34;TIME_LIMITED&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `management_cluster` (`list[obj]`): The management cluster for this private cloud. This used for creating and managing the default cluster. When `null`, the `management_cluster` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vmwareengine_private_cloud.management_cluster.new](#fn-management_clusternew) constructor.
   - `network_config` (`list[obj]`): Network configuration in the consumer project with which the peering has to be done. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vmwareengine_private_cloud.network_config.new](#fn-network_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vmwareengine_private_cloud.timeouts.new](#fn-timeoutsnew) constructor.
@@ -277,6 +280,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withType
+
+```ts
+withType()
+```
+
+`google.string.withType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `type` field.
 
 
 ## obj management_cluster
