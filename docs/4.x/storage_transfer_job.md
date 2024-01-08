@@ -18,6 +18,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withEventStream()`](#fn-witheventstream)
 * [`fn withEventStreamMixin()`](#fn-witheventstreammixin)
+* [`fn withName()`](#fn-withname)
 * [`fn withNotificationConfig()`](#fn-withnotificationconfig)
 * [`fn withNotificationConfigMixin()`](#fn-withnotificationconfigmixin)
 * [`fn withProject()`](#fn-withproject)
@@ -93,6 +94,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): Unique description to identify the Transfer Job.
+  - `name` (`string`): The name of the Transfer Job. When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`): The project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `status` (`string`): Status of the job. Default: ENABLED. NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation. When `null`, the `status` field will be omitted from the resulting object.
   - `event_stream` (`list[obj]`): Set the `event_stream` field on the resulting resource block. When `null`, the `event_stream` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.event_stream.new](#fn-event_streamnew) constructor.
@@ -123,6 +125,7 @@ injecting into a complete block.
 
 **Args**:
   - `description` (`string`): Unique description to identify the Transfer Job.
+  - `name` (`string`): The name of the Transfer Job. When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`): The project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `status` (`string`): Status of the job. Default: ENABLED. NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation. When `null`, the `status` field will be omitted from the resulting object.
   - `event_stream` (`list[obj]`): Set the `event_stream` field on the resulting object. When `null`, the `event_stream` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.event_stream.new](#fn-event_streamnew) constructor.
@@ -185,6 +188,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `event_stream` field.
+
+
+### fn withName
+
+```ts
+withName()
+```
+
+`google.string.withName` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the name field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `name` field.
 
 
 ### fn withNotificationConfig

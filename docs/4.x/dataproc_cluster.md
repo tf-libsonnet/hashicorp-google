@@ -30,6 +30,16 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-cluster_confignew)
   * [`obj cluster_config.autoscaling_config`](#obj-cluster_configautoscaling_config)
     * [`fn new()`](#fn-cluster_configautoscaling_confignew)
+  * [`obj cluster_config.auxiliary_node_groups`](#obj-cluster_configauxiliary_node_groups)
+    * [`fn new()`](#fn-cluster_configauxiliary_node_groupsnew)
+    * [`obj cluster_config.auxiliary_node_groups.node_group`](#obj-cluster_configauxiliary_node_groupsnode_group)
+      * [`fn new()`](#fn-cluster_configauxiliary_node_groupsnode_groupnew)
+      * [`obj cluster_config.auxiliary_node_groups.node_group.node_group_config`](#obj-cluster_configauxiliary_node_groupsnode_groupnode_group_config)
+        * [`fn new()`](#fn-cluster_configauxiliary_node_groupsnode_groupnode_group_confignew)
+        * [`obj cluster_config.auxiliary_node_groups.node_group.node_group_config.accelerators`](#obj-cluster_configauxiliary_node_groupsnode_groupnode_group_configaccelerators)
+          * [`fn new()`](#fn-cluster_configauxiliary_node_groupsnode_groupnode_group_configacceleratorsnew)
+        * [`obj cluster_config.auxiliary_node_groups.node_group.node_group_config.disk_config`](#obj-cluster_configauxiliary_node_groupsnode_groupnode_group_configdisk_config)
+          * [`fn new()`](#fn-cluster_configauxiliary_node_groupsnode_groupnode_group_configdisk_confignew)
   * [`obj cluster_config.dataproc_metric_config`](#obj-cluster_configdataproc_metric_config)
     * [`fn new()`](#fn-cluster_configdataproc_metric_confignew)
     * [`obj cluster_config.dataproc_metric_config.metrics`](#obj-cluster_configdataproc_metric_configmetrics)
@@ -392,6 +402,7 @@ Terraform sub block.
   - `staging_bucket` (`string`): The Cloud Storage staging bucket used to stage files, such as Hadoop jars, between client machines and the cluster. Note: If you don&#39;t explicitly specify a staging_bucket then GCP will auto create / assign one for you. However, you are not guaranteed an auto generated bucket which is solely dedicated to your cluster; it may be shared with other clusters in the same region/zone also choosing to use the auto generation option. When `null`, the `staging_bucket` field will be omitted from the resulting object.
   - `temp_bucket` (`string`): The Cloud Storage temp bucket used to store ephemeral cluster and jobs data, such as Spark and MapReduce history files. Note: If you don&#39;t explicitly specify a temp_bucket then GCP will auto create / assign one for you. When `null`, the `temp_bucket` field will be omitted from the resulting object.
   - `autoscaling_config` (`list[obj]`): The autoscaling policy config associated with the cluster. When `null`, the `autoscaling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.autoscaling_config.new](#fn-cluster_configautoscaling_confignew) constructor.
+  - `auxiliary_node_groups` (`list[obj]`): The node group settings. When `null`, the `auxiliary_node_groups` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.auxiliary_node_groups.new](#fn-cluster_configauxiliary_node_groupsnew) constructor.
   - `dataproc_metric_config` (`list[obj]`): The config for Dataproc metrics. When `null`, the `dataproc_metric_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.dataproc_metric_config.new](#fn-cluster_configdataproc_metric_confignew) constructor.
   - `encryption_config` (`list[obj]`): The Customer managed encryption keys settings for the cluster. When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.encryption_config.new](#fn-cluster_configencryption_confignew) constructor.
   - `endpoint_config` (`list[obj]`): The config settings for port access on the cluster. Structure defined below. When `null`, the `endpoint_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.endpoint_config.new](#fn-cluster_configendpoint_confignew) constructor.
@@ -430,6 +441,130 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `autoscaling_config` sub block.
+
+
+## obj cluster_config.auxiliary_node_groups
+
+
+
+### fn cluster_config.auxiliary_node_groups.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_cluster.cluster_config.auxiliary_node_groups.new` constructs a new object with attributes and blocks configured for the `auxiliary_node_groups`
+Terraform sub block.
+
+
+
+**Args**:
+  - `node_group_id` (`string`): A node group ID. Generated if not specified. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of from 3 to 33 characters. When `null`, the `node_group_id` field will be omitted from the resulting object.
+  - `node_group` (`list[obj]`): Node group configuration. When `null`, the `node_group` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.auxiliary_node_groups.node_group.new](#fn-cluster_configcluster_confignode_groupnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `auxiliary_node_groups` sub block.
+
+
+## obj cluster_config.auxiliary_node_groups.node_group
+
+
+
+### fn cluster_config.auxiliary_node_groups.node_group.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_cluster.cluster_config.auxiliary_node_groups.node_group.new` constructs a new object with attributes and blocks configured for the `node_group`
+Terraform sub block.
+
+
+
+**Args**:
+  - `roles` (`list`): Node group roles.
+  - `node_group_config` (`list[obj]`): The node group instance group configuration. When `null`, the `node_group_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.auxiliary_node_groups.node_group.node_group_config.new](#fn-cluster_configcluster_configauxiliary_node_groupsnode_group_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `node_group` sub block.
+
+
+## obj cluster_config.auxiliary_node_groups.node_group.node_group_config
+
+
+
+### fn cluster_config.auxiliary_node_groups.node_group.node_group_config.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_cluster.cluster_config.auxiliary_node_groups.node_group.node_group_config.new` constructs a new object with attributes and blocks configured for the `node_group_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `machine_type` (`string`): The name of a Google Compute Engine machine type to create for the master When `null`, the `machine_type` field will be omitted from the resulting object.
+  - `min_cpu_platform` (`string`): The name of a minimum generation of CPU family for the auxiliary node group. If not specified, GCP will default to a predetermined computed value for each zone. When `null`, the `min_cpu_platform` field will be omitted from the resulting object.
+  - `num_instances` (`number`): Specifies the number of auxiliary nodes to create. If not specified, GCP will default to a predetermined computed value. When `null`, the `num_instances` field will be omitted from the resulting object.
+  - `accelerators` (`list[obj]`): The Compute Engine accelerator (GPU) configuration for these instances. Can be specified multiple times. When `null`, the `accelerators` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.auxiliary_node_groups.node_group.node_group_config.accelerators.new](#fn-cluster_configcluster_configauxiliary_node_groupsnode_groupacceleratorsnew) constructor.
+  - `disk_config` (`list[obj]`): Disk Config When `null`, the `disk_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_cluster.cluster_config.auxiliary_node_groups.node_group.node_group_config.disk_config.new](#fn-cluster_configcluster_configauxiliary_node_groupsnode_groupdisk_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `node_group_config` sub block.
+
+
+## obj cluster_config.auxiliary_node_groups.node_group.node_group_config.accelerators
+
+
+
+### fn cluster_config.auxiliary_node_groups.node_group.node_group_config.accelerators.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_cluster.cluster_config.auxiliary_node_groups.node_group.node_group_config.accelerators.new` constructs a new object with attributes and blocks configured for the `accelerators`
+Terraform sub block.
+
+
+
+**Args**:
+  - `accelerator_count` (`number`): The number of the accelerator cards of this type exposed to this instance. Often restricted to one of 1, 2, 4, or 8.
+  - `accelerator_type` (`string`): The short name of the accelerator type to expose to this instance. For example, nvidia-tesla-k80.
+
+**Returns**:
+  - An attribute object that represents the `accelerators` sub block.
+
+
+## obj cluster_config.auxiliary_node_groups.node_group.node_group_config.disk_config
+
+
+
+### fn cluster_config.auxiliary_node_groups.node_group.node_group_config.disk_config.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_cluster.cluster_config.auxiliary_node_groups.node_group.node_group_config.disk_config.new` constructs a new object with attributes and blocks configured for the `disk_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `boot_disk_size_gb` (`number`): Size of the primary disk attached to each node, specified in GB. The primary disk contains the boot volume and system libraries, and the smallest allowed disk size is 10GB. GCP will default to a predetermined computed value if not set (currently 500GB). Note: If SSDs are not attached, it also contains the HDFS data blocks and Hadoop working directories. When `null`, the `boot_disk_size_gb` field will be omitted from the resulting object.
+  - `boot_disk_type` (`string`): The disk type of the primary disk attached to each node. Such as &#34;pd-ssd&#34; or &#34;pd-standard&#34;. Defaults to &#34;pd-standard&#34;. When `null`, the `boot_disk_type` field will be omitted from the resulting object.
+  - `num_local_ssds` (`number`): The amount of local SSD disks that will be attached to each master cluster node. Defaults to 0. When `null`, the `num_local_ssds` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `disk_config` sub block.
 
 
 ## obj cluster_config.dataproc_metric_config

@@ -88,6 +88,7 @@ permalink: /data/
 * [compute_region_network_endpoint_group](compute_region_network_endpoint_group.md)
 * [compute_region_ssl_certificate](compute_region_ssl_certificate.md)
 * [compute_regions](compute_regions.md)
+* [compute_reservation](compute_reservation.md)
 * [compute_resource_policy](compute_resource_policy.md)
 * [compute_router](compute_router.md)
 * [compute_router_nat](compute_router_nat.md)

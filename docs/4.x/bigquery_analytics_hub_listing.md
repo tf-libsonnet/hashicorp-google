@@ -32,6 +32,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withPublisher()`](#fn-withpublisher)
 * [`fn withPublisherMixin()`](#fn-withpublishermixin)
 * [`fn withRequestAccess()`](#fn-withrequestaccess)
+* [`fn withRestrictedExportConfig()`](#fn-withrestrictedexportconfig)
+* [`fn withRestrictedExportConfigMixin()`](#fn-withrestrictedexportconfigmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj bigquery_dataset`](#obj-bigquery_dataset)
@@ -40,6 +42,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-data_providernew)
 * [`obj publisher`](#obj-publisher)
   * [`fn new()`](#fn-publishernew)
+* [`obj restricted_export_config`](#obj-restricted_export_config)
+  * [`fn new()`](#fn-restricted_export_confignew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -86,6 +90,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `bigquery_dataset` (`list[obj]`): Shared dataset i.e. BigQuery dataset source. When `null`, the `bigquery_dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.bigquery_dataset.new](#fn-bigquery_datasetnew) constructor.
   - `data_provider` (`list[obj]`): Details of the data provider who owns the source data. When `null`, the `data_provider` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.data_provider.new](#fn-data_providernew) constructor.
   - `publisher` (`list[obj]`): Details of the publisher who owns the listing and who can share the source data. When `null`, the `publisher` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.publisher.new](#fn-publishernew) constructor.
+  - `restricted_export_config` (`list[obj]`): If set, restricted export configuration will be propagated and enforced on the linked dataset. When `null`, the `restricted_export_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.restricted_export_config.new](#fn-restricted_export_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -124,6 +129,7 @@ injecting into a complete block.
   - `bigquery_dataset` (`list[obj]`): Shared dataset i.e. BigQuery dataset source. When `null`, the `bigquery_dataset` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.bigquery_dataset.new](#fn-bigquery_datasetnew) constructor.
   - `data_provider` (`list[obj]`): Details of the data provider who owns the source data. When `null`, the `data_provider` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.data_provider.new](#fn-data_providernew) constructor.
   - `publisher` (`list[obj]`): Details of the publisher who owns the listing and who can share the source data. When `null`, the `publisher` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.publisher.new](#fn-publishernew) constructor.
+  - `restricted_export_config` (`list[obj]`): If set, restricted export configuration will be propagated and enforced on the linked dataset. When `null`, the `restricted_export_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.restricted_export_config.new](#fn-restricted_export_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_analytics_hub_listing.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -417,6 +423,43 @@ Terraform resource block to set or update the request_access field.
   - `value` (`string`): The value to set for the `request_access` field.
 
 
+### fn withRestrictedExportConfig
+
+```ts
+withRestrictedExportConfig()
+```
+
+`google.list[obj].withRestrictedExportConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the restricted_export_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withRestrictedExportConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `restricted_export_config` field.
+
+
+### fn withRestrictedExportConfigMixin
+
+```ts
+withRestrictedExportConfigMixin()
+```
+
+`google.list[obj].withRestrictedExportConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the restricted_export_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withRestrictedExportConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `restricted_export_config` field.
+
+
 ### fn withTimeouts
 
 ```ts
@@ -522,6 +565,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `publisher` sub block.
+
+
+## obj restricted_export_config
+
+
+
+### fn restricted_export_config.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_analytics_hub_listing.restricted_export_config.new` constructs a new object with attributes and blocks configured for the `restricted_export_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): If true, enable restricted export. When `null`, the `enabled` field will be omitted from the resulting object.
+  - `restrict_query_result` (`bool`): If true, restrict export of query result derived from restricted linked dataset table. When `null`, the `restrict_query_result` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `restricted_export_config` sub block.
 
 
 ## obj timeouts

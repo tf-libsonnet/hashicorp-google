@@ -83,6 +83,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   compute_region_network_endpoint_group: (import 'compute_region_network_endpoint_group.libsonnet'),
   compute_region_ssl_certificate: (import 'compute_region_ssl_certificate.libsonnet'),
   compute_regions: (import 'compute_regions.libsonnet'),
+  compute_reservation: (import 'compute_reservation.libsonnet'),
   compute_resource_policy: (import 'compute_resource_policy.libsonnet'),
   compute_router: (import 'compute_router.libsonnet'),
   compute_router_nat: (import 'compute_router_nat.libsonnet'),

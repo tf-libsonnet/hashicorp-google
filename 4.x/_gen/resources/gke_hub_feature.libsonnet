@@ -56,11 +56,13 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
           }),
         },
       },
-      '#new':: d.fn(help='\n`google.gke_hub_feature.fleet_default_member_config.configmanagement.new` constructs a new object with attributes and blocks configured for the `configmanagement`\nTerraform sub block.\n\n\n\n**Args**:\n  - `config_sync` (`list[obj]`): ConfigSync configuration for the cluster When `null`, the `config_sync` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.new](#fn-fleet_default_member_configfleet_default_member_configconfig_syncnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `configmanagement` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.gke_hub_feature.fleet_default_member_config.configmanagement.new` constructs a new object with attributes and blocks configured for the `configmanagement`\nTerraform sub block.\n\n\n\n**Args**:\n  - `version` (`string`): Version of ACM installed When `null`, the `version` field will be omitted from the resulting object.\n  - `config_sync` (`list[obj]`): ConfigSync configuration for the cluster When `null`, the `config_sync` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.fleet_default_member_config.configmanagement.config_sync.new](#fn-fleet_default_member_configfleet_default_member_configconfig_syncnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `configmanagement` sub block.\n', args=[]),
       new(
-        config_sync=null
+        config_sync=null,
+        version=null
       ):: std.prune(a={
         config_sync: config_sync,
+        version: version,
       }),
     },
     mesh:: {

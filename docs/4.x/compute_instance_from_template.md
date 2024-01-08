@@ -1009,6 +1009,8 @@ Terraform sub block.
 **Args**:
   - `image` (`string`): The image from which this disk was initialised. When `null`, the `image` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs assigned to the disk. When `null`, the `labels` field will be omitted from the resulting object.
+  - `provisioned_iops` (`number`): Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. When `null`, the `provisioned_iops` field will be omitted from the resulting object.
+  - `provisioned_throughput` (`number`): Indicates how much throughput to provision for the disk. This sets the number of throughput mb per second that the disk can handle. Values must be between 1 and 7,124. When `null`, the `provisioned_throughput` field will be omitted from the resulting object.
   - `resource_manager_tags` (`obj`): A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT &amp; PATCH) when empty. When `null`, the `resource_manager_tags` field will be omitted from the resulting object.
   - `size` (`number`): The size of the image in gigabytes. When `null`, the `size` field will be omitted from the resulting object.
   - `type` (`string`): The Google Compute Engine disk type. Such as pd-standard, pd-ssd or pd-balanced. When `null`, the `type` field will be omitted from the resulting object.

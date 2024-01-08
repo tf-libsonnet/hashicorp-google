@@ -143,7 +143,9 @@ by &#39;s&#39;. Example: &#39;&#34;600.5s&#34;&#39;. When `null`, the `message_r
 messages are not expunged from the subscription&#39;s backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window. When `null`, the `retain_acked_messages` field will be omitted from the resulting object.
-  - `topic` (`string`): A reference to a Topic resource.
+  - `topic` (`string`): A reference to a Topic resource, of the form projects/{project}/topics/{{name}}
+(as in the id property of a google_pubsub_topic), or just a topic name if
+the topic is in the same project as the subscription.
   - `bigquery_config` (`list[obj]`): If delivery to BigQuery is used with this subscription, this field is used to configure it.
 Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined.
 If all three are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `bigquery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.bigquery_config.new](#fn-bigquery_confignew) constructor.
@@ -250,7 +252,9 @@ by &#39;s&#39;. Example: &#39;&#34;600.5s&#34;&#39;. When `null`, the `message_r
 messages are not expunged from the subscription&#39;s backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window. When `null`, the `retain_acked_messages` field will be omitted from the resulting object.
-  - `topic` (`string`): A reference to a Topic resource.
+  - `topic` (`string`): A reference to a Topic resource, of the form projects/{project}/topics/{{name}}
+(as in the id property of a google_pubsub_topic), or just a topic name if
+the topic is in the same project as the subscription.
   - `bigquery_config` (`list[obj]`): If delivery to BigQuery is used with this subscription, this field is used to configure it.
 Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined.
 If all three are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `bigquery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.bigquery_config.new](#fn-bigquery_confignew) constructor.

@@ -1,10 +1,10 @@
 ---
-permalink: /compute_network_firewall_policy/
+permalink: /netapp_backup_vault/
 ---
 
-# compute_network_firewall_policy
+# netapp_backup_vault
 
-`compute_network_firewall_policy` represents the `google_compute_network_firewall_policy` Terraform resource.
+`netapp_backup_vault` represents the `google_netapp_backup_vault` Terraform resource.
 
 
 
@@ -16,6 +16,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withDescription()`](#fn-withdescription)
+* [`fn withLabels()`](#fn-withlabels)
+* [`fn withLocation()`](#fn-withlocation)
 * [`fn withName()`](#fn-withname)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withTimeouts()`](#fn-withtimeouts)
@@ -32,30 +34,36 @@ new()
 ```
 
 
-`google.compute_network_firewall_policy.new` injects a new `google_compute_network_firewall_policy` Terraform `resource`
+`google.netapp_backup_vault.new` injects a new `google_netapp_backup_vault` Terraform `resource`
 block into the root module document.
 
 Additionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the
 resource. For example, if you added a new instance to the root using:
 
     # arguments omitted for brevity
-    google.compute_network_firewall_policy.new('some_id')
+    google.netapp_backup_vault.new('some_id')
 
-You can get the reference to the `id` field of the created `google.compute_network_firewall_policy` using the reference:
+You can get the reference to the `id` field of the created `google.netapp_backup_vault` using the reference:
 
-    $._ref.google_compute_network_firewall_policy.some_id.get('id')
+    $._ref.google_netapp_backup_vault.some_id.get('id')
 
-This is the same as directly entering `"${ google_compute_network_firewall_policy.some_id.id }"` as the value.
+This is the same as directly entering `"${ google_netapp_backup_vault.some_id.id }"` as the value.
 
 NOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,
 or `$` to refer to the root object. Instead, make an explicit outer object using `local`.
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `description` (`string`): An optional description of this resource. Provide this property when you create the resource. When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): User-provided name of the Network firewall policy. The name should be unique in the project in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+  - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels as key value pairs. Example: &#39;{ &#34;owner&#34;: &#34;Bob&#34;, &#34;department&#34;: &#34;finance&#34;, &#34;purpose&#34;: &#34;testing&#34; }&#39;.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `location` (`string`): Location (region) of the backup vault.
+  - `name` (`string`): The resource name of the backup vault. Needs to be unique per location.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.netapp_backup_vault.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -68,10 +76,10 @@ newAttrs()
 ```
 
 
-`google.compute_network_firewall_policy.newAttrs` constructs a new object with attributes and blocks configured for the `compute_network_firewall_policy`
+`google.netapp_backup_vault.newAttrs` constructs a new object with attributes and blocks configured for the `netapp_backup_vault`
 Terraform resource.
 
-Unlike [google.compute_network_firewall_policy.new](#fn-new), this function will not inject the `resource`
+Unlike [google.netapp_backup_vault.new](#fn-new), this function will not inject the `resource`
 block into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the
 [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.
 
@@ -79,13 +87,19 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `description` (`string`): An optional description of this resource. Provide this property when you create the resource. When `null`, the `description` field will be omitted from the resulting object.
-  - `name` (`string`): User-provided name of the Network firewall policy. The name should be unique in the project in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
+  - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels as key value pairs. Example: &#39;{ &#34;owner&#34;: &#34;Bob&#34;, &#34;department&#34;: &#34;finance&#34;, &#34;purpose&#34;: &#34;testing&#34; }&#39;.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `location` (`string`): Location (region) of the backup vault.
+  - `name` (`string`): The resource name of the backup vault. Needs to be unique per location.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_network_firewall_policy.timeouts.new](#fn-timeoutsnew) constructor.
+  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.netapp_backup_vault.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
-  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_network_firewall_policy` resource into the root Terraform configuration.
+  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `netapp_backup_vault` resource into the root Terraform configuration.
 
 
 ### fn withDescription
@@ -102,6 +116,38 @@ Terraform resource block to set or update the description field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `description` field.
+
+
+### fn withLabels
+
+```ts
+withLabels()
+```
+
+`google.obj.withLabels` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the labels field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `labels` field.
+
+
+### fn withLocation
+
+```ts
+withLocation()
+```
+
+`google.string.withLocation` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the location field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `location` field.
 
 
 ### fn withName
@@ -183,7 +229,7 @@ new()
 ```
 
 
-`google.compute_network_firewall_policy.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
+`google.netapp_backup_vault.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`
 Terraform sub block.
 
 
