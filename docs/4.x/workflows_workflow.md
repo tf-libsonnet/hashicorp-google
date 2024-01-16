@@ -80,7 +80,7 @@ The {account} value can be the email address or the unique_id of the service acc
 If not provided, workflow will use the project&#39;s default service account.
 Modifying this field for an existing workflow results in a new workflow revision. When `null`, the `service_account` field will be omitted from the resulting object.
   - `source_contents` (`string`): Workflow code to be executed. The size limit is 32KB. When `null`, the `source_contents` field will be omitted from the resulting object.
-  - `user_env_vars` (`obj`): User-defined environment variables associated with this workflow revision. This map has a maximum length of 20. Each string can take up to 40KiB. Keys cannot be empty strings and cannot start with “GOOGLE” or “WORKFLOWS&#34;. When `null`, the `user_env_vars` field will be omitted from the resulting object.
+  - `user_env_vars` (`obj`): User-defined environment variables associated with this workflow revision. This map has a maximum length of 20. Each string can take up to 4KiB. Keys cannot be empty strings and cannot start with “GOOGLE” or “WORKFLOWS&#34;. When `null`, the `user_env_vars` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.workflows_workflow.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -126,7 +126,7 @@ The {account} value can be the email address or the unique_id of the service acc
 If not provided, workflow will use the project&#39;s default service account.
 Modifying this field for an existing workflow results in a new workflow revision. When `null`, the `service_account` field will be omitted from the resulting object.
   - `source_contents` (`string`): Workflow code to be executed. The size limit is 32KB. When `null`, the `source_contents` field will be omitted from the resulting object.
-  - `user_env_vars` (`obj`): User-defined environment variables associated with this workflow revision. This map has a maximum length of 20. Each string can take up to 40KiB. Keys cannot be empty strings and cannot start with “GOOGLE” or “WORKFLOWS&#34;. When `null`, the `user_env_vars` field will be omitted from the resulting object.
+  - `user_env_vars` (`obj`): User-defined environment variables associated with this workflow revision. This map has a maximum length of 20. Each string can take up to 4KiB. Keys cannot be empty strings and cannot start with “GOOGLE” or “WORKFLOWS&#34;. When `null`, the `user_env_vars` field will be omitted from the resulting object.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.workflows_workflow.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:

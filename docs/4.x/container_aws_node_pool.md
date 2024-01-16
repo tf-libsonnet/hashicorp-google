@@ -31,6 +31,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withSubnetId()`](#fn-withsubnetid)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withUpdateSettings()`](#fn-withupdatesettings)
+* [`fn withUpdateSettingsMixin()`](#fn-withupdatesettingsmixin)
 * [`fn withVersion()`](#fn-withversion)
 * [`obj autoscaling`](#obj-autoscaling)
   * [`fn new()`](#fn-autoscalingnew)
@@ -54,6 +56,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-max_pods_constraintnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
+* [`obj update_settings`](#obj-update_settings)
+  * [`fn new()`](#fn-update_settingsnew)
+  * [`obj update_settings.surge_settings`](#obj-update_settingssurge_settings)
+    * [`fn new()`](#fn-update_settingssurge_settingsnew)
 
 ## Fields
 
@@ -99,6 +105,7 @@ Please refer to the field `effective_annotations` for all of the annotations pre
   - `management` (`list[obj]`): The Management configuration for this node pool. When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.management.new](#fn-managementnew) constructor.
   - `max_pods_constraint` (`list[obj]`): The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool. When `null`, the `max_pods_constraint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.max_pods_constraint.new](#fn-max_pods_constraintnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `update_settings` (`list[obj]`): Optional. Update settings control the speed and disruption of the node pool update. When `null`, the `update_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.update_settings.new](#fn-update_settingsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -137,6 +144,7 @@ Please refer to the field `effective_annotations` for all of the annotations pre
   - `management` (`list[obj]`): The Management configuration for this node pool. When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.management.new](#fn-managementnew) constructor.
   - `max_pods_constraint` (`list[obj]`): The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool. When `null`, the `max_pods_constraint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.max_pods_constraint.new](#fn-max_pods_constraintnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `update_settings` (`list[obj]`): Optional. Update settings control the speed and disruption of the node pool update. When `null`, the `update_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.update_settings.new](#fn-update_settingsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_aws_node_pool` resource into the root Terraform configuration.
@@ -420,6 +428,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`obj`): The value to set for the `timeouts` field.
+
+
+### fn withUpdateSettings
+
+```ts
+withUpdateSettings()
+```
+
+`google.list[obj].withUpdateSettings` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the update_settings field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withUpdateSettingsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `update_settings` field.
+
+
+### fn withUpdateSettingsMixin
+
+```ts
+withUpdateSettingsMixin()
+```
+
+`google.list[obj].withUpdateSettingsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the update_settings field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withUpdateSettings](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `update_settings` field.
 
 
 ### fn withVersion
@@ -710,3 +755,50 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
+
+
+## obj update_settings
+
+
+
+### fn update_settings.new
+
+```ts
+new()
+```
+
+
+`google.container_aws_node_pool.update_settings.new` constructs a new object with attributes and blocks configured for the `update_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `surge_settings` (`list[obj]`): Optional. Settings for surge update. When `null`, the `surge_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.update_settings.surge_settings.new](#fn-update_settingssurge_settingsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `update_settings` sub block.
+
+
+## obj update_settings.surge_settings
+
+
+
+### fn update_settings.surge_settings.new
+
+```ts
+new()
+```
+
+
+`google.container_aws_node_pool.update_settings.surge_settings.new` constructs a new object with attributes and blocks configured for the `surge_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `max_surge` (`number`): Optional. The maximum number of nodes that can be created beyond the current size of the node pool during the update process. When `null`, the `max_surge` field will be omitted from the resulting object.
+  - `max_unavailable` (`number`): Optional. The maximum number of nodes that can be simultaneously unavailable during the update process. A node is considered unavailable if its status is not Ready. When `null`, the `max_unavailable` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `surge_settings` sub block.

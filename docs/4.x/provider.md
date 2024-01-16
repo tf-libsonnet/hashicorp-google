@@ -72,6 +72,7 @@ the `src` and/or `version` parameters are set.
   - `cloud_tasks_custom_endpoint` (`string`): Set the `cloud_tasks_custom_endpoint` field on the resulting provider block. When `null`, the `cloud_tasks_custom_endpoint` field will be omitted from the resulting object.
   - `cloudbuildv2_custom_endpoint` (`string`): Set the `cloudbuildv2_custom_endpoint` field on the resulting provider block. When `null`, the `cloudbuildv2_custom_endpoint` field will be omitted from the resulting object.
   - `clouddeploy_custom_endpoint` (`string`): Set the `clouddeploy_custom_endpoint` field on the resulting provider block. When `null`, the `clouddeploy_custom_endpoint` field will be omitted from the resulting object.
+  - `clouddomains_custom_endpoint` (`string`): Set the `clouddomains_custom_endpoint` field on the resulting provider block. When `null`, the `clouddomains_custom_endpoint` field will be omitted from the resulting object.
   - `cloudfunctions2_custom_endpoint` (`string`): Set the `cloudfunctions2_custom_endpoint` field on the resulting provider block. When `null`, the `cloudfunctions2_custom_endpoint` field will be omitted from the resulting object.
   - `composer_custom_endpoint` (`string`): Set the `composer_custom_endpoint` field on the resulting provider block. When `null`, the `composer_custom_endpoint` field will be omitted from the resulting object.
   - `compute_custom_endpoint` (`string`): Set the `compute_custom_endpoint` field on the resulting provider block. When `null`, the `compute_custom_endpoint` field will be omitted from the resulting object.
@@ -244,6 +245,7 @@ injecting into a complete block.
   - `cloud_tasks_custom_endpoint` (`string`): Set the `cloud_tasks_custom_endpoint` field on the resulting object. When `null`, the `cloud_tasks_custom_endpoint` field will be omitted from the resulting object.
   - `cloudbuildv2_custom_endpoint` (`string`): Set the `cloudbuildv2_custom_endpoint` field on the resulting object. When `null`, the `cloudbuildv2_custom_endpoint` field will be omitted from the resulting object.
   - `clouddeploy_custom_endpoint` (`string`): Set the `clouddeploy_custom_endpoint` field on the resulting object. When `null`, the `clouddeploy_custom_endpoint` field will be omitted from the resulting object.
+  - `clouddomains_custom_endpoint` (`string`): Set the `clouddomains_custom_endpoint` field on the resulting object. When `null`, the `clouddomains_custom_endpoint` field will be omitted from the resulting object.
   - `cloudfunctions2_custom_endpoint` (`string`): Set the `cloudfunctions2_custom_endpoint` field on the resulting object. When `null`, the `cloudfunctions2_custom_endpoint` field will be omitted from the resulting object.
   - `composer_custom_endpoint` (`string`): Set the `composer_custom_endpoint` field on the resulting object. When `null`, the `composer_custom_endpoint` field will be omitted from the resulting object.
   - `compute_custom_endpoint` (`string`): Set the `compute_custom_endpoint` field on the resulting object. When `null`, the `compute_custom_endpoint` field will be omitted from the resulting object.

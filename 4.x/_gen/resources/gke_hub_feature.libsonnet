@@ -260,6 +260,54 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     timeouts: timeouts,
   }),
   spec:: {
+    clusterupgrade:: {
+      gke_upgrade_overrides:: {
+        '#new':: d.fn(help='\n`google.gke_hub_feature.spec.clusterupgrade.gke_upgrade_overrides.new` constructs a new object with attributes and blocks configured for the `gke_upgrade_overrides`\nTerraform sub block.\n\n\n\n**Args**:\n  - `post_conditions` (`list[obj]`): Post conditions to override for the specified upgrade. When `null`, the `post_conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.clusterupgrade.gke_upgrade_overrides.post_conditions.new](#fn-specspecclusterupgradepost_conditionsnew) constructor.\n  - `upgrade` (`list[obj]`): Which upgrade to override. When `null`, the `upgrade` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.clusterupgrade.gke_upgrade_overrides.upgrade.new](#fn-specspecclusterupgradeupgradenew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `gke_upgrade_overrides` sub block.\n', args=[]),
+        new(
+          post_conditions=null,
+          upgrade=null
+        ):: std.prune(a={
+          post_conditions: post_conditions,
+          upgrade: upgrade,
+        }),
+        post_conditions:: {
+          '#new':: d.fn(help='\n`google.gke_hub_feature.spec.clusterupgrade.gke_upgrade_overrides.post_conditions.new` constructs a new object with attributes and blocks configured for the `post_conditions`\nTerraform sub block.\n\n\n\n**Args**:\n  - `soaking` (`string`): Amount of time to &#34;soak&#34; after a rollout has been finished before marking it COMPLETE. Cannot exceed 30 days.\n\n**Returns**:\n  - An attribute object that represents the `post_conditions` sub block.\n', args=[]),
+          new(
+            soaking
+          ):: std.prune(a={
+            soaking: soaking,
+          }),
+        },
+        upgrade:: {
+          '#new':: d.fn(help='\n`google.gke_hub_feature.spec.clusterupgrade.gke_upgrade_overrides.upgrade.new` constructs a new object with attributes and blocks configured for the `upgrade`\nTerraform sub block.\n\n\n\n**Args**:\n  - `name` (`string`): Name of the upgrade, e.g., &#34;k8s_control_plane&#34;. It should be a valid upgrade name. It must not exceet 99 characters.\n  - `version` (`string`): Version of the upgrade, e.g., &#34;1.22.1-gke.100&#34;. It should be a valid version. It must not exceet 99 characters.\n\n**Returns**:\n  - An attribute object that represents the `upgrade` sub block.\n', args=[]),
+          new(
+            name,
+            version
+          ):: std.prune(a={
+            name: name,
+            version: version,
+          }),
+        },
+      },
+      '#new':: d.fn(help='\n`google.gke_hub_feature.spec.clusterupgrade.new` constructs a new object with attributes and blocks configured for the `clusterupgrade`\nTerraform sub block.\n\n\n\n**Args**:\n  - `upstream_fleets` (`list`): Specified if other fleet should be considered as a source of upgrades. Currently, at most one upstream fleet is allowed. The fleet name should be either fleet project number or id.\n  - `gke_upgrade_overrides` (`list[obj]`): Configuration overrides for individual upgrades. When `null`, the `gke_upgrade_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.clusterupgrade.gke_upgrade_overrides.new](#fn-specspecgke_upgrade_overridesnew) constructor.\n  - `post_conditions` (`list[obj]`): Post conditions to override for the specified upgrade. When `null`, the `post_conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.clusterupgrade.post_conditions.new](#fn-specspecpost_conditionsnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `clusterupgrade` sub block.\n', args=[]),
+      new(
+        upstream_fleets,
+        gke_upgrade_overrides=null,
+        post_conditions=null
+      ):: std.prune(a={
+        gke_upgrade_overrides: gke_upgrade_overrides,
+        post_conditions: post_conditions,
+        upstream_fleets: upstream_fleets,
+      }),
+      post_conditions:: {
+        '#new':: d.fn(help='\n`google.gke_hub_feature.spec.clusterupgrade.post_conditions.new` constructs a new object with attributes and blocks configured for the `post_conditions`\nTerraform sub block.\n\n\n\n**Args**:\n  - `soaking` (`string`): Amount of time to &#34;soak&#34; after a rollout has been finished before marking it COMPLETE. Cannot exceed 30 days.\n\n**Returns**:\n  - An attribute object that represents the `post_conditions` sub block.\n', args=[]),
+        new(
+          soaking
+        ):: std.prune(a={
+          soaking: soaking,
+        }),
+      },
+    },
     fleetobservability:: {
       logging_config:: {
         default_config:: {
@@ -302,11 +350,13 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         config_membership: config_membership,
       }),
     },
-    '#new':: d.fn(help='\n`google.gke_hub_feature.spec.new` constructs a new object with attributes and blocks configured for the `spec`\nTerraform sub block.\n\n\n\n**Args**:\n  - `fleetobservability` (`list[obj]`): Fleet Observability feature spec. When `null`, the `fleetobservability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.fleetobservability.new](#fn-specfleetobservabilitynew) constructor.\n  - `multiclusteringress` (`list[obj]`): Multicluster Ingress-specific spec. When `null`, the `multiclusteringress` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.multiclusteringress.new](#fn-specmulticlusteringressnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `spec` sub block.\n', args=[]),
+    '#new':: d.fn(help='\n`google.gke_hub_feature.spec.new` constructs a new object with attributes and blocks configured for the `spec`\nTerraform sub block.\n\n\n\n**Args**:\n  - `clusterupgrade` (`list[obj]`): Clusterupgrade feature spec. When `null`, the `clusterupgrade` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.clusterupgrade.new](#fn-specclusterupgradenew) constructor.\n  - `fleetobservability` (`list[obj]`): Fleet Observability feature spec. When `null`, the `fleetobservability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.fleetobservability.new](#fn-specfleetobservabilitynew) constructor.\n  - `multiclusteringress` (`list[obj]`): Multicluster Ingress-specific spec. When `null`, the `multiclusteringress` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.multiclusteringress.new](#fn-specmulticlusteringressnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `spec` sub block.\n', args=[]),
     new(
+      clusterupgrade=null,
       fleetobservability=null,
       multiclusteringress=null
     ):: std.prune(a={
+      clusterupgrade: clusterupgrade,
       fleetobservability: fleetobservability,
       multiclusteringress: multiclusteringress,
     }),

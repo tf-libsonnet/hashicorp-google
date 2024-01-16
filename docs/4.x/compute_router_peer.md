@@ -27,6 +27,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withInterface()`](#fn-withinterface)
 * [`fn withIpAddress()`](#fn-withipaddress)
 * [`fn withIpv6NexthopAddress()`](#fn-withipv6nexthopaddress)
+* [`fn withMd5AuthenticationKey()`](#fn-withmd5authenticationkey)
+* [`fn withMd5AuthenticationKeyMixin()`](#fn-withmd5authenticationkeymixin)
 * [`fn withName()`](#fn-withname)
 * [`fn withPeerAsn()`](#fn-withpeerasn)
 * [`fn withPeerIpAddress()`](#fn-withpeeripaddress)
@@ -41,6 +43,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-advertised_ip_rangesnew)
 * [`obj bfd`](#obj-bfd)
   * [`fn new()`](#fn-bfdnew)
+* [`obj md5_authentication_key`](#obj-md5_authentication_key)
+  * [`fn new()`](#fn-md5_authentication_keynew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -130,6 +134,8 @@ is &#39;CUSTOM&#39; and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
 Leave this field blank to advertise no custom IP ranges. When `null`, the `advertised_ip_ranges` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.advertised_ip_ranges.new](#fn-advertised_ip_rangesnew) constructor.
   - `bfd` (`list[obj]`): BFD configuration for the BGP peering. When `null`, the `bfd` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.bfd.new](#fn-bfdnew) constructor.
+  - `md5_authentication_key` (`list[obj]`): Present if MD5 authentication is enabled for the peering. Must be the name
+of one of the entries in the Router.md5_authentication_keys. The field must comply with RFC1035. When `null`, the `md5_authentication_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.md5_authentication_key.new](#fn-md5_authentication_keynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -211,6 +217,8 @@ is &#39;CUSTOM&#39; and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
 Leave this field blank to advertise no custom IP ranges. When `null`, the `advertised_ip_ranges` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.advertised_ip_ranges.new](#fn-advertised_ip_rangesnew) constructor.
   - `bfd` (`list[obj]`): BFD configuration for the BGP peering. When `null`, the `bfd` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.bfd.new](#fn-bfdnew) constructor.
+  - `md5_authentication_key` (`list[obj]`): Present if MD5 authentication is enabled for the peering. Must be the name
+of one of the entries in the Router.md5_authentication_keys. The field must comply with RFC1035. When `null`, the `md5_authentication_key` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.md5_authentication_key.new](#fn-md5_authentication_keynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_router_peer.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -417,6 +425,43 @@ Terraform resource block to set or update the ipv6_nexthop_address field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `ipv6_nexthop_address` field.
+
+
+### fn withMd5AuthenticationKey
+
+```ts
+withMd5AuthenticationKey()
+```
+
+`google.list[obj].withMd5AuthenticationKey` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the md5_authentication_key field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withMd5AuthenticationKeyMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `md5_authentication_key` field.
+
+
+### fn withMd5AuthenticationKeyMixin
+
+```ts
+withMd5AuthenticationKeyMixin()
+```
+
+`google.list[obj].withMd5AuthenticationKeyMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the md5_authentication_key field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withMd5AuthenticationKey](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `md5_authentication_key` field.
 
 
 ### fn withName
@@ -646,6 +691,31 @@ If set to &#39;DISABLED&#39;, BFD is disabled for this BGP peer. Possible values
 
 **Returns**:
   - An attribute object that represents the `bfd` sub block.
+
+
+## obj md5_authentication_key
+
+
+
+### fn md5_authentication_key.new
+
+```ts
+new()
+```
+
+
+`google.compute_router_peer.md5_authentication_key.new` constructs a new object with attributes and blocks configured for the `md5_authentication_key`
+Terraform sub block.
+
+
+
+**Args**:
+  - `key` (`string`): Value of the key.
+  - `name` (`string`): [REQUIRED] Name used to identify the key.
+Must be unique within a router. Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
+
+**Returns**:
+  - An attribute object that represents the `md5_authentication_key` sub block.
 
 
 ## obj timeouts

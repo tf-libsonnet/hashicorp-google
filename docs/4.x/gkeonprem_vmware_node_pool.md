@@ -31,6 +31,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-confignew)
   * [`obj config.taints`](#obj-configtaints)
     * [`fn new()`](#fn-configtaintsnew)
+  * [`obj config.vsphere_config`](#obj-configvsphere_config)
+    * [`fn new()`](#fn-configvsphere_confignew)
+    * [`obj config.vsphere_config.tags`](#obj-configvsphere_configtags)
+      * [`fn new()`](#fn-configvsphere_configtagsnew)
 * [`obj node_pool_autoscaling`](#obj-node_pool_autoscaling)
   * [`fn new()`](#fn-node_pool_autoscalingnew)
 * [`obj timeouts`](#obj-timeouts)
@@ -372,6 +376,7 @@ and conflicts should be avoided. When `null`, the `labels` field will be omitted
   - `memory_mb` (`number`): The megabytes of memory for each node in the node pool. When `null`, the `memory_mb` field will be omitted from the resulting object.
   - `replicas` (`number`): The number of nodes in the node pool. When `null`, the `replicas` field will be omitted from the resulting object.
   - `taints` (`list[obj]`): The initial taints assigned to nodes of this node pool. When `null`, the `taints` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gkeonprem_vmware_node_pool.config.taints.new](#fn-configtaintsnew) constructor.
+  - `vsphere_config` (`list[obj]`): Specifies the vSphere config for node pool. When `null`, the `vsphere_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gkeonprem_vmware_node_pool.config.vsphere_config.new](#fn-configvsphere_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `config` sub block.
@@ -400,6 +405,55 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `taints` sub block.
+
+
+## obj config.vsphere_config
+
+
+
+### fn config.vsphere_config.new
+
+```ts
+new()
+```
+
+
+`google.gkeonprem_vmware_node_pool.config.vsphere_config.new` constructs a new object with attributes and blocks configured for the `vsphere_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `datastore` (`string`): The name of the vCenter datastore. Inherited from the user cluster. When `null`, the `datastore` field will be omitted from the resulting object.
+  - `host_groups` (`list`): Vsphere host groups to apply to all VMs in the node pool When `null`, the `host_groups` field will be omitted from the resulting object.
+  - `tags` (`list[obj]`): Tags to apply to VMs. When `null`, the `tags` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gkeonprem_vmware_node_pool.config.vsphere_config.tags.new](#fn-configconfigtagsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `vsphere_config` sub block.
+
+
+## obj config.vsphere_config.tags
+
+
+
+### fn config.vsphere_config.tags.new
+
+```ts
+new()
+```
+
+
+`google.gkeonprem_vmware_node_pool.config.vsphere_config.tags.new` constructs a new object with attributes and blocks configured for the `tags`
+Terraform sub block.
+
+
+
+**Args**:
+  - `category` (`string`): The Vsphere tag category. When `null`, the `category` field will be omitted from the resulting object.
+  - `tag` (`string`): The Vsphere tag name. When `null`, the `tag` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `tags` sub block.
 
 
 ## obj node_pool_autoscaling

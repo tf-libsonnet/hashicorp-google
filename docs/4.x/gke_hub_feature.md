@@ -61,6 +61,16 @@ This package contains functions and utilities for setting up the resource using 
           * [`fn new()`](#fn-fleet_default_member_configpolicycontrollerpolicy_controller_hub_configpolicy_contenttemplate_librarynew)
 * [`obj spec`](#obj-spec)
   * [`fn new()`](#fn-specnew)
+  * [`obj spec.clusterupgrade`](#obj-specclusterupgrade)
+    * [`fn new()`](#fn-specclusterupgradenew)
+    * [`obj spec.clusterupgrade.gke_upgrade_overrides`](#obj-specclusterupgradegke_upgrade_overrides)
+      * [`fn new()`](#fn-specclusterupgradegke_upgrade_overridesnew)
+      * [`obj spec.clusterupgrade.gke_upgrade_overrides.post_conditions`](#obj-specclusterupgradegke_upgrade_overridespost_conditions)
+        * [`fn new()`](#fn-specclusterupgradegke_upgrade_overridespost_conditionsnew)
+      * [`obj spec.clusterupgrade.gke_upgrade_overrides.upgrade`](#obj-specclusterupgradegke_upgrade_overridesupgrade)
+        * [`fn new()`](#fn-specclusterupgradegke_upgrade_overridesupgradenew)
+    * [`obj spec.clusterupgrade.post_conditions`](#obj-specclusterupgradepost_conditions)
+      * [`fn new()`](#fn-specclusterupgradepost_conditionsnew)
   * [`obj spec.fleetobservability`](#obj-specfleetobservability)
     * [`fn new()`](#fn-specfleetobservabilitynew)
     * [`obj spec.fleetobservability.logging_config`](#obj-specfleetobservabilitylogging_config)
@@ -772,11 +782,131 @@ Terraform sub block.
 
 
 **Args**:
+  - `clusterupgrade` (`list[obj]`): Clusterupgrade feature spec. When `null`, the `clusterupgrade` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.clusterupgrade.new](#fn-specclusterupgradenew) constructor.
   - `fleetobservability` (`list[obj]`): Fleet Observability feature spec. When `null`, the `fleetobservability` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.fleetobservability.new](#fn-specfleetobservabilitynew) constructor.
   - `multiclusteringress` (`list[obj]`): Multicluster Ingress-specific spec. When `null`, the `multiclusteringress` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.multiclusteringress.new](#fn-specmulticlusteringressnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `spec` sub block.
+
+
+## obj spec.clusterupgrade
+
+
+
+### fn spec.clusterupgrade.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.spec.clusterupgrade.new` constructs a new object with attributes and blocks configured for the `clusterupgrade`
+Terraform sub block.
+
+
+
+**Args**:
+  - `upstream_fleets` (`list`): Specified if other fleet should be considered as a source of upgrades. Currently, at most one upstream fleet is allowed. The fleet name should be either fleet project number or id.
+  - `gke_upgrade_overrides` (`list[obj]`): Configuration overrides for individual upgrades. When `null`, the `gke_upgrade_overrides` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.clusterupgrade.gke_upgrade_overrides.new](#fn-specspecgke_upgrade_overridesnew) constructor.
+  - `post_conditions` (`list[obj]`): Post conditions to override for the specified upgrade. When `null`, the `post_conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.clusterupgrade.post_conditions.new](#fn-specspecpost_conditionsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `clusterupgrade` sub block.
+
+
+## obj spec.clusterupgrade.gke_upgrade_overrides
+
+
+
+### fn spec.clusterupgrade.gke_upgrade_overrides.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.spec.clusterupgrade.gke_upgrade_overrides.new` constructs a new object with attributes and blocks configured for the `gke_upgrade_overrides`
+Terraform sub block.
+
+
+
+**Args**:
+  - `post_conditions` (`list[obj]`): Post conditions to override for the specified upgrade. When `null`, the `post_conditions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.clusterupgrade.gke_upgrade_overrides.post_conditions.new](#fn-specspecclusterupgradepost_conditionsnew) constructor.
+  - `upgrade` (`list[obj]`): Which upgrade to override. When `null`, the `upgrade` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature.spec.clusterupgrade.gke_upgrade_overrides.upgrade.new](#fn-specspecclusterupgradeupgradenew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `gke_upgrade_overrides` sub block.
+
+
+## obj spec.clusterupgrade.gke_upgrade_overrides.post_conditions
+
+
+
+### fn spec.clusterupgrade.gke_upgrade_overrides.post_conditions.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.spec.clusterupgrade.gke_upgrade_overrides.post_conditions.new` constructs a new object with attributes and blocks configured for the `post_conditions`
+Terraform sub block.
+
+
+
+**Args**:
+  - `soaking` (`string`): Amount of time to &#34;soak&#34; after a rollout has been finished before marking it COMPLETE. Cannot exceed 30 days.
+
+**Returns**:
+  - An attribute object that represents the `post_conditions` sub block.
+
+
+## obj spec.clusterupgrade.gke_upgrade_overrides.upgrade
+
+
+
+### fn spec.clusterupgrade.gke_upgrade_overrides.upgrade.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.spec.clusterupgrade.gke_upgrade_overrides.upgrade.new` constructs a new object with attributes and blocks configured for the `upgrade`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): Name of the upgrade, e.g., &#34;k8s_control_plane&#34;. It should be a valid upgrade name. It must not exceet 99 characters.
+  - `version` (`string`): Version of the upgrade, e.g., &#34;1.22.1-gke.100&#34;. It should be a valid version. It must not exceet 99 characters.
+
+**Returns**:
+  - An attribute object that represents the `upgrade` sub block.
+
+
+## obj spec.clusterupgrade.post_conditions
+
+
+
+### fn spec.clusterupgrade.post_conditions.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature.spec.clusterupgrade.post_conditions.new` constructs a new object with attributes and blocks configured for the `post_conditions`
+Terraform sub block.
+
+
+
+**Args**:
+  - `soaking` (`string`): Amount of time to &#34;soak&#34; after a rollout has been finished before marking it COMPLETE. Cannot exceed 30 days.
+
+**Returns**:
+  - An attribute object that represents the `post_conditions` sub block.
 
 
 ## obj spec.fleetobservability

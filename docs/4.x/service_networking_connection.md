@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withDeletionPolicy()`](#fn-withdeletionpolicy)
 * [`fn withNetwork()`](#fn-withnetwork)
 * [`fn withReservedPeeringRanges()`](#fn-withreservedpeeringranges)
 * [`fn withService()`](#fn-withservice)
@@ -52,6 +53,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `deletion_policy` (`string`): When set to ABANDON, terraform will abandon management of the resource instead of deleting it. Prevents terraform apply failures with CloudSQL. Note: The resource will still exist. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `network` (`string`): Name of VPC network connected with service producers using VPC peering.
   - `reserved_peering_ranges` (`list`): Named IP address range(s) of PEERING type reserved for this service provider. Note that invoking this method with a different range when connection is already established will not reallocate already provisioned service producer subnetworks.
   - `service` (`string`): Provider peering service that is managing peering connectivity for a service provider organization. For Google services that support this functionality it is &#39;servicenetworking.googleapis.com&#39;.
@@ -79,6 +81,7 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `deletion_policy` (`string`): When set to ABANDON, terraform will abandon management of the resource instead of deleting it. Prevents terraform apply failures with CloudSQL. Note: The resource will still exist. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `network` (`string`): Name of VPC network connected with service producers using VPC peering.
   - `reserved_peering_ranges` (`list`): Named IP address range(s) of PEERING type reserved for this service provider. Note that invoking this method with a different range when connection is already established will not reallocate already provisioned service producer subnetworks.
   - `service` (`string`): Provider peering service that is managing peering connectivity for a service provider organization. For Google services that support this functionality it is &#39;servicenetworking.googleapis.com&#39;.
@@ -86,6 +89,22 @@ injecting into a complete block.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `service_networking_connection` resource into the root Terraform configuration.
+
+
+### fn withDeletionPolicy
+
+```ts
+withDeletionPolicy()
+```
+
+`google.string.withDeletionPolicy` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the deletion_policy field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `deletion_policy` field.
 
 
 ### fn withNetwork
