@@ -22,6 +22,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withClusterType()`](#fn-withclustertype)
 * [`fn withContinuousBackupConfig()`](#fn-withcontinuousbackupconfig)
 * [`fn withContinuousBackupConfigMixin()`](#fn-withcontinuousbackupconfigmixin)
+* [`fn withDatabaseVersion()`](#fn-withdatabaseversion)
 * [`fn withDeletionPolicy()`](#fn-withdeletionpolicy)
 * [`fn withDisplayName()`](#fn-withdisplayname)
 * [`fn withEncryptionConfig()`](#fn-withencryptionconfig)
@@ -111,6 +112,7 @@ An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&
 Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `cluster_id` (`string`): The ID of the alloydb cluster.
   - `cluster_type` (`string`): The type of cluster. If not set, defaults to PRIMARY. Default value: &#34;PRIMARY&#34; Possible values: [&#34;PRIMARY&#34;, &#34;SECONDARY&#34;] When `null`, the `cluster_type` field will be omitted from the resulting object.
+  - `database_version` (`string`): The database engine major version. This is an optional field and it&#39;s populated at the Cluster creation time. This field cannot be changed after cluster creation. When `null`, the `database_version` field will be omitted from the resulting object.
   - `deletion_policy` (`string`): Policy to determine if the cluster should be deleted forcefully.
 Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster.
 Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = &#34;FORCE&#34; otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance. When `null`, the `deletion_policy` field will be omitted from the resulting object.
@@ -167,6 +169,7 @@ An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&
 Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `cluster_id` (`string`): The ID of the alloydb cluster.
   - `cluster_type` (`string`): The type of cluster. If not set, defaults to PRIMARY. Default value: &#34;PRIMARY&#34; Possible values: [&#34;PRIMARY&#34;, &#34;SECONDARY&#34;] When `null`, the `cluster_type` field will be omitted from the resulting object.
+  - `database_version` (`string`): The database engine major version. This is an optional field and it&#39;s populated at the Cluster creation time. This field cannot be changed after cluster creation. When `null`, the `database_version` field will be omitted from the resulting object.
   - `deletion_policy` (`string`): Policy to determine if the cluster should be deleted forcefully.
 Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster.
 Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = &#34;FORCE&#34; otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance. When `null`, the `deletion_policy` field will be omitted from the resulting object.
@@ -317,6 +320,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `continuous_backup_config` field.
+
+
+### fn withDatabaseVersion
+
+```ts
+withDatabaseVersion()
+```
+
+`google.string.withDatabaseVersion` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the database_version field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `database_version` field.
 
 
 ### fn withDeletionPolicy

@@ -1007,6 +1007,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `enable_confidential_compute` (`bool`): A flag to enable confidential compute mode on boot disk When `null`, the `enable_confidential_compute` field will be omitted from the resulting object.
   - `image` (`string`): The image from which this disk was initialised. When `null`, the `image` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs assigned to the disk. When `null`, the `labels` field will be omitted from the resulting object.
   - `provisioned_iops` (`number`): Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. When `null`, the `provisioned_iops` field will be omitted from the resulting object.

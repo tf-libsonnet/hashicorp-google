@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDiskEncryptionKey()`](#fn-withdiskencryptionkey)
 * [`fn withDiskEncryptionKeyMixin()`](#fn-withdiskencryptionkeymixin)
+* [`fn withEnableConfidentialCompute()`](#fn-withenableconfidentialcompute)
 * [`fn withGuestOsFeatures()`](#fn-withguestosfeatures)
 * [`fn withGuestOsFeaturesMixin()`](#fn-withguestosfeaturesmixin)
 * [`fn withImage()`](#fn-withimage)
@@ -85,6 +86,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): An optional description of this resource. Provide this property when
 you create the resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `enable_confidential_compute` (`bool`): Whether this disk is using confidential compute mode.
+Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true When `null`, the `enable_confidential_compute` field will be omitted from the resulting object.
   - `image` (`string`): The image from which to initialize this disk. This can be
 one of: the image&#39;s &#39;self_link&#39;, &#39;projects/{project}/global/images/{image}&#39;,
 &#39;projects/{project}/global/images/family/{family}&#39;, &#39;global/images/{image}&#39;,
@@ -199,6 +202,8 @@ injecting into a complete block.
 **Args**:
   - `description` (`string`): An optional description of this resource. Provide this property when
 you create the resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `enable_confidential_compute` (`bool`): Whether this disk is using confidential compute mode.
+Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true When `null`, the `enable_confidential_compute` field will be omitted from the resulting object.
   - `image` (`string`): The image from which to initialize this disk. This can be
 one of: the image&#39;s &#39;self_link&#39;, &#39;projects/{project}/global/images/{image}&#39;,
 &#39;projects/{project}/global/images/family/{family}&#39;, &#39;global/images/{image}&#39;,
@@ -381,6 +386,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `disk_encryption_key` field.
+
+
+### fn withEnableConfidentialCompute
+
+```ts
+withEnableConfidentialCompute()
+```
+
+`google.bool.withEnableConfidentialCompute` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the enable_confidential_compute field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `enable_confidential_compute` field.
 
 
 ### fn withGuestOsFeatures

@@ -175,6 +175,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   monitoring_notification_channel: (import 'monitoring_notification_channel.libsonnet'),
   monitoring_uptime_check_ips: (import 'monitoring_uptime_check_ips.libsonnet'),
   netblock_ip_ranges: (import 'netblock_ip_ranges.libsonnet'),
+  network_security_address_group_iam_policy: (import 'network_security_address_group_iam_policy.libsonnet'),
   notebooks_instance_iam_policy: (import 'notebooks_instance_iam_policy.libsonnet'),
   notebooks_runtime_iam_policy: (import 'notebooks_runtime_iam_policy.libsonnet'),
   organization: (import 'organization.libsonnet'),

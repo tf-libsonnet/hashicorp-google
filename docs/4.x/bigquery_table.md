@@ -860,7 +860,7 @@ Terraform sub block.
   - `allow_non_incremental_definition` (`bool`): Allow non incremental materialized view definition. The default value is false. When `null`, the `allow_non_incremental_definition` field will be omitted from the resulting object.
   - `enable_refresh` (`bool`): Specifies if BigQuery should automatically refresh materialized view when the base table is updated. The default is true. When `null`, the `enable_refresh` field will be omitted from the resulting object.
   - `query` (`string`): A query whose result is persisted.
-  - `refresh_interval_ms` (`number`): Specifies maximum frequency at which this materialized view will be refreshed. The default is 1800000 When `null`, the `refresh_interval_ms` field will be omitted from the resulting object.
+  - `refresh_interval_ms` (`number`): Specifies maximum frequency at which this materialized view will be refreshed. The default is 1800000. When `null`, the `refresh_interval_ms` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `materialized_view` sub block.

@@ -180,6 +180,7 @@ permalink: /data/
 * [monitoring_notification_channel](monitoring_notification_channel.md)
 * [monitoring_uptime_check_ips](monitoring_uptime_check_ips.md)
 * [netblock_ip_ranges](netblock_ip_ranges.md)
+* [network_security_address_group_iam_policy](network_security_address_group_iam_policy.md)
 * [notebooks_instance_iam_policy](notebooks_instance_iam_policy.md)
 * [notebooks_runtime_iam_policy](notebooks_runtime_iam_policy.md)
 * [organization](organization.md)
