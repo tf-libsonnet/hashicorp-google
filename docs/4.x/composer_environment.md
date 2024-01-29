@@ -27,6 +27,10 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj config`](#obj-config)
   * [`fn new()`](#fn-confignew)
+  * [`obj config.data_retention_config`](#obj-configdata_retention_config)
+    * [`fn new()`](#fn-configdata_retention_confignew)
+    * [`obj config.data_retention_config.task_logs_retention_config`](#obj-configdata_retention_configtask_logs_retention_config)
+      * [`fn new()`](#fn-configdata_retention_configtask_logs_retention_confignew)
   * [`obj config.database_config`](#obj-configdatabase_config)
     * [`fn new()`](#fn-configdatabase_confignew)
   * [`obj config.encryption_config`](#obj-configencryption_config)
@@ -339,6 +343,7 @@ Terraform sub block.
   - `environment_size` (`string`): The size of the Cloud Composer environment. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer. When `null`, the `environment_size` field will be omitted from the resulting object.
   - `node_count` (`number`): The number of nodes in the Kubernetes Engine cluster that will be used to run this environment. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. When `null`, the `node_count` field will be omitted from the resulting object.
   - `resilience_mode` (`string`): Whether high resilience is enabled or not. This field is supported for Cloud Composer environments in versions composer-2.1.15-airflow-*.*.* and newer. When `null`, the `resilience_mode` field will be omitted from the resulting object.
+  - `data_retention_config` (`list[obj]`): The configuration setting for Airflow data retention mechanism. This field is supported for Cloud Composer environments in versions composer-2.0.32-airflow-2.1.4. or newer When `null`, the `data_retention_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.data_retention_config.new](#fn-configdata_retention_confignew) constructor.
   - `database_config` (`list[obj]`): The configuration of Cloud SQL instance that is used by the Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*. When `null`, the `database_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.database_config.new](#fn-configdatabase_confignew) constructor.
   - `encryption_config` (`list[obj]`): The encryption options for the Composer environment and its dependencies. When `null`, the `encryption_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.encryption_config.new](#fn-configencryption_confignew) constructor.
   - `maintenance_window` (`list[obj]`): The configuration for Cloud Composer maintenance window. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.maintenance_window.new](#fn-configmaintenance_windownew) constructor.
@@ -353,6 +358,52 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `config` sub block.
+
+
+## obj config.data_retention_config
+
+
+
+### fn config.data_retention_config.new
+
+```ts
+new()
+```
+
+
+`google.composer_environment.config.data_retention_config.new` constructs a new object with attributes and blocks configured for the `data_retention_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `task_logs_retention_config` (`list[obj]`): Optional. The configuration setting for Task Logs. When `null`, the `task_logs_retention_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.composer_environment.config.data_retention_config.task_logs_retention_config.new](#fn-configconfigtask_logs_retention_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `data_retention_config` sub block.
+
+
+## obj config.data_retention_config.task_logs_retention_config
+
+
+
+### fn config.data_retention_config.task_logs_retention_config.new
+
+```ts
+new()
+```
+
+
+`google.composer_environment.config.data_retention_config.task_logs_retention_config.new` constructs a new object with attributes and blocks configured for the `task_logs_retention_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `storage_mode` (`string`): Whether logs in cloud logging only is enabled or not. This field is supported for Cloud Composer environments in versions composer-2.0.32-airflow-2.1.4 and newer. When `null`, the `storage_mode` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `task_logs_retention_config` sub block.
 
 
 ## obj config.database_config

@@ -406,7 +406,6 @@ Terraform sub block.
 
 
 **Args**:
-  - `cloud_function` (`string`): [WARNING] Configuring a Cloud Function in Trigger is not supported as of today. The Cloud Function resource name. Format: projects/{project}/locations/{location}/functions/{function} When `null`, the `cloud_function` field will be omitted from the resulting object.
   - `workflow` (`string`): The resource name of the Workflow whose Executions are triggered by the events. The Workflow resource should be deployed in the same project as the trigger. Format: `projects/{project}/locations/{location}/workflows/{workflow}` When `null`, the `workflow` field will be omitted from the resulting object.
   - `cloud_run_service` (`list[obj]`): Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger. When `null`, the `cloud_run_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.eventarc_trigger.destination.cloud_run_service.new](#fn-destinationcloud_run_servicenew) constructor.
   - `gke` (`list[obj]`): A GKE service capable of receiving events. The service should be running in the same project as the trigger. When `null`, the `gke` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.eventarc_trigger.destination.gke.new](#fn-destinationgkenew) constructor.

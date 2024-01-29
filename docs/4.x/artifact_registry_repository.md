@@ -15,6 +15,9 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withCleanupPolicies()`](#fn-withcleanuppolicies)
+* [`fn withCleanupPoliciesMixin()`](#fn-withcleanuppoliciesmixin)
+* [`fn withCleanupPolicyDryRun()`](#fn-withcleanuppolicydryrun)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDockerConfig()`](#fn-withdockerconfig)
 * [`fn withDockerConfigMixin()`](#fn-withdockerconfigmixin)
@@ -33,6 +36,12 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withVirtualRepositoryConfig()`](#fn-withvirtualrepositoryconfig)
 * [`fn withVirtualRepositoryConfigMixin()`](#fn-withvirtualrepositoryconfigmixin)
+* [`obj cleanup_policies`](#obj-cleanup_policies)
+  * [`fn new()`](#fn-cleanup_policiesnew)
+  * [`obj cleanup_policies.condition`](#obj-cleanup_policiescondition)
+    * [`fn new()`](#fn-cleanup_policiesconditionnew)
+  * [`obj cleanup_policies.most_recent_versions`](#obj-cleanup_policiesmost_recent_versions)
+    * [`fn new()`](#fn-cleanup_policiesmost_recent_versionsnew)
 * [`obj docker_config`](#obj-docker_config)
   * [`fn new()`](#fn-docker_confignew)
 * [`obj maven_config`](#obj-maven_config)
@@ -95,6 +104,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `cleanup_policy_dry_run` (`bool`): If true, the cleanup pipeline is prevented from deleting versions in this
+repository. When `null`, the `cleanup_policy_dry_run` field will be omitted from the resulting object.
   - `description` (`string`): The user-provided description of the repository. When `null`, the `description` field will be omitted from the resulting object.
   - `format` (`string`): The format of packages that are stored in the repository. Supported formats
 can be found [here](https://cloud.google.com/artifact-registry/docs/supported-formats).
@@ -118,6 +129,10 @@ Please refer to the field &#39;effective_labels&#39; for all of the labels prese
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `repository_id` (`string`): The last part of the repository name, for example:
 &#34;repo1&#34;
+  - `cleanup_policies` (`list[obj]`): Cleanup policies for this repository. Cleanup policies indicate when
+certain package versions can be automatically deleted.
+Map keys are policy IDs supplied by users during policy creation. They must
+unique within a repository and be under 128 characters in length. When `null`, the `cleanup_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.cleanup_policies.new](#fn-cleanup_policiesnew) constructor.
   - `docker_config` (`list[obj]`): Docker repository config contains repository level configuration for the repositories of docker type. When `null`, the `docker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.docker_config.new](#fn-docker_confignew) constructor.
   - `maven_config` (`list[obj]`): MavenRepositoryConfig is maven related repository details.
 Provides additional configuration details for repositories of the maven
@@ -148,6 +163,8 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `cleanup_policy_dry_run` (`bool`): If true, the cleanup pipeline is prevented from deleting versions in this
+repository. When `null`, the `cleanup_policy_dry_run` field will be omitted from the resulting object.
   - `description` (`string`): The user-provided description of the repository. When `null`, the `description` field will be omitted from the resulting object.
   - `format` (`string`): The format of packages that are stored in the repository. Supported formats
 can be found [here](https://cloud.google.com/artifact-registry/docs/supported-formats).
@@ -171,6 +188,10 @@ Please refer to the field &#39;effective_labels&#39; for all of the labels prese
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `repository_id` (`string`): The last part of the repository name, for example:
 &#34;repo1&#34;
+  - `cleanup_policies` (`list[obj]`): Cleanup policies for this repository. Cleanup policies indicate when
+certain package versions can be automatically deleted.
+Map keys are policy IDs supplied by users during policy creation. They must
+unique within a repository and be under 128 characters in length. When `null`, the `cleanup_policies` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.cleanup_policies.new](#fn-cleanup_policiesnew) constructor.
   - `docker_config` (`list[obj]`): Docker repository config contains repository level configuration for the repositories of docker type. When `null`, the `docker_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.docker_config.new](#fn-docker_confignew) constructor.
   - `maven_config` (`list[obj]`): MavenRepositoryConfig is maven related repository details.
 Provides additional configuration details for repositories of the maven
@@ -181,6 +202,59 @@ format type. When `null`, the `maven_config` sub block will be omitted from the 
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `artifact_registry_repository` resource into the root Terraform configuration.
+
+
+### fn withCleanupPolicies
+
+```ts
+withCleanupPolicies()
+```
+
+`google.list[obj].withCleanupPolicies` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the cleanup_policies field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withCleanupPoliciesMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `cleanup_policies` field.
+
+
+### fn withCleanupPoliciesMixin
+
+```ts
+withCleanupPoliciesMixin()
+```
+
+`google.list[obj].withCleanupPoliciesMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the cleanup_policies field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withCleanupPolicies](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `cleanup_policies` field.
+
+
+### fn withCleanupPolicyDryRun
+
+```ts
+withCleanupPolicyDryRun()
+```
+
+`google.bool.withCleanupPolicyDryRun` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the cleanup_policy_dry_run field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `cleanup_policy_dry_run` field.
 
 
 ### fn withDescription
@@ -493,6 +567,84 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `virtual_repository_config` field.
+
+
+## obj cleanup_policies
+
+
+
+### fn cleanup_policies.new
+
+```ts
+new()
+```
+
+
+`google.artifact_registry_repository.cleanup_policies.new` constructs a new object with attributes and blocks configured for the `cleanup_policies`
+Terraform sub block.
+
+
+
+**Args**:
+  - `action` (`string`): Policy action. Possible values: [&#34;DELETE&#34;, &#34;KEEP&#34;] When `null`, the `action` field will be omitted from the resulting object.
+  - `condition` (`list[obj]`): Policy condition for matching versions. When `null`, the `condition` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.cleanup_policies.condition.new](#fn-cleanup_policiesconditionnew) constructor.
+  - `most_recent_versions` (`list[obj]`): Policy condition for retaining a minimum number of versions. May only be
+specified with a Keep action. When `null`, the `most_recent_versions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.artifact_registry_repository.cleanup_policies.most_recent_versions.new](#fn-cleanup_policiesmost_recent_versionsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `cleanup_policies` sub block.
+
+
+## obj cleanup_policies.condition
+
+
+
+### fn cleanup_policies.condition.new
+
+```ts
+new()
+```
+
+
+`google.artifact_registry_repository.cleanup_policies.condition.new` constructs a new object with attributes and blocks configured for the `condition`
+Terraform sub block.
+
+
+
+**Args**:
+  - `newer_than` (`string`): Match versions newer than a duration. When `null`, the `newer_than` field will be omitted from the resulting object.
+  - `older_than` (`string`): Match versions older than a duration. When `null`, the `older_than` field will be omitted from the resulting object.
+  - `package_name_prefixes` (`list`): Match versions by package prefix. Applied on any prefix match. When `null`, the `package_name_prefixes` field will be omitted from the resulting object.
+  - `tag_prefixes` (`list`): Match versions by tag prefix. Applied on any prefix match. When `null`, the `tag_prefixes` field will be omitted from the resulting object.
+  - `tag_state` (`string`): Match versions by tag status. Default value: &#34;ANY&#34; Possible values: [&#34;TAGGED&#34;, &#34;UNTAGGED&#34;, &#34;ANY&#34;] When `null`, the `tag_state` field will be omitted from the resulting object.
+  - `version_name_prefixes` (`list`): Match versions by version name prefix. Applied on any prefix match. When `null`, the `version_name_prefixes` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `condition` sub block.
+
+
+## obj cleanup_policies.most_recent_versions
+
+
+
+### fn cleanup_policies.most_recent_versions.new
+
+```ts
+new()
+```
+
+
+`google.artifact_registry_repository.cleanup_policies.most_recent_versions.new` constructs a new object with attributes and blocks configured for the `most_recent_versions`
+Terraform sub block.
+
+
+
+**Args**:
+  - `keep_count` (`number`): Minimum number of versions to keep. When `null`, the `keep_count` field will be omitted from the resulting object.
+  - `package_name_prefixes` (`list`): Match versions by package prefix. Applied on any prefix match. When `null`, the `package_name_prefixes` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `most_recent_versions` sub block.
 
 
 ## obj docker_config

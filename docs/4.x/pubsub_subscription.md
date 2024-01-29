@@ -724,10 +724,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `drop_unknown_fields` (`bool`): When true and useTopicSchema is true, any fields that are a part of the topic schema that are not part of the BigQuery table schema are dropped when writing to BigQuery.
-Otherwise, the schemas must be kept in sync and any messages with extra fields are not written and remain in the subscription&#39;s backlog. When `null`, the `drop_unknown_fields` field will be omitted from the resulting object.
+  - `drop_unknown_fields` (`bool`): When true and use_topic_schema or use_table_schema is true, any fields that are a part of the topic schema or message schema that
+are not part of the BigQuery table schema are dropped when writing to BigQuery. Otherwise, the schemas must be kept in sync
+and any messages with extra fields are not written and remain in the subscription&#39;s backlog. When `null`, the `drop_unknown_fields` field will be omitted from the resulting object.
   - `table` (`string`): The name of the table to which to write data, of the form {projectId}:{datasetId}.{tableId}
-  - `use_topic_schema` (`bool`): When true, use the topic&#39;s schema as the columns to write to in BigQuery, if it exists. When `null`, the `use_topic_schema` field will be omitted from the resulting object.
+  - `use_table_schema` (`bool`): When true, use the BigQuery table&#39;s schema as the columns to write to in BigQuery. Messages
+must be published in JSON format. Only one of use_topic_schema and use_table_schema can be set. When `null`, the `use_table_schema` field will be omitted from the resulting object.
+  - `use_topic_schema` (`bool`): When true, use the topic&#39;s schema as the columns to write to in BigQuery, if it exists.
+Only one of use_topic_schema and use_table_schema can be set. When `null`, the `use_topic_schema` field will be omitted from the resulting object.
   - `write_metadata` (`bool`): When true, write the subscription name, messageId, publishTime, attributes, and orderingKey to additional columns in the table.
 The subscription name, messageId, and publishTime fields are put in their own columns while all other message properties (other than data) are written to a JSON object in the attributes column. When `null`, the `write_metadata` field will be omitted from the resulting object.
 
