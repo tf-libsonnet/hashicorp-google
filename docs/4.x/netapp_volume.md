@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withCapacityGib()`](#fn-withcapacitygib)
+* [`fn withDeletionPolicy()`](#fn-withdeletionpolicy)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withExportPolicy()`](#fn-withexportpolicy)
 * [`fn withExportPolicyMixin()`](#fn-withexportpolicymixin)
@@ -83,6 +84,9 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `capacity_gib` (`string`): Capacity of the volume (in GiB).
+  - `deletion_policy` (`string`): Policy to determine if the volume should be deleted forcefully.
+Volumes may have nested snapshot resources. Deleting such a volume will fail.
+Setting this parameter to FORCE will delete volumes including nested snapshots. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `kerberos_enabled` (`bool`): Flag indicating if the volume is a kerberos volume or not, export policy rules control kerberos security modes (krb5, krb5i, krb5p). When `null`, the `kerberos_enabled` field will be omitted from the resulting object.
   - `labels` (`obj`): Labels as key value pairs. Example: &#39;{ &#34;owner&#34;: &#34;Bob&#34;, &#34;department&#34;: &#34;finance&#34;, &#34;purpose&#34;: &#34;testing&#34; }&#39;.
@@ -130,6 +134,9 @@ injecting into a complete block.
 
 **Args**:
   - `capacity_gib` (`string`): Capacity of the volume (in GiB).
+  - `deletion_policy` (`string`): Policy to determine if the volume should be deleted forcefully.
+Volumes may have nested snapshot resources. Deleting such a volume will fail.
+Setting this parameter to FORCE will delete volumes including nested snapshots. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `description` (`string`): An optional description of this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `kerberos_enabled` (`bool`): Flag indicating if the volume is a kerberos volume or not, export policy rules control kerberos security modes (krb5, krb5i, krb5p). When `null`, the `kerberos_enabled` field will be omitted from the resulting object.
   - `labels` (`obj`): Labels as key value pairs. Example: &#39;{ &#34;owner&#34;: &#34;Bob&#34;, &#34;department&#34;: &#34;finance&#34;, &#34;purpose&#34;: &#34;testing&#34; }&#39;.
@@ -172,6 +179,22 @@ Terraform resource block to set or update the capacity_gib field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `capacity_gib` field.
+
+
+### fn withDeletionPolicy
+
+```ts
+withDeletionPolicy()
+```
+
+`google.string.withDeletionPolicy` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the deletion_policy field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `deletion_policy` field.
 
 
 ### fn withDescription

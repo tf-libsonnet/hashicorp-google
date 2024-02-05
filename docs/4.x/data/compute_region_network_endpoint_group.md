@@ -57,7 +57,7 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash. When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting data source block. When `null`, the `project` field will be omitted from the resulting object.
-  - `region` (`string`): A reference to the region where the Serverless NEGs Reside. When `null`, the `region` field will be omitted from the resulting object.
+  - `region` (`string`): A reference to the region where the regional NEGs reside. When `null`, the `region` field will be omitted from the resulting object.
   - `self_link` (`string`): Set the `self_link` field on the resulting data source block. When `null`, the `self_link` field will be omitted from the resulting object.
 
 **Returns**:
@@ -90,7 +90,7 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash. When `null`, the `name` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `region` (`string`): A reference to the region where the Serverless NEGs Reside. When `null`, the `region` field will be omitted from the resulting object.
+  - `region` (`string`): A reference to the region where the regional NEGs reside. When `null`, the `region` field will be omitted from the resulting object.
   - `self_link` (`string`): Set the `self_link` field on the resulting object. When `null`, the `self_link` field will be omitted from the resulting object.
 
 **Returns**:

@@ -28,6 +28,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRegion()`](#fn-withregion)
 * [`fn withRouter()`](#fn-withrouter)
+* [`fn withStackType()`](#fn-withstacktype)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withType()`](#fn-withtype)
@@ -133,6 +134,11 @@ letter, or digit, except the last character, which cannot be a dash.
 the same region as this InterconnectAttachment. The InterconnectAttachment will
 automatically connect the Interconnect to the network &amp; region within which the
 Cloud Router is configured.
+  - `stack_type` (`string`): The stack type for this interconnect attachment to identify whether the IPv6
+feature is enabled or not. If not specified, IPV4_ONLY will be used.
+
+This field can be both set at interconnect attachments creation and update
+interconnect attachment operations. Possible values: [&#34;IPV4_IPV6&#34;, &#34;IPV4_ONLY&#34;] When `null`, the `stack_type` field will be omitted from the resulting object.
   - `type` (`string`): The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED. Possible values: [&#34;DEDICATED&#34;, &#34;PARTNER&#34;, &#34;PARTNER_PROVIDER&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `vlan_tag8021q` (`number`): The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
@@ -230,6 +236,11 @@ letter, or digit, except the last character, which cannot be a dash.
 the same region as this InterconnectAttachment. The InterconnectAttachment will
 automatically connect the Interconnect to the network &amp; region within which the
 Cloud Router is configured.
+  - `stack_type` (`string`): The stack type for this interconnect attachment to identify whether the IPv6
+feature is enabled or not. If not specified, IPV4_ONLY will be used.
+
+This field can be both set at interconnect attachments creation and update
+interconnect attachment operations. Possible values: [&#34;IPV4_IPV6&#34;, &#34;IPV4_ONLY&#34;] When `null`, the `stack_type` field will be omitted from the resulting object.
   - `type` (`string`): The type of InterconnectAttachment you wish to create. Defaults to
 DEDICATED. Possible values: [&#34;DEDICATED&#34;, &#34;PARTNER&#34;, &#34;PARTNER_PROVIDER&#34;] When `null`, the `type` field will be omitted from the resulting object.
   - `vlan_tag8021q` (`number`): The IEEE 802.1Q VLAN tag for this attachment, in the range 2-4094. When
@@ -446,6 +457,22 @@ Terraform resource block to set or update the router field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `router` field.
+
+
+### fn withStackType
+
+```ts
+withStackType()
+```
+
+`google.string.withStackType` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the stack_type field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `stack_type` field.
 
 
 ### fn withTimeouts

@@ -29,6 +29,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withNodeCount()`](#fn-withnodecount)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRegion()`](#fn-withregion)
+* [`fn withReservedIpRangeId()`](#fn-withreservediprangeid)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withZones()`](#fn-withzones)
@@ -89,6 +90,9 @@ determined by our system based on the latest supported minor version. Default va
   - `node_count` (`number`): Number of nodes in the memcache instance.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the Memcache instance. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
+  - `reserved_ip_range_id` (`list`): Contains the name of allocated IP address ranges associated with
+the private service access connection for example, &#34;test-default&#34;
+associated with IP range 10.0.0.0/29. When `null`, the `reserved_ip_range_id` field will be omitted from the resulting object.
   - `zones` (`list`): Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used. When `null`, the `zones` field will be omitted from the resulting object.
   - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.maintenance_policy.new](#fn-maintenance_policynew) constructor.
@@ -133,6 +137,9 @@ determined by our system based on the latest supported minor version. Default va
   - `node_count` (`number`): Number of nodes in the memcache instance.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the Memcache instance. If it is not provided, the provider region is used. When `null`, the `region` field will be omitted from the resulting object.
+  - `reserved_ip_range_id` (`list`): Contains the name of allocated IP address ranges associated with
+the private service access connection for example, &#34;test-default&#34;
+associated with IP range 10.0.0.0/29. When `null`, the `reserved_ip_range_id` field will be omitted from the resulting object.
   - `zones` (`list`): Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used. When `null`, the `zones` field will be omitted from the resulting object.
   - `maintenance_policy` (`list[obj]`): Maintenance policy for an instance. When `null`, the `maintenance_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.memcache_instance.maintenance_policy.new](#fn-maintenance_policynew) constructor.
@@ -381,6 +388,22 @@ Terraform resource block to set or update the region field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `region` field.
+
+
+### fn withReservedIpRangeId
+
+```ts
+withReservedIpRangeId()
+```
+
+`google.list.withReservedIpRangeId` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the reserved_ip_range_id field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `reserved_ip_range_id` field.
 
 
 ### fn withTimeouts

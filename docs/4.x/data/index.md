@@ -76,6 +76,7 @@ permalink: /data/
 * [compute_instance_serial_port](compute_instance_serial_port.md)
 * [compute_instance_template](compute_instance_template.md)
 * [compute_lb_ip_ranges](compute_lb_ip_ranges.md)
+* [compute_machine_types](compute_machine_types.md)
 * [compute_network](compute_network.md)
 * [compute_network_endpoint_group](compute_network_endpoint_group.md)
 * [compute_network_peering](compute_network_peering.md)

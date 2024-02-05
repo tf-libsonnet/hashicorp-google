@@ -389,6 +389,9 @@ Terraform sub block.
   - `capacity_gb` (`number`): File share capacity in GiB. This must be at least 1024 GiB
 for the standard tier, or 2560 GiB for the premium tier.
   - `name` (`string`): The name of the fileshare (16 characters or less)
+  - `source_backup` (`string`): The resource name of the backup, in the format
+projects/{projectId}/locations/{locationId}/backups/{backupId},
+that this file share has been restored from. When `null`, the `source_backup` field will be omitted from the resulting object.
   - `nfs_export_options` (`list[obj]`): Nfs Export Options. There is a limit of 10 export options per file share. When `null`, the `nfs_export_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.file_shares.nfs_export_options.new](#fn-file_sharesnfs_export_optionsnew) constructor.
 
 **Returns**:
