@@ -72,7 +72,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `dataplex_zone` (`string`): The zone for the resource
   - `description` (`string`): Optional. Description of the asset. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): Optional. User friendly display name. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Optional. User defined labels for the asset. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Optional. User defined labels for the asset.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `lake` (`string`): The lake for the resource
   - `location` (`string`): The location for the resource
   - `name` (`string`): The name of the asset.
@@ -106,7 +109,10 @@ injecting into a complete block.
   - `dataplex_zone` (`string`): The zone for the resource
   - `description` (`string`): Optional. Description of the asset. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): Optional. User friendly display name. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Optional. User defined labels for the asset. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Optional. User defined labels for the asset.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `lake` (`string`): The lake for the resource
   - `location` (`string`): The location for the resource
   - `name` (`string`): The name of the asset.

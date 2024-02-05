@@ -106,7 +106,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `force_delete` (`bool`): By default, you can only delete inactive jobs within Dataproc. Setting this to true, and calling destroy, will ensure that the job is first cancelled before issuing the delete. When `null`, the `force_delete` field will be omitted from the resulting object.
-  - `labels` (`obj`): Optional. The labels to associate with this job. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Optional. The labels to associate with this job.
+
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): The project in which the cluster can be found and jobs subsequently run against. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The Cloud Dataproc region. This essentially determines which clusters are available for this job to be submitted to. If not specified, defaults to global. When `null`, the `region` field will be omitted from the resulting object.
   - `hadoop_config` (`list[obj]`): The config of Hadoop job When `null`, the `hadoop_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.hadoop_config.new](#fn-hadoop_confignew) constructor.
@@ -144,7 +147,10 @@ injecting into a complete block.
 
 **Args**:
   - `force_delete` (`bool`): By default, you can only delete inactive jobs within Dataproc. Setting this to true, and calling destroy, will ensure that the job is first cancelled before issuing the delete. When `null`, the `force_delete` field will be omitted from the resulting object.
-  - `labels` (`obj`): Optional. The labels to associate with this job. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Optional. The labels to associate with this job.
+
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): The project in which the cluster can be found and jobs subsequently run against. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The Cloud Dataproc region. This essentially determines which clusters are available for this job to be submitted to. If not specified, defaults to global. When `null`, the `region` field will be omitted from the resulting object.
   - `hadoop_config` (`list[obj]`): The config of Hadoop job When `null`, the `hadoop_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_job.hadoop_config.new](#fn-hadoop_confignew) constructor.

@@ -97,7 +97,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `labels` (`obj`): Labels with user-defined metadata.
 
 An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
-&#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+&#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): Location of the CaPool. A full list of valid locations can be found by
 running &#39;gcloud privateca locations list&#39;.
   - `name` (`string`): The name for this CaPool.
@@ -132,7 +136,11 @@ injecting into a complete block.
   - `labels` (`obj`): Labels with user-defined metadata.
 
 An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;:
-&#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+&#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): Location of the CaPool. A full list of valid locations can be found by
 running &#39;gcloud privateca locations list&#39;.
   - `name` (`string`): The name for this CaPool.

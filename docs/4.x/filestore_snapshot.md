@@ -57,7 +57,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected. When `null`, the `description` field will be omitted from the resulting object.
   - `instance` (`string`): The resource name of the filestore instance.
-  - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user-provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
   - `name` (`string`): The resource name of the snapshot. The name must be unique within the specified instance.
 
@@ -94,7 +98,11 @@ injecting into a complete block.
 **Args**:
   - `description` (`string`): A description of the snapshot with 2048 characters or less. Requests with longer descriptions will be rejected. When `null`, the `description` field will be omitted from the resulting object.
   - `instance` (`string`): The resource name of the filestore instance.
-  - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user-provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
   - `name` (`string`): The resource name of the snapshot. The name must be unique within the specified instance.
 

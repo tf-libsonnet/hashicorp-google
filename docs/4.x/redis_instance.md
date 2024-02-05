@@ -95,7 +95,10 @@ will be used. When `null`, the `authorized_network` field will be omitted from t
   - `customer_managed_key` (`string`): Optional. The KMS key reference that you want to use to encrypt the data at rest for this Redis
 instance. If this is provided, CMEK is enabled. When `null`, the `customer_managed_key` field will be omitted from the resulting object.
   - `display_name` (`string`): An arbitrary and optional user-provided name for the instance. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user provided metadata.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location_id` (`string`): The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
 instances will be created across two zones for protection against
@@ -177,7 +180,10 @@ will be used. When `null`, the `authorized_network` field will be omitted from t
   - `customer_managed_key` (`string`): Optional. The KMS key reference that you want to use to encrypt the data at rest for this Redis
 instance. If this is provided, CMEK is enabled. When `null`, the `customer_managed_key` field will be omitted from the resulting object.
   - `display_name` (`string`): An arbitrary and optional user-provided name for the instance. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user provided metadata.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location_id` (`string`): The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
 instances will be created across two zones for protection against

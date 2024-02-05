@@ -27,7 +27,6 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withShareSettings()`](#fn-withsharesettings)
 * [`fn withShareSettingsMixin()`](#fn-withsharesettingsmixin)
-* [`fn withSize()`](#fn-withsize)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withZone()`](#fn-withzone)
@@ -72,15 +71,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): An optional textual description of the resource. When `null`, the `description` field will be omitted from the resulting object.
-  - `initial_size` (`number`): The initial number of nodes in the node group. One of &#39;initial_size&#39; or &#39;size&#39; must be specified. When `null`, the `initial_size` field will be omitted from the resulting object.
+  - `initial_size` (`number`): The initial number of nodes in the node group. One of &#39;initial_size&#39; or &#39;autoscaling_policy&#39; must be configured on resource creation. When `null`, the `initial_size` field will be omitted from the resulting object.
   - `maintenance_policy` (`string`): Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. When `null`, the `maintenance_policy` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. When `null`, the `name` field will be omitted from the resulting object.
   - `node_template` (`string`): The URL of the node template to which this node group belongs.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `size` (`number`): The total number of nodes in the node group. One of &#39;initial_size&#39; or &#39;size&#39; must be specified. When `null`, the `size` field will be omitted from the resulting object.
   - `zone` (`string`): Zone where this node group is located When `null`, the `zone` field will be omitted from the resulting object.
   - `autoscaling_policy` (`list[obj]`): If you use sole-tenant nodes for your workloads, you can use the node
-group autoscaler to automatically manage the sizes of your node groups. When `null`, the `autoscaling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.autoscaling_policy.new](#fn-autoscaling_policynew) constructor.
+group autoscaler to automatically manage the sizes of your node groups.
+
+One of &#39;initial_size&#39; or &#39;autoscaling_policy&#39; must be configured on resource creation. When `null`, the `autoscaling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.autoscaling_policy.new](#fn-autoscaling_policynew) constructor.
   - `maintenance_window` (`list[obj]`): contains properties for the timeframe of maintenance When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.maintenance_window.new](#fn-maintenance_windownew) constructor.
   - `share_settings` (`list[obj]`): Share settings for the node group. When `null`, the `share_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.share_settings.new](#fn-share_settingsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.timeouts.new](#fn-timeoutsnew) constructor.
@@ -108,15 +108,16 @@ injecting into a complete block.
 
 **Args**:
   - `description` (`string`): An optional textual description of the resource. When `null`, the `description` field will be omitted from the resulting object.
-  - `initial_size` (`number`): The initial number of nodes in the node group. One of &#39;initial_size&#39; or &#39;size&#39; must be specified. When `null`, the `initial_size` field will be omitted from the resulting object.
+  - `initial_size` (`number`): The initial number of nodes in the node group. One of &#39;initial_size&#39; or &#39;autoscaling_policy&#39; must be configured on resource creation. When `null`, the `initial_size` field will be omitted from the resulting object.
   - `maintenance_policy` (`string`): Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. When `null`, the `maintenance_policy` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. When `null`, the `name` field will be omitted from the resulting object.
   - `node_template` (`string`): The URL of the node template to which this node group belongs.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `size` (`number`): The total number of nodes in the node group. One of &#39;initial_size&#39; or &#39;size&#39; must be specified. When `null`, the `size` field will be omitted from the resulting object.
   - `zone` (`string`): Zone where this node group is located When `null`, the `zone` field will be omitted from the resulting object.
   - `autoscaling_policy` (`list[obj]`): If you use sole-tenant nodes for your workloads, you can use the node
-group autoscaler to automatically manage the sizes of your node groups. When `null`, the `autoscaling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.autoscaling_policy.new](#fn-autoscaling_policynew) constructor.
+group autoscaler to automatically manage the sizes of your node groups.
+
+One of &#39;initial_size&#39; or &#39;autoscaling_policy&#39; must be configured on resource creation. When `null`, the `autoscaling_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.autoscaling_policy.new](#fn-autoscaling_policynew) constructor.
   - `maintenance_window` (`list[obj]`): contains properties for the timeframe of maintenance When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.maintenance_window.new](#fn-maintenance_windownew) constructor.
   - `share_settings` (`list[obj]`): Share settings for the node group. When `null`, the `share_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.share_settings.new](#fn-share_settingsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_node_group.timeouts.new](#fn-timeoutsnew) constructor.
@@ -330,22 +331,6 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `share_settings` field.
-
-
-### fn withSize
-
-```ts
-withSize()
-```
-
-`google.number.withSize` constructs a mixin object that can be merged into the `number`
-Terraform resource block to set or update the size field.
-
-
-
-**Args**:
-  - `resourceLabel` (`string`): The name label of the block to update.
-  - `value` (`number`): The value to set for the `size` field.
 
 
 ### fn withTimeouts

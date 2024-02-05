@@ -123,7 +123,11 @@ may be delivered in any order. When `null`, the `enable_message_ordering` field 
 Pub/Sub automatically acknowledges the messages that don&#39;t match the filter. You can filter messages
 by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
 you can&#39;t modify the filter. When `null`, the `filter` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to this Subscription. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to this Subscription.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `message_retention_duration` (`string`): How long to retain unacknowledged messages in the subscription&#39;s
 backlog, from the moment a message is published. If
 retain_acked_messages is true, then this also configures the retention
@@ -139,7 +143,9 @@ by &#39;s&#39;. Example: &#39;&#34;600.5s&#34;&#39;. When `null`, the `message_r
 messages are not expunged from the subscription&#39;s backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window. When `null`, the `retain_acked_messages` field will be omitted from the resulting object.
-  - `topic` (`string`): A reference to a Topic resource.
+  - `topic` (`string`): A reference to a Topic resource, of the form projects/{project}/topics/{{name}}
+(as in the id property of a google_pubsub_topic), or just a topic name if
+the topic is in the same project as the subscription.
   - `bigquery_config` (`list[obj]`): If delivery to BigQuery is used with this subscription, this field is used to configure it.
 Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined.
 If all three are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `bigquery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.bigquery_config.new](#fn-bigquery_confignew) constructor.
@@ -226,7 +232,11 @@ may be delivered in any order. When `null`, the `enable_message_ordering` field 
 Pub/Sub automatically acknowledges the messages that don&#39;t match the filter. You can filter messages
 by their attributes. The maximum length of a filter is 256 bytes. After creating the subscription,
 you can&#39;t modify the filter. When `null`, the `filter` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to this Subscription. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to this Subscription.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `message_retention_duration` (`string`): How long to retain unacknowledged messages in the subscription&#39;s
 backlog, from the moment a message is published. If
 retain_acked_messages is true, then this also configures the retention
@@ -242,7 +252,9 @@ by &#39;s&#39;. Example: &#39;&#34;600.5s&#34;&#39;. When `null`, the `message_r
 messages are not expunged from the subscription&#39;s backlog, even if
 they are acknowledged, until they fall out of the
 messageRetentionDuration window. When `null`, the `retain_acked_messages` field will be omitted from the resulting object.
-  - `topic` (`string`): A reference to a Topic resource.
+  - `topic` (`string`): A reference to a Topic resource, of the form projects/{project}/topics/{{name}}
+(as in the id property of a google_pubsub_topic), or just a topic name if
+the topic is in the same project as the subscription.
   - `bigquery_config` (`list[obj]`): If delivery to BigQuery is used with this subscription, this field is used to configure it.
 Either pushConfig, bigQueryConfig or cloudStorageConfig can be set, but not combined.
 If all three are empty, then the subscriber will pull and ack messages using API methods. When `null`, the `bigquery_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.pubsub_subscription.bigquery_config.new](#fn-bigquery_confignew) constructor.
@@ -712,10 +724,14 @@ Terraform sub block.
 
 
 **Args**:
-  - `drop_unknown_fields` (`bool`): When true and useTopicSchema is true, any fields that are a part of the topic schema that are not part of the BigQuery table schema are dropped when writing to BigQuery.
-Otherwise, the schemas must be kept in sync and any messages with extra fields are not written and remain in the subscription&#39;s backlog. When `null`, the `drop_unknown_fields` field will be omitted from the resulting object.
+  - `drop_unknown_fields` (`bool`): When true and use_topic_schema or use_table_schema is true, any fields that are a part of the topic schema or message schema that
+are not part of the BigQuery table schema are dropped when writing to BigQuery. Otherwise, the schemas must be kept in sync
+and any messages with extra fields are not written and remain in the subscription&#39;s backlog. When `null`, the `drop_unknown_fields` field will be omitted from the resulting object.
   - `table` (`string`): The name of the table to which to write data, of the form {projectId}:{datasetId}.{tableId}
-  - `use_topic_schema` (`bool`): When true, use the topic&#39;s schema as the columns to write to in BigQuery, if it exists. When `null`, the `use_topic_schema` field will be omitted from the resulting object.
+  - `use_table_schema` (`bool`): When true, use the BigQuery table&#39;s schema as the columns to write to in BigQuery. Messages
+must be published in JSON format. Only one of use_topic_schema and use_table_schema can be set. When `null`, the `use_table_schema` field will be omitted from the resulting object.
+  - `use_topic_schema` (`bool`): When true, use the topic&#39;s schema as the columns to write to in BigQuery, if it exists.
+Only one of use_topic_schema and use_table_schema can be set. When `null`, the `use_topic_schema` field will be omitted from the resulting object.
   - `write_metadata` (`bool`): When true, write the subscription name, messageId, publishTime, attributes, and orderingKey to additional columns in the table.
 The subscription name, messageId, and publishTime fields are put in their own columns while all other message properties (other than data) are written to a JSON object in the attributes column. When `null`, the `write_metadata` field will be omitted from the resulting object.
 

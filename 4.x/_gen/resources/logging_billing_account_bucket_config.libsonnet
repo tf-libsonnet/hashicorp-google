@@ -10,7 +10,17 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       kms_key_name: kms_key_name,
     }),
   },
-  '#new':: d.fn(help="\n`google.logging_billing_account_bucket_config.new` injects a new `google_logging_billing_account_bucket_config` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.logging_billing_account_bucket_config.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.logging_billing_account_bucket_config` using the reference:\n\n    $._ref.google_logging_billing_account_bucket_config.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_logging_billing_account_bucket_config.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `billing_account` (`string`): The parent resource that contains the logging bucket.\n  - `bucket_id` (`string`): The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.\n  - `description` (`string`): An optional description for this bucket. When `null`, the `description` field will be omitted from the resulting object.\n  - `location` (`string`): The location of the bucket.\n  - `retention_days` (`number`): Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. When `null`, the `retention_days` field will be omitted from the resulting object.\n  - `cmek_settings` (`list[obj]`): The CMEK settings of the log bucket. If present, new log entries written to this log bucket are encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings, the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is allowed. When `null`, the `cmek_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_bucket_config.cmek_settings.new](#fn-cmek_settingsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  index_configs:: {
+    '#new':: d.fn(help='\n`google.logging_billing_account_bucket_config.index_configs.new` constructs a new object with attributes and blocks configured for the `index_configs`\nTerraform sub block.\n\n\n\n**Args**:\n  - `field_path` (`string`): The LogEntry field path to index.\n  - `type` (`string`): The type of data in this index\nNote that some paths are automatically indexed, and other paths are not eligible for indexing. See [indexing documentation]( https://cloud.google.com/logging/docs/view/advanced-queries#indexed-fields) for details.\nFor example: jsonPayload.request.status\n\n**Returns**:\n  - An attribute object that represents the `index_configs` sub block.\n', args=[]),
+    new(
+      field_path,
+      type
+    ):: std.prune(a={
+      field_path: field_path,
+      type: type,
+    }),
+  },
+  '#new':: d.fn(help="\n`google.logging_billing_account_bucket_config.new` injects a new `google_logging_billing_account_bucket_config` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.logging_billing_account_bucket_config.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.logging_billing_account_bucket_config` using the reference:\n\n    $._ref.google_logging_billing_account_bucket_config.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_logging_billing_account_bucket_config.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `billing_account` (`string`): The parent resource that contains the logging bucket.\n  - `bucket_id` (`string`): The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.\n  - `description` (`string`): An optional description for this bucket. When `null`, the `description` field will be omitted from the resulting object.\n  - `location` (`string`): The location of the bucket.\n  - `retention_days` (`number`): Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. When `null`, the `retention_days` field will be omitted from the resulting object.\n  - `cmek_settings` (`list[obj]`): The CMEK settings of the log bucket. If present, new log entries written to this log bucket are encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings, the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is allowed. When `null`, the `cmek_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_bucket_config.cmek_settings.new](#fn-cmek_settingsnew) constructor.\n  - `index_configs` (`list[obj]`): A list of indexed fields and related configuration data. When `null`, the `index_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_bucket_config.index_configs.new](#fn-index_configsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     billing_account,
@@ -18,6 +28,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     location,
     cmek_settings=null,
     description=null,
+    index_configs=null,
     retention_days=null,
     _meta={}
   ):: tf.withResource(
@@ -28,24 +39,27 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       bucket_id=bucket_id,
       cmek_settings=cmek_settings,
       description=description,
+      index_configs=index_configs,
       location=location,
       retention_days=retention_days
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`google.logging_billing_account_bucket_config.newAttrs` constructs a new object with attributes and blocks configured for the `logging_billing_account_bucket_config`\nTerraform resource.\n\nUnlike [google.logging_billing_account_bucket_config.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `billing_account` (`string`): The parent resource that contains the logging bucket.\n  - `bucket_id` (`string`): The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.\n  - `description` (`string`): An optional description for this bucket. When `null`, the `description` field will be omitted from the resulting object.\n  - `location` (`string`): The location of the bucket.\n  - `retention_days` (`number`): Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. When `null`, the `retention_days` field will be omitted from the resulting object.\n  - `cmek_settings` (`list[obj]`): The CMEK settings of the log bucket. If present, new log entries written to this log bucket are encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings, the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is allowed. When `null`, the `cmek_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_bucket_config.cmek_settings.new](#fn-cmek_settingsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logging_billing_account_bucket_config` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`google.logging_billing_account_bucket_config.newAttrs` constructs a new object with attributes and blocks configured for the `logging_billing_account_bucket_config`\nTerraform resource.\n\nUnlike [google.logging_billing_account_bucket_config.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `billing_account` (`string`): The parent resource that contains the logging bucket.\n  - `bucket_id` (`string`): The name of the logging bucket. Logging automatically creates two log buckets: _Required and _Default.\n  - `description` (`string`): An optional description for this bucket. When `null`, the `description` field will be omitted from the resulting object.\n  - `location` (`string`): The location of the bucket.\n  - `retention_days` (`number`): Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. When `null`, the `retention_days` field will be omitted from the resulting object.\n  - `cmek_settings` (`list[obj]`): The CMEK settings of the log bucket. If present, new log entries written to this log bucket are encrypted using the CMEK key provided in this configuration. If a log bucket has CMEK settings, the CMEK settings cannot be disabled later by updating the log bucket. Changing the KMS key is allowed. When `null`, the `cmek_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_bucket_config.cmek_settings.new](#fn-cmek_settingsnew) constructor.\n  - `index_configs` (`list[obj]`): A list of indexed fields and related configuration data. When `null`, the `index_configs` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.logging_billing_account_bucket_config.index_configs.new](#fn-index_configsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `logging_billing_account_bucket_config` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     billing_account,
     bucket_id,
     location,
     cmek_settings=null,
     description=null,
+    index_configs=null,
     retention_days=null
   ):: std.prune(a={
     billing_account: billing_account,
     bucket_id: bucket_id,
     cmek_settings: cmek_settings,
     description: description,
+    index_configs: index_configs,
     location: location,
     retention_days: retention_days,
   }),
@@ -95,6 +109,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       google_logging_billing_account_bucket_config+: {
         [resourceLabel]+: {
           description: value,
+        },
+      },
+    },
+  },
+  '#withIndexConfigs':: d.fn(help='`google.list[obj].withIndexConfigs` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the index_configs field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [google.list[obj].withIndexConfigsMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `index_configs` field.\n', args=[]),
+  withIndexConfigs(resourceLabel, value): {
+    resource+: {
+      google_logging_billing_account_bucket_config+: {
+        [resourceLabel]+: {
+          index_configs: value,
+        },
+      },
+    },
+  },
+  '#withIndexConfigsMixin':: d.fn(help='`google.list[obj].withIndexConfigsMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the index_configs field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [google.list[obj].withIndexConfigs](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `index_configs` field.\n', args=[]),
+  withIndexConfigsMixin(resourceLabel, value): {
+    resource+: {
+      google_logging_billing_account_bucket_config+: {
+        [resourceLabel]+: {
+          index_configs+: if std.isArray(v=value) then value else [value],
         },
       },
     },

@@ -69,12 +69,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): A description of the instance. When `null`, the `description` field will be omitted from the resulting object.
   - `kms_key_name` (`string`): KMS key name used for data encryption. When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user-provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location of the instance. This can be a region for ENTERPRISE tier instances. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the instance.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `tier` (`string`): The service tier of the instance.
-Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD, ZONAL and ENTERPRISE
+Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD, ZONAL, REGIONAL and ENTERPRISE
   - `zone` (`string`): The name of the Filestore zone of the instance. When `null`, the `zone` field will be omitted from the resulting object.
   - `file_shares` (`list[obj]`): File system shares on the instance. For this version, only a
 single file share is supported. When `null`, the `file_shares` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.file_shares.new](#fn-file_sharesnew) constructor.
@@ -106,12 +110,16 @@ injecting into a complete block.
 **Args**:
   - `description` (`string`): A description of the instance. When `null`, the `description` field will be omitted from the resulting object.
   - `kms_key_name` (`string`): KMS key name used for data encryption. When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user-provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location of the instance. This can be a region for ENTERPRISE tier instances. When `null`, the `location` field will be omitted from the resulting object.
   - `name` (`string`): The resource name of the instance.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `tier` (`string`): The service tier of the instance.
-Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD, ZONAL and ENTERPRISE
+Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD, ZONAL, REGIONAL and ENTERPRISE
   - `zone` (`string`): The name of the Filestore zone of the instance. When `null`, the `zone` field will be omitted from the resulting object.
   - `file_shares` (`list[obj]`): File system shares on the instance. For this version, only a
 single file share is supported. When `null`, the `file_shares` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.file_shares.new](#fn-file_sharesnew) constructor.
@@ -381,6 +389,9 @@ Terraform sub block.
   - `capacity_gb` (`number`): File share capacity in GiB. This must be at least 1024 GiB
 for the standard tier, or 2560 GiB for the premium tier.
   - `name` (`string`): The name of the fileshare (16 characters or less)
+  - `source_backup` (`string`): The resource name of the backup, in the format
+projects/{projectId}/locations/{locationId}/backups/{backupId},
+that this file share has been restored from. When `null`, the `source_backup` field will be omitted from the resulting object.
   - `nfs_export_options` (`list[obj]`): Nfs Export Options. There is a limit of 10 export options per file share. When `null`, the `nfs_export_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.filestore_instance.file_shares.nfs_export_options.new](#fn-file_sharesnfs_export_optionsnew) constructor.
 
 **Returns**:

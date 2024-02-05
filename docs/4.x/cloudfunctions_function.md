@@ -107,7 +107,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `https_trigger_url` (`string`): URL which triggers function execution. Returned only if trigger_http is used. When `null`, the `https_trigger_url` field will be omitted from the resulting object.
   - `ingress_settings` (`string`): String value that controls what traffic can reach the function. Allowed values are ALLOW_ALL and ALLOW_INTERNAL_ONLY. Changes to this field will recreate the cloud function. When `null`, the `ingress_settings` field will be omitted from the resulting object.
   - `kms_key_name` (`string`): Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
+
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `max_instances` (`number`): The limit on the maximum number of function instances that may coexist at a given time. When `null`, the `max_instances` field will be omitted from the resulting object.
   - `min_instances` (`number`): The limit on the minimum number of function instances that may coexist at a given time. When `null`, the `min_instances` field will be omitted from the resulting object.
   - `name` (`string`): A user-defined name of the function. Function names must be unique globally.
@@ -161,7 +164,10 @@ injecting into a complete block.
   - `https_trigger_url` (`string`): URL which triggers function execution. Returned only if trigger_http is used. When `null`, the `https_trigger_url` field will be omitted from the resulting object.
   - `ingress_settings` (`string`): String value that controls what traffic can reach the function. Allowed values are ALLOW_ALL and ALLOW_INTERNAL_ONLY. Changes to this field will recreate the cloud function. When `null`, the `ingress_settings` field will be omitted from the resulting object.
   - `kms_key_name` (`string`): Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to the function. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
+
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `max_instances` (`number`): The limit on the maximum number of function instances that may coexist at a given time. When `null`, the `max_instances` field will be omitted from the resulting object.
   - `min_instances` (`number`): The limit on the minimum number of function instances that may coexist at a given time. When `null`, the `min_instances` field will be omitted from the resulting object.
   - `name` (`string`): A user-defined name of the function. Function names must be unique globally.

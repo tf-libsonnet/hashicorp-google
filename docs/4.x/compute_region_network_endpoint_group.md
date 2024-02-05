@@ -78,21 +78,28 @@ the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  - `network` (`string`): This field is only used for PSC.
+  - `network` (`string`): This field is only used for PSC and INTERNET NEGs.
+
 The URL of the network to which all network endpoints in the NEG belong. Uses
 &#34;default&#34; project network if unspecified. When `null`, the `network` field will be omitted from the resulting object.
-  - `network_endpoint_type` (`string`): Type of network endpoints in this network endpoint group. Defaults to SERVERLESS Default value: &#34;SERVERLESS&#34; Possible values: [&#34;SERVERLESS&#34;, &#34;PRIVATE_SERVICE_CONNECT&#34;] When `null`, the `network_endpoint_type` field will be omitted from the resulting object.
+  - `network_endpoint_type` (`string`): Type of network endpoints in this network endpoint group. Defaults to SERVERLESS. Default value: &#34;SERVERLESS&#34; Possible values: [&#34;SERVERLESS&#34;, &#34;PRIVATE_SERVICE_CONNECT&#34;, &#34;INTERNET_IP_PORT&#34;, &#34;INTERNET_FQDN_PORT&#34;] When `null`, the `network_endpoint_type` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `psc_target_service` (`string`): The target service url used to set up private service connection to
+  - `psc_target_service` (`string`): This field is only used for PSC and INTERNET NEGs.
+
+The target service url used to set up private service connection to
 a Google API or a PSC Producer Service Attachment. When `null`, the `psc_target_service` field will be omitted from the resulting object.
-  - `region` (`string`): A reference to the region where the Serverless NEGs Reside.
-  - `subnetwork` (`string`): This field is only used for PSC.
+  - `region` (`string`): A reference to the region where the regional NEGs reside.
+  - `subnetwork` (`string`): This field is only used for PSC NEGs.
+
 Optional URL of the subnetwork to which all network endpoints in the NEG belong. When `null`, the `subnetwork` field will be omitted from the resulting object.
-  - `app_engine` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+  - `app_engine` (`list[obj]`): This field is only used for SERVERLESS NEGs.
+
 Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `app_engine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.app_engine.new](#fn-app_enginenew) constructor.
-  - `cloud_function` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+  - `cloud_function` (`list[obj]`): This field is only used for SERVERLESS NEGs.
+
 Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_function` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_function.new](#fn-cloud_functionnew) constructor.
-  - `cloud_run` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+  - `cloud_run` (`list[obj]`): This field is only used for SERVERLESS NEGs.
+
 Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_run` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_run.new](#fn-cloud_runnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -127,21 +134,28 @@ the regular expression &#39;[a-z]([-a-z0-9]*[a-z0-9])?&#39; which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-  - `network` (`string`): This field is only used for PSC.
+  - `network` (`string`): This field is only used for PSC and INTERNET NEGs.
+
 The URL of the network to which all network endpoints in the NEG belong. Uses
 &#34;default&#34; project network if unspecified. When `null`, the `network` field will be omitted from the resulting object.
-  - `network_endpoint_type` (`string`): Type of network endpoints in this network endpoint group. Defaults to SERVERLESS Default value: &#34;SERVERLESS&#34; Possible values: [&#34;SERVERLESS&#34;, &#34;PRIVATE_SERVICE_CONNECT&#34;] When `null`, the `network_endpoint_type` field will be omitted from the resulting object.
+  - `network_endpoint_type` (`string`): Type of network endpoints in this network endpoint group. Defaults to SERVERLESS. Default value: &#34;SERVERLESS&#34; Possible values: [&#34;SERVERLESS&#34;, &#34;PRIVATE_SERVICE_CONNECT&#34;, &#34;INTERNET_IP_PORT&#34;, &#34;INTERNET_FQDN_PORT&#34;] When `null`, the `network_endpoint_type` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `psc_target_service` (`string`): The target service url used to set up private service connection to
+  - `psc_target_service` (`string`): This field is only used for PSC and INTERNET NEGs.
+
+The target service url used to set up private service connection to
 a Google API or a PSC Producer Service Attachment. When `null`, the `psc_target_service` field will be omitted from the resulting object.
-  - `region` (`string`): A reference to the region where the Serverless NEGs Reside.
-  - `subnetwork` (`string`): This field is only used for PSC.
+  - `region` (`string`): A reference to the region where the regional NEGs reside.
+  - `subnetwork` (`string`): This field is only used for PSC NEGs.
+
 Optional URL of the subnetwork to which all network endpoints in the NEG belong. When `null`, the `subnetwork` field will be omitted from the resulting object.
-  - `app_engine` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+  - `app_engine` (`list[obj]`): This field is only used for SERVERLESS NEGs.
+
 Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `app_engine` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.app_engine.new](#fn-app_enginenew) constructor.
-  - `cloud_function` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+  - `cloud_function` (`list[obj]`): This field is only used for SERVERLESS NEGs.
+
 Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_function` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_function.new](#fn-cloud_functionnew) constructor.
-  - `cloud_run` (`list[obj]`): Only valid when networkEndpointType is &#34;SERVERLESS&#34;.
+  - `cloud_run` (`list[obj]`): This field is only used for SERVERLESS NEGs.
+
 Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. When `null`, the `cloud_run` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.cloud_run.new](#fn-cloud_runnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_network_endpoint_group.timeouts.new](#fn-timeoutsnew) constructor.
 

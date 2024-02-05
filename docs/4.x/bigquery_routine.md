@@ -28,10 +28,14 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withReturnType()`](#fn-withreturntype)
 * [`fn withRoutineId()`](#fn-withroutineid)
 * [`fn withRoutineType()`](#fn-withroutinetype)
+* [`fn withSparkOptions()`](#fn-withsparkoptions)
+* [`fn withSparkOptionsMixin()`](#fn-withsparkoptionsmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj arguments`](#obj-arguments)
   * [`fn new()`](#fn-argumentsnew)
+* [`obj spark_options`](#obj-spark_options)
+  * [`fn new()`](#fn-spark_optionsnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -71,7 +75,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
   - `determinism_level` (`string`): The determinism level of the JavaScript UDF if defined. Possible values: [&#34;DETERMINISM_LEVEL_UNSPECIFIED&#34;, &#34;DETERMINISTIC&#34;, &#34;NOT_DETERMINISTIC&#34;] When `null`, the `determinism_level` field will be omitted from the resulting object.
   - `imported_libraries` (`list`): Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the
 imported JAVASCRIPT libraries. When `null`, the `imported_libraries` field will be omitted from the resulting object.
-  - `language` (`string`): The language of the routine. Possible values: [&#34;SQL&#34;, &#34;JAVASCRIPT&#34;] When `null`, the `language` field will be omitted from the resulting object.
+  - `language` (`string`): The language of the routine. Possible values: [&#34;SQL&#34;, &#34;JAVASCRIPT&#34;, &#34;PYTHON&#34;, &#34;JAVA&#34;, &#34;SCALA&#34;] When `null`, the `language` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `return_table_type` (`string`): Optional. Can be set only if routineType = &#34;TABLE_VALUED_FUNCTION&#34;.
 
@@ -88,8 +92,9 @@ d the order of values or replaced STRUCT field type with RECORD field type, we c
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API. When `null`, the `return_type` field will be omitted from the resulting object.
   - `routine_id` (`string`): The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-  - `routine_type` (`string`): The type of routine. Possible values: [&#34;SCALAR_FUNCTION&#34;, &#34;PROCEDURE&#34;, &#34;TABLE_VALUED_FUNCTION&#34;] When `null`, the `routine_type` field will be omitted from the resulting object.
+  - `routine_type` (`string`): The type of routine. Possible values: [&#34;SCALAR_FUNCTION&#34;, &#34;PROCEDURE&#34;, &#34;TABLE_VALUED_FUNCTION&#34;]
   - `arguments` (`list[obj]`): Input/output argument of a function or a stored procedure. When `null`, the `arguments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.arguments.new](#fn-argumentsnew) constructor.
+  - `spark_options` (`list[obj]`): Optional. If language is one of &#34;PYTHON&#34;, &#34;JAVA&#34;, &#34;SCALA&#34;, this field stores the options for spark stored procedure. When `null`, the `spark_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.spark_options.new](#fn-spark_optionsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -121,7 +126,7 @@ If language=SQL, it is the substring inside (but excluding) the parentheses.
   - `determinism_level` (`string`): The determinism level of the JavaScript UDF if defined. Possible values: [&#34;DETERMINISM_LEVEL_UNSPECIFIED&#34;, &#34;DETERMINISTIC&#34;, &#34;NOT_DETERMINISTIC&#34;] When `null`, the `determinism_level` field will be omitted from the resulting object.
   - `imported_libraries` (`list`): Optional. If language = &#34;JAVASCRIPT&#34;, this field stores the path of the
 imported JAVASCRIPT libraries. When `null`, the `imported_libraries` field will be omitted from the resulting object.
-  - `language` (`string`): The language of the routine. Possible values: [&#34;SQL&#34;, &#34;JAVASCRIPT&#34;] When `null`, the `language` field will be omitted from the resulting object.
+  - `language` (`string`): The language of the routine. Possible values: [&#34;SQL&#34;, &#34;JAVASCRIPT&#34;, &#34;PYTHON&#34;, &#34;JAVA&#34;, &#34;SCALA&#34;] When `null`, the `language` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `return_table_type` (`string`): Optional. Can be set only if routineType = &#34;TABLE_VALUED_FUNCTION&#34;.
 
@@ -138,8 +143,9 @@ d the order of values or replaced STRUCT field type with RECORD field type, we c
 cannot suppress the recurring diff this causes. As a workaround, we recommend using
 the schema as returned by the API. When `null`, the `return_type` field will be omitted from the resulting object.
   - `routine_id` (`string`): The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
-  - `routine_type` (`string`): The type of routine. Possible values: [&#34;SCALAR_FUNCTION&#34;, &#34;PROCEDURE&#34;, &#34;TABLE_VALUED_FUNCTION&#34;] When `null`, the `routine_type` field will be omitted from the resulting object.
+  - `routine_type` (`string`): The type of routine. Possible values: [&#34;SCALAR_FUNCTION&#34;, &#34;PROCEDURE&#34;, &#34;TABLE_VALUED_FUNCTION&#34;]
   - `arguments` (`list[obj]`): Input/output argument of a function or a stored procedure. When `null`, the `arguments` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.arguments.new](#fn-argumentsnew) constructor.
+  - `spark_options` (`list[obj]`): Optional. If language is one of &#34;PYTHON&#34;, &#34;JAVA&#34;, &#34;SCALA&#34;, this field stores the options for spark stored procedure. When `null`, the `spark_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.spark_options.new](#fn-spark_optionsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_routine.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -359,6 +365,43 @@ Terraform resource block to set or update the routine_type field.
   - `value` (`string`): The value to set for the `routine_type` field.
 
 
+### fn withSparkOptions
+
+```ts
+withSparkOptions()
+```
+
+`google.list[obj].withSparkOptions` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the spark_options field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withSparkOptionsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `spark_options` field.
+
+
+### fn withSparkOptionsMixin
+
+```ts
+withSparkOptionsMixin()
+```
+
+`google.list[obj].withSparkOptionsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the spark_options field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withSparkOptions](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `spark_options` field.
+
+
 ### fn withTimeouts
 
 ```ts
@@ -425,6 +468,44 @@ the schema as returned by the API. When `null`, the `data_type` field will be om
 
 **Returns**:
   - An attribute object that represents the `arguments` sub block.
+
+
+## obj spark_options
+
+
+
+### fn spark_options.new
+
+```ts
+new()
+```
+
+
+`google.bigquery_routine.spark_options.new` constructs a new object with attributes and blocks configured for the `spark_options`
+Terraform sub block.
+
+
+
+**Args**:
+  - `archive_uris` (`list`): Archive files to be extracted into the working directory of each executor. For more information about Apache Spark, see Apache Spark. When `null`, the `archive_uris` field will be omitted from the resulting object.
+  - `connection` (`string`): Fully qualified name of the user-provided Spark connection object.
+Format: &#34;projects/{projectId}/locations/{locationId}/connections/{connectionId}&#34; When `null`, the `connection` field will be omitted from the resulting object.
+  - `container_image` (`string`): Custom container image for the runtime environment. When `null`, the `container_image` field will be omitted from the resulting object.
+  - `file_uris` (`list`): Files to be placed in the working directory of each executor. For more information about Apache Spark, see Apache Spark. When `null`, the `file_uris` field will be omitted from the resulting object.
+  - `jar_uris` (`list`): JARs to include on the driver and executor CLASSPATH. For more information about Apache Spark, see Apache Spark. When `null`, the `jar_uris` field will be omitted from the resulting object.
+  - `main_class` (`string`): The fully qualified name of a class in jarUris, for example, com.example.wordcount.
+Exactly one of mainClass and main_jar_uri field should be set for Java/Scala language type. When `null`, the `main_class` field will be omitted from the resulting object.
+  - `main_file_uri` (`string`): The main file/jar URI of the Spark application.
+Exactly one of the definitionBody field and the mainFileUri field must be set for Python.
+Exactly one of mainClass and mainFileUri field should be set for Java/Scala language type. When `null`, the `main_file_uri` field will be omitted from the resulting object.
+  - `properties` (`obj`): Configuration properties as a set of key/value pairs, which will be passed on to the Spark application.
+For more information, see Apache Spark and the procedure option list.
+An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `properties` field will be omitted from the resulting object.
+  - `py_file_uris` (`list`): Python files to be placed on the PYTHONPATH for PySpark application. Supported file types: .py, .egg, and .zip. For more information about Apache Spark, see Apache Spark. When `null`, the `py_file_uris` field will be omitted from the resulting object.
+  - `runtime_version` (`string`): Runtime version. If not specified, the default runtime version is used. When `null`, the `runtime_version` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `spark_options` sub block.
 
 
 ## obj timeouts

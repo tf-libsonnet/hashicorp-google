@@ -59,7 +59,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `display_name` (`string`): Display name.
-  - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location this private connection is located in.
   - `private_connection_id` (`string`): The private connectivity identifier.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -90,7 +93,10 @@ injecting into a complete block.
 
 **Args**:
   - `display_name` (`string`): Display name.
-  - `labels` (`obj`): Labels. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The name of the location this private connection is located in.
   - `private_connection_id` (`string`): The private connectivity identifier.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
@@ -274,6 +280,7 @@ Terraform sub block.
 **Args**:
   - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
   - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

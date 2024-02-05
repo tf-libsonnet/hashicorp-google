@@ -24,6 +24,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withQuotaMixin()`](#fn-withquotamixin)
 * [`fn withSignIn()`](#fn-withsignin)
 * [`fn withSignInMixin()`](#fn-withsigninmixin)
+* [`fn withSmsRegionConfig()`](#fn-withsmsregionconfig)
+* [`fn withSmsRegionConfigMixin()`](#fn-withsmsregionconfigmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj blocking_functions`](#obj-blocking_functions)
@@ -44,6 +46,12 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-sign_inemailnew)
   * [`obj sign_in.phone_number`](#obj-sign_inphone_number)
     * [`fn new()`](#fn-sign_inphone_numbernew)
+* [`obj sms_region_config`](#obj-sms_region_config)
+  * [`fn new()`](#fn-sms_region_confignew)
+  * [`obj sms_region_config.allow_by_default`](#obj-sms_region_configallow_by_default)
+    * [`fn new()`](#fn-sms_region_configallow_by_defaultnew)
+  * [`obj sms_region_config.allowlist_only`](#obj-sms_region_configallowlist_only)
+    * [`fn new()`](#fn-sms_region_configallowlist_onlynew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -82,6 +90,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.
   - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.
   - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.new](#fn-sign_innew) constructor.
+  - `sms_region_config` (`list[obj]`): Configures the regions where users are allowed to send verification SMS for the project or tenant. This is based on the calling code of the destination phone number. When `null`, the `sms_region_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sms_region_config.new](#fn-sms_region_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -112,6 +121,7 @@ injecting into a complete block.
   - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.
   - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.
   - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.new](#fn-sign_innew) constructor.
+  - `sms_region_config` (`list[obj]`): Configures the regions where users are allowed to send verification SMS for the project or tenant. This is based on the calling code of the destination phone number. When `null`, the `sms_region_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sms_region_config.new](#fn-sms_region_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -275,6 +285,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `sign_in` field.
+
+
+### fn withSmsRegionConfig
+
+```ts
+withSmsRegionConfig()
+```
+
+`google.list[obj].withSmsRegionConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the sms_region_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withSmsRegionConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `sms_region_config` field.
+
+
+### fn withSmsRegionConfigMixin
+
+```ts
+withSmsRegionConfigMixin()
+```
+
+`google.list[obj].withSmsRegionConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the sms_region_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withSmsRegionConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `sms_region_config` field.
 
 
 ### fn withTimeouts
@@ -531,6 +578,76 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `phone_number` sub block.
+
+
+## obj sms_region_config
+
+
+
+### fn sms_region_config.new
+
+```ts
+new()
+```
+
+
+`google.identity_platform_config.sms_region_config.new` constructs a new object with attributes and blocks configured for the `sms_region_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `allow_by_default` (`list[obj]`): A policy of allowing SMS to every region by default and adding disallowed regions to a disallow list. When `null`, the `allow_by_default` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sms_region_config.allow_by_default.new](#fn-sms_region_configallow_by_defaultnew) constructor.
+  - `allowlist_only` (`list[obj]`): A policy of only allowing regions by explicitly adding them to an allowlist. When `null`, the `allowlist_only` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sms_region_config.allowlist_only.new](#fn-sms_region_configallowlist_onlynew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `sms_region_config` sub block.
+
+
+## obj sms_region_config.allow_by_default
+
+
+
+### fn sms_region_config.allow_by_default.new
+
+```ts
+new()
+```
+
+
+`google.identity_platform_config.sms_region_config.allow_by_default.new` constructs a new object with attributes and blocks configured for the `allow_by_default`
+Terraform sub block.
+
+
+
+**Args**:
+  - `disallowed_regions` (`list`): Two letter unicode region codes to disallow as defined by https://cldr.unicode.org/ The full list of these region codes is here: https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json When `null`, the `disallowed_regions` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `allow_by_default` sub block.
+
+
+## obj sms_region_config.allowlist_only
+
+
+
+### fn sms_region_config.allowlist_only.new
+
+```ts
+new()
+```
+
+
+`google.identity_platform_config.sms_region_config.allowlist_only.new` constructs a new object with attributes and blocks configured for the `allowlist_only`
+Terraform sub block.
+
+
+
+**Args**:
+  - `allowed_regions` (`list`): Two letter unicode region codes to allow as defined by https://cldr.unicode.org/ The full list of these region codes is here: https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json When `null`, the `allowed_regions` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `allowlist_only` sub block.
 
 
 ## obj timeouts

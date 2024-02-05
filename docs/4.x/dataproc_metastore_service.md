@@ -24,6 +24,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMaintenanceWindow()`](#fn-withmaintenancewindow)
 * [`fn withMaintenanceWindowMixin()`](#fn-withmaintenancewindowmixin)
+* [`fn withMetadataIntegration()`](#fn-withmetadataintegration)
+* [`fn withMetadataIntegrationMixin()`](#fn-withmetadataintegrationmixin)
 * [`fn withNetwork()`](#fn-withnetwork)
 * [`fn withNetworkConfig()`](#fn-withnetworkconfig)
 * [`fn withNetworkConfigMixin()`](#fn-withnetworkconfigmixin)
@@ -42,12 +44,18 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-encryption_confignew)
 * [`obj hive_metastore_config`](#obj-hive_metastore_config)
   * [`fn new()`](#fn-hive_metastore_confignew)
+  * [`obj hive_metastore_config.auxiliary_versions`](#obj-hive_metastore_configauxiliary_versions)
+    * [`fn new()`](#fn-hive_metastore_configauxiliary_versionsnew)
   * [`obj hive_metastore_config.kerberos_config`](#obj-hive_metastore_configkerberos_config)
     * [`fn new()`](#fn-hive_metastore_configkerberos_confignew)
     * [`obj hive_metastore_config.kerberos_config.keytab`](#obj-hive_metastore_configkerberos_configkeytab)
       * [`fn new()`](#fn-hive_metastore_configkerberos_configkeytabnew)
 * [`obj maintenance_window`](#obj-maintenance_window)
   * [`fn new()`](#fn-maintenance_windownew)
+* [`obj metadata_integration`](#obj-metadata_integration)
+  * [`fn new()`](#fn-metadata_integrationnew)
+  * [`obj metadata_integration.data_catalog_config`](#obj-metadata_integrationdata_catalog_config)
+    * [`fn new()`](#fn-metadata_integrationdata_catalog_confignew)
 * [`obj network_config`](#obj-network_config)
   * [`fn new()`](#fn-network_confignew)
   * [`obj network_config.consumers`](#obj-network_configconsumers)
@@ -89,7 +97,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `database_type` (`string`): The database type that the Metastore service stores its data. Default value: &#34;MYSQL&#34; Possible values: [&#34;MYSQL&#34;, &#34;SPANNER&#34;] When `null`, the `database_type` field will be omitted from the resulting object.
-  - `labels` (`obj`): User-defined labels for the metastore service. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): User-defined labels for the metastore service.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location where the metastore service should reside.
 The default value is &#39;global&#39;. When `null`, the `location` field will be omitted from the resulting object.
   - `network` (`string`): The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
@@ -108,6 +119,7 @@ customer data at rest. When `null`, the `encryption_config` sub block will be om
   - `maintenance_window` (`list[obj]`): The one hour maintenance window of the metastore service.
 This specifies when the service can be restarted for maintenance purposes in UTC time.
 Maintenance window is not needed for services with the &#39;SPANNER&#39; database type. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.maintenance_window.new](#fn-maintenance_windownew) constructor.
+  - `metadata_integration` (`list[obj]`): The setting that defines how metastore metadata should be integrated with external services and systems. When `null`, the `metadata_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.metadata_integration.new](#fn-metadata_integrationnew) constructor.
   - `network_config` (`list[obj]`): The configuration specifying the network settings for the Dataproc Metastore service. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.network_config.new](#fn-network_confignew) constructor.
   - `scaling_config` (`list[obj]`): Represents the scaling configuration of a metastore service. When `null`, the `scaling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.scaling_config.new](#fn-scaling_confignew) constructor.
   - `telemetry_config` (`list[obj]`): The configuration specifying telemetry settings for the Dataproc Metastore service. If unspecified defaults to JSON. When `null`, the `telemetry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.telemetry_config.new](#fn-telemetry_confignew) constructor.
@@ -136,7 +148,10 @@ injecting into a complete block.
 
 **Args**:
   - `database_type` (`string`): The database type that the Metastore service stores its data. Default value: &#34;MYSQL&#34; Possible values: [&#34;MYSQL&#34;, &#34;SPANNER&#34;] When `null`, the `database_type` field will be omitted from the resulting object.
-  - `labels` (`obj`): User-defined labels for the metastore service. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): User-defined labels for the metastore service.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location where the metastore service should reside.
 The default value is &#39;global&#39;. When `null`, the `location` field will be omitted from the resulting object.
   - `network` (`string`): The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:
@@ -155,6 +170,7 @@ customer data at rest. When `null`, the `encryption_config` sub block will be om
   - `maintenance_window` (`list[obj]`): The one hour maintenance window of the metastore service.
 This specifies when the service can be restarted for maintenance purposes in UTC time.
 Maintenance window is not needed for services with the &#39;SPANNER&#39; database type. When `null`, the `maintenance_window` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.maintenance_window.new](#fn-maintenance_windownew) constructor.
+  - `metadata_integration` (`list[obj]`): The setting that defines how metastore metadata should be integrated with external services and systems. When `null`, the `metadata_integration` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.metadata_integration.new](#fn-metadata_integrationnew) constructor.
   - `network_config` (`list[obj]`): The configuration specifying the network settings for the Dataproc Metastore service. When `null`, the `network_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.network_config.new](#fn-network_confignew) constructor.
   - `scaling_config` (`list[obj]`): Represents the scaling configuration of a metastore service. When `null`, the `scaling_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.scaling_config.new](#fn-scaling_confignew) constructor.
   - `telemetry_config` (`list[obj]`): The configuration specifying telemetry settings for the Dataproc Metastore service. If unspecified defaults to JSON. When `null`, the `telemetry_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.telemetry_config.new](#fn-telemetry_confignew) constructor.
@@ -321,6 +337,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `maintenance_window` field.
+
+
+### fn withMetadataIntegration
+
+```ts
+withMetadataIntegration()
+```
+
+`google.list[obj].withMetadataIntegration` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the metadata_integration field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withMetadataIntegrationMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `metadata_integration` field.
+
+
+### fn withMetadataIntegrationMixin
+
+```ts
+withMetadataIntegrationMixin()
+```
+
+`google.list[obj].withMetadataIntegrationMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the metadata_integration field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withMetadataIntegration](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `metadata_integration` field.
 
 
 ### fn withNetwork
@@ -609,11 +662,43 @@ Terraform sub block.
 **Args**:
   - `config_overrides` (`obj`): A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
 The mappings override system defaults (some keys cannot be overridden) When `null`, the `config_overrides` field will be omitted from the resulting object.
+  - `endpoint_protocol` (`string`): The protocol to use for the metastore service endpoint. If unspecified, defaults to &#39;THRIFT&#39;. Default value: &#34;THRIFT&#34; Possible values: [&#34;THRIFT&#34;, &#34;GRPC&#34;] When `null`, the `endpoint_protocol` field will be omitted from the resulting object.
   - `version` (`string`): The Hive metastore schema version.
+  - `auxiliary_versions` (`list[obj]`): A mapping of Hive metastore version to the auxiliary version configuration.
+When specified, a secondary Hive metastore service is created along with the primary service.
+All auxiliary versions must be less than the service&#39;s primary version.
+The key is the auxiliary service name and it must match the regular expression a-z?.
+This means that the first character must be a lowercase letter, and all the following characters must be hyphens, lowercase letters, or digits, except the last character, which cannot be a hyphen. When `null`, the `auxiliary_versions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.hive_metastore_config.auxiliary_versions.new](#fn-hive_metastore_configauxiliary_versionsnew) constructor.
   - `kerberos_config` (`list[obj]`): Information used to configure the Hive metastore service as a service principal in a Kerberos realm. When `null`, the `kerberos_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.hive_metastore_config.kerberos_config.new](#fn-hive_metastore_configkerberos_confignew) constructor.
 
 **Returns**:
   - An attribute object that represents the `hive_metastore_config` sub block.
+
+
+## obj hive_metastore_config.auxiliary_versions
+
+
+
+### fn hive_metastore_config.auxiliary_versions.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_metastore_service.hive_metastore_config.auxiliary_versions.new` constructs a new object with attributes and blocks configured for the `auxiliary_versions`
+Terraform sub block.
+
+
+
+**Args**:
+  - `config_overrides` (`obj`): A mapping of Hive metastore configuration key-value pairs to apply to the auxiliary Hive metastore (configured in hive-site.xml) in addition to the primary version&#39;s overrides.
+If keys are present in both the auxiliary version&#39;s overrides and the primary version&#39;s overrides, the value from the auxiliary version&#39;s overrides takes precedence. When `null`, the `config_overrides` field will be omitted from the resulting object.
+  - `key` (`string`): Set the `key` field on the resulting object.
+  - `version` (`string`): The Hive metastore version of the auxiliary service. It must be less than the primary Hive metastore service&#39;s version.
+
+**Returns**:
+  - An attribute object that represents the `auxiliary_versions` sub block.
 
 
 ## obj hive_metastore_config.kerberos_config
@@ -688,6 +773,52 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `maintenance_window` sub block.
+
+
+## obj metadata_integration
+
+
+
+### fn metadata_integration.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_metastore_service.metadata_integration.new` constructs a new object with attributes and blocks configured for the `metadata_integration`
+Terraform sub block.
+
+
+
+**Args**:
+  - `data_catalog_config` (`list[obj]`): The integration config for the Data Catalog service. When `null`, the `data_catalog_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataproc_metastore_service.metadata_integration.data_catalog_config.new](#fn-metadata_integrationdata_catalog_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `metadata_integration` sub block.
+
+
+## obj metadata_integration.data_catalog_config
+
+
+
+### fn metadata_integration.data_catalog_config.new
+
+```ts
+new()
+```
+
+
+`google.dataproc_metastore_service.metadata_integration.data_catalog_config.new` constructs a new object with attributes and blocks configured for the `data_catalog_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): Defines whether the metastore metadata should be synced to Data Catalog. The default value is to disable syncing metastore metadata to Data Catalog.
+
+**Returns**:
+  - An attribute object that represents the `data_catalog_config` sub block.
 
 
 ## obj network_config

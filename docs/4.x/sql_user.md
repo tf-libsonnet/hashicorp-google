@@ -70,7 +70,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
                 either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT. When `null`, the `password` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): The user type. It determines the method to authenticate the user during login.
-                The default is the database&#39;s built-in user type. Flags include &#34;BUILT_IN&#34;, &#34;CLOUD_IAM_USER&#34;, or &#34;CLOUD_IAM_SERVICE_ACCOUNT&#34;. When `null`, the `type` field will be omitted from the resulting object.
+                The default is the database&#39;s built-in user type. Flags include &#34;BUILT_IN&#34;, &#34;CLOUD_IAM_USER&#34;, &#34;CLOUD_IAM_GROUP&#34; or &#34;CLOUD_IAM_SERVICE_ACCOUNT&#34;. When `null`, the `type` field will be omitted from the resulting object.
   - `password_policy` (`list[obj]`): Set the `password_policy` field on the resulting resource block. When `null`, the `password_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_user.password_policy.new](#fn-password_policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_user.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -106,7 +106,7 @@ injecting into a complete block.
                 either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT. When `null`, the `password` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `type` (`string`): The user type. It determines the method to authenticate the user during login.
-                The default is the database&#39;s built-in user type. Flags include &#34;BUILT_IN&#34;, &#34;CLOUD_IAM_USER&#34;, or &#34;CLOUD_IAM_SERVICE_ACCOUNT&#34;. When `null`, the `type` field will be omitted from the resulting object.
+                The default is the database&#39;s built-in user type. Flags include &#34;BUILT_IN&#34;, &#34;CLOUD_IAM_USER&#34;, &#34;CLOUD_IAM_GROUP&#34; or &#34;CLOUD_IAM_SERVICE_ACCOUNT&#34;. When `null`, the `type` field will be omitted from the resulting object.
   - `password_policy` (`list[obj]`): Set the `password_policy` field on the resulting object. When `null`, the `password_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_user.password_policy.new](#fn-password_policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.sql_user.timeouts.new](#fn-timeoutsnew) constructor.
 

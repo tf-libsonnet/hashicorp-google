@@ -66,7 +66,11 @@ If not specified at creation time, the default duration is 24 hours. When `null`
   - `import_only` (`bool`): Whether this key may contain imported versions only. When `null`, the `import_only` field will be omitted from the resulting object.
   - `key_ring` (`string`): The KeyRing that this key belongs to.
 Format: &#39;&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;&#39;.
-  - `labels` (`obj`): Labels with user-defined metadata to apply to this resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels with user-defined metadata to apply to this resource.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The resource name for the CryptoKey.
   - `purpose` (`string`): The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
@@ -108,7 +112,11 @@ If not specified at creation time, the default duration is 24 hours. When `null`
   - `import_only` (`bool`): Whether this key may contain imported versions only. When `null`, the `import_only` field will be omitted from the resulting object.
   - `key_ring` (`string`): The KeyRing that this key belongs to.
 Format: &#39;&#39;projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}&#39;&#39;.
-  - `labels` (`obj`): Labels with user-defined metadata to apply to this resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels with user-defined metadata to apply to this resource.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The resource name for the CryptoKey.
   - `purpose` (`string`): The immutable purpose of this CryptoKey. See the
 [purpose reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)

@@ -61,7 +61,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): Free-text description of the resource. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): User-defined labels. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): User-defined labels.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location of the ServiceConnectionPolicy.
   - `name` (`string`): The name of a ServiceConnectionPolicy. Format: projects/{project}/locations/{location}/serviceConnectionPolicies/{service_connection_policy} See: https://google.aip.dev/122#fields-representing-resource-names
   - `network` (`string`): The resource path of the consumer network. Example: - projects/{projectNumOrId}/global/networks/{resourceId}.
@@ -94,7 +98,11 @@ injecting into a complete block.
 
 **Args**:
   - `description` (`string`): Free-text description of the resource. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): User-defined labels. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): User-defined labels.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location of the ServiceConnectionPolicy.
   - `name` (`string`): The name of a ServiceConnectionPolicy. Format: projects/{project}/locations/{location}/serviceConnectionPolicies/{service_connection_policy} See: https://google.aip.dev/122#fields-representing-resource-names
   - `network` (`string`): The resource path of the consumer network. Example: - projects/{projectNumOrId}/global/networks/{resourceId}.

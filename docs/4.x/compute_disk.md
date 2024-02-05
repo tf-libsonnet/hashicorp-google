@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDiskEncryptionKey()`](#fn-withdiskencryptionkey)
 * [`fn withDiskEncryptionKeyMixin()`](#fn-withdiskencryptionkeymixin)
+* [`fn withEnableConfidentialCompute()`](#fn-withenableconfidentialcompute)
 * [`fn withGuestOsFeatures()`](#fn-withguestosfeatures)
 * [`fn withGuestOsFeaturesMixin()`](#fn-withguestosfeaturesmixin)
 * [`fn withImage()`](#fn-withimage)
@@ -85,6 +86,8 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): An optional description of this resource. Provide this property when
 you create the resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `enable_confidential_compute` (`bool`): Whether this disk is using confidential compute mode.
+Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true When `null`, the `enable_confidential_compute` field will be omitted from the resulting object.
   - `image` (`string`): The image from which to initialize this disk. This can be
 one of: the image&#39;s &#39;self_link&#39;, &#39;projects/{project}/global/images/{image}&#39;,
 &#39;projects/{project}/global/images/family/{family}&#39;, &#39;global/images/{image}&#39;,
@@ -94,7 +97,11 @@ images names must include the family name. If they don&#39;t, use the
 [google_compute_image data source](/docs/providers/google/d/compute_image.html).
 For instance, the image &#39;centos-6-v20180104&#39; includes its family name &#39;centos-6&#39;.
 These images can be referred by family name here. When `null`, the `image` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels to apply to this disk.  A list of key-&gt;value pairs. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this disk.  A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `licenses` (`list`): Any applicable license URI. When `null`, the `licenses` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -195,6 +202,8 @@ injecting into a complete block.
 **Args**:
   - `description` (`string`): An optional description of this resource. Provide this property when
 you create the resource. When `null`, the `description` field will be omitted from the resulting object.
+  - `enable_confidential_compute` (`bool`): Whether this disk is using confidential compute mode.
+Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true When `null`, the `enable_confidential_compute` field will be omitted from the resulting object.
   - `image` (`string`): The image from which to initialize this disk. This can be
 one of: the image&#39;s &#39;self_link&#39;, &#39;projects/{project}/global/images/{image}&#39;,
 &#39;projects/{project}/global/images/family/{family}&#39;, &#39;global/images/{image}&#39;,
@@ -204,7 +213,11 @@ images names must include the family name. If they don&#39;t, use the
 [google_compute_image data source](/docs/providers/google/d/compute_image.html).
 For instance, the image &#39;centos-6-v20180104&#39; includes its family name &#39;centos-6&#39;.
 These images can be referred by family name here. When `null`, the `image` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels to apply to this disk.  A list of key-&gt;value pairs. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this disk.  A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `licenses` (`list`): Any applicable license URI. When `null`, the `licenses` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -373,6 +386,22 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `disk_encryption_key` field.
+
+
+### fn withEnableConfidentialCompute
+
+```ts
+withEnableConfidentialCompute()
+```
+
+`google.bool.withEnableConfidentialCompute` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the enable_confidential_compute field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `enable_confidential_compute` field.
 
 
 ### fn withGuestOsFeatures

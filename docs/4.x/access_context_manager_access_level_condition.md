@@ -25,12 +25,18 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withRequiredAccessLevels()`](#fn-withrequiredaccesslevels)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withVpcNetworkSources()`](#fn-withvpcnetworksources)
+* [`fn withVpcNetworkSourcesMixin()`](#fn-withvpcnetworksourcesmixin)
 * [`obj device_policy`](#obj-device_policy)
   * [`fn new()`](#fn-device_policynew)
   * [`obj device_policy.os_constraints`](#obj-device_policyos_constraints)
     * [`fn new()`](#fn-device_policyos_constraintsnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
+* [`obj vpc_network_sources`](#obj-vpc_network_sources)
+  * [`fn new()`](#fn-vpc_network_sourcesnew)
+  * [`obj vpc_network_sources.vpc_subnetwork`](#obj-vpc_network_sourcesvpc_subnetwork)
+    * [`fn new()`](#fn-vpc_network_sourcesvpc_subnetworknew)
 
 ## Fields
 
@@ -95,6 +101,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name} When `null`, the `r
 the Condition to be true. If not specified, all devices are
 allowed. When `null`, the `device_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.device_policy.new](#fn-device_policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vpc_network_sources` (`list[obj]`): The request must originate from one of the provided VPC networks in Google Cloud. Cannot specify this field together with &#39;ip_subnetworks&#39;. When `null`, the `vpc_network_sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.vpc_network_sources.new](#fn-vpc_network_sourcesnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -152,6 +159,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name} When `null`, the `r
 the Condition to be true. If not specified, all devices are
 allowed. When `null`, the `device_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.device_policy.new](#fn-device_policynew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.timeouts.new](#fn-timeoutsnew) constructor.
+  - `vpc_network_sources` (`list[obj]`): The request must originate from one of the provided VPC networks in Google Cloud. Cannot specify this field together with &#39;ip_subnetworks&#39;. When `null`, the `vpc_network_sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.vpc_network_sources.new](#fn-vpc_network_sourcesnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `access_context_manager_access_level_condition` resource into the root Terraform configuration.
@@ -326,6 +334,43 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+### fn withVpcNetworkSources
+
+```ts
+withVpcNetworkSources()
+```
+
+`google.list[obj].withVpcNetworkSources` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the vpc_network_sources field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withVpcNetworkSourcesMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `vpc_network_sources` field.
+
+
+### fn withVpcNetworkSourcesMixin
+
+```ts
+withVpcNetworkSourcesMixin()
+```
+
+`google.list[obj].withVpcNetworkSourcesMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the vpc_network_sources field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withVpcNetworkSources](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `vpc_network_sources` field.
+
+
 ## obj device_policy
 
 
@@ -406,3 +451,50 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
+
+
+## obj vpc_network_sources
+
+
+
+### fn vpc_network_sources.new
+
+```ts
+new()
+```
+
+
+`google.access_context_manager_access_level_condition.vpc_network_sources.new` constructs a new object with attributes and blocks configured for the `vpc_network_sources`
+Terraform sub block.
+
+
+
+**Args**:
+  - `vpc_subnetwork` (`list[obj]`): Sub networks within a VPC network. When `null`, the `vpc_subnetwork` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level_condition.vpc_network_sources.vpc_subnetwork.new](#fn-vpc_network_sourcesvpc_subnetworknew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `vpc_network_sources` sub block.
+
+
+## obj vpc_network_sources.vpc_subnetwork
+
+
+
+### fn vpc_network_sources.vpc_subnetwork.new
+
+```ts
+new()
+```
+
+
+`google.access_context_manager_access_level_condition.vpc_network_sources.vpc_subnetwork.new` constructs a new object with attributes and blocks configured for the `vpc_subnetwork`
+Terraform sub block.
+
+
+
+**Args**:
+  - `network` (`string`): Required. Network name to be allowed by this Access Level. Networks of foreign organizations requires &#39;compute.network.get&#39; permission to be granted to caller.
+  - `vpc_ip_subnetworks` (`list`): CIDR block IP subnetwork specification. Must be IPv4. When `null`, the `vpc_ip_subnetworks` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `vpc_subnetwork` sub block.

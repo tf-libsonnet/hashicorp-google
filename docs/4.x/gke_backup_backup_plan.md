@@ -84,7 +84,11 @@ from being created via this BackupPlan (including scheduled Backups). When `null
   - `description` (`string`): User specified descriptive string for this BackupPlan. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): Description: A set of custom labels supplied by the user.
 A list of key-&gt;value pairs.
-Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The region of the Backup Plan.
   - `name` (`string`): The full name of the BackupPlan Resource.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -123,7 +127,11 @@ from being created via this BackupPlan (including scheduled Backups). When `null
   - `description` (`string`): User specified descriptive string for this BackupPlan. When `null`, the `description` field will be omitted from the resulting object.
   - `labels` (`obj`): Description: A set of custom labels supplied by the user.
 A list of key-&gt;value pairs.
-Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The region of the Backup Plan.
   - `name` (`string`): The full name of the BackupPlan Resource.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.

@@ -35,6 +35,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withOidcConfigMixin()`](#fn-withoidcconfigmixin)
 * [`fn withPlatformVersion()`](#fn-withplatformversion)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withProxyConfig()`](#fn-withproxyconfig)
+* [`fn withProxyConfigMixin()`](#fn-withproxyconfigmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj authorization`](#obj-authorization)
@@ -53,6 +55,10 @@ This package contains functions and utilities for setting up the resource using 
     * [`fn new()`](#fn-monitoring_configmanaged_prometheus_confignew)
 * [`obj oidc_config`](#obj-oidc_config)
   * [`fn new()`](#fn-oidc_confignew)
+* [`obj proxy_config`](#obj-proxy_config)
+  * [`fn new()`](#fn-proxy_confignew)
+  * [`obj proxy_config.kubernetes_secret`](#obj-proxy_configkubernetes_secret)
+    * [`fn new()`](#fn-proxy_configkubernetes_secretnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -90,7 +96,11 @@ restrictions as Kubernetes annotations. The total size of all keys and
 values combined is limited to 256k. Key can have 2 segments: prefix (optional)
 and name (required), separated by a slash (/). Prefix must be a DNS subdomain.
 Name must be 63 characters or less, begin and end with alphanumerics,
-with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
+with dashes (-), underscores (_), dots (.), and alphanumerics between.
+
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `deletion_policy` (`string`): Policy to determine what flags to send on delete. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `description` (`string`): A human readable description of this attached cluster. Cannot be longer
 than 255 UTF-8 encoded bytes. When `null`, the `description` field will be omitted from the resulting object.
@@ -116,6 +126,7 @@ Both clusters with public and private issuer URLs are supported.
 Clusters with public issuers only need to specify the &#39;issuer_url&#39; field
 while clusters with private issuers need to provide both
 &#39;issuer_url&#39; and &#39;jwks&#39;. When `null`, the `oidc_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.oidc_config.new](#fn-oidc_confignew) constructor.
+  - `proxy_config` (`list[obj]`): Support for proxy configuration. When `null`, the `proxy_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.proxy_config.new](#fn-proxy_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -145,7 +156,11 @@ restrictions as Kubernetes annotations. The total size of all keys and
 values combined is limited to 256k. Key can have 2 segments: prefix (optional)
 and name (required), separated by a slash (/). Prefix must be a DNS subdomain.
 Name must be 63 characters or less, begin and end with alphanumerics,
-with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
+with dashes (-), underscores (_), dots (.), and alphanumerics between.
+
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `deletion_policy` (`string`): Policy to determine what flags to send on delete. When `null`, the `deletion_policy` field will be omitted from the resulting object.
   - `description` (`string`): A human readable description of this attached cluster. Cannot be longer
 than 255 UTF-8 encoded bytes. When `null`, the `description` field will be omitted from the resulting object.
@@ -171,6 +186,7 @@ Both clusters with public and private issuer URLs are supported.
 Clusters with public issuers only need to specify the &#39;issuer_url&#39; field
 while clusters with private issuers need to provide both
 &#39;issuer_url&#39; and &#39;jwks&#39;. When `null`, the `oidc_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.oidc_config.new](#fn-oidc_confignew) constructor.
+  - `proxy_config` (`list[obj]`): Support for proxy configuration. When `null`, the `proxy_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.proxy_config.new](#fn-proxy_confignew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -527,6 +543,43 @@ Terraform resource block to set or update the project field.
   - `value` (`string`): The value to set for the `project` field.
 
 
+### fn withProxyConfig
+
+```ts
+withProxyConfig()
+```
+
+`google.list[obj].withProxyConfig` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the proxy_config field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withProxyConfigMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `proxy_config` field.
+
+
+### fn withProxyConfigMixin
+
+```ts
+withProxyConfigMixin()
+```
+
+`google.list[obj].withProxyConfigMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the proxy_config field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withProxyConfig](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `proxy_config` field.
+
+
 ### fn withTimeouts
 
 ```ts
@@ -580,6 +633,12 @@ Terraform sub block.
 
 
 **Args**:
+  - `admin_groups` (`list`): Groups that can perform operations as a cluster admin. A managed
+ClusterRoleBinding will be created to grant the &#39;cluster-admin&#39; ClusterRole
+to the groups. Up to ten admin groups can be provided.
+
+For more info on RBAC, see
+https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles When `null`, the `admin_groups` field will be omitted from the resulting object.
   - `admin_users` (`list`): Users that can perform operations as a cluster admin. A managed
 ClusterRoleBinding will be created to grant the &#39;cluster-admin&#39; ClusterRole
 to the users. Up to ten admin users can be provided.
@@ -751,6 +810,53 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `oidc_config` sub block.
+
+
+## obj proxy_config
+
+
+
+### fn proxy_config.new
+
+```ts
+new()
+```
+
+
+`google.container_attached_cluster.proxy_config.new` constructs a new object with attributes and blocks configured for the `proxy_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `kubernetes_secret` (`list[obj]`): The Kubernetes Secret resource that contains the HTTP(S) proxy configuration. When `null`, the `kubernetes_secret` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_attached_cluster.proxy_config.kubernetes_secret.new](#fn-proxy_configkubernetes_secretnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `proxy_config` sub block.
+
+
+## obj proxy_config.kubernetes_secret
+
+
+
+### fn proxy_config.kubernetes_secret.new
+
+```ts
+new()
+```
+
+
+`google.container_attached_cluster.proxy_config.kubernetes_secret.new` constructs a new object with attributes and blocks configured for the `kubernetes_secret`
+Terraform sub block.
+
+
+
+**Args**:
+  - `name` (`string`): Name of the kubernetes secret containing the proxy config.
+  - `namespace` (`string`): Namespace of the kubernetes secret containing the proxy config.
+
+**Returns**:
+  - An attribute object that represents the `kubernetes_secret` sub block.
 
 
 ## obj timeouts

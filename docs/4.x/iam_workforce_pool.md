@@ -15,6 +15,8 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAccessRestrictions()`](#fn-withaccessrestrictions)
+* [`fn withAccessRestrictionsMixin()`](#fn-withaccessrestrictionsmixin)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDisabled()`](#fn-withdisabled)
 * [`fn withDisplayName()`](#fn-withdisplayname)
@@ -24,6 +26,10 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withWorkforcePoolId()`](#fn-withworkforcepoolid)
+* [`obj access_restrictions`](#obj-access_restrictions)
+  * [`fn new()`](#fn-access_restrictionsnew)
+  * [`obj access_restrictions.allowed_services`](#obj-access_restrictionsallowed_services)
+    * [`fn new()`](#fn-access_restrictionsallowed_servicesnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -70,6 +76,8 @@ A duration in seconds with up to nine fractional digits, ending with &#39;&#39;s
   - `workforce_pool_id` (`string`): The name of the pool. The ID must be a globally unique string of 6 to 63 lowercase letters,
 digits, or hyphens. It must start with a letter, and cannot have a trailing hyphen.
 The prefix &#39;gcp-&#39; is reserved for use by Google, and may not be specified.
+  - `access_restrictions` (`list[obj]`): Configure access restrictions on the workforce pool users. This is an optional field. If specified web
+sign-in can be restricted to given set of services or programmatic sign-in can be disabled for pool users. When `null`, the `access_restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool.access_restrictions.new](#fn-access_restrictionsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -108,10 +116,49 @@ A duration in seconds with up to nine fractional digits, ending with &#39;&#39;s
   - `workforce_pool_id` (`string`): The name of the pool. The ID must be a globally unique string of 6 to 63 lowercase letters,
 digits, or hyphens. It must start with a letter, and cannot have a trailing hyphen.
 The prefix &#39;gcp-&#39; is reserved for use by Google, and may not be specified.
+  - `access_restrictions` (`list[obj]`): Configure access restrictions on the workforce pool users. This is an optional field. If specified web
+sign-in can be restricted to given set of services or programmatic sign-in can be disabled for pool users. When `null`, the `access_restrictions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool.access_restrictions.new](#fn-access_restrictionsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `iam_workforce_pool` resource into the root Terraform configuration.
+
+
+### fn withAccessRestrictions
+
+```ts
+withAccessRestrictions()
+```
+
+`google.list[obj].withAccessRestrictions` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the access_restrictions field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withAccessRestrictionsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `access_restrictions` field.
+
+
+### fn withAccessRestrictionsMixin
+
+```ts
+withAccessRestrictionsMixin()
+```
+
+`google.list[obj].withAccessRestrictionsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the access_restrictions field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withAccessRestrictions](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `access_restrictions` field.
 
 
 ### fn withDescription
@@ -260,6 +307,56 @@ Terraform resource block to set or update the workforce_pool_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `workforce_pool_id` field.
+
+
+## obj access_restrictions
+
+
+
+### fn access_restrictions.new
+
+```ts
+new()
+```
+
+
+`google.iam_workforce_pool.access_restrictions.new` constructs a new object with attributes and blocks configured for the `access_restrictions`
+Terraform sub block.
+
+
+
+**Args**:
+  - `disable_programmatic_signin` (`bool`): Disable programmatic sign-in by disabling token issue via the Security Token API endpoint.
+See [Security Token Service API](https://cloud.google.com/iam/docs/reference/sts/rest). When `null`, the `disable_programmatic_signin` field will be omitted from the resulting object.
+  - `allowed_services` (`list[obj]`): Services allowed for web sign-in with the workforce pool.
+If not set by default there are no restrictions. When `null`, the `allowed_services` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workforce_pool.access_restrictions.allowed_services.new](#fn-access_restrictionsallowed_servicesnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `access_restrictions` sub block.
+
+
+## obj access_restrictions.allowed_services
+
+
+
+### fn access_restrictions.allowed_services.new
+
+```ts
+new()
+```
+
+
+`google.iam_workforce_pool.access_restrictions.allowed_services.new` constructs a new object with attributes and blocks configured for the `allowed_services`
+Terraform sub block.
+
+
+
+**Args**:
+  - `domain` (`string`): Domain name of the service.
+Example: console.cloud.google When `null`, the `domain` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `allowed_services` sub block.
 
 
 ## obj timeouts

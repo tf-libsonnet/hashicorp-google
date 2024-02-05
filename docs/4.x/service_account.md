@@ -16,6 +16,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
 * [`fn withAccountId()`](#fn-withaccountid)
+* [`fn withCreateIgnoreAlreadyExists()`](#fn-withcreateignorealreadyexists)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDisabled()`](#fn-withdisabled)
 * [`fn withDisplayName()`](#fn-withdisplayname)
@@ -55,6 +56,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `account_id` (`string`): The account id that is used to generate the service account email address and a stable unique id. It is unique within a project, must be 6-30 characters long, and match the regular expression [a-z]([-a-z0-9]*[a-z0-9]) to comply with RFC1035. Changing this forces a new service account to be created.
+  - `create_ignore_already_exists` (`bool`): If set to true, skip service account creation if a service account with the same email already exists. When `null`, the `create_ignore_already_exists` field will be omitted from the resulting object.
   - `description` (`string`): A text description of the service account. Must be less than or equal to 256 UTF-8 bytes. When `null`, the `description` field will be omitted from the resulting object.
   - `disabled` (`bool`): Whether the service account is disabled. Defaults to false When `null`, the `disabled` field will be omitted from the resulting object.
   - `display_name` (`string`): The display name for the service account. Can be updated without creating a new resource. When `null`, the `display_name` field will be omitted from the resulting object.
@@ -84,6 +86,7 @@ injecting into a complete block.
 
 **Args**:
   - `account_id` (`string`): The account id that is used to generate the service account email address and a stable unique id. It is unique within a project, must be 6-30 characters long, and match the regular expression [a-z]([-a-z0-9]*[a-z0-9]) to comply with RFC1035. Changing this forces a new service account to be created.
+  - `create_ignore_already_exists` (`bool`): If set to true, skip service account creation if a service account with the same email already exists. When `null`, the `create_ignore_already_exists` field will be omitted from the resulting object.
   - `description` (`string`): A text description of the service account. Must be less than or equal to 256 UTF-8 bytes. When `null`, the `description` field will be omitted from the resulting object.
   - `disabled` (`bool`): Whether the service account is disabled. Defaults to false When `null`, the `disabled` field will be omitted from the resulting object.
   - `display_name` (`string`): The display name for the service account. Can be updated without creating a new resource. When `null`, the `display_name` field will be omitted from the resulting object.
@@ -108,6 +111,22 @@ Terraform resource block to set or update the account_id field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `account_id` field.
+
+
+### fn withCreateIgnoreAlreadyExists
+
+```ts
+withCreateIgnoreAlreadyExists()
+```
+
+`google.bool.withCreateIgnoreAlreadyExists` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the create_ignore_already_exists field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `create_ignore_already_exists` field.
 
 
 ### fn withDescription

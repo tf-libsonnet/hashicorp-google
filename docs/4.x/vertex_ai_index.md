@@ -72,7 +72,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `index_update_method` (`string`): The update method to use with this Index. The value must be the followings. If not set, BATCH_UPDATE will be used by default.
 * BATCH_UPDATE: user can call indexes.patch with files on Cloud Storage of datapoints to update.
 * STREAM_UPDATE: user can call indexes.upsertDatapoints/DeleteDatapoints to update the Index and the updates will be applied in corresponding DeployedIndexes in nearly real-time. When `null`, the `index_update_method` field will be omitted from the resulting object.
-  - `labels` (`obj`): The labels with user-defined metadata to organize your Indexes. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): The labels with user-defined metadata to organize your Indexes.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the index. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
   - `metadata` (`list[obj]`): An additional information about the Index When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.new](#fn-metadatanew) constructor.
@@ -105,7 +108,10 @@ injecting into a complete block.
   - `index_update_method` (`string`): The update method to use with this Index. The value must be the followings. If not set, BATCH_UPDATE will be used by default.
 * BATCH_UPDATE: user can call indexes.patch with files on Cloud Storage of datapoints to update.
 * STREAM_UPDATE: user can call indexes.upsertDatapoints/DeleteDatapoints to update the Index and the updates will be applied in corresponding DeployedIndexes in nearly real-time. When `null`, the `index_update_method` field will be omitted from the resulting object.
-  - `labels` (`obj`): The labels with user-defined metadata to organize your Indexes. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): The labels with user-defined metadata to organize your Indexes.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the index. eg us-central1 When `null`, the `region` field will be omitted from the resulting object.
   - `metadata` (`list[obj]`): An additional information about the Index When `null`, the `metadata` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.new](#fn-metadatanew) constructor.
@@ -306,7 +312,7 @@ The string must be a valid Cloud Storage directory path. If this
 field is set when calling IndexService.UpdateIndex, then no other
 Index field can be also updated as part of the same call.
 The expected structure and format of the files this URI points to is
-described at https://cloud.google.com/vertex-ai/docs/matching-engine/using-matching-engine#input-data-format When `null`, the `contents_delta_uri` field will be omitted from the resulting object.
+described at https://cloud.google.com/vertex-ai/docs/matching-engine/using-matching-engine#input-data-format
   - `is_complete_overwrite` (`bool`): If this field is set together with contentsDeltaUri when calling IndexService.UpdateIndex,
 then existing content of the Index will be replaced by the data from the contentsDeltaUri. When `null`, the `is_complete_overwrite` field will be omitted from the resulting object.
   - `config` (`list[obj]`): The configuration of the Matching Engine Index. When `null`, the `config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.vertex_ai_index.metadata.config.new](#fn-metadataconfignew) constructor.

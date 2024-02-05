@@ -65,7 +65,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): The user-supplied description of the Connectivity Test.
 Maximum of 512 characters. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user-provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Unique name for the connectivity test.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `protocol` (`string`): IP Protocol of the test. When not provided, &#34;TCP&#34; is assumed. When `null`, the `protocol` field will be omitted from the resulting object.
@@ -139,7 +143,11 @@ injecting into a complete block.
 **Args**:
   - `description` (`string`): The user-supplied description of the Connectivity Test.
 Maximum of 512 characters. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user-provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user-provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Unique name for the connectivity test.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `protocol` (`string`): IP Protocol of the test. When not provided, &#34;TCP&#34; is assumed. When `null`, the `protocol` field will be omitted from the resulting object.

@@ -84,8 +84,12 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): User-provided description of a function. When `null`, the `description` field will be omitted from the resulting object.
   - `kms_key_name` (`string`): Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
 It must match the pattern projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}. When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs associated with this Cloud Function. When `null`, the `labels` field will be omitted from the resulting object.
-  - `location` (`string`): The location of this cloud function. When `null`, the `location` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs associated with this Cloud Function.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `location` (`string`): The location of this cloud function.
   - `name` (`string`): A user-defined name of the function. Function names must
 be unique globally and match pattern &#39;projects/*/locations/*/functions/*&#39;.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
@@ -121,8 +125,12 @@ injecting into a complete block.
   - `description` (`string`): User-provided description of a function. When `null`, the `description` field will be omitted from the resulting object.
   - `kms_key_name` (`string`): Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
 It must match the pattern projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}. When `null`, the `kms_key_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs associated with this Cloud Function. When `null`, the `labels` field will be omitted from the resulting object.
-  - `location` (`string`): The location of this cloud function. When `null`, the `location` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs associated with this Cloud Function.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `location` (`string`): The location of this cloud function.
   - `name` (`string`): A user-defined name of the function. Function names must
 be unique globally and match pattern &#39;projects/*/locations/*/functions/*&#39;.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
@@ -516,7 +524,9 @@ Terraform sub block.
 as the transport topic for the event delivery. When `null`, the `pubsub_topic` field will be omitted from the resulting object.
   - `retry_policy` (`string`): Describes the retry policy in case of function&#39;s execution failure.
 Retried execution is charged as any other execution. Possible values: [&#34;RETRY_POLICY_UNSPECIFIED&#34;, &#34;RETRY_POLICY_DO_NOT_RETRY&#34;, &#34;RETRY_POLICY_RETRY&#34;] When `null`, the `retry_policy` field will be omitted from the resulting object.
-  - `service_account_email` (`string`): The email of the service account for this function. When `null`, the `service_account_email` field will be omitted from the resulting object.
+  - `service_account_email` (`string`): Optional. The email of the trigger&#39;s service account. The service account
+must have permission to invoke Cloud Run services. If empty, defaults to the
+Compute Engine default service account: {project_number}-compute@developer.gserviceaccount.com. When `null`, the `service_account_email` field will be omitted from the resulting object.
   - `trigger_region` (`string`): The region that the trigger will be in. The trigger will only receive
 events originating in this region. It can be the same
 region as the function, a different region or multi-region, or the global

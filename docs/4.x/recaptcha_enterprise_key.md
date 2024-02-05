@@ -26,6 +26,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTestingOptionsMixin()`](#fn-withtestingoptionsmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withWafSettings()`](#fn-withwafsettings)
+* [`fn withWafSettingsMixin()`](#fn-withwafsettingsmixin)
 * [`fn withWebSettings()`](#fn-withwebsettings)
 * [`fn withWebSettingsMixin()`](#fn-withwebsettingsmixin)
 * [`obj android_settings`](#obj-android_settings)
@@ -36,6 +38,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-testing_optionsnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
+* [`obj waf_settings`](#obj-waf_settings)
+  * [`fn new()`](#fn-waf_settingsnew)
 * [`obj web_settings`](#obj-web_settings)
   * [`fn new()`](#fn-web_settingsnew)
 
@@ -69,12 +73,16 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `display_name` (`string`): Human-readable display name of this key. Modifiable by user.
-  - `labels` (`obj`): See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels). When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `android_settings` (`list[obj]`): Settings for keys that can be used by Android apps. When `null`, the `android_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.android_settings.new](#fn-android_settingsnew) constructor.
   - `ios_settings` (`list[obj]`): Settings for keys that can be used by iOS apps. When `null`, the `ios_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.ios_settings.new](#fn-ios_settingsnew) constructor.
   - `testing_options` (`list[obj]`): Options for user acceptance testing. When `null`, the `testing_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.testing_options.new](#fn-testing_optionsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.timeouts.new](#fn-timeoutsnew) constructor.
+  - `waf_settings` (`list[obj]`): Settings specific to keys that can be used for WAF (Web Application Firewall). When `null`, the `waf_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.waf_settings.new](#fn-waf_settingsnew) constructor.
   - `web_settings` (`list[obj]`): Settings for keys that can be used by websites. When `null`, the `web_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.web_settings.new](#fn-web_settingsnew) constructor.
 
 **Returns**:
@@ -100,12 +108,16 @@ injecting into a complete block.
 
 **Args**:
   - `display_name` (`string`): Human-readable display name of this key. Modifiable by user.
-  - `labels` (`obj`): See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels). When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
   - `android_settings` (`list[obj]`): Settings for keys that can be used by Android apps. When `null`, the `android_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.android_settings.new](#fn-android_settingsnew) constructor.
   - `ios_settings` (`list[obj]`): Settings for keys that can be used by iOS apps. When `null`, the `ios_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.ios_settings.new](#fn-ios_settingsnew) constructor.
   - `testing_options` (`list[obj]`): Options for user acceptance testing. When `null`, the `testing_options` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.testing_options.new](#fn-testing_optionsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.timeouts.new](#fn-timeoutsnew) constructor.
+  - `waf_settings` (`list[obj]`): Settings specific to keys that can be used for WAF (Web Application Firewall). When `null`, the `waf_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.waf_settings.new](#fn-waf_settingsnew) constructor.
   - `web_settings` (`list[obj]`): Settings for keys that can be used by websites. When `null`, the `web_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.recaptcha_enterprise_key.web_settings.new](#fn-web_settingsnew) constructor.
 
 **Returns**:
@@ -307,6 +319,43 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+### fn withWafSettings
+
+```ts
+withWafSettings()
+```
+
+`google.list[obj].withWafSettings` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the waf_settings field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withWafSettingsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `waf_settings` field.
+
+
+### fn withWafSettingsMixin
+
+```ts
+withWafSettingsMixin()
+```
+
+`google.list[obj].withWafSettingsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the waf_settings field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withWafSettings](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `waf_settings` field.
+
+
 ### fn withWebSettings
 
 ```ts
@@ -439,6 +488,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
+
+
+## obj waf_settings
+
+
+
+### fn waf_settings.new
+
+```ts
+new()
+```
+
+
+`google.recaptcha_enterprise_key.waf_settings.new` constructs a new object with attributes and blocks configured for the `waf_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `waf_feature` (`string`): Supported WAF features. For more information, see https://cloud.google.com/recaptcha-enterprise/docs/usecase#comparison_of_features. Possible values: CHALLENGE_PAGE, SESSION_TOKEN, ACTION_TOKEN, EXPRESS
+  - `waf_service` (`string`): The WAF service that uses this key. Possible values: CA, FASTLY
+
+**Returns**:
+  - An attribute object that represents the `waf_settings` sub block.
 
 
 ## obj web_settings

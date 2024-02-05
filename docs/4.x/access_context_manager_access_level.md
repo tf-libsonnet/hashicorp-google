@@ -33,6 +33,10 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-basicconditionsdevice_policynew)
       * [`obj basic.conditions.device_policy.os_constraints`](#obj-basicconditionsdevice_policyos_constraints)
         * [`fn new()`](#fn-basicconditionsdevice_policyos_constraintsnew)
+    * [`obj basic.conditions.vpc_network_sources`](#obj-basicconditionsvpc_network_sources)
+      * [`fn new()`](#fn-basicconditionsvpc_network_sourcesnew)
+      * [`obj basic.conditions.vpc_network_sources.vpc_subnetwork`](#obj-basicconditionsvpc_network_sourcesvpc_subnetwork)
+        * [`fn new()`](#fn-basicconditionsvpc_network_sourcesvpc_subnetworknew)
 * [`obj custom`](#obj-custom)
   * [`fn new()`](#fn-customnew)
   * [`obj custom.expr`](#obj-customexpr)
@@ -370,6 +374,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name} When `null`, the `r
   - `device_policy` (`list[obj]`): Device specific restrictions, all restrictions must hold for
 the Condition to be true. If not specified, all devices are
 allowed. When `null`, the `device_policy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level.basic.conditions.device_policy.new](#fn-basicbasicdevice_policynew) constructor.
+  - `vpc_network_sources` (`list[obj]`): The request must originate from one of the provided VPC networks in Google Cloud. Cannot specify this field together with &#39;ip_subnetworks&#39;. When `null`, the `vpc_network_sources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level.basic.conditions.vpc_network_sources.new](#fn-basicbasicvpc_network_sourcesnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `conditions` sub block.
@@ -432,6 +437,53 @@ Format: &#34;major.minor.patch&#34; such as &#34;10.5.301&#34;, &#34;9.2.1&#34;.
 
 **Returns**:
   - An attribute object that represents the `os_constraints` sub block.
+
+
+## obj basic.conditions.vpc_network_sources
+
+
+
+### fn basic.conditions.vpc_network_sources.new
+
+```ts
+new()
+```
+
+
+`google.access_context_manager_access_level.basic.conditions.vpc_network_sources.new` constructs a new object with attributes and blocks configured for the `vpc_network_sources`
+Terraform sub block.
+
+
+
+**Args**:
+  - `vpc_subnetwork` (`list[obj]`): Sub networks within a VPC network. When `null`, the `vpc_subnetwork` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.access_context_manager_access_level.basic.conditions.vpc_network_sources.vpc_subnetwork.new](#fn-basicbasicconditionsvpc_subnetworknew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `vpc_network_sources` sub block.
+
+
+## obj basic.conditions.vpc_network_sources.vpc_subnetwork
+
+
+
+### fn basic.conditions.vpc_network_sources.vpc_subnetwork.new
+
+```ts
+new()
+```
+
+
+`google.access_context_manager_access_level.basic.conditions.vpc_network_sources.vpc_subnetwork.new` constructs a new object with attributes and blocks configured for the `vpc_subnetwork`
+Terraform sub block.
+
+
+
+**Args**:
+  - `network` (`string`): Required. Network name to be allowed by this Access Level. Networks of foreign organizations requires &#39;compute.network.get&#39; permission to be granted to caller.
+  - `vpc_ip_subnetworks` (`list`): CIDR block IP subnetwork specification. Must be IPv4. When `null`, the `vpc_ip_subnetworks` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `vpc_subnetwork` sub block.
 
 
 ## obj custom

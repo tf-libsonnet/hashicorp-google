@@ -2,7 +2,7 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='compute_per_instance_config', url='', help='`compute_per_instance_config` represents the `google_compute_per_instance_config` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
-  '#new':: d.fn(help="\n`google.compute_per_instance_config.new` injects a new `google_compute_per_instance_config` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.compute_per_instance_config.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.compute_per_instance_config` using the reference:\n\n    $._ref.google_compute_per_instance_config.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_compute_per_instance_config.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `instance_group_manager` (`string`): The instance group manager this instance config is part of.\n  - `minimal_action` (`string`): The minimal action to perform on the instance during an update.\nDefault is \u0026#39;NONE\u0026#39;. Possible values are:\n* REPLACE\n* RESTART\n* REFRESH\n* NONE When `null`, the `minimal_action` field will be omitted from the resulting object.\n  - `most_disruptive_allowed_action` (`string`): The most disruptive action to perform on the instance during an update.\nDefault is \u0026#39;REPLACE\u0026#39;. Possible values are:\n* REPLACE\n* RESTART\n* REFRESH\n* NONE When `null`, the `most_disruptive_allowed_action` field will be omitted from the resulting object.\n  - `name` (`string`): The name for this per-instance config and its corresponding instance.\n  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.\n  - `remove_instance_state_on_destroy` (`bool`): When true, deleting this config will immediately remove any specified state from the underlying instance.\nWhen false, deleting this config will *not* immediately remove any state from the underlying instance.\nState will be removed on the next instance recreation or update. When `null`, the `remove_instance_state_on_destroy` field will be omitted from the resulting object.\n  - `zone` (`string`): Zone where the containing instance group manager is located When `null`, the `zone` field will be omitted from the resulting object.\n  - `preserved_state` (`list[obj]`): The preserved state for this instance. When `null`, the `preserved_state` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.new](#fn-preserved_statenew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`google.compute_per_instance_config.new` injects a new `google_compute_per_instance_config` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.compute_per_instance_config.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.compute_per_instance_config` using the reference:\n\n    $._ref.google_compute_per_instance_config.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_compute_per_instance_config.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `instance_group_manager` (`string`): The instance group manager this instance config is part of.\n  - `minimal_action` (`string`): The minimal action to perform on the instance during an update.\nDefault is \u0026#39;NONE\u0026#39;. Possible values are:\n* REPLACE\n* RESTART\n* REFRESH\n* NONE When `null`, the `minimal_action` field will be omitted from the resulting object.\n  - `most_disruptive_allowed_action` (`string`): The most disruptive action to perform on the instance during an update.\nDefault is \u0026#39;REPLACE\u0026#39;. Possible values are:\n* REPLACE\n* RESTART\n* REFRESH\n* NONE When `null`, the `most_disruptive_allowed_action` field will be omitted from the resulting object.\n  - `name` (`string`): The name for this per-instance config and its corresponding instance.\n  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.\n  - `remove_instance_on_destroy` (`bool`): When true, deleting this config will immediately remove the underlying instance.\nWhen false, deleting this config will use the behavior as determined by remove_instance_on_destroy. When `null`, the `remove_instance_on_destroy` field will be omitted from the resulting object.\n  - `remove_instance_state_on_destroy` (`bool`): When true, deleting this config will immediately remove any specified state from the underlying instance.\nWhen false, deleting this config will *not* immediately remove any state from the underlying instance.\nState will be removed on the next instance recreation or update. When `null`, the `remove_instance_state_on_destroy` field will be omitted from the resulting object.\n  - `zone` (`string`): Zone where the containing instance group manager is located When `null`, the `zone` field will be omitted from the resulting object.\n  - `preserved_state` (`list[obj]`): The preserved state for this instance. When `null`, the `preserved_state` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.new](#fn-preserved_statenew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     instance_group_manager,
@@ -11,6 +11,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     most_disruptive_allowed_action=null,
     preserved_state=null,
     project=null,
+    remove_instance_on_destroy=null,
     remove_instance_state_on_destroy=null,
     timeouts=null,
     zone=null,
@@ -25,13 +26,14 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       name=name,
       preserved_state=preserved_state,
       project=project,
+      remove_instance_on_destroy=remove_instance_on_destroy,
       remove_instance_state_on_destroy=remove_instance_state_on_destroy,
       timeouts=timeouts,
       zone=zone
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`google.compute_per_instance_config.newAttrs` constructs a new object with attributes and blocks configured for the `compute_per_instance_config`\nTerraform resource.\n\nUnlike [google.compute_per_instance_config.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `instance_group_manager` (`string`): The instance group manager this instance config is part of.\n  - `minimal_action` (`string`): The minimal action to perform on the instance during an update.\nDefault is &#39;NONE&#39;. Possible values are:\n* REPLACE\n* RESTART\n* REFRESH\n* NONE When `null`, the `minimal_action` field will be omitted from the resulting object.\n  - `most_disruptive_allowed_action` (`string`): The most disruptive action to perform on the instance during an update.\nDefault is &#39;REPLACE&#39;. Possible values are:\n* REPLACE\n* RESTART\n* REFRESH\n* NONE When `null`, the `most_disruptive_allowed_action` field will be omitted from the resulting object.\n  - `name` (`string`): The name for this per-instance config and its corresponding instance.\n  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.\n  - `remove_instance_state_on_destroy` (`bool`): When true, deleting this config will immediately remove any specified state from the underlying instance.\nWhen false, deleting this config will *not* immediately remove any state from the underlying instance.\nState will be removed on the next instance recreation or update. When `null`, the `remove_instance_state_on_destroy` field will be omitted from the resulting object.\n  - `zone` (`string`): Zone where the containing instance group manager is located When `null`, the `zone` field will be omitted from the resulting object.\n  - `preserved_state` (`list[obj]`): The preserved state for this instance. When `null`, the `preserved_state` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.new](#fn-preserved_statenew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_per_instance_config` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`google.compute_per_instance_config.newAttrs` constructs a new object with attributes and blocks configured for the `compute_per_instance_config`\nTerraform resource.\n\nUnlike [google.compute_per_instance_config.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `instance_group_manager` (`string`): The instance group manager this instance config is part of.\n  - `minimal_action` (`string`): The minimal action to perform on the instance during an update.\nDefault is &#39;NONE&#39;. Possible values are:\n* REPLACE\n* RESTART\n* REFRESH\n* NONE When `null`, the `minimal_action` field will be omitted from the resulting object.\n  - `most_disruptive_allowed_action` (`string`): The most disruptive action to perform on the instance during an update.\nDefault is &#39;REPLACE&#39;. Possible values are:\n* REPLACE\n* RESTART\n* REFRESH\n* NONE When `null`, the `most_disruptive_allowed_action` field will be omitted from the resulting object.\n  - `name` (`string`): The name for this per-instance config and its corresponding instance.\n  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.\n  - `remove_instance_on_destroy` (`bool`): When true, deleting this config will immediately remove the underlying instance.\nWhen false, deleting this config will use the behavior as determined by remove_instance_on_destroy. When `null`, the `remove_instance_on_destroy` field will be omitted from the resulting object.\n  - `remove_instance_state_on_destroy` (`bool`): When true, deleting this config will immediately remove any specified state from the underlying instance.\nWhen false, deleting this config will *not* immediately remove any state from the underlying instance.\nState will be removed on the next instance recreation or update. When `null`, the `remove_instance_state_on_destroy` field will be omitted from the resulting object.\n  - `zone` (`string`): Zone where the containing instance group manager is located When `null`, the `zone` field will be omitted from the resulting object.\n  - `preserved_state` (`list[obj]`): The preserved state for this instance. When `null`, the `preserved_state` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.new](#fn-preserved_statenew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_per_instance_config` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     instance_group_manager,
     name,
@@ -39,6 +41,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     most_disruptive_allowed_action=null,
     preserved_state=null,
     project=null,
+    remove_instance_on_destroy=null,
     remove_instance_state_on_destroy=null,
     timeouts=null,
     zone=null
@@ -49,6 +52,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     name: name,
     preserved_state: preserved_state,
     project: project,
+    remove_instance_on_destroy: remove_instance_on_destroy,
     remove_instance_state_on_destroy: remove_instance_state_on_destroy,
     timeouts: timeouts,
     zone: zone,
@@ -68,12 +72,56 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         source: source,
       }),
     },
-    '#new':: d.fn(help='\n`google.compute_per_instance_config.preserved_state.new` constructs a new object with attributes and blocks configured for the `preserved_state`\nTerraform sub block.\n\n\n\n**Args**:\n  - `metadata` (`obj`): Preserved metadata defined for this instance. This is a list of key-&gt;value pairs. When `null`, the `metadata` field will be omitted from the resulting object.\n  - `disk` (`list[obj]`): Stateful disks for the instance. When `null`, the `disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.disk.new](#fn-preserved_statedisknew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `preserved_state` sub block.\n', args=[]),
+    external_ip:: {
+      ip_address:: {
+        '#new':: d.fn(help='\n`google.compute_per_instance_config.preserved_state.external_ip.ip_address.new` constructs a new object with attributes and blocks configured for the `ip_address`\nTerraform sub block.\n\n\n\n**Args**:\n  - `address` (`string`): The URL of the reservation for this IP address. When `null`, the `address` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `ip_address` sub block.\n', args=[]),
+        new(
+          address=null
+        ):: std.prune(a={
+          address: address,
+        }),
+      },
+      '#new':: d.fn(help='\n`google.compute_per_instance_config.preserved_state.external_ip.new` constructs a new object with attributes and blocks configured for the `external_ip`\nTerraform sub block.\n\n\n\n**Args**:\n  - `auto_delete` (`string`): These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: &#34;NEVER&#34; Possible values: [&#34;NEVER&#34;, &#34;ON_PERMANENT_INSTANCE_DELETION&#34;] When `null`, the `auto_delete` field will be omitted from the resulting object.\n  - `interface_name` (`string`): Set the `interface_name` field on the resulting object.\n  - `ip_address` (`list[obj]`): Ip address representation When `null`, the `ip_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.external_ip.ip_address.new](#fn-preserved_statepreserved_stateip_addressnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `external_ip` sub block.\n', args=[]),
+      new(
+        interface_name,
+        auto_delete=null,
+        ip_address=null
+      ):: std.prune(a={
+        auto_delete: auto_delete,
+        interface_name: interface_name,
+        ip_address: ip_address,
+      }),
+    },
+    internal_ip:: {
+      ip_address:: {
+        '#new':: d.fn(help='\n`google.compute_per_instance_config.preserved_state.internal_ip.ip_address.new` constructs a new object with attributes and blocks configured for the `ip_address`\nTerraform sub block.\n\n\n\n**Args**:\n  - `address` (`string`): The URL of the reservation for this IP address. When `null`, the `address` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `ip_address` sub block.\n', args=[]),
+        new(
+          address=null
+        ):: std.prune(a={
+          address: address,
+        }),
+      },
+      '#new':: d.fn(help='\n`google.compute_per_instance_config.preserved_state.internal_ip.new` constructs a new object with attributes and blocks configured for the `internal_ip`\nTerraform sub block.\n\n\n\n**Args**:\n  - `auto_delete` (`string`): These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: &#34;NEVER&#34; Possible values: [&#34;NEVER&#34;, &#34;ON_PERMANENT_INSTANCE_DELETION&#34;] When `null`, the `auto_delete` field will be omitted from the resulting object.\n  - `interface_name` (`string`): Set the `interface_name` field on the resulting object.\n  - `ip_address` (`list[obj]`): Ip address representation When `null`, the `ip_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.internal_ip.ip_address.new](#fn-preserved_statepreserved_stateip_addressnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `internal_ip` sub block.\n', args=[]),
+      new(
+        interface_name,
+        auto_delete=null,
+        ip_address=null
+      ):: std.prune(a={
+        auto_delete: auto_delete,
+        interface_name: interface_name,
+        ip_address: ip_address,
+      }),
+    },
+    '#new':: d.fn(help='\n`google.compute_per_instance_config.preserved_state.new` constructs a new object with attributes and blocks configured for the `preserved_state`\nTerraform sub block.\n\n\n\n**Args**:\n  - `metadata` (`obj`): Preserved metadata defined for this instance. This is a list of key-&gt;value pairs. When `null`, the `metadata` field will be omitted from the resulting object.\n  - `disk` (`list[obj]`): Stateful disks for the instance. When `null`, the `disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.disk.new](#fn-preserved_statedisknew) constructor.\n  - `external_ip` (`list[obj]`): Preserved external IPs defined for this instance. This map is keyed with the name of the network interface. When `null`, the `external_ip` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.external_ip.new](#fn-preserved_stateexternal_ipnew) constructor.\n  - `internal_ip` (`list[obj]`): Preserved internal IPs defined for this instance. This map is keyed with the name of the network interface. When `null`, the `internal_ip` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_per_instance_config.preserved_state.internal_ip.new](#fn-preserved_stateinternal_ipnew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `preserved_state` sub block.\n', args=[]),
     new(
       disk=null,
+      external_ip=null,
+      internal_ip=null,
       metadata=null
     ):: std.prune(a={
       disk: disk,
+      external_ip: external_ip,
+      internal_ip: internal_ip,
       metadata: metadata,
     }),
   },
@@ -155,6 +203,16 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       google_compute_per_instance_config+: {
         [resourceLabel]+: {
           project: value,
+        },
+      },
+    },
+  },
+  '#withRemoveInstanceOnDestroy':: d.fn(help='`google.bool.withRemoveInstanceOnDestroy` constructs a mixin object that can be merged into the `bool`\nTerraform resource block to set or update the remove_instance_on_destroy field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`bool`): The value to set for the `remove_instance_on_destroy` field.\n', args=[]),
+  withRemoveInstanceOnDestroy(resourceLabel, value): {
+    resource+: {
+      google_compute_per_instance_config+: {
+        [resourceLabel]+: {
+          remove_instance_on_destroy: value,
         },
       },
     },

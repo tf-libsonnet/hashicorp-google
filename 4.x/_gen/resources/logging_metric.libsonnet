@@ -12,11 +12,11 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       }),
     },
     exponential_buckets:: {
-      '#new':: d.fn(help='\n`google.logging_metric.bucket_options.exponential_buckets.new` constructs a new object with attributes and blocks configured for the `exponential_buckets`\nTerraform sub block.\n\n\n\n**Args**:\n  - `growth_factor` (`number`): Must be greater than 1. When `null`, the `growth_factor` field will be omitted from the resulting object.\n  - `num_finite_buckets` (`number`): Must be greater than 0. When `null`, the `num_finite_buckets` field will be omitted from the resulting object.\n  - `scale` (`number`): Must be greater than 0. When `null`, the `scale` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `exponential_buckets` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.logging_metric.bucket_options.exponential_buckets.new` constructs a new object with attributes and blocks configured for the `exponential_buckets`\nTerraform sub block.\n\n\n\n**Args**:\n  - `growth_factor` (`number`): Must be greater than 1.\n  - `num_finite_buckets` (`number`): Must be greater than 0.\n  - `scale` (`number`): Must be greater than 0.\n\n**Returns**:\n  - An attribute object that represents the `exponential_buckets` sub block.\n', args=[]),
       new(
-        growth_factor=null,
-        num_finite_buckets=null,
-        scale=null
+        growth_factor,
+        num_finite_buckets,
+        scale
       ):: std.prune(a={
         growth_factor: growth_factor,
         num_finite_buckets: num_finite_buckets,
@@ -24,11 +24,11 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       }),
     },
     linear_buckets:: {
-      '#new':: d.fn(help='\n`google.logging_metric.bucket_options.linear_buckets.new` constructs a new object with attributes and blocks configured for the `linear_buckets`\nTerraform sub block.\n\n\n\n**Args**:\n  - `num_finite_buckets` (`number`): Must be greater than 0. When `null`, the `num_finite_buckets` field will be omitted from the resulting object.\n  - `offset` (`number`): Lower bound of the first bucket. When `null`, the `offset` field will be omitted from the resulting object.\n  - `width` (`number`): Must be greater than 0. When `null`, the `width` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `linear_buckets` sub block.\n', args=[]),
+      '#new':: d.fn(help='\n`google.logging_metric.bucket_options.linear_buckets.new` constructs a new object with attributes and blocks configured for the `linear_buckets`\nTerraform sub block.\n\n\n\n**Args**:\n  - `num_finite_buckets` (`number`): Must be greater than 0.\n  - `offset` (`number`): Lower bound of the first bucket.\n  - `width` (`number`): Must be greater than 0.\n\n**Returns**:\n  - An attribute object that represents the `linear_buckets` sub block.\n', args=[]),
       new(
-        num_finite_buckets=null,
-        offset=null,
-        width=null
+        num_finite_buckets,
+        offset,
+        width
       ):: std.prune(a={
         num_finite_buckets: num_finite_buckets,
         offset: offset,

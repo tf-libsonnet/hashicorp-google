@@ -38,10 +38,18 @@ This package contains functions and utilities for setting up the resource using 
         * [`fn new()`](#fn-serial_pipelinestagesstrategycanarynew)
         * [`obj serial_pipeline.stages.strategy.canary.canary_deployment`](#obj-serial_pipelinestagesstrategycanarycanary_deployment)
           * [`fn new()`](#fn-serial_pipelinestagesstrategycanarycanary_deploymentnew)
+          * [`obj serial_pipeline.stages.strategy.canary.canary_deployment.postdeploy`](#obj-serial_pipelinestagesstrategycanarycanary_deploymentpostdeploy)
+            * [`fn new()`](#fn-serial_pipelinestagesstrategycanarycanary_deploymentpostdeploynew)
+          * [`obj serial_pipeline.stages.strategy.canary.canary_deployment.predeploy`](#obj-serial_pipelinestagesstrategycanarycanary_deploymentpredeploy)
+            * [`fn new()`](#fn-serial_pipelinestagesstrategycanarycanary_deploymentpredeploynew)
         * [`obj serial_pipeline.stages.strategy.canary.custom_canary_deployment`](#obj-serial_pipelinestagesstrategycanarycustom_canary_deployment)
           * [`fn new()`](#fn-serial_pipelinestagesstrategycanarycustom_canary_deploymentnew)
           * [`obj serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs`](#obj-serial_pipelinestagesstrategycanarycustom_canary_deploymentphase_configs)
             * [`fn new()`](#fn-serial_pipelinestagesstrategycanarycustom_canary_deploymentphase_configsnew)
+            * [`obj serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.postdeploy`](#obj-serial_pipelinestagesstrategycanarycustom_canary_deploymentphase_configspostdeploy)
+              * [`fn new()`](#fn-serial_pipelinestagesstrategycanarycustom_canary_deploymentphase_configspostdeploynew)
+            * [`obj serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.predeploy`](#obj-serial_pipelinestagesstrategycanarycustom_canary_deploymentphase_configspredeploy)
+              * [`fn new()`](#fn-serial_pipelinestagesstrategycanarycustom_canary_deploymentphase_configspredeploynew)
         * [`obj serial_pipeline.stages.strategy.canary.runtime_config`](#obj-serial_pipelinestagesstrategycanaryruntime_config)
           * [`fn new()`](#fn-serial_pipelinestagesstrategycanaryruntime_confignew)
           * [`obj serial_pipeline.stages.strategy.canary.runtime_config.cloud_run`](#obj-serial_pipelinestagesstrategycanaryruntime_configcloud_run)
@@ -54,6 +62,10 @@ This package contains functions and utilities for setting up the resource using 
               * [`fn new()`](#fn-serial_pipelinestagesstrategycanaryruntime_configkubernetesservice_networkingnew)
       * [`obj serial_pipeline.stages.strategy.standard`](#obj-serial_pipelinestagesstrategystandard)
         * [`fn new()`](#fn-serial_pipelinestagesstrategystandardnew)
+        * [`obj serial_pipeline.stages.strategy.standard.postdeploy`](#obj-serial_pipelinestagesstrategystandardpostdeploy)
+          * [`fn new()`](#fn-serial_pipelinestagesstrategystandardpostdeploynew)
+        * [`obj serial_pipeline.stages.strategy.standard.predeploy`](#obj-serial_pipelinestagesstrategystandardpredeploy)
+          * [`fn new()`](#fn-serial_pipelinestagesstrategystandardpredeploynew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -86,9 +98,15 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `annotations` (`obj`): User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `description` (`string`): Description of the `DeliveryPipeline`. Max length is 255 characters. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Name of the `DeliveryPipeline`. Format is [a-z][a-z0-9\-]{0,62}.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
@@ -118,9 +136,15 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `annotations` (`obj`): User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `description` (`string`): Description of the `DeliveryPipeline`. Max length is 255 characters. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be &lt;= 128 bytes.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Name of the `DeliveryPipeline`. Format is [a-z][a-z0-9\-]{0,62}.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
@@ -458,9 +482,57 @@ Terraform sub block.
 **Args**:
   - `percentages` (`list`): Required. The percentage based deployments that will occur as a part of a `Rollout`. List is expected in ascending order and each integer n is 0 &lt;= n &lt; 100.
   - `verify` (`bool`): Whether to run verify tests after each percentage deployment. When `null`, the `verify` field will be omitted from the resulting object.
+  - `postdeploy` (`list[obj]`): Optional. Configuration for the postdeploy job of the last phase. If this is not configured, postdeploy job will not be present. When `null`, the `postdeploy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.postdeploy.new](#fn-serial_pipelineserial_pipelinestagesstrategycanarypostdeploynew) constructor.
+  - `predeploy` (`list[obj]`): Optional. Configuration for the predeploy job of the first phase. If this is not configured, predeploy job will not be present. When `null`, the `predeploy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.predeploy.new](#fn-serial_pipelineserial_pipelinestagesstrategycanarypredeploynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `canary_deployment` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary.canary_deployment.postdeploy
+
+
+
+### fn serial_pipeline.stages.strategy.canary.canary_deployment.postdeploy.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.postdeploy.new` constructs a new object with attributes and blocks configured for the `postdeploy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `actions` (`list`): Optional. A sequence of skaffold custom actions to invoke during execution of the postdeploy job. When `null`, the `actions` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `postdeploy` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary.canary_deployment.predeploy
+
+
+
+### fn serial_pipeline.stages.strategy.canary.canary_deployment.predeploy.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.canary_deployment.predeploy.new` constructs a new object with attributes and blocks configured for the `predeploy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `actions` (`list`): Optional. A sequence of skaffold custom actions to invoke during execution of the predeploy job. When `null`, the `actions` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `predeploy` sub block.
 
 
 ## obj serial_pipeline.stages.strategy.canary.custom_canary_deployment
@@ -507,9 +579,57 @@ Terraform sub block.
   - `phase_id` (`string`): Required. The ID to assign to the `Rollout` phase. This value must consist of lower-case letters, numbers, and hyphens, start with a letter and end with a letter or a number, and have a max length of 63 characters. In other words, it must match the following regex: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
   - `profiles` (`list`): Skaffold profiles to use when rendering the manifest for this phase. These are in addition to the profiles list specified in the `DeliveryPipeline` stage. When `null`, the `profiles` field will be omitted from the resulting object.
   - `verify` (`bool`): Whether to run verify tests after the deployment. When `null`, the `verify` field will be omitted from the resulting object.
+  - `postdeploy` (`list[obj]`): Optional. Configuration for the postdeploy job of this phase. If this is not configured, postdeploy job will not be present for this phase. When `null`, the `postdeploy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.postdeploy.new](#fn-serial_pipelineserial_pipelinestagesstrategycanarycustom_canary_deploymentpostdeploynew) constructor.
+  - `predeploy` (`list[obj]`): Optional. Configuration for the predeploy job of this phase. If this is not configured, predeploy job will not be present for this phase. When `null`, the `predeploy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.predeploy.new](#fn-serial_pipelineserial_pipelinestagesstrategycanarycustom_canary_deploymentpredeploynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `phase_configs` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.postdeploy
+
+
+
+### fn serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.postdeploy.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.postdeploy.new` constructs a new object with attributes and blocks configured for the `postdeploy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `actions` (`list`): Optional. A sequence of skaffold custom actions to invoke during execution of the postdeploy job. When `null`, the `actions` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `postdeploy` sub block.
+
+
+## obj serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.predeploy
+
+
+
+### fn serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.predeploy.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.canary.custom_canary_deployment.phase_configs.predeploy.new` constructs a new object with attributes and blocks configured for the `predeploy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `actions` (`list`): Optional. A sequence of skaffold custom actions to invoke during execution of the predeploy job. When `null`, the `actions` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `predeploy` sub block.
 
 
 ## obj serial_pipeline.stages.strategy.canary.runtime_config
@@ -652,9 +772,57 @@ Terraform sub block.
 
 **Args**:
   - `verify` (`bool`): Whether to verify a deployment. When `null`, the `verify` field will be omitted from the resulting object.
+  - `postdeploy` (`list[obj]`): Optional. Configuration for the postdeploy job. If this is not configured, postdeploy job will not be present. When `null`, the `postdeploy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.postdeploy.new](#fn-serial_pipelineserial_pipelinestagesstrategypostdeploynew) constructor.
+  - `predeploy` (`list[obj]`): Optional. Configuration for the predeploy job. If this is not configured, predeploy job will not be present. When `null`, the `predeploy` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.predeploy.new](#fn-serial_pipelineserial_pipelinestagesstrategypredeploynew) constructor.
 
 **Returns**:
   - An attribute object that represents the `standard` sub block.
+
+
+## obj serial_pipeline.stages.strategy.standard.postdeploy
+
+
+
+### fn serial_pipeline.stages.strategy.standard.postdeploy.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.postdeploy.new` constructs a new object with attributes and blocks configured for the `postdeploy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `actions` (`list`): Optional. A sequence of skaffold custom actions to invoke during execution of the postdeploy job. When `null`, the `actions` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `postdeploy` sub block.
+
+
+## obj serial_pipeline.stages.strategy.standard.predeploy
+
+
+
+### fn serial_pipeline.stages.strategy.standard.predeploy.new
+
+```ts
+new()
+```
+
+
+`google.clouddeploy_delivery_pipeline.serial_pipeline.stages.strategy.standard.predeploy.new` constructs a new object with attributes and blocks configured for the `predeploy`
+Terraform sub block.
+
+
+
+**Args**:
+  - `actions` (`list`): Optional. A sequence of skaffold custom actions to invoke during execution of the predeploy job. When `null`, the `actions` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `predeploy` sub block.
 
 
 ## obj timeouts

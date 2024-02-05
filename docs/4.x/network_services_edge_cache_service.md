@@ -116,7 +116,10 @@ Some legacy HTTP clients may have issues with HTTP/2 connections due to broken H
   - `edge_ssl_certificates` (`list`): URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
 
 Note that only &#34;global&#34; certificates with a &#34;scope&#34; of &#34;EDGE_CACHE&#34; can be attached to an EdgeCacheService. When `null`, the `edge_ssl_certificates` field will be omitted from the resulting object.
-  - `labels` (`obj`): Set of label tags associated with the EdgeCache resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Set of label tags associated with the EdgeCache resource.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.
@@ -165,7 +168,10 @@ Some legacy HTTP clients may have issues with HTTP/2 connections due to broken H
   - `edge_ssl_certificates` (`list`): URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
 
 Note that only &#34;global&#34; certificates with a &#34;scope&#34; of &#34;EDGE_CACHE&#34; can be attached to an EdgeCacheService. When `null`, the `edge_ssl_certificates` field will be omitted from the resulting object.
-  - `labels` (`obj`): Set of label tags associated with the EdgeCache resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Set of label tags associated with the EdgeCache resource.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource; provided by the client when the resource is created.
 The name must be 1-64 characters long, and match the regular expression [a-zA-Z][a-zA-Z0-9_-]* which means the first character must be a letter,
 and all following characters must be a dash, underscore, letter or digit.

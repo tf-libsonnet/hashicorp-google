@@ -66,7 +66,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `description` (`string`): One or more paragraphs of text description of a CertificateIssuanceConfig. When `null`, the `description` field will be omitted from the resulting object.
   - `key_algorithm` (`string`): Key algorithm to use when generating the private key. Possible values: [&#34;RSA_2048&#34;, &#34;ECDSA_P256&#34;]
   - `labels` (`obj`): &#39;Set of label tags associated with the CertificateIssuanceConfig resource.
- An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+ An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `lifetime` (`string`): Lifetime of issued certificates. A duration in seconds with up to nine fractional digits, ending with &#39;s&#39;.
 Example: &#34;1814400s&#34;. Valid values are from 21 days (1814400s) to 30 days (2592000s)
   - `location` (`string`): The Certificate Manager location. If not specified, &#34;global&#34; is used. When `null`, the `location` field will be omitted from the resulting object.
@@ -105,7 +109,11 @@ injecting into a complete block.
   - `description` (`string`): One or more paragraphs of text description of a CertificateIssuanceConfig. When `null`, the `description` field will be omitted from the resulting object.
   - `key_algorithm` (`string`): Key algorithm to use when generating the private key. Possible values: [&#34;RSA_2048&#34;, &#34;ECDSA_P256&#34;]
   - `labels` (`obj`): &#39;Set of label tags associated with the CertificateIssuanceConfig resource.
- An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+ An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `lifetime` (`string`): Lifetime of issued certificates. A duration in seconds with up to nine fractional digits, ending with &#39;s&#39;.
 Example: &#34;1814400s&#34;. Valid values are from 21 days (1814400s) to 30 days (2592000s)
   - `location` (`string`): The Certificate Manager location. If not specified, &#34;global&#34; is used. When `null`, the `location` field will be omitted from the resulting object.
@@ -391,6 +399,7 @@ Terraform sub block.
 **Args**:
   - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
   - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

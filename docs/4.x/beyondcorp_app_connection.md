@@ -66,7 +66,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `connectors` (`list`): List of AppConnectors that are authorised to be associated with this AppConnection When `null`, the `connectors` field will be omitted from the resulting object.
   - `display_name` (`string`): An arbitrary user-provided name for the AppConnection. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): ID of the AppConnection.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the AppConnection. When `null`, the `region` field will be omitted from the resulting object.
@@ -101,7 +105,11 @@ injecting into a complete block.
 **Args**:
   - `connectors` (`list`): List of AppConnectors that are authorised to be associated with this AppConnection When `null`, the `connectors` field will be omitted from the resulting object.
   - `display_name` (`string`): An arbitrary user-provided name for the AppConnection. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): Resource labels to represent user provided metadata. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Resource labels to represent user provided metadata.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): ID of the AppConnection.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): The region of the AppConnection. When `null`, the `region` field will be omitted from the resulting object.

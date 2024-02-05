@@ -61,7 +61,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): The description specified for the model when it was created. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): One or more labels that you can add, to organize your models. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): One or more labels that you can add, to organize your models.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name specified for the model.
   - `online_prediction_console_logging` (`bool`): If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging When `null`, the `online_prediction_console_logging` field will be omitted from the resulting object.
   - `online_prediction_logging` (`bool`): If true, online prediction access logs are sent to StackDriver Logging. When `null`, the `online_prediction_logging` field will be omitted from the resulting object.
@@ -95,7 +98,10 @@ injecting into a complete block.
 
 **Args**:
   - `description` (`string`): The description specified for the model when it was created. When `null`, the `description` field will be omitted from the resulting object.
-  - `labels` (`obj`): One or more labels that you can add, to organize your models. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): One or more labels that you can add, to organize your models.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `name` (`string`): The name specified for the model.
   - `online_prediction_console_logging` (`bool`): If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging When `null`, the `online_prediction_console_logging` field will be omitted from the resulting object.
   - `online_prediction_logging` (`bool`): If true, online prediction access logs are sent to StackDriver Logging. When `null`, the `online_prediction_logging` field will be omitted from the resulting object.
@@ -337,6 +343,7 @@ Terraform sub block.
 **Args**:
   - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.
   - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.
+  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.

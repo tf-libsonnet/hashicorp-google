@@ -41,6 +41,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withRegion()`](#fn-withregion)
 * [`fn withReservationAffinity()`](#fn-withreservationaffinity)
 * [`fn withReservationAffinityMixin()`](#fn-withreservationaffinitymixin)
+* [`fn withResourceManagerTags()`](#fn-withresourcemanagertags)
 * [`fn withResourcePolicies()`](#fn-withresourcepolicies)
 * [`fn withScheduling()`](#fn-withscheduling)
 * [`fn withSchedulingMixin()`](#fn-withschedulingmixin)
@@ -124,7 +125,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `can_ip_forward` (`bool`): Whether to allow sending and receiving of packets with non-matching source or destination IPs. This defaults to false. When `null`, the `can_ip_forward` field will be omitted from the resulting object.
   - `description` (`string`): A brief description of this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `instance_description` (`string`): A description of the instance. When `null`, the `instance_description` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to instances created from this template, When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to instances created from this template.
+				
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `machine_type` (`string`): The machine type to create. To create a machine with a custom type (such as extended memory), format the value like custom-VCPUS-MEM_IN_MB like custom-6-20480 for 6 vCPU and 20GB of RAM.
   - `metadata` (`obj`): Metadata key/value pairs to make available from within instances created from this template. When `null`, the `metadata` field will be omitted from the resulting object.
   - `metadata_startup_script` (`string`): An alternative to using the startup-script metadata key, mostly to match the compute_instance resource. This replaces the startup-script metadata key on the created instance and thus the two mechanisms are not allowed to be used simultaneously. When `null`, the `metadata_startup_script` field will be omitted from the resulting object.
@@ -133,6 +137,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name_prefix` (`string`): Creates a unique name beginning with the specified prefix. Conflicts with name. When `null`, the `name_prefix` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): An instance template is a global resource that is not bound to a zone or a region. However, you can still specify some regional resources in an instance template, which restricts the template to the region where that resource resides. For example, a custom subnetwork resource is tied to a specific region. Defaults to the region of the Provider if no value is given. When `null`, the `region` field will be omitted from the resulting object.
+  - `resource_manager_tags` (`obj`): A map of resource manager tags.
+				Resource manager tag keys and values have the same definition as resource manager tags.
+				Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456.
+				The field is ignored (both PUT &amp; PATCH) when empty. When `null`, the `resource_manager_tags` field will be omitted from the resulting object.
   - `resource_policies` (`list`): A list of self_links of resource policies to attach to the instance. Currently a max of 1 resource policy is supported. When `null`, the `resource_policies` field will be omitted from the resulting object.
   - `tags` (`list`): Tags to attach to the instance. When `null`, the `tags` field will be omitted from the resulting object.
   - `advanced_machine_features` (`list[obj]`): Controls for advanced machine-related behavior features. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.advanced_machine_features.new](#fn-advanced_machine_featuresnew) constructor.
@@ -172,7 +180,10 @@ injecting into a complete block.
   - `can_ip_forward` (`bool`): Whether to allow sending and receiving of packets with non-matching source or destination IPs. This defaults to false. When `null`, the `can_ip_forward` field will be omitted from the resulting object.
   - `description` (`string`): A brief description of this resource. When `null`, the `description` field will be omitted from the resulting object.
   - `instance_description` (`string`): A description of the instance. When `null`, the `instance_description` field will be omitted from the resulting object.
-  - `labels` (`obj`): A set of key/value label pairs to assign to instances created from this template, When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): A set of key/value label pairs to assign to instances created from this template.
+				
+				**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+				Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `machine_type` (`string`): The machine type to create. To create a machine with a custom type (such as extended memory), format the value like custom-VCPUS-MEM_IN_MB like custom-6-20480 for 6 vCPU and 20GB of RAM.
   - `metadata` (`obj`): Metadata key/value pairs to make available from within instances created from this template. When `null`, the `metadata` field will be omitted from the resulting object.
   - `metadata_startup_script` (`string`): An alternative to using the startup-script metadata key, mostly to match the compute_instance resource. This replaces the startup-script metadata key on the created instance and thus the two mechanisms are not allowed to be used simultaneously. When `null`, the `metadata_startup_script` field will be omitted from the resulting object.
@@ -181,6 +192,10 @@ injecting into a complete block.
   - `name_prefix` (`string`): Creates a unique name beginning with the specified prefix. Conflicts with name. When `null`, the `name_prefix` field will be omitted from the resulting object.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): An instance template is a global resource that is not bound to a zone or a region. However, you can still specify some regional resources in an instance template, which restricts the template to the region where that resource resides. For example, a custom subnetwork resource is tied to a specific region. Defaults to the region of the Provider if no value is given. When `null`, the `region` field will be omitted from the resulting object.
+  - `resource_manager_tags` (`obj`): A map of resource manager tags.
+				Resource manager tag keys and values have the same definition as resource manager tags.
+				Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456.
+				The field is ignored (both PUT &amp; PATCH) when empty. When `null`, the `resource_manager_tags` field will be omitted from the resulting object.
   - `resource_policies` (`list`): A list of self_links of resource policies to attach to the instance. Currently a max of 1 resource policy is supported. When `null`, the `resource_policies` field will be omitted from the resulting object.
   - `tags` (`list`): Tags to attach to the instance. When `null`, the `tags` field will be omitted from the resulting object.
   - `advanced_machine_features` (`list[obj]`): Controls for advanced machine-related behavior features. When `null`, the `advanced_machine_features` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_instance_template.advanced_machine_features.new](#fn-advanced_machine_featuresnew) constructor.
@@ -650,6 +665,22 @@ function.
   - `value` (`list[obj]`): The value to set for the `reservation_affinity` field.
 
 
+### fn withResourceManagerTags
+
+```ts
+withResourceManagerTags()
+```
+
+`google.obj.withResourceManagerTags` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the resource_manager_tags field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `resource_manager_tags` field.
+
+
 ### fn withResourcePolicies
 
 ```ts
@@ -904,6 +935,7 @@ Terraform sub block.
   - `labels` (`obj`): A set of key/value label pairs to assign to disks, When `null`, the `labels` field will be omitted from the resulting object.
   - `mode` (`string`): The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If you are attaching or creating a boot disk, this must read-write mode. When `null`, the `mode` field will be omitted from the resulting object.
   - `provisioned_iops` (`number`): Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the [Extreme persistent disk documentation](https://cloud.google.com/compute/docs/disks/extreme-persistent-disk). When `null`, the `provisioned_iops` field will be omitted from the resulting object.
+  - `resource_manager_tags` (`obj`): A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT &amp; PATCH) when empty. When `null`, the `resource_manager_tags` field will be omitted from the resulting object.
   - `resource_policies` (`list`): A list (short name or id) of resource policies to attach to this disk. Currently a max of 1 resource policy is supported. When `null`, the `resource_policies` field will be omitted from the resulting object.
   - `source` (`string`): The name (not self_link) of the disk (such as those managed by google_compute_disk) to attach. ~&gt; Note: Either source or source_image is required when creating a new instance except for when creating a local SSD. When `null`, the `source` field will be omitted from the resulting object.
   - `source_image` (`string`): The image from which to initialize this disk. This can be one of: the image&#39;s self_link, projects/{project}/global/images/{image}, projects/{project}/global/images/family/{family}, global/images/{image}, global/images/family/{family}, family/{family}, {project}/{family}, {project}/{image}, {family}, or {image}. ~&gt; Note: Either source or source_image is required when creating a new instance except for when creating a local SSD. When `null`, the `source_image` field will be omitted from the resulting object.

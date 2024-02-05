@@ -24,10 +24,14 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withSingleClusterRouting()`](#fn-withsingleclusterrouting)
 * [`fn withSingleClusterRoutingMixin()`](#fn-withsingleclusterroutingmixin)
+* [`fn withStandardIsolation()`](#fn-withstandardisolation)
+* [`fn withStandardIsolationMixin()`](#fn-withstandardisolationmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj single_cluster_routing`](#obj-single_cluster_routing)
   * [`fn new()`](#fn-single_cluster_routingnew)
+* [`obj standard_isolation`](#obj-standard_isolation)
+  * [`fn new()`](#fn-standard_isolationnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -70,6 +74,7 @@ in the event of transient errors or delays. Clusters in a region are considered 
 consistency to improve availability. When `null`, the `multi_cluster_routing_use_any` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `single_cluster_routing` (`list[obj]`): Use a single-cluster routing policy. When `null`, the `single_cluster_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.single_cluster_routing.new](#fn-single_cluster_routingnew) constructor.
+  - `standard_isolation` (`list[obj]`): The standard options used for isolating this app profile&#39;s traffic from other use cases. When `null`, the `standard_isolation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.standard_isolation.new](#fn-standard_isolationnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -104,6 +109,7 @@ in the event of transient errors or delays. Clusters in a region are considered 
 consistency to improve availability. When `null`, the `multi_cluster_routing_use_any` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `single_cluster_routing` (`list[obj]`): Use a single-cluster routing policy. When `null`, the `single_cluster_routing` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.single_cluster_routing.new](#fn-single_cluster_routingnew) constructor.
+  - `standard_isolation` (`list[obj]`): The standard options used for isolating this app profile&#39;s traffic from other use cases. When `null`, the `standard_isolation` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.standard_isolation.new](#fn-standard_isolationnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigtable_app_profile.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -259,6 +265,43 @@ function.
   - `value` (`list[obj]`): The value to set for the `single_cluster_routing` field.
 
 
+### fn withStandardIsolation
+
+```ts
+withStandardIsolation()
+```
+
+`google.list[obj].withStandardIsolation` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the standard_isolation field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withStandardIsolationMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `standard_isolation` field.
+
+
+### fn withStandardIsolationMixin
+
+```ts
+withStandardIsolationMixin()
+```
+
+`google.list[obj].withStandardIsolationMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the standard_isolation field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withStandardIsolation](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `standard_isolation` field.
+
+
 ### fn withTimeouts
 
 ```ts
@@ -318,6 +361,29 @@ It is unsafe to send these requests to the same table/row/column in multiple clu
 
 **Returns**:
   - An attribute object that represents the `single_cluster_routing` sub block.
+
+
+## obj standard_isolation
+
+
+
+### fn standard_isolation.new
+
+```ts
+new()
+```
+
+
+`google.bigtable_app_profile.standard_isolation.new` constructs a new object with attributes and blocks configured for the `standard_isolation`
+Terraform sub block.
+
+
+
+**Args**:
+  - `priority` (`string`): The priority of requests sent using this app profile. Possible values: [&#34;PRIORITY_LOW&#34;, &#34;PRIORITY_MEDIUM&#34;, &#34;PRIORITY_HIGH&#34;]
+
+**Returns**:
+  - An attribute object that represents the `standard_isolation` sub block.
 
 
 ## obj timeouts

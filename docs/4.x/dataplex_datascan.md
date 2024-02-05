@@ -110,7 +110,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `data_scan_id` (`string`): DataScan identifier. Must contain only lowercase letters, numbers and hyphens. Must start with a letter. Must end with a number or a letter.
   - `description` (`string`): Description of the scan. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): User friendly display name. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): User-defined labels for the scan. A list of key-&gt;value pairs. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): User-defined labels for the scan. A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location where the data scan should reside.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `data` (`list[obj]`): The data source for DataScan. When `null`, the `data` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data.new](#fn-datanew) constructor.
@@ -144,7 +148,11 @@ injecting into a complete block.
   - `data_scan_id` (`string`): DataScan identifier. Must contain only lowercase letters, numbers and hyphens. Must start with a letter. Must end with a number or a letter.
   - `description` (`string`): Description of the scan. When `null`, the `description` field will be omitted from the resulting object.
   - `display_name` (`string`): User friendly display name. When `null`, the `display_name` field will be omitted from the resulting object.
-  - `labels` (`obj`): User-defined labels for the scan. A list of key-&gt;value pairs. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): User-defined labels for the scan. A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location where the data scan should reside.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `data` (`list[obj]`): The data source for DataScan. When `null`, the `data` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dataplex_datascan.data.new](#fn-datanew) constructor.

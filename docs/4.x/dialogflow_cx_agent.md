@@ -15,23 +15,41 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withAdvancedSettings()`](#fn-withadvancedsettings)
+* [`fn withAdvancedSettingsMixin()`](#fn-withadvancedsettingsmixin)
 * [`fn withAvatarUri()`](#fn-withavataruri)
 * [`fn withDefaultLanguageCode()`](#fn-withdefaultlanguagecode)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withDisplayName()`](#fn-withdisplayname)
 * [`fn withEnableSpellCorrection()`](#fn-withenablespellcorrection)
 * [`fn withEnableStackdriverLogging()`](#fn-withenablestackdriverlogging)
+* [`fn withGitIntegrationSettings()`](#fn-withgitintegrationsettings)
+* [`fn withGitIntegrationSettingsMixin()`](#fn-withgitintegrationsettingsmixin)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withSecuritySettings()`](#fn-withsecuritysettings)
 * [`fn withSpeechToTextSettings()`](#fn-withspeechtotextsettings)
 * [`fn withSpeechToTextSettingsMixin()`](#fn-withspeechtotextsettingsmixin)
 * [`fn withSupportedLanguageCodes()`](#fn-withsupportedlanguagecodes)
+* [`fn withTextToSpeechSettings()`](#fn-withtexttospeechsettings)
+* [`fn withTextToSpeechSettingsMixin()`](#fn-withtexttospeechsettingsmixin)
 * [`fn withTimeZone()`](#fn-withtimezone)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`obj advanced_settings`](#obj-advanced_settings)
+  * [`fn new()`](#fn-advanced_settingsnew)
+  * [`obj advanced_settings.audio_export_gcs_destination`](#obj-advanced_settingsaudio_export_gcs_destination)
+    * [`fn new()`](#fn-advanced_settingsaudio_export_gcs_destinationnew)
+  * [`obj advanced_settings.dtmf_settings`](#obj-advanced_settingsdtmf_settings)
+    * [`fn new()`](#fn-advanced_settingsdtmf_settingsnew)
+* [`obj git_integration_settings`](#obj-git_integration_settings)
+  * [`fn new()`](#fn-git_integration_settingsnew)
+  * [`obj git_integration_settings.github_settings`](#obj-git_integration_settingsgithub_settings)
+    * [`fn new()`](#fn-git_integration_settingsgithub_settingsnew)
 * [`obj speech_to_text_settings`](#obj-speech_to_text_settings)
   * [`fn new()`](#fn-speech_to_text_settingsnew)
+* [`obj text_to_speech_settings`](#obj-text_to_speech_settings)
+  * [`fn new()`](#fn-text_to_speech_settingsnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -81,7 +99,11 @@ for a list of the currently supported language codes. This field cannot be updat
   - `supported_language_codes` (`list`): The list of all languages supported by this agent (except for the default_language_code). When `null`, the `supported_language_codes` field will be omitted from the resulting object.
   - `time_zone` (`string`): The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
 Europe/Paris.
+  - `advanced_settings` (`list[obj]`): Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
+Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. When `null`, the `advanced_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.advanced_settings.new](#fn-advanced_settingsnew) constructor.
+  - `git_integration_settings` (`list[obj]`): Git integration settings for this agent. When `null`, the `git_integration_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.git_integration_settings.new](#fn-git_integration_settingsnew) constructor.
   - `speech_to_text_settings` (`list[obj]`): Settings related to speech recognition. When `null`, the `speech_to_text_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.speech_to_text_settings.new](#fn-speech_to_text_settingsnew) constructor.
+  - `text_to_speech_settings` (`list[obj]`): Settings related to speech synthesizing. When `null`, the `text_to_speech_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.text_to_speech_settings.new](#fn-text_to_speech_settingsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -123,11 +145,52 @@ for a list of the currently supported language codes. This field cannot be updat
   - `supported_language_codes` (`list`): The list of all languages supported by this agent (except for the default_language_code). When `null`, the `supported_language_codes` field will be omitted from the resulting object.
   - `time_zone` (`string`): The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,
 Europe/Paris.
+  - `advanced_settings` (`list[obj]`): Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
+Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. When `null`, the `advanced_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.advanced_settings.new](#fn-advanced_settingsnew) constructor.
+  - `git_integration_settings` (`list[obj]`): Git integration settings for this agent. When `null`, the `git_integration_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.git_integration_settings.new](#fn-git_integration_settingsnew) constructor.
   - `speech_to_text_settings` (`list[obj]`): Settings related to speech recognition. When `null`, the `speech_to_text_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.speech_to_text_settings.new](#fn-speech_to_text_settingsnew) constructor.
+  - `text_to_speech_settings` (`list[obj]`): Settings related to speech synthesizing. When `null`, the `text_to_speech_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.text_to_speech_settings.new](#fn-text_to_speech_settingsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `dialogflow_cx_agent` resource into the root Terraform configuration.
+
+
+### fn withAdvancedSettings
+
+```ts
+withAdvancedSettings()
+```
+
+`google.list[obj].withAdvancedSettings` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the advanced_settings field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withAdvancedSettingsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `advanced_settings` field.
+
+
+### fn withAdvancedSettingsMixin
+
+```ts
+withAdvancedSettingsMixin()
+```
+
+`google.list[obj].withAdvancedSettingsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the advanced_settings field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withAdvancedSettings](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `advanced_settings` field.
 
 
 ### fn withAvatarUri
@@ -224,6 +287,43 @@ Terraform resource block to set or update the enable_stackdriver_logging field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `enable_stackdriver_logging` field.
+
+
+### fn withGitIntegrationSettings
+
+```ts
+withGitIntegrationSettings()
+```
+
+`google.list[obj].withGitIntegrationSettings` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the git_integration_settings field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withGitIntegrationSettingsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `git_integration_settings` field.
+
+
+### fn withGitIntegrationSettingsMixin
+
+```ts
+withGitIntegrationSettingsMixin()
+```
+
+`google.list[obj].withGitIntegrationSettingsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the git_integration_settings field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withGitIntegrationSettings](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `git_integration_settings` field.
 
 
 ### fn withLocation
@@ -327,6 +427,43 @@ Terraform resource block to set or update the supported_language_codes field.
   - `value` (`list`): The value to set for the `supported_language_codes` field.
 
 
+### fn withTextToSpeechSettings
+
+```ts
+withTextToSpeechSettings()
+```
+
+`google.list[obj].withTextToSpeechSettings` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the text_to_speech_settings field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withTextToSpeechSettingsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `text_to_speech_settings` field.
+
+
+### fn withTextToSpeechSettingsMixin
+
+```ts
+withTextToSpeechSettingsMixin()
+```
+
+`google.list[obj].withTextToSpeechSettingsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the text_to_speech_settings field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withTextToSpeechSettings](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `text_to_speech_settings` field.
+
+
 ### fn withTimeZone
 
 ```ts
@@ -379,6 +516,135 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+## obj advanced_settings
+
+
+
+### fn advanced_settings.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_agent.advanced_settings.new` constructs a new object with attributes and blocks configured for the `advanced_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `audio_export_gcs_destination` (`list[obj]`): If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:
+* Agent level
+* Flow level When `null`, the `audio_export_gcs_destination` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.advanced_settings.audio_export_gcs_destination.new](#fn-advanced_settingsaudio_export_gcs_destinationnew) constructor.
+  - `dtmf_settings` (`list[obj]`): Define behaviors for DTMF (dual tone multi frequency). DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Exposed at the following levels:
+* Agent level
+* Flow level
+* Page level
+* Parameter level When `null`, the `dtmf_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.advanced_settings.dtmf_settings.new](#fn-advanced_settingsdtmf_settingsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `advanced_settings` sub block.
+
+
+## obj advanced_settings.audio_export_gcs_destination
+
+
+
+### fn advanced_settings.audio_export_gcs_destination.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_agent.advanced_settings.audio_export_gcs_destination.new` constructs a new object with attributes and blocks configured for the `audio_export_gcs_destination`
+Terraform sub block.
+
+
+
+**Args**:
+  - `uri` (`string`): The Google Cloud Storage URI for the exported objects. Whether a full object name, or just a prefix, its usage depends on the Dialogflow operation.
+Format: gs://bucket/object-name-or-prefix When `null`, the `uri` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `audio_export_gcs_destination` sub block.
+
+
+## obj advanced_settings.dtmf_settings
+
+
+
+### fn advanced_settings.dtmf_settings.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_agent.advanced_settings.dtmf_settings.new` constructs a new object with attributes and blocks configured for the `dtmf_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `enabled` (`bool`): If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a &#34;3&#34; was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance). When `null`, the `enabled` field will be omitted from the resulting object.
+  - `finish_digit` (`string`): The digit that terminates a DTMF digit sequence. When `null`, the `finish_digit` field will be omitted from the resulting object.
+  - `max_digits` (`number`): Max length of DTMF digits. When `null`, the `max_digits` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `dtmf_settings` sub block.
+
+
+## obj git_integration_settings
+
+
+
+### fn git_integration_settings.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_agent.git_integration_settings.new` constructs a new object with attributes and blocks configured for the `git_integration_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `github_settings` (`list[obj]`): Settings of integration with GitHub. When `null`, the `github_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.dialogflow_cx_agent.git_integration_settings.github_settings.new](#fn-git_integration_settingsgithub_settingsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `git_integration_settings` sub block.
+
+
+## obj git_integration_settings.github_settings
+
+
+
+### fn git_integration_settings.github_settings.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_agent.git_integration_settings.github_settings.new` constructs a new object with attributes and blocks configured for the `github_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `access_token` (`string`): The access token used to authenticate the access to the GitHub repository. When `null`, the `access_token` field will be omitted from the resulting object.
+  - `branches` (`list`): A list of branches configured to be used from Dialogflow. When `null`, the `branches` field will be omitted from the resulting object.
+  - `display_name` (`string`): The unique repository display name for the GitHub repository. When `null`, the `display_name` field will be omitted from the resulting object.
+  - `repository_uri` (`string`): The GitHub repository URI related to the agent. When `null`, the `repository_uri` field will be omitted from the resulting object.
+  - `tracking_branch` (`string`): The branch of the GitHub repository tracked for this agent. When `null`, the `tracking_branch` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `github_settings` sub block.
+
+
 ## obj speech_to_text_settings
 
 
@@ -400,6 +666,32 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `speech_to_text_settings` sub block.
+
+
+## obj text_to_speech_settings
+
+
+
+### fn text_to_speech_settings.new
+
+```ts
+new()
+```
+
+
+`google.dialogflow_cx_agent.text_to_speech_settings.new` constructs a new object with attributes and blocks configured for the `text_to_speech_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `synthesize_speech_configs` (`string`): Configuration of how speech should be synthesized, mapping from [language](https://cloud.google.com/dialogflow/cx/docs/reference/language) to [SynthesizeSpeechConfig](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/projects.locations.agents#synthesizespeechconfig).
+These settings affect:
+* The phone gateway synthesize configuration set via Agent.text_to_speech_settings.
+* How speech is synthesized when invoking session APIs. &#39;Agent.text_to_speech_settings&#39; only applies if &#39;OutputAudioConfig.synthesize_speech_config&#39; is not specified. When `null`, the `synthesize_speech_configs` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `text_to_speech_settings` sub block.
 
 
 ## obj timeouts

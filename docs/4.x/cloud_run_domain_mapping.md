@@ -281,11 +281,17 @@ info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotati
 
 **Note**: The Cloud Run API may add additional annotations that were not provided in your config.
 If terraform plan shows a diff where a server-side annotation is added, you can add it to your config
-or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field. When `null`, the `annotations` field will be omitted from the resulting object.
+or apply the lifecycle.ignore_changes rule to the metadata.0.annotations field.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `labels` (`obj`): Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
 and routes.
-More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels When `null`, the `labels` field will be omitted from the resulting object.
+More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `namespace` (`string`): In Cloud Run the namespace must be equal to either the
 project ID or project number.
 

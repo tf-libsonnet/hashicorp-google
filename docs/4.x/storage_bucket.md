@@ -22,6 +22,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withCustomPlacementConfig()`](#fn-withcustomplacementconfig)
 * [`fn withCustomPlacementConfigMixin()`](#fn-withcustomplacementconfigmixin)
 * [`fn withDefaultEventBasedHold()`](#fn-withdefaulteventbasedhold)
+* [`fn withEnableObjectRetention()`](#fn-withenableobjectretention)
 * [`fn withEncryption()`](#fn-withencryption)
 * [`fn withEncryptionMixin()`](#fn-withencryptionmixin)
 * [`fn withForceDestroy()`](#fn-withforcedestroy)
@@ -37,6 +38,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withRequesterPays()`](#fn-withrequesterpays)
 * [`fn withRetentionPolicy()`](#fn-withretentionpolicy)
 * [`fn withRetentionPolicyMixin()`](#fn-withretentionpolicymixin)
+* [`fn withRpo()`](#fn-withrpo)
 * [`fn withStorageClass()`](#fn-withstorageclass)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -100,6 +102,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
   - `default_event_based_hold` (`bool`): Whether or not to automatically apply an eventBasedHold to new objects added to the bucket. When `null`, the `default_event_based_hold` field will be omitted from the resulting object.
+  - `enable_object_retention` (`bool`): Enables each object in the bucket to have its own retention policy, which prevents deletion until stored for a specific length of time. When `null`, the `enable_object_retention` field will be omitted from the resulting object.
   - `force_destroy` (`bool`): When deleting a bucket, this boolean option will delete all contained objects. If you try to delete a bucket that contains objects, Terraform will fail that run. When `null`, the `force_destroy` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs to assign to the bucket. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The Google Cloud Storage location
@@ -107,6 +110,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `public_access_prevention` (`string`): Prevents public access to a bucket. When `null`, the `public_access_prevention` field will be omitted from the resulting object.
   - `requester_pays` (`bool`): Enables Requester Pays on a storage bucket. When `null`, the `requester_pays` field will be omitted from the resulting object.
+  - `rpo` (`string`): Specifies the RPO setting of bucket. If set &#39;ASYNC_TURBO&#39;, The Turbo Replication will be enabled for the dual-region bucket. Value &#39;DEFAULT&#39; will set RPO setting to default. Turbo Replication is only for buckets in dual-regions.See the docs for more details. When `null`, the `rpo` field will be omitted from the resulting object.
   - `storage_class` (`string`): The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. When `null`, the `storage_class` field will be omitted from the resulting object.
   - `uniform_bucket_level_access` (`bool`): Enables uniform bucket-level access on a bucket. When `null`, the `uniform_bucket_level_access` field will be omitted from the resulting object.
   - `autoclass` (`list[obj]`): The bucket&#39;s autoclass configuration. When `null`, the `autoclass` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.autoclass.new](#fn-autoclassnew) constructor.
@@ -143,6 +147,7 @@ injecting into a complete block.
 
 **Args**:
   - `default_event_based_hold` (`bool`): Whether or not to automatically apply an eventBasedHold to new objects added to the bucket. When `null`, the `default_event_based_hold` field will be omitted from the resulting object.
+  - `enable_object_retention` (`bool`): Enables each object in the bucket to have its own retention policy, which prevents deletion until stored for a specific length of time. When `null`, the `enable_object_retention` field will be omitted from the resulting object.
   - `force_destroy` (`bool`): When deleting a bucket, this boolean option will delete all contained objects. If you try to delete a bucket that contains objects, Terraform will fail that run. When `null`, the `force_destroy` field will be omitted from the resulting object.
   - `labels` (`obj`): A set of key/value label pairs to assign to the bucket. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The Google Cloud Storage location
@@ -150,6 +155,7 @@ injecting into a complete block.
   - `project` (`string`): The ID of the project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.
   - `public_access_prevention` (`string`): Prevents public access to a bucket. When `null`, the `public_access_prevention` field will be omitted from the resulting object.
   - `requester_pays` (`bool`): Enables Requester Pays on a storage bucket. When `null`, the `requester_pays` field will be omitted from the resulting object.
+  - `rpo` (`string`): Specifies the RPO setting of bucket. If set &#39;ASYNC_TURBO&#39;, The Turbo Replication will be enabled for the dual-region bucket. Value &#39;DEFAULT&#39; will set RPO setting to default. Turbo Replication is only for buckets in dual-regions.See the docs for more details. When `null`, the `rpo` field will be omitted from the resulting object.
   - `storage_class` (`string`): The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. When `null`, the `storage_class` field will be omitted from the resulting object.
   - `uniform_bucket_level_access` (`bool`): Enables uniform bucket-level access on a bucket. When `null`, the `uniform_bucket_level_access` field will be omitted from the resulting object.
   - `autoclass` (`list[obj]`): The bucket&#39;s autoclass configuration. When `null`, the `autoclass` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket.autoclass.new](#fn-autoclassnew) constructor.
@@ -292,6 +298,22 @@ Terraform resource block to set or update the default_event_based_hold field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`bool`): The value to set for the `default_event_based_hold` field.
+
+
+### fn withEnableObjectRetention
+
+```ts
+withEnableObjectRetention()
+```
+
+`google.bool.withEnableObjectRetention` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the enable_object_retention field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `enable_object_retention` field.
 
 
 ### fn withEncryption
@@ -554,6 +576,22 @@ function.
   - `value` (`list[obj]`): The value to set for the `retention_policy` field.
 
 
+### fn withRpo
+
+```ts
+withRpo()
+```
+
+`google.string.withRpo` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the rpo field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `rpo` field.
+
+
 ### fn withStorageClass
 
 ```ts
@@ -714,6 +752,7 @@ Terraform sub block.
 
 **Args**:
   - `enabled` (`bool`): While set to true, autoclass automatically transitions objects in your bucket to appropriate storage classes based on each object&#39;s access pattern.
+  - `terminal_storage_class` (`string`): The storage class that objects in the bucket eventually transition to if they are not read for a certain length of time. Supported values include: NEARLINE, ARCHIVE. When `null`, the `terminal_storage_class` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `autoclass` sub block.
@@ -865,6 +904,7 @@ Terraform sub block.
   - `matches_prefix` (`list`): One or more matching name prefixes to satisfy this condition. When `null`, the `matches_prefix` field will be omitted from the resulting object.
   - `matches_storage_class` (`list`): Storage Class of objects to satisfy this condition. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE, STANDARD, DURABLE_REDUCED_AVAILABILITY. When `null`, the `matches_storage_class` field will be omitted from the resulting object.
   - `matches_suffix` (`list`): One or more matching name suffixes to satisfy this condition. When `null`, the `matches_suffix` field will be omitted from the resulting object.
+  - `no_age` (`bool`): While set true, age value will be omitted.Required to set true when age is unset in the config file. When `null`, the `no_age` field will be omitted from the resulting object.
   - `noncurrent_time_before` (`string`): Creation date of an object in RFC 3339 (e.g. 2017-06-13) to satisfy this condition. When `null`, the `noncurrent_time_before` field will be omitted from the resulting object.
   - `num_newer_versions` (`number`): Relevant only for versioned objects. The number of newer versions of an object to satisfy this condition. When `null`, the `num_newer_versions` field will be omitted from the resulting object.
   - `with_state` (`string`): Match to live and/or archived objects. Unversioned buckets have only live objects. Supported values include: &#34;LIVE&#34;, &#34;ARCHIVED&#34;, &#34;ANY&#34;. When `null`, the `with_state` field will be omitted from the resulting object.

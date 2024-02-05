@@ -445,10 +445,16 @@ keys to configure features on a Service:
 - &#39;run.googleapis.com/ingress&#39; sets the [ingress settings](https://cloud.google.com/sdk/gcloud/reference/run/deploy#--ingress)
   for the Service. For example, &#39;&#34;run.googleapis.com/ingress&#34; = &#34;all&#34;&#39;.
 - &#39;run.googleapis.com/launch-stage&#39; sets the [launch stage](https://cloud.google.com/run/docs/troubleshooting#launch-stage-validation)
-  when a preview feature is used. For example, &#39;&#34;run.googleapis.com/launch-stage&#34;: &#34;BETA&#34;&#39; When `null`, the `annotations` field will be omitted from the resulting object.
+  when a preview feature is used. For example, &#39;&#34;run.googleapis.com/launch-stage&#34;: &#34;BETA&#34;&#39;
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `labels` (`obj`): Map of string keys and values that can be used to organize and categorize
 (scope and select) objects. May match selectors of replication controllers
-and routes. When `null`, the `labels` field will be omitted from the resulting object.
+and routes.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `namespace` (`string`): In Cloud Run the namespace must be equal to either the
 project ID or project number. When `null`, the `namespace` field will be omitted from the resulting object.
 

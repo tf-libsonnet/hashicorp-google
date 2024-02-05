@@ -29,6 +29,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withKmsKeyName()`](#fn-withkmskeyname)
 * [`fn withMetadata()`](#fn-withmetadata)
 * [`fn withName()`](#fn-withname)
+* [`fn withRetention()`](#fn-withretention)
+* [`fn withRetentionMixin()`](#fn-withretentionmixin)
 * [`fn withSource()`](#fn-withsource)
 * [`fn withStorageClass()`](#fn-withstorageclass)
 * [`fn withTemporaryHold()`](#fn-withtemporaryhold)
@@ -36,6 +38,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`obj customer_encryption`](#obj-customer_encryption)
   * [`fn new()`](#fn-customer_encryptionnew)
+* [`obj retention`](#obj-retention)
+  * [`fn new()`](#fn-retentionnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -84,6 +88,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `storage_class` (`string`): The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket&#39;s default storage class or to a standard class. When `null`, the `storage_class` field will be omitted from the resulting object.
   - `temporary_hold` (`bool`): Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. When `null`, the `temporary_hold` field will be omitted from the resulting object.
   - `customer_encryption` (`list[obj]`): Encryption key; encoded using base64. When `null`, the `customer_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.customer_encryption.new](#fn-customer_encryptionnew) constructor.
+  - `retention` (`list[obj]`): Object level retention configuration. When `null`, the `retention` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.retention.new](#fn-retentionnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -124,6 +129,7 @@ injecting into a complete block.
   - `storage_class` (`string`): The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket&#39;s default storage class or to a standard class. When `null`, the `storage_class` field will be omitted from the resulting object.
   - `temporary_hold` (`bool`): Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. When `null`, the `temporary_hold` field will be omitted from the resulting object.
   - `customer_encryption` (`list[obj]`): Encryption key; encoded using base64. When `null`, the `customer_encryption` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.customer_encryption.new](#fn-customer_encryptionnew) constructor.
+  - `retention` (`list[obj]`): Object level retention configuration. When `null`, the `retention` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.retention.new](#fn-retentionnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_bucket_object.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -359,6 +365,43 @@ Terraform resource block to set or update the name field.
   - `value` (`string`): The value to set for the `name` field.
 
 
+### fn withRetention
+
+```ts
+withRetention()
+```
+
+`google.list[obj].withRetention` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the retention field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withRetentionMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `retention` field.
+
+
+### fn withRetentionMixin
+
+```ts
+withRetentionMixin()
+```
+
+`google.list[obj].withRetentionMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the retention field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withRetention](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `retention` field.
+
+
 ### fn withSource
 
 ```ts
@@ -465,6 +508,30 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `customer_encryption` sub block.
+
+
+## obj retention
+
+
+
+### fn retention.new
+
+```ts
+new()
+```
+
+
+`google.storage_bucket_object.retention.new` constructs a new object with attributes and blocks configured for the `retention`
+Terraform sub block.
+
+
+
+**Args**:
+  - `mode` (`string`): The object retention mode. Supported values include: &#34;Unlocked&#34;, &#34;Locked&#34;.
+  - `retain_until_time` (`string`): Time in RFC 3339 (e.g. 2030-01-01T02:03:04Z) until which object retention protects this object.
+
+**Returns**:
+  - An attribute object that represents the `retention` sub block.
 
 
 ## obj timeouts

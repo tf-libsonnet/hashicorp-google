@@ -76,7 +76,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `channel` (`string`): Optional. The name of the channel associated with the trigger in `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel to receive events from Eventarc SaaS partners. When `null`, the `channel` field will be omitted from the resulting object.
   - `event_data_content_type` (`string`): Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This is set to `application/json` if the value is not defined. When `null`, the `event_data_content_type` field will be omitted from the resulting object.
-  - `labels` (`obj`): Optional. User labels attached to the triggers that can be used to group resources. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Optional. User labels attached to the triggers that can be used to group resources.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Required. The resource name of the trigger. Must be unique within the location on the project.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
@@ -110,7 +113,10 @@ injecting into a complete block.
 **Args**:
   - `channel` (`string`): Optional. The name of the channel associated with the trigger in `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel to receive events from Eventarc SaaS partners. When `null`, the `channel` field will be omitted from the resulting object.
   - `event_data_content_type` (`string`): Optional. EventDataContentType specifies the type of payload in MIME format that is expected from the CloudEvent data field. This is set to `application/json` if the value is not defined. When `null`, the `event_data_content_type` field will be omitted from the resulting object.
-  - `labels` (`obj`): Optional. User labels attached to the triggers that can be used to group resources. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Optional. User labels attached to the triggers that can be used to group resources.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Required. The resource name of the trigger. Must be unique within the location on the project.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
@@ -400,7 +406,6 @@ Terraform sub block.
 
 
 **Args**:
-  - `cloud_function` (`string`): [WARNING] Configuring a Cloud Function in Trigger is not supported as of today. The Cloud Function resource name. Format: projects/{project}/locations/{location}/functions/{function} When `null`, the `cloud_function` field will be omitted from the resulting object.
   - `workflow` (`string`): The resource name of the Workflow whose Executions are triggered by the events. The Workflow resource should be deployed in the same project as the trigger. Format: `projects/{project}/locations/{location}/workflows/{workflow}` When `null`, the `workflow` field will be omitted from the resulting object.
   - `cloud_run_service` (`list[obj]`): Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger. When `null`, the `cloud_run_service` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.eventarc_trigger.destination.cloud_run_service.new](#fn-destinationcloud_run_servicenew) constructor.
   - `gke` (`list[obj]`): A GKE service capable of receiving events. The service should be running in the same project as the trigger. When `null`, the `gke` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.eventarc_trigger.destination.gke.new](#fn-destinationgkenew) constructor.

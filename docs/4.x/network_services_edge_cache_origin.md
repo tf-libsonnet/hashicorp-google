@@ -87,7 +87,10 @@ After maxAttempts is reached, the configured failoverOrigin will be used to fulf
 
 The value of timeout.maxAttemptsTimeout dictates the timeout across all origins.
 A reference to a Topic resource. When `null`, the `failover_origin` field will be omitted from the resulting object.
-  - `labels` (`obj`): Set of label tags associated with the EdgeCache resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Set of label tags associated with the EdgeCache resource.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `max_attempts` (`number`): The maximum number of attempts to cache fill from this origin. Another attempt is made when a cache fill fails with one of the retryConditions.
 
 Once maxAttempts to this origin have failed the failoverOrigin will be used, if one is specified. That failoverOrigin may specify its own maxAttempts,
@@ -168,7 +171,10 @@ After maxAttempts is reached, the configured failoverOrigin will be used to fulf
 
 The value of timeout.maxAttemptsTimeout dictates the timeout across all origins.
 A reference to a Topic resource. When `null`, the `failover_origin` field will be omitted from the resulting object.
-  - `labels` (`obj`): Set of label tags associated with the EdgeCache resource. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Set of label tags associated with the EdgeCache resource.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `max_attempts` (`number`): The maximum number of attempts to cache fill from this origin. Another attempt is made when a cache fill fails with one of the retryConditions.
 
 Once maxAttempts to this origin have failed the failoverOrigin will be used, if one is specified. That failoverOrigin may specify its own maxAttempts,

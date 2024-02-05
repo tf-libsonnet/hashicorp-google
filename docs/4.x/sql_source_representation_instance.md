@@ -66,7 +66,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `client_key` (`string`): The private key file for the client certificate on the external server. Required only for server-client authentication. Include only if SSL/TLS is used on the external server. When `null`, the `client_key` field will be omitted from the resulting object.
   - `database_version` (`string`): The MySQL version running on your source database server. Possible values: [&#34;MYSQL_5_6&#34;, &#34;MYSQL_5_7&#34;, &#34;MYSQL_8_0&#34;, &#34;POSTGRES_9_6&#34;, &#34;POSTGRES_10&#34;, &#34;POSTGRES_11&#34;, &#34;POSTGRES_12&#34;, &#34;POSTGRES_13&#34;, &#34;POSTGRES_14&#34;]
   - `dump_file_path` (`string`): A file in the bucket that contains the data from the external server. When `null`, the `dump_file_path` field will be omitted from the resulting object.
-  - `host` (`string`): The externally accessible IPv4 address for the source database server.
+  - `host` (`string`): The IPv4 address and port for the external server, or the the DNS address for the external server. If the external server is hosted on Cloud SQL, the port is 5432.
   - `name` (`string`): The name of the source representation instance. Use any valid Cloud SQL instance name.
   - `password` (`string`): The password for the replication user account. When `null`, the `password` field will be omitted from the resulting object.
   - `port` (`number`): The externally accessible port for the source database server.
@@ -104,7 +104,7 @@ injecting into a complete block.
   - `client_key` (`string`): The private key file for the client certificate on the external server. Required only for server-client authentication. Include only if SSL/TLS is used on the external server. When `null`, the `client_key` field will be omitted from the resulting object.
   - `database_version` (`string`): The MySQL version running on your source database server. Possible values: [&#34;MYSQL_5_6&#34;, &#34;MYSQL_5_7&#34;, &#34;MYSQL_8_0&#34;, &#34;POSTGRES_9_6&#34;, &#34;POSTGRES_10&#34;, &#34;POSTGRES_11&#34;, &#34;POSTGRES_12&#34;, &#34;POSTGRES_13&#34;, &#34;POSTGRES_14&#34;]
   - `dump_file_path` (`string`): A file in the bucket that contains the data from the external server. When `null`, the `dump_file_path` field will be omitted from the resulting object.
-  - `host` (`string`): The externally accessible IPv4 address for the source database server.
+  - `host` (`string`): The IPv4 address and port for the external server, or the the DNS address for the external server. If the external server is hosted on Cloud SQL, the port is 5432.
   - `name` (`string`): The name of the source representation instance. Use any valid Cloud SQL instance name.
   - `password` (`string`): The password for the replication user account. When `null`, the `password` field will be omitted from the resulting object.
   - `port` (`number`): The externally accessible port for the source database server.

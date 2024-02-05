@@ -67,7 +67,7 @@ or merged. When `null`, the `capacity_commitment_id` field will be omitted from 
 Examples: US, EU, asia-northeast1. The default value is US. When `null`, the `location` field will be omitted from the resulting object.
   - `plan` (`string`): Capacity commitment plan. Valid values are at https://cloud.google.com/bigquery/docs/reference/reservations/rpc/google.cloud.bigquery.reservation.v1#commitmentplan
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
-  - `renewal_plan` (`string`): The plan this capacity commitment is converted to after commitmentEndTime passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable some commitment plans. When `null`, the `renewal_plan` field will be omitted from the resulting object.
+  - `renewal_plan` (`string`): The plan this capacity commitment is converted to after commitmentEndTime passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for some commitment plans. When `null`, the `renewal_plan` field will be omitted from the resulting object.
   - `slot_count` (`number`): Number of slots in this commitment.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_capacity_commitment.timeouts.new](#fn-timeoutsnew) constructor.
 
@@ -103,7 +103,7 @@ or merged. When `null`, the `capacity_commitment_id` field will be omitted from 
 Examples: US, EU, asia-northeast1. The default value is US. When `null`, the `location` field will be omitted from the resulting object.
   - `plan` (`string`): Capacity commitment plan. Valid values are at https://cloud.google.com/bigquery/docs/reference/reservations/rpc/google.cloud.bigquery.reservation.v1#commitmentplan
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
-  - `renewal_plan` (`string`): The plan this capacity commitment is converted to after commitmentEndTime passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable some commitment plans. When `null`, the `renewal_plan` field will be omitted from the resulting object.
+  - `renewal_plan` (`string`): The plan this capacity commitment is converted to after commitmentEndTime passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for some commitment plans. When `null`, the `renewal_plan` field will be omitted from the resulting object.
   - `slot_count` (`number`): Number of slots in this commitment.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.bigquery_capacity_commitment.timeouts.new](#fn-timeoutsnew) constructor.
 

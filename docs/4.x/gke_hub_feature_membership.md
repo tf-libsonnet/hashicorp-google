@@ -20,8 +20,11 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withFeature()`](#fn-withfeature)
 * [`fn withLocation()`](#fn-withlocation)
 * [`fn withMembership()`](#fn-withmembership)
+* [`fn withMembershipLocation()`](#fn-withmembershiplocation)
 * [`fn withMesh()`](#fn-withmesh)
 * [`fn withMeshMixin()`](#fn-withmeshmixin)
+* [`fn withPolicycontroller()`](#fn-withpolicycontroller)
+* [`fn withPolicycontrollerMixin()`](#fn-withpolicycontrollermixin)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -43,6 +46,16 @@ This package contains functions and utilities for setting up the resource using 
       * [`fn new()`](#fn-configmanagementpolicy_controllermonitoringnew)
 * [`obj mesh`](#obj-mesh)
   * [`fn new()`](#fn-meshnew)
+* [`obj policycontroller`](#obj-policycontroller)
+  * [`fn new()`](#fn-policycontrollernew)
+  * [`obj policycontroller.policy_controller_hub_config`](#obj-policycontrollerpolicy_controller_hub_config)
+    * [`fn new()`](#fn-policycontrollerpolicy_controller_hub_confignew)
+    * [`obj policycontroller.policy_controller_hub_config.monitoring`](#obj-policycontrollerpolicy_controller_hub_configmonitoring)
+      * [`fn new()`](#fn-policycontrollerpolicy_controller_hub_configmonitoringnew)
+    * [`obj policycontroller.policy_controller_hub_config.policy_content`](#obj-policycontrollerpolicy_controller_hub_configpolicy_content)
+      * [`fn new()`](#fn-policycontrollerpolicy_controller_hub_configpolicy_contentnew)
+      * [`obj policycontroller.policy_controller_hub_config.policy_content.template_library`](#obj-policycontrollerpolicy_controller_hub_configpolicy_contenttemplate_library)
+        * [`fn new()`](#fn-policycontrollerpolicy_controller_hub_configpolicy_contenttemplate_librarynew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -78,9 +91,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `feature` (`string`): The name of the feature
   - `location` (`string`): The location of the feature
   - `membership` (`string`): The name of the membership
+  - `membership_location` (`string`): The location of the membership When `null`, the `membership_location` field will be omitted from the resulting object.
   - `project` (`string`): The project of the feature When `null`, the `project` field will be omitted from the resulting object.
   - `configmanagement` (`list[obj]`): Config Management-specific spec. When `null`, the `configmanagement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.new](#fn-configmanagementnew) constructor.
   - `mesh` (`list[obj]`): Manage Mesh Features When `null`, the `mesh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.mesh.new](#fn-meshnew) constructor.
+  - `policycontroller` (`list[obj]`): Policy Controller-specific spec. When `null`, the `policycontroller` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.policycontroller.new](#fn-policycontrollernew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -108,9 +123,11 @@ injecting into a complete block.
   - `feature` (`string`): The name of the feature
   - `location` (`string`): The location of the feature
   - `membership` (`string`): The name of the membership
+  - `membership_location` (`string`): The location of the membership When `null`, the `membership_location` field will be omitted from the resulting object.
   - `project` (`string`): The project of the feature When `null`, the `project` field will be omitted from the resulting object.
   - `configmanagement` (`list[obj]`): Config Management-specific spec. When `null`, the `configmanagement` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.new](#fn-configmanagementnew) constructor.
   - `mesh` (`list[obj]`): Manage Mesh Features When `null`, the `mesh` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.mesh.new](#fn-meshnew) constructor.
+  - `policycontroller` (`list[obj]`): Policy Controller-specific spec. When `null`, the `policycontroller` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.policycontroller.new](#fn-policycontrollernew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -202,6 +219,22 @@ Terraform resource block to set or update the membership field.
   - `value` (`string`): The value to set for the `membership` field.
 
 
+### fn withMembershipLocation
+
+```ts
+withMembershipLocation()
+```
+
+`google.string.withMembershipLocation` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the membership_location field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `membership_location` field.
+
+
 ### fn withMesh
 
 ```ts
@@ -237,6 +270,43 @@ function.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`list[obj]`): The value to set for the `mesh` field.
+
+
+### fn withPolicycontroller
+
+```ts
+withPolicycontroller()
+```
+
+`google.list[obj].withPolicycontroller` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the policycontroller field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withPolicycontrollerMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `policycontroller` field.
+
+
+### fn withPolicycontrollerMixin
+
+```ts
+withPolicycontrollerMixin()
+```
+
+`google.list[obj].withPolicycontrollerMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the policycontroller field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withPolicycontroller](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `policycontroller` field.
 
 
 ### fn withProject
@@ -309,7 +379,7 @@ Terraform sub block.
 
 **Args**:
   - `version` (`string`): Optional. Version of ACM to install. Defaults to the latest version. When `null`, the `version` field will be omitted from the resulting object.
-  - `binauthz` (`list[obj]`): Binauthz configuration for the cluster. When `null`, the `binauthz` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.binauthz.new](#fn-configmanagementbinauthznew) constructor.
+  - `binauthz` (`list[obj]`): **DEPRECATED** Binauthz configuration for the cluster. This field will be ignored and should not be set. When `null`, the `binauthz` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.binauthz.new](#fn-configmanagementbinauthznew) constructor.
   - `config_sync` (`list[obj]`): Config Sync configuration for the cluster. When `null`, the `config_sync` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.config_sync.new](#fn-configmanagementconfig_syncnew) constructor.
   - `hierarchy_controller` (`list[obj]`): Hierarchy Controller configuration for the cluster. When `null`, the `hierarchy_controller` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.hierarchy_controller.new](#fn-configmanagementhierarchy_controllernew) constructor.
   - `policy_controller` (`list[obj]`): Policy Controller configuration for the cluster. When `null`, the `policy_controller` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.policy_controller.new](#fn-configmanagementpolicy_controllernew) constructor.
@@ -358,6 +428,7 @@ Terraform sub block.
 
 
 **Args**:
+  - `metrics_gcp_service_account_email` (`string`): The Email of the Google Cloud Service Account (GSA) used for exporting Config Sync metrics to Cloud Monitoring. The GSA should have the Monitoring Metric Writer(roles/monitoring.metricWriter) IAM role. The Kubernetes ServiceAccount `default` in the namespace `config-management-monitoring` should be bound to the GSA. When `null`, the `metrics_gcp_service_account_email` field will be omitted from the resulting object.
   - `prevent_drift` (`bool`): Set to true to enable the Config Sync admission webhook to prevent drifts. If set to `false`, disables the Config Sync admission webhook and does not prevent drifts. When `null`, the `prevent_drift` field will be omitted from the resulting object.
   - `source_format` (`string`): Specifies whether the Config Sync Repo is in &#34;hierarchical&#34; or &#34;unstructured&#34; mode. When `null`, the `source_format` field will be omitted from the resulting object.
   - `git` (`list[obj]`): Set the `git` field on the resulting object. When `null`, the `git` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.configmanagement.config_sync.git.new](#fn-configmanagementconfigmanagementgitnew) constructor.
@@ -524,6 +595,130 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `mesh` sub block.
+
+
+## obj policycontroller
+
+
+
+### fn policycontroller.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature_membership.policycontroller.new` constructs a new object with attributes and blocks configured for the `policycontroller`
+Terraform sub block.
+
+
+
+**Args**:
+  - `version` (`string`): Optional. Version of Policy Controller to install. Defaults to the latest version. When `null`, the `version` field will be omitted from the resulting object.
+  - `policy_controller_hub_config` (`list[obj]`): Policy Controller configuration for the cluster. When `null`, the `policy_controller_hub_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.policycontroller.policy_controller_hub_config.new](#fn-policycontrollerpolicy_controller_hub_confignew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `policycontroller` sub block.
+
+
+## obj policycontroller.policy_controller_hub_config
+
+
+
+### fn policycontroller.policy_controller_hub_config.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature_membership.policycontroller.policy_controller_hub_config.new` constructs a new object with attributes and blocks configured for the `policy_controller_hub_config`
+Terraform sub block.
+
+
+
+**Args**:
+  - `audit_interval_seconds` (`number`): Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether. When `null`, the `audit_interval_seconds` field will be omitted from the resulting object.
+  - `constraint_violation_limit` (`number`): The maximum number of audit violations to be stored in a constraint. If not set, the internal default of 20 will be used. When `null`, the `constraint_violation_limit` field will be omitted from the resulting object.
+  - `exemptable_namespaces` (`list`): The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster. When `null`, the `exemptable_namespaces` field will be omitted from the resulting object.
+  - `install_spec` (`string`): Configures the mode of the Policy Controller installation. Possible values: INSTALL_SPEC_UNSPECIFIED, INSTALL_SPEC_NOT_INSTALLED, INSTALL_SPEC_ENABLED, INSTALL_SPEC_SUSPENDED, INSTALL_SPEC_DETACHED When `null`, the `install_spec` field will be omitted from the resulting object.
+  - `log_denies_enabled` (`bool`): Logs all denies and dry run failures. When `null`, the `log_denies_enabled` field will be omitted from the resulting object.
+  - `mutation_enabled` (`bool`): Enables the ability to mutate resources using Policy Controller. When `null`, the `mutation_enabled` field will be omitted from the resulting object.
+  - `referential_rules_enabled` (`bool`): Enables the ability to use Constraint Templates that reference to objects other than the object currently being evaluated. When `null`, the `referential_rules_enabled` field will be omitted from the resulting object.
+  - `monitoring` (`list[obj]`): Specifies the backends Policy Controller should export metrics to. For example, to specify metrics should be exported to Cloud Monitoring and Prometheus, specify backends: [&#34;cloudmonitoring&#34;, &#34;prometheus&#34;]. Default: [&#34;cloudmonitoring&#34;, &#34;prometheus&#34;] When `null`, the `monitoring` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.policycontroller.policy_controller_hub_config.monitoring.new](#fn-policycontrollerpolicycontrollermonitoringnew) constructor.
+  - `policy_content` (`list[obj]`): Specifies the desired policy content on the cluster. When `null`, the `policy_content` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.policycontroller.policy_controller_hub_config.policy_content.new](#fn-policycontrollerpolicycontrollerpolicy_contentnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `policy_controller_hub_config` sub block.
+
+
+## obj policycontroller.policy_controller_hub_config.monitoring
+
+
+
+### fn policycontroller.policy_controller_hub_config.monitoring.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature_membership.policycontroller.policy_controller_hub_config.monitoring.new` constructs a new object with attributes and blocks configured for the `monitoring`
+Terraform sub block.
+
+
+
+**Args**:
+  - `backends` (`list`):  Specifies the list of backends Policy Controller will export to. Specifying an empty value `[]` disables metrics export. When `null`, the `backends` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `monitoring` sub block.
+
+
+## obj policycontroller.policy_controller_hub_config.policy_content
+
+
+
+### fn policycontroller.policy_controller_hub_config.policy_content.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature_membership.policycontroller.policy_controller_hub_config.policy_content.new` constructs a new object with attributes and blocks configured for the `policy_content`
+Terraform sub block.
+
+
+
+**Args**:
+  - `template_library` (`list[obj]`): Configures the installation of the Template Library. When `null`, the `template_library` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.gke_hub_feature_membership.policycontroller.policy_controller_hub_config.policy_content.template_library.new](#fn-policycontrollerpolicycontrollerpolicy_controller_hub_configtemplate_librarynew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `policy_content` sub block.
+
+
+## obj policycontroller.policy_controller_hub_config.policy_content.template_library
+
+
+
+### fn policycontroller.policy_controller_hub_config.policy_content.template_library.new
+
+```ts
+new()
+```
+
+
+`google.gke_hub_feature_membership.policycontroller.policy_controller_hub_config.policy_content.template_library.new` constructs a new object with attributes and blocks configured for the `template_library`
+Terraform sub block.
+
+
+
+**Args**:
+  - `installation` (`string`): Configures the manner in which the template library is installed on the cluster. Possible values: INSTALLATION_UNSPECIFIED, NOT_INSTALLED, ALL When `null`, the `installation` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `template_library` sub block.
 
 
 ## obj timeouts

@@ -28,6 +28,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withNoAutomateDnsZone()`](#fn-withnoautomatednszone)
 * [`fn withPortRange()`](#fn-withportrange)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withServiceDirectoryRegistrations()`](#fn-withservicedirectoryregistrations)
+* [`fn withServiceDirectoryRegistrationsMixin()`](#fn-withservicedirectoryregistrationsmixin)
 * [`fn withSourceIpRanges()`](#fn-withsourceipranges)
 * [`fn withSubnetwork()`](#fn-withsubnetwork)
 * [`fn withTarget()`](#fn-withtarget)
@@ -37,6 +39,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-metadata_filtersnew)
   * [`obj metadata_filters.filter_labels`](#obj-metadata_filtersfilter_labels)
     * [`fn new()`](#fn-metadata_filtersfilter_labelsnew)
+* [`obj service_directory_registrations`](#obj-service_directory_registrations)
+  * [`fn new()`](#fn-service_directory_registrationsnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -122,7 +126,11 @@ The valid IP protocols are different for different load balancing products
 as described in [Load balancing
 features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends). Possible values: [&#34;TCP&#34;, &#34;UDP&#34;, &#34;ESP&#34;, &#34;AH&#34;, &#34;SCTP&#34;, &#34;ICMP&#34;] When `null`, the `ip_protocol` field will be omitted from the resulting object.
   - `ip_version` (`string`): The IP Version that will be used by this global forwarding rule. Possible values: [&#34;IPV4&#34;, &#34;IPV6&#34;] When `null`, the `ip_version` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels to apply to this forwarding rule.  A list of key-&gt;value pairs. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `load_balancing_scheme` (`string`): Specifies the forwarding rule type.
 
 For more information about forwarding rules, refer to
@@ -151,24 +159,26 @@ be used.
 For Private Service Connect forwarding rules that forward traffic to Google
 APIs, a network must be provided. When `null`, the `network` field will be omitted from the resulting object.
   - `no_automate_dns_zone` (`bool`): This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field. When `null`, the `no_automate_dns_zone` field will be omitted from the resulting object.
-  - `port_range` (`string`): This field can only be used:
-
-* If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
-* By backend service-based network load balancers, target pool-based
-network load balancers, internal proxy load balancers, external proxy load
-balancers, Traffic Director, external protocol forwarding, and Classic VPN.
-Some products have restrictions on what ports can be used. See
+  - `port_range` (`string`): The &#39;portRange&#39; field has the following limitations:
+* It requires that the forwarding rule &#39;IPProtocol&#39; be TCP, UDP, or SCTP,
+and
+* It&#39;s applicable only to the following products: external passthrough
+Network Load Balancers, internal and external proxy Network Load
+Balancers, internal and external Application Load Balancers, external
+protocol forwarding, and Classic VPN.
+* Some products have restrictions on what ports can be used. See
 [port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)
 for details.
 
+For external forwarding rules, two or more forwarding rules cannot use the
+same &#39;[IPAddress, IPProtocol]&#39; pair, and cannot have overlapping
+&#39;portRange&#39;s.
 
-* TargetHttpProxy: 80, 8080
-* TargetHttpsProxy: 443
-* TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-                  1883, 5222
-* TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-                  1883, 5222
-* TargetVpnGateway: 500, 4500 When `null`, the `port_range` field will be omitted from the resulting object.
+For internal forwarding rules within the same VPC network, two or more
+forwarding rules cannot use the same &#39;[IPAddress, IPProtocol]&#39; pair, and
+cannot have overlapping &#39;portRange&#39;s.
+
+@pattern: \d&#43;(?:-\d&#43;)? When `null`, the `port_range` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `source_ip_ranges` (`list`): If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each sourceIpRange entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24). When `null`, the `source_ip_ranges` field will be omitted from the resulting object.
   - `subnetwork` (`string`): This field identifies the subnetwork that the load balanced IP should
@@ -208,6 +218,9 @@ the UrlMap that this ForwardingRule references.
 
 metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED. When `null`, the `metadata_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.metadata_filters.new](#fn-metadata_filtersnew) constructor.
+  - `service_directory_registrations` (`list[obj]`): Service Directory resources to register this forwarding rule with.
+
+Currently, only supports a single Service Directory resource. When `null`, the `service_directory_registrations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.service_directory_registrations.new](#fn-service_directory_registrationsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -285,7 +298,11 @@ The valid IP protocols are different for different load balancing products
 as described in [Load balancing
 features](https://cloud.google.com/load-balancing/docs/features#protocols_from_the_load_balancer_to_the_backends). Possible values: [&#34;TCP&#34;, &#34;UDP&#34;, &#34;ESP&#34;, &#34;AH&#34;, &#34;SCTP&#34;, &#34;ICMP&#34;] When `null`, the `ip_protocol` field will be omitted from the resulting object.
   - `ip_version` (`string`): The IP Version that will be used by this global forwarding rule. Possible values: [&#34;IPV4&#34;, &#34;IPV6&#34;] When `null`, the `ip_version` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels to apply to this forwarding rule.  A list of key-&gt;value pairs. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this forwarding rule.  A list of key-&gt;value pairs.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `load_balancing_scheme` (`string`): Specifies the forwarding rule type.
 
 For more information about forwarding rules, refer to
@@ -314,24 +331,26 @@ be used.
 For Private Service Connect forwarding rules that forward traffic to Google
 APIs, a network must be provided. When `null`, the `network` field will be omitted from the resulting object.
   - `no_automate_dns_zone` (`bool`): This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field. When `null`, the `no_automate_dns_zone` field will be omitted from the resulting object.
-  - `port_range` (`string`): This field can only be used:
-
-* If &#39;IPProtocol&#39; is one of TCP, UDP, or SCTP.
-* By backend service-based network load balancers, target pool-based
-network load balancers, internal proxy load balancers, external proxy load
-balancers, Traffic Director, external protocol forwarding, and Classic VPN.
-Some products have restrictions on what ports can be used. See
+  - `port_range` (`string`): The &#39;portRange&#39; field has the following limitations:
+* It requires that the forwarding rule &#39;IPProtocol&#39; be TCP, UDP, or SCTP,
+and
+* It&#39;s applicable only to the following products: external passthrough
+Network Load Balancers, internal and external proxy Network Load
+Balancers, internal and external Application Load Balancers, external
+protocol forwarding, and Classic VPN.
+* Some products have restrictions on what ports can be used. See
 [port specifications](https://cloud.google.com/load-balancing/docs/forwarding-rule-concepts#port_specifications)
 for details.
 
+For external forwarding rules, two or more forwarding rules cannot use the
+same &#39;[IPAddress, IPProtocol]&#39; pair, and cannot have overlapping
+&#39;portRange&#39;s.
 
-* TargetHttpProxy: 80, 8080
-* TargetHttpsProxy: 443
-* TargetTcpProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-                  1883, 5222
-* TargetSslProxy: 25, 43, 110, 143, 195, 443, 465, 587, 700, 993, 995,
-                  1883, 5222
-* TargetVpnGateway: 500, 4500 When `null`, the `port_range` field will be omitted from the resulting object.
+For internal forwarding rules within the same VPC network, two or more
+forwarding rules cannot use the same &#39;[IPAddress, IPProtocol]&#39; pair, and
+cannot have overlapping &#39;portRange&#39;s.
+
+@pattern: \d&#43;(?:-\d&#43;)? When `null`, the `port_range` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `source_ip_ranges` (`list`): If not empty, this Forwarding Rule will only forward the traffic when the source IP address matches one of the IP addresses or CIDR ranges set here. Note that a Forwarding Rule can only have up to 64 source IP ranges, and this field can only be used with a regional Forwarding Rule whose scheme is EXTERNAL. Each sourceIpRange entry should be either an IP address (for example, 1.2.3.4) or a CIDR range (for example, 1.2.3.0/24). When `null`, the `source_ip_ranges` field will be omitted from the resulting object.
   - `subnetwork` (`string`): This field identifies the subnetwork that the load balanced IP should
@@ -371,6 +390,9 @@ the UrlMap that this ForwardingRule references.
 
 metadataFilters only applies to Loadbalancers that have their
 loadBalancingScheme set to INTERNAL_SELF_MANAGED. When `null`, the `metadata_filters` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.metadata_filters.new](#fn-metadata_filtersnew) constructor.
+  - `service_directory_registrations` (`list[obj]`): Service Directory resources to register this forwarding rule with.
+
+Currently, only supports a single Service Directory resource. When `null`, the `service_directory_registrations` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.service_directory_registrations.new](#fn-service_directory_registrationsnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_global_forwarding_rule.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -590,6 +612,43 @@ Terraform resource block to set or update the project field.
   - `value` (`string`): The value to set for the `project` field.
 
 
+### fn withServiceDirectoryRegistrations
+
+```ts
+withServiceDirectoryRegistrations()
+```
+
+`google.list[obj].withServiceDirectoryRegistrations` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the service_directory_registrations field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withServiceDirectoryRegistrationsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `service_directory_registrations` field.
+
+
+### fn withServiceDirectoryRegistrationsMixin
+
+```ts
+withServiceDirectoryRegistrationsMixin()
+```
+
+`google.list[obj].withServiceDirectoryRegistrationsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the service_directory_registrations field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withServiceDirectoryRegistrations](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `service_directory_registrations` field.
+
+
 ### fn withSourceIpRanges
 
 ```ts
@@ -731,6 +790,33 @@ length of 1024 characters.
 
 **Returns**:
   - An attribute object that represents the `filter_labels` sub block.
+
+
+## obj service_directory_registrations
+
+
+
+### fn service_directory_registrations.new
+
+```ts
+new()
+```
+
+
+`google.compute_global_forwarding_rule.service_directory_registrations.new` constructs a new object with attributes and blocks configured for the `service_directory_registrations`
+Terraform sub block.
+
+
+
+**Args**:
+  - `namespace` (`string`): Service Directory namespace to register the forwarding rule under. When `null`, the `namespace` field will be omitted from the resulting object.
+  - `service_directory_region` (`string`): [Optional] Service Directory region to register this global forwarding rule under.
+Default to &#34;us-central1&#34;. Only used for PSC for Google APIs. All PSC for
+Google APIs Forwarding Rules on the same network should use the same Service
+Directory region. When `null`, the `service_directory_region` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `service_directory_registrations` sub block.
 
 
 ## obj timeouts

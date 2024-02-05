@@ -2,10 +2,24 @@ local tf = (import 'github.com/tf-libsonnet/core/main.libsonnet');
 local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
 {
   '#':: d.pkg(name='storage_transfer_job', url='', help='`storage_transfer_job` represents the `google_storage_transfer_job` Terraform resource.\n\n\n\nThis package contains functions and utilities for setting up the resource using Jsonnet code.\n'),
-  '#new':: d.fn(help="\n`google.storage_transfer_job.new` injects a new `google_storage_transfer_job` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.storage_transfer_job.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.storage_transfer_job` using the reference:\n\n    $._ref.google_storage_transfer_job.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_storage_transfer_job.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `description` (`string`): Unique description to identify the Transfer Job.\n  - `project` (`string`): The project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.\n  - `status` (`string`): Status of the job. Default: ENABLED. NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation. When `null`, the `status` field will be omitted from the resulting object.\n  - `notification_config` (`list[obj]`): Notification configuration. When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.notification_config.new](#fn-notification_confignew) constructor.\n  - `schedule` (`list[obj]`): Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.schedule.new](#fn-schedulenew) constructor.\n  - `transfer_spec` (`list[obj]`): Transfer specification. When `null`, the `transfer_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.transfer_spec.new](#fn-transfer_specnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  event_stream:: {
+    '#new':: d.fn(help='\n`google.storage_transfer_job.event_stream.new` constructs a new object with attributes and blocks configured for the `event_stream`\nTerraform sub block.\n\n\n\n**Args**:\n  - `event_stream_expiration_time` (`string`): Specifies the data and time at which Storage Transfer Service stops listening for events from this stream. After this time, any transfers in progress will complete, but no new transfers are initiated When `null`, the `event_stream_expiration_time` field will be omitted from the resulting object.\n  - `event_stream_start_time` (`string`): Specifies the date and time that Storage Transfer Service starts listening for events from this stream. If no start time is specified or start time is in the past, Storage Transfer Service starts listening immediately When `null`, the `event_stream_start_time` field will be omitted from the resulting object.\n  - `name` (`string`): Specifies a unique name of the resource such as AWS SQS ARN in the form &#39;arn:aws:sqs:region:account_id:queue_name&#39;, or Pub/Sub subscription resource name in the form &#39;projects/{project}/subscriptions/{sub}&#39;\n\n**Returns**:\n  - An attribute object that represents the `event_stream` sub block.\n', args=[]),
+    new(
+      name,
+      event_stream_expiration_time=null,
+      event_stream_start_time=null
+    ):: std.prune(a={
+      event_stream_expiration_time: event_stream_expiration_time,
+      event_stream_start_time: event_stream_start_time,
+      name: name,
+    }),
+  },
+  '#new':: d.fn(help="\n`google.storage_transfer_job.new` injects a new `google_storage_transfer_job` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.storage_transfer_job.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.storage_transfer_job` using the reference:\n\n    $._ref.google_storage_transfer_job.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_storage_transfer_job.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `description` (`string`): Unique description to identify the Transfer Job.\n  - `name` (`string`): The name of the Transfer Job. When `null`, the `name` field will be omitted from the resulting object.\n  - `project` (`string`): The project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.\n  - `status` (`string`): Status of the job. Default: ENABLED. NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation. When `null`, the `status` field will be omitted from the resulting object.\n  - `event_stream` (`list[obj]`): Set the `event_stream` field on the resulting resource block. When `null`, the `event_stream` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.event_stream.new](#fn-event_streamnew) constructor.\n  - `notification_config` (`list[obj]`): Notification configuration. When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.notification_config.new](#fn-notification_confignew) constructor.\n  - `schedule` (`list[obj]`): Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.schedule.new](#fn-schedulenew) constructor.\n  - `transfer_spec` (`list[obj]`): Transfer specification. When `null`, the `transfer_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.transfer_spec.new](#fn-transfer_specnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     description,
+    event_stream=null,
+    name=null,
     notification_config=null,
     project=null,
     schedule=null,
@@ -17,6 +31,8 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     label=resourceLabel,
     attrs=self.newAttrs(
       description=description,
+      event_stream=event_stream,
+      name=name,
       notification_config=notification_config,
       project=project,
       schedule=schedule,
@@ -25,9 +41,11 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`google.storage_transfer_job.newAttrs` constructs a new object with attributes and blocks configured for the `storage_transfer_job`\nTerraform resource.\n\nUnlike [google.storage_transfer_job.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `description` (`string`): Unique description to identify the Transfer Job.\n  - `project` (`string`): The project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.\n  - `status` (`string`): Status of the job. Default: ENABLED. NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation. When `null`, the `status` field will be omitted from the resulting object.\n  - `notification_config` (`list[obj]`): Notification configuration. When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.notification_config.new](#fn-notification_confignew) constructor.\n  - `schedule` (`list[obj]`): Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.schedule.new](#fn-schedulenew) constructor.\n  - `transfer_spec` (`list[obj]`): Transfer specification. When `null`, the `transfer_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.transfer_spec.new](#fn-transfer_specnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_transfer_job` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`google.storage_transfer_job.newAttrs` constructs a new object with attributes and blocks configured for the `storage_transfer_job`\nTerraform resource.\n\nUnlike [google.storage_transfer_job.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `description` (`string`): Unique description to identify the Transfer Job.\n  - `name` (`string`): The name of the Transfer Job. When `null`, the `name` field will be omitted from the resulting object.\n  - `project` (`string`): The project in which the resource belongs. If it is not provided, the provider project is used. When `null`, the `project` field will be omitted from the resulting object.\n  - `status` (`string`): Status of the job. Default: ENABLED. NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation. When `null`, the `status` field will be omitted from the resulting object.\n  - `event_stream` (`list[obj]`): Set the `event_stream` field on the resulting object. When `null`, the `event_stream` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.event_stream.new](#fn-event_streamnew) constructor.\n  - `notification_config` (`list[obj]`): Notification configuration. When `null`, the `notification_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.notification_config.new](#fn-notification_confignew) constructor.\n  - `schedule` (`list[obj]`): Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. When `null`, the `schedule` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.schedule.new](#fn-schedulenew) constructor.\n  - `transfer_spec` (`list[obj]`): Transfer specification. When `null`, the `transfer_spec` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.storage_transfer_job.transfer_spec.new](#fn-transfer_specnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `storage_transfer_job` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     description,
+    event_stream=null,
+    name=null,
     notification_config=null,
     project=null,
     schedule=null,
@@ -35,6 +53,8 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     transfer_spec=null
   ):: std.prune(a={
     description: description,
+    event_stream: event_stream,
+    name: name,
     notification_config: notification_config,
     project: project,
     schedule: schedule,
@@ -261,6 +281,36 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       google_storage_transfer_job+: {
         [resourceLabel]+: {
           description: value,
+        },
+      },
+    },
+  },
+  '#withEventStream':: d.fn(help='`google.list[obj].withEventStream` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the event_stream field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [google.list[obj].withEventStreamMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `event_stream` field.\n', args=[]),
+  withEventStream(resourceLabel, value): {
+    resource+: {
+      google_storage_transfer_job+: {
+        [resourceLabel]+: {
+          event_stream: value,
+        },
+      },
+    },
+  },
+  '#withEventStreamMixin':: d.fn(help='`google.list[obj].withEventStreamMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the event_stream field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [google.list[obj].withEventStream](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `event_stream` field.\n', args=[]),
+  withEventStreamMixin(resourceLabel, value): {
+    resource+: {
+      google_storage_transfer_job+: {
+        [resourceLabel]+: {
+          event_stream+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  '#withName':: d.fn(help='`google.string.withName` constructs a mixin object that can be merged into the `string`\nTerraform resource block to set or update the name field.\n\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`string`): The value to set for the `name` field.\n', args=[]),
+  withName(resourceLabel, value): {
+    resource+: {
+      google_storage_transfer_job+: {
+        [resourceLabel]+: {
+          name: value,
         },
       },
     },

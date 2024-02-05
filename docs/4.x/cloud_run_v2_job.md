@@ -43,26 +43,10 @@ This package contains functions and utilities for setting up the resource using 
           * [`fn new()`](#fn-templatetemplatecontainersenvvalue_sourcenew)
           * [`obj template.template.containers.env.value_source.secret_key_ref`](#obj-templatetemplatecontainersenvvalue_sourcesecret_key_ref)
             * [`fn new()`](#fn-templatetemplatecontainersenvvalue_sourcesecret_key_refnew)
-      * [`obj template.template.containers.liveness_probe`](#obj-templatetemplatecontainersliveness_probe)
-        * [`fn new()`](#fn-templatetemplatecontainersliveness_probenew)
-        * [`obj template.template.containers.liveness_probe.http_get`](#obj-templatetemplatecontainersliveness_probehttp_get)
-          * [`fn new()`](#fn-templatetemplatecontainersliveness_probehttp_getnew)
-          * [`obj template.template.containers.liveness_probe.http_get.http_headers`](#obj-templatetemplatecontainersliveness_probehttp_gethttp_headers)
-            * [`fn new()`](#fn-templatetemplatecontainersliveness_probehttp_gethttp_headersnew)
-        * [`obj template.template.containers.liveness_probe.tcp_socket`](#obj-templatetemplatecontainersliveness_probetcp_socket)
-          * [`fn new()`](#fn-templatetemplatecontainersliveness_probetcp_socketnew)
       * [`obj template.template.containers.ports`](#obj-templatetemplatecontainersports)
         * [`fn new()`](#fn-templatetemplatecontainersportsnew)
       * [`obj template.template.containers.resources`](#obj-templatetemplatecontainersresources)
         * [`fn new()`](#fn-templatetemplatecontainersresourcesnew)
-      * [`obj template.template.containers.startup_probe`](#obj-templatetemplatecontainersstartup_probe)
-        * [`fn new()`](#fn-templatetemplatecontainersstartup_probenew)
-        * [`obj template.template.containers.startup_probe.http_get`](#obj-templatetemplatecontainersstartup_probehttp_get)
-          * [`fn new()`](#fn-templatetemplatecontainersstartup_probehttp_getnew)
-          * [`obj template.template.containers.startup_probe.http_get.http_headers`](#obj-templatetemplatecontainersstartup_probehttp_gethttp_headers)
-            * [`fn new()`](#fn-templatetemplatecontainersstartup_probehttp_gethttp_headersnew)
-        * [`obj template.template.containers.startup_probe.tcp_socket`](#obj-templatetemplatecontainersstartup_probetcp_socket)
-          * [`fn new()`](#fn-templatetemplatecontainersstartup_probetcp_socketnew)
       * [`obj template.template.containers.volume_mounts`](#obj-templatetemplatecontainersvolume_mounts)
         * [`fn new()`](#fn-templatetemplatecontainersvolume_mountsnew)
     * [`obj template.template.volumes`](#obj-templatetemplatevolumes)
@@ -114,19 +98,25 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 Cloud Run API v2 does not support annotations with &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected on new resources.
 All system annotations in v1 now have a corresponding field in v2 Job.
 
-This field follows Kubernetes annotations&#39; namespacing, limits, and rules. When `null`, the `annotations` field will be omitted from the resulting object.
+This field follows Kubernetes annotations&#39; namespacing, limits, and rules.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `client` (`string`): Arbitrary identifier for the API client. When `null`, the `client` field will be omitted from the resulting object.
   - `client_version` (`string`): Arbitrary version identifier for the API client. When `null`, the `client_version` field will be omitted from the resulting object.
   - `labels` (`obj`): Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google&#39;s billing system, so they can be used to filter, or break down billing charges by team, component,
 environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
 
 Cloud Run API v2 does not support labels with &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected.
-All system labels in v1 now have a corresponding field in v2 Job. When `null`, the `labels` field will be omitted from the resulting object.
+All system labels in v1 now have a corresponding field in v2 Job.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `launch_stage` (`string`): The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA.
 If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features.
 
 For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: [&#34;UNIMPLEMENTED&#34;, &#34;PRELAUNCH&#34;, &#34;EARLY_ACCESS&#34;, &#34;ALPHA&#34;, &#34;BETA&#34;, &#34;GA&#34;, &#34;DEPRECATED&#34;] When `null`, the `launch_stage` field will be omitted from the resulting object.
-  - `location` (`string`): The location of the cloud run job When `null`, the `location` field will be omitted from the resulting object.
+  - `location` (`string`): The location of the cloud run job
   - `name` (`string`): Name of the Job.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `binary_authorization` (`list[obj]`): Settings for the Binary Authorization feature. When `null`, the `binary_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.binary_authorization.new](#fn-binary_authorizationnew) constructor.
@@ -160,19 +150,25 @@ injecting into a complete block.
 Cloud Run API v2 does not support annotations with &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected on new resources.
 All system annotations in v1 now have a corresponding field in v2 Job.
 
-This field follows Kubernetes annotations&#39; namespacing, limits, and rules. When `null`, the `annotations` field will be omitted from the resulting object.
+This field follows Kubernetes annotations&#39; namespacing, limits, and rules.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field &#39;effective_annotations&#39; for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `client` (`string`): Arbitrary identifier for the API client. When `null`, the `client` field will be omitted from the resulting object.
   - `client_version` (`string`): Arbitrary version identifier for the API client. When `null`, the `client_version` field will be omitted from the resulting object.
   - `labels` (`obj`): Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google&#39;s billing system, so they can be used to filter, or break down billing charges by team, component,
 environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
 
 Cloud Run API v2 does not support labels with &#39;run.googleapis.com&#39;, &#39;cloud.googleapis.com&#39;, &#39;serving.knative.dev&#39;, or &#39;autoscaling.knative.dev&#39; namespaces, and they will be rejected.
-All system labels in v1 now have a corresponding field in v2 Job. When `null`, the `labels` field will be omitted from the resulting object.
+All system labels in v1 now have a corresponding field in v2 Job.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `launch_stage` (`string`): The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA.
 If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features.
 
 For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: [&#34;UNIMPLEMENTED&#34;, &#34;PRELAUNCH&#34;, &#34;EARLY_ACCESS&#34;, &#34;ALPHA&#34;, &#34;BETA&#34;, &#34;GA&#34;, &#34;DEPRECATED&#34;] When `null`, the `launch_stage` field will be omitted from the resulting object.
-  - `location` (`string`): The location of the cloud run job When `null`, the `location` field will be omitted from the resulting object.
+  - `location` (`string`): The location of the cloud run job
   - `name` (`string`): Name of the Job.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `binary_authorization` (`list[obj]`): Settings for the Binary Authorization feature. When `null`, the `binary_authorization` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.binary_authorization.new](#fn-binary_authorizationnew) constructor.
@@ -537,14 +533,10 @@ Terraform sub block.
   - `name` (`string`): Name of the container specified as a DNS_LABEL. When `null`, the `name` field will be omitted from the resulting object.
   - `working_dir` (`string`): Container&#39;s working directory. If not specified, the container runtime&#39;s default will be used, which might be configured in the container image. When `null`, the `working_dir` field will be omitted from the resulting object.
   - `env` (`list[obj]`): List of environment variables to set in the container. When `null`, the `env` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.containers.env.new](#fn-templatetemplatetemplateenvnew) constructor.
-  - `liveness_probe` (`list[obj]`): Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-This field is not supported in Cloud Run Job currently. When `null`, the `liveness_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.containers.liveness_probe.new](#fn-templatetemplatetemplateliveness_probenew) constructor.
   - `ports` (`list[obj]`): List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible.
 
 If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on When `null`, the `ports` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.containers.ports.new](#fn-templatetemplatetemplateportsnew) constructor.
   - `resources` (`list[obj]`): Compute Resource requirements by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources When `null`, the `resources` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.containers.resources.new](#fn-templatetemplatetemplateresourcesnew) constructor.
-  - `startup_probe` (`list[obj]`): Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-This field is not supported in Cloud Run Job currently. When `null`, the `startup_probe` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.containers.startup_probe.new](#fn-templatetemplatetemplatestartup_probenew) constructor.
   - `volume_mounts` (`list[obj]`): Volume to mount into the container&#39;s filesystem. When `null`, the `volume_mounts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.containers.volume_mounts.new](#fn-templatetemplatetemplatevolume_mountsnew) constructor.
 
 **Returns**:
@@ -623,105 +615,6 @@ Terraform sub block.
   - An attribute object that represents the `secret_key_ref` sub block.
 
 
-## obj template.template.containers.liveness_probe
-
-
-
-### fn template.template.containers.liveness_probe.new
-
-```ts
-new()
-```
-
-
-`google.cloud_run_v2_job.template.template.containers.liveness_probe.new` constructs a new object with attributes and blocks configured for the `liveness_probe`
-Terraform sub block.
-
-
-
-**Args**:
-  - `failure_threshold` (`number`): Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. When `null`, the `failure_threshold` field will be omitted from the resulting object.
-  - `initial_delay_seconds` (`number`): Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes When `null`, the `initial_delay_seconds` field will be omitted from the resulting object.
-  - `period_seconds` (`number`): How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or equal than timeoutSeconds When `null`, the `period_seconds` field will be omitted from the resulting object.
-  - `timeout_seconds` (`number`): Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes When `null`, the `timeout_seconds` field will be omitted from the resulting object.
-  - `http_get` (`list[obj]`): HTTPGet specifies the http request to perform. Exactly one of HTTPGet or TCPSocket must be specified. When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.containers.liveness_probe.http_get.new](#fn-templatetemplatetemplatecontainershttp_getnew) constructor.
-  - `tcp_socket` (`list[obj]`): TCPSocket specifies an action involving a TCP port. Exactly one of HTTPGet or TCPSocket must be specified. When `null`, the `tcp_socket` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.containers.liveness_probe.tcp_socket.new](#fn-templatetemplatetemplatecontainerstcp_socketnew) constructor.
-
-**Returns**:
-  - An attribute object that represents the `liveness_probe` sub block.
-
-
-## obj template.template.containers.liveness_probe.http_get
-
-
-
-### fn template.template.containers.liveness_probe.http_get.new
-
-```ts
-new()
-```
-
-
-`google.cloud_run_v2_job.template.template.containers.liveness_probe.http_get.new` constructs a new object with attributes and blocks configured for the `http_get`
-Terraform sub block.
-
-
-
-**Args**:
-  - `path` (`string`): Path to access on the HTTP server. Defaults to &#39;/&#39;. When `null`, the `path` field will be omitted from the resulting object.
-  - `http_headers` (`list[obj]`): Custom headers to set in the request. HTTP allows repeated headers. When `null`, the `http_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.containers.liveness_probe.http_get.http_headers.new](#fn-templatetemplatetemplatecontainersliveness_probehttp_headersnew) constructor.
-
-**Returns**:
-  - An attribute object that represents the `http_get` sub block.
-
-
-## obj template.template.containers.liveness_probe.http_get.http_headers
-
-
-
-### fn template.template.containers.liveness_probe.http_get.http_headers.new
-
-```ts
-new()
-```
-
-
-`google.cloud_run_v2_job.template.template.containers.liveness_probe.http_get.http_headers.new` constructs a new object with attributes and blocks configured for the `http_headers`
-Terraform sub block.
-
-
-
-**Args**:
-  - `name` (`string`): The header field name
-  - `value` (`string`): The header field value When `null`, the `value` field will be omitted from the resulting object.
-
-**Returns**:
-  - An attribute object that represents the `http_headers` sub block.
-
-
-## obj template.template.containers.liveness_probe.tcp_socket
-
-
-
-### fn template.template.containers.liveness_probe.tcp_socket.new
-
-```ts
-new()
-```
-
-
-`google.cloud_run_v2_job.template.template.containers.liveness_probe.tcp_socket.new` constructs a new object with attributes and blocks configured for the `tcp_socket`
-Terraform sub block.
-
-
-
-**Args**:
-  - `port` (`number`): Port number to access on the container. Must be in the range 1 to 65535. If not specified, defaults to 8080. When `null`, the `port` field will be omitted from the resulting object.
-
-**Returns**:
-  - An attribute object that represents the `tcp_socket` sub block.
-
-
 ## obj template.template.containers.ports
 
 
@@ -763,109 +656,10 @@ Terraform sub block.
 
 
 **Args**:
-  - `limits` (`obj`): Only memory and CPU are supported. Note: The only supported values for CPU are &#39;1&#39;, &#39;2&#39;, &#39;4&#39;, and &#39;8&#39;. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go When `null`, the `limits` field will be omitted from the resulting object.
+  - `limits` (`obj`): Only memory and CPU are supported. Use key &#39;cpu&#39; for CPU limit and &#39;memory&#39; for memory limit. Note: The only supported values for CPU are &#39;1&#39;, &#39;2&#39;, &#39;4&#39;, and &#39;8&#39;. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the &#39;quantity&#39; k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go When `null`, the `limits` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that represents the `resources` sub block.
-
-
-## obj template.template.containers.startup_probe
-
-
-
-### fn template.template.containers.startup_probe.new
-
-```ts
-new()
-```
-
-
-`google.cloud_run_v2_job.template.template.containers.startup_probe.new` constructs a new object with attributes and blocks configured for the `startup_probe`
-Terraform sub block.
-
-
-
-**Args**:
-  - `failure_threshold` (`number`): Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. When `null`, the `failure_threshold` field will be omitted from the resulting object.
-  - `initial_delay_seconds` (`number`): Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes When `null`, the `initial_delay_seconds` field will be omitted from the resulting object.
-  - `period_seconds` (`number`): How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum value for liveness probe is 3600. Maximum value for startup probe is 240. Must be greater or equal than timeoutSeconds When `null`, the `period_seconds` field will be omitted from the resulting object.
-  - `timeout_seconds` (`number`): Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes When `null`, the `timeout_seconds` field will be omitted from the resulting object.
-  - `http_get` (`list[obj]`): HTTPGet specifies the http request to perform. Exactly one of HTTPGet or TCPSocket must be specified. When `null`, the `http_get` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.containers.startup_probe.http_get.new](#fn-templatetemplatetemplatecontainershttp_getnew) constructor.
-  - `tcp_socket` (`list[obj]`): TCPSocket specifies an action involving a TCP port. Exactly one of HTTPGet or TCPSocket must be specified. When `null`, the `tcp_socket` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.containers.startup_probe.tcp_socket.new](#fn-templatetemplatetemplatecontainerstcp_socketnew) constructor.
-
-**Returns**:
-  - An attribute object that represents the `startup_probe` sub block.
-
-
-## obj template.template.containers.startup_probe.http_get
-
-
-
-### fn template.template.containers.startup_probe.http_get.new
-
-```ts
-new()
-```
-
-
-`google.cloud_run_v2_job.template.template.containers.startup_probe.http_get.new` constructs a new object with attributes and blocks configured for the `http_get`
-Terraform sub block.
-
-
-
-**Args**:
-  - `path` (`string`): Path to access on the HTTP server. Defaults to &#39;/&#39;. When `null`, the `path` field will be omitted from the resulting object.
-  - `http_headers` (`list[obj]`): Custom headers to set in the request. HTTP allows repeated headers. When `null`, the `http_headers` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.cloud_run_v2_job.template.template.containers.startup_probe.http_get.http_headers.new](#fn-templatetemplatetemplatecontainersstartup_probehttp_headersnew) constructor.
-
-**Returns**:
-  - An attribute object that represents the `http_get` sub block.
-
-
-## obj template.template.containers.startup_probe.http_get.http_headers
-
-
-
-### fn template.template.containers.startup_probe.http_get.http_headers.new
-
-```ts
-new()
-```
-
-
-`google.cloud_run_v2_job.template.template.containers.startup_probe.http_get.http_headers.new` constructs a new object with attributes and blocks configured for the `http_headers`
-Terraform sub block.
-
-
-
-**Args**:
-  - `name` (`string`): The header field name
-  - `value` (`string`): The header field value When `null`, the `value` field will be omitted from the resulting object.
-
-**Returns**:
-  - An attribute object that represents the `http_headers` sub block.
-
-
-## obj template.template.containers.startup_probe.tcp_socket
-
-
-
-### fn template.template.containers.startup_probe.tcp_socket.new
-
-```ts
-new()
-```
-
-
-`google.cloud_run_v2_job.template.template.containers.startup_probe.tcp_socket.new` constructs a new object with attributes and blocks configured for the `tcp_socket`
-Terraform sub block.
-
-
-
-**Args**:
-  - `port` (`number`): Port number to access on the container. Must be in the range 1 to 65535. If not specified, defaults to 8080. When `null`, the `port` field will be omitted from the resulting object.
-
-**Returns**:
-  - An attribute object that represents the `tcp_socket` sub block.
 
 
 ## obj template.template.containers.volume_mounts

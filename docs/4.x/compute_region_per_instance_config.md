@@ -23,6 +23,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRegion()`](#fn-withregion)
 * [`fn withRegionInstanceGroupManager()`](#fn-withregioninstancegroupmanager)
+* [`fn withRemoveInstanceOnDestroy()`](#fn-withremoveinstanceondestroy)
 * [`fn withRemoveInstanceStateOnDestroy()`](#fn-withremoveinstancestateondestroy)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
@@ -30,6 +31,14 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-preserved_statenew)
   * [`obj preserved_state.disk`](#obj-preserved_statedisk)
     * [`fn new()`](#fn-preserved_statedisknew)
+  * [`obj preserved_state.external_ip`](#obj-preserved_stateexternal_ip)
+    * [`fn new()`](#fn-preserved_stateexternal_ipnew)
+    * [`obj preserved_state.external_ip.ip_address`](#obj-preserved_stateexternal_ipip_address)
+      * [`fn new()`](#fn-preserved_stateexternal_ipip_addressnew)
+  * [`obj preserved_state.internal_ip`](#obj-preserved_stateinternal_ip)
+    * [`fn new()`](#fn-preserved_stateinternal_ipnew)
+    * [`obj preserved_state.internal_ip.ip_address`](#obj-preserved_stateinternal_ipip_address)
+      * [`fn new()`](#fn-preserved_stateinternal_ipip_addressnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -78,6 +87,8 @@ Default is &#39;REPLACE&#39;. Possible values are:
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the containing instance group manager is located When `null`, the `region` field will be omitted from the resulting object.
   - `region_instance_group_manager` (`string`): The region instance group manager this instance config is part of.
+  - `remove_instance_on_destroy` (`bool`): When true, deleting this config will immediately remove the underlying instance.
+When false, deleting this config will use the behavior as determined by remove_instance_on_destroy. When `null`, the `remove_instance_on_destroy` field will be omitted from the resulting object.
   - `remove_instance_state_on_destroy` (`bool`): When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update. When `null`, the `remove_instance_state_on_destroy` field will be omitted from the resulting object.
@@ -122,6 +133,8 @@ Default is &#39;REPLACE&#39;. Possible values are:
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `region` (`string`): Region where the containing instance group manager is located When `null`, the `region` field will be omitted from the resulting object.
   - `region_instance_group_manager` (`string`): The region instance group manager this instance config is part of.
+  - `remove_instance_on_destroy` (`bool`): When true, deleting this config will immediately remove the underlying instance.
+When false, deleting this config will use the behavior as determined by remove_instance_on_destroy. When `null`, the `remove_instance_on_destroy` field will be omitted from the resulting object.
   - `remove_instance_state_on_destroy` (`bool`): When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update. When `null`, the `remove_instance_state_on_destroy` field will be omitted from the resulting object.
@@ -265,6 +278,22 @@ Terraform resource block to set or update the region_instance_group_manager fiel
   - `value` (`string`): The value to set for the `region_instance_group_manager` field.
 
 
+### fn withRemoveInstanceOnDestroy
+
+```ts
+withRemoveInstanceOnDestroy()
+```
+
+`google.bool.withRemoveInstanceOnDestroy` constructs a mixin object that can be merged into the `bool`
+Terraform resource block to set or update the remove_instance_on_destroy field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`bool`): The value to set for the `remove_instance_on_destroy` field.
+
+
 ### fn withRemoveInstanceStateOnDestroy
 
 ```ts
@@ -336,6 +365,8 @@ Terraform sub block.
 **Args**:
   - `metadata` (`obj`): Preserved metadata defined for this instance. This is a list of key-&gt;value pairs. When `null`, the `metadata` field will be omitted from the resulting object.
   - `disk` (`list[obj]`): Stateful disks for the instance. When `null`, the `disk` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_per_instance_config.preserved_state.disk.new](#fn-preserved_statedisknew) constructor.
+  - `external_ip` (`list[obj]`): Preserved external IPs defined for this instance. This map is keyed with the name of the network interface. When `null`, the `external_ip` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_per_instance_config.preserved_state.external_ip.new](#fn-preserved_stateexternal_ipnew) constructor.
+  - `internal_ip` (`list[obj]`): Preserved internal IPs defined for this instance. This map is keyed with the name of the network interface. When `null`, the `internal_ip` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_per_instance_config.preserved_state.internal_ip.new](#fn-preserved_stateinternal_ipnew) constructor.
 
 **Returns**:
   - An attribute object that represents the `preserved_state` sub block.
@@ -370,6 +401,102 @@ deleted from the instance group. Default value: &#34;NEVER&#34; Possible values:
 
 **Returns**:
   - An attribute object that represents the `disk` sub block.
+
+
+## obj preserved_state.external_ip
+
+
+
+### fn preserved_state.external_ip.new
+
+```ts
+new()
+```
+
+
+`google.compute_region_per_instance_config.preserved_state.external_ip.new` constructs a new object with attributes and blocks configured for the `external_ip`
+Terraform sub block.
+
+
+
+**Args**:
+  - `auto_delete` (`string`): These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: &#34;NEVER&#34; Possible values: [&#34;NEVER&#34;, &#34;ON_PERMANENT_INSTANCE_DELETION&#34;] When `null`, the `auto_delete` field will be omitted from the resulting object.
+  - `interface_name` (`string`): Set the `interface_name` field on the resulting object.
+  - `ip_address` (`list[obj]`): Ip address representation When `null`, the `ip_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_per_instance_config.preserved_state.external_ip.ip_address.new](#fn-preserved_statepreserved_stateip_addressnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `external_ip` sub block.
+
+
+## obj preserved_state.external_ip.ip_address
+
+
+
+### fn preserved_state.external_ip.ip_address.new
+
+```ts
+new()
+```
+
+
+`google.compute_region_per_instance_config.preserved_state.external_ip.ip_address.new` constructs a new object with attributes and blocks configured for the `ip_address`
+Terraform sub block.
+
+
+
+**Args**:
+  - `address` (`string`): The URL of the reservation for this IP address. When `null`, the `address` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `ip_address` sub block.
+
+
+## obj preserved_state.internal_ip
+
+
+
+### fn preserved_state.internal_ip.new
+
+```ts
+new()
+```
+
+
+`google.compute_region_per_instance_config.preserved_state.internal_ip.new` constructs a new object with attributes and blocks configured for the `internal_ip`
+Terraform sub block.
+
+
+
+**Args**:
+  - `auto_delete` (`string`): These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: &#34;NEVER&#34; Possible values: [&#34;NEVER&#34;, &#34;ON_PERMANENT_INSTANCE_DELETION&#34;] When `null`, the `auto_delete` field will be omitted from the resulting object.
+  - `interface_name` (`string`): Set the `interface_name` field on the resulting object.
+  - `ip_address` (`list[obj]`): Ip address representation When `null`, the `ip_address` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.compute_region_per_instance_config.preserved_state.internal_ip.ip_address.new](#fn-preserved_statepreserved_stateip_addressnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `internal_ip` sub block.
+
+
+## obj preserved_state.internal_ip.ip_address
+
+
+
+### fn preserved_state.internal_ip.ip_address.new
+
+```ts
+new()
+```
+
+
+`google.compute_region_per_instance_config.preserved_state.internal_ip.ip_address.new` constructs a new object with attributes and blocks configured for the `ip_address`
+Terraform sub block.
+
+
+
+**Args**:
+  - `address` (`string`): The URL of the reservation for this IP address. When `null`, the `address` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `ip_address` sub block.
 
 
 ## obj timeouts

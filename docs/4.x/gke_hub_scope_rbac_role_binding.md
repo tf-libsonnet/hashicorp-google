@@ -62,7 +62,11 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `group` (`string`): Principal that is be authorized in the cluster (at least of one the oneof
 is required). Updating one will unset the other automatically.
 group is the group, as seen by the kubernetes cluster. When `null`, the `group` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels for this ScopeRBACRoleBinding. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels for this ScopeRBACRoleBinding.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.
   - `scope_id` (`string`): Id of the scope
   - `scope_rbac_role_binding_id` (`string`): The client-provided identifier of the RBAC Role Binding.
@@ -98,7 +102,11 @@ injecting into a complete block.
   - `group` (`string`): Principal that is be authorized in the cluster (at least of one the oneof
 is required). Updating one will unset the other automatically.
 group is the group, as seen by the kubernetes cluster. When `null`, the `group` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels for this ScopeRBACRoleBinding. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels for this ScopeRBACRoleBinding.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.
   - `scope_id` (`string`): Id of the scope
   - `scope_rbac_role_binding_id` (`string`): The client-provided identifier of the RBAC Role Binding.

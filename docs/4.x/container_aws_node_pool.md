@@ -31,6 +31,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withSubnetId()`](#fn-withsubnetid)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
+* [`fn withUpdateSettings()`](#fn-withupdatesettings)
+* [`fn withUpdateSettingsMixin()`](#fn-withupdatesettingsmixin)
 * [`fn withVersion()`](#fn-withversion)
 * [`obj autoscaling`](#obj-autoscaling)
   * [`fn new()`](#fn-autoscalingnew)
@@ -54,6 +56,10 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-max_pods_constraintnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
+* [`obj update_settings`](#obj-update_settings)
+  * [`fn new()`](#fn-update_settingsnew)
+  * [`obj update_settings.surge_settings`](#obj-update_settingssurge_settings)
+    * [`fn new()`](#fn-update_settingssurge_settingsnew)
 
 ## Fields
 
@@ -84,7 +90,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
-  - `annotations` (`obj`): Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `cluster` (`string`): The awsCluster for the resource
   - `location` (`string`): The location for the resource
   - `name` (`string`): The name of this resource.
@@ -96,6 +105,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `management` (`list[obj]`): The Management configuration for this node pool. When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.management.new](#fn-managementnew) constructor.
   - `max_pods_constraint` (`list[obj]`): The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool. When `null`, the `max_pods_constraint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.max_pods_constraint.new](#fn-max_pods_constraintnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `update_settings` (`list[obj]`): Optional. Update settings control the speed and disruption of the node pool update. When `null`, the `update_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.update_settings.new](#fn-update_settingsnew) constructor.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -119,7 +129,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `annotations` (`obj`): Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between. When `null`, the `annotations` field will be omitted from the resulting object.
+  - `annotations` (`obj`): Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
+
+**Note**: This field is non-authoritative, and will only manage the annotations present in your configuration.
+Please refer to the field `effective_annotations` for all of the annotations present on the resource. When `null`, the `annotations` field will be omitted from the resulting object.
   - `cluster` (`string`): The awsCluster for the resource
   - `location` (`string`): The location for the resource
   - `name` (`string`): The name of this resource.
@@ -131,6 +144,7 @@ injecting into a complete block.
   - `management` (`list[obj]`): The Management configuration for this node pool. When `null`, the `management` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.management.new](#fn-managementnew) constructor.
   - `max_pods_constraint` (`list[obj]`): The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool. When `null`, the `max_pods_constraint` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.max_pods_constraint.new](#fn-max_pods_constraintnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.timeouts.new](#fn-timeoutsnew) constructor.
+  - `update_settings` (`list[obj]`): Optional. Update settings control the speed and disruption of the node pool update. When `null`, the `update_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.update_settings.new](#fn-update_settingsnew) constructor.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `container_aws_node_pool` resource into the root Terraform configuration.
@@ -416,6 +430,43 @@ function.
   - `value` (`obj`): The value to set for the `timeouts` field.
 
 
+### fn withUpdateSettings
+
+```ts
+withUpdateSettings()
+```
+
+`google.list[obj].withUpdateSettings` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the update_settings field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withUpdateSettingsMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `update_settings` field.
+
+
+### fn withUpdateSettingsMixin
+
+```ts
+withUpdateSettingsMixin()
+```
+
+`google.list[obj].withUpdateSettingsMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the update_settings field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withUpdateSettings](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `update_settings` field.
+
+
 ### fn withVersion
 
 ```ts
@@ -580,7 +631,7 @@ Terraform sub block.
   - `iops` (`number`): Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume. When `null`, the `iops` field will be omitted from the resulting object.
   - `kms_key_arn` (`string`): Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used. When `null`, the `kms_key_arn` field will be omitted from the resulting object.
   - `size_gib` (`number`): Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource. When `null`, the `size_gib` field will be omitted from the resulting object.
-  - `throughput` (`number`): Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3. When `null`, the `throughput` field will be omitted from the resulting object.
+  - `throughput` (`number`): Optional. The throughput to provision for the volume, in MiB/s. Only valid if the volume type is GP3. If volume type is gp3 and throughput is not specified, the throughput will defaults to 125. When `null`, the `throughput` field will be omitted from the resulting object.
   - `volume_type` (`string`): Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3 When `null`, the `volume_type` field will be omitted from the resulting object.
 
 **Returns**:
@@ -704,3 +755,50 @@ Terraform sub block.
 
 **Returns**:
   - An attribute object that represents the `timeouts` sub block.
+
+
+## obj update_settings
+
+
+
+### fn update_settings.new
+
+```ts
+new()
+```
+
+
+`google.container_aws_node_pool.update_settings.new` constructs a new object with attributes and blocks configured for the `update_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `surge_settings` (`list[obj]`): Optional. Settings for surge update. When `null`, the `surge_settings` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.container_aws_node_pool.update_settings.surge_settings.new](#fn-update_settingssurge_settingsnew) constructor.
+
+**Returns**:
+  - An attribute object that represents the `update_settings` sub block.
+
+
+## obj update_settings.surge_settings
+
+
+
+### fn update_settings.surge_settings.new
+
+```ts
+new()
+```
+
+
+`google.container_aws_node_pool.update_settings.surge_settings.new` constructs a new object with attributes and blocks configured for the `surge_settings`
+Terraform sub block.
+
+
+
+**Args**:
+  - `max_surge` (`number`): Optional. The maximum number of nodes that can be created beyond the current size of the node pool during the update process. When `null`, the `max_surge` field will be omitted from the resulting object.
+  - `max_unavailable` (`number`): Optional. The maximum number of nodes that can be simultaneously unavailable during the update process. A node is considered unavailable if its status is not Ready. When `null`, the `max_unavailable` field will be omitted from the resulting object.
+
+**Returns**:
+  - An attribute object that represents the `surge_settings` sub block.

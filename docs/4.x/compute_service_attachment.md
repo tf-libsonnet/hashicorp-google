@@ -87,9 +87,7 @@ except the last character, which cannot be a dash.
   - `reconcile_connections` (`bool`): This flag determines whether a consumer accept/reject list change can reconcile the statuses of existing ACCEPTED or REJECTED PSC endpoints.
 
 If false, connection policy update will only affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain untouched regardless how the connection policy is modified .
-If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list.
-
-For newly created service attachment, this boolean defaults to true. When `null`, the `reconcile_connections` field will be omitted from the resulting object.
+If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list. When `null`, the `reconcile_connections` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where the resource resides. When `null`, the `region` field will be omitted from the resulting object.
   - `target_service` (`string`): The URL of a forwarding rule that represents the service identified by
 this service attachment.
@@ -142,9 +140,7 @@ except the last character, which cannot be a dash.
   - `reconcile_connections` (`bool`): This flag determines whether a consumer accept/reject list change can reconcile the statuses of existing ACCEPTED or REJECTED PSC endpoints.
 
 If false, connection policy update will only affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain untouched regardless how the connection policy is modified .
-If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list.
-
-For newly created service attachment, this boolean defaults to true. When `null`, the `reconcile_connections` field will be omitted from the resulting object.
+If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list. When `null`, the `reconcile_connections` field will be omitted from the resulting object.
   - `region` (`string`): URL of the region where the resource resides. When `null`, the `region` field will be omitted from the resulting object.
   - `target_service` (`string`): The URL of a forwarding rule that represents the service identified by
 this service attachment.

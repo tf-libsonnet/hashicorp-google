@@ -75,7 +75,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `resourceLabel` (`string`): The name label of the block.
   - `description` (`string`): An optional description of the spoke. When `null`, the `description` field will be omitted from the resulting object.
   - `hub` (`string`): Immutable. The URI of the hub that this spoke is attached to.
-  - `labels` (`obj`): Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements). When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Immutable. The name of the spoke. Spoke names must be unique.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.
@@ -109,7 +112,10 @@ injecting into a complete block.
 **Args**:
   - `description` (`string`): An optional description of the spoke. When `null`, the `description` field will be omitted from the resulting object.
   - `hub` (`string`): Immutable. The URI of the hub that this spoke is attached to.
-  - `labels` (`obj`): Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements). When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field `effective_labels` for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): The location for the resource
   - `name` (`string`): Immutable. The name of the spoke. Spoke names must be unique.
   - `project` (`string`): The project for the resource When `null`, the `project` field will be omitted from the resulting object.

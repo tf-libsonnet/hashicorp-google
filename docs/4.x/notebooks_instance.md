@@ -120,7 +120,11 @@ your VM instance&#39;s service account can use the instance. When `null`, the `i
   - `kms_key` (`string`): The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
 Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id} When `null`, the `kms_key` field will be omitted from the resulting object.
   - `labels` (`obj`): Labels to apply to this instance. These can be later modified by the setLabels method.
-An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): A reference to the zone where the machine resides.
   - `machine_type` (`string`): A reference to a machine type which defines VM kind.
   - `metadata` (`obj`): Custom metadata to apply to this instance.
@@ -205,7 +209,11 @@ your VM instance&#39;s service account can use the instance. When `null`, the `i
   - `kms_key` (`string`): The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
 Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id} When `null`, the `kms_key` field will be omitted from the resulting object.
   - `labels` (`obj`): Labels to apply to this instance. These can be later modified by the setLabels method.
-An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }. When `null`, the `labels` field will be omitted from the resulting object.
+An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
+
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `location` (`string`): A reference to the zone where the machine resides.
   - `machine_type` (`string`): A reference to a machine type which defines VM kind.
   - `metadata` (`obj`): Custom metadata to apply to this instance.

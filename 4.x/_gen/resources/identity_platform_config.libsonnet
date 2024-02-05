@@ -34,7 +34,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       }),
     },
   },
-  '#new':: d.fn(help="\n`google.identity_platform_config.new` injects a new `google_identity_platform_config` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.identity_platform_config.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.identity_platform_config` using the reference:\n\n    $._ref.google_identity_platform_config.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_identity_platform_config.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `authorized_domains` (`list`): List of domains authorized for OAuth redirects. When `null`, the `authorized_domains` field will be omitted from the resulting object.\n  - `autodelete_anonymous_users` (`bool`): Whether anonymous users will be auto-deleted after a period of 30 days When `null`, the `autodelete_anonymous_users` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.\n  - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.\n  - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.\n  - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.new](#fn-sign_innew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
+  '#new':: d.fn(help="\n`google.identity_platform_config.new` injects a new `google_identity_platform_config` Terraform `resource`\nblock into the root module document.\n\nAdditionally, this inserts a private function into the `_ref` attribute that generates references to attributes of the\nresource. For example, if you added a new instance to the root using:\n\n    # arguments omitted for brevity\n    google.identity_platform_config.new('some_id')\n\nYou can get the reference to the `id` field of the created `google.identity_platform_config` using the reference:\n\n    $._ref.google_identity_platform_config.some_id.get('id')\n\nThis is the same as directly entering `\"${ google_identity_platform_config.some_id.id }\"` as the value.\n\nNOTE: if you are chaining multiple resources together in a merge operation, you may not be able to use `super`, `self`,\nor `$` to refer to the root object. Instead, make an explicit outer object using `local`.\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block.\n  - `authorized_domains` (`list`): List of domains authorized for OAuth redirects. When `null`, the `authorized_domains` field will be omitted from the resulting object.\n  - `autodelete_anonymous_users` (`bool`): Whether anonymous users will be auto-deleted after a period of 30 days When `null`, the `autodelete_anonymous_users` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting resource block. When `null`, the `project` field will be omitted from the resulting object.\n  - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.\n  - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.\n  - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.new](#fn-sign_innew) constructor.\n  - `sms_region_config` (`list[obj]`): Configures the regions where users are allowed to send verification SMS for the project or tenant. This is based on the calling code of the destination phone number. When `null`, the `sms_region_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sms_region_config.new](#fn-sms_region_confignew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n- A mixin object that injects the new resource into the root Terraform configuration.\n", args=[]),
   new(
     resourceLabel,
     authorized_domains=null,
@@ -43,6 +43,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     project=null,
     quota=null,
     sign_in=null,
+    sms_region_config=null,
     timeouts=null,
     _meta={}
   ):: tf.withResource(
@@ -55,11 +56,12 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       project=project,
       quota=quota,
       sign_in=sign_in,
+      sms_region_config=sms_region_config,
       timeouts=timeouts
     ),
     _meta=_meta
   ),
-  '#newAttrs':: d.fn(help='\n`google.identity_platform_config.newAttrs` constructs a new object with attributes and blocks configured for the `identity_platform_config`\nTerraform resource.\n\nUnlike [google.identity_platform_config.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `authorized_domains` (`list`): List of domains authorized for OAuth redirects. When `null`, the `authorized_domains` field will be omitted from the resulting object.\n  - `autodelete_anonymous_users` (`bool`): Whether anonymous users will be auto-deleted after a period of 30 days When `null`, the `autodelete_anonymous_users` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.\n  - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.\n  - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.\n  - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.new](#fn-sign_innew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `identity_platform_config` resource into the root Terraform configuration.\n', args=[]),
+  '#newAttrs':: d.fn(help='\n`google.identity_platform_config.newAttrs` constructs a new object with attributes and blocks configured for the `identity_platform_config`\nTerraform resource.\n\nUnlike [google.identity_platform_config.new](#fn-new), this function will not inject the `resource`\nblock into the root Terraform document. Instead, this must be passed in as the `attrs` argument for the\n[tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) function to build a complete block.\n\nThis is most useful when you need to preprocess the attributes with functions, conditional, or looping logic prior to\ninjecting into a complete block.\n\n**Args**:\n  - `authorized_domains` (`list`): List of domains authorized for OAuth redirects. When `null`, the `authorized_domains` field will be omitted from the resulting object.\n  - `autodelete_anonymous_users` (`bool`): Whether anonymous users will be auto-deleted after a period of 30 days When `null`, the `autodelete_anonymous_users` field will be omitted from the resulting object.\n  - `project` (`string`): Set the `project` field on the resulting object. When `null`, the `project` field will be omitted from the resulting object.\n  - `blocking_functions` (`list[obj]`): Configuration related to blocking functions. When `null`, the `blocking_functions` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.blocking_functions.new](#fn-blocking_functionsnew) constructor.\n  - `quota` (`list[obj]`): Configuration related to quotas. When `null`, the `quota` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.quota.new](#fn-quotanew) constructor.\n  - `sign_in` (`list[obj]`): Configuration related to local sign in methods. When `null`, the `sign_in` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sign_in.new](#fn-sign_innew) constructor.\n  - `sms_region_config` (`list[obj]`): Configures the regions where users are allowed to send verification SMS for the project or tenant. This is based on the calling code of the destination phone number. When `null`, the `sms_region_config` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sms_region_config.new](#fn-sms_region_confignew) constructor.\n  - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.timeouts.new](#fn-timeoutsnew) constructor.\n\n**Returns**:\n  - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `identity_platform_config` resource into the root Terraform configuration.\n', args=[]),
   newAttrs(
     authorized_domains=null,
     autodelete_anonymous_users=null,
@@ -67,6 +69,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     project=null,
     quota=null,
     sign_in=null,
+    sms_region_config=null,
     timeouts=null
   ):: std.prune(a={
     authorized_domains: authorized_domains,
@@ -75,6 +78,7 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
     project: project,
     quota: quota,
     sign_in: sign_in,
+    sms_region_config: sms_region_config,
     timeouts: timeouts,
   }),
   quota:: {
@@ -138,6 +142,32 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
         test_phone_numbers: test_phone_numbers,
       }),
     },
+  },
+  sms_region_config:: {
+    allow_by_default:: {
+      '#new':: d.fn(help='\n`google.identity_platform_config.sms_region_config.allow_by_default.new` constructs a new object with attributes and blocks configured for the `allow_by_default`\nTerraform sub block.\n\n\n\n**Args**:\n  - `disallowed_regions` (`list`): Two letter unicode region codes to disallow as defined by https://cldr.unicode.org/ The full list of these region codes is here: https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json When `null`, the `disallowed_regions` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `allow_by_default` sub block.\n', args=[]),
+      new(
+        disallowed_regions=null
+      ):: std.prune(a={
+        disallowed_regions: disallowed_regions,
+      }),
+    },
+    allowlist_only:: {
+      '#new':: d.fn(help='\n`google.identity_platform_config.sms_region_config.allowlist_only.new` constructs a new object with attributes and blocks configured for the `allowlist_only`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allowed_regions` (`list`): Two letter unicode region codes to allow as defined by https://cldr.unicode.org/ The full list of these region codes is here: https://github.com/unicode-cldr/cldr-localenames-full/blob/master/main/en/territories.json When `null`, the `allowed_regions` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `allowlist_only` sub block.\n', args=[]),
+      new(
+        allowed_regions=null
+      ):: std.prune(a={
+        allowed_regions: allowed_regions,
+      }),
+    },
+    '#new':: d.fn(help='\n`google.identity_platform_config.sms_region_config.new` constructs a new object with attributes and blocks configured for the `sms_region_config`\nTerraform sub block.\n\n\n\n**Args**:\n  - `allow_by_default` (`list[obj]`): A policy of allowing SMS to every region by default and adding disallowed regions to a disallow list. When `null`, the `allow_by_default` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sms_region_config.allow_by_default.new](#fn-sms_region_configallow_by_defaultnew) constructor.\n  - `allowlist_only` (`list[obj]`): A policy of only allowing regions by explicitly adding them to an allowlist. When `null`, the `allowlist_only` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.identity_platform_config.sms_region_config.allowlist_only.new](#fn-sms_region_configallowlist_onlynew) constructor.\n\n**Returns**:\n  - An attribute object that represents the `sms_region_config` sub block.\n', args=[]),
+    new(
+      allow_by_default=null,
+      allowlist_only=null
+    ):: std.prune(a={
+      allow_by_default: allow_by_default,
+      allowlist_only: allowlist_only,
+    }),
   },
   timeouts:: {
     '#new':: d.fn(help='\n`google.identity_platform_config.timeouts.new` constructs a new object with attributes and blocks configured for the `timeouts`\nTerraform sub block.\n\n\n\n**Args**:\n  - `create` (`string`): Set the `create` field on the resulting object. When `null`, the `create` field will be omitted from the resulting object.\n  - `delete` (`string`): Set the `delete` field on the resulting object. When `null`, the `delete` field will be omitted from the resulting object.\n  - `update` (`string`): Set the `update` field on the resulting object. When `null`, the `update` field will be omitted from the resulting object.\n\n**Returns**:\n  - An attribute object that represents the `timeouts` sub block.\n', args=[]),
@@ -237,6 +267,26 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
       google_identity_platform_config+: {
         [resourceLabel]+: {
           sign_in+: if std.isArray(v=value) then value else [value],
+        },
+      },
+    },
+  },
+  '#withSmsRegionConfig':: d.fn(help='`google.list[obj].withSmsRegionConfig` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the sms_region_config field.\n\nThis function will replace the array with the passed in `value`. If you wish to instead append the\npassed in value to the existing array, use the [google.list[obj].withSmsRegionConfigMixin](TODO) function.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `sms_region_config` field.\n', args=[]),
+  withSmsRegionConfig(resourceLabel, value): {
+    resource+: {
+      google_identity_platform_config+: {
+        [resourceLabel]+: {
+          sms_region_config: value,
+        },
+      },
+    },
+  },
+  '#withSmsRegionConfigMixin':: d.fn(help='`google.list[obj].withSmsRegionConfigMixin` constructs a mixin object that can be merged into the `list[obj]`\nTerraform resource block to set or update the sms_region_config field.\n\nThis function will append the passed in array or object to the existing array. If you wish\nto instead replace the array with the passed in `value`, use the [google.list[obj].withSmsRegionConfig](TODO)\nfunction.\n\n\n**Args**:\n  - `resourceLabel` (`string`): The name label of the block to update.\n  - `value` (`list[obj]`): The value to set for the `sms_region_config` field.\n', args=[]),
+  withSmsRegionConfigMixin(resourceLabel, value): {
+    resource+: {
+      google_identity_platform_config+: {
+        [resourceLabel]+: {
+          sms_region_config+: if std.isArray(v=value) then value else [value],
         },
       },
     },

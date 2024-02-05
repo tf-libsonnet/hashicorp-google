@@ -25,6 +25,8 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withOidc()`](#fn-withoidc)
 * [`fn withOidcMixin()`](#fn-withoidcmixin)
 * [`fn withProject()`](#fn-withproject)
+* [`fn withSaml()`](#fn-withsaml)
+* [`fn withSamlMixin()`](#fn-withsamlmixin)
 * [`fn withTimeouts()`](#fn-withtimeouts)
 * [`fn withTimeoutsMixin()`](#fn-withtimeoutsmixin)
 * [`fn withWorkloadIdentityPoolId()`](#fn-withworkloadidentitypoolid)
@@ -33,6 +35,8 @@ This package contains functions and utilities for setting up the resource using 
   * [`fn new()`](#fn-awsnew)
 * [`obj oidc`](#obj-oidc)
   * [`fn new()`](#fn-oidcnew)
+* [`obj saml`](#obj-saml)
+  * [`fn new()`](#fn-samlnew)
 * [`obj timeouts`](#obj-timeouts)
   * [`fn new()`](#fn-timeoutsnew)
 
@@ -155,8 +159,9 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
   - `workload_identity_pool_provider_id` (`string`): The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 &#39;gcp-&#39; is reserved for use by Google, and may not be specified.
-  - `aws` (`list[obj]`): An Amazon Web Services identity provider. Not compatible with the property oidc. When `null`, the `aws` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.aws.new](#fn-awsnew) constructor.
-  - `oidc` (`list[obj]`): An OpenId Connect 1.0 identity provider. Not compatible with the property aws. When `null`, the `oidc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.oidc.new](#fn-oidcnew) constructor.
+  - `aws` (`list[obj]`): An Amazon Web Services identity provider. Not compatible with the property oidc or saml. When `null`, the `aws` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.aws.new](#fn-awsnew) constructor.
+  - `oidc` (`list[obj]`): An OpenId Connect 1.0 identity provider. Not compatible with the property aws or saml. When `null`, the `oidc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.oidc.new](#fn-oidcnew) constructor.
+  - `saml` (`list[obj]`): An SAML 2.0 identity provider. Not compatible with the property oidc or aws. When `null`, the `saml` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.saml.new](#fn-samlnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting resource block. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -271,8 +276,9 @@ value should be 4-32 characters, and may contain the characters [a-z0-9-]. The p
   - `workload_identity_pool_provider_id` (`string`): The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 &#39;gcp-&#39; is reserved for use by Google, and may not be specified.
-  - `aws` (`list[obj]`): An Amazon Web Services identity provider. Not compatible with the property oidc. When `null`, the `aws` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.aws.new](#fn-awsnew) constructor.
-  - `oidc` (`list[obj]`): An OpenId Connect 1.0 identity provider. Not compatible with the property aws. When `null`, the `oidc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.oidc.new](#fn-oidcnew) constructor.
+  - `aws` (`list[obj]`): An Amazon Web Services identity provider. Not compatible with the property oidc or saml. When `null`, the `aws` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.aws.new](#fn-awsnew) constructor.
+  - `oidc` (`list[obj]`): An OpenId Connect 1.0 identity provider. Not compatible with the property aws or saml. When `null`, the `oidc` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.oidc.new](#fn-oidcnew) constructor.
+  - `saml` (`list[obj]`): An SAML 2.0 identity provider. Not compatible with the property oidc or aws. When `null`, the `saml` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.saml.new](#fn-samlnew) constructor.
   - `timeouts` (`obj`): Set the `timeouts` field on the resulting object. When `null`, the `timeouts` sub block will be omitted from the resulting object. When setting the sub block, it is recommended to construct the object using the [google.iam_workload_identity_pool_provider.timeouts.new](#fn-timeoutsnew) constructor.
 
 **Returns**:
@@ -449,6 +455,43 @@ Terraform resource block to set or update the project field.
   - `value` (`string`): The value to set for the `project` field.
 
 
+### fn withSaml
+
+```ts
+withSaml()
+```
+
+`google.list[obj].withSaml` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the saml field.
+
+This function will replace the array with the passed in `value`. If you wish to instead append the
+passed in value to the existing array, use the [google.list[obj].withSamlMixin](TODO) function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `saml` field.
+
+
+### fn withSamlMixin
+
+```ts
+withSamlMixin()
+```
+
+`google.list[obj].withSamlMixin` constructs a mixin object that can be merged into the `list[obj]`
+Terraform resource block to set or update the saml field.
+
+This function will append the passed in array or object to the existing array. If you wish
+to instead replace the array with the passed in `value`, use the [google.list[obj].withSaml](TODO)
+function.
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list[obj]`): The value to set for the `saml` field.
+
+
 ### fn withTimeouts
 
 ```ts
@@ -596,6 +639,29 @@ the following fields:
 
 **Returns**:
   - An attribute object that represents the `oidc` sub block.
+
+
+## obj saml
+
+
+
+### fn saml.new
+
+```ts
+new()
+```
+
+
+`google.iam_workload_identity_pool_provider.saml.new` constructs a new object with attributes and blocks configured for the `saml`
+Terraform sub block.
+
+
+
+**Args**:
+  - `idp_metadata_xml` (`string`): SAML Identity provider configuration metadata xml doc.
+
+**Returns**:
+  - An attribute object that represents the `saml` sub block.
 
 
 ## obj timeouts

@@ -80,7 +80,10 @@ create disks by specifying an image family instead of a specific
 image name. The image family always returns its latest image that is
 not deprecated. The name of the image family must comply with
 RFC1035. When `null`, the `family` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels to apply to this Image. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this Image.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `licenses` (`list`): Any applicable license URI. When `null`, the `licenses` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -152,7 +155,10 @@ create disks by specifying an image family instead of a specific
 image name. The image family always returns its latest image that is
 not deprecated. The name of the image family must comply with
 RFC1035. When `null`, the `family` field will be omitted from the resulting object.
-  - `labels` (`obj`): Labels to apply to this Image. When `null`, the `labels` field will be omitted from the resulting object.
+  - `labels` (`obj`): Labels to apply to this Image.
+
+**Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+Please refer to the field &#39;effective_labels&#39; for all of the labels present on the resource. When `null`, the `labels` field will be omitted from the resulting object.
   - `licenses` (`list`): Any applicable license URI. When `null`, the `licenses` field will be omitted from the resulting object.
   - `name` (`string`): Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -538,7 +544,7 @@ Terraform sub block.
 
 
 **Args**:
-  - `type` (`string`): The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: [&#34;MULTI_IP_SUBNET&#34;, &#34;SECURE_BOOT&#34;, &#34;SEV_CAPABLE&#34;, &#34;UEFI_COMPATIBLE&#34;, &#34;VIRTIO_SCSI_MULTIQUEUE&#34;, &#34;WINDOWS&#34;, &#34;GVNIC&#34;, &#34;SEV_LIVE_MIGRATABLE&#34;, &#34;SEV_SNP_CAPABLE&#34;, &#34;SUSPEND_RESUME_COMPATIBLE&#34;, &#34;TDX_CAPABLE&#34;]
+  - `type` (`string`): The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: [&#34;MULTI_IP_SUBNET&#34;, &#34;SECURE_BOOT&#34;, &#34;SEV_CAPABLE&#34;, &#34;UEFI_COMPATIBLE&#34;, &#34;VIRTIO_SCSI_MULTIQUEUE&#34;, &#34;WINDOWS&#34;, &#34;GVNIC&#34;, &#34;SEV_LIVE_MIGRATABLE&#34;, &#34;SEV_SNP_CAPABLE&#34;, &#34;SUSPEND_RESUME_COMPATIBLE&#34;, &#34;TDX_CAPABLE&#34;, &#34;SEV_LIVE_MIGRATABLE_V2&#34;]
 
 **Returns**:
   - An attribute object that represents the `guest_os_features` sub block.

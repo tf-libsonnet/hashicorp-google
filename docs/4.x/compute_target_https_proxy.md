@@ -15,6 +15,7 @@ This package contains functions and utilities for setting up the resource using 
 
 * [`fn new()`](#fn-new)
 * [`fn newAttrs()`](#fn-newattrs)
+* [`fn withCertificateManagerCertificates()`](#fn-withcertificatemanagercertificates)
 * [`fn withCertificateMap()`](#fn-withcertificatemap)
 * [`fn withDescription()`](#fn-withdescription)
 * [`fn withHttpKeepAliveTimeoutSec()`](#fn-withhttpkeepalivetimeoutsec)
@@ -60,6 +61,10 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
 
 **Args**:
   - `resourceLabel` (`string`): The name label of the block.
+  - `certificate_manager_certificates` (`list`): URLs to certificate manager certificate resources that are used to authenticate connections between users and the load balancer.
+Currently, you may specify up to 15 certificates. Certificate manager certificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
+sslCertificates and certificateManagerCertificates fields can not be defined together.
+Accepted format is &#39;//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificates/{resourceName}&#39; or just the self_link &#39;projects/{project}/locations/{location}/certificates/{resourceName}&#39; When `null`, the `certificate_manager_certificates` field will be omitted from the resulting object.
   - `certificate_map` (`string`): A reference to the CertificateMap resource uri that identifies a certificate map
 associated with the given target proxy. This field can only be set for global target proxies.
 Accepted format is &#39;//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}&#39;. When `null`, the `certificate_map` field will be omitted from the resulting object.
@@ -93,8 +98,9 @@ For details which ServerTlsPolicy resources are accepted with
 INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
 loadBalancingScheme consult ServerTlsPolicy documentation.
 If left blank, communications are not encrypted. When `null`, the `server_tls_policy` field will be omitted from the resulting object.
-  - `ssl_certificates` (`list`): A list of SslCertificate resource URLs or Certificate Manager certificate URLs that are used to authenticate
-connections between users and the load balancer. At least one resource must be specified. When `null`, the `ssl_certificates` field will be omitted from the resulting object.
+  - `ssl_certificates` (`list`): URLs to SslCertificate resources that are used to authenticate connections between users and the load balancer.
+Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
+sslCertificates and certificateManagerCertificates can not be defined together. When `null`, the `ssl_certificates` field will be omitted from the resulting object.
   - `ssl_policy` (`string`): A reference to the SslPolicy resource that will be associated with
 the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
 resource will not have any SSL policy configured. When `null`, the `ssl_policy` field will be omitted from the resulting object.
@@ -124,6 +130,10 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
+  - `certificate_manager_certificates` (`list`): URLs to certificate manager certificate resources that are used to authenticate connections between users and the load balancer.
+Currently, you may specify up to 15 certificates. Certificate manager certificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
+sslCertificates and certificateManagerCertificates fields can not be defined together.
+Accepted format is &#39;//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificates/{resourceName}&#39; or just the self_link &#39;projects/{project}/locations/{location}/certificates/{resourceName}&#39; When `null`, the `certificate_manager_certificates` field will be omitted from the resulting object.
   - `certificate_map` (`string`): A reference to the CertificateMap resource uri that identifies a certificate map
 associated with the given target proxy. This field can only be set for global target proxies.
 Accepted format is &#39;//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}&#39;. When `null`, the `certificate_map` field will be omitted from the resulting object.
@@ -157,8 +167,9 @@ For details which ServerTlsPolicy resources are accepted with
 INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
 loadBalancingScheme consult ServerTlsPolicy documentation.
 If left blank, communications are not encrypted. When `null`, the `server_tls_policy` field will be omitted from the resulting object.
-  - `ssl_certificates` (`list`): A list of SslCertificate resource URLs or Certificate Manager certificate URLs that are used to authenticate
-connections between users and the load balancer. At least one resource must be specified. When `null`, the `ssl_certificates` field will be omitted from the resulting object.
+  - `ssl_certificates` (`list`): URLs to SslCertificate resources that are used to authenticate connections between users and the load balancer.
+Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
+sslCertificates and certificateManagerCertificates can not be defined together. When `null`, the `ssl_certificates` field will be omitted from the resulting object.
   - `ssl_policy` (`string`): A reference to the SslPolicy resource that will be associated with
 the TargetHttpsProxy resource. If not set, the TargetHttpsProxy
 resource will not have any SSL policy configured. When `null`, the `ssl_policy` field will be omitted from the resulting object.
@@ -168,6 +179,22 @@ to the BackendService.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `compute_target_https_proxy` resource into the root Terraform configuration.
+
+
+### fn withCertificateManagerCertificates
+
+```ts
+withCertificateManagerCertificates()
+```
+
+`google.list.withCertificateManagerCertificates` constructs a mixin object that can be merged into the `list`
+Terraform resource block to set or update the certificate_manager_certificates field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`list`): The value to set for the `certificate_manager_certificates` field.
 
 
 ### fn withCertificateMap
